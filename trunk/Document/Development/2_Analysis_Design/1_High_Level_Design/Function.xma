@@ -1,0 +1,2266 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<MM_Document version="1.0">
+<MM_Application name="Architect" version="2,3,4,26643"/>
+<MM_StorageUnit name="file:///D:\Users\nguyentanmo\Desktop\mo.xma" metamodel="ArchiMate">
+<MM_Module id="a3facc6c-c0c2-4a3c-a39d-554e37dd0751" name="AmberComponent" nextObjectId="788">
+<Component name="root" id="0">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Function'</MM_Value>
+<MM_List name="viewSettings2" type="ViewSettings2">
+<MM_Struct name="ViewSetting2" type="ViewSetting2">
+<MM_Value name="diagObj" type="objectref">9</MM_Value>
+<MM_Value name="x11" type="real">1.000</MM_Value>
+<MM_Value name="x12" type="real">0.000</MM_Value>
+<MM_Value name="x21" type="real">0.000</MM_Value>
+<MM_Value name="x22" type="real">1.000</MM_Value>
+<MM_Value name="x0" type="real">0.000</MM_Value>
+<MM_Value name="y0" type="real">0.000</MM_Value>
+<MM_List name="selectedObjects" type="SelectedObjects2"/>
+</MM_Struct>
+<MM_Struct name="ViewSetting2" type="ViewSetting2">
+<MM_Value name="diagObj" type="objectref">396</MM_Value>
+<MM_Value name="x11" type="real">1.000</MM_Value>
+<MM_Value name="x12" type="real">0.000</MM_Value>
+<MM_Value name="x21" type="real">0.000</MM_Value>
+<MM_Value name="x22" type="real">1.000</MM_Value>
+<MM_Value name="x0" type="real">0.000</MM_Value>
+<MM_Value name="y0" type="real">0.000</MM_Value>
+<MM_List name="selectedObjects" type="SelectedObjects2"/>
+</MM_Struct>
+<MM_Struct name="ViewSetting2" type="ViewSetting2">
+<MM_Value name="diagObj" type="objectref">341</MM_Value>
+<MM_Value name="x11" type="real">1.000</MM_Value>
+<MM_Value name="x12" type="real">0.000</MM_Value>
+<MM_Value name="x21" type="real">0.000</MM_Value>
+<MM_Value name="x22" type="real">1.000</MM_Value>
+<MM_Value name="x0" type="real">0.000</MM_Value>
+<MM_Value name="y0" type="real">0.000</MM_Value>
+<MM_List name="selectedObjects" type="SelectedObjects2"/>
+</MM_Struct>
+<MM_Struct name="ViewSetting2" type="ViewSetting2">
+<MM_Value name="diagObj" type="objectref">252</MM_Value>
+<MM_Value name="x11" type="real">1.000</MM_Value>
+<MM_Value name="x12" type="real">0.000</MM_Value>
+<MM_Value name="x21" type="real">0.000</MM_Value>
+<MM_Value name="x22" type="real">1.000</MM_Value>
+<MM_Value name="x0" type="real">0.000</MM_Value>
+<MM_Value name="y0" type="real">0.000</MM_Value>
+<MM_List name="selectedObjects" type="SelectedObjects2"/>
+</MM_Struct>
+<MM_Struct name="ViewSetting2" type="ViewSetting2">
+<MM_Value name="diagObj" type="objectref">583</MM_Value>
+<MM_Value name="x11" type="real">1.000</MM_Value>
+<MM_Value name="x12" type="real">0.000</MM_Value>
+<MM_Value name="x21" type="real">0.000</MM_Value>
+<MM_Value name="x22" type="real">1.000</MM_Value>
+<MM_Value name="x0" type="real">0.000</MM_Value>
+<MM_Value name="y0" type="real">0.000</MM_Value>
+<MM_List name="selectedObjects" type="SelectedObjects2"/>
+</MM_Struct>
+<MM_Struct name="ViewSetting2" type="ViewSetting2">
+<MM_Value name="diagObj" type="objectref">614</MM_Value>
+<MM_Value name="x11" type="real">1.000</MM_Value>
+<MM_Value name="x12" type="real">0.000</MM_Value>
+<MM_Value name="x21" type="real">0.000</MM_Value>
+<MM_Value name="x22" type="real">1.000</MM_Value>
+<MM_Value name="x0" type="real">0.000</MM_Value>
+<MM_Value name="y0" type="real">0.000</MM_Value>
+<MM_List name="selectedObjects" type="SelectedObjects2"/>
+</MM_Struct>
+<MM_Struct name="ViewSetting2" type="ViewSetting2">
+<MM_Value name="diagObj" type="objectref">669</MM_Value>
+<MM_Value name="x11" type="real">1.000</MM_Value>
+<MM_Value name="x12" type="real">0.000</MM_Value>
+<MM_Value name="x21" type="real">0.000</MM_Value>
+<MM_Value name="x22" type="real">1.000</MM_Value>
+<MM_Value name="x0" type="real">0.000</MM_Value>
+<MM_Value name="y0" type="real">0.000</MM_Value>
+<MM_List name="selectedObjects" type="SelectedObjects2">
+<MM_Value name="objectref" type="objectref">744</MM_Value>
+</MM_List>
+</MM_Struct>
+<MM_Struct name="ViewSetting2" type="ViewSetting2">
+<MM_Value name="diagObj" type="objectref">721</MM_Value>
+<MM_Value name="x11" type="real">1.000</MM_Value>
+<MM_Value name="x12" type="real">0.000</MM_Value>
+<MM_Value name="x21" type="real">0.000</MM_Value>
+<MM_Value name="x22" type="real">1.000</MM_Value>
+<MM_Value name="x0" type="real">0.000</MM_Value>
+<MM_Value name="y0" type="real">0.000</MM_Value>
+<MM_List name="selectedObjects" type="SelectedObjects2"/>
+</MM_Struct>
+<MM_Struct name="ViewSetting2" type="ViewSetting2">
+<MM_Value name="diagObj" type="objectref">524</MM_Value>
+<MM_Value name="x11" type="real">1.000</MM_Value>
+<MM_Value name="x12" type="real">0.000</MM_Value>
+<MM_Value name="x21" type="real">0.000</MM_Value>
+<MM_Value name="x22" type="real">1.000</MM_Value>
+<MM_Value name="x0" type="real">0.000</MM_Value>
+<MM_Value name="y0" type="real">0.000</MM_Value>
+<MM_List name="selectedObjects" type="SelectedObjects2">
+<MM_Value name="objectref" type="objectref">529</MM_Value>
+</MM_List>
+</MM_Struct>
+</MM_List>
+</MM_ProfileValues>
+<DomainDataSet name="domainDataSet" id="1"/>
+<Principals name="principals" id="2"/>
+<Groups name="groups" id="3"/>
+<AbstractContainers name="containers" id="4">
+<BusinessActorScheme id="17">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Business actors'</MM_Value>
+</MM_ProfileValues>
+<BusinessActors name="actors" id="20">
+<BusinessRole id="238">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Vien chuc thiet bi thi nghiem'</MM_Value>
+</MM_ProfileValues>
+</BusinessRole>
+<BusinessRole id="540">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Hieu Truong&#xd;&#xa;'</MM_Value>
+</MM_ProfileValues>
+</BusinessRole>
+<BusinessRole id="527">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Giao Vien&#xd;&#xa;'</MM_Value>
+</MM_ProfileValues>
+</BusinessRole>
+<BusinessRole id="617">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Giao Vien Chu Nhiem'</MM_Value>
+</MM_ProfileValues>
+</BusinessRole>
+<BusinessRole id="167">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Giao vien&#xd;&#xa;'</MM_Value>
+</MM_ProfileValues>
+</BusinessRole>
+<BusinessRole id="421">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Giao vien chu nhiem'</MM_Value>
+</MM_ProfileValues>
+</BusinessRole>
+<BusinessRole id="425">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Lop truong'</MM_Value>
+</MM_ProfileValues>
+</BusinessRole>
+<BusinessRole id="427">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'To truong'</MM_Value>
+</MM_ProfileValues>
+</BusinessRole>
+<BusinessRole id="175">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Hieu truong'</MM_Value>
+</MM_ProfileValues>
+</BusinessRole>
+<BusinessRole id="374">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Nhan vien y te'</MM_Value>
+</MM_ProfileValues>
+</BusinessRole>
+<BusinessCollaboration id="459">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Hoc sinh'</MM_Value>
+</MM_ProfileValues>
+</BusinessCollaboration>
+<BusinessActor id="399">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Lop hoc'</MM_Value>
+</MM_ProfileValues>
+<BusinessActorScheme name="actorScheme" id="404">
+<BusinessActors name="actors" id="405">
+<BusinessActor id="406">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Hoc sinh'</MM_Value>
+</MM_ProfileValues>
+<BusinessActorScheme name="actorScheme" id="409">
+<BusinessActors name="actors" id="410">
+<BusinessActor id="411">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Lop truong'</MM_Value>
+</MM_ProfileValues>
+</BusinessActor>
+<BusinessActor id="626">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Lop Pho'</MM_Value>
+</MM_ProfileValues>
+</BusinessActor>
+<BusinessActor id="418">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'To vien'</MM_Value>
+</MM_ProfileValues>
+</BusinessActor>
+<BusinessActor id="415">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'To truong'</MM_Value>
+</MM_ProfileValues>
+</BusinessActor>
+</BusinessActors>
+</BusinessActorScheme>
+</BusinessActor>
+</BusinessActors>
+</BusinessActorScheme>
+</BusinessActor>
+<BusinessRole id="232">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Hieu pho'</MM_Value>
+</MM_ProfileValues>
+</BusinessRole>
+<BusinessRole id="236">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Vien chuc thu vien'</MM_Value>
+</MM_ProfileValues>
+</BusinessRole>
+<BusinessRole id="204">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Thu quy'</MM_Value>
+</MM_ProfileValues>
+</BusinessRole>
+<BusinessActor id="41">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'To chuyen mon&#xd;&#xa;'</MM_Value>
+</MM_ProfileValues>
+<BusinessActorScheme name="actorScheme" id="212">
+<BusinessActors name="actors" id="213">
+<BusinessActor id="214">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Hieu truong'</MM_Value>
+</MM_ProfileValues>
+</BusinessActor>
+<BusinessActor id="218">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Hieu pho'</MM_Value>
+</MM_ProfileValues>
+</BusinessActor>
+<BusinessActor id="227">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Vien chuc thiet bi thi nghiem'</MM_Value>
+</MM_ProfileValues>
+</BusinessActor>
+<BusinessActor id="221">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Giao vien'</MM_Value>
+</MM_ProfileValues>
+</BusinessActor>
+<BusinessActor id="224">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Vien chuc thu vien'</MM_Value>
+</MM_ProfileValues>
+</BusinessActor>
+</BusinessActors>
+</BusinessActorScheme>
+</BusinessActor>
+<BusinessRole id="202">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Ke toan'</MM_Value>
+</MM_ProfileValues>
+</BusinessRole>
+<BusinessActor id="198">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'To van phong&#xd;&#xa;'</MM_Value>
+</MM_ProfileValues>
+<BusinessActorScheme name="actorScheme" id="345">
+<BusinessActors name="actors" id="346">
+<BusinessActor id="347">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Van thu'</MM_Value>
+</MM_ProfileValues>
+</BusinessActor>
+<BusinessActor id="351">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Thu quy'</MM_Value>
+</MM_ProfileValues>
+</BusinessActor>
+<BusinessActor id="354">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Ke toan'</MM_Value>
+</MM_ProfileValues>
+</BusinessActor>
+<BusinessActor id="357">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Y te'</MM_Value>
+</MM_ProfileValues>
+</BusinessActor>
+</BusinessActors>
+</BusinessActorScheme>
+</BusinessActor>
+<BusinessRole id="200">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Van thu&#xd;&#xa;'</MM_Value>
+</MM_ProfileValues>
+</BusinessRole>
+<BusinessRole id="544">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Hieu Pho'</MM_Value>
+</MM_ProfileValues>
+</BusinessRole>
+<BusinessRole id="546">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Vien Chuc Thu Vien'</MM_Value>
+</MM_ProfileValues>
+</BusinessRole>
+<BusinessRole id="548">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Vien Chuc Thiet Bi Thi Nghiem'</MM_Value>
+</MM_ProfileValues>
+</BusinessRole>
+<BusinessRole id="586">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Van Thu'</MM_Value>
+</MM_ProfileValues>
+</BusinessRole>
+<BusinessRole id="593">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Nhan Vien Y Te'</MM_Value>
+</MM_ProfileValues>
+</BusinessRole>
+<BusinessRole id="591">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Thu Quy'</MM_Value>
+</MM_ProfileValues>
+</BusinessRole>
+<BusinessRole id="589">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Ke Toan'</MM_Value>
+</MM_ProfileValues>
+</BusinessRole>
+<BusinessRole id="620">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Hoc Sinh'</MM_Value>
+</MM_ProfileValues>
+</BusinessRole>
+<BusinessRole id="622">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Lop Truong'</MM_Value>
+</MM_ProfileValues>
+</BusinessRole>
+<BusinessRole id="624">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'To Truong'</MM_Value>
+</MM_ProfileValues>
+</BusinessRole>
+<BusinessRole id="629">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Lop Pho'</MM_Value>
+</MM_ProfileValues>
+</BusinessRole>
+<BusinessRole id="635">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Lop Pho'</MM_Value>
+</MM_ProfileValues>
+</BusinessRole>
+<BusinessRole id="724">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Giao Vien&#xd;&#xa;Chu Nhiem'</MM_Value>
+</MM_ProfileValues>
+</BusinessRole>
+<BusinessRole id="672">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Hieu Truong'</MM_Value>
+</MM_ProfileValues>
+</BusinessRole>
+</BusinessActors>
+<BusinessInterfaces name="interfaces" id="26"/>
+<Relations name="relations" id="46">
+<BusinessActorBusinessActorAggregation id="462" from="459" to="427"/>
+<BusinessActorBusinessActorAggregation id="464" from="459" to="425"/>
+<BusinessActorBusinessActorComposition id="228" from="41" to="227"/>
+<BusinessActorBusinessActorComposition id="222" from="41" to="221"/>
+<BusinessActorBusinessRoleAssignment id="235" from="41" to="232"/>
+<BusinessActorBusinessRoleAssignment id="180" from="41" to="175"/>
+<BusinessActorBusinessActorComposition id="225" from="41" to="224"/>
+<BusinessActorBusinessActorComposition id="219" from="41" to="218"/>
+<BusinessActorBusinessActorComposition id="358" from="198" to="357"/>
+<BusinessActorBusinessRoleAssignment id="363" from="198" to="202"/>
+<BusinessActorBusinessRoleAssignment id="434" from="399" to="425"/>
+<BusinessActorBusinessActorComposition id="419" from="406" to="418"/>
+<BusinessActorBusinessRoleAssignment id="361" from="198" to="200"/>
+<BusinessActorBusinessRoleAssignment id="436" from="399" to="427"/>
+<BusinessActorBusinessRoleAssignment id="430" from="399" to="421"/>
+<BusinessActorBusinessActorComposition id="352" from="198" to="351"/>
+<BusinessActorBusinessActorComposition id="215" from="41" to="214"/>
+<BusinessActorBusinessActorComposition id="412" from="406" to="411"/>
+<BusinessActorBusinessRoleAssignment id="241" from="41" to="236"/>
+<BusinessActorBusinessActorComposition id="407" from="399" to="406"/>
+<BusinessActorBusinessActorComposition id="348" from="198" to="347"/>
+<BusinessActorBusinessActorComposition id="416" from="406" to="415"/>
+<BusinessActorBusinessRoleAssignment id="243" from="41" to="238"/>
+<BusinessActorBusinessRoleAssignment id="377" from="198" to="374"/>
+<BusinessActorBusinessRoleAssignment id="365" from="198" to="204"/>
+<BusinessActorBusinessRoleAssignment id="170" from="41" to="167"/>
+<BusinessActorBusinessActorComposition id="355" from="198" to="354"/>
+<BusinessRoleBusinessFunctionAssignment id="611" from="593" to="610"/>
+<BusinessRoleBusinessFunctionAssignment id="535" from="527" to="534"/>
+<BusinessRoleBusinessFunctionAssignment id="538" from="527" to="537"/>
+<BusinessRoleBusinessFunctionAssignment id="551" from="540" to="550"/>
+<BusinessRoleBusinessFunctionAssignment id="555" from="540" to="554"/>
+<BusinessRoleBusinessFunctionAssignment id="558" from="540" to="557"/>
+<BusinessRoleBusinessFunctionAssignment id="561" from="540" to="560"/>
+<BusinessRoleBusinessFunctionAssignment id="564" from="540" to="563"/>
+<BusinessRoleBusinessFunctionAssignment id="570" from="546" to="569"/>
+<BusinessRoleBusinessFunctionAssignment id="574" from="546" to="573"/>
+<BusinessRoleBusinessFunctionAssignment id="577" from="548" to="576"/>
+<BusinessRoleBusinessFunctionAssignment id="581" from="548" to="580"/>
+<BusinessRoleBusinessFunctionAssignment id="596" from="586" to="595"/>
+<BusinessRoleBusinessFunctionAssignment id="600" from="586" to="599"/>
+<BusinessRoleBusinessFunctionAssignment id="603" from="591" to="602"/>
+<BusinessRoleBusinessFunctionAssignment id="607" from="591" to="606"/>
+<BusinessRoleBusinessFunctionAssignment id="642" from="617" to="641"/>
+<BusinessRoleBusinessFunctionAssignment id="652" from="622" to="651"/>
+<BusinessActorBusinessActorAggregation id="632" from="459" to="629"/>
+<BusinessActorBusinessActorComposition id="627" from="406" to="626"/>
+<BusinessActorBusinessRoleAssignment id="634" from="399" to="629"/>
+<BusinessRoleBusinessFunctionAssignment id="648" from="620" to="647"/>
+<BusinessRoleBusinessFunctionAssignment id="645" from="617" to="644"/>
+<BusinessRoleBusinessFunctionAssignment id="638" from="617" to="637"/>
+<BusinessRoleBusinessFunctionAssignment id="656" from="635" to="655"/>
+<BusinessRoleBusinessFunctionAssignment id="660" from="635" to="659"/>
+<BusinessRoleBusinessFunctionAssignment id="663" from="622" to="662"/>
+<BusinessRoleBusinessFunctionAssignment id="666" from="624" to="665"/>
+<BusinessRoleBusinessFunctionAssignment id="707" from="540" to="706"/>
+</Relations>
+</BusinessActorScheme>
+<AllExtendedView id="9">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Total view extended'</MM_Value>
+</MM_ProfileValues>
+<GroupingScheme name="groupingScheme" id="10">
+<Groupings name="groupings" id="11"/>
+</GroupingScheme>
+<RefObjects name="refObjects" id="22"/>
+</AllExtendedView>
+<BusinessProcessView id="396">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Lop'</MM_Value>
+</MM_ProfileValues>
+<GroupingScheme name="groupingScheme" id="397">
+<Groupings name="groupings" id="398"/>
+</GroupingScheme>
+<RefObjects name="refObjects" id="400">
+<BusinessActorBusinessActorAggregationRef id="461" to="462"/>
+<BusinessActorBusinessActorAggregationRef id="463" to="464"/>
+<BusinessCollaborationRef id="460" to="459"/>
+<BusinessActorRef id="401" to="399">
+<MM_RefObjects name="childRefObjects" id="402">
+<BusinessActorRef id="403" to="221"/>
+<BusinessActorRef id="408" to="406">
+<MM_RefObjects name="childRefObjects" id="413">
+<BusinessActorRef id="417" to="415"/>
+<BusinessActorRef id="414" to="411"/>
+<BusinessActorRef id="420" to="418"/>
+<BusinessActorRef id="628" to="626"/>
+</MM_RefObjects>
+</BusinessActorRef>
+</MM_RefObjects>
+</BusinessActorRef>
+<BusinessRoleRef id="422" to="421"/>
+<BusinessRoleRef id="428" to="427"/>
+<BusinessRoleRef id="426" to="425"/>
+<BusinessActorBusinessRoleAssignmentRef id="435" to="436"/>
+<BusinessActorBusinessRoleAssignmentRef id="433" to="434"/>
+<BusinessActorBusinessRoleAssignmentRef id="429" to="430"/>
+<BusinessActorBusinessActorAggregationRef id="631" to="632"/>
+<BusinessRoleRef id="630" to="629"/>
+<BusinessActorBusinessRoleAssignmentRef id="633" to="634"/>
+</RefObjects>
+</BusinessProcessView>
+<BusinessProcessView id="341">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'To van phong'</MM_Value>
+</MM_ProfileValues>
+<GroupingScheme name="groupingScheme" id="342">
+<Groupings name="groupings" id="343"/>
+</GroupingScheme>
+<RefObjects name="refObjects" id="344">
+<BusinessRoleRef id="203" to="202"/>
+<BusinessActorRef id="199" to="198">
+<MM_RefObjects name="childRefObjects" id="349">
+<BusinessActorRef id="359" to="357"/>
+<BusinessActorRef id="353" to="351"/>
+<BusinessActorRef id="356" to="354"/>
+<BusinessActorRef id="350" to="347"/>
+</MM_RefObjects>
+</BusinessActorRef>
+<BusinessRoleRef id="375" to="374"/>
+<BusinessRoleRef id="205" to="204"/>
+<BusinessRoleRef id="201" to="200"/>
+<BusinessActorBusinessRoleAssignmentRef id="362" to="363"/>
+<BusinessActorBusinessRoleAssignmentRef id="364" to="365"/>
+<BusinessActorBusinessRoleAssignmentRef id="376" to="377"/>
+<BusinessActorBusinessRoleAssignmentRef id="360" to="361"/>
+</RefObjects>
+</BusinessProcessView>
+<BusinessProcessView id="252">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'To chuyen mon'</MM_Value>
+</MM_ProfileValues>
+<GroupingScheme name="groupingScheme" id="253">
+<Groupings name="groupings" id="254"/>
+</GroupingScheme>
+<RefObjects name="refObjects" id="256">
+<BusinessRoleRef id="327" to="232"/>
+<BusinessRoleRef id="329" to="238"/>
+<BusinessActorBusinessRoleAssignmentRef id="337" to="243"/>
+<BusinessActorBusinessRoleAssignmentRef id="332" to="180"/>
+<BusinessActorBusinessRoleAssignmentRef id="335" to="241"/>
+<BusinessActorBusinessRoleAssignmentRef id="336" to="235"/>
+<BusinessActorBusinessRoleAssignmentRef id="340" to="170"/>
+<BusinessActorRef id="320" to="41">
+<MM_RefObjects name="childRefObjects" id="321">
+<BusinessActorRef id="322" to="214"/>
+<BusinessActorRef id="323" to="221"/>
+<BusinessActorRef id="324" to="227"/>
+<BusinessActorRef id="325" to="218"/>
+<BusinessActorRef id="326" to="224"/>
+</MM_RefObjects>
+</BusinessActorRef>
+<BusinessRoleRef id="328" to="236"/>
+<BusinessRoleRef id="317" to="167"/>
+<BusinessRoleRef id="319" to="175"/>
+</RefObjects>
+</BusinessProcessView>
+<BusinessFunctionView id="524">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Business function view(To chuyen mon)'</MM_Value>
+</MM_ProfileValues>
+<GroupingScheme name="groupingScheme" id="525">
+<Groupings name="groupings" id="526"/>
+</GroupingScheme>
+<RefObjects name="refObjects" id="528">
+<BusinessRoleRef id="541" to="540">
+<MM_RefObjects name="childRefObjects" id="552">
+<BusinessFunctionRef id="553" to="550"/>
+<BusinessFunctionRef id="556" to="554"/>
+<BusinessFunctionRef id="559" to="557"/>
+<BusinessFunctionRef id="562" to="560"/>
+<BusinessFunctionRef id="565" to="563"/>
+<BusinessFunctionRef id="708" to="706"/>
+</MM_RefObjects>
+</BusinessRoleRef>
+<BusinessRoleRef id="529" to="527">
+<MM_RefObjects name="childRefObjects" id="532">
+<BusinessFunctionRef id="536" to="534"/>
+<BusinessFunctionRef id="539" to="537"/>
+</MM_RefObjects>
+</BusinessRoleRef>
+<BusinessRoleRef id="545" to="544">
+<MM_RefObjects name="childRefObjects" id="566">
+<BusinessFunctionRef id="568" to="560"/>
+<BusinessFunctionRef id="567" to="557"/>
+</MM_RefObjects>
+</BusinessRoleRef>
+<BusinessRoleRef id="547" to="546">
+<MM_RefObjects name="childRefObjects" id="571">
+<BusinessFunctionRef id="572" to="569"/>
+<BusinessFunctionRef id="575" to="573"/>
+</MM_RefObjects>
+</BusinessRoleRef>
+<BusinessRoleRef id="549" to="548">
+<MM_RefObjects name="childRefObjects" id="578">
+<BusinessFunctionRef id="579" to="576"/>
+<BusinessFunctionRef id="582" to="580"/>
+</MM_RefObjects>
+</BusinessRoleRef>
+</RefObjects>
+</BusinessFunctionView>
+<ServiceRealisationView id="721">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Service realisation view(Giao Vien Chu Nhiem)'</MM_Value>
+</MM_ProfileValues>
+<GroupingScheme name="groupingScheme" id="722">
+<Groupings name="groupings" id="723"/>
+</GroupingScheme>
+<RefObjects name="refObjects" id="725">
+<BusinessServiceRef id="778" to="777"/>
+<BusinessProcessBusinessServiceRealisationRef id="767" to="768"/>
+<BusinessProcessBusinessServiceRealisationRef id="773" to="774"/>
+<BusinessServiceBusinessActorUseRef id="781" to="782"/>
+<BusinessServiceBusinessActorUseRef id="783" to="784"/>
+<BusinessProcessBusinessServiceRealisationRef id="775" to="776"/>
+<BusinessServiceRef id="772" to="771"/>
+<BusinessProcessBusinessServiceRealisationRef id="769" to="770"/>
+<BusinessProcessBusinessServiceRealisationRef id="779" to="780"/>
+<BusinessServiceBusinessActorUseRef id="785" to="786"/>
+<BusinessServiceRef id="728" to="727"/>
+<BusinessProcessRef id="732" to="731"/>
+<BusinessRoleRef id="726" to="724"/>
+<BusinessProcessRef id="730" to="729"/>
+</RefObjects>
+</ServiceRealisationView>
+<BusinessFunctionView id="583">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Business function view(To Van Phong)'</MM_Value>
+</MM_ProfileValues>
+<GroupingScheme name="groupingScheme" id="584">
+<Groupings name="groupings" id="585"/>
+</GroupingScheme>
+<RefObjects name="refObjects" id="587">
+<BusinessRoleRef id="590" to="589">
+<MM_RefObjects name="childRefObjects" id="609">
+<BusinessFunctionRef id="608" to="606"/>
+</MM_RefObjects>
+</BusinessRoleRef>
+<BusinessRoleRef id="588" to="586">
+<MM_RefObjects name="childRefObjects" id="597">
+<BusinessFunctionRef id="598" to="595"/>
+<BusinessFunctionRef id="601" to="599"/>
+</MM_RefObjects>
+</BusinessRoleRef>
+<BusinessRoleRef id="592" to="591">
+<MM_RefObjects name="childRefObjects" id="604">
+<BusinessFunctionRef id="605" to="602"/>
+</MM_RefObjects>
+</BusinessRoleRef>
+<BusinessRoleRef id="594" to="593">
+<MM_RefObjects name="childRefObjects" id="612">
+<BusinessFunctionRef id="613" to="610"/>
+</MM_RefObjects>
+</BusinessRoleRef>
+</RefObjects>
+</BusinessFunctionView>
+<BusinessFunctionView id="614">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Business function view(Lop)'</MM_Value>
+</MM_ProfileValues>
+<GroupingScheme name="groupingScheme" id="615">
+<Groupings name="groupings" id="616"/>
+</GroupingScheme>
+<RefObjects name="refObjects" id="618">
+<BusinessRoleRef id="619" to="617">
+<MM_RefObjects name="childRefObjects" id="639">
+<BusinessFunctionRef id="646" to="644"/>
+<BusinessFunctionRef id="643" to="641"/>
+<BusinessFunctionRef id="640" to="637"/>
+</MM_RefObjects>
+</BusinessRoleRef>
+<BusinessRoleRef id="621" to="620">
+<MM_RefObjects name="childRefObjects" id="649">
+<BusinessFunctionRef id="650" to="647"/>
+</MM_RefObjects>
+</BusinessRoleRef>
+<BusinessRoleRef id="623" to="622">
+<MM_RefObjects name="childRefObjects" id="653">
+<BusinessFunctionRef id="654" to="651"/>
+<BusinessFunctionRef id="664" to="662"/>
+</MM_RefObjects>
+</BusinessRoleRef>
+<BusinessRoleRef id="625" to="624">
+<MM_RefObjects name="childRefObjects" id="667">
+<BusinessFunctionRef id="668" to="665"/>
+</MM_RefObjects>
+</BusinessRoleRef>
+<BusinessRoleRef id="636" to="635">
+<MM_RefObjects name="childRefObjects" id="657">
+<BusinessFunctionRef id="658" to="655"/>
+<BusinessFunctionRef id="661" to="659"/>
+</MM_RefObjects>
+</BusinessRoleRef>
+</RefObjects>
+</BusinessFunctionView>
+<ServiceRealisationView id="669">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Service realisation view(Hieu Truong)'</MM_Value>
+</MM_ProfileValues>
+<GroupingScheme name="groupingScheme" id="670">
+<Groupings name="groupings" id="671"/>
+</GroupingScheme>
+<RefObjects name="refObjects" id="673">
+<BusinessProcessRef id="744" to="743"/>
+<BusinessServiceBusinessActorUseRef id="714" to="716"/>
+<BusinessProcessRef id="742" to="741"/>
+<BusinessServiceBusinessActorUseRef id="747" to="748"/>
+<BusinessServiceBusinessActorUseRef id="739" to="740"/>
+<BusinessServiceRef id="710" to="709"/>
+<BusinessProcessRef id="705" to="704"/>
+<BusinessProcessBusinessServiceRealisationRef id="753" to="754"/>
+<BusinessProcessBusinessServiceRealisationRef id="751" to="752"/>
+<BusinessServiceBusinessActorUseRef id="745" to="746"/>
+<BusinessProcessBusinessServiceRealisationRef id="757" to="758"/>
+<BusinessProcessRef id="718" to="717"/>
+<BusinessProcessBusinessServiceRealisationRef id="759" to="760"/>
+<BusinessRoleRef id="674" to="672"/>
+<BusinessServiceRef id="676" to="675"/>
+<BusinessServiceRef id="680" to="679"/>
+<BusinessServiceRef id="682" to="681"/>
+</RefObjects>
+</ServiceRealisationView>
+<BusinessFunctionScheme id="16">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Business functions'</MM_Value>
+</MM_ProfileValues>
+<BusinessFunctions name="functions" id="53">
+<BusinessFunction id="610">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Kham Chua &#xd;&#xa;Benh'</MM_Value>
+</MM_ProfileValues>
+</BusinessFunction>
+<BusinessFunction id="534">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Quan ly ket qua&#xd;&#xa; hoc tap'</MM_Value>
+</MM_ProfileValues>
+</BusinessFunction>
+<BusinessFunction id="537">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'&#xd;&#xa;Day Hoc'</MM_Value>
+</MM_ProfileValues>
+</BusinessFunction>
+<BusinessFunction id="550">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Quan ly&#xd;&#xa;Giao Vien'</MM_Value>
+</MM_ProfileValues>
+</BusinessFunction>
+<BusinessFunction id="554">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Phan Cong&#xd;&#xa; Chuyen Mon'</MM_Value>
+</MM_ProfileValues>
+</BusinessFunction>
+<BusinessFunction id="557">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Khen Thuong&#xd;&#xa;Ky Luat'</MM_Value>
+</MM_ProfileValues>
+</BusinessFunction>
+<BusinessFunction id="560">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Quan Ly &#xd;&#xa;Hoc Sinh'</MM_Value>
+</MM_ProfileValues>
+</BusinessFunction>
+<BusinessFunction id="563">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Xet Duyet&#xd;&#xa;Tot Nghiep'</MM_Value>
+</MM_ProfileValues>
+</BusinessFunction>
+<BusinessFunction id="569">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Quan Ly Sach'</MM_Value>
+</MM_ProfileValues>
+</BusinessFunction>
+<BusinessFunction id="573">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Quan Ly &#xd;&#xa;Doc Gia'</MM_Value>
+</MM_ProfileValues>
+</BusinessFunction>
+<BusinessFunction id="576">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Quan Ly Phong &#xd;&#xa;Thi Nghiem'</MM_Value>
+</MM_ProfileValues>
+</BusinessFunction>
+<BusinessFunction id="580">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Quan Ly &#xd;&#xa;Thuc Hanh'</MM_Value>
+</MM_ProfileValues>
+</BusinessFunction>
+<BusinessFunction id="595">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Quan Ly &#xd;&#xa;Cong Van'</MM_Value>
+</MM_ProfileValues>
+</BusinessFunction>
+<BusinessFunction id="599">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Thong Bao&#xd;&#xa;Tin Tuc'</MM_Value>
+</MM_ProfileValues>
+</BusinessFunction>
+<BusinessFunction id="602">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Quan Ly&#xd;&#xa;Thu Chi'</MM_Value>
+</MM_ProfileValues>
+</BusinessFunction>
+<BusinessFunction id="606">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Thong Ke&#xd;&#xa;Bao Cao'</MM_Value>
+</MM_ProfileValues>
+</BusinessFunction>
+<BusinessFunction id="641">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Quan Ly Ket &#xd;&#xa;Qua Hoc Tap'</MM_Value>
+</MM_ProfileValues>
+</BusinessFunction>
+<BusinessFunction id="651">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Quan Ly Lop Hoc'</MM_Value>
+</MM_ProfileValues>
+</BusinessFunction>
+<BusinessFunction id="647">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Hoc'</MM_Value>
+</MM_ProfileValues>
+</BusinessFunction>
+<BusinessFunction id="644">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Khen Thuong&#xd;&#xa;Ky Luat'</MM_Value>
+</MM_ProfileValues>
+</BusinessFunction>
+<BusinessFunction id="637">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Quan Ly Ho &#xd;&#xa;So Hoc Sinh'</MM_Value>
+</MM_ProfileValues>
+</BusinessFunction>
+<BusinessFunction id="655">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Quan Ly Hoc Tap'</MM_Value>
+</MM_ProfileValues>
+</BusinessFunction>
+<BusinessFunction id="659">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Hoat Dong Giai Tri'</MM_Value>
+</MM_ProfileValues>
+</BusinessFunction>
+<BusinessFunction id="662">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Quan Ly Thi Dua'</MM_Value>
+</MM_ProfileValues>
+</BusinessFunction>
+<BusinessFunction id="665">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Quan Ly To Vien'</MM_Value>
+</MM_ProfileValues>
+</BusinessFunction>
+<BusinessFunction id="706">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Quan Ly&#xd;&#xa;Thi'</MM_Value>
+</MM_ProfileValues>
+</BusinessFunction>
+</BusinessFunctions>
+</BusinessFunctionScheme>
+<ApplicationScheme id="13">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Applications'</MM_Value>
+</MM_ProfileValues>
+<ApplicationInterfaces name="interfaces" id="35"/>
+<ApplicationFunctionScheme name="functions" id="31">
+<ApplicationFunctions name="functions" id="32"/>
+</ApplicationFunctionScheme>
+</ApplicationScheme>
+<BusinessProductScheme id="15">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Business products'</MM_Value>
+</MM_ProfileValues>
+<BusinessServiceScheme name="serviceScheme" id="104">
+<BusinessServices name="services" id="105">
+<BusinessService id="777">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Ky Luat'</MM_Value>
+</MM_ProfileValues>
+</BusinessService>
+<BusinessService id="709">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Xep Lich&#xd;&#xa; Thi'</MM_Value>
+</MM_ProfileValues>
+</BusinessService>
+<BusinessService id="771">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Khen Thuong'</MM_Value>
+</MM_ProfileValues>
+</BusinessService>
+<BusinessService id="727">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Xac Nhan Len Lop&#xd;&#xa;Luu Ban'</MM_Value>
+</MM_ProfileValues>
+</BusinessService>
+<BusinessService id="675">
+<MM_ProfileValues>
+<MM_Value name="objrepl" type="ObjectReplicationType">ort_default</MM_Value>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Xep Loai &#xd;&#xa;Tot Nghiep'</MM_Value>
+</MM_ProfileValues>
+</BusinessService>
+<BusinessService id="679">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Xep Lich Day Hoc'</MM_Value>
+</MM_ProfileValues>
+</BusinessService>
+<BusinessService id="681">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Xep Thoi &#xd;&#xa;Khoa Bieu'</MM_Value>
+</MM_ProfileValues>
+</BusinessService>
+</BusinessServices>
+</BusinessServiceScheme>
+<Relations name="relations" id="715">
+<BusinessServiceBusinessActorUse id="748" from="709" to="672"/>
+<BusinessServiceBusinessActorUse id="746" from="681" to="672"/>
+<BusinessServiceBusinessActorUse id="782" from="771" to="724"/>
+<BusinessServiceBusinessActorUse id="740" from="679" to="672"/>
+<BusinessServiceBusinessActorUse id="786" from="777" to="724"/>
+<BusinessServiceBusinessActorUse id="716" from="675" to="672"/>
+<BusinessServiceBusinessActorUse id="784" from="727" to="724"/>
+</Relations>
+</BusinessProductScheme>
+<BusinessInformationScheme id="14">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Business information'</MM_Value>
+</MM_ProfileValues>
+</BusinessInformationScheme>
+<TechnicalInfrastructureScheme id="8">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Infrastructures'</MM_Value>
+</MM_ProfileValues>
+</TechnicalInfrastructureScheme>
+<ApplicationDataScheme id="12">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Application data'</MM_Value>
+</MM_ProfileValues>
+</ApplicationDataScheme>
+<ArchitectPeriodScheme id="7">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Periods'</MM_Value>
+</MM_ProfileValues>
+</ArchitectPeriodScheme>
+<ArchitectProjectScheme id="6">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Programs and Projects'</MM_Value>
+</MM_ProfileValues>
+</ArchitectProjectScheme>
+<ArchitectPrincipleScheme id="5">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Architecture Principles'</MM_Value>
+</MM_ProfileValues>
+</ArchitectPrincipleScheme>
+<BusinessProcessScheme id="18">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Business processes'</MM_Value>
+</MM_ProfileValues>
+<BusinessProcesses name="processes" id="48">
+<BusinessProcess id="209">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Business process'</MM_Value>
+</MM_ProfileValues>
+</BusinessProcess>
+<BusinessProcess id="717">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Phan Cong &#xd;&#xa;Lich Day'</MM_Value>
+</MM_ProfileValues>
+</BusinessProcess>
+<BusinessProcess id="743">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Chia &#xd;&#xa;Lich Thi'</MM_Value>
+</MM_ProfileValues>
+</BusinessProcess>
+<BusinessProcess id="704">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Xet Duyet &#xd;&#xa;Tot Nghiep'</MM_Value>
+</MM_ProfileValues>
+</BusinessProcess>
+<BusinessProcess id="741">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Chia Thoi&#xd;&#xa;Khoa Bieu'</MM_Value>
+</MM_ProfileValues>
+</BusinessProcess>
+<BusinessProcess id="731">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Tong Ket &#xd;&#xa;Hanh Kiem'</MM_Value>
+</MM_ProfileValues>
+</BusinessProcess>
+<BusinessProcess id="729">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Tong Ket &#xd;&#xa;Diem'</MM_Value>
+</MM_ProfileValues>
+</BusinessProcess>
+</BusinessProcesses>
+<Relations name="relations" id="712">
+<BusinessProcessBusinessServiceRealisation id="770" from="731" to="727"/>
+<BusinessProcessBusinessServiceRealisation id="754" from="717" to="679"/>
+<BusinessProcessBusinessServiceRealisation id="752" from="704" to="675"/>
+<BusinessProcessBusinessServiceRealisation id="780" from="731" to="777"/>
+<BusinessProcessBusinessServiceRealisation id="768" from="729" to="727"/>
+<BusinessProcessBusinessServiceRealisation id="774" from="729" to="771"/>
+<BusinessProcessBusinessServiceRealisation id="760" from="743" to="709"/>
+<BusinessProcessBusinessServiceRealisation id="776" from="731" to="771"/>
+<BusinessProcessBusinessServiceRealisation id="758" from="741" to="681"/>
+</Relations>
+</BusinessProcessScheme>
+</AbstractContainers>
+</Component>
+</MM_Module>
+<MM_Module id="788c193d-1c69-49a7-ba05-62364762c9cf" name="ArchiMateViewDomain" nextObjectId="150">
+<MM_Diagram name="root" id="0">
+<MM_Compound name="mm_canvas" id="1" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/9">
+<MM_Graphics name="mm_nodes" id="3"/>
+<MM_Graphics name="mm_relations" id="30"/>
+<MM_Decorations name="mm_decorations" id="2"/>
+<mm_concept>Canvas</mm_concept>
+<MM_Rect name="mm_rect" x="0" y="0" w="2147483647" h="2147483647"/>
+</MM_Compound>
+</MM_Diagram>
+</MM_Module>
+<MM_Module id="7bd6bcc3-167c-492e-82ae-faa21be0a172" name="ArchiMateViewDomain" nextObjectId="145">
+<MM_Diagram name="root" id="0">
+<MM_Compound name="mm_canvas" id="1" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/252">
+<MM_Graphics name="mm_nodes" id="4">
+<MM_Compound id="60" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/319">
+<MM_Decorations name="mm_decorations" id="61">
+<MM_Decoration id="62">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="63">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessRole</mm_concept>
+<MM_Rect name="mm_rect" x="1620" y="450" w="540" h="120"/>
+</MM_Compound>
+<MM_Compound id="64" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/328">
+<MM_Decorations name="mm_decorations" id="65">
+<MM_Decoration id="66">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="67">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessRole</mm_concept>
+<MM_Rect name="mm_rect" x="1620" y="960" w="600" h="120"/>
+</MM_Compound>
+<MM_Compound id="68" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/327">
+<MM_Decorations name="mm_decorations" id="69">
+<MM_Decoration id="70">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="71">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessRole</mm_concept>
+<MM_Rect name="mm_rect" x="1620" y="660" w="540" h="120"/>
+</MM_Compound>
+<MM_Compound id="72" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/320">
+<MM_Graphics name="mm_nodes" id="73">
+<MM_Compound id="74" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/322">
+<MM_Decorations name="mm_decorations" id="75">
+<MM_Decoration id="76">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="77">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessActor</mm_concept>
+<MM_Rect name="mm_rect" x="30" y="120" w="379" h="120"/>
+</MM_Compound>
+<MM_Compound id="78" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/325">
+<MM_Decorations name="mm_decorations" id="79">
+<MM_Decoration id="80">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="81">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessActor</mm_concept>
+<MM_Rect name="mm_rect" x="450" y="120" w="420" h="120"/>
+</MM_Compound>
+<MM_Compound id="82" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/323">
+<MM_Decorations name="mm_decorations" id="83">
+<MM_Decoration id="84">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="85">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessActor</mm_concept>
+<MM_Rect name="mm_rect" x="30" y="270" w="379" h="120"/>
+</MM_Compound>
+<MM_Compound id="86" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/326">
+<MM_Decorations name="mm_decorations" id="87">
+<MM_Decoration id="88">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="89">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessActor</mm_concept>
+<MM_Rect name="mm_rect" x="450" y="270" w="426" h="120"/>
+</MM_Compound>
+<MM_Compound id="90" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/324">
+<MM_Decorations name="mm_decorations" id="91">
+<MM_Decoration id="92">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="93">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessActor</mm_concept>
+<MM_Rect name="mm_rect" x="30" y="420" w="840" h="120"/>
+</MM_Compound>
+</MM_Graphics>
+<MM_Decorations name="mm_decorations" id="94">
+<MM_Decoration id="95">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="96">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessActor</mm_concept>
+<MM_Rect name="mm_rect" x="360" y="450" w="900" h="600"/>
+</MM_Compound>
+<MM_Compound id="101" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/329">
+<MM_Decorations name="mm_decorations" id="102">
+<MM_Decoration id="103">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="104">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessRole</mm_concept>
+<MM_Rect name="mm_rect" x="1620" y="1170" w="600" h="120"/>
+</MM_Compound>
+<MM_Compound id="105" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/317">
+<MM_Decorations name="mm_decorations" id="106">
+<MM_Decoration id="107">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="108">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessRole</mm_concept>
+<MM_Rect name="mm_rect" x="1620" y="210" w="540" h="120"/>
+</MM_Compound>
+</MM_Graphics>
+<MM_Graphics name="mm_relations" id="113">
+<MM_DirectedRel id="114" mm_from="72" mm_to="105" mm_fromx="930" mm_fromy="0" mm_tox="0" mm_toy="120" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/340">
+<mm_concept>BusinessActorBusinessRoleAssignment</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="118" mm_from="72" mm_to="68" mm_fromx="900" mm_fromy="90" mm_tox="60" mm_toy="60" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/336">
+<mm_concept>BusinessActorBusinessRoleAssignment</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="119" mm_from="72" mm_to="60" mm_fromx="90" mm_fromy="60" mm_tox="0" mm_toy="60" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/332">
+<mm_concept>BusinessActorBusinessRoleAssignment</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="116" mm_from="72" mm_to="101" mm_fromx="930" mm_fromy="600" mm_tox="0" mm_toy="90" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/337">
+<mm_concept>BusinessActorBusinessRoleAssignment</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="115" mm_from="72" mm_to="64" mm_fromx="930" mm_fromy="600" mm_tox="30" mm_toy="60" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/335">
+<mm_concept>BusinessActorBusinessRoleAssignment</mm_concept>
+</MM_DirectedRel>
+</MM_Graphics>
+<MM_Decorations name="mm_decorations" id="2"/>
+<mm_concept>Canvas</mm_concept>
+<MM_Rect name="mm_rect" x="0" y="0" w="2147483647" h="2147483647"/>
+</MM_Compound>
+</MM_Diagram>
+</MM_Module>
+<MM_Module id="3d731286-9db2-44b1-b1b3-f17a5f630d91" name="ArchiMateViewDomain" nextObjectId="89">
+<MM_Diagram name="root" id="0">
+<MM_Compound name="mm_canvas" id="1" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/341">
+<MM_Graphics name="mm_nodes" id="4">
+<MM_Compound id="5" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/203">
+<MM_Decorations name="mm_decorations" id="6">
+<MM_Decoration id="7">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="8">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessRole</mm_concept>
+<MM_Rect name="mm_rect" x="1530" y="690" w="360" h="120"/>
+</MM_Compound>
+<MM_Compound id="9" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/205">
+<MM_Decorations name="mm_decorations" id="10">
+<MM_Decoration id="11">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="12">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessRole</mm_concept>
+<MM_Rect name="mm_rect" x="1530" y="900" w="360" h="120"/>
+</MM_Compound>
+<MM_Compound id="13" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/201">
+<MM_Decorations name="mm_decorations" id="14">
+<MM_Decoration id="15">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="16">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessRole</mm_concept>
+<MM_Rect name="mm_rect" x="1530" y="480" w="360" h="120"/>
+</MM_Compound>
+<MM_Compound id="17" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/199">
+<MM_Graphics name="mm_nodes" id="21">
+<MM_Compound id="22" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/350">
+<MM_Decorations name="mm_decorations" id="23">
+<MM_Decoration id="24">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="25">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessActor</mm_concept>
+<MM_Rect name="mm_rect" x="30" y="120" w="379" h="120"/>
+</MM_Compound>
+<MM_Compound id="26" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/353">
+<MM_Decorations name="mm_decorations" id="27">
+<MM_Decoration id="28">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="29">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessActor</mm_concept>
+<MM_Rect name="mm_rect" x="30" y="270" w="379" h="120"/>
+</MM_Compound>
+<MM_Compound id="30" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/356">
+<MM_Decorations name="mm_decorations" id="31">
+<MM_Decoration id="32">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="33">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessActor</mm_concept>
+<MM_Rect name="mm_rect" x="30" y="420" w="379" h="120"/>
+</MM_Compound>
+<MM_Compound id="34" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/359">
+<MM_Decorations name="mm_decorations" id="35">
+<MM_Decoration id="36">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="37">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessActor</mm_concept>
+<MM_Rect name="mm_rect" x="30" y="570" w="379" h="120"/>
+</MM_Compound>
+</MM_Graphics>
+<MM_Decorations name="mm_decorations" id="18">
+<MM_Decoration id="19">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="20">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessActor</mm_concept>
+<MM_Rect name="mm_rect" x="810" y="480" w="450" h="750"/>
+</MM_Compound>
+<MM_Compound id="58" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/375">
+<MM_Decorations name="mm_decorations" id="59">
+<MM_Decoration id="60">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="61">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessRole</mm_concept>
+<MM_Rect name="mm_rect" x="1530" y="1110" w="361" h="120"/>
+</MM_Compound>
+</MM_Graphics>
+<MM_Graphics name="mm_relations" id="38">
+<MM_DirectedRel id="62" mm_from="17" mm_to="58" mm_fromx="450" mm_fromy="690" mm_tox="30" mm_toy="60" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/376">
+<mm_concept>BusinessActorBusinessRoleAssignment</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="39" mm_from="17" mm_to="13" mm_fromx="450" mm_fromy="60" mm_tox="0" mm_toy="60" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/360">
+<mm_concept>BusinessActorBusinessRoleAssignment</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="40" mm_from="17" mm_to="5" mm_fromx="450" mm_fromy="270" mm_tox="30" mm_toy="60" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/362">
+<mm_concept>BusinessActorBusinessRoleAssignment</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="41" mm_from="17" mm_to="9" mm_fromx="450" mm_fromy="480" mm_tox="30" mm_toy="60" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/364">
+<mm_concept>BusinessActorBusinessRoleAssignment</mm_concept>
+</MM_DirectedRel>
+</MM_Graphics>
+<MM_Decorations name="mm_decorations" id="2"/>
+<mm_concept>Canvas</mm_concept>
+<MM_Rect name="mm_rect" x="0" y="0" w="2147483647" h="2147483647"/>
+</MM_Compound>
+</MM_Diagram>
+</MM_Module>
+<MM_Module id="248a37c2-2ffa-4d1e-934e-c16264511101" name="ArchiMateViewDomain" nextObjectId="78">
+<MM_Diagram name="root" id="0">
+<MM_Compound name="mm_canvas" id="1" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/396">
+<MM_Graphics name="mm_nodes" id="4">
+<MM_Compound id="5" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/401">
+<MM_Graphics name="mm_nodes" id="9">
+<MM_Compound id="10" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/403">
+<MM_Decorations name="mm_decorations" id="11">
+<MM_Decoration id="12">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="13">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessActor</mm_concept>
+<MM_Rect name="mm_rect" x="30" y="120" w="450" h="120"/>
+</MM_Compound>
+<MM_Compound id="14" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/408">
+<MM_Graphics name="mm_nodes" id="18">
+<MM_Compound id="19" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/414">
+<MM_Decorations name="mm_decorations" id="20">
+<MM_Decoration id="21">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="22">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessActor</mm_concept>
+<MM_Rect name="mm_rect" x="30" y="90" w="379" h="120"/>
+</MM_Compound>
+<MM_Compound id="23" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/417">
+<MM_Decorations name="mm_decorations" id="24">
+<MM_Decoration id="25">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="26">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessActor</mm_concept>
+<MM_Rect name="mm_rect" x="30" y="450" w="379" h="120"/>
+</MM_Compound>
+<MM_Compound id="27" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/420">
+<MM_Decorations name="mm_decorations" id="28">
+<MM_Decoration id="29">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="30">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessActor</mm_concept>
+<MM_Rect name="mm_rect" x="30" y="630" w="379" h="120"/>
+</MM_Compound>
+<MM_Compound id="68" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/628">
+<MM_Decorations name="mm_decorations" id="69">
+<MM_Decoration id="70">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="71">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessActor</mm_concept>
+<MM_Rect name="mm_rect" x="30" y="270" w="379" h="120"/>
+</MM_Compound>
+</MM_Graphics>
+<MM_Decorations name="mm_decorations" id="15">
+<MM_Decoration id="16">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="17">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessActor</mm_concept>
+<MM_Rect name="mm_rect" x="30" y="300" w="450" h="780"/>
+</MM_Compound>
+</MM_Graphics>
+<MM_Decorations name="mm_decorations" id="6">
+<MM_Decoration id="7">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="8">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessActor</mm_concept>
+<MM_Rect name="mm_rect" x="630" y="300" w="510" h="1110"/>
+</MM_Compound>
+<MM_Compound id="31" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/422">
+<MM_Decorations name="mm_decorations" id="32">
+<MM_Decoration id="33">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="34">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessRole</mm_concept>
+<MM_Rect name="mm_rect" x="1290" y="300" w="470" h="120"/>
+</MM_Compound>
+<MM_Compound id="39" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/426">
+<MM_Decorations name="mm_decorations" id="40">
+<MM_Decoration id="41">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="42">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessRole</mm_concept>
+<MM_Rect name="mm_rect" x="1290" y="570" w="480" h="120"/>
+</MM_Compound>
+<MM_Compound id="43" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/428">
+<MM_Decorations name="mm_decorations" id="44">
+<MM_Decoration id="45">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="46">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessRole</mm_concept>
+<MM_Rect name="mm_rect" x="1290" y="1260" w="480" h="120"/>
+</MM_Compound>
+<MM_Compound id="62" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/460">
+<MM_Decorations name="mm_decorations" id="63">
+<MM_Decoration id="64">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="65">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessCollaboration</mm_concept>
+<MM_Rect name="mm_rect" x="1800" y="900" w="517" h="120"/>
+</MM_Compound>
+<MM_Compound id="72" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/630">
+<MM_Decorations name="mm_decorations" id="73">
+<MM_Decoration id="74">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="75">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessRole</mm_concept>
+<MM_Rect name="mm_rect" x="1290" y="900" w="361" h="120"/>
+</MM_Compound>
+</MM_Graphics>
+<MM_Graphics name="mm_relations" id="47">
+<MM_DirectedRel id="48" mm_from="5" mm_to="31" mm_fromx="510" mm_fromy="60" mm_tox="30" mm_toy="60" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/429">
+<mm_concept>BusinessActorBusinessRoleAssignment</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="66" mm_from="62" mm_to="43" mm_fromx="240" mm_fromy="120" mm_tox="240" mm_toy="0" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/461">
+<mm_concept>BusinessActorBusinessActorAggregation</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="67" mm_from="62" mm_to="39" mm_fromx="240" mm_fromy="0" mm_tox="240" mm_toy="120" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/463">
+<mm_concept>BusinessActorBusinessActorAggregation</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="50" mm_from="5" mm_to="39" mm_fromx="480" mm_fromy="330" mm_tox="30" mm_toy="60" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/433">
+<mm_concept>BusinessActorBusinessRoleAssignment</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="51" mm_from="5" mm_to="43" mm_fromx="510" mm_fromy="1020" mm_tox="0" mm_toy="60" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/435">
+<mm_concept>BusinessActorBusinessRoleAssignment</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="76" mm_from="62" mm_to="72" mm_fromx="90" mm_fromy="60" mm_tox="330" mm_toy="60" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/631">
+<mm_concept>BusinessActorBusinessActorAggregation</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="77" mm_from="5" mm_to="72" mm_fromx="510" mm_fromy="660" mm_tox="0" mm_toy="60" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/633">
+<mm_concept>BusinessActorBusinessRoleAssignment</mm_concept>
+</MM_DirectedRel>
+</MM_Graphics>
+<MM_Decorations name="mm_decorations" id="2"/>
+<mm_concept>Canvas</mm_concept>
+<MM_Rect name="mm_rect" x="0" y="0" w="2147483647" h="2147483647"/>
+</MM_Compound>
+</MM_Diagram>
+</MM_Module>
+<MM_Module id="76b08ba7-0763-4505-8086-13b0ddb25f0a" name="ArchiMateViewDomain" nextObjectId="94">
+<MM_Diagram name="root" id="0">
+<MM_Compound name="mm_canvas" id="1" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/524">
+<MM_Graphics name="mm_nodes" id="4">
+<MM_Compound id="5" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/529">
+<MM_Graphics name="mm_nodes" id="9">
+<MM_Compound id="14" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/536">
+<MM_Decorations name="mm_decorations" id="15">
+<MM_Decoration id="16">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="17">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessFunction</mm_concept>
+<MM_Rect name="mm_rect" x="240" y="390" w="390" h="120"/>
+</MM_Compound>
+<MM_Compound id="18" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/539">
+<MM_Decorations name="mm_decorations" id="19">
+<MM_Decoration id="20">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="21">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessFunction</mm_concept>
+<MM_Rect name="mm_rect" x="270" y="180" w="360" h="120"/>
+</MM_Compound>
+</MM_Graphics>
+<MM_Decorations name="mm_decorations" id="6">
+<MM_Decoration id="7">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="8">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessRole</mm_concept>
+<MM_Rect name="mm_rect" x="150" y="60" w="870" h="570"/>
+</MM_Compound>
+<MM_Compound id="22" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/541">
+<MM_Graphics name="mm_nodes" id="42">
+<MM_Compound id="43" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/553">
+<MM_Decorations name="mm_decorations" id="44">
+<MM_Decoration id="45">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="46">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessFunction</mm_concept>
+<MM_Rect name="mm_rect" x="30" y="150" w="330" h="120"/>
+</MM_Compound>
+<MM_Compound id="47" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/556">
+<MM_Decorations name="mm_decorations" id="48">
+<MM_Decoration id="49">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="50">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessFunction</mm_concept>
+<MM_Rect name="mm_rect" x="420" y="150" w="390" h="120"/>
+</MM_Compound>
+<MM_Compound id="51" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/559">
+<MM_Decorations name="mm_decorations" id="52">
+<MM_Decoration id="53">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="54">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessFunction</mm_concept>
+<MM_Rect name="mm_rect" x="30" y="330" w="360" h="120"/>
+</MM_Compound>
+<MM_Compound id="55" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/562">
+<MM_Decorations name="mm_decorations" id="56">
+<MM_Decoration id="57">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="58">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessFunction</mm_concept>
+<MM_Rect name="mm_rect" x="480" y="330" w="330" h="120"/>
+</MM_Compound>
+<MM_Compound id="59" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/565">
+<MM_Decorations name="mm_decorations" id="60">
+<MM_Decoration id="61">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="62">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessFunction</mm_concept>
+<MM_Rect name="mm_rect" x="870" y="330" w="330" h="120"/>
+</MM_Compound>
+<MM_Compound id="90" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/708">
+<MM_Decorations name="mm_decorations" id="91">
+<MM_Decoration id="92">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="93">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessFunction</mm_concept>
+<MM_Rect name="mm_rect" x="870" y="150" w="330" h="120"/>
+</MM_Compound>
+</MM_Graphics>
+<MM_Decorations name="mm_decorations" id="23">
+<MM_Decoration id="24">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="25">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessRole</mm_concept>
+<MM_Rect name="mm_rect" x="1110" y="60" w="1320" h="570"/>
+</MM_Compound>
+<MM_Compound id="30" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/545">
+<MM_Graphics name="mm_nodes" id="63">
+<MM_Compound id="64" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/567">
+<MM_Decorations name="mm_decorations" id="65">
+<MM_Decoration id="66">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="67">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessFunction</mm_concept>
+<MM_Rect name="mm_rect" x="180" y="180" w="360" h="120"/>
+</MM_Compound>
+<MM_Compound id="68" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/568">
+<MM_Decorations name="mm_decorations" id="69">
+<MM_Decoration id="70">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="71">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessFunction</mm_concept>
+<MM_Rect name="mm_rect" x="210" y="390" w="330" h="120"/>
+</MM_Compound>
+</MM_Graphics>
+<MM_Decorations name="mm_decorations" id="31">
+<MM_Decoration id="32">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="33">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessRole</mm_concept>
+<MM_Rect name="mm_rect" x="30" y="720" w="810" h="690"/>
+</MM_Compound>
+<MM_Compound id="34" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/547">
+<MM_Graphics name="mm_nodes" id="72">
+<MM_Compound id="73" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/572">
+<MM_Decorations name="mm_decorations" id="74">
+<MM_Decoration id="75">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="76">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessFunction</mm_concept>
+<MM_Rect name="mm_rect" x="210" y="150" w="429" h="120"/>
+</MM_Compound>
+<MM_Compound id="77" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/575">
+<MM_Decorations name="mm_decorations" id="78">
+<MM_Decoration id="79">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="80">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessFunction</mm_concept>
+<MM_Rect name="mm_rect" x="210" y="360" w="390" h="120"/>
+</MM_Compound>
+</MM_Graphics>
+<MM_Decorations name="mm_decorations" id="35">
+<MM_Decoration id="36">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="37">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessRole</mm_concept>
+<MM_Rect name="mm_rect" x="870" y="720" w="870" h="690"/>
+</MM_Compound>
+<MM_Compound id="38" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/549">
+<MM_Graphics name="mm_nodes" id="81">
+<MM_Compound id="82" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/579">
+<MM_Decorations name="mm_decorations" id="83">
+<MM_Decoration id="84">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="85">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessFunction</mm_concept>
+<MM_Rect name="mm_rect" x="150" y="150" w="450" h="120"/>
+</MM_Compound>
+<MM_Compound id="86" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/582">
+<MM_Decorations name="mm_decorations" id="87">
+<MM_Decoration id="88">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="89">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessFunction</mm_concept>
+<MM_Rect name="mm_rect" x="210" y="360" w="360" h="120"/>
+</MM_Compound>
+</MM_Graphics>
+<MM_Decorations name="mm_decorations" id="39">
+<MM_Decoration id="40">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="41">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessRole</mm_concept>
+<MM_Rect name="mm_rect" x="1770" y="720" w="750" h="690"/>
+</MM_Compound>
+</MM_Graphics>
+<MM_Decorations name="mm_decorations" id="2"/>
+<mm_concept>Canvas</mm_concept>
+<MM_Rect name="mm_rect" x="0" y="0" w="2147483647" h="2147483647"/>
+</MM_Compound>
+</MM_Diagram>
+</MM_Module>
+<MM_Module id="c83ec028-8ee5-4069-a30c-ec5b95ea5665" name="ArchiMateViewDomain" nextObjectId="45">
+<MM_Diagram name="root" id="0">
+<MM_Compound name="mm_canvas" id="1" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/583">
+<MM_Graphics name="mm_nodes" id="4">
+<MM_Compound id="5" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/588">
+<MM_Graphics name="mm_nodes" id="21">
+<MM_Compound id="22" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/598">
+<MM_Decorations name="mm_decorations" id="23">
+<MM_Decoration id="24">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="25">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessFunction</mm_concept>
+<MM_Rect name="mm_rect" x="120" y="120" w="360" h="120"/>
+</MM_Compound>
+<MM_Compound id="26" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/601">
+<MM_Decorations name="mm_decorations" id="27">
+<MM_Decoration id="28">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="29">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessFunction</mm_concept>
+<MM_Rect name="mm_rect" x="120" y="300" w="360" h="120"/>
+</MM_Compound>
+</MM_Graphics>
+<MM_Decorations name="mm_decorations" id="6">
+<MM_Decoration id="7">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="8">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessRole</mm_concept>
+<MM_Rect name="mm_rect" x="150" y="180" w="660" h="510"/>
+</MM_Compound>
+<MM_Compound id="9" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/590">
+<MM_Graphics name="mm_nodes" id="39">
+<MM_Compound id="35" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/608">
+<MM_Decorations name="mm_decorations" id="36">
+<MM_Decoration id="37">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="38">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessFunction</mm_concept>
+<MM_Rect name="mm_rect" x="60" y="120" w="360" h="120"/>
+</MM_Compound>
+</MM_Graphics>
+<MM_Decorations name="mm_decorations" id="10">
+<MM_Decoration id="11">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="12">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessRole</mm_concept>
+<MM_Rect name="mm_rect" x="210" y="810" w="510" h="420"/>
+</MM_Compound>
+<MM_Compound id="13" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/592">
+<MM_Graphics name="mm_nodes" id="30">
+<MM_Compound id="31" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/605">
+<MM_Decorations name="mm_decorations" id="32">
+<MM_Decoration id="33">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="34">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessFunction</mm_concept>
+<MM_Rect name="mm_rect" x="150" y="120" w="360" h="120"/>
+</MM_Compound>
+</MM_Graphics>
+<MM_Decorations name="mm_decorations" id="14">
+<MM_Decoration id="15">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="16">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessRole</mm_concept>
+<MM_Rect name="mm_rect" x="990" y="180" w="720" h="540"/>
+</MM_Compound>
+<MM_Compound id="17" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/594">
+<MM_Graphics name="mm_nodes" id="40">
+<MM_Compound id="41" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/613">
+<MM_Decorations name="mm_decorations" id="42">
+<MM_Decoration id="43">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="44">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessFunction</mm_concept>
+<MM_Rect name="mm_rect" x="180" y="120" w="390" h="120"/>
+</MM_Compound>
+</MM_Graphics>
+<MM_Decorations name="mm_decorations" id="18">
+<MM_Decoration id="19">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="20">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessRole</mm_concept>
+<MM_Rect name="mm_rect" x="990" y="840" w="690" h="390"/>
+</MM_Compound>
+</MM_Graphics>
+<MM_Decorations name="mm_decorations" id="2"/>
+<mm_concept>Canvas</mm_concept>
+<MM_Rect name="mm_rect" x="0" y="0" w="2147483647" h="2147483647"/>
+</MM_Compound>
+</MM_Diagram>
+</MM_Module>
+<MM_Module id="883c975c-e700-4a56-85ea-d98e8bd77107" name="ArchiMateViewDomain" nextObjectId="66">
+<MM_Diagram name="root" id="0">
+<MM_Compound name="mm_canvas" id="1" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/614">
+<MM_Graphics name="mm_nodes" id="4">
+<MM_Compound id="5" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/619">
+<MM_Graphics name="mm_nodes" id="25">
+<MM_Compound id="26" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/640">
+<MM_Decorations name="mm_decorations" id="27">
+<MM_Decoration id="28">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="29">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessFunction</mm_concept>
+<MM_Rect name="mm_rect" x="120" y="120" w="390" h="120"/>
+</MM_Compound>
+<MM_Compound id="30" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/643">
+<MM_Decorations name="mm_decorations" id="31">
+<MM_Decoration id="32">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="33">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessFunction</mm_concept>
+<MM_Rect name="mm_rect" x="120" y="300" w="390" h="120"/>
+</MM_Compound>
+<MM_Compound id="34" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/646">
+<MM_Decorations name="mm_decorations" id="35">
+<MM_Decoration id="36">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="37">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessFunction</mm_concept>
+<MM_Rect name="mm_rect" x="120" y="480" w="390" h="120"/>
+</MM_Compound>
+</MM_Graphics>
+<MM_Decorations name="mm_decorations" id="6">
+<MM_Decoration id="7">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="8">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessRole</mm_concept>
+<MM_Rect name="mm_rect" x="660" y="180" w="630" h="660"/>
+</MM_Compound>
+<MM_Compound id="9" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/621">
+<MM_Graphics name="mm_nodes" id="38">
+<MM_Compound id="39" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/650">
+<MM_Decorations name="mm_decorations" id="40">
+<MM_Decoration id="41">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="42">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessFunction</mm_concept>
+<MM_Rect name="mm_rect" x="120" y="120" w="240" h="90"/>
+</MM_Compound>
+</MM_Graphics>
+<MM_Decorations name="mm_decorations" id="10">
+<MM_Decoration id="11">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="12">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessRole</mm_concept>
+<MM_Rect name="mm_rect" x="1440" y="150" w="480" h="300"/>
+</MM_Compound>
+<MM_Compound id="13" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/623">
+<MM_Graphics name="mm_nodes" id="43">
+<MM_Compound id="44" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/654">
+<MM_Decorations name="mm_decorations" id="45">
+<MM_Decoration id="46">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="47">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessFunction</mm_concept>
+<MM_Rect name="mm_rect" x="60" y="120" w="429" h="120"/>
+</MM_Compound>
+<MM_Compound id="57" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/664">
+<MM_Decorations name="mm_decorations" id="58">
+<MM_Decoration id="59">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="60">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessFunction</mm_concept>
+<MM_Rect name="mm_rect" x="60" y="300" w="420" h="120"/>
+</MM_Compound>
+</MM_Graphics>
+<MM_Decorations name="mm_decorations" id="14">
+<MM_Decoration id="15">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="16">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessRole</mm_concept>
+<MM_Rect name="mm_rect" x="690" y="1050" w="570" h="480"/>
+</MM_Compound>
+<MM_Compound id="17" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/625">
+<MM_Graphics name="mm_nodes" id="61">
+<MM_Compound id="62" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/668">
+<MM_Decorations name="mm_decorations" id="63">
+<MM_Decoration id="64">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="65">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessFunction</mm_concept>
+<MM_Rect name="mm_rect" x="30" y="120" w="420" h="120"/>
+</MM_Compound>
+</MM_Graphics>
+<MM_Decorations name="mm_decorations" id="18">
+<MM_Decoration id="19">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="20">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessRole</mm_concept>
+<MM_Rect name="mm_rect" x="1440" y="510" w="480" h="390"/>
+</MM_Compound>
+<MM_Compound id="21" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/636">
+<MM_Graphics name="mm_nodes" id="48">
+<MM_Compound id="49" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/658">
+<MM_Decorations name="mm_decorations" id="50">
+<MM_Decoration id="51">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="52">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessFunction</mm_concept>
+<MM_Rect name="mm_rect" x="60" y="120" w="429" h="120"/>
+</MM_Compound>
+<MM_Compound id="53" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/661">
+<MM_Decorations name="mm_decorations" id="54">
+<MM_Decoration id="55">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="56">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessFunction</mm_concept>
+<MM_Rect name="mm_rect" x="58" y="300" w="433" h="120"/>
+</MM_Compound>
+</MM_Graphics>
+<MM_Decorations name="mm_decorations" id="22">
+<MM_Decoration id="23">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="24">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessRole</mm_concept>
+<MM_Rect name="mm_rect" x="1410" y="1050" w="540" h="480"/>
+</MM_Compound>
+</MM_Graphics>
+<MM_Decorations name="mm_decorations" id="2"/>
+<mm_concept>Canvas</mm_concept>
+<MM_Rect name="mm_rect" x="0" y="0" w="2147483647" h="2147483647"/>
+</MM_Compound>
+</MM_Diagram>
+</MM_Module>
+<MM_Module id="5833a90a-d275-4bd0-b73d-91e94fd8c5a2" name="ArchiMateViewDomain" nextObjectId="62">
+<MM_Diagram name="root" id="0">
+<MM_Compound name="mm_canvas" id="1" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/669">
+<MM_Graphics name="mm_nodes" id="4">
+<MM_Compound id="5" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/674">
+<MM_Decorations name="mm_decorations" id="6">
+<MM_Decoration id="7">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="8">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessRole</mm_concept>
+<MM_Rect name="mm_rect" x="1110" y="210" w="361" h="120"/>
+</MM_Compound>
+<MM_Compound id="9" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/676">
+<MM_Decorations name="mm_decorations" id="10">
+<MM_Decoration id="11">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessService</mm_concept>
+<MM_Rect name="mm_rect" x="120" y="690" w="360" h="120"/>
+</MM_Compound>
+<MM_Compound id="15" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/680">
+<MM_Decorations name="mm_decorations" id="16">
+<MM_Decoration id="17">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessService</mm_concept>
+<MM_Rect name="mm_rect" x="720" y="690" w="360" h="120"/>
+</MM_Compound>
+<MM_Compound id="18" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/682">
+<MM_Decorations name="mm_decorations" id="19">
+<MM_Decoration id="20">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessService</mm_concept>
+<MM_Rect name="mm_rect" x="1380" y="690" w="376" h="120"/>
+</MM_Compound>
+<MM_Compound id="21" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/705">
+<MM_Decorations name="mm_decorations" id="22">
+<MM_Decoration id="23">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="24">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessProcess</mm_concept>
+<MM_Rect name="mm_rect" x="120" y="1110" w="360" h="120"/>
+</MM_Compound>
+<MM_Compound id="25" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/710">
+<MM_Decorations name="mm_decorations" id="26">
+<MM_Decoration id="27">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessService</mm_concept>
+<MM_Rect name="mm_rect" x="2010" y="690" w="330" h="120"/>
+</MM_Compound>
+<MM_Compound id="31" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/718">
+<MM_Decorations name="mm_decorations" id="32">
+<MM_Decoration id="33">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="34">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessProcess</mm_concept>
+<MM_Rect name="mm_rect" x="720" y="1110" w="360" h="120"/>
+</MM_Compound>
+<MM_Compound id="43" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/742">
+<MM_Decorations name="mm_decorations" id="44">
+<MM_Decoration id="45">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="46">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessProcess</mm_concept>
+<MM_Rect name="mm_rect" x="1380" y="1110" w="390" h="120"/>
+</MM_Compound>
+<MM_Compound id="47" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/744">
+<MM_Decorations name="mm_decorations" id="48">
+<MM_Decoration id="49">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="50">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessProcess</mm_concept>
+<MM_Rect name="mm_rect" x="2010" y="1110" w="330" h="120"/>
+</MM_Compound>
+</MM_Graphics>
+<MM_Graphics name="mm_relations" id="28">
+<MM_DirectedRel id="30" mm_from="9" mm_to="5" mm_tox="30" mm_toy="60" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/714">
+<mm_concept>BusinessServiceBusinessActorUse</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="42" mm_from="15" mm_to="5" mm_tox="150" mm_toy="120" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/739">
+<mm_concept>BusinessServiceBusinessActorUse</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="51" mm_from="18" mm_to="5" mm_tox="210" mm_toy="90" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/745">
+<mm_concept>BusinessServiceBusinessActorUse</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="52" mm_from="25" mm_to="5" mm_tox="330" mm_toy="120" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/747">
+<mm_concept>BusinessServiceBusinessActorUse</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="57" mm_from="21" mm_to="9" mm_fromx="180" mm_fromy="30" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/751">
+<mm_concept>BusinessProcessBusinessServiceRealisation</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="58" mm_from="31" mm_to="15" mm_fromx="180" mm_fromy="0" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/753">
+<mm_concept>BusinessProcessBusinessServiceRealisation</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="60" mm_from="43" mm_to="18" mm_fromx="180" mm_fromy="0" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/757">
+<mm_concept>BusinessProcessBusinessServiceRealisation</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="61" mm_from="47" mm_to="25" mm_fromx="150" mm_fromy="30" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/759">
+<mm_concept>BusinessProcessBusinessServiceRealisation</mm_concept>
+</MM_DirectedRel>
+</MM_Graphics>
+<MM_Decorations name="mm_decorations" id="2"/>
+<mm_concept>Canvas</mm_concept>
+<MM_Rect name="mm_rect" x="0" y="0" w="2147483647" h="2147483647"/>
+</MM_Compound>
+</MM_Diagram>
+</MM_Module>
+<MM_Module id="914d0f62-eb29-4099-bae7-300e4f0f7acc" name="ArchiMateViewDomain" nextObjectId="44">
+<MM_Diagram name="root" id="0">
+<MM_Compound name="mm_canvas" id="1" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/721">
+<MM_Graphics name="mm_nodes" id="4">
+<MM_Compound id="5" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/726">
+<MM_Decorations name="mm_decorations" id="6">
+<MM_Decoration id="7">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="8">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessRole</mm_concept>
+<MM_Rect name="mm_rect" x="930" y="270" w="361" h="120"/>
+</MM_Compound>
+<MM_Compound id="9" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/728">
+<MM_Decorations name="mm_decorations" id="10">
+<MM_Decoration id="11">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessService</mm_concept>
+<MM_Rect name="mm_rect" x="900" y="660" w="480" h="120"/>
+</MM_Compound>
+<MM_Compound id="12" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/730">
+<MM_Decorations name="mm_decorations" id="13">
+<MM_Decoration id="14">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="15">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessProcess</mm_concept>
+<MM_Rect name="mm_rect" x="270" y="1110" w="300" h="120"/>
+</MM_Compound>
+<MM_Compound id="16" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/732">
+<MM_Decorations name="mm_decorations" id="17">
+<MM_Decoration id="18">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="19">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessProcess</mm_concept>
+<MM_Rect name="mm_rect" x="900" y="1140" w="330" h="120"/>
+</MM_Compound>
+<MM_Compound id="32" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/772">
+<MM_Decorations name="mm_decorations" id="33">
+<MM_Decoration id="34">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessService</mm_concept>
+<MM_Rect name="mm_rect" x="180" y="660" w="360" h="120"/>
+</MM_Compound>
+<MM_Compound id="37" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/778">
+<MM_Decorations name="mm_decorations" id="38">
+<MM_Decoration id="39">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessService</mm_concept>
+<MM_Rect name="mm_rect" x="1710" y="660" w="330" h="120"/>
+</MM_Compound>
+</MM_Graphics>
+<MM_Graphics name="mm_relations" id="26">
+<MM_DirectedRel id="30" mm_from="12" mm_to="9" mm_fromx="150" mm_fromy="60" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/767">
+<mm_concept>BusinessProcessBusinessServiceRealisation</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="31" mm_from="16" mm_to="9" mm_fromx="240" mm_fromy="60" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/769">
+<mm_concept>BusinessProcessBusinessServiceRealisation</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="35" mm_from="12" mm_to="32" mm_fromx="90" mm_fromy="30" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/773">
+<mm_concept>BusinessProcessBusinessServiceRealisation</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="36" mm_from="16" mm_to="32" mm_fromx="150" mm_fromy="90" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/775">
+<mm_concept>BusinessProcessBusinessServiceRealisation</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="40" mm_from="16" mm_to="37" mm_fromx="240" mm_fromy="60" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/779">
+<mm_concept>BusinessProcessBusinessServiceRealisation</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="41" mm_from="32" mm_to="5" mm_tox="60" mm_toy="30" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/781">
+<mm_concept>BusinessServiceBusinessActorUse</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="42" mm_from="9" mm_to="5" mm_tox="210" mm_toy="90" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/783">
+<mm_concept>BusinessServiceBusinessActorUse</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="43" mm_from="37" mm_to="5" mm_tox="240" mm_toy="60" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/785">
+<mm_concept>BusinessServiceBusinessActorUse</mm_concept>
+</MM_DirectedRel>
+</MM_Graphics>
+<MM_Decorations name="mm_decorations" id="2"/>
+<mm_concept>Canvas</mm_concept>
+<MM_Rect name="mm_rect" x="0" y="0" w="2147483647" h="2147483647"/>
+</MM_Compound>
+</MM_Diagram>
+</MM_Module>
+</MM_StorageUnit>
+</MM_Document>
