@@ -2,7 +2,7 @@
 <MM_Document version="1.0">
 <MM_Application name="Architect" version="2,3,4,26643"/>
 <MM_StorageUnit name="file:///F:\Portal\trunk\Document\Development\2_Analysis_Design\1_High_Level_Design\Function.xma" metamodel="ArchiMate">
-<MM_Module id="a3facc6c-c0c2-4a3c-a39d-554e37dd0751" name="AmberComponent" nextObjectId="1202">
+<MM_Module id="a3facc6c-c0c2-4a3c-a39d-554e37dd0751" name="AmberComponent" nextObjectId="1311">
 <Component name="root" id="0">
 <MM_ProfileValues>
 <MM_Value name="nm" type="string" xml:lang="neutral">'Function'</MM_Value>
@@ -38,16 +38,6 @@
 <MM_List name="selectedObjects" type="SelectedObjects2"/>
 </MM_Struct>
 <MM_Struct name="ViewSetting2" type="ViewSetting2">
-<MM_Value name="diagObj" type="objectref">669</MM_Value>
-<MM_Value name="x11" type="real">1.000</MM_Value>
-<MM_Value name="x12" type="real">0.000</MM_Value>
-<MM_Value name="x21" type="real">0.000</MM_Value>
-<MM_Value name="x22" type="real">1.000</MM_Value>
-<MM_Value name="x0" type="real">0.000</MM_Value>
-<MM_Value name="y0" type="real">0.000</MM_Value>
-<MM_List name="selectedObjects" type="SelectedObjects2"/>
-</MM_Struct>
-<MM_Struct name="ViewSetting2" type="ViewSetting2">
 <MM_Value name="diagObj" type="objectref">721</MM_Value>
 <MM_Value name="x11" type="real">1.000</MM_Value>
 <MM_Value name="x12" type="real">0.000</MM_Value>
@@ -58,7 +48,37 @@
 <MM_List name="selectedObjects" type="SelectedObjects2"/>
 </MM_Struct>
 <MM_Struct name="ViewSetting2" type="ViewSetting2">
+<MM_Value name="diagObj" type="objectref">669</MM_Value>
+<MM_Value name="x11" type="real">1.000</MM_Value>
+<MM_Value name="x12" type="real">0.000</MM_Value>
+<MM_Value name="x21" type="real">0.000</MM_Value>
+<MM_Value name="x22" type="real">1.000</MM_Value>
+<MM_Value name="x0" type="real">0.000</MM_Value>
+<MM_Value name="y0" type="real">0.000</MM_Value>
+<MM_List name="selectedObjects" type="SelectedObjects2"/>
+</MM_Struct>
+<MM_Struct name="ViewSetting2" type="ViewSetting2">
 <MM_Value name="diagObj" type="objectref">1074</MM_Value>
+<MM_Value name="x11" type="real">1.000</MM_Value>
+<MM_Value name="x12" type="real">0.000</MM_Value>
+<MM_Value name="x21" type="real">0.000</MM_Value>
+<MM_Value name="x22" type="real">1.000</MM_Value>
+<MM_Value name="x0" type="real">0.000</MM_Value>
+<MM_Value name="y0" type="real">0.000</MM_Value>
+<MM_List name="selectedObjects" type="SelectedObjects2">
+<MM_Value name="objectref" type="objectref">1206</MM_Value>
+<MM_Value name="objectref" type="objectref">1204</MM_Value>
+<MM_Value name="objectref" type="objectref">1199</MM_Value>
+<MM_Value name="objectref" type="objectref">1192</MM_Value>
+<MM_Value name="objectref" type="objectref">1184</MM_Value>
+<MM_Value name="objectref" type="objectref">1186</MM_Value>
+<MM_Value name="objectref" type="objectref">1195</MM_Value>
+<MM_Value name="objectref" type="objectref">1196</MM_Value>
+<MM_Value name="objectref" type="objectref">1188</MM_Value>
+</MM_List>
+</MM_Struct>
+<MM_Struct name="ViewSetting2" type="ViewSetting2">
+<MM_Value name="diagObj" type="objectref">1207</MM_Value>
 <MM_Value name="x11" type="real">1.000</MM_Value>
 <MM_Value name="x12" type="real">0.000</MM_Value>
 <MM_Value name="x21" type="real">0.000</MM_Value>
@@ -82,61 +102,12 @@
 </GroupingScheme>
 <Relations name="relations" id="810">
 <ElementElementAssociation id="811" from="793" to="807"/>
+<ElementElementAssociation id="1210" from="793" to="1207"/>
 <ElementElementAssociation id="859" from="793" to="856"/>
 <ElementElementAssociation id="1077" from="793" to="1074"/>
 </Relations>
 <RefObjects name="refObjects" id="812"/>
 <AbstractContainers name="containers" id="806">
-<OrganisationStructureView id="807">
-<MM_ProfileValues>
-<MM_Value name="nm" type="string" xml:lang="neutral">'Organisation structure view'</MM_Value>
-</MM_ProfileValues>
-<GroupingScheme name="groupingScheme" id="808">
-<Groupings name="groupings" id="809"/>
-</GroupingScheme>
-<RefObjects name="refObjects" id="814">
-<BusinessActorRef id="841" to="840">
-<MM_RefObjects name="childRefObjects" id="842">
-<BusinessActorRef id="815" to="198">
-<MM_RefObjects name="childRefObjects" id="816">
-<BusinessActorRef id="819" to="357"/>
-<BusinessActorRef id="820" to="347"/>
-<BusinessActorRef id="818" to="354"/>
-<BusinessActorRef id="817" to="351"/>
-</MM_RefObjects>
-</BusinessActorRef>
-<BusinessActorRef id="828" to="399">
-<MM_RefObjects name="childRefObjects" id="829">
-<BusinessActorRef id="844" to="843"/>
-<BusinessActorRef id="830" to="406">
-<MM_RefObjects name="childRefObjects" id="831">
-<BusinessActorRef id="833" to="415"/>
-<BusinessActorRef id="832" to="411"/>
-<BusinessActorRef id="834" to="418"/>
-<BusinessActorRef id="835" to="626"/>
-</MM_RefObjects>
-</BusinessActorRef>
-</MM_RefObjects>
-</BusinessActorRef>
-<BusinessActorRef id="821" to="41">
-<MM_RefObjects name="childRefObjects" id="822">
-<BusinessActorRef id="823" to="221"/>
-<BusinessActorRef id="824" to="214"/>
-<BusinessActorRef id="826" to="227"/>
-<BusinessActorRef id="825" to="218"/>
-<BusinessActorRef id="827" to="224"/>
-</MM_RefObjects>
-</BusinessActorRef>
-<BusinessActorRef id="896" to="895">
-<MM_RefObjects name="childRefObjects" id="899">
-<BusinessActorRef id="901" to="900"/>
-<BusinessActorRef id="898" to="897"/>
-</MM_RefObjects>
-</BusinessActorRef>
-</MM_RefObjects>
-</BusinessActorRef>
-</RefObjects>
-</OrganisationStructureView>
 <ActorCooperationView id="856">
 <MM_ProfileValues>
 <MM_Value name="nm" type="string" xml:lang="neutral">'Actor cooperation view'</MM_Value>
@@ -145,22 +116,8 @@
 <Groupings name="groupings" id="858"/>
 </GroupingScheme>
 <RefObjects name="refObjects" id="860">
-<BusinessRoleRef id="1020" to="617"/>
-<BusinessActorBusinessActorAggregationRef id="1014" to="954"/>
-<BusinessCollaborationRef id="1018" to="459"/>
-<BusinessActorBusinessActorAggregationRef id="1021" to="943"/>
-<BusinessRoleRef id="1019" to="622"/>
 <BusinessActorRef id="972" to="971">
 <MM_RefObjects name="childRefObjects" id="973">
-<BusinessActorRef id="983" to="41">
-<MM_RefObjects name="childRefObjects" id="984">
-<BusinessActorRef id="985" to="221"/>
-<BusinessActorRef id="986" to="224"/>
-<BusinessActorRef id="987" to="218"/>
-<BusinessActorRef id="988" to="214"/>
-<BusinessActorRef id="989" to="227"/>
-</MM_RefObjects>
-</BusinessActorRef>
 <BusinessActorRef id="974" to="399">
 <MM_RefObjects name="childRefObjects" id="975">
 <BusinessActorRef id="976" to="221"/>
@@ -174,6 +131,15 @@
 </BusinessActorRef>
 </MM_RefObjects>
 </BusinessActorRef>
+<BusinessActorRef id="983" to="41">
+<MM_RefObjects name="childRefObjects" id="984">
+<BusinessActorRef id="989" to="227"/>
+<BusinessActorRef id="988" to="214"/>
+<BusinessActorRef id="987" to="218"/>
+<BusinessActorRef id="986" to="224"/>
+<BusinessActorRef id="985" to="221"/>
+</MM_RefObjects>
+</BusinessActorRef>
 <BusinessActorRef id="1008" to="198">
 <MM_RefObjects name="childRefObjects" id="1009">
 <BusinessActorRef id="1010" to="347"/>
@@ -184,6 +150,11 @@
 </BusinessActorRef>
 </MM_RefObjects>
 </BusinessActorRef>
+<BusinessRoleRef id="1019" to="622"/>
+<BusinessActorBusinessActorAggregationRef id="1021" to="943"/>
+<BusinessCollaborationRef id="1018" to="459"/>
+<BusinessActorBusinessActorAggregationRef id="1014" to="954"/>
+<BusinessRoleRef id="1020" to="617"/>
 <BusinessRoleRef id="1016" to="624"/>
 <BusinessActorBusinessRoleAssignmentRef id="1022" to="1023"/>
 <BusinessRoleRef id="1062" to="591"/>
@@ -212,6 +183,56 @@
 <BusinessRoleRef id="1061" to="593"/>
 </RefObjects>
 </ActorCooperationView>
+<OrganisationStructureView id="807">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Organisation structure view'</MM_Value>
+</MM_ProfileValues>
+<GroupingScheme name="groupingScheme" id="808">
+<Groupings name="groupings" id="809"/>
+</GroupingScheme>
+<RefObjects name="refObjects" id="814">
+<BusinessActorRef id="841" to="840">
+<MM_RefObjects name="childRefObjects" id="842">
+<BusinessActorRef id="828" to="399">
+<MM_RefObjects name="childRefObjects" id="829">
+<BusinessActorRef id="844" to="843"/>
+<BusinessActorRef id="830" to="406">
+<MM_RefObjects name="childRefObjects" id="831">
+<BusinessActorRef id="833" to="415"/>
+<BusinessActorRef id="832" to="411"/>
+<BusinessActorRef id="834" to="418"/>
+<BusinessActorRef id="835" to="626"/>
+</MM_RefObjects>
+</BusinessActorRef>
+</MM_RefObjects>
+</BusinessActorRef>
+<BusinessActorRef id="815" to="198">
+<MM_RefObjects name="childRefObjects" id="816">
+<BusinessActorRef id="819" to="357"/>
+<BusinessActorRef id="817" to="351"/>
+<BusinessActorRef id="818" to="354"/>
+<BusinessActorRef id="820" to="347"/>
+</MM_RefObjects>
+</BusinessActorRef>
+<BusinessActorRef id="821" to="41">
+<MM_RefObjects name="childRefObjects" id="822">
+<BusinessActorRef id="823" to="221"/>
+<BusinessActorRef id="824" to="214"/>
+<BusinessActorRef id="826" to="227"/>
+<BusinessActorRef id="825" to="218"/>
+<BusinessActorRef id="827" to="224"/>
+</MM_RefObjects>
+</BusinessActorRef>
+<BusinessActorRef id="896" to="895">
+<MM_RefObjects name="childRefObjects" id="899">
+<BusinessActorRef id="901" to="900"/>
+<BusinessActorRef id="898" to="897"/>
+</MM_RefObjects>
+</BusinessActorRef>
+</MM_RefObjects>
+</BusinessActorRef>
+</RefObjects>
+</OrganisationStructureView>
 <BusinessProductView id="1074">
 <MM_ProfileValues>
 <MM_Value name="nm" type="string" xml:lang="neutral">'Business product view'</MM_Value>
@@ -257,6 +278,8 @@
 <BusinessServiceRef id="1184" to="1183"/>
 <BusinessServiceRef id="1186" to="1185"/>
 <BusinessServiceRef id="1188" to="1187"/>
+<BusinessServiceRef id="1204" to="1203"/>
+<BusinessServiceRef id="1206" to="1205"/>
 </RefObjects>
 </GroupingScheme>
 </Grouping>
@@ -277,17 +300,132 @@
 <ElementElementAssociationRef id="1181" to="1182"/>
 </RefObjects>
 </BusinessProductView>
+<ServiceRealisationView id="1207">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Service realisation view'</MM_Value>
+</MM_ProfileValues>
+<GroupingScheme name="groupingScheme" id="1208">
+<Groupings name="groupings" id="1209"/>
+</GroupingScheme>
+<RefObjects name="refObjects" id="1211">
+<BusinessServiceRef id="1220" to="1163"/>
+<BusinessServiceRef id="1214" to="1146"/>
+<BusinessServiceRef id="1216" to="1155"/>
+<BusinessServiceRef id="1217" to="1157"/>
+<BusinessProcessRef id="1241" to="1240"/>
+<BusinessServiceBusinessActorUseRef id="1222" to="1223"/>
+<BusinessServiceRef id="1218" to="1151"/>
+<BusinessProcessBusinessServiceRealisationRef id="1242" to="1243"/>
+<BusinessServiceRef id="1215" to="1153"/>
+<BusinessCollaborationRef id="1212" to="459"/>
+<BusinessServiceRef id="1213" to="1159"/>
+<BusinessServiceRef id="1221" to="1165"/>
+<BusinessServiceRef id="1219" to="1161"/>
+<BusinessProcessBusinessServiceRealisationRef id="1246" to="1247"/>
+<BusinessServiceBusinessActorUseRef id="1226" to="1227"/>
+<BusinessServiceBusinessActorUseRef id="1224" to="1225"/>
+<BusinessServiceBusinessActorUseRef id="1230" to="1231"/>
+<BusinessServiceBusinessActorUseRef id="1228" to="1229"/>
+<BusinessServiceBusinessActorUseRef id="1232" to="1233"/>
+<BusinessServiceBusinessActorUseRef id="1234" to="1235"/>
+<BusinessServiceBusinessActorUseRef id="1236" to="1237"/>
+<BusinessServiceBusinessActorUseRef id="1238" to="1239"/>
+<BusinessProcessBusinessServiceRealisationRef id="1248" to="1249"/>
+<BusinessProcessBusinessServiceRealisationRef id="1244" to="1245"/>
+<BusinessProcessRef id="1255" to="1254"/>
+<BusinessProcessBusinessServiceRealisationRef id="1266" to="1267"/>
+<BusinessRoleRef id="1268" to="527"/>
+<BusinessProcessBusinessServiceRealisationRef id="1258" to="1259"/>
+<BusinessProcessRef id="1263" to="1262"/>
+<BusinessProcessBusinessServiceRealisationRef id="1256" to="1257"/>
+<BusinessProcessRef id="1261" to="1260"/>
+<BusinessProcessBusinessServiceRealisationRef id="1252" to="1253"/>
+<BusinessProcessRef id="1251" to="1250"/>
+<BusinessProcessBusinessServiceRealisationRef id="1264" to="1265"/>
+<BusinessServiceBusinessActorUseRef id="1289" to="1290"/>
+<BusinessServiceRef id="1271" to="1203"/>
+<BusinessServiceRef id="1270" to="1205"/>
+<BusinessServiceRef id="1272" to="1157"/>
+<BusinessServiceRef id="1273" to="1191"/>
+<BusinessServiceRef id="1274" to="1183"/>
+<BusinessServiceRef id="1275" to="1185"/>
+<BusinessServiceRef id="1277" to="777"/>
+<BusinessServiceRef id="1278" to="1187"/>
+<BusinessServiceRef id="1276" to="771"/>
+<BusinessServiceBusinessActorUseRef id="1293" to="1294"/>
+<BusinessServiceBusinessActorUseRef id="1279" to="1280"/>
+<BusinessServiceBusinessActorUseRef id="1281" to="1282"/>
+<BusinessServiceBusinessActorUseRef id="1283" to="1284"/>
+<BusinessServiceBusinessActorUseRef id="1285" to="1286"/>
+<BusinessServiceBusinessActorUseRef id="1287" to="1288"/>
+<BusinessServiceBusinessActorUseRef id="1291" to="1292"/>
+<BusinessServiceBusinessActorUseRef id="1295" to="1296"/>
+<BusinessProcessBusinessServiceRealisationRef id="1299" to="1300"/>
+<BusinessProcessRef id="1308" to="1307"/>
+<BusinessProcessBusinessServiceRealisationRef id="1305" to="1306"/>
+<BusinessProcessBusinessServiceRealisationRef id="1303" to="1304"/>
+<BusinessProcessBusinessServiceRealisationRef id="1301" to="1302"/>
+<BusinessProcessRef id="1298" to="1297"/>
+<BusinessProcessRef id="1310" to="1309"/>
+</RefObjects>
+</ServiceRealisationView>
 </AbstractContainers>
 </ArchimateView>
-<AllExtendedView id="9">
+<BusinessProcessView id="341">
 <MM_ProfileValues>
-<MM_Value name="nm" type="string" xml:lang="neutral">'Total view extended'</MM_Value>
+<MM_Value name="nm" type="string" xml:lang="neutral">'To van phong'</MM_Value>
 </MM_ProfileValues>
-<GroupingScheme name="groupingScheme" id="10">
-<Groupings name="groupings" id="11"/>
+<GroupingScheme name="groupingScheme" id="342">
+<Groupings name="groupings" id="343"/>
 </GroupingScheme>
-<RefObjects name="refObjects" id="22"/>
-</AllExtendedView>
+<RefObjects name="refObjects" id="344">
+<BusinessRoleRef id="944" to="593"/>
+<BusinessRoleRef id="947" to="591"/>
+<BusinessRoleRef id="203" to="202"/>
+<BusinessRoleRef id="955" to="586"/>
+<BusinessActorRef id="199" to="198">
+<MM_RefObjects name="childRefObjects" id="349">
+<BusinessActorRef id="353" to="351"/>
+<BusinessActorRef id="350" to="347"/>
+<BusinessActorRef id="356" to="354"/>
+<BusinessActorRef id="359" to="357"/>
+</MM_RefObjects>
+</BusinessActorRef>
+<BusinessActorBusinessRoleAssignmentRef id="362" to="363"/>
+<BusinessActorBusinessRoleAssignmentRef id="945" to="946"/>
+<BusinessActorBusinessRoleAssignmentRef id="948" to="949"/>
+<BusinessActorBusinessRoleAssignmentRef id="956" to="957"/>
+</RefObjects>
+</BusinessProcessView>
+<BusinessProcessView id="252">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'To chuyen mon'</MM_Value>
+</MM_ProfileValues>
+<GroupingScheme name="groupingScheme" id="253">
+<Groupings name="groupings" id="254"/>
+</GroupingScheme>
+<RefObjects name="refObjects" id="256">
+<BusinessActorBusinessRoleAssignmentRef id="924" to="925"/>
+<BusinessActorBusinessRoleAssignmentRef id="920" to="921"/>
+<BusinessActorBusinessRoleAssignmentRef id="906" to="907"/>
+<BusinessActorRef id="320" to="41">
+<MM_RefObjects name="childRefObjects" id="321">
+<BusinessActorRef id="322" to="214"/>
+<BusinessActorRef id="325" to="218"/>
+<BusinessActorRef id="326" to="224"/>
+<BusinessActorRef id="324" to="227"/>
+<BusinessActorRef id="323" to="221"/>
+</MM_RefObjects>
+</BusinessActorRef>
+<BusinessActorBusinessRoleAssignmentRef id="962" to="963"/>
+<BusinessActorBusinessRoleAssignmentRef id="960" to="961"/>
+<BusinessRoleRef id="905" to="527"/>
+<BusinessRoleRef id="923" to="540"/>
+<BusinessRoleRef id="919" to="544"/>
+<BusinessRoleRef id="959" to="546"/>
+<BusinessRoleRef id="958" to="548"/>
+</RefObjects>
+</BusinessProcessView>
 <ServiceRealisationView id="721">
 <MM_ProfileValues>
 <MM_Value name="nm" type="string" xml:lang="neutral">'Giao Vien Chu Nhiem'</MM_Value>
@@ -339,6 +477,15 @@
 <BusinessProcessBusinessServiceRealisationRef id="757" to="758"/>
 </RefObjects>
 </ServiceRealisationView>
+<AllExtendedView id="9">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Total view extended'</MM_Value>
+</MM_ProfileValues>
+<GroupingScheme name="groupingScheme" id="10">
+<Groupings name="groupings" id="11"/>
+</GroupingScheme>
+<RefObjects name="refObjects" id="22"/>
+</AllExtendedView>
 <BusinessProcessView id="396">
 <MM_ProfileValues>
 <MM_Value name="nm" type="string" xml:lang="neutral">'Lop'</MM_Value>
@@ -374,130 +521,11 @@
 <BusinessCollaborationRef id="460" to="459"/>
 </RefObjects>
 </BusinessProcessView>
-<BusinessProcessView id="252">
-<MM_ProfileValues>
-<MM_Value name="nm" type="string" xml:lang="neutral">'To chuyen mon'</MM_Value>
-</MM_ProfileValues>
-<GroupingScheme name="groupingScheme" id="253">
-<Groupings name="groupings" id="254"/>
-</GroupingScheme>
-<RefObjects name="refObjects" id="256">
-<BusinessActorBusinessRoleAssignmentRef id="924" to="925"/>
-<BusinessActorBusinessRoleAssignmentRef id="920" to="921"/>
-<BusinessActorBusinessRoleAssignmentRef id="906" to="907"/>
-<BusinessActorRef id="320" to="41">
-<MM_RefObjects name="childRefObjects" id="321">
-<BusinessActorRef id="322" to="214"/>
-<BusinessActorRef id="325" to="218"/>
-<BusinessActorRef id="326" to="224"/>
-<BusinessActorRef id="324" to="227"/>
-<BusinessActorRef id="323" to="221"/>
-</MM_RefObjects>
-</BusinessActorRef>
-<BusinessActorBusinessRoleAssignmentRef id="962" to="963"/>
-<BusinessActorBusinessRoleAssignmentRef id="960" to="961"/>
-<BusinessRoleRef id="905" to="527"/>
-<BusinessRoleRef id="923" to="540"/>
-<BusinessRoleRef id="919" to="544"/>
-<BusinessRoleRef id="959" to="546"/>
-<BusinessRoleRef id="958" to="548"/>
-</RefObjects>
-</BusinessProcessView>
-<BusinessProcessView id="341">
-<MM_ProfileValues>
-<MM_Value name="nm" type="string" xml:lang="neutral">'To van phong'</MM_Value>
-</MM_ProfileValues>
-<GroupingScheme name="groupingScheme" id="342">
-<Groupings name="groupings" id="343"/>
-</GroupingScheme>
-<RefObjects name="refObjects" id="344">
-<BusinessRoleRef id="944" to="593"/>
-<BusinessRoleRef id="947" to="591"/>
-<BusinessRoleRef id="203" to="202"/>
-<BusinessRoleRef id="955" to="586"/>
-<BusinessActorRef id="199" to="198">
-<MM_RefObjects name="childRefObjects" id="349">
-<BusinessActorRef id="353" to="351"/>
-<BusinessActorRef id="350" to="347"/>
-<BusinessActorRef id="356" to="354"/>
-<BusinessActorRef id="359" to="357"/>
-</MM_RefObjects>
-</BusinessActorRef>
-<BusinessActorBusinessRoleAssignmentRef id="362" to="363"/>
-<BusinessActorBusinessRoleAssignmentRef id="945" to="946"/>
-<BusinessActorBusinessRoleAssignmentRef id="948" to="949"/>
-<BusinessActorBusinessRoleAssignmentRef id="956" to="957"/>
-</RefObjects>
-</BusinessProcessView>
 <BusinessActorScheme id="17">
 <MM_ProfileValues>
 <MM_Value name="nm" type="string" xml:lang="neutral">'Business actors'</MM_Value>
 </MM_ProfileValues>
 <BusinessActors name="actors" id="20">
-<BusinessRole id="617">
-<MM_ProfileValues>
-<MM_Value name="nm" type="string" xml:lang="neutral">'Giao Vien Chu Nhiem'</MM_Value>
-</MM_ProfileValues>
-</BusinessRole>
-<BusinessRole id="540">
-<MM_ProfileValues>
-<MM_Value name="nm" type="string" xml:lang="neutral">'Hieu Truong&#xd;&#xa;'</MM_Value>
-</MM_ProfileValues>
-</BusinessRole>
-<BusinessRole id="544">
-<MM_ProfileValues>
-<MM_Value name="nm" type="string" xml:lang="neutral">'Hieu Pho'</MM_Value>
-</MM_ProfileValues>
-</BusinessRole>
-<BusinessRole id="527">
-<MM_ProfileValues>
-<MM_Value name="nm" type="string" xml:lang="neutral">'Giao Vien&#xd;&#xa;'</MM_Value>
-</MM_ProfileValues>
-</BusinessRole>
-<BusinessActor id="41">
-<MM_ProfileValues>
-<MM_Value name="nm" type="string" xml:lang="neutral">'To chuyen mon&#xd;&#xa;'</MM_Value>
-</MM_ProfileValues>
-<BusinessActorScheme name="actorScheme" id="212">
-<BusinessActors name="actors" id="213">
-<BusinessActor id="218">
-<MM_ProfileValues>
-<MM_Value name="nm" type="string" xml:lang="neutral">'Hieu pho'</MM_Value>
-</MM_ProfileValues>
-</BusinessActor>
-<BusinessActor id="214">
-<MM_ProfileValues>
-<MM_Value name="nm" type="string" xml:lang="neutral">'Hieu truong'</MM_Value>
-</MM_ProfileValues>
-</BusinessActor>
-<BusinessActor id="224">
-<MM_ProfileValues>
-<MM_Value name="nm" type="string" xml:lang="neutral">'Vien chuc thu vien'</MM_Value>
-</MM_ProfileValues>
-</BusinessActor>
-<BusinessActor id="227">
-<MM_ProfileValues>
-<MM_Value name="nm" type="string" xml:lang="neutral">'Vien chuc thiet bi thi nghiem'</MM_Value>
-</MM_ProfileValues>
-</BusinessActor>
-<BusinessActor id="221">
-<MM_ProfileValues>
-<MM_Value name="nm" type="string" xml:lang="neutral">'Giao vien'</MM_Value>
-</MM_ProfileValues>
-</BusinessActor>
-</BusinessActors>
-</BusinessActorScheme>
-</BusinessActor>
-<BusinessRole id="546">
-<MM_ProfileValues>
-<MM_Value name="nm" type="string" xml:lang="neutral">'Vien Chuc &#xd;&#xa;Thu Vien'</MM_Value>
-</MM_ProfileValues>
-</BusinessRole>
-<BusinessRole id="548">
-<MM_ProfileValues>
-<MM_Value name="nm" type="string" xml:lang="neutral">'Vien Chuc Thiet&#xd;&#xa; Bi Thi Nghiem'</MM_Value>
-</MM_ProfileValues>
-</BusinessRole>
 <BusinessActor id="399">
 <MM_ProfileValues>
 <MM_Value name="nm" type="string" xml:lang="neutral">'Lop hoc'</MM_Value>
@@ -510,9 +538,9 @@
 </MM_ProfileValues>
 <BusinessActorScheme name="actorScheme" id="409">
 <BusinessActors name="actors" id="410">
-<BusinessActor id="418">
+<BusinessActor id="626">
 <MM_ProfileValues>
-<MM_Value name="nm" type="string" xml:lang="neutral">'To vien'</MM_Value>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Lop Pho'</MM_Value>
 </MM_ProfileValues>
 </BusinessActor>
 <BusinessActor id="415">
@@ -520,55 +548,74 @@
 <MM_Value name="nm" type="string" xml:lang="neutral">'To truong'</MM_Value>
 </MM_ProfileValues>
 </BusinessActor>
-<BusinessActor id="626">
-<MM_ProfileValues>
-<MM_Value name="nm" type="string" xml:lang="neutral">'Lop Pho'</MM_Value>
-</MM_ProfileValues>
-</BusinessActor>
 <BusinessActor id="411">
 <MM_ProfileValues>
 <MM_Value name="nm" type="string" xml:lang="neutral">'Lop truong'</MM_Value>
 </MM_ProfileValues>
 </BusinessActor>
-</BusinessActors>
-</BusinessActorScheme>
+<BusinessActor id="418">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'To vien'</MM_Value>
+</MM_ProfileValues>
 </BusinessActor>
 </BusinessActors>
 </BusinessActorScheme>
 </BusinessActor>
-<BusinessRole id="624">
+</BusinessActors>
+</BusinessActorScheme>
+</BusinessActor>
+<BusinessActor id="41">
 <MM_ProfileValues>
-<MM_Value name="nm" type="string" xml:lang="neutral">'To Truong'</MM_Value>
+<MM_Value name="nm" type="string" xml:lang="neutral">'To chuyen mon&#xd;&#xa;'</MM_Value>
 </MM_ProfileValues>
-</BusinessRole>
-<BusinessRole id="622">
+<BusinessActorScheme name="actorScheme" id="212">
+<BusinessActors name="actors" id="213">
+<BusinessActor id="227">
 <MM_ProfileValues>
-<MM_Value name="nm" type="string" xml:lang="neutral">'Lop Truong'</MM_Value>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Vien chuc thiet bi thi nghiem'</MM_Value>
 </MM_ProfileValues>
-</BusinessRole>
-<BusinessRole id="635">
+</BusinessActor>
+<BusinessActor id="214">
 <MM_ProfileValues>
-<MM_Value name="nm" type="string" xml:lang="neutral">'Lop Pho'</MM_Value>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Hieu truong'</MM_Value>
 </MM_ProfileValues>
-</BusinessRole>
+</BusinessActor>
+<BusinessActor id="218">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Hieu pho'</MM_Value>
+</MM_ProfileValues>
+</BusinessActor>
+<BusinessActor id="224">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Vien chuc thu vien'</MM_Value>
+</MM_ProfileValues>
+</BusinessActor>
+<BusinessActor id="221">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Giao vien'</MM_Value>
+</MM_ProfileValues>
+</BusinessActor>
+</BusinessActors>
+</BusinessActorScheme>
+</BusinessActor>
 <BusinessCollaboration id="459">
 <MM_ProfileValues>
 <MM_Value name="nm" type="string" xml:lang="neutral">'Hoc sinh'</MM_Value>
 </MM_ProfileValues>
 </BusinessCollaboration>
-<BusinessRole id="591">
+<BusinessActor id="971">
 <MM_ProfileValues>
-<MM_Value name="nm" type="string" xml:lang="neutral">'Thu Quy'</MM_Value>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Truong Hoc'</MM_Value>
+</MM_ProfileValues>
+</BusinessActor>
+<BusinessRole id="622">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Lop Truong'</MM_Value>
 </MM_ProfileValues>
 </BusinessRole>
-<BusinessRole id="586">
+<BusinessRole id="617">
 <MM_ProfileValues>
-<MM_Value name="nm" type="string" xml:lang="neutral">'Van Thu'</MM_Value>
-</MM_ProfileValues>
-</BusinessRole>
-<BusinessRole id="202">
-<MM_ProfileValues>
-<MM_Value name="nm" type="string" xml:lang="neutral">'Ke toan'</MM_Value>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Giao Vien Chu Nhiem'</MM_Value>
 </MM_ProfileValues>
 </BusinessRole>
 <BusinessActor id="198">
@@ -577,14 +624,14 @@
 </MM_ProfileValues>
 <BusinessActorScheme name="actorScheme" id="345">
 <BusinessActors name="actors" id="346">
-<BusinessActor id="351">
-<MM_ProfileValues>
-<MM_Value name="nm" type="string" xml:lang="neutral">'Thu quy'</MM_Value>
-</MM_ProfileValues>
-</BusinessActor>
 <BusinessActor id="347">
 <MM_ProfileValues>
 <MM_Value name="nm" type="string" xml:lang="neutral">'Van thu'</MM_Value>
+</MM_ProfileValues>
+</BusinessActor>
+<BusinessActor id="351">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Thu quy'</MM_Value>
 </MM_ProfileValues>
 </BusinessActor>
 <BusinessActor id="354">
@@ -600,6 +647,56 @@
 </BusinessActors>
 </BusinessActorScheme>
 </BusinessActor>
+<BusinessRole id="624">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'To Truong'</MM_Value>
+</MM_ProfileValues>
+</BusinessRole>
+<BusinessRole id="591">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Thu Quy'</MM_Value>
+</MM_ProfileValues>
+</BusinessRole>
+<BusinessRole id="635">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Lop Pho'</MM_Value>
+</MM_ProfileValues>
+</BusinessRole>
+<BusinessRole id="546">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Vien Chuc &#xd;&#xa;Thu Vien'</MM_Value>
+</MM_ProfileValues>
+</BusinessRole>
+<BusinessRole id="527">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Giao Vien&#xd;&#xa;'</MM_Value>
+</MM_ProfileValues>
+</BusinessRole>
+<BusinessRole id="548">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Vien Chuc Thiet&#xd;&#xa; Bi Thi Nghiem'</MM_Value>
+</MM_ProfileValues>
+</BusinessRole>
+<BusinessRole id="540">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Hieu Truong&#xd;&#xa;'</MM_Value>
+</MM_ProfileValues>
+</BusinessRole>
+<BusinessRole id="544">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Hieu Pho'</MM_Value>
+</MM_ProfileValues>
+</BusinessRole>
+<BusinessRole id="586">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Van Thu'</MM_Value>
+</MM_ProfileValues>
+</BusinessRole>
+<BusinessRole id="202">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Ke toan'</MM_Value>
+</MM_ProfileValues>
+</BusinessRole>
 <BusinessRole id="593">
 <MM_ProfileValues>
 <MM_Value name="nm" type="string" xml:lang="neutral">'Nhan Vien Y Te'</MM_Value>
@@ -630,11 +727,6 @@
 <MM_Value name="nm" type="string" xml:lang="neutral">'Hoi truong'</MM_Value>
 </MM_ProfileValues>
 </BusinessActor>
-<BusinessActor id="971">
-<MM_ProfileValues>
-<MM_Value name="nm" type="string" xml:lang="neutral">'Truong Hoc'</MM_Value>
-</MM_ProfileValues>
-</BusinessActor>
 <BusinessRole id="853">
 <MM_ProfileValues>
 <MM_Value name="nm" type="string" xml:lang="neutral">'Truong hoc'</MM_Value>
@@ -643,22 +735,8 @@
 </BusinessActors>
 <BusinessInterfaces name="interfaces" id="26"/>
 <Relations name="relations" id="46">
-<BusinessActorBusinessRoleAssignment id="921" from="41" to="544"/>
-<BusinessActorBusinessRoleAssignment id="925" from="41" to="540"/>
-<BusinessActorBusinessRoleAssignment id="907" from="41" to="527"/>
-<BusinessActorBusinessRoleAssignment id="963" from="41" to="548"/>
-<BusinessActorBusinessRoleAssignment id="961" from="41" to="546"/>
 <BusinessActorBusinessActorAggregation id="943" from="459" to="622"/>
-<BusinessActorBusinessActorAggregation id="938" from="459" to="635"/>
-<BusinessActorBusinessRoleAssignment id="952" from="399" to="624"/>
-<BusinessActorBusinessRoleAssignment id="941" from="399" to="622"/>
-<BusinessActorBusinessRoleAssignment id="936" from="399" to="635"/>
-<BusinessActorBusinessRoleAssignment id="918" from="399" to="617"/>
 <BusinessActorBusinessActorAggregation id="954" from="459" to="624"/>
-<BusinessActorBusinessRoleAssignment id="363" from="354" to="202"/>
-<BusinessActorBusinessRoleAssignment id="946" from="357" to="593"/>
-<BusinessActorBusinessRoleAssignment id="949" from="351" to="591"/>
-<BusinessActorBusinessRoleAssignment id="957" from="347" to="586"/>
 <BusinessActorBusinessRoleAssignment id="1023" from="411" to="622"/>
 <BusinessActorBusinessRoleAssignment id="1031" from="221" to="617"/>
 <BusinessActorBusinessRoleAssignment id="1050" from="214" to="540"/>
@@ -670,9 +748,27 @@
 <BusinessActorBusinessRoleAssignment id="1056" from="227" to="548"/>
 <BusinessActorBusinessRoleAssignment id="1058" from="218" to="544"/>
 <BusinessActorBusinessRoleAssignment id="1066" from="357" to="593"/>
+<BusinessActorBusinessActorAggregation id="938" from="459" to="635"/>
 <BusinessActorBusinessRoleAssignment id="1060" from="224" to="546"/>
 <BusinessActorBusinessRoleAssignment id="1072" from="354" to="202"/>
 <BusinessActorBusinessRoleAssignment id="1070" from="347" to="586"/>
+<ElementElementAssociation id="1108" from="622" to="1103"/>
+<ElementElementAssociation id="1106" from="635" to="1103"/>
+<ElementElementAssociation id="1110" from="624" to="1103"/>
+<ElementElementAssociation id="1182" from="527" to="1168"/>
+<BusinessActorBusinessRoleAssignment id="363" from="354" to="202"/>
+<BusinessActorBusinessRoleAssignment id="946" from="357" to="593"/>
+<BusinessActorBusinessRoleAssignment id="949" from="351" to="591"/>
+<BusinessActorBusinessRoleAssignment id="957" from="347" to="586"/>
+<BusinessActorBusinessRoleAssignment id="925" from="41" to="540"/>
+<BusinessActorBusinessRoleAssignment id="921" from="41" to="544"/>
+<BusinessActorBusinessRoleAssignment id="907" from="41" to="527"/>
+<BusinessActorBusinessRoleAssignment id="963" from="41" to="548"/>
+<BusinessActorBusinessRoleAssignment id="961" from="41" to="546"/>
+<BusinessActorBusinessRoleAssignment id="952" from="399" to="624"/>
+<BusinessActorBusinessRoleAssignment id="941" from="399" to="622"/>
+<BusinessActorBusinessRoleAssignment id="936" from="399" to="635"/>
+<BusinessActorBusinessRoleAssignment id="918" from="399" to="617"/>
 <BusinessRoleBusinessFunctionAssignment id="535" from="527" to="534"/>
 <BusinessRoleBusinessFunctionAssignment id="558" from="540" to="557"/>
 <BusinessRoleBusinessFunctionAssignment id="561" from="540" to="560"/>
@@ -712,10 +808,6 @@
 <BusinessActorBusinessActorComposition id="416" from="406" to="415"/>
 <BusinessActorBusinessActorComposition id="355" from="198" to="354"/>
 <BusinessRoleBusinessFunctionAssignment id="611" from="593" to="610"/>
-<ElementElementAssociation id="1106" from="635" to="1103"/>
-<ElementElementAssociation id="1108" from="622" to="1103"/>
-<ElementElementAssociation id="1110" from="624" to="1103"/>
-<ElementElementAssociation id="1182" from="527" to="1168"/>
 </Relations>
 </BusinessActorScheme>
 <BusinessFunctionScheme id="16">
@@ -893,45 +985,39 @@
 <BusinessContracts name="contracts" id="1119"/>
 <BusinessServiceScheme name="serviceScheme" id="104">
 <BusinessServices name="services" id="105">
-<BusinessService id="709">
-<MM_ProfileValues>
-<MM_Value name="nm" type="string" xml:lang="neutral">'Xep Lich&#xd;&#xa; Thi'</MM_Value>
-</MM_ProfileValues>
-</BusinessService>
-<BusinessService id="679">
-<MM_ProfileValues>
-<MM_Value name="nm" type="string" xml:lang="neutral">'Xep Lich Day Hoc'</MM_Value>
-</MM_ProfileValues>
-</BusinessService>
-<BusinessService id="777">
-<MM_ProfileValues>
-<MM_Value name="nm" type="string" xml:lang="neutral">'Ky Luat'</MM_Value>
-</MM_ProfileValues>
-</BusinessService>
-<BusinessService id="727">
-<MM_ProfileValues>
-<MM_Value name="nm" type="string" xml:lang="neutral">'Xac Nhan Len Lop&#xd;&#xa;Luu Ban'</MM_Value>
-</MM_ProfileValues>
-</BusinessService>
-<BusinessService id="771">
-<MM_ProfileValues>
-<MM_Value name="nm" type="string" xml:lang="neutral">'Khen Thuong'</MM_Value>
-</MM_ProfileValues>
-</BusinessService>
-<BusinessService id="675">
-<MM_ProfileValues>
-<MM_Value name="objrepl" type="ObjectReplicationType">ort_default</MM_Value>
-<MM_Value name="nm" type="string" xml:lang="neutral">'Xep Loai &#xd;&#xa;Tot Nghiep'</MM_Value>
-</MM_ProfileValues>
-</BusinessService>
-<BusinessService id="681">
-<MM_ProfileValues>
-<MM_Value name="nm" type="string" xml:lang="neutral">'Xep Thoi &#xd;&#xa;Khoa Bieu'</MM_Value>
-</MM_ProfileValues>
-</BusinessService>
 <BusinessService id="1146">
 <MM_ProfileValues>
-<MM_Value name="nm" type="string" xml:lang="neutral">'Xem Diem'</MM_Value>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Xem&#xd;&#xa; Diem'</MM_Value>
+</MM_ProfileValues>
+</BusinessService>
+<BusinessService id="1155">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Xem Thoi&#xd;&#xa;Khoa Bieu'</MM_Value>
+</MM_ProfileValues>
+</BusinessService>
+<BusinessService id="1165">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Giai Dap&#xd;&#xa;Thac Mac'</MM_Value>
+</MM_ProfileValues>
+</BusinessService>
+<BusinessService id="1153">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Xem Lich &#xd;&#xa;Hoc'</MM_Value>
+</MM_ProfileValues>
+</BusinessService>
+<BusinessService id="1161">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Dong Tien&#xd;&#xa;Hoc Phi'</MM_Value>
+</MM_ProfileValues>
+</BusinessService>
+<BusinessService id="1163">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Muon &#xd;&#xa;Sach'</MM_Value>
+</MM_ProfileValues>
+</BusinessService>
+<BusinessService id="1157">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Xem Ho So&#xd;&#xa;Ca Nhan'</MM_Value>
 </MM_ProfileValues>
 </BusinessService>
 <BusinessService id="1159">
@@ -944,39 +1030,14 @@
 <MM_Value name="nm" type="string" xml:lang="neutral">'Cham Soc&#xd;&#xa;Suc Khoe'</MM_Value>
 </MM_ProfileValues>
 </BusinessService>
-<BusinessService id="1155">
+<BusinessService id="777">
 <MM_ProfileValues>
-<MM_Value name="nm" type="string" xml:lang="neutral">'Xem Thoi&#xd;&#xa;Khoa Bieu'</MM_Value>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Ky Luat'</MM_Value>
 </MM_ProfileValues>
 </BusinessService>
-<BusinessService id="1165">
+<BusinessService id="771">
 <MM_ProfileValues>
-<MM_Value name="nm" type="string" xml:lang="neutral">'Hoi Dap&#xd;&#xa;Thac Mac'</MM_Value>
-</MM_ProfileValues>
-</BusinessService>
-<BusinessService id="1161">
-<MM_ProfileValues>
-<MM_Value name="nm" type="string" xml:lang="neutral">'Dong Tien&#xd;&#xa;Hoc Phi'</MM_Value>
-</MM_ProfileValues>
-</BusinessService>
-<BusinessService id="1157">
-<MM_ProfileValues>
-<MM_Value name="nm" type="string" xml:lang="neutral">'Xem Ho So&#xd;&#xa;Ca Nhan'</MM_Value>
-</MM_ProfileValues>
-</BusinessService>
-<BusinessService id="1163">
-<MM_ProfileValues>
-<MM_Value name="nm" type="string" xml:lang="neutral">'Muon Sach'</MM_Value>
-</MM_ProfileValues>
-</BusinessService>
-<BusinessService id="1153">
-<MM_ProfileValues>
-<MM_Value name="nm" type="string" xml:lang="neutral">'Xem Lich &#xd;&#xa;Hoc'</MM_Value>
-</MM_ProfileValues>
-</BusinessService>
-<BusinessService id="1185">
-<MM_ProfileValues>
-<MM_Value name="nm" type="string" xml:lang="neutral">'Xem Danh&#xd;&#xa;Sach Lop'</MM_Value>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Khen Thuong'</MM_Value>
 </MM_ProfileValues>
 </BusinessService>
 <BusinessService id="1191">
@@ -989,9 +1050,50 @@
 <MM_Value name="nm" type="string" xml:lang="neutral">'Xem Lich&#xd;&#xa;Day'</MM_Value>
 </MM_ProfileValues>
 </BusinessService>
+<BusinessService id="1185">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Xem Danh&#xd;&#xa;Sach Lop'</MM_Value>
+</MM_ProfileValues>
+</BusinessService>
 <BusinessService id="1187">
 <MM_ProfileValues>
 <MM_Value name="nm" type="string" xml:lang="neutral">'Xem Ket &#xd;&#xa;Qua Hoc Tap'</MM_Value>
+</MM_ProfileValues>
+</BusinessService>
+<BusinessService id="1203">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Tim Kiem&#xd;&#xa;Hoc Sinh'</MM_Value>
+</MM_ProfileValues>
+</BusinessService>
+<BusinessService id="1205">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Tim Kiem&#xd;&#xa;Giao Vien'</MM_Value>
+</MM_ProfileValues>
+</BusinessService>
+<BusinessService id="709">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Xep Lich&#xd;&#xa; Thi'</MM_Value>
+</MM_ProfileValues>
+</BusinessService>
+<BusinessService id="679">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Xep Lich Day Hoc'</MM_Value>
+</MM_ProfileValues>
+</BusinessService>
+<BusinessService id="681">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Xep Thoi &#xd;&#xa;Khoa Bieu'</MM_Value>
+</MM_ProfileValues>
+</BusinessService>
+<BusinessService id="675">
+<MM_ProfileValues>
+<MM_Value name="objrepl" type="ObjectReplicationType">ort_default</MM_Value>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Xep Loai &#xd;&#xa;Tot Nghiep'</MM_Value>
+</MM_ProfileValues>
+</BusinessService>
+<BusinessService id="727">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Xac Nhan Len Lop&#xd;&#xa;Luu Ban'</MM_Value>
 </MM_ProfileValues>
 </BusinessService>
 </BusinessServices>
@@ -1011,15 +1113,33 @@
 </BusinessValues>
 </BusinessValueScheme>
 <Relations name="relations" id="715">
-<BusinessServiceBusinessActorUse id="911" from="771" to="617"/>
-<BusinessServiceBusinessActorUse id="913" from="727" to="617"/>
-<BusinessServiceBusinessActorUse id="915" from="777" to="617"/>
+<ElementElementAssociation id="1149" from="1103" to="1126"/>
+<ElementElementAssociation id="1201" from="1168" to="1170"/>
+<BusinessServiceBusinessActorUse id="1223" from="1146" to="459"/>
+<BusinessServiceBusinessActorUse id="1227" from="1155" to="459"/>
+<BusinessServiceBusinessActorUse id="1225" from="1153" to="459"/>
+<BusinessServiceBusinessActorUse id="1231" from="1161" to="459"/>
+<BusinessServiceBusinessActorUse id="1229" from="1157" to="459"/>
+<BusinessServiceBusinessActorUse id="1233" from="1151" to="459"/>
+<BusinessServiceBusinessActorUse id="1235" from="1159" to="459"/>
+<BusinessServiceBusinessActorUse id="1237" from="1163" to="459"/>
+<BusinessServiceBusinessActorUse id="1239" from="1165" to="459"/>
 <BusinessServiceBusinessActorUse id="933" from="709" to="540"/>
 <BusinessServiceBusinessActorUse id="927" from="675" to="540"/>
 <BusinessServiceBusinessActorUse id="929" from="679" to="540"/>
 <BusinessServiceBusinessActorUse id="931" from="681" to="540"/>
-<ElementElementAssociation id="1149" from="1103" to="1126"/>
-<ElementElementAssociation id="1201" from="1168" to="1170"/>
+<BusinessServiceBusinessActorUse id="913" from="727" to="617"/>
+<BusinessServiceBusinessActorUse id="915" from="777" to="617"/>
+<BusinessServiceBusinessActorUse id="911" from="771" to="617"/>
+<BusinessServiceBusinessActorUse id="1294" from="1203" to="527"/>
+<BusinessServiceBusinessActorUse id="1290" from="771" to="527"/>
+<BusinessServiceBusinessActorUse id="1280" from="1183" to="527"/>
+<BusinessServiceBusinessActorUse id="1282" from="1185" to="527"/>
+<BusinessServiceBusinessActorUse id="1284" from="1187" to="527"/>
+<BusinessServiceBusinessActorUse id="1286" from="1157" to="527"/>
+<BusinessServiceBusinessActorUse id="1288" from="1191" to="527"/>
+<BusinessServiceBusinessActorUse id="1292" from="777" to="527"/>
+<BusinessServiceBusinessActorUse id="1296" from="1205" to="527"/>
 </Relations>
 </BusinessProductScheme>
 <ArchitectPrincipleScheme id="5">
@@ -1032,6 +1152,31 @@
 <MM_Value name="nm" type="string" xml:lang="neutral">'Business processes'</MM_Value>
 </MM_ProfileValues>
 <BusinessProcesses name="processes" id="48">
+<BusinessProcess id="1240">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Xem Thong Tin'</MM_Value>
+</MM_ProfileValues>
+</BusinessProcess>
+<BusinessProcess id="1254">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Bao Hiem'</MM_Value>
+</MM_ProfileValues>
+</BusinessProcess>
+<BusinessProcess id="1262">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Giai Quyet&#xd;&#xa;Thac Mac'</MM_Value>
+</MM_ProfileValues>
+</BusinessProcess>
+<BusinessProcess id="1260">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Muon&#xd;&#xa; Sach'</MM_Value>
+</MM_ProfileValues>
+</BusinessProcess>
+<BusinessProcess id="1250">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Dong&#xd;&#xa;Tien'</MM_Value>
+</MM_ProfileValues>
+</BusinessProcess>
 <BusinessProcess id="743">
 <MM_ProfileValues>
 <MM_Value name="nm" type="string" xml:lang="neutral">'Chia &#xd;&#xa;Lich Thi'</MM_Value>
@@ -1047,6 +1192,11 @@
 <MM_Value name="nm" type="string" xml:lang="neutral">'Xet Duyet &#xd;&#xa;Tot Nghiep'</MM_Value>
 </MM_ProfileValues>
 </BusinessProcess>
+<BusinessProcess id="717">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Phan Cong &#xd;&#xa;Lich Day'</MM_Value>
+</MM_ProfileValues>
+</BusinessProcess>
 <BusinessProcess id="729">
 <MM_ProfileValues>
 <MM_Value name="nm" type="string" xml:lang="neutral">'Tong Ket &#xd;&#xa;Diem'</MM_Value>
@@ -1057,23 +1207,46 @@
 <MM_Value name="nm" type="string" xml:lang="neutral">'Tong Ket &#xd;&#xa;Hanh Kiem'</MM_Value>
 </MM_ProfileValues>
 </BusinessProcess>
-<BusinessProcess id="717">
+<BusinessProcess id="1307">
 <MM_ProfileValues>
-<MM_Value name="nm" type="string" xml:lang="neutral">'Phan Cong &#xd;&#xa;Lich Day'</MM_Value>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Danh Gia Hoc Sinh'</MM_Value>
+</MM_ProfileValues>
+</BusinessProcess>
+<BusinessProcess id="1297">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Xem Thong Tin'</MM_Value>
+</MM_ProfileValues>
+</BusinessProcess>
+<BusinessProcess id="1309">
+<MM_ProfileValues>
+<MM_Value name="nm" type="string" xml:lang="neutral">'Tim Kiem'</MM_Value>
 </MM_ProfileValues>
 </BusinessProcess>
 </BusinessProcesses>
 <BusinessActivities name="activities" id="1084"/>
 <Relations name="relations" id="712">
+<BusinessProcessBusinessServiceRealisation id="1243" from="1240" to="1146"/>
+<BusinessProcessBusinessServiceRealisation id="1247" from="1240" to="1155"/>
+<BusinessProcessBusinessServiceRealisation id="1249" from="1240" to="1157"/>
+<BusinessProcessBusinessServiceRealisation id="1245" from="1240" to="1153"/>
+<BusinessProcessBusinessServiceRealisation id="1267" from="1262" to="1165"/>
+<BusinessProcessBusinessServiceRealisation id="1259" from="1254" to="1159"/>
+<BusinessProcessBusinessServiceRealisation id="1257" from="1254" to="1151"/>
+<BusinessProcessBusinessServiceRealisation id="1253" from="1250" to="1161"/>
+<BusinessProcessBusinessServiceRealisation id="1265" from="1260" to="1163"/>
 <BusinessProcessBusinessServiceRealisation id="754" from="717" to="679"/>
+<BusinessProcessBusinessServiceRealisation id="752" from="704" to="675"/>
+<BusinessProcessBusinessServiceRealisation id="760" from="743" to="709"/>
+<BusinessProcessBusinessServiceRealisation id="758" from="741" to="681"/>
 <BusinessProcessBusinessServiceRealisation id="774" from="729" to="771"/>
 <BusinessProcessBusinessServiceRealisation id="768" from="729" to="727"/>
 <BusinessProcessBusinessServiceRealisation id="770" from="731" to="727"/>
 <BusinessProcessBusinessServiceRealisation id="776" from="731" to="771"/>
 <BusinessProcessBusinessServiceRealisation id="780" from="731" to="777"/>
-<BusinessProcessBusinessServiceRealisation id="760" from="743" to="709"/>
-<BusinessProcessBusinessServiceRealisation id="758" from="741" to="681"/>
-<BusinessProcessBusinessServiceRealisation id="752" from="704" to="675"/>
+<BusinessProcessBusinessServiceRealisation id="1300" from="1297" to="1183"/>
+<BusinessProcessBusinessServiceRealisation id="1306" from="1297" to="1157"/>
+<BusinessProcessBusinessServiceRealisation id="1304" from="1297" to="1187"/>
+<BusinessProcessBusinessServiceRealisation id="1302" from="1297" to="1185"/>
 </Relations>
 </BusinessProcessScheme>
 <ApplicationScheme id="13">
@@ -1211,31 +1384,6 @@
 </BusinessRoleRef>
 </RefObjects>
 </BusinessFunctionView>
-</AbstractContainers>
-</ViewFolder>
-<ViewFolder id="1094" tag="1234">
-<MM_ProfileValues>
-<MM_Value name="nm" type="string" xml:lang="neutral">'Generated views'</MM_Value>
-</MM_ProfileValues>
-<AbstractContainers name="containers" id="1095">
-<BusinessProductView id="1096">
-<MM_ProfileValues>
-<MM_Value name="nm" type="string" xml:lang="neutral">'Business product view for Business activity'</MM_Value>
-</MM_ProfileValues>
-<GroupingScheme name="groupingScheme" id="1097">
-<Groupings name="groupings" id="1098"/>
-</GroupingScheme>
-<RefObjects name="refObjects" id="1099"/>
-</BusinessProductView>
-<LayeredView id="1114">
-<MM_ProfileValues>
-<MM_Value name="nm" type="string" xml:lang="neutral">'Layered view for Truong Hoc&#xd;&#xa;'</MM_Value>
-</MM_ProfileValues>
-<GroupingScheme name="groupingScheme" id="1115">
-<Groupings name="groupings" id="1116"/>
-</GroupingScheme>
-<RefObjects name="refObjects" id="1117"/>
-</LayeredView>
 </AbstractContainers>
 </ViewFolder>
 </AbstractContainers>
@@ -3375,7 +3523,7 @@
 </MM_Compound>
 </MM_Diagram>
 </MM_Module>
-<MM_Module id="1766a44c-5ad7-46eb-9e0b-a21835ad7c82" name="ArchiMateViewDomain" nextObjectId="287">
+<MM_Module id="1766a44c-5ad7-46eb-9e0b-a21835ad7c82" name="ArchiMateViewDomain" nextObjectId="297">
 <MM_Diagram name="root" id="0">
 <MM_Compound name="mm_canvas" id="1" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1074">
 <MM_Graphics name="mm_nodes" id="4">
@@ -3649,7 +3797,31 @@
 <MM_Colors name="mm_fillColors" id="274">
 <MM_Color id="275" mm_g="128" mm_b="128"/>
 </MM_Colors>
-<MM_Rect name="mm_rect" x="420" y="600" w="420" h="120"/>
+<MM_Rect name="mm_rect" x="90" y="600" w="330" h="120"/>
+</MM_Compound>
+<MM_Compound id="287" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1204">
+<MM_Decorations name="mm_decorations" id="288">
+<MM_Decoration id="289">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessService</mm_concept>
+<MM_Colors name="mm_fillColors" id="293">
+<MM_Color id="294" mm_g="128" mm_b="128"/>
+</MM_Colors>
+<MM_Rect name="mm_rect" x="480" y="600" w="360" h="120"/>
+</MM_Compound>
+<MM_Compound id="290" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1206">
+<MM_Decorations name="mm_decorations" id="291">
+<MM_Decoration id="292">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessService</mm_concept>
+<MM_Colors name="mm_fillColors" id="295">
+<MM_Color id="296" mm_g="128" mm_b="128"/>
+</MM_Colors>
+<MM_Rect name="mm_rect" x="870" y="600" w="330" h="120"/>
 </MM_Compound>
 </MM_Graphics>
 <MM_Graphics name="mm_relations" id="238"/>
@@ -3688,20 +3860,445 @@
 </MM_Compound>
 </MM_Diagram>
 </MM_Module>
-<MM_Module id="9ee4ec13-90de-4d0e-b94a-8b011e7c2e04" name="ArchiMateViewDomain" nextObjectId="9">
+<MM_Module id="27bc7512-2e16-4949-97d2-132a2bae95b4" name="ArchiMateViewDomain" nextObjectId="169">
 <MM_Diagram name="root" id="0">
-<MM_Compound name="mm_canvas" id="1" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1096">
-<MM_Graphics name="mm_nodes" id="4"/>
-<MM_Decorations name="mm_decorations" id="2"/>
-<mm_concept>Canvas</mm_concept>
-<MM_Rect name="mm_rect" x="0" y="0" w="2147483647" h="2147483647"/>
+<MM_Compound name="mm_canvas" id="1" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1207">
+<MM_Graphics name="mm_nodes" id="4">
+<MM_Compound id="5" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1212">
+<MM_Decorations name="mm_decorations" id="6">
+<MM_Decoration id="7">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="8">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessCollaboration</mm_concept>
+<MM_Rect name="mm_rect" x="90" y="180" w="2640" h="180"/>
 </MM_Compound>
-</MM_Diagram>
-</MM_Module>
-<MM_Module id="06c53683-f1bd-48ee-a3af-9f03517e9793" name="ArchiMateViewDomain" nextObjectId="8">
-<MM_Diagram name="root" id="0">
-<MM_Compound name="mm_canvas" id="1" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1114">
-<MM_Graphics name="mm_nodes" id="4"/>
+<MM_Compound id="9" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1219">
+<MM_Decorations name="mm_decorations" id="10">
+<MM_Decoration id="11">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessService</mm_concept>
+<MM_Colors name="mm_fillColors" id="12">
+<MM_Color id="13" mm_g="128" mm_b="128"/>
+</MM_Colors>
+<MM_Rect name="mm_rect" x="1230" y="600" w="300" h="120"/>
+</MM_Compound>
+<MM_Compound id="14" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1214">
+<MM_Decorations name="mm_decorations" id="15">
+<MM_Decoration id="16">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessService</mm_concept>
+<MM_Colors name="mm_fillColors" id="17">
+<MM_Color id="18" mm_g="128" mm_b="128"/>
+</MM_Colors>
+<MM_Rect name="mm_rect" x="90" y="600" w="180" h="120"/>
+</MM_Compound>
+<MM_Compound id="19" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1218">
+<MM_Decorations name="mm_decorations" id="20">
+<MM_Decoration id="21">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessService</mm_concept>
+<MM_Colors name="mm_fillColors" id="22">
+<MM_Color id="23" mm_g="128" mm_b="128"/>
+</MM_Colors>
+<MM_Rect name="mm_rect" x="1560" y="600" w="300" h="120"/>
+</MM_Compound>
+<MM_Compound id="24" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1215">
+<MM_Decorations name="mm_decorations" id="25">
+<MM_Decoration id="26">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessService</mm_concept>
+<MM_Colors name="mm_fillColors" id="27">
+<MM_Color id="28" mm_g="128" mm_b="128"/>
+</MM_Colors>
+<MM_Rect name="mm_rect" x="300" y="600" w="240" h="120"/>
+</MM_Compound>
+<MM_Compound id="29" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1216">
+<MM_Decorations name="mm_decorations" id="30">
+<MM_Decoration id="31">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessService</mm_concept>
+<MM_Colors name="mm_fillColors" id="32">
+<MM_Color id="33" mm_g="128" mm_b="128"/>
+</MM_Colors>
+<MM_Rect name="mm_rect" x="570" y="600" w="300" h="120"/>
+</MM_Compound>
+<MM_Compound id="34" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1217">
+<MM_Decorations name="mm_decorations" id="35">
+<MM_Decoration id="36">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessService</mm_concept>
+<MM_Colors name="mm_fillColors" id="37">
+<MM_Color id="38" mm_g="128" mm_b="128"/>
+</MM_Colors>
+<MM_Rect name="mm_rect" x="900" y="600" w="300" h="120"/>
+</MM_Compound>
+<MM_Compound id="39" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1213">
+<MM_Decorations name="mm_decorations" id="40">
+<MM_Decoration id="41">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessService</mm_concept>
+<MM_Colors name="mm_fillColors" id="42">
+<MM_Color id="43" mm_g="128" mm_b="128"/>
+</MM_Colors>
+<MM_Rect name="mm_rect" x="1890" y="600" w="240" h="120"/>
+</MM_Compound>
+<MM_Compound id="44" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1220">
+<MM_Decorations name="mm_decorations" id="45">
+<MM_Decoration id="46">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessService</mm_concept>
+<MM_Colors name="mm_fillColors" id="47">
+<MM_Color id="48" mm_g="128" mm_b="128"/>
+</MM_Colors>
+<MM_Rect name="mm_rect" x="2160" y="600" w="240" h="120"/>
+</MM_Compound>
+<MM_Compound id="49" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1221">
+<MM_Decorations name="mm_decorations" id="50">
+<MM_Decoration id="51">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessService</mm_concept>
+<MM_Colors name="mm_fillColors" id="52">
+<MM_Color id="53" mm_g="128" mm_b="128"/>
+</MM_Colors>
+<MM_Rect name="mm_rect" x="2430" y="600" w="300" h="120"/>
+</MM_Compound>
+<MM_Compound id="64" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1241">
+<MM_Decorations name="mm_decorations" id="65">
+<MM_Decoration id="66">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="67">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessProcess</mm_concept>
+<MM_Rect name="mm_rect" x="90" y="930" w="1110" h="150"/>
+</MM_Compound>
+<MM_Compound id="72" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1251">
+<MM_Decorations name="mm_decorations" id="73">
+<MM_Decoration id="74">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="75">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessProcess</mm_concept>
+<MM_Rect name="mm_rect" x="1230" y="930" w="300" h="150"/>
+</MM_Compound>
+<MM_Compound id="77" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1255">
+<MM_Decorations name="mm_decorations" id="78">
+<MM_Decoration id="79">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="80">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessProcess</mm_concept>
+<MM_Rect name="mm_rect" x="1560" y="930" w="570" h="150"/>
+</MM_Compound>
+<MM_Compound id="83" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1261">
+<MM_Decorations name="mm_decorations" id="84">
+<MM_Decoration id="85">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="86">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessProcess</mm_concept>
+<MM_Rect name="mm_rect" x="2160" y="930" w="240" h="150"/>
+</MM_Compound>
+<MM_Compound id="87" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1263">
+<MM_Decorations name="mm_decorations" id="88">
+<MM_Decoration id="89">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="90">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessProcess</mm_concept>
+<MM_Rect name="mm_rect" x="2430" y="930" w="300" h="150"/>
+</MM_Compound>
+<MM_Compound id="93" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1268">
+<MM_Decorations name="mm_decorations" id="94">
+<MM_Decoration id="95">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="96">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessRole</mm_concept>
+<MM_Rect name="mm_rect" x="90" y="1200" w="2640" h="164"/>
+</MM_Compound>
+<MM_Compound id="97" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1274">
+<MM_Decorations name="mm_decorations" id="98">
+<MM_Decoration id="99">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessService</mm_concept>
+<MM_Colors name="mm_fillColors" id="100">
+<MM_Color id="101" mm_g="128" mm_b="128"/>
+</MM_Colors>
+<MM_Rect name="mm_rect" x="90" y="1620" w="240" h="120"/>
+</MM_Compound>
+<MM_Compound id="102" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1275">
+<MM_Decorations name="mm_decorations" id="103">
+<MM_Decoration id="104">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessService</mm_concept>
+<MM_Colors name="mm_fillColors" id="105">
+<MM_Color id="106" mm_g="128" mm_b="128"/>
+</MM_Colors>
+<MM_Rect name="mm_rect" x="360" y="1620" w="240" h="120"/>
+</MM_Compound>
+<MM_Compound id="107" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1278">
+<MM_Decorations name="mm_decorations" id="108">
+<MM_Decoration id="109">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessService</mm_concept>
+<MM_Colors name="mm_fillColors" id="110">
+<MM_Color id="111" mm_g="128" mm_b="128"/>
+</MM_Colors>
+<MM_Rect name="mm_rect" x="630" y="1620" w="300" h="120"/>
+</MM_Compound>
+<MM_Compound id="112" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1273">
+<MM_Decorations name="mm_decorations" id="113">
+<MM_Decoration id="114">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessService</mm_concept>
+<MM_Colors name="mm_fillColors" id="115">
+<MM_Color id="116" mm_g="128" mm_b="128"/>
+</MM_Colors>
+<MM_Rect name="mm_rect" x="1290" y="1620" w="240" h="120"/>
+</MM_Compound>
+<MM_Compound id="117" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1276">
+<MM_Decorations name="mm_decorations" id="118">
+<MM_Decoration id="119">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessService</mm_concept>
+<MM_Colors name="mm_fillColors" id="120">
+<MM_Color id="121" mm_g="128" mm_b="128"/>
+</MM_Colors>
+<MM_Rect name="mm_rect" x="1560" y="1620" w="300" h="120"/>
+</MM_Compound>
+<MM_Compound id="122" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1277">
+<MM_Decorations name="mm_decorations" id="123">
+<MM_Decoration id="124">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessService</mm_concept>
+<MM_Colors name="mm_fillColors" id="125">
+<MM_Color id="126" mm_g="128" mm_b="128"/>
+</MM_Colors>
+<MM_Rect name="mm_rect" x="1890" y="1620" w="240" h="117"/>
+</MM_Compound>
+<MM_Compound id="127" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1272">
+<MM_Decorations name="mm_decorations" id="128">
+<MM_Decoration id="129">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessService</mm_concept>
+<MM_Colors name="mm_fillColors" id="130">
+<MM_Color id="131" mm_g="128" mm_b="128"/>
+</MM_Colors>
+<MM_Rect name="mm_rect" x="960" y="1620" w="300" h="120"/>
+</MM_Compound>
+<MM_Compound id="132" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1271">
+<MM_Decorations name="mm_decorations" id="133">
+<MM_Decoration id="134">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessService</mm_concept>
+<MM_Colors name="mm_fillColors" id="135">
+<MM_Color id="136" mm_g="128" mm_b="128"/>
+</MM_Colors>
+<MM_Rect name="mm_rect" x="2160" y="1620" w="300" h="120"/>
+</MM_Compound>
+<MM_Compound id="137" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1270">
+<MM_Decorations name="mm_decorations" id="138">
+<MM_Decoration id="139">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessService</mm_concept>
+<MM_Colors name="mm_fillColors" id="140">
+<MM_Color id="141" mm_g="128" mm_b="128"/>
+</MM_Colors>
+<MM_Rect name="mm_rect" x="2490" y="1620" w="240" h="120"/>
+</MM_Compound>
+<MM_Compound id="153" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1298">
+<MM_Decorations name="mm_decorations" id="154">
+<MM_Decoration id="155">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="156">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessProcess</mm_concept>
+<MM_Rect name="mm_rect" x="90" y="1950" w="1170" h="150"/>
+</MM_Compound>
+<MM_Compound id="161" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1308">
+<MM_Decorations name="mm_decorations" id="162">
+<MM_Decoration id="163">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="164">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessProcess</mm_concept>
+<MM_Rect name="mm_rect" x="1290" y="1950" w="840" h="150"/>
+</MM_Compound>
+<MM_Compound id="165" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1310">
+<MM_Decorations name="mm_decorations" id="166">
+<MM_Decoration id="167">
+<mm_concept>icon</mm_concept>
+</MM_Decoration>
+<MM_Decoration id="168">
+<mm_concept>label</mm_concept>
+</MM_Decoration>
+</MM_Decorations>
+<mm_concept>BusinessProcess</mm_concept>
+<MM_Rect name="mm_rect" x="2160" y="1950" w="570" h="150"/>
+</MM_Compound>
+</MM_Graphics>
+<MM_Graphics name="mm_relations" id="54">
+<MM_DirectedRel id="55" mm_from="14" mm_to="5" mm_tox="90" mm_toy="60" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1222">
+<mm_concept>BusinessServiceBusinessActorUse</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="56" mm_from="24" mm_to="5" mm_tox="330" mm_toy="120" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1224">
+<mm_concept>BusinessServiceBusinessActorUse</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="57" mm_from="29" mm_to="5" mm_tox="630" mm_toy="120" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1226">
+<mm_concept>BusinessServiceBusinessActorUse</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="58" mm_from="34" mm_to="5" mm_tox="960" mm_toy="150" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1228">
+<mm_concept>BusinessServiceBusinessActorUse</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="62" mm_from="44" mm_to="5" mm_tox="2190" mm_toy="150" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1236">
+<mm_concept>BusinessServiceBusinessActorUse</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="61" mm_from="39" mm_to="5" mm_tox="1920" mm_toy="120" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1234">
+<mm_concept>BusinessServiceBusinessActorUse</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="60" mm_from="19" mm_to="5" mm_tox="1620" mm_toy="120" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1232">
+<mm_concept>BusinessServiceBusinessActorUse</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="59" mm_from="9" mm_to="5" mm_tox="1290" mm_toy="150" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1230">
+<mm_concept>BusinessServiceBusinessActorUse</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="68" mm_from="64" mm_to="14" mm_fromx="90" mm_fromy="30" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1242">
+<mm_concept>BusinessProcessBusinessServiceRealisation</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="69" mm_from="64" mm_to="24" mm_fromx="330" mm_fromy="30" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1244">
+<mm_concept>BusinessProcessBusinessServiceRealisation</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="70" mm_from="64" mm_to="29" mm_fromx="630" mm_fromy="30" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1246">
+<mm_concept>BusinessProcessBusinessServiceRealisation</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="71" mm_from="64" mm_to="34" mm_fromx="960" mm_fromy="30" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1248">
+<mm_concept>BusinessProcessBusinessServiceRealisation</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="76" mm_from="72" mm_to="9" mm_fromx="150" mm_fromy="60" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1252">
+<mm_concept>BusinessProcessBusinessServiceRealisation</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="81" mm_from="77" mm_to="19" mm_fromx="150" mm_fromy="60" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1256">
+<mm_concept>BusinessProcessBusinessServiceRealisation</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="82" mm_from="77" mm_to="39" mm_fromx="450" mm_fromy="60" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1258">
+<mm_concept>BusinessProcessBusinessServiceRealisation</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="63" mm_from="49" mm_to="5" mm_tox="2490" mm_toy="150" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1238">
+<mm_concept>BusinessServiceBusinessActorUse</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="91" mm_from="83" mm_to="44" mm_fromx="120" mm_fromy="60" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1264">
+<mm_concept>BusinessProcessBusinessServiceRealisation</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="92" mm_from="87" mm_to="49" mm_fromx="150" mm_fromy="60" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1266">
+<mm_concept>BusinessProcessBusinessServiceRealisation</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="142" mm_from="97" mm_to="93" mm_tox="120" mm_toy="90" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1279">
+<mm_concept>BusinessServiceBusinessActorUse</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="143" mm_from="102" mm_to="93" mm_tox="390" mm_toy="150" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1281">
+<mm_concept>BusinessServiceBusinessActorUse</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="144" mm_from="107" mm_to="93" mm_tox="690" mm_toy="150" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1283">
+<mm_concept>BusinessServiceBusinessActorUse</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="145" mm_from="127" mm_to="93" mm_tox="1020" mm_toy="120" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1285">
+<mm_concept>BusinessServiceBusinessActorUse</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="146" mm_from="112" mm_to="93" mm_tox="1320" mm_toy="90" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1287">
+<MM_MultiLine name="mm_line" id="147">
+<MM_Point id="148" mm_x="1410" mm_y="1380"/>
+</MM_MultiLine>
+<mm_concept>BusinessServiceBusinessActorUse</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="149" mm_from="117" mm_to="93" mm_tox="1620" mm_toy="120" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1289">
+<mm_concept>BusinessServiceBusinessActorUse</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="150" mm_from="122" mm_to="93" mm_tox="1920" mm_toy="150" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1291">
+<mm_concept>BusinessServiceBusinessActorUse</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="151" mm_from="132" mm_to="93" mm_tox="2220" mm_toy="150" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1293">
+<mm_concept>BusinessServiceBusinessActorUse</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="152" mm_from="137" mm_to="93" mm_tox="2520" mm_toy="150" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1295">
+<mm_concept>BusinessServiceBusinessActorUse</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="157" mm_from="153" mm_to="97" mm_fromx="120" mm_fromy="0" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1299">
+<mm_concept>BusinessProcessBusinessServiceRealisation</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="158" mm_from="153" mm_to="102" mm_fromx="390" mm_fromy="90" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1301">
+<mm_concept>BusinessProcessBusinessServiceRealisation</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="159" mm_from="153" mm_to="107" mm_fromx="690" mm_fromy="30" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1303">
+<mm_concept>BusinessProcessBusinessServiceRealisation</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="160" mm_from="153" mm_to="127" mm_fromx="1020" mm_fromy="30" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1305">
+<mm_concept>BusinessProcessBusinessServiceRealisation</mm_concept>
+</MM_DirectedRel>
+</MM_Graphics>
 <MM_Decorations name="mm_decorations" id="2"/>
 <mm_concept>Canvas</mm_concept>
 <MM_Rect name="mm_rect" x="0" y="0" w="2147483647" h="2147483647"/>
