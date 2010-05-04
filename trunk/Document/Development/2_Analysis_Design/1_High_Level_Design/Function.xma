@@ -2,7 +2,7 @@
 <MM_Document version="1.0">
 <MM_Application name="Architect" version="2,3,4,26643"/>
 <MM_StorageUnit name="file:///F:\Portal\trunk\Document\Development\2_Analysis_Design\1_High_Level_Design\Function.xma" metamodel="ArchiMate">
-<MM_Module id="a3facc6c-c0c2-4a3c-a39d-554e37dd0751" name="AmberComponent" nextObjectId="1311">
+<MM_Module id="a3facc6c-c0c2-4a3c-a39d-554e37dd0751" name="AmberComponent" nextObjectId="1323">
 <Component name="root" id="0">
 <MM_ProfileValues>
 <MM_Value name="nm" type="string" xml:lang="neutral">'Function'</MM_Value>
@@ -17,66 +17,6 @@
 <MM_Value name="visible" type="boolean">true</MM_Value>
 </MM_Struct>
 <MM_List name="viewSettings2" type="ViewSettings2">
-<MM_Struct name="ViewSetting2" type="ViewSetting2">
-<MM_Value name="diagObj" type="objectref">341</MM_Value>
-<MM_Value name="x11" type="real">1.000</MM_Value>
-<MM_Value name="x12" type="real">0.000</MM_Value>
-<MM_Value name="x21" type="real">0.000</MM_Value>
-<MM_Value name="x22" type="real">1.000</MM_Value>
-<MM_Value name="x0" type="real">0.000</MM_Value>
-<MM_Value name="y0" type="real">0.000</MM_Value>
-<MM_List name="selectedObjects" type="SelectedObjects2"/>
-</MM_Struct>
-<MM_Struct name="ViewSetting2" type="ViewSetting2">
-<MM_Value name="diagObj" type="objectref">252</MM_Value>
-<MM_Value name="x11" type="real">1.000</MM_Value>
-<MM_Value name="x12" type="real">0.000</MM_Value>
-<MM_Value name="x21" type="real">0.000</MM_Value>
-<MM_Value name="x22" type="real">1.000</MM_Value>
-<MM_Value name="x0" type="real">0.000</MM_Value>
-<MM_Value name="y0" type="real">0.000</MM_Value>
-<MM_List name="selectedObjects" type="SelectedObjects2"/>
-</MM_Struct>
-<MM_Struct name="ViewSetting2" type="ViewSetting2">
-<MM_Value name="diagObj" type="objectref">721</MM_Value>
-<MM_Value name="x11" type="real">1.000</MM_Value>
-<MM_Value name="x12" type="real">0.000</MM_Value>
-<MM_Value name="x21" type="real">0.000</MM_Value>
-<MM_Value name="x22" type="real">1.000</MM_Value>
-<MM_Value name="x0" type="real">0.000</MM_Value>
-<MM_Value name="y0" type="real">0.000</MM_Value>
-<MM_List name="selectedObjects" type="SelectedObjects2"/>
-</MM_Struct>
-<MM_Struct name="ViewSetting2" type="ViewSetting2">
-<MM_Value name="diagObj" type="objectref">669</MM_Value>
-<MM_Value name="x11" type="real">1.000</MM_Value>
-<MM_Value name="x12" type="real">0.000</MM_Value>
-<MM_Value name="x21" type="real">0.000</MM_Value>
-<MM_Value name="x22" type="real">1.000</MM_Value>
-<MM_Value name="x0" type="real">0.000</MM_Value>
-<MM_Value name="y0" type="real">0.000</MM_Value>
-<MM_List name="selectedObjects" type="SelectedObjects2"/>
-</MM_Struct>
-<MM_Struct name="ViewSetting2" type="ViewSetting2">
-<MM_Value name="diagObj" type="objectref">1074</MM_Value>
-<MM_Value name="x11" type="real">1.000</MM_Value>
-<MM_Value name="x12" type="real">0.000</MM_Value>
-<MM_Value name="x21" type="real">0.000</MM_Value>
-<MM_Value name="x22" type="real">1.000</MM_Value>
-<MM_Value name="x0" type="real">0.000</MM_Value>
-<MM_Value name="y0" type="real">0.000</MM_Value>
-<MM_List name="selectedObjects" type="SelectedObjects2">
-<MM_Value name="objectref" type="objectref">1206</MM_Value>
-<MM_Value name="objectref" type="objectref">1204</MM_Value>
-<MM_Value name="objectref" type="objectref">1199</MM_Value>
-<MM_Value name="objectref" type="objectref">1192</MM_Value>
-<MM_Value name="objectref" type="objectref">1184</MM_Value>
-<MM_Value name="objectref" type="objectref">1186</MM_Value>
-<MM_Value name="objectref" type="objectref">1195</MM_Value>
-<MM_Value name="objectref" type="objectref">1196</MM_Value>
-<MM_Value name="objectref" type="objectref">1188</MM_Value>
-</MM_List>
-</MM_Struct>
 <MM_Struct name="ViewSetting2" type="ViewSetting2">
 <MM_Value name="diagObj" type="objectref">1207</MM_Value>
 <MM_Value name="x11" type="real">1.000</MM_Value>
@@ -367,6 +307,11 @@
 <BusinessProcessBusinessServiceRealisationRef id="1301" to="1302"/>
 <BusinessProcessRef id="1298" to="1297"/>
 <BusinessProcessRef id="1310" to="1309"/>
+<BusinessProcessBusinessServiceRealisationRef id="1311" to="1312"/>
+<BusinessProcessBusinessServiceRealisationRef id="1317" to="1318"/>
+<BusinessProcessBusinessServiceRealisationRef id="1321" to="1322"/>
+<BusinessProcessBusinessServiceRealisationRef id="1313" to="1314"/>
+<BusinessProcessBusinessServiceRealisationRef id="1319" to="1320"/>
 </RefObjects>
 </ServiceRealisationView>
 </AbstractContainers>
@@ -1247,6 +1192,11 @@
 <BusinessProcessBusinessServiceRealisation id="1306" from="1297" to="1157"/>
 <BusinessProcessBusinessServiceRealisation id="1304" from="1297" to="1187"/>
 <BusinessProcessBusinessServiceRealisation id="1302" from="1297" to="1185"/>
+<BusinessProcessBusinessServiceRealisation id="1318" from="1307" to="777"/>
+<BusinessProcessBusinessServiceRealisation id="1322" from="1309" to="1205"/>
+<BusinessProcessBusinessServiceRealisation id="1312" from="1307" to="1191"/>
+<BusinessProcessBusinessServiceRealisation id="1314" from="1307" to="771"/>
+<BusinessProcessBusinessServiceRealisation id="1320" from="1309" to="1203"/>
 </Relations>
 </BusinessProcessScheme>
 <ApplicationScheme id="13">
@@ -3860,7 +3810,7 @@
 </MM_Compound>
 </MM_Diagram>
 </MM_Module>
-<MM_Module id="27bc7512-2e16-4949-97d2-132a2bae95b4" name="ArchiMateViewDomain" nextObjectId="169">
+<MM_Module id="27bc7512-2e16-4949-97d2-132a2bae95b4" name="ArchiMateViewDomain" nextObjectId="177">
 <MM_Diagram name="root" id="0">
 <MM_Compound name="mm_canvas" id="1" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1207">
 <MM_Graphics name="mm_nodes" id="4">
@@ -4296,6 +4246,21 @@
 <mm_concept>BusinessProcessBusinessServiceRealisation</mm_concept>
 </MM_DirectedRel>
 <MM_DirectedRel id="160" mm_from="153" mm_to="127" mm_fromx="1020" mm_fromy="30" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1305">
+<mm_concept>BusinessProcessBusinessServiceRealisation</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="169" mm_from="161" mm_to="112" mm_fromx="120" mm_fromy="30" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1311">
+<mm_concept>BusinessProcessBusinessServiceRealisation</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="170" mm_from="161" mm_to="117" mm_fromx="420" mm_fromy="60" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1313">
+<mm_concept>BusinessProcessBusinessServiceRealisation</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="174" mm_from="161" mm_to="122" mm_fromx="720" mm_fromy="60" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1317">
+<mm_concept>BusinessProcessBusinessServiceRealisation</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="175" mm_from="165" mm_to="132" mm_fromx="150" mm_fromy="60" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1319">
+<mm_concept>BusinessProcessBusinessServiceRealisation</mm_concept>
+</MM_DirectedRel>
+<MM_DirectedRel id="176" mm_from="165" mm_to="137" mm_fromx="450" mm_fromy="30" mm_semanticObject="#a3facc6c-c0c2-4a3c-a39d-554e37dd0751/1321">
 <mm_concept>BusinessProcessBusinessServiceRealisation</mm_concept>
 </MM_DirectedRel>
 </MM_Graphics>
