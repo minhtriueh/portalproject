@@ -1,0 +1,282 @@
+/* This will replace the text tip with the icon */
+.tip h3 {
+	text-indent: -100em;
+	overflow: hidden;
+	background: url(../img/icons/info.gif) no-repeat;
+	height: 36px;
+	width: 36px;
+	border-top: 0px;
+	background-color: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+
+
+h2 {
+	background-color:#E5ECF9;
+	border-top:1px solid #3366CC;
+	font-size:130%;
+	font-weight:bold;
+	margin:2em 0 0 0px;
+	padding:1px 3px;
+	position:relative;
+}
+
+
+h3 {
+	font-size: 110%;
+	font-weight: bold;
+}
+
+
+#topnav {
+	background-color: #E6EDF5;
+	border-top: 1px dotted #888888;
+	font-size: 1.0em;
+	margin: 0;
+	padding: 0.1em 0;
+	white-space: nowrap;
+	width: 100%;
+}
+
+#topnav a {
+	font-weight: normal;
+}
+
+#topnav h1 {
+	float: left;
+	margin: 0;
+	padding: 0 0 0 0.3em;
+}
+
+#topnav ul li {
+	display: inline;
+	float: none;
+	margin: 0;
+	padding: 0;
+}
+
+#topnav ul {
+	margin: 0;
+	padding: 0.47em 0;
+	text-align: right;
+}
+
+#topnav li a {
+	padding: 0 0.8em;
+}
+
+
+body {
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+
+#header {
+	background: #E6E6E6 none repeat scroll 0%;
+	border-bottom: 1px solid #FFFFFF;
+	background: #ccc;
+	padding: 12px;
+	background: #E6E6E6;
+	border-bottom: 1px solid #999;
+}
+
+#header h1 {
+	padding: 0;
+	margin: 0;
+	font-weight: bold;
+	font-size: 140%;
+}
+
+h1 {
+	text-align: left;
+	margin-left: 0px;
+	background-color: #E5ECF9;
+	font-size: 140%;
+	font-weight: bold;
+	padding: 0px 0px;
+	position: relative;
+}
+
+td.header {
+	background: #EEEEEE none repeat scroll 0%;
+	color: #000000;
+	font-family: verdana, arial, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	padding-bottom: 3px;
+	padding-top: 3px;
+}
+
+table.header {
+	border: 1px solid #CCCCCC;
+	border-style: solid solid solid;
+	border-width: 1px 1px 1px;
+}
+
+table.body {
+	border-color: -moz-use-text-color #CCCCCC rgb(204, 204, 204);
+	border-style: none solid solid;
+	border-width: 0px 1px 1px;
+}
+
+h1 a {
+	padding: 0pt 0px 0px;
+}
+
+h2 a {
+	padding: 0pt 0px 0px;
+}
+
+h3 a {
+	padding: 0pt 0px 0px;
+}
+
+h4 a {
+	padding: 0pt 0px 0px;
+}
+
+.important {
+	color: blue;
+}
+
+.caution {
+	color: red;
+}
+
+.programlisting {
+	color:#007000;
+	font-family:Courier,Courier New,monospace;
+	background-color:#FAFAFA;
+	border:1px solid #BBBBBB;
+	font-size:9pt;
+	line-height:125%;
+	margin:1em 0 0;
+	overflow:auto;
+	padding:0.99em;
+	word-wrap:break-word;
+}
+
+.emphasis {
+	font-weight: bolder;
+}
+
+a {
+	color: #0000CC;
+}
+
+
+.toc a {
+	text-decoration:none;
+	font-weight: normal;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:visited {
+	color: #551A8B;
+}
+
+#nav {
+	float: left;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	background: #E6E6E6;
+	border-bottom: 1px solid #999;
+}
+
+#nav li {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+.list ul {
+	margin-left: 0;
+	padding-left: 0;
+}
+
+.list li {
+	list-style: none;
+}
+
+#nav a {
+	float: left;
+	display: block;
+	padding: 6px 30px 6px 5px;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 90%;
+	color: #666;
+	background: url(../img/common/slash2.gif) no-repeat top right;
+}
+
+#nav  #nav-1 a {
+	padding-left: 20px;
+}
+
+#nav a:hover {
+	color: #000;
+}
+
+a.aboutme { 
+	color:white;
+	text-decoration:none;
+	position:absolute;
+	top:120px;
+	right:80px;
+	z-index:1;
+}
+
+.twitter{
+	position:fixed;
+	top:600px;
+	right:0px;
+}
+
+td.separator {
+	border-top: #ccc solid 1px;
+	background: #efefef;
+}
+
+#articleseparator {
+	border-top: #ccc solid 1px;
+	background: #efefef;
+}
+
+
+.tip {
+	border: 1px dashed gray;
+	padding: .5em;
+}
+
+table th {
+	border-top: #ccc solid 1px;
+	padding-left: 5px;
+	padding-right: 4px;
+	padding-top: 4px;
+	vertical-align: top;
+	background: #efefef;
+}
+
+table tr td {
+	border-style: none;
+	vertical-align: top;
+}
+
+
+.revhistory table th {
+	font-size: 80%;
+}
+
+.revhistory table tr td {
+	border-style: none;
+	vertical-align: top;
+	font-size: 70%;
+}
+

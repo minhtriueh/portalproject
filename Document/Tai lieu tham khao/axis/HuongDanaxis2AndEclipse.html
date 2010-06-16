@@ -1,0 +1,1208 @@
+<html><head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Webservices with Axis2 and the Eclipse Web Tool Platform (WTP) - Tutorial</title>
+<link href="HuongDanaxis2AndEclipse_files/styles3.css" rel="stylesheet" type="text/css">
+<meta content="DocBook XSL Stylesheets V1.74.0" name="generator">
+<meta name="description" content="Abstract This article is a guide to develop Java Web services with Axis2 and Eclipse WTP. This article assume that you have already basic Eclipse knowledge. The article was developed with JDK 1.6 and Eclipse 3.5 (Galileo) and Axis2 1.4.1.">
+</head><body vlink="#840084" alink="#0000ff" bgcolor="white" link="#0000ff" text="black">
+
+<!-- Jennifers Analytics -->
+
+
+<script type="text/javascript"> var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E")); </script><script src="HuongDanaxis2AndEclipse_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript"> var pageTracker = _gat._getTracker("UA-3967758-1"); pageTracker._initData(); pageTracker._trackPageview(); </script>
+
+<script src="HuongDanaxis2AndEclipse_files/revision.js" type="text/javascript">
+</script>
+
+		
+<div id="topnav">
+		
+<h1>
+<a title="Home" href="http://www.vogella.de/">vogella.de</a>
+</h1>
+
+
+		
+<ul id="home" class="topnav">
+			
+<li id="home_link">
+<a class="selected" title="vogella.de homepage" href="http://www.vogella.de/">Home</a>
+</li>
+			
+<li>
+<a title="Lars Vogel's Blog" href="http://www.vogella.de/blog">Blog </a>
+</li>
+				
+<li>
+<a title="Lars Vogel on Twitter" href="http://www.twitter.com/vogella">Twitter </a>
+</li>
+			
+<li>
+<a title="Java Tutorials" href="http://www.vogella.de/java.html">Java </a>
+</li>
+			
+<li>
+<a title="Eclipse Tutorials" href="http://www.vogella.de/eclipse.html">Eclipse</a>
+</li>
+			
+<li>
+<a title="Web development Tutorials" href="http://www.vogella.de/web.html">Web</a>
+</li>
+			
+<li>
+<a title="Technology Tutorials" href="http://www.vogella.de/technology.html">Technology</a>
+</li>
+			
+<li>
+<a title="Algorithm Tutorials" href="http://www.vogella.de/algorithms.html">Algorithms</a>
+</li>
+			
+<li>
+<a title="Source Code" href="http://www.vogella.de/code.html">Source Code</a>
+</li>
+			
+<li>
+<a title="Browse the full article " href="http://www.vogella.de/articles/Webservice/index.html">Browse</a>
+</li>
+			
+<li> 
+<a title="Displays the article revision" href="javascript:%20hideshow()"> Printer Friendly Version </a> 
+</li>
+			
+			
+		
+</ul>
+
+		
+</div>
+
+
+<div class="twitter">
+
+<a href="http://www.twitter.com/vogella"> 
+	<img src="HuongDanaxis2AndEclipse_files/twitterbutton-0104.gif" alt="Follow me on twitter"> 
+</a>
+
+</div>
+
+
+<a class="aboutme" href="http://www.vogella.de/about.html"> 
+	<img src="HuongDanaxis2AndEclipse_files/LarsVogelArticle5.gif" alt="About Lars Vogel"> 
+</a>
+
+
+<div id="adsense_top">
+<!-- Jennifers Adsense -->
+
+
+<script type="text/javascript">
+<!--
+google_ad_client = "pub-3851443674951530";
+/* 728x90, Top Articles 3 */
+google_ad_slot = "3391820284";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript" src="HuongDanaxis2AndEclipse_files/show_ads.js">
+</script><script src="HuongDanaxis2AndEclipse_files/expansion_embed.js"></script><script src="HuongDanaxis2AndEclipse_files/test_domain.js"></script><script>google_protectAndRun("ads_core.google_render_ad", google_handleError, google_render_ad);</script><ins style="border: medium none ; margin: 0pt; padding: 0pt; display: inline-table; height: 90px; position: relative; visibility: visible; width: 728px;"><ins style="border: medium none ; margin: 0pt; padding: 0pt; display: block; height: 90px; position: relative; visibility: visible; width: 728px;"><iframe allowtransparency="true" hspace="0" id="google_ads_frame1" marginheight="0" marginwidth="0" name="google_ads_frame" src="HuongDanaxis2AndEclipse_files/ads.htm" style="left: 0pt; position: absolute; top: 0pt;" vspace="0" width="728" frameborder="0" height="90" scrolling="no"></iframe></ins></ins>
+
+
+</div>
+
+
+<div class="article" lang="en">
+<div class="titlepage">
+<div>
+<div>
+<h2 class="title">
+<a name="N10001"></a> Webservices with Axis2 and the Eclipse Web Tool Platform (WTP)
+			- Tutorial</h2>
+</div>
+<div>
+<div class="author">
+<h3 class="author">
+<span class="firstname">Lars</span> <span class="surname">Vogel and Waldemar Geppart</span>
+</h3>
+</div>
+</div>
+<div>
+<p class="releaseinfo">
+			
+</p><p>Version 0.6</p>
+		
+<p></p>
+</div>
+<div>
+<p class="copyright">Copyright © 2007  Lars Vogel / Waldemar Geppart</p>
+</div>
+<div>
+<p class="pubdate">04.07.2009</p>
+</div>
+<div>
+<div class="revhistory">
+<table summary="Revision history" width="100%" border="1">
+<tbody><tr>
+<th colspan="3" valign="top" align="left"><b>Revision History</b></th>
+</tr>
+<tr>
+<td align="left">Revision 0.1- 0.4</td><td align="left">25.09.2008</td><td align="left">Lars Vogel / Waldemar Geppart</td>
+</tr>
+<tr>
+<td colspan="3" align="left">First versions</td>
+</tr>
+<tr>
+<td align="left">Revision 0.5</td><td align="left">27.10.2008</td><td align="left">Lars Vogel</td>
+</tr>
+<tr>
+<td colspan="3" align="left">Added Axis2 Overview</td>
+</tr>
+<tr>
+<td align="left">Revision 0.6</td><td align="left">04.07.2009</td><td align="left">Lars Vogel</td>
+</tr>
+<tr>
+<td colspan="3" align="left">Updated simple web-service example</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+<div>
+<div class="abstract">
+<a name="abstract"></a>
+<p class="title">
+<b>Abstract</b>
+</p>
+<p> This article is a guide to develop Java Web services with
+				Axis2 and Eclipse WTP.</p>
+<p> This article assume that you have already basic Eclipse
+				knowledge. The article was developed with JDK 1.6 and Eclipse 3.5
+				(Galileo) and Axis2 1.4.1.</p>
+</div>
+</div>
+</div>
+<hr>
+</div>
+<div class="toc">
+<p>
+<b>Table of Contents</b>
+</p>
+<dl>
+<dt>
+<span class="sect1"><a href="#introduction">1. Introduction</a></span>
+</dt>
+<dd>
+<dl>
+<dt>
+<span class="sect2"><a href="#introduction_wtp">1.1. Eclipse Web Tool Platform (WTP)</a></span>
+</dt>
+<dt>
+<span class="sect2"><a href="#introduction_axis2">1.2. Axis2</a></span>
+</dt>
+</dl>
+</dd>
+<dt>
+<span class="sect1"><a href="#installation">2. Installation</a></span>
+</dt>
+<dd>
+<dl>
+<dt>
+<span class="sect2"><a href="#installation_wtp">2.1. Eclipse WTP and Tomcat</a></span>
+</dt>
+<dt>
+<span class="sect2"><a href="#installation_axis2">2.2. Axis2</a></span>
+</dt>
+</dl>
+</dd>
+<dt>
+<span class="sect1"><a href="#wssimple">3. Create a Web Service</a></span>
+</dt>
+<dd>
+<dl>
+<dt>
+<span class="sect2"><a href="#wssimple_overview">3.1. Overview</a></span>
+</dt>
+<dt>
+<span class="sect2"><a href="#wssimple_project">3.2. Java Project  </a></span>
+</dt>
+<dt>
+<span class="sect2"><a href="#wssimple_createservice">3.3. Create the web service</a></span>
+</dt>
+<dt>
+<span class="sect2"><a href="#wssimple_createclient">3.4. Create the webservice client</a></span>
+</dt>
+<dt>
+<span class="sect2"><a href="#wssimple_test">3.5. Test the webservice</a></span>
+</dt>
+</dl>
+</dd>
+<dt>
+<span class="sect1"><a href="#wscomplex">4. Create a complex Web Service</a></span>
+</dt>
+<dd>
+<dl>
+<dt>
+<span class="sect2"><a href="#wscomplex_overview">4.1. Overview</a></span>
+</dt>
+<dt>
+<span class="sect2"><a href="#wscomplex_model">4.2. Datamodel</a></span>
+</dt>
+<dt>
+<span class="sect2"><a href="#wscomplex_service">4.3. Create and test the Web Service</a></span>
+</dt>
+</dl>
+</dd>
+<dt>
+<span class="sect1"><a href="#webservicetest">5. Test a Web Service</a></span>
+</dt>
+<dt>
+<span class="sect1"><a href="#thankyou">6. Thank you </a></span>
+</dt>
+<dt>
+<span class="sect1"><a href="#questions">7. Questions and Discussion</a></span>
+</dt>
+<dt>
+<span class="sect1"><a href="#resources">8. Links and Literature</a></span>
+</dt>
+<dd>
+<dl>
+<dt>
+<span class="sect2"><a href="#sourcecode">8.1. Source Code</a></span>
+</dt>
+<dt>
+<span class="sect2"><a href="#resources_s1">8.2. Web development resources</a></span>
+</dt>
+<dt>
+<span class="sect2"><a href="#resources_general">8.3. vogella Resources</a></span>
+</dt>
+</dl>
+</dd>
+</dl>
+</div> 
+<!-- begin upvalue ad tag 728x90 -->
+<!-- nur zur Verwendung innerhalb vogella.de -->
+
+<script type="text/javascript">
+//
+ord=Math.random()*10000000000000000;
+document.write('<script type="text/javascript" src="http://ad.doubleclick.net/adj/vogella_upv/;sz=728x90;ord=' + ord + '?"><\/script>');
+//
+</script><script type="text/javascript" src="HuongDanaxis2AndEclipse_files/a.js"></script><!-- BEGIN STANDARD TAG - 728 x 90 - www.up-value.de: Run-of-site - DO NOT MODIFY -->
+<script type="text/javascript" src="HuongDanaxis2AndEclipse_files/st.txt"></script><script type="text/javascript" src="HuongDanaxis2AndEclipse_files/imp.js"></script><a target="_blank" href="http://ad.scanmedios.com/clk?2,13%3B66ca98e0a5a3a16d%3B1293ead0627,0%3B%3B%3B280158647,AAAAAKoZDwA3ax0AAAAAAAEAAAAAAAAAAgAAAAYAAAAAAP8AAAAECrV9GwAAAAAAZZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA9iQgAAAAAAAIAAgAAAAAApQWtPikBAAAAAAAAADVhMmRjN2M4LTc4ZjItMTFkZi1hYWU4LTAwYTBkMWU4MjNkNAAApSoAAAA=,http%3A%2F%2Fad.doubleclick.net%2Fclick%3Bh%3Dv8%2F39bb%2F3%2F0%2F%2A%2Fh%3B224430058%3B0-0%3B0%3B48984204%3B3454-728%2F90%3B36515073%2F36532981%2F1%3B%3B%7Esscs%3D%3F,http%3A%2F%2Fwww.vogella.de%2Farticles%2Fwebservice%2Farticle.html%23introduction_axis2,"><img alt="" src="HuongDanaxis2AndEclipse_files/dd73723ad88c120d1305fa5996a6dcf8.jpg" width="728" border="0" height="90"></a><img src="HuongDanaxis2AndEclipse_files/q.gif" style="display: none;" alt="" width="1" border="0" height="1">
+<!-- END TAG -->
+
+<noscript>
+<a
+href="http://ad.doubleclick.net/jump/vogella_upv/;sz=728x90;ord=123456789?"
+target="_blank"><img
+src="http://ad.doubleclick.net/ad/vogella_upv/;sz=728x90;ord=123456789?"
+border="0" alt=""></a>
+</noscript>
+<!-- end upvalue ad tag 728x90 -->
+
+<div class="sect1" lang="en">
+<div class="titlepage">
+<div>
+<div>
+<h2 class="title" style="clear: both;">
+<a name="introduction"></a>1.&nbsp;Introduction</h2>
+</div>
+</div>
+</div>
+<div class="sect2" lang="en">
+<div class="titlepage">
+<div>
+<div>
+<h3 class="title">
+<a name="introduction_wtp"></a>1.1.&nbsp;Eclipse Web Tool Platform (WTP)</h3>
+</div>
+</div>
+</div>
+<p>
+			Eclipse WTP provides functionality to develop web functionality
+			with
+			Java. For an introduction to Eclipse WTP please see
+			<a class="ulink" href="http://www.vogella.de/articles/EclipseWTP/article.html" target="_top">Servlet and JSP with Eclipse WTP </a>
+			.
+		</p>
+</div>
+<div class="sect2" lang="en">
+<div class="titlepage">
+<div>
+<div>
+<h3 class="title">
+<a name="introduction_axis2"></a>1.2.&nbsp;Axis2</h3>
+</div>
+</div>
+</div>
+<p>Axis2 is a popular open source webservice framework. Axis2
+			uses
+			Stax based XML parsing and uses internally the Axiom object
+			model to
+			represents the XML message. Based on this object model Axis2
+			provides
+			an adapter which is Jax-WS compliant.</p>
+</div>
+</div>
+<div class="sect1" lang="en">
+<div class="titlepage">
+<div>
+<div>
+<h2 class="title" style="clear: both;">
+<a name="installation"></a>2.&nbsp;Installation</h2>
+</div>
+</div>
+</div>
+<div class="sect2" lang="en">
+<div class="titlepage">
+<div>
+<div>
+<h3 class="title">
+<a name="installation_wtp"></a>2.1.&nbsp;Eclipse WTP and Tomcat</h3>
+</div>
+</div>
+</div>
+<p>
+			If not yet down,
+			install now Eclipse WTP. For an installation
+			instruction of Eclipse
+			WTPplease see
+			<a class="ulink" href="http://www.vogella.de/articles/EclipseWTP/article.html#installation" target="_top">
+				Installation of Eclipse WTP</a>
+		
+</p>
+<p>
+			Also install Tomcat
+			<a class="ulink" href="http://www.vogella.de/articles/EclipseWTP/article.html#installation_tomcat" target="_top"> Tomcat Installation
+			</a>
+		
+</p>
+</div>
+<div class="sect2" lang="en">
+<div class="titlepage">
+<div>
+<div>
+<h3 class="title">
+<a name="installation_axis2"></a>2.2.&nbsp;Axis2</h3>
+</div>
+</div>
+</div>
+<p>
+			
+</p><div class="tip" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Tip</h3>
+				Currently Axis 2 1.5 is not supported. Make sure you download Axis
+				1.4.1 which can be found here
+				<a class="ulink" href="http://ws.apache.org/axis2/download/1_4_1/download.cgi" target="_top">
+					Axis 2 1.4.1. Download</a>
+</div>
+		
+<p></p>
+<p>
+			This chapter requires an Axis2 runtime, the general download site is
+			<a class="ulink" href="http://ws.apache.org/axis2/download.cgi" target="_top"> here</a>
+			.
+		</p>
+<p> Extract the Axis 2 zip and point Eclipse WTP on it as shown
+			below.</p>
+<p>
+			
+</p><div class="mediaobject">
+<img src="HuongDanaxis2AndEclipse_files/config10.gif"></div>
+		
+<p></p>
+<p>Click OK.</p>
+<p> Select Window -&gt; Preference and set Axis2 as the default
+			engine.</p>
+<p>
+			
+</p><div class="mediaobject">
+<img src="HuongDanaxis2AndEclipse_files/config20.gif"></div>
+		
+<p></p>
+</div>
+</div> 
+
+<script type="text/javascript">
+<!--
+google_ad_client = "pub-3851443674951530";
+/* 728x90, Erstellt 06.11.08, Introduction */
+google_ad_slot = "8639282357";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript" src="HuongDanaxis2AndEclipse_files/show_ads.js">
+</script><script>google_protectAndRun("ads_core.google_render_ad", google_handleError, google_render_ad);</script><ins style="border: medium none ; margin: 0pt; padding: 0pt; display: inline-table; height: 90px; position: relative; visibility: visible; width: 728px;"><ins style="border: medium none ; margin: 0pt; padding: 0pt; display: block; height: 90px; position: relative; visibility: visible; width: 728px;"><iframe allowtransparency="true" hspace="0" id="google_ads_frame2" marginheight="0" marginwidth="0" name="google_ads_frame" src="HuongDanaxis2AndEclipse_files/ads_002.htm" style="left: 0pt; position: absolute; top: 0pt;" vspace="0" width="728" frameborder="0" height="90" scrolling="no"></iframe></ins></ins>
+
+<div class="sect1" lang="en">
+<div class="titlepage">
+<div>
+<div>
+<h2 class="title" style="clear: both;">
+<a name="wssimple"></a>3.&nbsp;Create a Web Service</h2>
+</div>
+</div>
+</div>
+<div class="sect2" lang="en">
+<div class="titlepage">
+<div>
+<div>
+<h3 class="title">
+<a name="wssimple_overview"></a>3.1.&nbsp;Overview</h3>
+</div>
+</div>
+</div>
+<p> The W3C defines a Web service as a software system designed to
+			support interoperable machine to machine interaction over a network.
+		</p>
+<p> In common usage the term refers to clients and servers that
+			communicate using XML messages that follow the SOAP standard. The
+			server usually provides a machine readable description of the
+			operations supported by the server, a description in the Web Services
+			Description Language (WSDL).</p>
+</div>
+<div class="sect2" lang="en">
+<div class="titlepage">
+<div>
+<div>
+<h3 class="title">
+<a name="wssimple_project"></a>3.2.&nbsp;Java Project  </h3>
+</div>
+</div>
+</div>
+<p> Create a new Dynamic Web project
+			"de.vogella.webservice.soap.axis2". Create a package
+			"de.vogella.webservice.soap.axis2" and the following class. </p>
+<p>
+			
+</p><pre class="programlisting">				
+
+package de.vogella.webservice.soap.axis2;
+
+
+
+import java.util.Random;
+
+
+
+public class RandomNumber {
+
+	public long getNumber(){
+
+		Random random = new Random(1000);
+
+		return random.nextLong();
+
+	}
+
+}
+
+
+			</pre>
+		
+<p></p>
+</div>
+<div class="sect2" lang="en">
+<div class="titlepage">
+<div>
+<div>
+<h3 class="title">
+<a name="wssimple_createservice"></a>3.3.&nbsp;Create the web service</h3>
+</div>
+</div>
+</div>
+<p> Now you are ready to create a Web Service for your
+			class. Right
+			click on "RandomNumber.java" and select Web Services -&gt;
+			Create
+			Web
+			Service.</p>
+<p>
+			
+</p><div class="mediaobject">
+<img src="HuongDanaxis2AndEclipse_files/CreateWebServices0.gif"></div>
+		
+<p></p>
+<p>
+			
+</p><div class="tip" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Tip</h3> Make sure the selected Web service runtime is "Apache Axis2".
+				If not, click on the link "Web service runtime: Apache Axis2" and
+				select Axis2.</div>
+		
+<p></p>
+<p>
+			
+</p><div class="mediaobject">
+<img src="HuongDanaxis2AndEclipse_files/CreateWebServices1.gif"></div>
+		
+<p></p>
+<p>Press next.</p>
+<p>
+			
+</p><div class="mediaobject">
+<img src="HuongDanaxis2AndEclipse_files/CreateWebServices2.gif"></div>
+		
+<p></p>
+<p> Click "Next". If your server is not running, you will see this
+			dialog. Click "Start server", wait a few seconds and then click
+			"Next".</p>
+<div class="tip" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Tip</h3> If an error occurs, you have to stop the server manually: Right
+			click on the server in the "Servers" view and select "Stop".</div>
+<p>
+			
+</p><div class="mediaobject">
+<img src="HuongDanaxis2AndEclipse_files/CreateWebServices7.gif"></div>
+		
+<p></p>
+<p>
+			
+</p><div class="mediaobject">
+<img src="HuongDanaxis2AndEclipse_files/CreateWebServices3.gif"></div>
+		
+<p></p>
+<p>Click "Finish".</p>
+<p>Congratulations! You created a Web Service.</p>
+</div>
+<div class="sect2" lang="en">
+<div class="titlepage">
+<div>
+<div>
+<h3 class="title">
+<a name="wssimple_createclient"></a>3.4.&nbsp;Create the webservice client</h3>
+</div>
+</div>
+</div>
+<p>To use your webservice you need a client to. For this you need
+			the URL of
+			the Web Service. Right click on the project and
+			select Run
+			As -&gt; Run on Server. Check the check box and click "Finish".</p>
+<p>
+			Most likely you will find the axis services under the
+			web-address
+			http://localhost:8080/de.vogella.webservice.soap.axis2/axis2-web/index.jsp.
+		</p>
+<p>
+			
+</p><div class="tip" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Tip</h3>
+				You
+				can check the deployment settings in your project
+				de.vogella.webservice.soap.axis2-&gt;
+				Deployment Descriptor -&gt; Servlets
+				-&gt; AxisServlet
+		</div>
+		
+<p></p>
+<p> You should see the following Axis2 main page.</p>
+<p>
+			
+</p><div class="mediaobject">
+<img src="HuongDanaxis2AndEclipse_files/CreateWebServices9.gif"></div>
+		
+<p></p>
+<p>Click on the link "Services".</p>
+<p>
+			
+</p><div class="mediaobject">
+<img src="HuongDanaxis2AndEclipse_files/CreateWebServices10.gif"></div>
+		
+<p></p>
+<p>Click on the link "RandomNumber" and you will see the wsdl
+		</p>
+<p>Copy the URL, e.g.
+			http://localhost:8080/de.vogella.webservice.soap.axis2/services/RandomNumber?wsdl
+			, because you will need it later.</p>
+<p> Right click on your project and select New -&gt; Other… -&gt; Web
+			Services -&gt; Web Service Client. We will now create a client. Through
+			a setting later we will later on create the client in a separate
+			project.</p>
+<p>
+			
+</p><div class="mediaobject">
+<img src="HuongDanaxis2AndEclipse_files/CreateWebClient1.gif"></div>
+		
+<p></p>
+<p>Click "Next".</p>
+<p>
+			Paste your copied service URL into the "Service definition"
+			field.
+			</p><div class="tip" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Tip</h3> Make sure your server and service are running, otherwise the
+				wizard won’t accept the URL!</div>
+		
+<p></p>
+<p>
+			
+</p><div class="mediaobject">
+<img src="HuongDanaxis2AndEclipse_files/CreateWebClient2.gif"></div>
+		
+<p></p>
+<p> Open the link "Client project: …" and enter
+			"de.vogella.webservice.soap.axis2.client" to
+			create a new project for
+			your client.</p>
+<p>
+			
+</p><div class="mediaobject">
+<img src="HuongDanaxis2AndEclipse_files/CreateWebClient3.gif"></div>
+		
+<p></p>
+<p>Click "OK" and "Next".</p>
+<p>
+			
+</p><div class="mediaobject">
+<img src="HuongDanaxis2AndEclipse_files/CreateWebClient4.gif"></div>
+		
+<p></p>
+<p>Click "Finish".</p>
+<p> You have generated a Web Service Client!</p>
+</div>
+<div class="sect2" lang="en">
+<div class="titlepage">
+<div>
+<div>
+<h3 class="title">
+<a name="wssimple_test"></a>3.5.&nbsp;Test the webservice</h3>
+</div>
+</div>
+</div>
+<p> Now we are going to test our Web Service using this client. So
+			we create a test class in "de.vogella.webservice.soap.axis2.client"
+			project. Select your package
+			"de.vogella.webservice.soap.axis2.client".
+			Create the following class
+			ServiceTest.java.</p>
+<p>
+			
+</p><pre class="programlisting">				
+package de.vogella.webservice.soap.axis2;
+
+import java.rmi.RemoteException;
+
+import de.vogella.webservice.soap.axis2.RandomNumberStub.GetNumberResponse;
+
+public class ServiceTest {
+	public static void main(String[] args) throws RemoteException   {
+		RandomNumberStub stub = new RandomNumberStub();
+		GetNumberResponse res = stub.getNumber();
+        System.out.println("Counter: "+res.get_return());
+	}
+}
+
+			</pre>
+		
+<p></p>
+<p> Right click "ServiceTest.java" -&gt; Run As -&gt; Java Application.
+			You should see the result of your call in the command line.</p>
+</div>
+</div> 
+
+<script type="text/javascript">
+<!--
+google_ad_client = "pub-3851443674951530";
+/* Link Block 1 (728x15) */
+google_ad_slot = "3607372071";
+google_ad_width = 728;
+google_ad_height = 15;
+//-->
+</script>
+<script type="text/javascript" src="HuongDanaxis2AndEclipse_files/show_ads.js">
+</script><script>google_protectAndRun("ads_core.google_render_ad", google_handleError, google_render_ad);</script><ins style="border: medium none ; margin: 0pt; padding: 0pt; display: inline-table; height: 15px; position: relative; visibility: visible; width: 728px;"><ins style="border: medium none ; margin: 0pt; padding: 0pt; display: block; height: 15px; position: relative; visibility: visible; width: 728px;"><iframe allowtransparency="true" hspace="0" id="google_ads_frame3" marginheight="0" marginwidth="0" name="google_ads_frame" src="HuongDanaxis2AndEclipse_files/ads_003.htm" style="left: 0pt; position: absolute; top: 0pt;" vspace="0" width="728" frameborder="0" height="15" scrolling="no"></iframe></ins></ins>
+
+<div class="sect1" lang="en">
+<div class="titlepage">
+<div>
+<div>
+<h2 class="title" style="clear: both;">
+<a name="wscomplex"></a>4.&nbsp;Create a complex Web Service</h2>
+</div>
+</div>
+</div>
+<div class="sect2" lang="en">
+<div class="titlepage">
+<div>
+<div>
+<h3 class="title">
+<a name="wscomplex_overview"></a>4.1.&nbsp;Overview</h3>
+</div>
+</div>
+</div>
+<p> After we created a rather simple Web Service, we will create a
+			complex one. Complex means, that it will use Java Interfaces and
+			Collections.</p>
+<p>
+			The first step is to create a "Dynamic Web Project" (e.g.
+			"ComplexWebService") like it is described
+			<a class="link" href="#">here</a>
+			.
+		</p>
+</div>
+<div class="sect2" lang="en">
+<div class="titlepage">
+<div>
+<div>
+<h3 class="title">
+<a name="wscomplex_model"></a>4.2.&nbsp;Datamodel</h3>
+</div>
+</div>
+</div>
+<p> We need an Interface "ICar" and an implementing class "Car".
+			The "Car" objects will be managed in the "CarFactory" class. That
+			means, "CarFactory" has a Collection of "Cars". But Axis2 cannot
+			handle Java Collections, so we need an Adapter class
+			("CarFactoryAdapter") to transform our Collection to an Array. The
+			last thing we need is our "CarService" class. Your package structure
+			should look like this:</p>
+<p>
+			
+</p><div class="mediaobject">
+<img src="HuongDanaxis2AndEclipse_files/ComplexWebService10.jpg"></div>
+		
+<p></p>
+<div class="tip" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Tip</h3> Make sure that "ICar" and "Car" are in the same package,
+			otherwise there will be a problem with the namespace.</div>
+<p>
+			
+</p><pre class="programlisting">				
+package data;
+
+public interface ICar {
+	
+	public int getMaxSpeed();
+	
+	public String getModel();
+
+	public void setMaxSpeed(int maxSpeed);
+
+	public void setModel(String model);
+}
+
+			</pre>
+		
+<p></p>
+<p>
+			
+</p><pre class="programlisting">				
+package data;
+
+public class Car implements ICar {
+	
+	private String model;
+	private int maxSpeed;
+	
+	public Car(String model, int maxSpeed)
+	{
+		this.model = model;
+		this.maxSpeed = maxSpeed;
+	}
+
+	public String getModel() {
+		return model;
+	}
+
+	public void setModel(String model) {
+		this.model = model;
+	}
+
+	public int getMaxSpeed() {
+		return maxSpeed;
+	}
+
+	public void setMaxSpeed(int maxSpeed) {
+		this.maxSpeed = maxSpeed;
+	}
+}
+
+			</pre>
+		
+<p></p>
+<p>
+			
+</p><pre class="programlisting">				
+package data;
+
+import java.util.Vector;
+
+public class CarFactory {
+
+	private Vector&lt;ICar&gt;	cars	= new Vector&lt;ICar&gt;();
+
+	public Vector&lt;ICar&gt; getCars() {
+		return cars;
+	}
+
+	public void setCars(Vector&lt;ICar&gt; cars) {
+		this.cars = cars;
+	}
+}
+
+			</pre>
+		
+<p></p>
+<p>
+			
+</p><pre class="programlisting">				
+package adapter;
+
+import java.util.Vector;
+
+import data.Car;
+import data.CarFactory;
+import data.ICar;
+
+public class CarFactoryAdapter {
+	
+	private ICar[] cars;
+	
+	public CarFactoryAdapter(CarFactory carFact)
+	{
+		Vector&lt;ICar&gt; carList = carFact.getCars();
+		cars = carList.toArray(new Car[carList.size()]);
+	}
+
+	public ICar[] getCars() {
+		return cars;
+	}
+
+	public void setCars(ICar[] cars) {
+		this.cars = cars;
+	}
+
+}
+
+			</pre>
+		
+<p></p>
+<p>
+			
+</p><pre class="programlisting">				
+package service;
+
+import adapter.CarFactoryAdapter;
+import data.Car;
+import data.CarFactory;
+
+public class CarService {
+	
+	private CarFactory carFact = new CarFactory();
+	
+	public CarFactoryAdapter getCarFactory()
+	{
+		carFact.getCars().add(new Car("BMW", 250));
+		carFact.getCars().add(new Car("Porsche", 300));
+		carFact.getCars().add(new Car("Maserati", 350));
+		
+		return new CarFactoryAdapter(carFact);
+	}
+}
+
+			</pre>
+		
+<p></p>
+</div>
+<div class="sect2" lang="en">
+<div class="titlepage">
+<div>
+<div>
+<h3 class="title">
+<a name="wscomplex_service"></a>4.3.&nbsp;Create and test the Web Service</h3>
+</div>
+</div>
+</div>
+<p>
+			Create a Web Service for the CarService class, create a webservice
+			client and a test as described
+			<a class="ulink" href="http://www.vogella.de/articles/Webservice/article.html#wssimple" target="_top"> Create a first Webservice</a>
+			.
+		</p>
+<p> The Test class looks like the following.</p>
+<p>
+			
+</p><pre class="programlisting">				
+package service;
+
+import java.rmi.RemoteException;
+
+import service.CarServiceStub.CarFactoryAdapter;
+import service.CarServiceStub.GetCarFactoryResponse;
+import service.CarServiceStub.ICar;
+
+public class Test {
+	
+	public static void main(String[] args) throws RemoteException {
+		CarServiceStub stub = new CarServiceStub();
+		
+		GetCarFactoryResponse res = stub.getCarFactory();
+		CarFactoryAdapter carFact = res.get_return();
+		ICar[] cars = carFact.getCars();
+		
+		for (int i = 0; i &lt; cars.length; i++) {
+			System.out.println(cars.clone()[i].getModel());
+			System.out.println(cars.clone()[i].getMaxSpeed());
+			System.out.println("------------------------------");
+		}
+	}
+}
+
+			</pre>
+		
+<p></p>
+</div>
+</div> 
+
+<script type="text/javascript">
+<!--
+google_ad_client = "pub-3851443674951530";
+/* Link Block 2 (728x15) */
+google_ad_slot = "9752573896";
+google_ad_width = 728;
+google_ad_height = 15;
+//-->
+</script>
+<script type="text/javascript" src="HuongDanaxis2AndEclipse_files/show_ads.js">
+</script><script>google_protectAndRun("ads_core.google_render_ad", google_handleError, google_render_ad);</script><ins style="border: medium none ; margin: 0pt; padding: 0pt; display: inline-table; height: 15px; position: relative; visibility: visible; width: 728px;"><ins style="border: medium none ; margin: 0pt; padding: 0pt; display: block; height: 15px; position: relative; visibility: visible; width: 728px;"><iframe allowtransparency="true" hspace="0" id="google_ads_frame4" marginheight="0" marginwidth="0" name="google_ads_frame" src="HuongDanaxis2AndEclipse_files/ads_004.htm" style="left: 0pt; position: absolute; top: 0pt;" vspace="0" width="728" frameborder="0" height="15" scrolling="no"></iframe></ins></ins>
+
+<div class="sect1" lang="en">
+<div class="titlepage">
+<div>
+<div>
+<h2 class="title" style="clear: both;">
+<a name="webservicetest"></a>5.&nbsp;Test a Web Service</h2>
+</div>
+</div>
+</div>
+<p> Eclipse allows to test webservices. In the Java EE perspective
+		select Run-&gt; Launch the Webservice Explorer</p>
+<p>
+		
+</p><div class="mediaobject">
+<img src="HuongDanaxis2AndEclipse_files/Test10.gif"></div>
+	
+<p></p>
+<p> Open the WSDL page.</p>
+<p>
+		
+</p><div class="mediaobject">
+<img src="HuongDanaxis2AndEclipse_files/Test20.gif"></div>
+	
+<p></p>
+<p> Double-click on the WSDL Main and maintain the URL to your
+		webservice.</p>
+<p>
+		
+</p><div class="mediaobject">
+<img src="HuongDanaxis2AndEclipse_files/Test30.gif"></div>
+	
+<p></p>
+<p> Press go. The system will list your operations. Click on them to
+		test the. Here you can maintain your parameter, test and see the
+		return parameter.</p>
+<p>
+		
+</p><div class="mediaobject">
+<img src="HuongDanaxis2AndEclipse_files/Test40.gif"></div>
+	
+<p></p>
+<p>
+		
+</p><div class="mediaobject">
+<img src="HuongDanaxis2AndEclipse_files/Test50.gif"></div>
+	
+<p></p>
+</div>
+<div class="sect1" lang="en">
+<div class="titlepage">
+<div>
+<div>
+<h2 class="title" style="clear: both;">
+<a name="thankyou"></a>6.&nbsp;Thank you </h2>
+</div>
+</div>
+</div>
+<p> Thank you for practicing with this tutorial. 
+	</p>
+	
+<p></p>
+	I maintain this tutorial in my private time. If you like
+	the information
+	please help me by donating or by
+	<ulink url="http://www.vogella.de/faq.html#thankyou"> recommending this tutorial </ulink>
+	to other people.
+	<p></p>
+
+	
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+		
+<input name="cmd" value="_s-xclick" type="hidden">
+		<input name="hosted_button_id" value="10463995" type="hidden">
+		<input src="HuongDanaxis2AndEclipse_files/btn_donateCC_LG.gif" name="submit" alt="PayPal - The safer, easier way to pay online!" border="0" type="image">
+		<img alt="" src="HuongDanaxis2AndEclipse_files/pixel.gif" width="1" border="0" height="1">
+	</form>
+
+
+
+
+</div>
+<div class="sect1" lang="en">
+<div class="titlepage">
+<div>
+<div>
+<h2 class="title" style="clear: both;">
+<a name="questions"></a>7.&nbsp;Questions and Discussion</h2>
+</div>
+</div>
+</div>
+<p>
+		For questions and discussion around this article please use the
+		<a class="ulink" href="http://groups.google.com/group/vogella" target="_top"> www.vogella.de Google Group</a>
+		.
+		Also if you note an error in this article please post the error and
+		if
+		possible the correction to the Group.
+	</p>
+<p>
+		
+</p><div class="tip" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Tip</h3>
+			The following tries to help you in asking good questions: 
+			<a class="ulink" href="http://www.vogella.de/blog/2010/03/09/asking-community-questions/" target="_top"> 10 golden rules of asking questions in the OpenSource community
+			</a>
+			.
+		</div>
+	
+<p></p>
+</div> 
+
+<script type="text/javascript">
+<!--
+google_ad_client = "pub-3851443674951530";
+/* 728x90, Button Articles 3 */
+google_ad_slot = "3661354597";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript" src="HuongDanaxis2AndEclipse_files/show_ads.js">
+</script><script>google_protectAndRun("ads_core.google_render_ad", google_handleError, google_render_ad);</script><ins style="border: medium none ; margin: 0pt; padding: 0pt; display: inline-table; height: 90px; position: relative; visibility: visible; width: 728px;"><ins style="border: medium none ; margin: 0pt; padding: 0pt; display: block; height: 90px; position: relative; visibility: visible; width: 728px;"><iframe allowtransparency="true" hspace="0" id="google_ads_frame5" marginheight="0" marginwidth="0" name="google_ads_frame" src="HuongDanaxis2AndEclipse_files/ads_005.htm" style="left: 0pt; position: absolute; top: 0pt;" vspace="0" width="728" frameborder="0" height="90" scrolling="no"></iframe></ins></ins>
+
+<div class="sect1" lang="en">
+<div class="titlepage">
+<div>
+<div>
+<h2 class="title" style="clear: both;">
+<a name="resources"></a>8.&nbsp;Links and Literature</h2>
+</div>
+</div>
+</div> 
+
+<script type="text/javascript">
+<!--
+google_ad_client = "pub-3851443674951530";
+/* Link Block 3 (728x15) */
+google_ad_slot = "9028181258";
+google_ad_width = 728;
+google_ad_height = 15;
+//-->
+</script>
+<script type="text/javascript" src="HuongDanaxis2AndEclipse_files/show_ads.js">
+</script><script>google_protectAndRun("ads_core.google_render_ad", google_handleError, google_render_ad);</script><ins style="border: medium none ; margin: 0pt; padding: 0pt; display: inline-table; height: 15px; position: relative; visibility: visible; width: 728px;"><ins style="border: medium none ; margin: 0pt; padding: 0pt; display: block; height: 15px; position: relative; visibility: visible; width: 728px;"><iframe allowtransparency="true" hspace="0" id="google_ads_frame6" marginheight="0" marginwidth="0" name="google_ads_frame" src="HuongDanaxis2AndEclipse_files/ads_006.htm" style="left: 0pt; position: absolute; top: 0pt;" vspace="0" width="728" frameborder="0" height="15" scrolling="no"></iframe></ins></ins>
+
+<div class="sect2" lang="en">
+<div class="titlepage">
+<div>
+<div>
+<h3 class="title">
+<a name="sourcecode"></a>8.1.&nbsp;Source Code</h3>
+</div>
+</div>
+</div>
+<p>
+		
+<a class="ulink" href="http://www.vogella.de/code/codeeclipse.html" target="_top">Source Code of Examples</a>
+	
+</p>
+</div>
+<div class="sect2" lang="en">
+<div class="titlepage">
+<div>
+<div>
+<h3 class="title">
+<a name="resources_s1"></a>8.2.&nbsp;Web development resources</h3>
+</div>
+</div>
+</div>
+<p>
+			
+<a class="ulink" href="http://www.ibm.com/developerworks/edu/os-dw-os-eclipse-europa1.html" target="_top">
+				http://www.ibm.com/developerworks/edu/os-dw-os-eclipse-europa1.html
+			</a>
+			Web development with Eclipse Europa, Part 1: The Java EE for
+			Eclipse
+		</p>
+<p>
+			
+<a class="ulink" href="http://www.servlets.com/" target="_top">
+				http://www.servlets.com/
+			</a>
+			Web page about servlets
+		</p>
+<p>
+			
+<a class="ulink" href="http://www.eclipse.org/webtools/community/tutorials/BottomUpAxis2WebService/bu_tutorial.html" target="_top">
+				http://www.eclipse.org/webtools/community/tutorials/BottomUpAxis2WebService/bu_tutorial.html
+			</a>
+			Eclipse WTP Tutorials - Creating Bottom Up Web Service via
+			Apache Axis2
+		</p>
+</div>
+<div class="sect2" lang="en">
+<div class="titlepage">
+<div>
+<div>
+<h3 class="title">
+<a name="resources_general"></a>8.3.&nbsp;vogella Resources</h3>
+</div>
+</div>
+</div>
+<p>
+		
+<a class="ulink" href="http://www.vogella.de/eclipse.html" target="_top"> Eclipse Tutorials </a>
+	
+</p>
+<p>
+		
+<a class="ulink" href="http://www.vogella.de/web.html" target="_top"> Web development Tutorials 
+		</a>
+	
+</p>
+<p>
+		
+<a class="ulink" href="http://www.vogella.de/articles/Android/article.html" target="_top"> Android Development Tutorial
+		</a>
+	
+</p>
+<p>
+		
+<a class="ulink" href="http://www.vogella.de/articles/GWT/article.html" target="_top"> GWT Tutorial
+		</a>
+	
+</p>
+<p>
+		
+<a class="ulink" href="http://www.vogella.de/articles/RichClientPlatform/article.html" target="_top"> Eclipse RCP Tutorial
+		</a>
+	
+</p>
+</div>
+</div>
+</div>
+
+
+
+</body></html>
