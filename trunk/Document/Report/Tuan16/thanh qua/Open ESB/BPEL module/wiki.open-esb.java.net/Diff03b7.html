@@ -1,0 +1,699 @@
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+
+
+<!-- Mirrored from wiki.open-esb.java.net/Diff.jsp?page=UnderstandingTheBPELModuleProject&r1=19&r2=1 by HTTrack Website Copier/3.x [XR&CO'2010], Thu, 08 Jul 2010 02:16:47 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head>
+
+  <title>Understanding The BPEL Module Project - OpenESB: the Open Source ESB for SOA & Integration</title>
+  
+
+
+
+
+
+<link rel="stylesheet" type="text/css" media="screen, projection" 
+     href="templates/brushed/jspwiki.css" />
+
+<!-- browser specific cssinclude not required in brushed template
+<script type="text/javascript"
+         src="/templates/brushed/cssinclude.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+  Wiki.loadBrowserSpecificCSS("brushed");
+//]]>
+</script>
+-->
+
+
+
+
+<link rel="stylesheet" type="text/css" 
+     href="templates/brushed/skins/Smart/skin.css" />
+<!-- INCLUDERESOURCES (stylesheet) -->
+
+
+
+<!--[if IE]>
+<style type="text/css" media="screen">
+img, a, div { behavior: url("templates/brushed/scripts/iepngfix.htc"); }
+</style>
+<![endif]-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="search" 
+     href="Wiki702d.html?page=FindPage"
+    title="Search Open ESB Wiki" />
+<link rel="help"   
+     href="Wikia3b7.html?page=TextFormattingRules" 
+    title="Help" />
+<link rel="start"  
+     href="Wikib2ab.html?page=Main"                
+    title="Front page" />
+<!--<link rel="stylesheet" type="text/css" media="print"
+     href="/templates/brushed/jspwiki_print.css" />
+<link rel="alternate stylesheet" type="text/css"
+     href="/templates/brushed/jspwiki_print.css" 
+    title="Print friendly" />-->
+<link rel="alternate stylesheet" type="text/css" 
+     href="templates/brushed/jspwiki.css" 
+    title="Standard" />
+<link rel="icon" type="image/png" href="images/openesb16x16.png" />
+
+<link rel="template" href="http://wiki.open-esb.java.net/templates/brushed" id="template-dir"/>
+<link rel="alternate" type="application/rss+xml" title="RSS wiki feed for the entire site." href="rss.rdf" />
+<link rel="alternate" type="application/rss+xml" title="RSS wiki feed for page Open ESB Wiki: UnderstandingTheBPELModuleProject." href="http://wiki.open-esb.java.net/rss.jsp?page=UnderstandingTheBPELModuleProject&amp;mode=wiki" />
+
+
+
+<script type="text/javascript"
+         src="templates/brushed/scripts/prototype.js" ></script>
+<script type="text/javascript" 
+         src="templates/brushed/scripts/brushed.js" ></script>
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+  Wiki.setBaseURL ( "index.html" );
+  Wiki.setPageName( "UnderstandingTheBPELModuleProject" ); /* pagename without blanks */
+  Wiki.setUserName( "113.170.138.21" );
+
+  Wiki.setDELIM              ( "¤" );
+  Wiki.setPrefDateFormat     ( "dd-MMM-yy HH:mm a, Z" );
+  Wiki.setPrefSkinName       ( "Smart" );
+  Wiki.setPrefTimeZone       ( "" );
+  Wiki.setPrefEditAreaHeight ( "24" );
+  Wiki.setPrefShowQuickLinks ( "no" );
+  Wiki.setPrefSowCalendar    ( "no" );
+//]]>
+</script>
+<script type="text/javascript" 
+         src="templates/brushed/skins/Smart/skin.js"></script>
+
+<!-- INCLUDERESOURCES (script) -->
+
+
+  
+</head>
+
+<body class="view" id="gradient">
+<!--
+<p id="underline" class="barMargin"></p>
+-->
+<div id="wikibody" >
+  
+
+
+
+
+<div id="header">
+<!--
+  <div class="applicationlogo"> 
+    <a href="https://open-esb.dev.java.net/public/downloads.html" title="OpenESB Downloads"></a>
+  </div>
+-->  
+
+<table width="100%" id="headertable"><tr>
+  <td><a href="https://open-esb.dev.java.net/" style="border: none;"><img style="border: none;" height="60" width="304" alt="Open ESB: the Open Enterprise Service Bus... Open Standards + Open Source" src="images/ESBLogoTag-304x60C.jpg"/></a></td>
+
+
+  <td id="rhstop">
+  
+
+<div id="rhsuser" class="rhsusername">
+  Not logged in | 
+    <a title="Hi, Anonymous Guest"  href="Wiki48c3.html?page=Login">Login</a>
+  
+  
+
+  
+
+  
+</div>  
+  
+  
+<div id="oesearch" style="vertical-align: bottom">
+  <br/>
+  <br/>
+	<form action="https://open-esb.dev.java.net/SearchResults.html" id="cse-search-box"> 
+	  <div>
+	    <input type="hidden" name="cx" value="013607241216432041017:tcd_nlc0tem" />
+	    <input type="hidden" name="cof" value="FORID:11" />
+	    <input type="hidden" name="ie" value="UTF-8" />
+	    <input type="text" name="q" size="20" />
+	    <input type="submit" name="sa" value="Search" />
+	  </div>
+	</form>
+</div>
+  
+  
+  </td>
+</tr></table>
+
+<!-- ==================== Menu Structure ==================== -->
+<script type="text/javascript" src="static/menu.js" ></script>
+<div id="z_menu_02"><table width="100%"><tr><td>
+	<div id="z_menu_01">
+		<script>writeOEMenu();</script>
+	</div>
+</td></tr></table></div>
+<!-- ==================== End menu ==================== -->
+
+
+
+
+
+
+
+
+
+
+  <div class="companylogo">
+  </div>
+  
+  
+<!--
+<ul class="iconlist">
+<li class="documentation"><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=Documentation"><img src="/openesbwiki/templates/brushed/skins/Smart/images/documentation.png" width="81" height="65"/></a></li>
+<li class="link"><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsefulLinks"><img src="/openesbwiki/templates/brushed/skins/Smart/images/links.png" width="64" height="65"/></a></li>
+<li class="participate"><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=GetInvolved"><img src="/openesbwiki/templates/brushed/skins/Smart/images/participate.png" width="61" height="68"/></a></li>
+<li class="downloads"><a href="https://open-esb.dev.java.net/Downloads.html"><img src="/openesbwiki/templates/brushed/skins/Smart/images/downloads.png" width="61" height="65"/></a></li>
+</ul>
+<div style="clear: left;"></div>
+ --> 
+
+  <table width="100%">
+  <tr>
+  <td><div class="pagename2">Understanding The BPEL Module Project</div></td>
+  </tr>
+  </table>
+  
+
+
+  
+  <div class="searchbox">
+
+
+<form action="http://wiki.open-esb.java.net/Search.jsp"
+    onsubmit="SearchBox.submit( this.query.value )"
+ onmouseover="Element.show('searchboxMenu');"
+  onmouseout= "Element.hide('searchboxMenu');"
+        name="searchForm" id="searchForm" 
+        accept-charset="UTF-8">
+  <div>
+  
+  <input onblur="if( this.value == '' ) { this.value = 'Search'}; " 
+        onfocus="if( this.value == 'Search' ) { this.value = ''}; "
+           type="text" value="Wiki search" name="query" id="query" size="24" 
+      accesskey="f"></input>
+  </div>  
+  <div id="searchboxMenu" style='display:none;'>
+    <div>
+      <a href="javascript://nop/" 
+         onclick="SearchBox.navigation( 'Wiki195c.html?page=__PAGEHERE__','UnderstandingTheBPELModuleProject' );return false;"
+         title="View the selected page">view</a> 
+      | 
+      <a href="javascript://nop/" 
+         onclick="SearchBox.navigation( 'http://wiki.open-esb.java.net/Edit.jsp?page=__PAGEHERE__','UnderstandingTheBPELModuleProject' );return false;"
+         title="Edit the selected page">edit</a> 
+      | 
+      <a href="javascript://nop/" 
+         onclick="SearchBox.clone( 'http://wiki.open-esb.java.net/Edit.jsp?page=__PAGEHERE__','UnderstandingTheBPELModuleProject' );return false;"
+         title="Clone this page">clone</a> 
+      |
+      <a href="javascript://nop/" 
+         onclick="SearchBox.navigation( 'Search136d.html?query=__PAGEHERE__','UnderstandingTheBPELModuleProject' );return false;"
+         title="Advanced Search">find</a> 
+      [ f ]
+    </div>
+    <div id="searchResult" > </div>
+    <div id="recentSearches" > </div>
+  </div>
+
+</form>
+<script type="text/javascript">
+//<![CDATA[    
+    function updateSearchResult( )
+    {  
+      if( $F('query') == 'Search' ) return;
+      new Ajax.Updater(
+        'searchResult', 
+        'templates/brushed/FindAjax.html',
+        { 
+          asynchronous: true,
+          parameters: Form.serialize( 'searchForm' ) + "&compact=true"
+        } ); 
+    } ;
+    new Form.Element.Observer( "query", 1, updateSearchResult ); 
+//]]>
+</script>
+    
+   </div>
+
+  <div class="breadcrumbs">Your trail: <a class="wikipage" href="Wikicae3.html?page=BPELServiceEngineDeploymentArtifacts">BPELServiceEngineDeploymentArtifacts</a> &gt; <a class="wikipage" href="Wiki1302.html?page=TestingAndDebuggingBPELProcesses">TestingAndDebuggingBPELProcesses</a> &gt; <a class="wikipage" href="Wiki434d.html?page=MonitoringTheBPELServiceEngine">MonitoringTheBPELServiceEngine</a> &gt; <a class="wikipage" href="Wiki77bf.html?page=ConfiguringTheQualityOfServiceProperties">ConfiguringTheQualityOfServiceProperties</a> &gt; <a class="wikipage" href="Wikife94.html?page=UsingDynamicPartnerLinksAndDynamicAddressing">UsingDynamicPartnerLinksAndDynamicAddressing</a> &gt; <a class="wikipage" href="Wiki0931.html?page=ConfiguringPersistenceAndRecoveryForBPEL">ConfiguringPersistenceAndRecoveryForBPEL</a> &gt; <a class="wikipage" href="Wikid4c2.html?page=ConfiguringFailoverForBPEL">ConfiguringFailoverForBPEL</a> &gt; <a class="wikipage" href="Wiki21f2.html?page=BPELBluePrints">BPELBluePrints</a> &gt; <a class="wikipage" href="Wiki7030.html?page=BPELServiceEngineTaskHowTos">BPELServiceEngineTaskHowTos</a> &gt; <a class="wikipage" href="Wikif987.html?page=TroubleshootingTheBPELServiceEngine">TroubleshootingTheBPELServiceEngine</a></div>
+
+  <div style="clear:both; height:0;" > </div>
+
+</div>
+
+
+
+
+  
+
+
+
+
+
+<div id="actionsTop" class="pageactions"> 
+<!--
+  <span class="actionHome">
+    <a href="http://wiki.open-esb.java.net/Wiki.jsp?page=Main"
+       title="Go to home page Main ">Home</a>
+  </span>
+-->  
+  
+    
+    
+    
+<!--
+    
+  -->
+  
+  
+  <span class="actionIndex">
+     <a href="Wiki5f9e.html?page=PageIndex"
+       title="Alphabetically sorted list of pages [ x ]" accesskey="x">Index</a>
+  </span>
+  
+  <span class="actionRecentChanges">
+     <a href="Wiki5fc7.html?page=RecentChanges"
+        title="Pages sorted by modification date [ u ]" accesskey="u">Changes</a>
+  </span>
+
+  
+
+<!--
+  <span class="quicklinks quick2Bottom">
+    <a href="#footer" title="Go to Bottom" >&raquo;</a>
+  </span>
+-->
+  <div style="clear:both; height:0;"> </div> 
+</div>
+
+
+
+
+
+  <div id="page">
+
+
+
+
+<div class="tabmenu ">
+  
+
+  <span><a class="activetab" id="menu-diffcontent" onclick="TabbedSection.onclick('diffcontent')" >Page Difference</a></span>
+</div>
+<div class="tabs ">
+  <div id="diffcontent" >
+
+    
+    <div class="diffnote">
+    <p>
+    <form action="http://wiki.open-esb.java.net/Diff.jsp" 
+          method="post"  accept-charset="UTF-8">
+       <input type="hidden" name="page" value="UnderstandingTheBPELModuleProject" />     
+    Difference between version
+    <select id="r1" name="r1" onchange="this.form.submit();" >
+     
+       <option value="1"  >1</option>
+     
+       <option value="2"  >2</option>
+     
+       <option value="3"  >3</option>
+     
+       <option value="4"  >4</option>
+     
+       <option value="5"  >5</option>
+     
+       <option value="6"  >6</option>
+     
+       <option value="7"  >7</option>
+     
+       <option value="8"  >8</option>
+     
+       <option value="9"  >9</option>
+     
+       <option value="10"  >10</option>
+     
+       <option value="11"  >11</option>
+     
+       <option value="12"  >12</option>
+     
+       <option value="13"  >13</option>
+     
+       <option value="14"  >14</option>
+     
+       <option value="15"  >15</option>
+     
+       <option value="16"  >16</option>
+     
+       <option value="17"  >17</option>
+     
+       <option value="18"  >18</option>
+     
+       <option value="19" selected='selected' >19</option>
+    
+    </select>
+    and version
+    <select id="r2" name="r2" onchange="this.form.submit();" >
+     
+       <option value="1" selected='selected' >1</option>
+     
+       <option value="2"  >2</option>
+     
+       <option value="3"  >3</option>
+     
+       <option value="4"  >4</option>
+     
+       <option value="5"  >5</option>
+     
+       <option value="6"  >6</option>
+     
+       <option value="7"  >7</option>
+     
+       <option value="8"  >8</option>
+     
+       <option value="9"  >9</option>
+     
+       <option value="10"  >10</option>
+     
+       <option value="11"  >11</option>
+     
+       <option value="12"  >12</option>
+     
+       <option value="13"  >13</option>
+     
+       <option value="14"  >14</option>
+     
+       <option value="15"  >15</option>
+     
+       <option value="16"  >16</option>
+     
+       <option value="17"  >17</option>
+     
+       <option value="18"  >18</option>
+     
+       <option value="19"  >19</option>
+    
+    </select>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    
+    </form>
+    </p>
+    <p>Back to <a  href="Wikifbc9.html?page=UnderstandingTheBPELModuleProject">Understanding The BPEL Module Project</a>, or
+    <a href="http://wiki.open-esb.java.net/Wiki.jsp?page=UnderstandingTheBPELModuleProject&amp;tab=pageinfo&amp;start=19">Understanding The BPEL Module Project Info</a></p>
+    </div>
+    <br />
+    <table class="diff" border="0" cellspacing="0" cellpadding="0">
+<tr><td class="diff">At line 1 changed 1 line.</td></tr>
+<tr><td bgcolor="#FF9933" class="diffrem">!!BPEL Designer and Service Engine User's Guide</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">!!Using the BPEL Designer and Service Engine </td></tr>
+<tr><td class="diff">At line 4 changed 1 line.</td></tr>
+<tr><td bgcolor="#FF9933" class="diffrem">* [BPEL Designer and Service Engine User's Guide|BPELDesignerAndServiceEngineUserGuide]</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">* [Using the BPEL Designer and Service Engine|UsingBPELDesignerServiceEngine]</td></tr>
+<tr><td class="diff">At line 6 changed 2 lines.</td></tr>
+<tr><td bgcolor="#FF9933" class="diffrem">* [BPEL Designer and Service Engine Features|BPELDesignerAndServiceEngineFeatures]</td></tr>
+<tr><td bgcolor="#FF9933" class="diffrem">* [Understanding the BPEL Module Project|UnderstandingTheBPELModuleProject]</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">* [Features of the BPEL Designer and Service Engine|BPELDesignerAndServiceEngineFeatures]</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">* %%(color:#3333ff;)__Understanding the BPEL Module Project__%%</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">** Creating Sample Processes in the BPEL Designer</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">** Creating a New Project from a Sample BPEL Module Project</td></tr>
+<tr><td class="diff">At line 10 changed 1 line.</td></tr>
+<tr><td bgcolor="#FF9933" class="diffrem">* [Developing the BPEL Process|DevelopingTheBPELProcessUsingTheBPELDiagram]</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">* [Developing the BPEL Process Using the BPEL Diagram|DevelopingTheBPELProcessUsingTheBPELDiagram]</td></tr>
+<tr><td class="diff">At line 15 added 1 line.</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">* [Using Normalized Message Properties|UsingNormalizedMessageProperties]</td></tr>
+<tr><td class="diff">At line 21 changed 1 line.</td></tr>
+<tr><td bgcolor="#FF9933" class="diffrem">* [Configuring Quality of Service (QOS) Properties|ConfiguringQualityOfServiceProperties]</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">* [Configuring Quality of Service (QOS) Properties, Throttling, and Redelivery|ConfiguringTheQualityOfServiceProperties]</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">* [Using Dynamic Partner Links and Dynamic Addressing|UsingDynamicPartnerLinksAndDynamicAddressing]</td></tr>
+<tr><td class="diff">At line 23 changed 1 line.</td></tr>
+<tr><td bgcolor="#FF9933" class="diffrem">* [Configuring Clustering and Failover for the BPEL Service Engine|ConfiguringClusteringAndFailoverForBPEL]</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">* [Configuring Failover for the BPEL Service Engine|ConfiguringFailoverForBPEL]</td></tr>
+<tr><td class="diff">At line 26 changed 2 lines.</td></tr>
+<tr><td bgcolor="#FF9933" class="diffrem">* [Troubleshooting the BPEL Service Engine|TroubleshootingTheBPELServiceEngine]</td></tr>
+<tr><td bgcolor="#FF9933" class="diffrem">\\</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">* [Troubleshooting the BPEL Designer and Service Engine|TroubleshootingTheBPELServiceEngine]</td></tr>
+<tr><td class="diff">At line 33 added 2 lines.</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">----</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">The BPEL Module project is a group of source files which includes BPEL files, WSDL files, and XML schema files. Within a BPEL Module project, you can author a business process compliant with the WS-BPEL 2.0 language specification.\\</td></tr>
+<tr><td class="diff">At line 36 added 11 lines.</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">The BPEL Module project provides point-and-click support for the following:</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">* Using the New Project wizard to create a BPEL Module project and a Composite Application project.</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">* Importing WSDL Resources to act as partner services in the business process.</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">* Creating new WSDL resources, as needed.</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">* Importing XML Schema resources.</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">* Adding BPEL activities to the business process diagram; further defining the elements by using Property Editor dialog boxes, Properties window, and pop-up menu actions.</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">* Creating and changing the source code of the BPEL, WSDL and XSD files.</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">* Checking and validating XML source code.</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">* Building and adding the project as a JBI module to a Composite Application project.</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">* Test running BPEL processes by sending sample messages to the deployed process or processes.</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">* Debugging deployed business processes</td></tr>
+<tr><td class="diff">At line 48 added 10 lines.</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">!Steps to Create a BPEL Module Project</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">Accordingly, the typical procedure to follow when building a BPEL process is:</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd"># Create a new BPEL Module Project using the New Project wizard.</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd"># Create a Composite Application Project. For sample processes, Composite Application projects are created automatically for you. For the processes created from scratch, you create the Composite Application project manually.</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd"># Add JBI Modules to the Composite Application project.</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd"># (Optional) Build the Composite Application project and make sure that the Application Server is started.</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd"># Deploy the Composite Application Project.</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd"># Create test cases. For sample processes, test cases are automatically created. For new projects, you need to create at least one test case.</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd"># Run one or all test cases.</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd"># If necessary, debug the BPEL process.</td></tr>
+<tr><td class="diff">At line 59 added 4 lines.</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">%%center</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">[Top|UnderstandingTheBPELModuleProject]%%</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">!!Creating Sample Processes in the BPEL Designer</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">The best way to get acquainted with constructing BPEL diagrams is to create sample processes. You can design your BPEL process by modifying existing sample processes.\\</td></tr>
+<tr><td class="diff">At line 34 changed 1 line.</td></tr>
+<tr><td bgcolor="#FF9933" class="diffrem">[Previous|] [Next|]</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">For samples, the New Project sample wizard automatically generates both types of projects, BPEL Module and Composite Application, so you do not need to separately create each of these projects. The NetBeans IDE automatically adds the sample BPEL Module project as a JBI module to the Composite Application project.\\</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd"></td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">In the BPEL Designer, you can create the following sample processes:</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">* A Synchronous Sample Process</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">* An Asynchronous Sample Process</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">* Travel Reservation Service sample</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd"></td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">!A Synchronous Sample Process</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">A synchronous process refers to a conversation style in which the client sends a message to the process, waits for a reply, and continues work only when the reply comes back. When you create a synchronous sample process, the NetBeans IDE generates a skeletal process with a single synchronous operation and the required WSDL and XML schema files.</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd"></td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">!An Asynchronous Sample Process</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">An asynchronous process applies to long-running conversations in which the client does not wait for a reply from the process before continuing its work. Instead of returning the result synchronously to the client, this process accepts the client's request, performs work that might be long-running, and then asynchronously calls back to the client when the work is done. When you create an asynchronous process, the IDE generates a skeletal process with one incoming and one outgoing asynchronous operation and the required WSDL and XML schema files.\\</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd"></td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">Note that any particular process can consist of an arbitrary collection of synchronous and asynchronous interactions with one or more conversational partners.\\</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd"></td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">!Travel Reservation Service Sample</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">This sample is a real-world BPEL process sample constructed using the majority of BPEL elements and several partner web services.\\</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd"></td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">Together with the Travel Reservation Service sample, the wizard creates another project, Reservation Partner Services, a basic EJB and JMS based implementation of the three partner services.</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd"></td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">!!Creating a New Project from a Sample BPEL Module Project</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">The following steps describe the general flow for creating a new project from a sample BPEL module project.</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">!To create a sample BPEL Module project:</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd"># Choose {{File &amp;rarr;  New Project}} (Ctrl-Shift-N).</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd"># In the Categories list, expand the {{Samples}} node and select {{SOA}}.</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd"># In the Projects list, select the sample project you want to create and click {{Next}}.</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd"># In the Name and Location page, name the project and specify the location of project files.</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd"># Click {{Finish}}.</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">  The wizard creates two types of projects for the selected sample: a sample BPEL Module project and a sample Composite Application project. You are free to modify the sample business process and or add additional BPEL processes to the BPEL Module. To deploy, test-run, and debug the BPEL process, use the Composite Application project.</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">\\</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">%%center</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">[Top|UnderstandingTheBPELModuleProject]%%</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">\\</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd"></td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">[Previous|BPELDesignerAndServiceEngineFeatures]\\</td></tr>
+<tr><td bgcolor="#99FF99" class="diffadd">[Next|NavigatingTheBPELDesigner]</td></tr>
+</table>
+ 
+    
+    
+    
+  </div>
+
+<div style="clear:both; height:0px;" > </div>
+</div>
+
+</div> 
+
+
+  
+
+
+
+<div id="favorites">
+
+
+<div class="username">G'day,
+  
+    <a title="Hi, Anonymous Guest"  href="Wiki48c3.html?page=Login">Anonymous Guest</a>
+  
+  
+  
+  
+</div>  
+
+
+
+
+
+
+
+
+<p />
+
+
+
+  
+<p />
+<p />
+
+
+<div class="wikiversion">JSPWiki v2.4.100</div>
+
+<div class="rssfeed"><a href="rss.rdf"><img src="images/xml.png" alt="[RSS]" border="0" title="Aggregate the RSS feed of the entire wiki"/></a></div>
+
+<div style="clear:both; height:0px;" > </div>
+
+</div> 
+
+  
+
+
+
+
+
+<div id='actionsBottom' class="pageactions"> 
+
+  <span class='quicklinks quick2Top'>
+    <a href="#wikibody" title='Go to Top' >&laquo;</a>
+  </span>
+
+  <span class="actionHome">
+    <a href="Wikib2ab.html?page=Main"
+       title="Go to home page Main ">Home</a>
+  </span>
+  
+  
+    
+
+    
+  
+  
+  <span class="actionIndex">
+     <a href="Wiki5f9e.html?page=PageIndex"
+       title="Alphabetically sorted list of pages [ x ]">Index</a>
+  </span>
+  
+  <span class="actionRecentChanges">
+     <a href="Wiki5fc7.html?page=RecentChanges"
+        title="Pages sorted by modification date [ u ]">Changes</a>
+  </span>
+
+  
+    
+      <span class="actionPrefs">
+        <a href="Wiki7eba.html?page=UserPreferences"
+           title="Set User Preferences" >Prefs</a>
+      </span>
+    
+  
+
+  
+    <div class="pageinfo">
+      
+        This page (revision-19) was last changed on 
+        <a href="Diff3de7.html?page=UnderstandingTheBPELModuleProject&amp;r1=19&amp;r2=18"
+          title="Show changes of last page update" >  
+        
+        09-Jun-09 10:32 AM, -0700</a>
+      
+      
+      by rjacobus
+
+      
+    </div>  
+  
+
+  <div style="clear:both; height:0;"> </div> 
+</div>
+
+  
+ 
+  
+
+  
+
+
+<div id="footer">
+
+<table><tr><td>
+  <div class="wikiversion">
+    JSPWiki v2.4.100                       
+  </div>
+</td>
+<td>
+<br>Copyright &copy; 2011, Oracle and/or its affiliates. All rights reserved. Oracle and Java are registered trademarks of Oracle and/or its affiliates. Other names may be trademarks of their respective owners. <a href="http://www.oracle.com/"><img src="images/ora_logo_small.gif" /> </a>
+  <div class="rssfeed">
+    <a href="rss.rdf"><img src="images/xml.png" alt="[RSS]" border="0" title="Aggregate the RSS feed"/></a>
+  </div>
+</td></tr></table>
+  <div style="clear:both; height:0px;" > </div>
+
+</div>
+  
+
+  </div>
+  <div style="clear:both; height:0;" > </div>
+
+
+
+<!-- Page counters -->
+<script type="text/javascript" language="javascript">
+var sc_project=1965314; 
+var sc_invisible=1; 
+var sc_partition=17; 
+var sc_security="c5f5efea"; 
+</script>
+<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script>
+
+
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+<script type="text/javascript">
+_uacct = "UA-993823-3";
+urchinTracker();
+</script>
+</body>
+
+<!-- Mirrored from wiki.open-esb.java.net/Diff.jsp?page=UnderstandingTheBPELModuleProject&r1=19&r2=1 by HTTrack Website Copier/3.x [XR&CO'2010], Thu, 08 Jul 2010 02:16:47 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+</html>
+

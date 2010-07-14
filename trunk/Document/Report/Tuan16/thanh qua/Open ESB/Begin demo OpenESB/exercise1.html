@@ -1,0 +1,1172 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html><head>
+
+                             
+ 
+ 
+ <style type="text/css"> /* <![CDATA[ */
+ @import "/branding/css/tigris.css";
+ @import "/branding/css/inst.css";
+ /* ]]> */</style>
+ <link rel="stylesheet" type="text/css" href="exercise1_files/print.css" media="print">
+ <script src="exercise1_files/tigris.js" type="text/javascript"></script>
+  
+             
+ 
+  <script src="exercise1_files/alm.js" type="text/javascript"></script>
+ <style type="text/css">
+    /* <![CDATA[ */
+    @import "/branding/css/alm.css";
+   /* ]]> */
+ </style>
+ 
+ 
+ 
+ 
+                                                       <title>
+        open-esb:        Guided Tour: Exercise 1
+    </title>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <meta http-equiv="Content-Style-Type" content="text/css">
+ <meta name="version" content="4.5.2.148.4">
+ 
+ 
+  
+
+<script type="text/javascript" src="exercise1_files/urchin.js"></script></head><body class="composite">
+ 
+ 
+ <div id="collabnet">
+ <div id="login"> 
+     <div>
+      <a href="https://www.dev.java.net/servlets/Login?detour=https://open-esb.dev.java.net/60mintutorial/exercise1.html">Login</a>
+      |    <a href="https://www.dev.java.net/servlets/Join">Register</a>    </div>
+ </div>
+ <a href="http://www.collab.net/special/clickpbc0502.html" id="cnlogo">
+<span class="alt">CollabNet Enterprise Edition</span></a>
+</div>
+ 
+ 
+ 
+ 
+ 
+
+<div class="topline">
+<div class="topbar">
+<div id="banner">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+	<tbody><tr>
+		<td>
+		  	<div><a href="https://open-esb.dev.java.net/"><img src="exercise1_files/ESBLogoTag-304x60C.jpg" alt="The Open Enterprise Service Bus: Open Standards + Open Source" width="304" height="60"></a></div>
+  		</td>
+	  	<td class="right" style="vertical-align: bottom;">
+  			<div id="domainlinks">
+				
+								<div id="loginbox">
+												<div>
+				   <a href="https://www.dev.java.net/servlets/TLogin?detour=https://open-esb.dev.java.net/60mintutorial/exercise1.html">Login</a>								|    <a href="https://www.dev.java.net/servlets/Join">Register</a>								</div>
+								</div>
+								
+			</div>
+		<div id="oesearch" style="vertical-align: bottom;">
+  <br>
+  <br>
+	<form action="https://open-esb.dev.java.net/SearchResults.html" id="cse-search-box"> 
+	  <div>
+	    <input name="cx" value="013607241216432041017:tcd_nlc0tem" type="hidden">
+	    <input name="cof" value="FORID:11" type="hidden">
+	    <input name="ie" value="UTF-8" type="hidden">
+	    <input name="q" size="20" type="text">
+	    <input name="sa" value="Search" type="submit">
+	  </div>
+	</form>
+</div></td>
+  	</tr>
+</tbody></table>
+</div>
+</div>
+</div> 
+ 
+ 
+ 
+ <div id="z_menu_02"><table width="100%"><tbody><tr><td>
+	<div id="z_menu_01">
+		<script>writeOEMenu();</script><ul><li><a href="javascript:none">Community</a>
+<ul>
+<li><a href="https://open-esb.dev.java.net/AboutOpenEsb.html">About</a></li>
+<li><a href="https://open-esb.dev.java.net/ContactUs.html">Contact us</a></li>
+<li><a href="https://open-esb.dev.java.net/MailingLists.html">Mailing lists</a></li>
+<li><a href="https://open-esb.dev.java.net/IssueTracker.html">Issue tracker</a></li>
+<li><a href="https://open-esb.dev.java.net/Roadmap.html">Road map</a></li>
+<li><a href="https://open-esb.dev.java.net/Governance.html">Governance</a></li>
+</ul>
+</li></ul>
+<ul><li><a href="https://open-esb.dev.java.net/Downloads.html">Download</a>
+</li></ul>
+<ul><li><a href="javascript:none">Documentation</a>
+<ul>
+<li><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=FAQ">FAQ</a></li>
+<li><a href="https://open-esb.dev.java.net/Books.html">Books</a></li>
+<li><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=Documentation">OpenESB Documentation</a></li>
+<li><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=GlassFishESBDocs">GlassFish ESB Documentation</a></li>
+</ul>
+</li></ul>
+<ul><li><a href="https://open-esb.dev.java.net/ProductSupport.html">Support</a>
+</li></ul>
+<ul><li><a href="javascript:none">Projects</a>
+<ul>
+<li class="cathead"><a href="javascript:none">Components</a></li>
+<li><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=BPELSE">BPEL SE</a></li>
+<li><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=IEPSE">Event Processor SE</a></li>
+<li><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=HTTPBC">HTTP/SOAP BC</a></li>
+<li><a href="https://open-esb.dev.java.net/Components.html">All components...</a></li>
+<li class="cathead"><a href="javascript:none">Platform</a></li>
+<li><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=Encoders">Encoders</a></li>
+<li><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=OpenESBJavaSE">OpenESB on bare JVM</a></li>
+<li><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=OpenESBJBoss">Port to JBoss</a></li>
+<li><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=OpenESBWebSphere">Port to WebSphere</a></li>
+<li><a href="https://open-esb.dev.java.net/Platform.html">All platform facilities...</a></li>
+<li class="cathead"><a href="javascript:none">Sub projects</a></li>
+<li><a href="https://open-jbi-components.dev.java.net/">Open JBI Components</a></li>
+<li><a href="https://fuji.dev.java.net/">Fuji (incubator)</a></li>
+<li><a href="https://openesb-glassfish-addons.dev.java.net/">GlassFish Addons</a></li>
+<li><a href="https://jmsjca.dev.java.net/">JMSJCA</a></li>
+<li><a href="https://esb-console.dev.java.net/">ESB Console (incubator)</a></li>
+<li><a href="https://keychain.dev.java.net/">Keychain</a></li>
+<li><a href="https://open-esb.dev.java.net/Subprojects.html">All sub projects...</a></li>
+</ul>
+</li></ul>
+<ul><li><a href="javascript:none">Developer zone</a>
+<ul>
+<li><a href="https://open-esb.dev.java.net/SourceAccess.html">Source access &amp; build instructions</a></li>
+<li><a href="https://open-esb.dev.java.net/ContributionProcess.html">Become a contributor</a></li>
+<li><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=HelpWantedForOpenESB">Help wanted</a></li>
+<li><a href="https://open-esb.dev.java.net/DevelopingComponents.html">Developing components</a></li>
+</ul>
+</li></ul>
+<ul><li><a href="javascript:none">Partners</a>
+<ul>
+<li><a href="https://open-esb.dev.java.net/CommunityPartnerDirectory.html">Community partners</a></li>
+<li><a href="https://open-esb.dev.java.net/ImplementationSupport.html">Implementation support</a></li>
+</ul>
+</li></ul>
+<ul><li><a href="javascript:none">Resources</a>
+<ul>
+<li><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=BlogsofInterest">Blogs</a></li>
+<li><a href="https://open-esb.dev.java.net/MiscCaseStudies.html">Case Studies</a></li>
+<li><a href="https://open-esb.dev.java.net/OrganizationsUsingOpenESB.html">Organizations using OpenESB</a></li>
+<li><a href="https://open-esb.dev.java.net/servlets/ProjectNewsList">Announcements</a></li>
+</ul>
+</li></ul>
+<ul><li><a href="https://glassfish.dev.java.net/"><img src="exercise1_files/sparkyMenu20.jpg"></a>
+<ul>
+<li class="widemenu"><a href="http://blogs.sun.com/theaquarium"><img src="exercise1_files/TheAquarium.gif"></a></li>
+<li class="widemenu"><a href="https://mural.dev.java.net/"><img src="exercise1_files/mural.gif"></a></li>
+<li class="widemenu"><a href="https://glassfish.dev.java.net/"><img src="exercise1_files/glassfish-180x36.png"></a></li>
+<li class="widemenu"><a href="https://opensso.dev.java.net/"><img src="exercise1_files/opensso.png"></a></li>
+<li class="widemenu"><a href="https://opends.dev.java.net/"><img src="exercise1_files/opends.png"></a></li>
+<li class="widemenu"><a href="https://portal.dev.java.net/"><img src="exercise1_files/openportal.png"></a></li>
+<li class="widemenu"><a href="https://portal.dev.java.net/"><img src="exercise1_files/websynergy.png"></a></li>
+</ul>
+</li></ul>
+
+	</div>
+</td></tr></tbody></table></div><div id="toptabs">
+
+<table border="0" cellpadding="4" cellspacing="0"><tbody><tr>
+
+
+<td>   <a href="https://www.dev.java.net/servlets/StartPage">My pages</a></td>
+
+<th><a href="http://community.java.net/projects/">Projects</a></th>
+
+
+  <td><a href="http://community.java.net/">Communities</a></td>
+
+
+
+<td><a href="http://www.java.net/">java.net</a></td>
+
+
+</tr></tbody></table>
+</div>
+
+  
+ 
+ <div id="breadcrumbs">
+   <a href="https://www.dev.java.net/servlets/ProjectList">Projects</a>    &gt;
+     
+
+    <a href="https://glassfish.dev.java.net/">glassfish</a>
+     &gt;
+     
+
+   <strong>   <a href="https://open-esb.dev.java.net/">open-esb</a>
+   </strong>  </div>
+ 
+ 
+ 
+ 
+<table id="main" width="100%" border="0" cellpadding="4" cellspacing="0">
+<tbody><tr>
+<td id="navcol">
+ 
+ 
+ <dl class="navgroup">
+ <dt>Get Involved</dt>
+ <dd>
+  <ul>
+   
+   <li><a href="http://www.java.net/about-javanet">About java.net</a></li>
+   <li><a href="http://www.java.net/request-project">Create a Project</a></li>
+   <li><a href="http://www.java.net/publicize-your-project">Publicize your Project</a></li>
+   <li><a href="http://www.java.net/projectowner">Your Content</a></li>
+   <li><a href="http://www.java.net/submit-content">Submit Content</a></li>
+   <li><a href="https://java-net.dev.java.net/">java-net Project</a></li>
+   <li><a href="https://open-esb.dev.java.net/servlets/OpenCollabNet">Site Help</a></li>
+   <li><a href="mailto:spamreport@admin.dev.java.net">Report Inappropriate Content</a></li>
+   
+  </ul>
+ </dd>
+ </dl>
+
+
+
+  
+             
+ 
+  
+ 
+                                                           <dl id="projecttools" class="navgroup">
+   <dt>Project tools</dt>
+   <dd>
+    <ul>
+          <li>   <a href="https://open-esb.dev.java.net/servlets/ProjectHome">Project home</a></li>
+           
+       
+ 
+   </ul>
+</dd>
+ 
+ 
+                  
+ 
+   <dd><ul>
+    <li>   <a href="https://open-esb.dev.java.net/servlets/ProjectNewsList">Announcements</a></li>
+ 
+ 
+            
+ 
+        <li>   <a href="https://open-esb.dev.java.net/servlets/ProjectForumView">Discussion forums</a></li>
+  
+ 
+         
+ 
+   <li>   <a href="https://open-esb.dev.java.net/servlets/ProjectMailingListList">Mailing lists</a></li>
+      </ul></dd>
+       
+ 
+            
+ 
+   <dd><ul>
+    <li>   <a href="https://open-esb.dev.java.net/servlets/ProjectDocumentList">Documents &amp; files</a></li>
+ 
+ 
+         
+ 
+   <li>
+<a href="https://open-esb.dev.java.net/source/browse/open-esb/">CVS</a>
+
+
+</li>
+      </ul></dd>
+       
+ 
+               
+ 
+   <dd><ul>
+  <li>   <a href="https://open-esb.dev.java.net/servlets/ProjectIssues">Issue tracker</a></li>
+ 
+ 
+                               	</ul>
+       </dd>
+                <dd>
+      <!-- ================================== -->
+<!-- Begin code from project_tools.html -->
+<!-- ================================== -->
+
+<!-- Import style sheet; this should formally go into the <head> section, but it also works when done here 
+     (tested on IE6, IE7, FF2, FF3, Opera9.5, Safari3.1(Win), Safari3(Mac)
+-->
+<link rel="stylesheet" type="text/css" href="exercise1_files/oe.css">
+<link rel="icon" type="image/png" href="https://open-esb.dev.java.net/images/openesb16x16.png">" /&gt;
+
+
+<!-- ==================== Menu Structure ==================== -->
+<script type="text/javascript" src="exercise1_files/menu.js"></script>
+
+<!-- ==================== End menu ==================== -->
+
+
+<!-- ==================== Search area ==================== -->
+
+<!-- ==================== End search area ==================== -->
+
+
+<script>
+/**
+ *  Moves the menu to the top of the page
+ */
+function placemenu() {
+  var tomove = document.getElementById("z_menu_02");
+  var removed = tomove.parentNode.removeChild(tomove);
+  var target = document.getElementById("toptabs");
+  target.parentNode.insertBefore(removed, target);
+}
+
+
+/**
+ *  Modifies the banner image
+ *  Walks the tree (no tree walker defined in IE6) to find the java.net image
+ *  and replaces it with the OE image
+ */
+function modifyBannerImage(node) {
+  if (node.childNodes != null) {
+    for (var i = 0; i < node.childNodes.length; i++) {
+      var n = node.childNodes[i];
+      if (n.nodeName == "IMG") {
+        n.src = "https://open-esb.dev.java.net/images/ESBLogoTag-304x60C.jpg"
+        n.alt = "The Open Enterprise Service Bus: Open Standards + Open Source";
+        n.width = 304;
+        n.height = 60;
+        n.parentNode.href = "https://open-esb.dev.java.net";
+      } else {
+        modifyBannerImage(n);
+      }
+    }
+  }
+}
+
+
+/**
+ * Loads a script dynamically
+ */
+function dhtmlLoadScript(url) {
+   var e = document.createElement("script");
+   e.src = url;
+   e.type="text/javascript";
+   document.getElementsByTagName("head")[0].appendChild(e);
+}
+
+/**
+ *  Function to load when loading is complete; can be used to change
+ *  the windows's URL after Google is finished.
+ */
+var loadOnComplete;
+
+/**
+ * Tries to invoke Google analytics when the script is loaded
+ */
+function google() {
+  if (typeof urchinTracker == "undefined" || !urchinTracker) {
+    window.setTimeout(google, 200);
+  } else {
+    _uacct = "UA-993823-1";
+    urchinTracker();
+    if (loadOnComplete) {
+      window.setTimeout(loadOnComplete, 200);
+      
+    }
+  }
+}
+
+/**
+ *  Called on load of the page
+ */
+function oeload() {
+   // Google
+   dhtmlLoadScript("https://ssl.google-analytics.com/urchin.js");
+   window.setTimeout(google, 100);
+}
+
+/**
+ *  Adds a new function to be called on load of the page. Note that 
+ *  changing the URL of the page will interrupt the Google Analytics
+ *  loading. Set loadOnComplete instead.
+ */
+function addLoadEvent(func) {
+  var oldonload = window.onload;
+  if (typeof window.onload != 'function') {
+    window.onload = func;
+  } else {
+    window.onload = function() {
+      if (oldonload)  oldonload();
+      func();
+    }
+  }
+}
+
+/**
+ *  Moves the search area
+ */
+function moveSearch() {
+  var tomove = document.getElementById("oesearch");
+  var removed = tomove.parentNode.removeChild(tomove);
+  var domainlinks = document.getElementById("loginbox").parentNode;
+  domainlinks.parentNode.appendChild(removed);
+  domainlinks.parentNode.style.cssText = "vertical-align: bottom";
+}
+
+/**
+ * Reads a cookie
+ */
+function readCookie(name) {
+	var nameEQ = name + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0;i < ca.length;i++) {
+		var c = ca[i];
+		while (c.charAt(0)==' ') c = c.substring(1,c.length);
+		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+	}
+	return null;
+}
+
+/**
+ * Turns on navbar if the navbar cookie is set
+ */
+function checkNavBar() {
+  if (readCookie("navbar")) {
+    var navbar = document.getElementById("navcol");
+    if (navbar) {
+	navbar.style.display = 'block';
+     }
+   }
+}
+
+
+
+/**
+ *  Executed while the page is loading
+ */
+// =======================================================================
+addLoadEvent(oeload);
+placemenu();
+modifyBannerImage(document.getElementById("banner"));
+moveSearch();
+checkNavBar();
+// =======================================================================
+
+</script>
+
+
+
+<!-- Google Analytics -->
+<!-- MOVED TO oeload
+<script src="https://ssl.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-993823-1";
+urchinTracker();
+</script>
+-->
+
+<!-- the following code is required by statcounter for project Open ESB. REMOVE ONLY if this file is included in a project other than Open ESB -->
+<!-- Start of StatCounter Code -->
+<script type="text/javascript" language="javascript">
+var sc_project=2077605;
+var sc_invisible=1;
+var sc_partition=19;
+var sc_security="f8b7737d";
+sc_https=1; 
+</script>
+<!-- MOVED TO oeload
+<script type="text/javascript" language="javascript" src="https://secure.statcounter.com/counter/counter.js"></script>
+<noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="https://c2.statcounter.com/counter.php?sc_project=2077605&java=0&security=f8b7737d&invisible=1" alt="website stat" border="0"></a></noscript>
+-->
+<!-- End of StatCounter Code -->
+
+
+<!-- ================================== -->
+<!-- End code from project_tools.html   -->
+<!-- ================================== -->
+
+      </dd> 
+          
+     </dl>
+   
+
+
+
+
+<form action="https://open-esb.dev.java.net/servlets/Search" method="get">
+ <dl id="searchbox" class="navgroup">
+  
+      <dt>Search</dt>
+  <dd>
+   <div>
+       <select name="scope">
+           <option value="project" selected="selected">This project</option>
+               <option value="domain">All projects</option>
+    </select>
+      </div>
+   <div>
+    <input name="resultsPerPage" value="40" type="hidden"> 
+    <input name="query" size="10" maxlength="99" type="text"> 
+    <input name="Button" value="Go" type="submit">
+   </div>
+   <div>
+       <a href="https://open-esb.dev.java.net/servlets/Search?mode=advanced">Advanced search</a>   </div>
+  </dd>
+
+ </dl>
+</form>
+
+
+<dl id="helptext" class="navgroup">
+ <dt>How do I...</dt>
+ <dd>
+  <ul>
+     
+   <li> <a href="http://www.collab.net/rn/" onclick="return launch(this.href, 1)" title="Note: link may open in new window" class="helplink">
+ 
+ Get release notes for CollabNet 4.5.2?</a>
+</li>
+
+   <li><a href="https://open-esb.dev.java.net/nonav/servlets/HelpTOC" onclick="return launch(this.href, 1)" title="Note: link may open in new window" class="helplink">Get help?</a></li>
+  </ul>
+ </dd>
+</dl>
+
+ 
+ 
+<div class="strut">&nbsp;</div>
+</td>
+<td id="midcol">
+ 
+<div id="bodycol">
+ 
+ 
+ 
+        
+                 
+                 
+           
+    
+  
+
+ 
+ 
+
+
+
+
+<h1>Exercise 1: Introduction to BPEL 2.0</h1>
+Expected duration: 30 minutes
+<h2>Introduction</h2>
+<p>By the end of this exercise, you will have a high
+level understanding of BPEL 2.0 and will be familiar with
+the build-deploy-test cycle of GlassFish ESB applications.<br>
+</p>
+<p>This exercise introduces basic ESB concepts in the
+following hands-on stages:</p>
+<ul>
+  <li><a href="#Create_BPEL_Process">Create a new BPEL process</a></li>
+  <li><a href="#Build_Service_Assembly">Build and deploy the Composite
+Application (or Service
+Assembly)</a></li>
+  <li><a href="#Build_Test_Case">Build a Test Case to test the
+pass-through BPEL process</a></li>
+  <li><a href="#Integrate_Web_App">Integrate the new Composite
+Application
+with the web application<br>
+    </a> </li>
+</ul>
+<h2>Background information</h2>
+<ul>
+  <li>A <a href="http://docs.oasis-open.org/wsbpel/2.0/wsbpel-v2.0.html">BPEL 2.0
+process</a> can be deployed to GlassFish ESB for
+orchestration of various service providers. </li>
+  <li>BPEL processes may in turn be exposed as web services for client
+consumers to
+initiate business flows.<br>
+  </li>
+  <li>Using the ESB components, BPEL may be attached as a listener to a
+database, SMTP or
+JMS destination; or may even read from a file. </li>
+  <li> The interface for a BPEL business process is defined in a
+standard <a href="http://www.w3.org/TR/wsdl">WSDL</a> format.</li>
+  <li>New WSDL files and any accompanying XML Schema Definitions (XSDs)
+required for a BPEL business process can easily be created in the
+NetBeans IDE. NetBeans includes a WSDL document wizard and WSDL / XSD
+editors. It is also possible to import and use an existing WSDL
+definition.</li>
+</ul>
+<h2><a name="Create_BPEL_Process"></a>Create a new BPEL process</h2>
+<ol>
+  <li><b>Create a new BPEL Module</b>
+    <ul>
+      <li>In NetBeans, BPEL Module projects are required to create one
+or more BPEL 2.0 process definitions. Create a
+new BPEL Module project by selecting <b>File &gt; New Project &gt;SOA</b>
+from the NetBeans menu bar, and select <b>BPEL Module</b> from the SOA
+category, as shown below:</li>
+      <p> <img style="width: 587px; height: 410px;" alt="" src="exercise1_files/mainbpel1.PNG"><br>
+&nbsp; <br>
+      </p>
+      <li>Click <b>Next</b> and in the next window, name the project
+'CaptureJ1Polls'. Keep the default Project Location and Folder and
+click <b>Finish</b>.</li>
+    </ul>
+  </li>
+  <li><b>Import the WSDL</b></li>
+  <ul>
+    <li>Every BPEL module requires an underlying WSDL to represent its
+interface. For this
+exercise, a pre-built WSDL file is provided and will be used
+to define the new BPEL
+2.0 service and will also be used by any consumers of this service.
+Download <a href="https://open-esb.dev.java.net/60mintutorial/survey.wsdl">survey.wsdl</a>
+and save it <b>with a WSDL extension</b> to a local folder. To
+download the WSDL, right-click on the <a href="https://open-esb.dev.java.net/60mintutorial/survey.wsdl">survey.wsdl
+link</a> and save the link <b>as a WSDL file</b> to a local directory.</li>
+    <li>To import the WSDL into NetBeans, right-click on the BPEL
+project
+and select <b>New... &gt; External
+WSDL Document</b>
+      <p style="color: rgb(0, 102, 0); font-style: italic;">Note: The
+first time you do this, your <b>New</b> menu
+history will not show <b>External WSDL Document</b>. In this case,
+select <b>Other...</b>
+and
+select <b>External WSDL Document</b> from the <b>XML</b> category as
+shown below.</p>
+      <br>
+      <img style="width: 621px; height: 397px;" alt="" src="exercise1_files/mainbpelcreatewsdl2.PNG"><br>
+&nbsp; <br>
+    </li>
+    <li>In the next window, select <b>From Local File System</b> and
+browse to
+the location where <b>survey.wsdl</b> was saved. Then click <b>Finish</b>
+to begin the import process.</li>
+    <br>
+    <p> </p>
+  </ul>
+  <li><b>Create the BPEL Process</b></li>
+  <ul>
+    <li>Right-click the newly-created BPEL project and click <b>New
+&gt; BPEL Process</b>
+as shown below.<br>
+      <br>
+      <img style="width: 452px; height: 134px;" alt="" src="exercise1_files/mainbpel1newbpel.PNG"><br>
+    </li>
+    <li> Choose an appropriate name for the BPEL process (<b>CaptureJ1Polls</b>
+is used in this example) and click <b>Finish</b>. This will create an
+empty BPEL process. The following steps explain how
+to add functionality to the process by adding activities, partner links
+and transformations or mappings.
+      <p> <img style="width: 533px; height: 339px;" alt="" src="exercise1_files/mainbpel1step1.PNG"></p>
+      <br>
+    </li>
+  </ul>
+  <li><b>Implement the Business Process WSDL</b></li>
+  <ul>
+    <li>Drag and drop the <b>survey.wsdl</b> file onto the partner
+lane (as indicated by the arrow
+below). Notice how the anchor lights up to indicate a valid
+location to drop the WSDL to. This will launch the <b>Create New
+Partner
+Link</b> dialog.<br>
+      <p><span style="font-weight: bold;"><img style="width: 393px; height: 323px;" alt="" src="exercise1_files/mainbpel1createbp.png"></span></p>
+      <p style="color: rgb(0, 102, 0); font-style: italic;">Note: The
+above step effectively imports the WSDL into the BPEL process and
+project.</p>
+    </li>
+    <li>In the <b>Create New Partner Link</b> window, give the partner
+link an
+identifiable name (<b>PartnerLinkJavaOnePoll</b>).
+Select the radio button underlined in the figure below to <b>Use a
+Newly Created Partner Link Type</b> (selected by default), check the <b>Process
+will
+implement (My Role)</b> checkbox and uncheck the default <b>Partner
+service will implement (Partner Role)</b> checkbox. Finally, provide a
+role name for
+the process (<b>javaOnePollRole</b>) and click the <b>OK</b> button to
+continue. <br>
+      <br>
+      <img style="width: 390px; height: 505px;" alt="" src="exercise1_files/mainbpelstep2.PNG"> <br>
+      <p style="color: rgb(0, 102, 0); font-style: italic;">Note: This
+instructs the BPEL process to implement a new service using the
+provided WSDL (rather than using it for the purpose of invoking an
+external service). The <b>Partner Link</b> name will be used later
+during
+configuration and packaging to associate the abstract WSDL port to a
+concrete
+protocol (such as SOAP).</p>
+    </li>
+  </ul>
+  <li><b>Configure BPEL Receive</b><br>
+    <ul>
+      <li>Drag and drop
+the <b>Receive</b> construct from the palette onto the BPEL process
+canvas, as shown below. This represents a logical 'receive' of the
+input message for the WSDL operation.<br>
+        <br>
+        <img style="width: 410px; height: 450px;" alt="" src="exercise1_files/mainbpel1step2_1.png"><br>
+        <p style="color: rgb(0, 102, 0); font-style: italic;">Note:
+Valid
+placeholders are highlighted on the BPEL canvas prior to dropping the
+construct on the canvas. This feature aids the user in building up the
+process easily and minimizes the possibility of errors.</p>
+      </li>
+      <li>Click the <b>Edit</b> icon that appears when you select the
+newly-created <b>Receive</b> activity. <br>
+        <p><span style="font-weight: bold;"><img style="width: 124px; height: 109px;" alt="" src="exercise1_files/mainbpel1step2_11.png"><br>
+        </span> </p>
+      </li>
+      <li>In the <b>Property Editor</b>, give the
+receive activity a name (<b>getPolls</b>) and then configure the <b>Receive</b>
+activity by mapping it to the WSDL constructs. To do this, select the <a href="http://docs.oasis-open.org/wsbpel/2.0/wsbpel-specification-draft.html#_Toc143402854">Partner
+Link</a> from the drop-down menu. In this case, there should only be
+one to choose from.
+Likewise, by selecting this partner link, the single <b>Operation</b>
+available is selected
+automatically. Finally, an <i>input container</i> is required to store
+the
+incoming data to the BPEL process. Click on the <b>Create</b> button
+and choose the
+default name for the variable. Finally, leave the <b>Create Instance</b>
+checkbox in the checked state and click the <b>OK</b> button to
+continue.
+        <p> <img style="width: 374px; height: 253px;" alt="" src="exercise1_files/mainbpelstep2_2.png">&nbsp; <br>
+        </p>
+        <p style="color: rgb(0, 102, 0); font-style: italic;">Note: Do
+not miss the 'Create...' variable step. Without an
+Input Variable, it will not be possible to perform the mapping required
+in the next
+exercise.</p>
+      </li>
+      <li>The BPEL Design view at this stage will appear as follows: <br>
+        <br>
+        <img style="width: 408px; height: 440px;" alt="" src="exercise1_files/mainbpel1step2_12.png"><br>
+        <p style="color: rgb(0, 102, 0); font-style: italic;">Note: The
+        <b>Receive</b>
+construct is one of the entry points to a BPEL process. Other
+options are <b>Pick</b> and <b>OnEvent</b>. Each of these activities
+will require a <b>Partner Link</b> that will be used later to bind it
+to a
+concrete
+partner. A <b>Receive</b> will always have an input variable that
+represents
+the message being received by this BPEL instance and the receipt of
+this incoming message will result in the creation of a new BPEL
+instance to process it, hence the checked <b>Create Instance</b>
+checkbox in the <b>Property Editor</b> dialog box.</p>
+      </li>
+    </ul>
+    <br>
+  </li>
+  <li><b>Configure BPEL Reply</b></li>
+  <ul>
+    <li>In this exercise, you will build a BPEL process based on
+Request-Response message
+exchange process, i.e. for every request coming into the BPEL process,
+the consumer/caller will wait to receive a response from the process.
+In the
+previous step, you configured a <b>Receive</b> activity, and now you
+will
+associate a <b>Reply</b> activity. Drag and drop a <b>Reply</b>
+construct from the palette to just below the <b>Receive</b> activity
+on the BPEL canvas (created in the last step). Follow
+the same steps to edit the <b>Reply</b> activity, this time
+remembering to create a new <b>Output Variable</b>.
+      <p><img style="width: 151px; height: 287px;" alt="" src="exercise1_files/mainbpel1step7_reply.png"><br>
+      </p>
+      <img style="width: 396px; height: 335px;" alt="" src="exercise1_files/mainbpel1step7_1.png"> <br>
+      <br>
+    </li>
+    <li>The updated BPEL Design view at this stage will appear as
+follows:
+      <p> <img style="width: 409px; height: 451px;" alt="" src="exercise1_files/mainbpelstep3.PNG"><br>
+      </p>
+      <p style="color: rgb(0, 102, 0); font-style: italic;">Note: The
+BPEL
+could also have been
+modeled with an <b>In-Only</b> or <b>In-Only with Acknowledgment</b>
+Message Exchange Pattern (MEP) in which case a <b>Reply</b> would be
+unnecessary. The available MEPs are defined in the <a href="http://jcp.org/en/jsr/detail?id=208">JBI specification</a>.<br>
+      </p>
+    </li>
+  </ul>
+  <li><b>Configure BPEL Assign</b></li>
+  <ul>
+    <li>So far, you have built the outer shell of a BPEL process. It is
+necessary to add some data mapping
+logic between the Receive and Reply activities. For the sake of
+simplicity, the mapping rule used in this exercise will be trivial.
+Drag and drop the <b>Assign</b> activity from the
+palette and place it between the <b>Receive</b> and the <b>Reply</b>
+activities on the BPEL canvas.<br>
+      <p><img style="width: 387px; height: 311px;" alt="" src="exercise1_files/mainbpel1step7_assign.png"><br>
+      </p>
+    </li>
+    <li>Click on the new activity and rename it to <b>mapResponse</b>,
+as shown below. It will be displayed in <b><font color="red">red</font></b>
+since the assignment is initially empty.<br>
+      <p><img style="width: 394px; height: 446px;" alt="" src="exercise1_files/mainbpelstep4.PNG"><br>
+      </p>
+    </li>
+    <li>Click on the <b>Mapper</b> view in the BPEL editor (or
+double-click the new <b>Assign</b>
+activity in the canvas) to
+switch to the BPEL Mapping view. You will assign a string value of <b>"success"</b>
+to the output variable. To do this, on the rightmost target pane,
+expand the
+node for
+the output variable so that a blue <i>swim lane</i> is exposed for the
+      <b>part1</b> child node. Assignments
+from source nodes and/or operators to the target node will be made in
+this blue swim lane.<br>
+      <p><img style="width: 497px; height: 232px;" alt="" src="exercise1_files/mainbpel1mapper.PNG"></p>
+      <p><br>
+      </p>
+    </li>
+    <li>From the <b>String</b> operator palette, select <b>String
+Literal</b>. This will
+create a new, empty string literal in the selected swim lane.<br>
+      <p><img style="width: 304px; height: 296px;" alt="" src="exercise1_files/mainbpel1mapper1.PNG"><br>
+      </p>
+      <p style="color: rgb(0, 102, 0); font-style: italic;">Note: Drag
+and drop is also supported for adding the operators and functoids to
+the required swim lanes. However, you may find that the point and click
+style is quicker to use in practice. </p>
+    </li>
+    <li>
+      <p>Type into the text area of the newly-created literal and give
+it a value of 'success'. Then connect it to the target node <b>JavaOnePollOperationOut
+&gt; part1</b> as shown below: </p>
+      <p><img style="width: 503px; height: 146px;" alt="" src="exercise1_files/mainbpel1mapper2.PNG"><br>
+      </p>
+      <p style="color: rgb(0, 102, 0); font-style: italic;">Note:
+Remember to connect the literal to 'part1' as shown above. Failure to
+do so will result in a build error - <span style="font-weight: bold;">The
+XPath expression contains the ";" symbols.</span></p>
+    </li>
+  </ul>
+  <li><b>Save and Validate BPEL</b></li>
+  <ul>
+    <li>The BPEL process implementation is now complete and ready to
+validate.
+Use the <b>Ctrl+S</b> NetBeans keyboard shortcut to save it at any
+time. Switch back to the BPEL <b>Design</b> view and validate the BPEL
+using the <b>Validate</b> icon, as shown below:
+      <p><img style="width: 512px; height: 434px;" src="exercise1_files/mainbpel1validate.PNG" alt=""><br>
+      </p>
+    </li>
+    <li>You can also validate by right clicking on the BPEL source file
+and
+clicking <b>Validate XML</b>
+from the <b>Projects</b> view:<br>
+      <p><img style="width: 377px; height: 173px;" alt="" src="exercise1_files/exercise1_validatebpel.png"> </p>
+    </li>
+    <li>
+      <p>The output window will show the results of the validation -
+there should not be any errors at this stage, as shown below:</p>
+      <p style="margin-left: 40px;"><img style="width: 213px; height: 103px;" alt="" src="exercise1_files/mainbpel1validate2.PNG"><br>
+      </p>
+      <p style="color: rgb(0, 102, 0); font-style: italic;">Note: You
+may see a warning -<b> The variable
+"JavaOnePollOperationIn" is initialized and not used.</b> This can be
+safely ignored
+since the inbound message is intentionally not being used at this stage.</p>
+    </li>
+    <li> Right click the BPEL project and select <b>Build</b> to build
+a JAR file for this BPEL module.</li>
+  </ul>
+</ol>
+<h2><a name="Build_Service_Assembly"></a>Build and Deploy the Composite
+Application</h2>
+<h3>Some definitions</h3>
+<ul>
+  <li> <b>Service Unit:</b> The smallest deployable unit targetted for
+a JBI container (i.e. Service Engine or Binding Component). The JAR
+file containing the built BPEL module in the previous stage is a
+Service Unit. </li>
+  <li> <b>Service
+Assembly:</b> Multiple Service Units constitute a service
+assembly. Building an OpenESB / GlassFish ESB composite application
+generates a Service
+Assembly as a .zip file, which also contains a deployment descriptor.
+This deployment
+descriptor helps to determine the target containers for the Service
+Units (e.g. BPEL service engine, Database binding component, etc...)</li>
+  <li> <b>Composite
+Application Service Assembly (CASA):</b> This is a NetBeans editor
+used to configure, build and deploy a service assembly. </li>
+</ul>
+<ol>
+  <li><b>Create a new CASA project</b></li>
+  <ul>
+    <li>In NetBeans, launch the <b>New Project wizard</b>
+by selecting <b>File &gt; New Project &gt; SOA</b>. Name the Composite
+Application <b>J1PollCASA</b> and click <b>Finish</b>.
+      <p><img style="width: 617px; height: 421px;" alt="" src="exercise1_files/casa1.png"> </p>
+    </li>
+  </ul>
+  <li> <b>Add BPEL Module to CASA</b>
+    <ul>
+      <li> Drag and drop
+the <b>CaptureJ1Polls</b> BPEL module from the project pane into the <b>JBI
+Modules</b> lane of the CASA editor's canvas. This will add the BPEL
+service unit created earlier as
+a JBI module in the newly-created Composite Application.<br>
+        <p><img style="width: 514px; height: 244px;" src="exercise1_files/casaBPEL.PNG" alt=""> </p>
+      </li>
+    </ul>
+  </li>
+  <li><b>Build Composite Application</b>
+    <ul>
+      <li>Right click on the CASA project and click <b>Build</b> to
+build it.
+This generates the Service Assembly for deployment to the JBI
+runtime in GlassFish. Alternately, the <span style="font-weight: bold;">build
+project</span> shortcut from CASA can be used<br>
+        <br>
+        <img style="width: 244px; height: 91px;" alt="" src="exercise1_files/casabuildshortcut.png"><br>
+      </li>
+      <li>
+        <p>If all went well, you should see a <b>BUILD SUCCESSFUL</b>
+message in the
+output pane and the CASA design view will be updated. CASA
+automatically creates a SOAP binding (to deploy to the SOAP binding
+component) and connects it to our BPEL module as shown below:<br>
+        </p>
+        <p><img style="width: 455px; height: 212px;" alt="" src="exercise1_files/casaexercise1.png"><br>
+        </p>
+        <p style="color: rgb(0, 102, 0); font-style: italic;">Note: The
+CASA
+editor automatically understands that the BPEL module is implementing a
+WSDL that contains a SOAP endpoint and therefore added a SOAP BC
+(binding
+component) to the service assembly. The SOAP protocol is hence the
+concrete binding for the <b>PartnerLinkJavaOnePoll</b> partner link
+configured
+previously in the BPEL module.</p>
+      </li>
+      <li>Select the SOAP port on CASA and view the properties pane.
+You will notice that the SOAP binding (to be exposed as the webservice
+entry point) has inherited the default SOAP address from the original
+WSDL.
+        <p><img style="width: 563px; height: 287px;" alt="" src="exercise1_files/casasoapproperties.png"></p>
+        <p style="color: rgb(0, 102, 0); font-style: italic;">Note: The
+port specified will be used to create a new listener in GlassFish
+(using <a href="https://grizzly.dev.java.net/">Grizzly</a>) listening
+on port 18001 for web service requests. For reference, the SOAP address
+(and therefore port) can be changed by right-clicking on the SOAP port
+in CASA and selecting the <b>Clone WSDL Port to edit</b> option. This
+allows you to override and extend the original WSDL and its properties.
+        </p>
+        <p><img style="width: 202px; height: 157px;" alt="" src="exercise1_files/casaclonewsdl.png"><br>
+        </p>
+      </li>
+    </ul>
+  </li>
+  <li><b>Deploy Composite
+Application</b>
+    <ul>
+      <li>To deploy the built application, right click on the
+Composite Application project and select <b>Deploy</b>. You may also
+use the <b>Deploy project</b> shortcut button in the CASA editor.
+        <p><img style="width: 200px; height: 164px;" alt="" src="exercise1_files/casadeployexercise1.png"><br>
+        </p>
+        <p style="color: rgb(0, 102, 0); font-style: italic;">Note: If
+your
+GlassFish instance is not up and running, the <b>Deploy</b> operation
+will start the server automatically for you. If prompted, the default
+admin user password is adminadmin.</p>
+      </li>
+    </ul>
+  </li>
+</ol>
+<h2><a name="Build_Test_Case"></a>Build a Test Case</h2>
+<ol>
+  <p>The BPEL process is exposed via a web
+service endpoint. CASA provides users a simple way to create and run
+unit tests against the deployed
+composite application. In this stage, you will test your web service
+(i.e. business process) using this
+integrated testing tool. </p>
+  <li><b>Create New Test Case</b>
+    <ul>
+      <li> Right click on
+the <b>Test</b> folder under the Composite Application module in the
+NetBeans <b>Projects</b> view and select <b>New Test Case</b> from
+the context menu.<br>
+        <p style="margin-left: 40px;"><img style="width: 193px; height: 163px;" alt="" src="exercise1_files/casa31.png"><br>
+        </p>
+      </li>
+      <li> Use the default name <b>TestCase1</b> and click <b>Next</b>
+to continue.
+        <p><img style="width: 625px; height: 462px;" alt="" src="exercise1_files/casa3.PNG"><br>
+        </p>
+      </li>
+    </ul>
+  </li>
+  <li><b>Select WSDL operation to invoke</b>
+    <ul>
+      <li>Select the WSDL file from the BPEL module. <br>
+        <p> <img style="width: 510px; height: 357px;" alt="" src="exercise1_files/casa4.PNG"><br>
+        </p>
+      </li>
+      <li>Select the operation in the WSDL and click <b>Finish</b><br>
+        <p><img style="width: 513px; height: 363px;" alt="" src="exercise1_files/casa41.PNG">&nbsp; <br>
+        </p>
+      </li>
+    </ul>
+  </li>
+  <li><b>Specify test data</b>
+    <ul>
+      <li>NetBeans generates the unit test case as show below with
+default input values generated from the WSDL and its data types. <br>
+        <p><img src="exercise1_files/casa5.png" alt="" style="width: 723px; height: 441px;"><br>
+        </p>
+      </li>
+      <li>You will notice that default data values created by the
+testcase are surrounded by '?' in all fields. These need to be removed
+(for instance, an integer with ? will fail
+validation). You may edit the input manually or replace the default
+input message by copying and pasting the sample input message below:
+        <div class="codebox">
+        <pre> <b><br>&lt;soapenv:Envelope xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/" <br>                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" <br>                  xmlns:xsd="http://www.w3.org/2001/XMLSchema" <br>                  xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" <br>                  xmlns:jav="http://j2ee.netbeans.org/wsdl/javaOnePoll"&gt;<br>  &lt;soapenv:Body&gt;<br>    &lt;jav:javaOnePoll&gt;<br>      &lt;jav:PersonalInfo&gt;<br>        &lt;jav:Name&gt;My Name&lt;/jav:Name&gt;<br>        &lt;jav:Continent&gt;Asia&lt;/jav:Continent&gt;<br>        &lt;jav:Industry&gt;HealthCare&lt;/jav:Industry&gt;<br>        &lt;jav:TechnicalBackground&gt;JavaSE&lt;/jav:TechnicalBackground&gt;<br>        &lt;jav:SOAExpertiseLevel&gt;1&lt;/jav:SOAExpertiseLevel&gt;<br>      &lt;/jav:PersonalInfo&gt;<br>      &lt;jav:JavaOneOpinionPoll&gt;<br>        &lt;jav:JavaOneTechnicalInterest&gt;JavaSE&lt;/jav:JavaOneTechnicalInterest&gt;<br>        &lt;jav:TechnicalContentRating&gt;1&lt;/jav:TechnicalContentRating&gt;<br>        &lt;jav:VenueRating&gt;1&lt;/jav:VenueRating&gt;<br>        &lt;jav:WeatherRating&gt;1&lt;/jav:WeatherRating&gt;<br>        &lt;jav:PreferredVenue&gt;LosAngeles&lt;/jav:PreferredVenue&gt;<br>      &lt;/jav:JavaOneOpinionPoll&gt;<br>    &lt;/jav:javaOnePoll&gt;<br>  &lt;/soapenv:Body&gt;<br>&lt;/soapenv:Envelope&gt;<br></b><br>        </pre>
+        </div>
+      </li>
+    </ul>
+  </li>
+  <li><b>Run Test</b>
+    <ul>
+      <li>Right-click the test case and click <b>Run</b> to send the
+request to your deployed application
+on GlassFish.<br>
+        <p><img style="width: 221px; height: 174px;" alt="" src="exercise1_files/casa6.png"><br>
+        </p>
+      </li>
+      <li>This dialogue means a valid
+SOAP response is being returned from the application but the expected
+output is currently empty.<br>
+Select <b>Yes</b> when the following dialog pops up.
+        <p><span style="font-style: italic;"><img style="width: 556px; height: 120px;" alt="" src="exercise1_files/casatester.png"><br>
+        </span></p>
+        <p style="color: rgb(0, 102, 0); font-style: italic;">Note:
+When creating a new Test Case, a
+sample Input message with junk values, and an "empty" Output message
+were automatically created for you. On your first run, ignore the
+        <span style="font-weight: bold;">Failed </span>status since
+your valid response was compared against the default 'empty' output
+value, which is expected to fail. Select
+'Yes' in the above dialog so that the most recent output (the SOAP
+response with the
+'success' string) is saved as the correct expected output for future
+test runs. Subsequent runs will now show as passed.<br>
+        </p>
+      </li>
+      <li> View the response by double-clicking it <br>
+        <p><img style="width: 233px; height: 105px;" alt="" src="exercise1_files/casatestresponse.png"><br>
+        </p>
+      </li>
+      <li>
+        <p>If the response returned contains the string <b>success</b>
+that was
+assigned from the BPEL mapping assignment, it means the test succeeded.<br>
+        </p>
+        <p><img style="width: 768px; height: 167px;" alt="" src="exercise1_files/casatesteroutput.png"><br>
+        </p>
+      </li>
+    </ul>
+  </li>
+</ol>
+<h2><a name="Integrate_Web_App"></a>Integrate with the web application</h2>
+<ol>
+  <p>The next stage after successfully invoking the business process
+webservice with a
+test client is to integrate it with the web application deployed to
+GlassFish earlier. This will complete the integration of the
+presentation tier
+with the newly created application tier application.<br>
+  </p>
+  <li><b>Point your
+browser to the web application</b>
+    <ul>
+      <li>Point your browser to <a href="http://localhost:9090/JavaOnePollInterface/">http://localhost:9090/JavaOnePollInterface</a>.
+You may need to replace 9090 with the correct HTTP port
+for your GlassFish instance.
+        <p><img style="width: 644px; height: 542px;" alt="" src="exercise1_files/pollinterface.png"></p>
+      </li>
+    </ul>
+  </li>
+  <li><b>Fill in the poll data</b>
+    <ul>
+      <li>Fill in the poll data as shown above. Note that the <b>Service
+Endpoint Address</b> is defaulted to the address of the BPEL webservice
+created in the previous stages. This should not be changed unless the
+default endpoint URL specified in survey.wsdl was changed.<br>
+        <p style="margin-left: 40px;"><img style="width: 464px; height: 83px;" alt="" src="exercise1_files/pollinterface2.png"><br>
+        </p>
+      </li>
+    </ul>
+  </li>
+  <li><b>Submit poll data</b>
+    <ul>
+      <li>Click <b>Submit</b> to submit the web form data. You should
+see the response mapped earlier in the BPEL assignment (<b>success</b>)
+printed out next to the <b>Submit</b> button.
+        <div style="margin-left: 40px;"><img style="width: 489px; height: 222px;" alt="" src="exercise1_files/pollinterface3.png"><br>
+        </div>
+      </li>
+    </ul>
+  </li>
+</ol>
+<h2>Summary</h2>
+<p>In this exercise, you learned to create, build, deploy and test a
+simple BPEL 2.0 process in GlassFish ESB.<br>
+</p>
+
+<p><a href="https://open-esb.dev.java.net/60mintutorial/exercise0.html">Back to Prerequisites</a> &nbsp; <a href="https://open-esb.dev.java.net/60mintutorial/solution1.html">View Exercise 1 Solution</a> &nbsp; <a href="https://open-esb.dev.java.net/60mintutorial/exercise2.html">Forward to Exercise 2</a></p>
+
+</div>
+</td>
+</tr>
+</tbody></table>
+ 
+ 
+ <div id="footer">
+   <div align="center"><p><a href="http://today.java.net/pub/q/java_net_rss"><img src="exercise1_files/xml.gif" alt="XML" style="vertical-align: middle;" width="36" height="14"></a>&nbsp;<b>java.net RSS</b></p>
+</div>   
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+   	<tbody><tr>
+   		<td><a href="http://www.oracle.com/" onclick="return launch(this.href, 1)"><img src="exercise1_files/logo_oracle_footer.gif" id="logooracle" alt="Oracle"></a> </td>
+
+ 		<td><div align="center"><a href="http://java-net.dev.java.net/feedback.html" onclick="return launch(this.href, 1)" title="Note: link may open in new window" class="helplink">Feedback</a>   |
+ 		<a href="http://www.java.net/javanet-faq">FAQ</a> |
+<!-- 		<a href="http://java.net/presscenter/">Press</a> |   -->
+ 		 <a href="http://www.collab.net/developers/tools/" onclick="return launch(this.href, 1)" title="Note: link may open in new window">Developer tools</a></div>
+<div align="center">
+ 
+ 	<a href="http://www.java.net/javanet-web-site-terms-use">Terms of Use</a> |
+        <a href="http://www.sun.com/privacy/">Privacy</a> | 
+	<a href="http://www.sun.com/suntrademarks/">Trademarks</a> |  
+ 	<a href="https://java-net.dev.java.net/sitemap.html">Site Map</a> 
+</div>
+<div align="center">	<p>Copyright © 2010, Oracle and/or its affiliates.
+All rights reserved. Oracle and Java are registered trademarks of
+Oracle and/or its affiliates. Other names may be trademarks of their
+respective owners. </p><p>© 1995 - 2007 CollabNet. CollabNet is a registered trademark of CollabNet, Inc.</p>    </div></td>
+	   
+<td><a href="http://www.collab.net/special/clickpbc0502.html" id="poweredby"><span class="alt">Powered by CollabNet</span></a><br>
+<a href="http://www.cognisync.com/" onclick="return launch(this.href, 1)"><img src="exercise1_files/cognisync.jpg" id="cognisync" alt="Cognisync" width="74" height="19"></a>
+</td>
+</tr></tbody></table>
+		
+		<!-- Begin SiteCatalyst code  -->
+		<script language="JavaScript" src="exercise1_files/s_code_remote.js"></script><script type="text/javascript" src="exercise1_files/metrics_group1.js"></script>
+<!-- End SiteCatalyst code --> 
+ 
+</div></body></html>

@@ -1,0 +1,1153 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html><head>
+
+                             
+ 
+ 
+ <style type="text/css"> /* <![CDATA[ */
+ @import "/branding/css/tigris.css";
+ @import "/branding/css/inst.css";
+ /* ]]> */</style>
+ <link rel="stylesheet" type="text/css" href="exercise2_files/print.css" media="print">
+ <script src="exercise2_files/tigris.js" type="text/javascript"></script>
+  
+             
+ 
+  <script src="exercise2_files/alm.js" type="text/javascript"></script>
+ <style type="text/css">
+    /* <![CDATA[ */
+    @import "/branding/css/alm.css";
+   /* ]]> */
+ </style>
+ 
+ 
+ 
+ 
+                                                       <title>
+        open-esb:        Guided Tour: Exercise 2
+    </title>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <meta http-equiv="Content-Style-Type" content="text/css">
+ <meta name="version" content="4.5.2.148.4">
+ 
+ 
+  
+
+<script type="text/javascript" src="exercise2_files/urchin.js"></script></head><body class="composite">
+ 
+ 
+ <div id="collabnet">
+ <div id="login"> 
+     <div>
+      <a href="https://www.dev.java.net/servlets/Login?detour=https://open-esb.dev.java.net/60mintutorial/exercise2.html">Login</a>
+      |    <a href="https://www.dev.java.net/servlets/Join">Register</a>    </div>
+ </div>
+ <a href="http://www.collab.net/special/clickpbc0502.html" id="cnlogo">
+<span class="alt">CollabNet Enterprise Edition</span></a>
+</div>
+ 
+ 
+ 
+ 
+ 
+
+<div class="topline">
+<div class="topbar">
+<div id="banner">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+	<tbody><tr>
+		<td>
+		  	<div><a href="https://open-esb.dev.java.net/"><img src="exercise2_files/ESBLogoTag-304x60C.jpg" alt="The Open Enterprise Service Bus: Open Standards + Open Source" width="304" height="60"></a></div>
+  		</td>
+	  	<td class="right" style="vertical-align: bottom;">
+  			<div id="domainlinks">
+				
+								<div id="loginbox">
+												<div>
+				   <a href="https://www.dev.java.net/servlets/TLogin?detour=https://open-esb.dev.java.net/60mintutorial/exercise2.html">Login</a>								|    <a href="https://www.dev.java.net/servlets/Join">Register</a>								</div>
+								</div>
+								
+			</div>
+		<div id="oesearch" style="vertical-align: bottom;">
+  <br>
+  <br>
+	<form action="https://open-esb.dev.java.net/SearchResults.html" id="cse-search-box"> 
+	  <div>
+	    <input name="cx" value="013607241216432041017:tcd_nlc0tem" type="hidden">
+	    <input name="cof" value="FORID:11" type="hidden">
+	    <input name="ie" value="UTF-8" type="hidden">
+	    <input name="q" size="20" type="text">
+	    <input name="sa" value="Search" type="submit">
+	  </div>
+	</form>
+</div></td>
+  	</tr>
+</tbody></table>
+</div>
+</div>
+</div> 
+ 
+ 
+ 
+ <div id="z_menu_02"><table width="100%"><tbody><tr><td>
+	<div id="z_menu_01">
+		<script>writeOEMenu();</script><ul><li><a href="javascript:none">Community</a>
+<ul>
+<li><a href="https://open-esb.dev.java.net/AboutOpenEsb.html">About</a></li>
+<li><a href="https://open-esb.dev.java.net/ContactUs.html">Contact us</a></li>
+<li><a href="https://open-esb.dev.java.net/MailingLists.html">Mailing lists</a></li>
+<li><a href="https://open-esb.dev.java.net/IssueTracker.html">Issue tracker</a></li>
+<li><a href="https://open-esb.dev.java.net/Roadmap.html">Road map</a></li>
+<li><a href="https://open-esb.dev.java.net/Governance.html">Governance</a></li>
+</ul>
+</li></ul>
+<ul><li><a href="https://open-esb.dev.java.net/Downloads.html">Download</a>
+</li></ul>
+<ul><li><a href="javascript:none">Documentation</a>
+<ul>
+<li><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=FAQ">FAQ</a></li>
+<li><a href="https://open-esb.dev.java.net/Books.html">Books</a></li>
+<li><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=Documentation">OpenESB Documentation</a></li>
+<li><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=GlassFishESBDocs">GlassFish ESB Documentation</a></li>
+</ul>
+</li></ul>
+<ul><li><a href="https://open-esb.dev.java.net/ProductSupport.html">Support</a>
+</li></ul>
+<ul><li><a href="javascript:none">Projects</a>
+<ul>
+<li class="cathead"><a href="javascript:none">Components</a></li>
+<li><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=BPELSE">BPEL SE</a></li>
+<li><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=IEPSE">Event Processor SE</a></li>
+<li><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=HTTPBC">HTTP/SOAP BC</a></li>
+<li><a href="https://open-esb.dev.java.net/Components.html">All components...</a></li>
+<li class="cathead"><a href="javascript:none">Platform</a></li>
+<li><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=Encoders">Encoders</a></li>
+<li><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=OpenESBJavaSE">OpenESB on bare JVM</a></li>
+<li><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=OpenESBJBoss">Port to JBoss</a></li>
+<li><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=OpenESBWebSphere">Port to WebSphere</a></li>
+<li><a href="https://open-esb.dev.java.net/Platform.html">All platform facilities...</a></li>
+<li class="cathead"><a href="javascript:none">Sub projects</a></li>
+<li><a href="https://open-jbi-components.dev.java.net/">Open JBI Components</a></li>
+<li><a href="https://fuji.dev.java.net/">Fuji (incubator)</a></li>
+<li><a href="https://openesb-glassfish-addons.dev.java.net/">GlassFish Addons</a></li>
+<li><a href="https://jmsjca.dev.java.net/">JMSJCA</a></li>
+<li><a href="https://esb-console.dev.java.net/">ESB Console (incubator)</a></li>
+<li><a href="https://keychain.dev.java.net/">Keychain</a></li>
+<li><a href="https://open-esb.dev.java.net/Subprojects.html">All sub projects...</a></li>
+</ul>
+</li></ul>
+<ul><li><a href="javascript:none">Developer zone</a>
+<ul>
+<li><a href="https://open-esb.dev.java.net/SourceAccess.html">Source access &amp; build instructions</a></li>
+<li><a href="https://open-esb.dev.java.net/ContributionProcess.html">Become a contributor</a></li>
+<li><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=HelpWantedForOpenESB">Help wanted</a></li>
+<li><a href="https://open-esb.dev.java.net/DevelopingComponents.html">Developing components</a></li>
+</ul>
+</li></ul>
+<ul><li><a href="javascript:none">Partners</a>
+<ul>
+<li><a href="https://open-esb.dev.java.net/CommunityPartnerDirectory.html">Community partners</a></li>
+<li><a href="https://open-esb.dev.java.net/ImplementationSupport.html">Implementation support</a></li>
+</ul>
+</li></ul>
+<ul><li><a href="javascript:none">Resources</a>
+<ul>
+<li><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=BlogsofInterest">Blogs</a></li>
+<li><a href="https://open-esb.dev.java.net/MiscCaseStudies.html">Case Studies</a></li>
+<li><a href="https://open-esb.dev.java.net/OrganizationsUsingOpenESB.html">Organizations using OpenESB</a></li>
+<li><a href="https://open-esb.dev.java.net/servlets/ProjectNewsList">Announcements</a></li>
+</ul>
+</li></ul>
+<ul><li><a href="https://glassfish.dev.java.net/"><img src="exercise2_files/sparkyMenu20.jpg"></a>
+<ul>
+<li class="widemenu"><a href="http://blogs.sun.com/theaquarium"><img src="exercise2_files/TheAquarium.gif"></a></li>
+<li class="widemenu"><a href="https://mural.dev.java.net/"><img src="exercise2_files/mural.gif"></a></li>
+<li class="widemenu"><a href="https://glassfish.dev.java.net/"><img src="exercise2_files/glassfish-180x36.png"></a></li>
+<li class="widemenu"><a href="https://opensso.dev.java.net/"><img src="exercise2_files/opensso.png"></a></li>
+<li class="widemenu"><a href="https://opends.dev.java.net/"><img src="exercise2_files/opends.png"></a></li>
+<li class="widemenu"><a href="https://portal.dev.java.net/"><img src="exercise2_files/openportal.png"></a></li>
+<li class="widemenu"><a href="https://portal.dev.java.net/"><img src="exercise2_files/websynergy.png"></a></li>
+</ul>
+</li></ul>
+
+	</div>
+</td></tr></tbody></table></div><div id="toptabs">
+
+<table border="0" cellpadding="4" cellspacing="0"><tbody><tr>
+
+
+<td>   <a href="https://www.dev.java.net/servlets/StartPage">My pages</a></td>
+
+<th><a href="http://community.java.net/projects/">Projects</a></th>
+
+
+  <td><a href="http://community.java.net/">Communities</a></td>
+
+
+
+<td><a href="http://www.java.net/">java.net</a></td>
+
+
+</tr></tbody></table>
+</div>
+
+  
+ 
+ <div id="breadcrumbs">
+   <a href="https://www.dev.java.net/servlets/ProjectList">Projects</a>    &gt;
+     
+
+    <a href="https://glassfish.dev.java.net/">glassfish</a>
+     &gt;
+     
+
+   <strong>   <a href="https://open-esb.dev.java.net/">open-esb</a>
+   </strong>  </div>
+ 
+ 
+ 
+ 
+<table id="main" width="100%" border="0" cellpadding="4" cellspacing="0">
+<tbody><tr>
+<td id="navcol">
+ 
+ 
+ <dl class="navgroup">
+ <dt>Get Involved</dt>
+ <dd>
+  <ul>
+   
+   <li><a href="http://www.java.net/about-javanet">About java.net</a></li>
+   <li><a href="http://www.java.net/request-project">Create a Project</a></li>
+   <li><a href="http://www.java.net/publicize-your-project">Publicize your Project</a></li>
+   <li><a href="http://www.java.net/projectowner">Your Content</a></li>
+   <li><a href="http://www.java.net/submit-content">Submit Content</a></li>
+   <li><a href="https://java-net.dev.java.net/">java-net Project</a></li>
+   <li><a href="https://open-esb.dev.java.net/servlets/OpenCollabNet">Site Help</a></li>
+   <li><a href="mailto:spamreport@admin.dev.java.net">Report Inappropriate Content</a></li>
+   
+  </ul>
+ </dd>
+ </dl>
+
+
+
+  
+             
+ 
+  
+ 
+                                                           <dl id="projecttools" class="navgroup">
+   <dt>Project tools</dt>
+   <dd>
+    <ul>
+          <li>   <a href="https://open-esb.dev.java.net/servlets/ProjectHome">Project home</a></li>
+           
+       
+ 
+   </ul>
+</dd>
+ 
+ 
+                  
+ 
+   <dd><ul>
+    <li>   <a href="https://open-esb.dev.java.net/servlets/ProjectNewsList">Announcements</a></li>
+ 
+ 
+            
+ 
+        <li>   <a href="https://open-esb.dev.java.net/servlets/ProjectForumView">Discussion forums</a></li>
+  
+ 
+         
+ 
+   <li>   <a href="https://open-esb.dev.java.net/servlets/ProjectMailingListList">Mailing lists</a></li>
+      </ul></dd>
+       
+ 
+            
+ 
+   <dd><ul>
+    <li>   <a href="https://open-esb.dev.java.net/servlets/ProjectDocumentList">Documents &amp; files</a></li>
+ 
+ 
+         
+ 
+   <li>
+<a href="https://open-esb.dev.java.net/source/browse/open-esb/">CVS</a>
+
+
+</li>
+      </ul></dd>
+       
+ 
+               
+ 
+   <dd><ul>
+  <li>   <a href="https://open-esb.dev.java.net/servlets/ProjectIssues">Issue tracker</a></li>
+ 
+ 
+                               	</ul>
+       </dd>
+                <dd>
+      <!-- ================================== -->
+<!-- Begin code from project_tools.html -->
+<!-- ================================== -->
+
+<!-- Import style sheet; this should formally go into the <head> section, but it also works when done here 
+     (tested on IE6, IE7, FF2, FF3, Opera9.5, Safari3.1(Win), Safari3(Mac)
+-->
+<link rel="stylesheet" type="text/css" href="exercise2_files/oe.css">
+<link rel="icon" type="image/png" href="https://open-esb.dev.java.net/images/openesb16x16.png">" /&gt;
+
+
+<!-- ==================== Menu Structure ==================== -->
+<script type="text/javascript" src="exercise2_files/menu.js"></script>
+
+<!-- ==================== End menu ==================== -->
+
+
+<!-- ==================== Search area ==================== -->
+
+<!-- ==================== End search area ==================== -->
+
+
+<script>
+/**
+ *  Moves the menu to the top of the page
+ */
+function placemenu() {
+  var tomove = document.getElementById("z_menu_02");
+  var removed = tomove.parentNode.removeChild(tomove);
+  var target = document.getElementById("toptabs");
+  target.parentNode.insertBefore(removed, target);
+}
+
+
+/**
+ *  Modifies the banner image
+ *  Walks the tree (no tree walker defined in IE6) to find the java.net image
+ *  and replaces it with the OE image
+ */
+function modifyBannerImage(node) {
+  if (node.childNodes != null) {
+    for (var i = 0; i < node.childNodes.length; i++) {
+      var n = node.childNodes[i];
+      if (n.nodeName == "IMG") {
+        n.src = "https://open-esb.dev.java.net/images/ESBLogoTag-304x60C.jpg"
+        n.alt = "The Open Enterprise Service Bus: Open Standards + Open Source";
+        n.width = 304;
+        n.height = 60;
+        n.parentNode.href = "https://open-esb.dev.java.net";
+      } else {
+        modifyBannerImage(n);
+      }
+    }
+  }
+}
+
+
+/**
+ * Loads a script dynamically
+ */
+function dhtmlLoadScript(url) {
+   var e = document.createElement("script");
+   e.src = url;
+   e.type="text/javascript";
+   document.getElementsByTagName("head")[0].appendChild(e);
+}
+
+/**
+ *  Function to load when loading is complete; can be used to change
+ *  the windows's URL after Google is finished.
+ */
+var loadOnComplete;
+
+/**
+ * Tries to invoke Google analytics when the script is loaded
+ */
+function google() {
+  if (typeof urchinTracker == "undefined" || !urchinTracker) {
+    window.setTimeout(google, 200);
+  } else {
+    _uacct = "UA-993823-1";
+    urchinTracker();
+    if (loadOnComplete) {
+      window.setTimeout(loadOnComplete, 200);
+      
+    }
+  }
+}
+
+/**
+ *  Called on load of the page
+ */
+function oeload() {
+   // Google
+   dhtmlLoadScript("https://ssl.google-analytics.com/urchin.js");
+   window.setTimeout(google, 100);
+}
+
+/**
+ *  Adds a new function to be called on load of the page. Note that 
+ *  changing the URL of the page will interrupt the Google Analytics
+ *  loading. Set loadOnComplete instead.
+ */
+function addLoadEvent(func) {
+  var oldonload = window.onload;
+  if (typeof window.onload != 'function') {
+    window.onload = func;
+  } else {
+    window.onload = function() {
+      if (oldonload)  oldonload();
+      func();
+    }
+  }
+}
+
+/**
+ *  Moves the search area
+ */
+function moveSearch() {
+  var tomove = document.getElementById("oesearch");
+  var removed = tomove.parentNode.removeChild(tomove);
+  var domainlinks = document.getElementById("loginbox").parentNode;
+  domainlinks.parentNode.appendChild(removed);
+  domainlinks.parentNode.style.cssText = "vertical-align: bottom";
+}
+
+/**
+ * Reads a cookie
+ */
+function readCookie(name) {
+	var nameEQ = name + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0;i < ca.length;i++) {
+		var c = ca[i];
+		while (c.charAt(0)==' ') c = c.substring(1,c.length);
+		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+	}
+	return null;
+}
+
+/**
+ * Turns on navbar if the navbar cookie is set
+ */
+function checkNavBar() {
+  if (readCookie("navbar")) {
+    var navbar = document.getElementById("navcol");
+    if (navbar) {
+	navbar.style.display = 'block';
+     }
+   }
+}
+
+
+
+/**
+ *  Executed while the page is loading
+ */
+// =======================================================================
+addLoadEvent(oeload);
+placemenu();
+modifyBannerImage(document.getElementById("banner"));
+moveSearch();
+checkNavBar();
+// =======================================================================
+
+</script>
+
+
+
+<!-- Google Analytics -->
+<!-- MOVED TO oeload
+<script src="https://ssl.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-993823-1";
+urchinTracker();
+</script>
+-->
+
+<!-- the following code is required by statcounter for project Open ESB. REMOVE ONLY if this file is included in a project other than Open ESB -->
+<!-- Start of StatCounter Code -->
+<script type="text/javascript" language="javascript">
+var sc_project=2077605;
+var sc_invisible=1;
+var sc_partition=19;
+var sc_security="f8b7737d";
+sc_https=1; 
+</script>
+<!-- MOVED TO oeload
+<script type="text/javascript" language="javascript" src="https://secure.statcounter.com/counter/counter.js"></script>
+<noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="https://c2.statcounter.com/counter.php?sc_project=2077605&java=0&security=f8b7737d&invisible=1" alt="website stat" border="0"></a></noscript>
+-->
+<!-- End of StatCounter Code -->
+
+
+<!-- ================================== -->
+<!-- End code from project_tools.html   -->
+<!-- ================================== -->
+
+      </dd> 
+          
+     </dl>
+   
+
+
+
+
+<form action="https://open-esb.dev.java.net/servlets/Search" method="get">
+ <dl id="searchbox" class="navgroup">
+  
+      <dt>Search</dt>
+  <dd>
+   <div>
+       <select name="scope">
+           <option value="project" selected="selected">This project</option>
+               <option value="domain">All projects</option>
+    </select>
+      </div>
+   <div>
+    <input name="resultsPerPage" value="40" type="hidden"> 
+    <input name="query" size="10" maxlength="99" type="text"> 
+    <input name="Button" value="Go" type="submit">
+   </div>
+   <div>
+       <a href="https://open-esb.dev.java.net/servlets/Search?mode=advanced">Advanced search</a>   </div>
+  </dd>
+
+ </dl>
+</form>
+
+
+<dl id="helptext" class="navgroup">
+ <dt>How do I...</dt>
+ <dd>
+  <ul>
+     
+   <li> <a href="http://www.collab.net/rn/" onclick="return launch(this.href, 1)" title="Note: link may open in new window" class="helplink">
+ 
+ Get release notes for CollabNet 4.5.2?</a>
+</li>
+
+   <li><a href="https://open-esb.dev.java.net/nonav/servlets/HelpTOC" onclick="return launch(this.href, 1)" title="Note: link may open in new window" class="helplink">Get help?</a></li>
+  </ul>
+ </dd>
+</dl>
+
+ 
+ 
+<div class="strut">&nbsp;</div>
+</td>
+<td id="midcol">
+ 
+<div id="bodycol">
+ 
+ 
+ 
+        
+                 
+                 
+           
+    
+  
+
+ 
+ 
+
+
+
+
+<h1>Exercise 2: Storing data with the BPEL 2.0 process</h1>
+Expected duration: 30 minutes
+<h2>Introduction</h2>
+<p>In this
+exercise, the BPEL process from <a href="https://open-esb.dev.java.net/60mintutorial/exercise1.html">Exercise 1</a>
+is enriched to store the submitted poll data into a database. The Java
+DB database that is bundled with JDK 6 will be leveraged as the data
+tier.
+</p>
+<p> The goal of this exercise is to introduce <b>Binding Components</b>
+and learn how to use them. Specifically, this exercise uses the
+<b>Database Binding
+Component</b>. Steps to build this exercise are: </p>
+<ul>
+  <li><a href="#Create_DB_BC">Create and configure a Database Binding
+Component (BC)</a></li>
+  <li><a href="#Add_to_BPEL">Use the Database BC to insert data from
+the BPEL process</a></li>
+  <li><a href="#Build_Deploy">Build, Deploy and Test the updated
+composite application</a></li>
+</ul>
+<h2>Background information</h2>
+<ul>
+  <li>In JBI, a <b>Binding Component</b> allows the ESB to communicate
+with external systems i.e. it is an 'adapter' or 'transport' to
+Enterprise Information Systems. Essentially,
+Binding Components sit on the boundary of the ESB. For inbound data,
+their primary function is to receive messages in proprietary formats
+and transform them into a format that is understood and can be consumed
+by the internals of GlassFish ESB (XML), and ultimately other engines
+or components connected to the bus. This
+process or transformation is termed as <b>Normalization</b>.
+For outbound data, binding components <b>de-normalize</b>
+messages into the expected propriety formats, as understood by the
+external systems.</li>
+  <li>The <b>Database Binding Component</b> can be used
+to communicate with any JDBC database and will be used to communicate
+with the Java DB database in this exercise.</li>
+  <li> The Database BC receives normalized data in XML format from
+BPEL. It
+uses the prepared statement, as configured by the user, to write into
+Java DB Database.</li>
+  <li>Database BC can be used for table operations (as in this
+exercise),
+prepared statements and stored procedures. Only the
+simple table insert use case will be covered in this exercise.<br>
+  </li>
+</ul>
+<h2><a name="Create_DB_BC"></a>Create and configure a Database Binding
+Component</h2>
+<ol>
+  <li><b>Verify Java DB connectivity from GlassFish runtime</b></li>
+  <ul>
+    <li>The GlassFish instance should now have a JDBC connection
+pool and JDBC resource that points to a new Java DB instance. If this
+step was not completed, refer back to <a href="https://open-esb.dev.java.net/60mintutorial/exercise0.html#JDBCRuntimeSetup">Prerequisites</a> before
+continuing with this exercise.</li>
+    <li>From the <b>Services</b>tab,
+start GlassFish, then right-click and select <b>View Admin Console</b>
+to open the GlassFish Admin Console, as shown below</li>
+    <br>
+    <img style="width: 282px; height: 333px;" alt="" src="exercise2_files/viewadminconsole.JPG"><br>
+    <br>
+    <li>After logging in from the browser as admin/adminadmin, on the
+left
+pane, browse to <b>Resources &gt; JDBC &gt; Connection Pools</b></li>
+    <li>Open the Java DB connection pool that was configured in <a href="https://open-esb.dev.java.net/60mintutorial/exercise0.html">Prerequisites</a> called <b>JavaDBPool</b>.<br>
+    </li>
+    <li>Click the <b>Ping</b> button to verify that the Java DB
+connection is still alive.</li>
+    <br>
+    <img style="width: 523px; height: 261px;" alt="" src="exercise2_files/mysqlconnectionpoolping.png"> <br>
+    <br>
+    <li>On the left pane, expand <b>Resources &gt; JDBC &gt; JDBC
+Resources</b> and open the pre-configured JDBC Resource named <b>jdbc/javadb</b>.
+Ensure that it is using the <b>JavaDBPool</b> as shown below. Also,
+note the JNDI Name used by this resource (<b>jdbc/javadb</b>) since
+that will be used in the next step. </li>
+    <br>
+    <img style="width: 466px; height: 244px;" alt="" src="exercise2_files/mysqljdbcresourceedit.png"><br>
+    <p style="color: rgb(0, 102, 0); font-style: italic;">Note: This
+mimics
+a
+real-world deployment where the runtime
+configuration is usually setup by 'operations' personnel or a systems
+administrator.
+For instance, a production database server's connection details and
+password may not be made available to the GlassFish ESB developer.
+However, a JNDI name
+referring to that resource will be provided to the developer for use in
+their application.</p>
+  </ul>
+  <li><b>Verify Java DB Connection from NetBeans IDE</b></li>
+  <ul>
+    <li>If a Java DB connection has not yet been created from Netbeans,
+run the steps as outlined in <a href="https://open-esb.dev.java.net/60mintutorial/exercise0.html#Database_Setup">Prerequisites</a></li>
+    <li>Right-click on the connection and select <span style="font-weight: bold;">connect</span> (you have to
+reconnect after each NB restart). The password is same as user name (<tt><b>javaone</b></tt>)<br>
+    </li>
+    <br>
+    <img style="width: 546px; height: 306px;" alt="" src="exercise2_files/mysqlconnectNB.png"><br>
+    <br>
+    <li>It is important to be connected to the Java DB database from
+NetBeans, otherwise the
+wizard in the next step will not be able to get the table structure.
+Once connected, expand the <span style="font-style: italic;">Tables </span>section
+and verify that
+the <b>JAVAONEPOLLS</b> table is present. If it is not possible to
+connect or see the <b>JAVAONEPOLLS</b> table after connecting to the
+database, it is likely that the connection properties may be incorrect
+or incomplete. Ensure that the connection looks exactly like this: <span style="font-weight: bold; color: rgb(0, 0, 0);">jdbc:derby://localhost:1527/javaonedb
+[javaone on JAVAONE]</span></li>
+    <li>If not, right click on the connection and select <span style="font-weight: bold;">Properties</span>.
+Make
+sure your properties are the same as shown below and reconnect:<br>
+    </li>
+    <br>
+    <img style="width: 383px; height: 309px;" alt="" src="exercise2_files/NBdbconnectionproperties.png"><br>
+    <br>
+  </ul>
+  <li><b>Create a WSDL for the Database Binding Component</b></li>
+  <ul>
+    <li> Navigate to the BPEL project created in Exercise 1.</li>
+    <br>
+    <img style="width: 505px; height: 201px;" alt="" src="exercise2_files/createjdbcBC.png"><br>
+    <br>
+    <li>Right click and choose the option to create a new <span style="font-weight: bold;">WSDL from
+Database</span>, from the <span style="font-weight: bold;">SOA</span>
+category seen below<br>
+    </li>
+    <br>
+    <img style="width: 546px; height: 371px;" alt="" src="exercise2_files/createjdbcBC1.jpg" align="middle"><br>
+    <p style="color: rgb(0, 102, 0); font-style: italic;">Note: This
+launches the NetBeans wizard that can generate a WSDL interface/wrapper
+for the Database table. As you can tell, this means the
+Database table will be treated as another service, which can be
+consumed by other GlassFish
+ESB
+components through it's WSDL.<br>
+    </p>
+    <li>Click <span style="font-weight: bold;">Next</span> to proceed
+and give the wsdl a name (<span style="color: rgb(0, 0, 0); font-weight: bold;">JavaDBPollsTable</span>
+in this example)<br>
+    </li>
+    <li>From the URL drop-down list, select the database connection
+that was
+created for Java DB.
+Then select <span style="font-weight: bold;">Tables</span> since the
+scenario only calls for a simple table insert. Click <span style="font-weight: bold;">Next</span>.<br>
+      <br>
+      <img style="width: 516px; height: 337px;" alt="" src="exercise2_files/jdbcwizard.png"><br>
+      <br>
+    </li>
+    <li>This will bring up
+the list of tables in Java DB.&nbsp;<span style="font-style: italic;"></span></li>
+    <p style="color: rgb(0, 102, 0); font-style: italic;">Note: If
+you don't see your Java DB connection in the Data Source drop-down
+list,
+it means you either haven't created the connection or you forgot to
+click <span style="font-weight: bold;">connect</span> from NetBeans
+Services.<br>
+    </p>
+    <li>Select the table named <span style="font-weight: bold; color: rgb(0, 0, 0);">JAVAONEPOLLS </span>(it
+should be the
+only one on the available list), so that it shows up on the right hand <span style="font-weight: bold;">Selected Tables</span> pane.<br>
+    </li>
+    <br>
+    <img style="width: 416px; height: 173px;" alt="" src="exercise2_files/jdbcChoosetable.png"><br>
+    <br>
+    <li>Click <span style="font-weight: bold;">Next</span>, then
+accept the defaults in the next screen and
+click <span style="font-weight: bold;">Next</span> again<br>
+    </li>
+    <br>
+    <img style="width: 513px; height: 324px;" alt="" src="exercise2_files/oratableproperties.JPG"><br>
+    <br>
+    <li>In the following screen, enter the JNDI Name that was used to
+setup
+the
+GlassFish JDBC Resource (<span style="color: rgb(0, 0, 0); font-weight: bold;">jdbc/javadb</span>).
+This is how the design time DB WSDL is linked to a concrete runtime
+JDBC resource.</li>
+    <br>
+    <img style="width: 418px; height: 329px;" alt="" src="exercise2_files/jdbcprovidejndiName.png"><br>
+    <p style="color: rgb(0, 102, 0); font-style: italic;">Note: This is
+how the generated application code is portable across environments
+without
+having to change the binary. The 'test', 'development', 'production',
+etc. GlassFish app servers can all point to different instances of Java
+DB, but they will all need to use the same JNDI Name to refer to
+this JDBC resource. This ensures the same service assembly can run on
+all environments without design time changes. This decoupling of
+runtime configuration and
+business logic results in portability, along with clear separation of
+roles (developer/operation). This also allows compliance to regulations
+like Sarbanes-Oxley, making it an IT 'best practice'.<br>
+    </p>
+    <li>Click <span style="font-weight: bold;">Finish.</span></li>
+    <li>The consequence of the last step is the creation of the DB
+Binding Component artifacts
+shown in the figure below - a WSDL
+document exposing common database operations and an XML schema file
+representing the JavaOnePolls table.<br>
+    </li>
+    <br>
+    <img style="width: 192px; height: 128px;" alt="" src="exercise2_files/createjdbcbc7_1.png"><br>
+    <br>
+  </ul>
+  <li><b>Customize the SQL used in the Database BC WSDL</b></li>
+  <ul>
+    <li>Double click the <span style="font-weight: bold;">JavaDBPollsTable.wsdl</span>
+file to open it.<br>
+    </li>
+    <li>Looking closely at the WSDL editor, you will notice this is a
+special WSDL document that comes pre-filled with Database specific
+operations (find, delete, insert, update and poll). Also, it allows the
+user to input SQL statements in the Bindings section.<br>
+    </li>
+    <li>Since the scenario only requires DB BC to <span style="font-weight: bold;">write</span> poll data to Java
+DB, only the <span style="font-weight: bold;">insert </span>operation
+needs to be configured.
+Under the <span style="font-weight: bold;">Bindings</span> section of
+the WSDL, select the <span style="font-weight: bold;">insert </span>operation
+and open
+the <span style="font-weight: bold;">jdbc:input</span> object as shown
+below. This provides the option to modify the
+SQL associated with the insert.</li>
+    <br>
+    <img style="width: 571px; height: 480px;" alt="" src="exercise2_files/createjdbcbc7_3.png"><br>
+    <br>
+    <li>Click the ellipsis next to the <span style="font-weight: bold;">sql
+      </span>property to open the SQL window. In this window, modify
+the generated SQL as shown below
+(remove
+column <span style="font-weight: bold;">REC_ID</span> and the
+corresponding <span style="font-weight: bold;">?</span> from the
+values - REC_ID is an auto incremented key populated by Java DB itself
+and cannot be specified as input)</li>
+    <pre><img style="width: 442px; height: 290px;" alt="" src="exercise2_files/createjdbcbc7_4.png"></pre>
+Or you may copy-paste the sql from below:
+    <div class="code">
+    <pre><span style="font-weight: bold;">insert into JAVAONEPOLLS (JAVAONE_WEATHER_RATING,<br>				USER_SOA_EXP,<br>				JAVAONE_PREF_VENUE,<br>				USER_CONTINENT,<br>				USER_INDUSTRY,USERNAME,<br>				USER_TECH,<br>				JAVAONE_VENUE_RATING,<br>				JAVAONE_TECH_INTEREST,<br>				JAVAONE_TECH_RATING) <br>values (?,?,?,?,?,?,?,?,?,?)</span></pre>
+    </div>
+    <p>Click <span style="font-weight: bold;">OK</span> to close the
+window.</p>
+    <li>&nbsp;Now, select the <span style="color: rgb(51, 102, 255);"><span style="font-weight: bold; color: rgb(0, 0, 0);">paramOrder</span> </span>for
+the Insert operation and remove <span style="color: rgb(0, 0, 0); font-weight: bold;">REC_ID</span> from the
+params so it
+is in sync with the SQL<br>
+    </li>
+    <br>
+    <img style="width: 470px; height: 434px;" alt="" src="exercise2_files/createjdbcbc7_5.jpg"><br>
+    <p style="color: rgb(0, 102, 0); font-style: italic;">Note: Since
+REC_ID is auto generated by the database, it should not be on
+the list of programmatically populated parameters in the paramOrder
+list.<br>
+    </p>
+    <li>Validate the WSDL and save.</li>
+  </ul>
+</ol>
+<h2><a name="Add_to_BPEL"></a>Add the Database BC insert operation to
+the
+BPEL process</h2>
+<p> Now that the DB BC's WSDL is available, it can be added to the BPEL
+process
+created in Exercise 1.<br>
+The BPEL process orchestrates the Database Insert by invoking the DB
+BC and passing in the business data. <br>
+</p>
+<ol>
+  <li><b>Import the DB-BC WSDL into the BPEL process</b></li>
+  <ul>
+    <li>Drag and drop the WSDL corresponding to the DB BC from the
+project tree to the <b>Partner
+Link</b> pane in the BPEL (the one on the right hand side of the BPEL
+canvas). <br>
+    </li>
+    <li>Rename
+the default partner link name to <span style="color: rgb(0, 0, 0); font-weight: bold;">PartnerLinkJavaDB</span><br>
+    </li>
+    <br>
+    <img style="width: 534px; height: 331px;" alt="" src="exercise2_files/bpelinsertjdbcwsdl.png" align="middle"> <br>
+    <br>
+  </ul>
+  <li><b>Invoke the insert operation on DB BC</b></li>
+  <ul>
+    <p> Time to introduce another BPEL 2.0 construct: <span style="font-weight: bold; color: rgb(0, 0, 0);">Invoke</span>.
+"Invoke" is the
+activity used in BPEL to interact with other service providers. This
+allows the BPEL process to exchange information<br>
+and orchestrate other services using either <span style="font-style: italic;">Request-Response</span> or <span style="font-style: italic;">Asynchronous</span> Message
+Exchange Patterns. </p>
+    <li>Drag and drop the <span style="font-weight: bold; color: rgb(0, 0, 0);">Invoke</span>
+activity as shown in the figure below, between the <span style="font-weight: bold;">getPolls</span> receive
+activity and <span style="font-weight: bold;">mapResponse</span>
+assign activity. <br>
+    </li>
+    <li>Edit the <span style="font-weight: bold;">Invoke </span>activity
+- rename it to <span style="color: rgb(0, 0, 0); font-weight: bold;">storeData</span>,
+select the
+PartnerLink created for the Java DB wsdl and create the default
+input
+and output variables to use with this wsdl operation invoke.<br>
+    </li>
+    <br>
+    <img style="width: 437px; height: 521px;" alt="" src="exercise2_files/bpelinsertjdbcinvoke.png" align="middle"> <br>
+    <br>
+    <li>The resulting BPEL process should look like the one illustrated
+below.<br>
+    </li>
+    <br>
+&nbsp;<img style="width: 408px; height: 426px;" alt="" src="exercise2_files/exercise2bpel.png" align="middle"><br style="font-weight: bold;">
+  </ul>
+  <li>
+    <p style="font-weight: bold;">Map the
+poll data input to Java DB table</p>
+  </li>
+  <ul>
+    <li>Before invoking the storeData operation on Java DB, the data to
+store has to be specified.<br>
+    </li>
+    <li>Drag a new <span style="font-weight: bold;">Assign</span>
+activity and place it just before the <span style="color: rgb(0, 0, 0); font-weight: bold;">storeData</span>
+invoke.<br>
+    </li>
+    <br>
+    <img style="width: 439px; height: 345px;" alt="" src="exercise2_files/bpelassignjdbc.png"><br>
+    <br>
+    <li>Rename the Assign to <span style="color: rgb(0, 0, 0); font-weight: bold;">mapDataToDB</span>.
+Double-click the assign activity or click on the <span style="font-weight: bold;">Mapper</span> view to
+specify mappings for this assign.<br>
+    </li>
+    <li>Map each node on the XML input (variable <span style="color: rgb(0, 0, 0); font-weight: bold;">JavaOnePollOperationIn</span>)
+on
+the
+left hand side to the corresponding field of the Database input on the
+right hand side (variable <span style="color: rgb(0, 0, 0); font-weight: bold;">InsertIn</span>).
+The names on the right hand side and left hand side are very similar,
+so the mapping should be obvious. If not, you may refer to the figure
+and mapping table below.</li>
+    <p style="color: rgb(0, 102, 0); font-style: italic;">Note: You
+have to also expand the <span style="font-weight: bold;">part</span>
+under each variable to see nodes shown in the diagram<br>
+    </p>
+    <img style="width: 635px; height: 343px;" src="exercise2_files/jdbcmap.png" alt=""><br>
+    <br>
+    <table style="text-align: left; width: 614px; height: 332px;" border="1" cellpadding="2" cellspacing="2">
+      <tbody>
+        <tr>
+          <td style="vertical-align: top;"><span style="font-weight: bold;">Source
+Node</span><br>
+          </td>
+          <td style="vertical-align: top;"><span style="font-weight: bold;">Target
+Node</span><br>
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top;">PersonalInfo -&gt; Name<br>
+          </td>
+          <td style="vertical-align: top;">USERNAME<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top;">PersonalInfo -&gt;
+Continent<br>
+          </td>
+          <td style="vertical-align: top;">USER_CONTINENT<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top;">PersonalInfo -&gt;
+Industry<br>
+          </td>
+          <td style="vertical-align: top;">USER_INDUSTRY<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top;">PersonalInfo -&gt;
+TechnicalBackground<br>
+          </td>
+          <td style="vertical-align: top;">USER_TECH<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top;">PersonalInfo -&gt;
+SOAExpertiseLevel<br>
+          </td>
+          <td style="vertical-align: top;">USER_SOA_EXP<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top;">JavaOneOpinionPoll -&gt;
+JavaOneTechnicalInterest<br>
+          </td>
+          <td style="vertical-align: top;">JAVAONE_TECH_INTEREST<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top;">JavaOneOpinionPoll -&gt;
+TechnicalContentRating<br>
+          </td>
+          <td style="vertical-align: top;">JAVAONE_TECH_RATING<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top;">JavaOneOpinionPoll -&gt;
+VenueRating<br>
+          </td>
+          <td style="vertical-align: top;">JAVAONE_VENUE_RATING<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top;">JavaOneOpinionPoll -&gt;
+WeatherRating<br>
+          </td>
+          <td style="vertical-align: top;">JAVAONE_WEATHER_RATING<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top;">JavaOneOpinionPoll -&gt;
+PreferredVenue<br>
+          </td>
+          <td style="vertical-align: top;">JAVAONE_PREF_VENUE<br>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="color: rgb(0, 102, 0); font-style: italic;"> Note: The
+mapDataToDB may show some warnings around type
+mismatch
+(types of "From" and "To" activities are
+different:
+"int" and "string"),
+but these can be ignored safely as this combination of types gets
+converted automatically at runtime. </p>
+  </ul>
+  <li>
+    <p><span style="font-weight: bold;">Map
+the response from Java DB to the Web Service response</span><br>
+    </p>
+  </li>
+  <ul>
+    <li>Finally, the result of the Java DB insert needs to be
+returned
+as the response to the web service. Exercise 1 originally returned a
+hard coded value of 'success'.<br>
+    </li>
+    <p><img style="width: 234px; height: 474px;" src="exercise2_files/responseassign.png" alt=""></p>
+    <li>Open the <span style="font-weight: bold; color: rgb(0, 0, 0);">mapResponse
+      </span>activity in the mapper and delete the
+string literal assignment 'success' that was originally there.</li>
+    <li>Replace it with the output of the Java DB insert
+(variable <span style="color: rgb(0, 0, 0); font-weight: bold;">InsertOut</span>)
+as
+seen below.<br>
+    </li>
+    <p> <img style="width: 528px; height: 219px;" src="exercise2_files/responseassign2.png" alt=""><br>
+    </p>
+  </ul>
+</ol>
+<h2><a name="Build_Deploy"></a>Build, Deploy and Test</h2>
+<ol>
+  <li><span style="font-weight: bold;">Refresh the Composite
+Application
+to use the updated BPEL and DB BC</span></li>
+  <p> </p>
+  <ul>
+    <li>The BPEL is completed so you may save it. Ignore the
+'integer
+to
+string' warnings during build or validation.</li>
+    <li>To refresh the Composite Application with the latest DB
+partners, right-click on the Composite Application project and select <span style="font-weight: bold;">Clean and Build</span>. This will build the
+BPEL project and update CASA with the
+latest binaries.</li>
+    <li>Now right click the Service Assembly and select <span style="font-weight: bold;">Edit</span> as
+shown
+below and make sure the connections in CASA are as shown below<br>
+    </li>
+    <p><img style="width: 542px; height: 267px;" src="exercise2_files/casa.png" alt=""></p>
+    <li>The application is now ready to be deployed and
+tested.</li>
+  </ul>
+  <li>
+    <p><span style="font-weight: bold;">Deploy the Service
+Assembly<br>
+    </span></p>
+  </li>
+  <ul>
+    <li>
+      <p>Build and Deploy the application similar to <a href="https://open-esb.dev.java.net/60mintutorial/exercise1.html">Exercise 1</a></p>
+      <img style="width: 219px; height: 215px;" alt="" src="exercise2_files/casa23.png"><br>
+    </li>
+  </ul>
+  <li>
+    <p><span style="font-weight: bold;">Test the new
+application</span><br>
+    </p>
+  </li>
+  <ul>
+    <li>As with the previous exercise, go to your front end web
+page
+and
+enter your name and other
+values, then submit the poll.<br>
+    </li>
+    <li>If there was an error during the insert, it will be printed
+next to
+the <span style="font-weight: bold;">Submit</span> button. If there
+were no errors, go to the database to
+confirm this record was inserted successfully.<br>
+    </li>
+    <br>
+    <img style="width: 644px; height: 542px;" alt="" src="exercise2_files/pollinterface.png"><br>
+    <br>
+    <li>You can verify that your record has been inserted using the
+NetBeans connection to the Java DB database as seen below. <br>
+    </li>
+    <ul>
+      <li>Make sure
+you
+are connected (if not, right click on connection and select <span style="font-weight: bold;">connect</span>). <br>
+      </li>
+      <li>Expand the tables and browse to the <span style="font-weight: bold;">JAVAONEPOLLS </span>table. <br>
+      </li>
+      <li>Right-click and
+select <span style="font-weight: bold;">View Data...</span> This will
+run a SQL query that returns all the
+records in order of insertion. <br>
+      </li>
+      <li>Make sure your <span style="font-weight: bold;">username</span>
+and other
+uniquely identifiable poll entry values show up at the bottom to
+confirm your insert was successful.<br>
+      </li>
+    </ul>
+    <br>
+    <img style="width: 560px; height: 327px;" alt="" src="exercise2_files/exercise2verifyrecordinsert.png"><br>
+    <br>
+  </ul>
+</ol>
+<h2>Summary</h2>
+<p>In this exercise, you were introduced to the Database BC and used it
+with a
+BPEL process to orchestrate a database operation to persist data into a
+Java DB
+Database. You have successfully completed this tutorial. Click on the <span style="font-weight: bold;">Forward to summary</span> link below to
+learn
+more.<br>
+</p>
+<p><a href="https://open-esb.dev.java.net/60mintutorial/exercise1.html">Back to Exercise 1</a> &nbsp; <a href="https://open-esb.dev.java.net/60mintutorial/solution2.html">View Exercise 2 Solution</a> &nbsp; <a href="https://open-esb.dev.java.net/60mintutorial/summary.html">Forward to Summary</a></p>
+
+</div>
+</td>
+</tr>
+</tbody></table>
+ 
+ 
+ <div id="footer">
+   <div align="center"><p><a href="http://today.java.net/pub/q/java_net_rss"><img src="exercise2_files/xml.gif" alt="XML" style="vertical-align: middle;" width="36" height="14"></a>&nbsp;<b>java.net RSS</b></p>
+</div>   
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+   	<tbody><tr>
+   		<td><a href="http://www.oracle.com/" onclick="return launch(this.href, 1)"><img src="exercise2_files/logo_oracle_footer.gif" id="logooracle" alt="Oracle"></a> </td>
+
+ 		<td><div align="center"><a href="http://java-net.dev.java.net/feedback.html" onclick="return launch(this.href, 1)" title="Note: link may open in new window" class="helplink">Feedback</a>   |
+ 		<a href="http://www.java.net/javanet-faq">FAQ</a> |
+<!-- 		<a href="http://java.net/presscenter/">Press</a> |   -->
+ 		 <a href="http://www.collab.net/developers/tools/" onclick="return launch(this.href, 1)" title="Note: link may open in new window">Developer tools</a></div>
+<div align="center">
+ 
+ 	<a href="http://www.java.net/javanet-web-site-terms-use">Terms of Use</a> |
+        <a href="http://www.sun.com/privacy/">Privacy</a> | 
+	<a href="http://www.sun.com/suntrademarks/">Trademarks</a> |  
+ 	<a href="https://java-net.dev.java.net/sitemap.html">Site Map</a> 
+</div>
+<div align="center">	<p>Copyright © 2010, Oracle and/or its affiliates.
+All rights reserved. Oracle and Java are registered trademarks of
+Oracle and/or its affiliates. Other names may be trademarks of their
+respective owners. </p><p>© 1995 - 2007 CollabNet. CollabNet is a registered trademark of CollabNet, Inc.</p>    </div></td>
+	   
+<td><a href="http://www.collab.net/special/clickpbc0502.html" id="poweredby"><span class="alt">Powered by CollabNet</span></a><br>
+<a href="http://www.cognisync.com/" onclick="return launch(this.href, 1)"><img src="exercise2_files/cognisync.jpg" id="cognisync" alt="Cognisync" width="74" height="19"></a>
+</td>
+</tr></tbody></table>
+		
+		<!-- Begin SiteCatalyst code  -->
+		<script language="JavaScript" src="exercise2_files/s_code_remote.js"></script><script type="text/javascript" src="exercise2_files/metrics_group1.js"></script>
+<!-- End SiteCatalyst code --> 
+ 
+</div></body></html>

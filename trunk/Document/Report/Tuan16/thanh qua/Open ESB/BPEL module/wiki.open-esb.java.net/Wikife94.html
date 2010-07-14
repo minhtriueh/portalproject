@@ -1,0 +1,1166 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+
+
+<!-- Mirrored from wiki.open-esb.java.net/Wiki.jsp?page=UsingDynamicPartnerLinksAndDynamicAddressing by HTTrack Website Copier/3.x [XR&CO'2010], Thu, 08 Jul 2010 02:16:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head>
+
+  <title>Using Dynamic Partner Links And Dynamic Addressing - OpenESB: the Open Source ESB for SOA & Integration</title>
+  
+
+
+
+
+
+<link rel="stylesheet" type="text/css" media="screen, projection" 
+     href="templates/brushed/jspwiki.css" />
+
+<!-- browser specific cssinclude not required in brushed template
+<script type="text/javascript"
+         src="/templates/brushed/cssinclude.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+  Wiki.loadBrowserSpecificCSS("brushed");
+//]]>
+</script>
+-->
+
+
+
+
+<link rel="stylesheet" type="text/css" 
+     href="templates/brushed/skins/Smart/skin.css" />
+<!-- INCLUDERESOURCES (stylesheet) -->
+
+
+
+<!--[if IE]>
+<style type="text/css" media="screen">
+img, a, div { behavior: url("templates/brushed/scripts/iepngfix.htc"); }
+</style>
+<![endif]-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="search" 
+     href="Wiki702d.html?page=FindPage"
+    title="Search Open ESB Wiki" />
+<link rel="help"   
+     href="Wikia3b7.html?page=TextFormattingRules" 
+    title="Help" />
+<link rel="start"  
+     href="Wikib2ab.html?page=Main"                
+    title="Front page" />
+<!--<link rel="stylesheet" type="text/css" media="print"
+     href="/templates/brushed/jspwiki_print.css" />
+<link rel="alternate stylesheet" type="text/css"
+     href="/templates/brushed/jspwiki_print.css" 
+    title="Print friendly" />-->
+<link rel="alternate stylesheet" type="text/css" 
+     href="templates/brushed/jspwiki.css" 
+    title="Standard" />
+<link rel="icon" type="image/png" href="images/openesb16x16.png" />
+
+<link rel="template" href="http://wiki.open-esb.java.net/templates/brushed" id="template-dir"/>
+<link rel="alternate" type="application/rss+xml" title="RSS wiki feed for the entire site." href="rss.rdf" />
+<link rel="alternate" type="application/rss+xml" title="RSS wiki feed for page Open ESB Wiki: UsingDynamicPartnerLinksAndDynamicAddressing." href="http://wiki.open-esb.java.net/rss.jsp?page=UsingDynamicPartnerLinksAndDynamicAddressing&amp;mode=wiki" />
+
+
+
+<script type="text/javascript"
+         src="templates/brushed/scripts/prototype.js" ></script>
+<script type="text/javascript" 
+         src="templates/brushed/scripts/brushed.js" ></script>
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+  Wiki.setBaseURL ( "index.html" );
+  Wiki.setPageName( "UsingDynamicPartnerLinksAndDynamicAddressing" ); /* pagename without blanks */
+  Wiki.setUserName( "113.170.138.21" );
+
+  Wiki.setDELIM              ( "¤" );
+  Wiki.setPrefDateFormat     ( "dd-MMM-yy HH:mm a, Z" );
+  Wiki.setPrefSkinName       ( "Smart" );
+  Wiki.setPrefTimeZone       ( "" );
+  Wiki.setPrefEditAreaHeight ( "24" );
+  Wiki.setPrefShowQuickLinks ( "no" );
+  Wiki.setPrefSowCalendar    ( "no" );
+//]]>
+</script>
+<script type="text/javascript" 
+         src="templates/brushed/skins/Smart/skin.js"></script>
+
+<!-- INCLUDERESOURCES (script) -->
+
+
+  
+</head>
+
+<body class="view" id="gradient">
+<!--
+<p id="underline" class="barMargin"></p>
+-->
+<div id="wikibody" >
+  
+
+
+
+
+<div id="header">
+<!--
+  <div class="applicationlogo"> 
+    <a href="https://open-esb.dev.java.net/public/downloads.html" title="OpenESB Downloads"></a>
+  </div>
+-->  
+
+<table width="100%" id="headertable"><tr>
+  <td><a href="https://open-esb.dev.java.net/" style="border: none;"><img style="border: none;" height="60" width="304" alt="Open ESB: the Open Enterprise Service Bus... Open Standards + Open Source" src="images/ESBLogoTag-304x60C.jpg"/></a></td>
+
+
+  <td id="rhstop">
+  
+
+<div id="rhsuser" class="rhsusername">
+  Not logged in | 
+    <a title="Hi, Anonymous Guest"  href="Wiki48c3.html?page=Login">Login</a>
+  
+  
+
+  
+
+  
+</div>  
+  
+  
+<div id="oesearch" style="vertical-align: bottom">
+  <br/>
+  <br/>
+	<form action="https://open-esb.dev.java.net/SearchResults.html" id="cse-search-box"> 
+	  <div>
+	    <input type="hidden" name="cx" value="013607241216432041017:tcd_nlc0tem" />
+	    <input type="hidden" name="cof" value="FORID:11" />
+	    <input type="hidden" name="ie" value="UTF-8" />
+	    <input type="text" name="q" size="20" />
+	    <input type="submit" name="sa" value="Search" />
+	  </div>
+	</form>
+</div>
+  
+  
+  </td>
+</tr></table>
+
+<!-- ==================== Menu Structure ==================== -->
+<script type="text/javascript" src="static/menu.js" ></script>
+<div id="z_menu_02"><table width="100%"><tr><td>
+	<div id="z_menu_01">
+		<script>writeOEMenu();</script>
+	</div>
+</td></tr></table></div>
+<!-- ==================== End menu ==================== -->
+
+
+
+
+
+
+
+
+
+
+  <div class="companylogo">
+  </div>
+  
+  
+<!--
+<ul class="iconlist">
+<li class="documentation"><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=Documentation"><img src="/openesbwiki/templates/brushed/skins/Smart/images/documentation.png" width="81" height="65"/></a></li>
+<li class="link"><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsefulLinks"><img src="/openesbwiki/templates/brushed/skins/Smart/images/links.png" width="64" height="65"/></a></li>
+<li class="participate"><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=GetInvolved"><img src="/openesbwiki/templates/brushed/skins/Smart/images/participate.png" width="61" height="68"/></a></li>
+<li class="downloads"><a href="https://open-esb.dev.java.net/Downloads.html"><img src="/openesbwiki/templates/brushed/skins/Smart/images/downloads.png" width="61" height="65"/></a></li>
+</ul>
+<div style="clear: left;"></div>
+ --> 
+
+  <table width="100%">
+  <tr>
+  <td><div class="pagename2">Using Dynamic Partner Links And Dynamic Addressing</div></td>
+  </tr>
+  </table>
+  
+
+
+  
+  <div class="searchbox">
+
+
+<form action="http://wiki.open-esb.java.net/Search.jsp"
+    onsubmit="SearchBox.submit( this.query.value )"
+ onmouseover="Element.show('searchboxMenu');"
+  onmouseout= "Element.hide('searchboxMenu');"
+        name="searchForm" id="searchForm" 
+        accept-charset="UTF-8">
+  <div>
+  
+  <input onblur="if( this.value == '' ) { this.value = 'Search'}; " 
+        onfocus="if( this.value == 'Search' ) { this.value = ''}; "
+           type="text" value="Wiki search" name="query" id="query" size="24" 
+      accesskey="f"></input>
+  </div>  
+  <div id="searchboxMenu" style='display:none;'>
+    <div>
+      <a href="javascript://nop/" 
+         onclick="SearchBox.navigation( 'Wiki195c.html?page=__PAGEHERE__','UsingDynamicPartnerLinksAndDynamicAddressing' );return false;"
+         title="View the selected page">view</a> 
+      | 
+      <a href="javascript://nop/" 
+         onclick="SearchBox.navigation( 'http://wiki.open-esb.java.net/Edit.jsp?page=__PAGEHERE__','UsingDynamicPartnerLinksAndDynamicAddressing' );return false;"
+         title="Edit the selected page">edit</a> 
+      | 
+      <a href="javascript://nop/" 
+         onclick="SearchBox.clone( 'http://wiki.open-esb.java.net/Edit.jsp?page=__PAGEHERE__','UsingDynamicPartnerLinksAndDynamicAddressing' );return false;"
+         title="Clone this page">clone</a> 
+      |
+      <a href="javascript://nop/" 
+         onclick="SearchBox.navigation( 'Search136d.html?query=__PAGEHERE__','UsingDynamicPartnerLinksAndDynamicAddressing' );return false;"
+         title="Advanced Search">find</a> 
+      [ f ]
+    </div>
+    <div id="searchResult" > </div>
+    <div id="recentSearches" > </div>
+  </div>
+
+</form>
+<script type="text/javascript">
+//<![CDATA[    
+    function updateSearchResult( )
+    {  
+      if( $F('query') == 'Search' ) return;
+      new Ajax.Updater(
+        'searchResult', 
+        'templates/brushed/FindAjax.html',
+        { 
+          asynchronous: true,
+          parameters: Form.serialize( 'searchForm' ) + "&compact=true"
+        } ); 
+    } ;
+    new Form.Element.Observer( "query", 1, updateSearchResult ); 
+//]]>
+</script>
+    
+   </div>
+
+  <div class="breadcrumbs">Your trail: <a class="wikipage" href="Wikiad48.html?page=UsingNormalizedMessageProperties">UsingNormalizedMessageProperties</a> &gt; <a class="wikipage" href="Wikie39c.html?page=UsingHandlers">UsingHandlers</a> &gt; <a class="wikipage" href="Wikia3b6.html?page=UsingCorrelation">UsingCorrelation</a> &gt; <a class="wikipage" href="Wiki1f81.html?page=ValidatingTheBPELProcess">ValidatingTheBPELProcess</a> &gt; <a class="wikipage" href="Wiki5233.html?page=BPELProcessLoggingAndAlerting">BPELProcessLoggingAndAlerting</a> &gt; <a class="wikipage" href="Wiki2f9d.html?page=ConfiguringTheBPELServiceEngineRuntimeProperties">ConfiguringTheBPELServiceEngineRuntimeProperties</a> &gt; <a class="wikipage" href="Wikicae3.html?page=BPELServiceEngineDeploymentArtifacts">BPELServiceEngineDeploymentArtifacts</a> &gt; <a class="wikipage" href="Wiki1302.html?page=TestingAndDebuggingBPELProcesses">TestingAndDebuggingBPELProcesses</a> &gt; <a class="wikipage" href="Wiki434d.html?page=MonitoringTheBPELServiceEngine">MonitoringTheBPELServiceEngine</a> &gt; <a class="wikipage" href="Wiki77bf.html?page=ConfiguringTheQualityOfServiceProperties">ConfiguringTheQualityOfServiceProperties</a></div>
+
+  <div style="clear:both; height:0;" > </div>
+
+</div>
+
+
+
+
+  
+
+
+
+
+
+<div id="actionsTop" class="pageactions"> 
+<!--
+  <span class="actionHome">
+    <a href="http://wiki.open-esb.java.net/Wiki.jsp?page=Main"
+       title="Go to home page Main ">Home</a>
+  </span>
+-->  
+  
+    
+    
+    
+<!--
+    
+  -->
+  
+  
+  <span class="actionIndex">
+     <a href="Wiki5f9e.html?page=PageIndex"
+       title="Alphabetically sorted list of pages [ x ]" accesskey="x">Index</a>
+  </span>
+  
+  <span class="actionRecentChanges">
+     <a href="Wiki5fc7.html?page=RecentChanges"
+        title="Pages sorted by modification date [ u ]" accesskey="u">Changes</a>
+  </span>
+
+  
+
+<!--
+  <span class="quicklinks quick2Bottom">
+    <a href="#footer" title="Go to Bottom" >&raquo;</a>
+  </span>
+-->
+  <div style="clear:both; height:0;"> </div> 
+</div>
+
+
+
+
+
+  <div id="page">
+
+
+
+
+
+<div class="tabmenu ">
+  
+  
+  
+  
+  
+  
+  
+
+  <span><a class="activetab" id="menu-pagecontent" onclick="TabbedSection.onclick('pagecontent')" accesskey="v" ><u>V</u>iew</a></span>
+  
+  
+  <span><a id="menu-attachments" onclick="TabbedSection.onclick('attachments')" accesskey="a" ><u>A</u>ttach (4)</a></span>
+  
+  <span><a id="menu-pageinfo" onclick="TabbedSection.onclick('pageinfo')" accesskey="i" ><u>I</u>nfo</a></span>
+  
+</div>
+<div class="tabs ">
+  <div id="pagecontent" >
+
+    
+
+
+
+
+
+
+
+<h3 id="section-UsingDynamicPartnerLinksAndDynamicAddressing-UsingTheBPELDesignerAndServiceEngine">Using the BPEL Designer and Service Engine </h3>
+<p><b>Contents</b>
+</p>
+<ul><li> <a class="wikipage" href="Wiki20e8.html?page=UsingBPELDesignerServiceEngine">Using the BPEL Designer and Service Engine</a>
+</li><li> <a class="wikipage" href="Wiki5e52.html?page=BPELDesignerAndServiceEngineOverview">Overview</a>
+</li><li> <a class="wikipage" href="Wiki3879.html?page=BPELDesignerAndServiceEngineFeatures">BPEL Designer and Service Engine Features</a>
+</li><li> <a class="wikipage" href="Wikifbc9.html?page=UnderstandingTheBPELModuleProject">Understanding the BPEL Module Project</a>
+</li><li> <a class="wikipage" href="Wiki0ddb.html?page=NavigatingTheBPELDesigner">Navigating the BPEL Designer</a>
+</li><li> <a class="wikipage" href="Wikia9da.html?page=CreatingTheBPELModuleProject">Creating a BPEL Module Project</a>
+</li><li> <a class="wikipage" href="Wiki17ca.html?page=DevelopingTheBPELProcessUsingTheBPELDiagram">Developing the BPEL Process Using the BPEL Diagram</a>
+</li><li> <a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">The BPEL Designer Palette Elements</a>
+</li><li> <a class="wikipage" href="Wiki39db.html?page=UsingTheBPELMapper">Using the BPEL Mapper</a>
+</li><li> <a class="wikipage" href="Wikiad48.html?page=UsingNormalizedMessageProperties">Using Normalized Message Properties</a>
+</li><li> <a class="wikipage" href="Wikie39c.html?page=UsingHandlers">Using Handlers</a>
+</li><li> <a class="wikipage" href="Wikia3b6.html?page=UsingCorrelation">Using Correlation</a>
+</li><li> <a class="wikipage" href="Wiki1f81.html?page=ValidatingTheBPELProcess">Validating a BPEL Process</a>
+</li><li> <a class="wikipage" href="Wiki5233.html?page=BPELProcessLoggingAndAlerting">BPEL Process Logging and Alerting</a>
+</li><li> <a class="wikipage" href="Wiki2f9d.html?page=ConfiguringTheBPELServiceEngineRuntimeProperties">Configuring the BPEL Service Engine Runtime Properties</a>
+</li><li> <a class="wikipage" href="Wikicae3.html?page=BPELServiceEngineDeploymentArtifacts">BPEL Service Engine Deployment Artifacts</a>
+</li><li> <a class="wikipage" href="Wiki1302.html?page=TestingAndDebuggingBPELProcesses">Testing and Debugging BPEL Processes</a>
+</li><li> <a class="wikipage" href="Wiki434d.html?page=MonitoringTheBPELServiceEngine">Monitoring the BPEL Service Engine</a>
+</li><li> <a class="wikipage" href="Wiki77bf.html?page=ConfiguringTheQualityOfServiceProperties">Configuring Quality of Service (QOS) Properties, Throttling, and Redelivery</a>
+</li><li> <span style="color:#3333ff;"><b>Using Dynamic Partner Links and Dynamic Addressing</b></span>
+<ul><li> Using a Literal to Construct an Endpoint
+</li><li> Using an Existing Partner Link's Endpoint
+</li><li> Using an Incoming Message to Extract the Endpoint
+</li><li> Using a Database Query to Provide an Endpoint
+</li><li> Sending Service Endpoint References
+</li></ul></li><li> <a class="wikipage" href="Wiki0931.html?page=ConfiguringPersistenceAndRecoveryForBPEL">Configuring Persistence and Recovery for the BPEL Service Engine</a>
+</li><li> <a class="wikipage" href="Wikid4c2.html?page=ConfiguringFailoverForBPEL">Configuring Failover for the BPEL Service Engine</a>
+</li><li> <a class="wikipage" href="Wiki21f2.html?page=BPELBluePrints">BPEL BluePrints</a>
+</li><li> <a class="wikipage" href="Wiki7030.html?page=BPELServiceEngineTaskHowTos">BPEL Service Engine Task How-tos</a>
+</li><li> <a class="wikipage" href="Wikif987.html?page=TroubleshootingTheBPELServiceEngine">Troubleshooting the BPEL Designer and Service Engine</a>
+</li></ul><h2 id="section-UsingDynamicPartnerLinksAndDynamicAddressing-UsingDynamicPartnerLinksAndDynamicAddressing">Using Dynamic Partner Links and Dynamic Addressing</h2>
+<hr />
+When you are designing an application, you may need to configure certain services whose endpoints (addresses) are not known beforehand, or it may be necessary to change an endpoint reference while the application is running. The Dynamic Partner link feature allows you to dynamically assign an endpoint reference to the partner link. This means that you can use one partner link for subsequent calls to different web-services (provided that the services use the same interface).
+<p>To set the address information for the partner link you can use standard a Assign activity and the BPEL Mapper. In the following examples the endpoint address follows the <a class="external" href="http://schemas.xmlsoap.org/ws/2004/08/addressing/">WS-Addressing schema</a><img class="outlink" src="http://wiki.open-esb.java.net/images/out.png" alt="" />. Refer to <a class="external" href="http://www.w3.org/Submission/ws-addressing/">WS-Addressing Standard (WS-A)</a><img class="outlink" src="http://wiki.open-esb.java.net/images/out.png" alt="" />.
+</p>
+<div class="information">
+Note - Dynamic Addressing is only implemented for SOAP (HTTP Binding Component).<br />
+</div>
+<p />
+<h3 id="section-UsingDynamicPartnerLinksAndDynamicAddressing-UsingALiteralToConstructAnEndpoint">Using a Literal to Construct an Endpoint</h3>
+<p>The BPEL literal syntax can be used to define an endpoint address and assign it to a partner link. The following code sample shows a BPEL literal used to define an HTTP endpoint assigned to a partner link.
+</p>
+<pre>
+&lt;bpws:assign name="Assign2"&gt;
+   &lt;bpws:copy&gt;
+           &lt;bpws:from&gt;
+                   &lt;bpws:literal&gt;
+                           &lt;sref:service-ref&gt;
+                                   &lt;ns1:EndpointReference&gt;
+                                           &lt;wsa:Address&gt;
+                                               http://localhost:8080/StockQuoteService
+/StockQuotePort
+                                           &lt;/wsa:Address&gt;
+                                           &lt;wsa:ServiceName PortName="stockQuotePort"&gt;
+                                               ns3:stockQuoteService&gt;
+                                           &lt;/wsa:ServiceName&gt;
+                                   &lt;/ns1:EndpointReference&gt;
+                           &lt;/sref:service-ref&gt;
+                      &lt;/bpws:literal&gt;
+               &lt;/bpws:from&gt;
+               bpws:to partnerLink="plStockQuote"/&gt;
+       &lt;/bpws:copy&gt;
+&lt;/bpws:assign&gt;
+</pre>
+<p />
+<p>In this scenario, you are invoking a partner link that is associated with a SOAP (HTTP) endpoint. That partner link, on the binding side of the application, acts as a proxy for BPEL to the external world.
+</p>
+<p>In this example, we have an XML fragment that displays an Assign activity. The Assign has a <tt>copy</tt> and points to a literal address inline. When you invoke the service, you can assign a different address as a variable value in the invoke properties. In addition to assigning value to variable, you also assign a value to the partner link. Then, when the service is invoked, the HTTP Binding Component stops using the deployment address and instead uses the address that you just assigned.
+</p>
+<p>The partnerLink "plStockQuote" could be subsequently used in an invoke.
+</p>
+<p>Note that the WS-A defined schema object should be wrapped in an element called <tt>service-ref</tt>, that is defined in the BPEL. For more information about using the <tt>service-ref</tt> wrapper, refer to the <a class="external" href="http://docs.oasis-open.org/wsbpel/2.0/wsbpel-v2.0.html">BPEL Specification</a><img class="outlink" src="http://wiki.open-esb.java.net/images/out.png" alt="" />, <a class="external" href="http://docs.oasis-open.org/wsbpel/2.0/OS/wsbpel-v2.0-OS.html#_Toc164738489">section 6.3</a><img class="outlink" src="http://wiki.open-esb.java.net/images/out.png" alt="" />.
+</p>
+<h3 id="section-UsingDynamicPartnerLinksAndDynamicAddressing-UsingAnExistingPartnerLinkSEndpoint"> Using an Existing Partner Link's endpoint</h3>
+<p>The endpoint of one partner link can be assigned to another partner link. The following BPEL Mapping and code sample show how the partnerRole endpoint of PartnerLink1 is copied to PartnerLink2.
+<table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/UsingDynamicPartnerLinksAndDynamicAddressing/ep-bpel-se-partnerrole.gif" height="200" width="598" alt="Image shows the BPEL Mapper view as described in context" /></td></tr>
+</table>
+
+</p>
+<p>Mapping the PartnerLink1 partnerRole to PartnerLink2 generates the following source code.
+</p>
+<pre>
+&lt;assign name="Assign2"&gt;
+    &lt;copy&gt;
+        &lt;from partnerLink="PartnerLink1" endpointReference="partnerRole"/&gt;
+        &lt;to partnerLink="PartnerLink2"/&gt;
+    &lt;/copy&gt;
+&lt;/assign&gt;
+</pre>
+<p />
+<p>In this example, PartnerLink1 is associated with a SOAP address. Instead of using that address, you want to use PartnerLink2. You send the address of PartnerLink1 to PartnerLink2. PartnerLink1 partnerRole endpoint is copied to PartnerLink2.
+</p>
+<p>PartnerLink2 can also be used in subsequent invokes.
+</p>
+<h3 id="section-UsingDynamicPartnerLinksAndDynamicAddressing-UsingAnIncomingMessageToExtractTheEndpoint"> Using an Incoming Message to Extract the Endpoint</h3>
+<p>To extract an endpoint address from an incoming message, the message must be defined with the endpoint schema as part of the message. The following code sample show one way that this can be done.
+</p>
+<pre>
+&lt;types&gt;
+   &lt;xsd:schema targetNamespace="http://j2ee.netbeans.org/wsdl/dynamicPL"&gt;
+       &lt;xsd:import namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing"
+       schemaLocation="http://schemas.xmlsoap.org/ws/2004/08/addressing/"/&gt;
+              &lt;/xsd:schema&gt;
+&lt;/types&gt;
+&lt;message name="dynamicPLOperationRequest"&gt;
+   &lt;part name="part1" element="wsa:EndpointReference"/&gt;
+&lt;/message&gt;
+</pre>
+<p />
+<p>Note that the prefix <tt>wsa</tt> is defined to point to <tt>http://schemas.xmlsoap.org/ws/2004/08/addressing</tt>.
+</p>
+<p>Use this message variable to assign the endpoint to a partner link at runtime. A special BPEL mapper function, "Wrap with Service Reference" makes it easy to map the WS-A message to a partner link, as demonstrated below.<table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/UsingDynamicPartnerLinksAndDynamicAddressing/ep-bpel-wrap-service.gif" height="234" width="399" alt="Image shows the Wrap with Service Reference BPEL Mapper option" /></td></tr>
+</table>
+
+</p>
+<p>Choosing the BPEL Mapper option <tt>Wrap with Service Reference</tt> adds the <tt>doXslTransform</tt> method box to the Mapper canvas.<table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/UsingDynamicPartnerLinksAndDynamicAddressing/ep-bpel-wrap-mapper.gif" height="181" width="600" alt="Image shows the doXSLTransform method box in the BPEL Mapper" /></td></tr>
+</table>
+
+</p>
+<p />
+<p>The doXslTransform Method box generates the BPEL doXslTransform() function, as shown in the code sample below.
+</p>
+<pre>
+&lt;assign name="Assign1"&gt;
+   &lt;copy&gt;
+       &lt;from&gt;ns0:doXslTransform('urn:stylesheets:wrap2serviceref.xsl', $DynamicPLOperationIn.part1)&lt;/from&gt;
+       &lt;to partnerLink="PartnerLink1"/&gt;
+   &lt;/copy&gt;
+&lt;/assign&gt;
+</pre>
+<p />
+<p>The stylesheet for the transformation is already defined by the editor.
+</p>
+<h3 id="section-UsingDynamicPartnerLinksAndDynamicAddressing-UsingADatabaseQueryToProvideAnEndpoint">Using a Database Query to Provide an Endpoint</h3>
+<p>Expanding on the last example, you can also have a BPEL service do a dynamic addressing invocation, with the address coming from a database.
+</p>
+<p>The composite application triggers the Database Binding Component to do a simple select from a table that contains addresses. The composite application takes the results from the database query and puts it into the BPEL Mapper and maps the query result to the variable where you normally put your dynamic SOAP address. The Mapper assigns this address to the partner link.
+</p>
+<h3 id="section-UsingDynamicPartnerLinksAndDynamicAddressing-SendingServiceEndpointReferences">Sending Service Endpoint References</h3>
+<p>A service can send its own endpoints, that can then be used as call back addresses, using the following type of mapping.<table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/UsingDynamicPartnerLinksAndDynamicAddressing/ep-bpel-service-address.gif" height="" width="" alt="The image shows the BPEL Mapper as described in context" /></td></tr>
+</table>
+
+</p>
+<p>The PartnerLink1 myRole is mapped to the DynamicPLOperationIn part1. This generates the following code sample.
+</p>
+<pre>
+&lt;assign name="Assign2"&gt;
+   &lt;copy&gt;
+       &lt;from partnerLink="PartnerLink1" endpointReference="myRole"/&gt;
+       &lt;to variable="DynamicPLOperationIn" part="part1"/&gt;
+   &lt;/copy&gt;
+&lt;/assign&gt;
+</pre>
+<p />
+<p>When the variable &ldquo;DynamicPLOperationIn&rdquo; is used in subsequent invokes in the BPEL, the endpoint information is passed on to the partner.
+</p>
+<div class="information">
+Note - The BPEL Specification states that only the partner address can be changed dynamically. In BPEL terms, this means that only the <tt>partnerRole</tt> of a partner link can be assigned a value, and <tt>myRole</tt> does not change after the BPEL process has been deployed.<br />
+</div> 
+<p />
+<p><br />
+</p>
+<div class="center">
+<a class="wikipage" href="Wikife94.html?page=UsingDynamicPartnerLinksAndDynamicAddressing">Top</a></div>
+<p><a class="wikipage" href="Wiki77bf.html?page=ConfiguringTheQualityOfServiceProperties">Previous</a><br />
+<a class="wikipage" href="Wiki0931.html?page=ConfiguringPersistenceAndRecoveryForBPEL">Next</a>
+</p>
+
+
+
+  </div>
+
+  
+  
+  <div id="attachments" style="display:none;" >
+
+    
+
+
+
+
+
+
+
+<div id="attachmentViewer">
+  <div class="list">
+    <h3>List of attachments &nbsp;&nbsp;&nbsp;&nbsp;
+    </h3>
+      <form action='#'>
+        <select name="attachSelect" id="attachSelect" size="16" 
+            onchange="Attach.showImage(this[this.selectedIndex], '%A4', 300, 300 )" >
+        <option value="Attachment Info" selected="selected" >--- Select Image to preview ---</option>
+        
+          
+          <option value="ep-bpel-se-partnerrole.gif%A4http://wiki.open-esb.java.net/attach/UsingDynamicPartnerLinksAndDynamicAddressing/ep-bpel-se-partnerrole.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=UsingDynamicPartnerLinksAndDynamicAddressing/ep-bpel-se-partnerrole.gif%A432583 bytes%A41" >
+            ep-bpel-se-partnerrole.gif (32583 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="ep-bpel-service-address.gif%A4http://wiki.open-esb.java.net/attach/UsingDynamicPartnerLinksAndDynamicAddressing/ep-bpel-service-address.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=UsingDynamicPartnerLinksAndDynamicAddressing/ep-bpel-service-address.gif%A426688 bytes%A41" >
+            ep-bpel-service-address.gif (26688 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="ep-bpel-wrap-mapper.gif%A4http://wiki.open-esb.java.net/attach/UsingDynamicPartnerLinksAndDynamicAddressing/ep-bpel-wrap-mapper.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=UsingDynamicPartnerLinksAndDynamicAddressing/ep-bpel-wrap-mapper.gif%A425988 bytes%A41" >
+            ep-bpel-wrap-mapper.gif (25988 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="ep-bpel-wrap-service.gif%A4http://wiki.open-esb.java.net/attach/UsingDynamicPartnerLinksAndDynamicAddressing/ep-bpel-wrap-service.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=UsingDynamicPartnerLinksAndDynamicAddressing/ep-bpel-wrap-service.gif%A428476 bytes%A41" >
+            ep-bpel-wrap-service.gif (28476 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+      </select>
+    </form>
+    <div class="small">&nbsp;</div>
+  </div>  
+
+  <div class="preview">
+    <h3>Image preview</h3>
+    <div id="attachImg" title="No Image Selected">No Image Selected</div>
+    <a href="#" class="small" style="display:none;" id="attachInfo">More info, including version history</a>
+  </div>
+
+  <div style="clear:both; height:0px;" > </div>
+
+</div>
+
+
+  </div>
+
+  
+  <div id="pageinfo" style="display:none;" >
+
+    
+
+
+
+
+
+
+
+
+  <p>
+  This page (revision-8) was last changed on 
+  <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingDynamicPartnerLinksAndDynamicAddressing&amp;r1=8&amp;r2=7"
+    title="Show changes of last page update" >
+    
+    25-Jun-09 14:35 PM, -0700
+  </a> by rjacobus.
+  <a href="http://wiki.open-esb.java.net/rss.jsp?page=UsingDynamicPartnerLinksAndDynamicAddressing&amp;mode=wiki"
+    title="RSS page feed for Using Dynamic Partner Links And Dynamic Addressing" ><img src="images/xml.png" border="0" alt="[RSS]"/></a>
+    
+    <br />
+    This page was created on 
+    <a  href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingDynamicPartnerLinksAndDynamicAddressing&amp;version=1">04-Jun-09 07:58 AM, -0700</a> by rjacobus.
+    
+  </p>    
+
+  
+
+  
+   
+  
+  <p><a href="http://wiki.open-esb.java.net/PageInfo.jsp?page=UsingDynamicPartnerLinksAndDynamicAddressing" id="moreinfo" >More info...</a></p>
+  
+  
+
+  <div class="tabmenu ">
+  
+  
+  
+
+  
+
+  
+
+  
+  
+  
+  
+  <span><a class="activetab" id="menu-versionHistory" onclick="TabbedSection.onclick('versionHistory')" >Version History</a></span>
+  
+
+  <span><a id="menu-incomingLinks" onclick="TabbedSection.onclick('incomingLinks')" >Incoming Links</a></span>
+
+  <span><a id="menu-outgoingLinks" onclick="TabbedSection.onclick('outgoingLinks')" >Outgoing Links</a></span>
+
+  
+  
+  </div>
+<div class="tabs ">
+  
+  <div id="versionHistory" >
+
+
+    
+    <div class="zebra-table ">
+    <table class="wikitable" >
+      <tr>
+        <th>Version</th>                        
+        <th>Date</th>
+        <th>Author</th>
+        <th>Size</th>
+        <th>Changes ...</th>
+        
+      </tr>
+
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingDynamicPartnerLinksAndDynamicAddressing&amp;version=8" accesskey="" title="">
+            8
+          </a>
+        </td>
+
+        <td>
+          25-Jun-09 14:35 PM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>10113</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingDynamicPartnerLinksAndDynamicAddressing&amp;r1=8&amp;r2=7">to previous</a>
+            
+          
+
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingDynamicPartnerLinksAndDynamicAddressing&amp;version=7" accesskey="" title="">
+            7
+          </a>
+        </td>
+
+        <td>
+          09-Jun-09 10:29 AM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>10627</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingDynamicPartnerLinksAndDynamicAddressing&amp;r1=7&amp;r2=6">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingDynamicPartnerLinksAndDynamicAddressing&amp;r1=8&amp;r2=7">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingDynamicPartnerLinksAndDynamicAddressing&amp;version=6" accesskey="" title="">
+            6
+          </a>
+        </td>
+
+        <td>
+          04-Jun-09 08:29 AM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>2370</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingDynamicPartnerLinksAndDynamicAddressing&amp;r1=6&amp;r2=5">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingDynamicPartnerLinksAndDynamicAddressing&amp;r1=8&amp;r2=6">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingDynamicPartnerLinksAndDynamicAddressing&amp;version=5" accesskey="" title="">
+            5
+          </a>
+        </td>
+
+        <td>
+          04-Jun-09 08:25 AM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>2145</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingDynamicPartnerLinksAndDynamicAddressing&amp;r1=5&amp;r2=4">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingDynamicPartnerLinksAndDynamicAddressing&amp;r1=8&amp;r2=5">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingDynamicPartnerLinksAndDynamicAddressing&amp;version=4" accesskey="" title="">
+            4
+          </a>
+        </td>
+
+        <td>
+          04-Jun-09 08:24 AM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>2143</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingDynamicPartnerLinksAndDynamicAddressing&amp;r1=4&amp;r2=3">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingDynamicPartnerLinksAndDynamicAddressing&amp;r1=8&amp;r2=4">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingDynamicPartnerLinksAndDynamicAddressing&amp;version=3" accesskey="" title="">
+            3
+          </a>
+        </td>
+
+        <td>
+          04-Jun-09 08:21 AM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>1969</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingDynamicPartnerLinksAndDynamicAddressing&amp;r1=3&amp;r2=2">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingDynamicPartnerLinksAndDynamicAddressing&amp;r1=8&amp;r2=3">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingDynamicPartnerLinksAndDynamicAddressing&amp;version=2" accesskey="" title="">
+            2
+          </a>
+        </td>
+
+        <td>
+          04-Jun-09 08:19 AM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>1959</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingDynamicPartnerLinksAndDynamicAddressing&amp;r1=2&amp;r2=1">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingDynamicPartnerLinksAndDynamicAddressing&amp;r1=8&amp;r2=2">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingDynamicPartnerLinksAndDynamicAddressing&amp;version=1" accesskey="" title="">
+            1
+          </a>
+        </td>
+
+        <td>
+          04-Jun-09 07:58 AM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>55</td>
+
+        <td>
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingDynamicPartnerLinksAndDynamicAddressing&amp;r1=8&amp;r2=1">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+
+    </table>  
+    </div>
+    
+
+  </div>
+
+  
+
+  <div id="incomingLinks" style="display:none;" >
+
+    <a class="wikipage" href="Wikife94.html?page=UsingDynamicPartnerLinksAndDynamicAddressing" accesskey="" title="">Using Dynamic Partner Links And Dynamic Addressing</a>
+    <ul><li><a class="wikipage" href="Wiki21f2.html?page=BPELBluePrints">BPEL Blue Prints</a>
+</li><li><a class="wikipage" href="Wiki3879.html?page=BPELDesignerAndServiceEngineFeatures">BPEL Designer And Service Engine Features</a>
+</li><li><a class="wikipage" href="Wiki5e52.html?page=BPELDesignerAndServiceEngineOverview">BPEL Designer And Service Engine Overview</a>
+</li><li><a class="wikipage" href="Wiki5233.html?page=BPELProcessLoggingAndAlerting">BPEL Process Logging And Alerting</a>
+</li><li><a class="wikipage" href="Wikicae3.html?page=BPELServiceEngineDeploymentArtifacts">BPEL Service Engine Deployment Artifacts</a>
+</li><li><a class="wikipage" href="Wiki7030.html?page=BPELServiceEngineTaskHowTos">BPEL Service Engine Task How Tos</a>
+</li><li><a class="wikipage" href="Wikid4c2.html?page=ConfiguringFailoverForBPEL">Configuring Failover For BPEL</a>
+</li><li><a class="wikipage" href="Wiki0931.html?page=ConfiguringPersistenceAndRecoveryForBPEL">Configuring Persistence And Recovery For BPEL</a>
+</li><li><a class="wikipage" href="Wiki2f9d.html?page=ConfiguringTheBPELServiceEngineRuntimeProperties">Configuring The BPEL Service Engine Runtime Properties</a>
+</li><li><a class="wikipage" href="Wiki77bf.html?page=ConfiguringTheQualityOfServiceProperties">Configuring The Quality Of Service Properties</a>
+</li><li><a class="wikipage" href="Wikia9da.html?page=CreatingTheBPELModuleProject">Creating The BPEL Module Project</a>
+</li><li><a class="wikipage" href="Wiki17ca.html?page=DevelopingTheBPELProcessUsingTheBPELDiagram">Developing The BPEL Process Using The BPEL Diagram</a>
+</li><li><a class="wikipage" href="Wiki434d.html?page=MonitoringTheBPELServiceEngine">Monitoring The BPEL Service Engine</a>
+</li><li><a class="wikipage" href="Wiki0ddb.html?page=NavigatingTheBPELDesigner">Navigating The BPEL Designer</a>
+</li><li><a class="wikipage" href="Wiki1302.html?page=TestingAndDebuggingBPELProcesses">Testing And Debugging BPEL Processes</a>
+</li><li><a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">The BPEL Designer Palette Elements</a>
+</li><li><a class="wikipage" href="Wikif987.html?page=TroubleshootingTheBPELServiceEngine">Troubleshooting The BPEL Service Engine</a>
+</li><li><a class="wikipage" href="Wikifbc9.html?page=UnderstandingTheBPELModuleProject">Understanding The BPEL Module Project</a>
+</li><li><a class="wikipage" href="Wiki20e8.html?page=UsingBPELDesignerServiceEngine">Using BPEL Designer Service Engine</a>
+</li><li><a class="wikipage" href="Wikia3b6.html?page=UsingCorrelation">Using Correlation</a>
+</li><li><a class="wikipage" href="Wikie39c.html?page=UsingHandlers">Using Handlers</a>
+</li><li><a class="wikipage" href="Wikiad48.html?page=UsingNormalizedMessageProperties">Using Normalized Message Properties</a>
+</li><li><a class="wikipage" href="Wiki39db.html?page=UsingTheBPELMapper">Using The BPEL Mapper</a>
+</li><li><a class="wikipage" href="Wiki1f81.html?page=ValidatingTheBPELProcess">Validating The BPEL Process</a>
+</li></ul>
+  </div>
+
+
+  <div id="outgoingLinks" style="display:none;" >
+
+    
+      <div class="ReferredPagesPlugin">
+<a class="wikipage" href="Wikife94.html?page=UsingDynamicPartnerLinksAndDynamicAddressing" title="ReferredPagesPlugin: depth[1] include[.*] exclude[^$] format[compact]">UsingDynamicPartnerLinksAndDynamicAddressing</a>
+<ul>
+<li><a class="wikipage" href="Wiki21f2.html?page=BPELBluePrints">BPELBluePrints</a></li>
+<li><a class="wikipage" href="Wiki3879.html?page=BPELDesignerAndServiceEngineFeatures">BPELDesignerAndServiceEngineFeatures</a></li>
+<li><a class="wikipage" href="Wiki5e52.html?page=BPELDesignerAndServiceEngineOverview">BPELDesignerAndServiceEngineOverview</a></li>
+<li><a class="wikipage" href="Wiki5233.html?page=BPELProcessLoggingAndAlerting">BPELProcessLoggingAndAlerting</a></li>
+<li><a class="wikipage" href="Wikicae3.html?page=BPELServiceEngineDeploymentArtifacts">BPELServiceEngineDeploymentArtifacts</a></li>
+<li><a class="wikipage" href="Wiki7030.html?page=BPELServiceEngineTaskHowTos">BPELServiceEngineTaskHowTos</a></li>
+<li><a class="wikipage" href="Wikid4c2.html?page=ConfiguringFailoverForBPEL">ConfiguringFailoverForBPEL</a></li>
+<li><a class="wikipage" href="Wiki0931.html?page=ConfiguringPersistenceAndRecoveryForBPEL">ConfiguringPersistenceAndRecoveryForBPEL</a></li>
+<li><a class="wikipage" href="Wiki2f9d.html?page=ConfiguringTheBPELServiceEngineRuntimeProperties">ConfiguringTheBPELServiceEngineRuntimeProperties</a></li>
+<li><a class="wikipage" href="Wiki77bf.html?page=ConfiguringTheQualityOfServiceProperties">ConfiguringTheQualityOfServiceProperties</a></li>
+<li><a class="wikipage" href="Wikia9da.html?page=CreatingTheBPELModuleProject">CreatingTheBPELModuleProject</a></li>
+<li><a class="wikipage" href="Wiki17ca.html?page=DevelopingTheBPELProcessUsingTheBPELDiagram">DevelopingTheBPELProcessUsingTheBPELDiagram</a></li>
+<li><a class="wikipage" href="Wiki434d.html?page=MonitoringTheBPELServiceEngine">MonitoringTheBPELServiceEngine</a></li>
+<li><a class="wikipage" href="Wiki0ddb.html?page=NavigatingTheBPELDesigner">NavigatingTheBPELDesigner</a></li>
+<li><a class="wikipage" href="Wiki1302.html?page=TestingAndDebuggingBPELProcesses">TestingAndDebuggingBPELProcesses</a></li>
+<li><a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">TheBPELDesignerPaletteElements</a></li>
+<li><a class="wikipage" href="Wikif987.html?page=TroubleshootingTheBPELServiceEngine">TroubleshootingTheBPELServiceEngine</a></li>
+<li><a class="wikipage" href="Wikifbc9.html?page=UnderstandingTheBPELModuleProject">UnderstandingTheBPELModuleProject</a></li>
+<li><a class="wikipage" href="Wiki20e8.html?page=UsingBPELDesignerServiceEngine">UsingBPELDesignerServiceEngine</a></li>
+<li><a class="wikipage" href="Wikia3b6.html?page=UsingCorrelation">UsingCorrelation</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingDynamicPartnerLinksAndDynamicAddressing/ep-bpel-se-partnerrole.gif">UsingDynamicPartnerLinksAndDynamicAddressing/ep-bpel-se-partnerrole.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingDynamicPartnerLinksAndDynamicAddressing/ep-bpel-service-address.gif">UsingDynamicPartnerLinksAndDynamicAddressing/ep-bpel-service-address.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingDynamicPartnerLinksAndDynamicAddressing/ep-bpel-wrap-mapper.gif">UsingDynamicPartnerLinksAndDynamicAddressing/ep-bpel-wrap-mapper.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingDynamicPartnerLinksAndDynamicAddressing/ep-bpel-wrap-service.gif">UsingDynamicPartnerLinksAndDynamicAddressing/ep-bpel-wrap-service.gif</a></li>
+<li><a class="wikipage" href="Wikie39c.html?page=UsingHandlers">UsingHandlers</a></li>
+<li><a class="wikipage" href="Wikiad48.html?page=UsingNormalizedMessageProperties">UsingNormalizedMessageProperties</a></li>
+<li><a class="wikipage" href="Wiki39db.html?page=UsingTheBPELMapper">UsingTheBPELMapper</a></li>
+<li><a class="wikipage" href="Wiki1f81.html?page=ValidatingTheBPELProcess">ValidatingTheBPELProcess</a></li>
+</ul>
+</div>
+
+    
+    
+  </div>
+
+
+  
+  
+  <div style="clear:both; height:0px;" > </div>
+</div>
+ 
+
+
+
+
+
+
+
+
+
+  </div>
+
+  
+<div style="clear:both; height:0px;" > </div>
+</div>
+
+</div> 
+
+
+  
+
+
+
+<div id="favorites">
+
+
+<div class="username">G'day,
+  
+    <a title="Hi, Anonymous Guest"  href="Wiki48c3.html?page=Login">Anonymous Guest</a>
+  
+  
+  
+  
+</div>  
+
+
+
+
+
+
+
+
+<p />
+
+
+
+  
+<p />
+<p />
+
+
+<div class="wikiversion">JSPWiki v2.4.100</div>
+
+<div class="rssfeed"><a href="rss.rdf"><img src="images/xml.png" alt="[RSS]" border="0" title="Aggregate the RSS feed of the entire wiki"/></a></div>
+
+<div style="clear:both; height:0px;" > </div>
+
+</div> 
+
+  
+
+
+
+
+
+<div id='actionsBottom' class="pageactions"> 
+
+  <span class='quicklinks quick2Top'>
+    <a href="#wikibody" title='Go to Top' >&laquo;</a>
+  </span>
+
+  <span class="actionHome">
+    <a href="Wikib2ab.html?page=Main"
+       title="Go to home page Main ">Home</a>
+  </span>
+  
+  
+    
+
+    
+  
+  
+  <span class="actionIndex">
+     <a href="Wiki5f9e.html?page=PageIndex"
+       title="Alphabetically sorted list of pages [ x ]">Index</a>
+  </span>
+  
+  <span class="actionRecentChanges">
+     <a href="Wiki5fc7.html?page=RecentChanges"
+        title="Pages sorted by modification date [ u ]">Changes</a>
+  </span>
+
+  
+    
+      <span class="actionPrefs">
+        <a href="Wiki7eba.html?page=UserPreferences"
+           title="Set User Preferences" >Prefs</a>
+      </span>
+    
+  
+
+  
+    <div class="pageinfo">
+      
+        This page (revision-8) was last changed on 
+        <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingDynamicPartnerLinksAndDynamicAddressing&amp;r1=8&amp;r2=7"
+          title="Show changes of last page update" >  
+        
+        25-Jun-09 14:35 PM, -0700</a>
+      
+      
+      by rjacobus
+
+      
+    </div>  
+  
+
+  <div style="clear:both; height:0;"> </div> 
+</div>
+
+  
+ 
+  
+
+  
+
+
+<div id="footer">
+
+<table><tr><td>
+  <div class="wikiversion">
+    JSPWiki v2.4.100                       
+  </div>
+</td>
+<td>
+<br>Copyright &copy; 2011, Oracle and/or its affiliates. All rights reserved. Oracle and Java are registered trademarks of Oracle and/or its affiliates. Other names may be trademarks of their respective owners. <a href="http://www.oracle.com/"><img src="images/ora_logo_small.gif" /> </a>
+  <div class="rssfeed">
+    <a href="rss.rdf"><img src="images/xml.png" alt="[RSS]" border="0" title="Aggregate the RSS feed"/></a>
+  </div>
+</td></tr></table>
+  <div style="clear:both; height:0px;" > </div>
+
+</div>
+  
+
+  </div>
+  <div style="clear:both; height:0;" > </div>
+
+
+
+<!-- Page counters -->
+<script type="text/javascript" language="javascript">
+var sc_project=1965314; 
+var sc_invisible=1; 
+var sc_partition=17; 
+var sc_security="c5f5efea"; 
+</script>
+<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script>
+
+
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+<script type="text/javascript">
+_uacct = "UA-993823-3";
+urchinTracker();
+</script>
+</body>
+
+<!-- Mirrored from wiki.open-esb.java.net/Wiki.jsp?page=UsingDynamicPartnerLinksAndDynamicAddressing by HTTrack Website Copier/3.x [XR&CO'2010], Thu, 08 Jul 2010 02:16:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+</html>
+
+

@@ -1,0 +1,1353 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+
+
+<!-- Mirrored from wiki.open-esb.java.net/Wiki.jsp?page=TroubleshootingTheBPELServiceEngine by HTTrack Website Copier/3.x [XR&CO'2010], Thu, 08 Jul 2010 02:16:47 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head>
+
+  <title>Troubleshooting The BPEL Service Engine - OpenESB: the Open Source ESB for SOA & Integration</title>
+  
+
+
+
+
+
+<link rel="stylesheet" type="text/css" media="screen, projection" 
+     href="templates/brushed/jspwiki.css" />
+
+<!-- browser specific cssinclude not required in brushed template
+<script type="text/javascript"
+         src="/templates/brushed/cssinclude.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+  Wiki.loadBrowserSpecificCSS("brushed");
+//]]>
+</script>
+-->
+
+
+
+
+<link rel="stylesheet" type="text/css" 
+     href="templates/brushed/skins/Smart/skin.css" />
+<!-- INCLUDERESOURCES (stylesheet) -->
+
+
+
+<!--[if IE]>
+<style type="text/css" media="screen">
+img, a, div { behavior: url("templates/brushed/scripts/iepngfix.htc"); }
+</style>
+<![endif]-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="search" 
+     href="Wiki702d.html?page=FindPage"
+    title="Search Open ESB Wiki" />
+<link rel="help"   
+     href="Wikia3b7.html?page=TextFormattingRules" 
+    title="Help" />
+<link rel="start"  
+     href="Wikib2ab.html?page=Main"                
+    title="Front page" />
+<!--<link rel="stylesheet" type="text/css" media="print"
+     href="/templates/brushed/jspwiki_print.css" />
+<link rel="alternate stylesheet" type="text/css"
+     href="/templates/brushed/jspwiki_print.css" 
+    title="Print friendly" />-->
+<link rel="alternate stylesheet" type="text/css" 
+     href="templates/brushed/jspwiki.css" 
+    title="Standard" />
+<link rel="icon" type="image/png" href="images/openesb16x16.png" />
+
+<link rel="template" href="http://wiki.open-esb.java.net/templates/brushed" id="template-dir"/>
+<link rel="alternate" type="application/rss+xml" title="RSS wiki feed for the entire site." href="rss.rdf" />
+<link rel="alternate" type="application/rss+xml" title="RSS wiki feed for page Open ESB Wiki: TroubleshootingTheBPELServiceEngine." href="http://wiki.open-esb.java.net/rss.jsp?page=TroubleshootingTheBPELServiceEngine&amp;mode=wiki" />
+
+
+
+<script type="text/javascript"
+         src="templates/brushed/scripts/prototype.js" ></script>
+<script type="text/javascript" 
+         src="templates/brushed/scripts/brushed.js" ></script>
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+  Wiki.setBaseURL ( "index.html" );
+  Wiki.setPageName( "TroubleshootingTheBPELServiceEngine" ); /* pagename without blanks */
+  Wiki.setUserName( "113.170.138.21" );
+
+  Wiki.setDELIM              ( "¤" );
+  Wiki.setPrefDateFormat     ( "dd-MMM-yy HH:mm a, Z" );
+  Wiki.setPrefSkinName       ( "Smart" );
+  Wiki.setPrefTimeZone       ( "" );
+  Wiki.setPrefEditAreaHeight ( "24" );
+  Wiki.setPrefShowQuickLinks ( "no" );
+  Wiki.setPrefSowCalendar    ( "no" );
+//]]>
+</script>
+<script type="text/javascript" 
+         src="templates/brushed/skins/Smart/skin.js"></script>
+
+<!-- INCLUDERESOURCES (script) -->
+
+
+  
+</head>
+
+<body class="view" id="gradient">
+<!--
+<p id="underline" class="barMargin"></p>
+-->
+<div id="wikibody" >
+  
+
+
+
+
+<div id="header">
+<!--
+  <div class="applicationlogo"> 
+    <a href="https://open-esb.dev.java.net/public/downloads.html" title="OpenESB Downloads"></a>
+  </div>
+-->  
+
+<table width="100%" id="headertable"><tr>
+  <td><a href="https://open-esb.dev.java.net/" style="border: none;"><img style="border: none;" height="60" width="304" alt="Open ESB: the Open Enterprise Service Bus... Open Standards + Open Source" src="images/ESBLogoTag-304x60C.jpg"/></a></td>
+
+
+  <td id="rhstop">
+  
+
+<div id="rhsuser" class="rhsusername">
+  Not logged in | 
+    <a title="Hi, Anonymous Guest"  href="Wiki48c3.html?page=Login">Login</a>
+  
+  
+
+  
+
+  
+</div>  
+  
+  
+<div id="oesearch" style="vertical-align: bottom">
+  <br/>
+  <br/>
+	<form action="https://open-esb.dev.java.net/SearchResults.html" id="cse-search-box"> 
+	  <div>
+	    <input type="hidden" name="cx" value="013607241216432041017:tcd_nlc0tem" />
+	    <input type="hidden" name="cof" value="FORID:11" />
+	    <input type="hidden" name="ie" value="UTF-8" />
+	    <input type="text" name="q" size="20" />
+	    <input type="submit" name="sa" value="Search" />
+	  </div>
+	</form>
+</div>
+  
+  
+  </td>
+</tr></table>
+
+<!-- ==================== Menu Structure ==================== -->
+<script type="text/javascript" src="static/menu.js" ></script>
+<div id="z_menu_02"><table width="100%"><tr><td>
+	<div id="z_menu_01">
+		<script>writeOEMenu();</script>
+	</div>
+</td></tr></table></div>
+<!-- ==================== End menu ==================== -->
+
+
+
+
+
+
+
+
+
+
+  <div class="companylogo">
+  </div>
+  
+  
+<!--
+<ul class="iconlist">
+<li class="documentation"><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=Documentation"><img src="/openesbwiki/templates/brushed/skins/Smart/images/documentation.png" width="81" height="65"/></a></li>
+<li class="link"><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsefulLinks"><img src="/openesbwiki/templates/brushed/skins/Smart/images/links.png" width="64" height="65"/></a></li>
+<li class="participate"><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=GetInvolved"><img src="/openesbwiki/templates/brushed/skins/Smart/images/participate.png" width="61" height="68"/></a></li>
+<li class="downloads"><a href="https://open-esb.dev.java.net/Downloads.html"><img src="/openesbwiki/templates/brushed/skins/Smart/images/downloads.png" width="61" height="65"/></a></li>
+</ul>
+<div style="clear: left;"></div>
+ --> 
+
+  <table width="100%">
+  <tr>
+  <td><div class="pagename2">Troubleshooting The BPEL Service Engine</div></td>
+  </tr>
+  </table>
+  
+
+
+  
+  <div class="searchbox">
+
+
+<form action="http://wiki.open-esb.java.net/Search.jsp"
+    onsubmit="SearchBox.submit( this.query.value )"
+ onmouseover="Element.show('searchboxMenu');"
+  onmouseout= "Element.hide('searchboxMenu');"
+        name="searchForm" id="searchForm" 
+        accept-charset="UTF-8">
+  <div>
+  
+  <input onblur="if( this.value == '' ) { this.value = 'Search'}; " 
+        onfocus="if( this.value == 'Search' ) { this.value = ''}; "
+           type="text" value="Wiki search" name="query" id="query" size="24" 
+      accesskey="f"></input>
+  </div>  
+  <div id="searchboxMenu" style='display:none;'>
+    <div>
+      <a href="javascript://nop/" 
+         onclick="SearchBox.navigation( 'Wiki195c.html?page=__PAGEHERE__','TroubleshootingTheBPELServiceEngine' );return false;"
+         title="View the selected page">view</a> 
+      | 
+      <a href="javascript://nop/" 
+         onclick="SearchBox.navigation( 'http://wiki.open-esb.java.net/Edit.jsp?page=__PAGEHERE__','TroubleshootingTheBPELServiceEngine' );return false;"
+         title="Edit the selected page">edit</a> 
+      | 
+      <a href="javascript://nop/" 
+         onclick="SearchBox.clone( 'http://wiki.open-esb.java.net/Edit.jsp?page=__PAGEHERE__','TroubleshootingTheBPELServiceEngine' );return false;"
+         title="Clone this page">clone</a> 
+      |
+      <a href="javascript://nop/" 
+         onclick="SearchBox.navigation( 'Search136d.html?query=__PAGEHERE__','TroubleshootingTheBPELServiceEngine' );return false;"
+         title="Advanced Search">find</a> 
+      [ f ]
+    </div>
+    <div id="searchResult" > </div>
+    <div id="recentSearches" > </div>
+  </div>
+
+</form>
+<script type="text/javascript">
+//<![CDATA[    
+    function updateSearchResult( )
+    {  
+      if( $F('query') == 'Search' ) return;
+      new Ajax.Updater(
+        'searchResult', 
+        'templates/brushed/FindAjax.html',
+        { 
+          asynchronous: true,
+          parameters: Form.serialize( 'searchForm' ) + "&compact=true"
+        } ); 
+    } ;
+    new Form.Element.Observer( "query", 1, updateSearchResult ); 
+//]]>
+</script>
+    
+   </div>
+
+  <div class="breadcrumbs">Your trail: <a class="wikipage" href="Wiki2f9d.html?page=ConfiguringTheBPELServiceEngineRuntimeProperties">ConfiguringTheBPELServiceEngineRuntimeProperties</a> &gt; <a class="wikipage" href="Wikicae3.html?page=BPELServiceEngineDeploymentArtifacts">BPELServiceEngineDeploymentArtifacts</a> &gt; <a class="wikipage" href="Wiki1302.html?page=TestingAndDebuggingBPELProcesses">TestingAndDebuggingBPELProcesses</a> &gt; <a class="wikipage" href="Wiki434d.html?page=MonitoringTheBPELServiceEngine">MonitoringTheBPELServiceEngine</a> &gt; <a class="wikipage" href="Wiki77bf.html?page=ConfiguringTheQualityOfServiceProperties">ConfiguringTheQualityOfServiceProperties</a> &gt; <a class="wikipage" href="Wikife94.html?page=UsingDynamicPartnerLinksAndDynamicAddressing">UsingDynamicPartnerLinksAndDynamicAddressing</a> &gt; <a class="wikipage" href="Wiki0931.html?page=ConfiguringPersistenceAndRecoveryForBPEL">ConfiguringPersistenceAndRecoveryForBPEL</a> &gt; <a class="wikipage" href="Wikid4c2.html?page=ConfiguringFailoverForBPEL">ConfiguringFailoverForBPEL</a> &gt; <a class="wikipage" href="Wiki21f2.html?page=BPELBluePrints">BPELBluePrints</a> &gt; <a class="wikipage" href="Wiki7030.html?page=BPELServiceEngineTaskHowTos">BPELServiceEngineTaskHowTos</a></div>
+
+  <div style="clear:both; height:0;" > </div>
+
+</div>
+
+
+
+
+  
+
+
+
+
+
+<div id="actionsTop" class="pageactions"> 
+<!--
+  <span class="actionHome">
+    <a href="http://wiki.open-esb.java.net/Wiki.jsp?page=Main"
+       title="Go to home page Main ">Home</a>
+  </span>
+-->  
+  
+    
+    
+    
+<!--
+    
+  -->
+  
+  
+  <span class="actionIndex">
+     <a href="Wiki5f9e.html?page=PageIndex"
+       title="Alphabetically sorted list of pages [ x ]" accesskey="x">Index</a>
+  </span>
+  
+  <span class="actionRecentChanges">
+     <a href="Wiki5fc7.html?page=RecentChanges"
+        title="Pages sorted by modification date [ u ]" accesskey="u">Changes</a>
+  </span>
+
+  
+
+<!--
+  <span class="quicklinks quick2Bottom">
+    <a href="#footer" title="Go to Bottom" >&raquo;</a>
+  </span>
+-->
+  <div style="clear:both; height:0;"> </div> 
+</div>
+
+
+
+
+
+  <div id="page">
+
+
+
+
+
+<div class="tabmenu ">
+  
+  
+  
+  
+  
+
+  <span><a class="activetab" id="menu-pagecontent" onclick="TabbedSection.onclick('pagecontent')" accesskey="v" ><u>V</u>iew</a></span>
+  
+  
+  <span><a id="menu-pageinfo" onclick="TabbedSection.onclick('pageinfo')" accesskey="i" ><u>I</u>nfo</a></span>
+  
+</div>
+<div class="tabs ">
+  <div id="pagecontent" >
+
+    
+
+
+
+
+
+
+
+<h3 id="section-TroubleshootingTheBPELServiceEngine-UsingTheBPELDesignerAndServiceEngine">Using the BPEL Designer and Service Engine </h3>
+<p><b>Contents</b>
+</p>
+<ul><li> <a class="wikipage" href="Wiki20e8.html?page=UsingBPELDesignerServiceEngine">Using the BPEL Designer and Service Engine</a>
+</li><li> <a class="wikipage" href="Wiki5e52.html?page=BPELDesignerAndServiceEngineOverview">Overview</a>
+</li><li> <a class="wikipage" href="Wiki3879.html?page=BPELDesignerAndServiceEngineFeatures">BPEL Designer and Service Engine Features</a>
+</li><li> <a class="wikipage" href="Wikifbc9.html?page=UnderstandingTheBPELModuleProject">Understanding the BPEL Module Project</a>
+</li><li> <a class="wikipage" href="Wiki0ddb.html?page=NavigatingTheBPELDesigner">Navigating the BPEL Designer</a>
+</li><li> <a class="wikipage" href="Wikia9da.html?page=CreatingTheBPELModuleProject">Creating a BPEL Module Project</a>
+</li><li> <a class="wikipage" href="Wiki17ca.html?page=DevelopingTheBPELProcessUsingTheBPELDiagram">Developing the BPEL Process Using the BPEL Diagram</a>
+</li><li> <a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">The BPEL Designer Palette Elements</a>
+</li><li> <a class="wikipage" href="Wiki39db.html?page=UsingTheBPELMapper">Using the BPEL Mapper</a>
+</li><li> <a class="wikipage" href="Wikiad48.html?page=UsingNormalizedMessageProperties">Using Normalized Message Properties</a>
+</li><li> <a class="wikipage" href="Wikie39c.html?page=UsingHandlers">Using Handlers</a>
+</li><li> <a class="wikipage" href="Wikia3b6.html?page=UsingCorrelation">Using Correlation</a>
+</li><li> <a class="wikipage" href="Wiki1f81.html?page=ValidatingTheBPELProcess">Validating a BPEL Process</a>
+</li><li> <a class="wikipage" href="Wiki5233.html?page=BPELProcessLoggingAndAlerting">BPEL Process Logging and Alerting</a>
+</li><li> <a class="wikipage" href="Wiki2f9d.html?page=ConfiguringTheBPELServiceEngineRuntimeProperties">Configuring the BPEL Service Engine Runtime Properties</a>
+</li><li> <a class="wikipage" href="Wikicae3.html?page=BPELServiceEngineDeploymentArtifacts">BPEL Service Engine Deployment Artifacts</a>
+</li><li> <a class="wikipage" href="Wiki1302.html?page=TestingAndDebuggingBPELProcesses">Testing and Debugging BPEL Processes</a>
+</li><li> <a class="wikipage" href="Wiki434d.html?page=MonitoringTheBPELServiceEngine">Monitoring the BPEL Service Engine</a>
+</li><li> <a class="wikipage" href="Wiki77bf.html?page=ConfiguringTheQualityOfServiceProperties">Configuring Quality of Service (QOS) Properties, Throttling, and Redelivery</a>
+</li><li> <a class="wikipage" href="Wikife94.html?page=UsingDynamicPartnerLinksAndDynamicAddressing">Using Dynamic Partner Links and Dynamic Addressing</a>
+</li><li> <a class="wikipage" href="Wiki0931.html?page=ConfiguringPersistenceAndRecoveryForBPEL">Configuring Persistence and Recovery for the BPEL Service Engine</a>
+</li><li> <a class="wikipage" href="Wikid4c2.html?page=ConfiguringFailoverForBPEL">Configuring Failover for the BPEL Service Engine</a>
+</li><li> <a class="wikipage" href="Wiki21f2.html?page=BPELBluePrints">BPEL BluePrints</a>
+</li><li> <a class="wikipage" href="Wiki7030.html?page=BPELServiceEngineTaskHowTos">BPEL Service Engine Task How-tos</a>
+</li><li> <span style="color:#3333ff;"><b>Troubleshooting the BPEL Designer and Service Engine</b></span>
+</li></ul><br />
+<h2 id="section-TroubleshootingTheBPELServiceEngine-TroubleshootingTheBPELDesignerAndServiceEngine">Troubleshooting the BPEL Designer and Service Engine</h2>
+<hr />
+<br />
+<p />
+<h3 id="section-TroubleshootingTheBPELServiceEngine-UsingBPELSchemasDifferentFromTheBPEL2.0Specification">Using BPEL Schemas Different from the BPEL 2.0 Specification</h3>
+This release of the BPEL Designer supports the BPEL 2.0 final specification and does not support previous specifications. This means that when you open the BPEL files that comply with the previous versions of the specification, the BPEL Designer shows the Unable to Show the Diagram message.
+<p>If you see this message, do the following:
+</p>
+<ul><li> Check the specification version that the BPEL file complies with. BPEL files that comply with the BPEL 2.0 specification have the following string:
+  <tt>x</tt><tt>mlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"</tt>
+  WSDL files that contain PartnerLinkType definitions should have the following string:
+  <tt>xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype"</tt>
+  Replace the namespaces in your files with those above and try to open the BPEL file in the BPEL Designer.
+</li><li> Make sure that the BPEL constructs used in your process are compatible with the BPEL 2.0 specification.
+</li></ul><div class="center">
+<a class="wikipage" href="Wikif987.html?page=TroubleshootingTheBPELServiceEngine">Top</a></div>
+<h3 id="section-TroubleshootingTheBPELServiceEngine-ServiceEndpointConflict">Service Endpoint Conflict</h3>
+When deploying two or more Composite Application projects, a service endpoint conflict might occur and the deployment fails. In case of the service endpoint conflict, the following message is displayed:
+<pre>
+Deploy service assembly failed. (partial success)
+MESSAGE: (SOAPBC_DEPLOY_2) Failed to deploy: java.lang.Exception:
+An activated endpoint already has the same SOAP Address location:
+http://localhost:18181/SynchronousSample
+C:\&lt;...&gt;\SynchronousSample1Application\nbproject\build-impl.xml:209:
+Service assembly deployment failed.
+BUILD FAILED (total time: 31 seconds)
+</pre>
+<p>This could typically arise from trying to deploy nearly identical processes that are packaged in different Composite Application projects. The workaround for this issue is to use different endpoints during the deployment of different Composite Application projects.
+</p>
+<p><b>Explanation:</b> Even though you are deploying distinct Composite Applications and distinct BPEL processes, by default they will have the same endpoint addresses defined in their <tt>SynchronousSample.wsdl</tt> files. They will both contain the following endpoint address:
+</p>
+<pre>
+&lt;service name="service1"&gt;
+   &lt;port name="port1" binding="tns:binding1"&gt;
+      &lt;documentation/&gt;
+      &lt;soap:address location="http://localhost:18181/SynchronousSample"/&gt;
+   &lt;/port&gt;
+&lt;/service&gt;
+</pre>
+<p>If you attempt to deploy two Composite Applications (for example, <tt>SynchronousSampleApplication</tt> and <tt>SynchronousSample1Application</tt> ) with identical service endpoints, the deployment of the second one will fail due to the endpoint conflict.
+</p>
+<p>You may wish to deploy more than one version of a Composite Application because you want to modify one or both of these processes and deploy both of them at the same time. Or you may want to compare their behavior. To do this you must first make their endpoint addresses distinct. This means editing the process WSDL file and adjusting the <tt>soap:address location</tt> attribute so that there is no conflict. You can adjust either the port number or the service name. For example, either of these would be sufficiently distinct from the original:
+</p>
+<pre>
+&lt;soap:address location="http://localhost:18182/SynchronousSample"/&gt;
+</pre><br />or<br />
+<pre>
+&lt;soap:address location="http://localhost:18181/SynchronousSampleNew"/&gt;
+</pre>
+<br />
+<div class="center">
+<a class="wikipage" href="Wikif987.html?page=TroubleshootingTheBPELServiceEngine">Top</a></div>
+<h3 id="section-TroubleshootingTheBPELServiceEngine-RelationshipOfServiceEndpointToTestCases">Relationship of Service Endpoint to Test Cases</h3>
+Each Test Case in the Composite Application project will attempt to send the input message to the target process when you invoke the Test action. In order to know where to send the message, each test case has a property called <tt>destination</tt>. You can modify this property in the Properties window. To invoke the Properties window, right-click the test case node and choose Properties from the pop-up window.
+<pre>
+destination=http://localhost:18181/SynchronousSample
+</pre>
+<p>The value of the <tt>destination</tt> property is set at the time the test case is created. So if you subsequently change the service endpoint you will need to manually adjust the destination attribute for any previously generated test cases. Newly generated test cases, of course, will be OK.
+<br />
+</p>
+<div class="center">
+<a class="wikipage" href="Wikif987.html?page=TroubleshootingTheBPELServiceEngine">Top</a></div>
+<h3 id="section-TroubleshootingTheBPELServiceEngine-GlassFishV2ApplicationServerHTTPPort">GlassFish V2 Application Server HTTP Port</h3>
+By default, the installer attempts to configure the Application Server's HTTP port to be 8080. Some of the sample processes assume the 8080 value. If for any reason, the Application Server's HTTP port is not 8080, you will have to make adjustments to the samples.
+<p>In particular, the Travel Reservation Service sample will require several adjustments.
+</p>
+<p>Assume, for instance, that the Application Server is listening on HTTP port 8090 (not on the default 8080). In this case, you will have to Adjust Reservation Partner Services WSDL files as following:
+</p>
+<p>In the TravelReservationService BPEL Module project, change the soap address value in the {AirlineReservationService.wsdl from<br /> 
+</p>
+<pre>&lt;soap:address
+location="http://localhost:8080/webservice/AirlineReservationService"/&gt;
+</pre>
+to
+<pre>&lt;soap:address
+location="http://localhost:8090/webservice/AirlineReservationService"/&gt;</pre><br />
+Similarly, update the soap address values in <tt>VehicleReservationService.wsdl</tt> and <tt>HotelReservationService.wsdl</tt>.
+<br />
+<p><b>Note:</b> To find out which HTTP port the Application Server is listening on, open the Services window, right-click the GlassFish V2 Application Server's node and choose View Admin Console. This opens the GlassFish V2 Application Server Administration Console in your browser. Type username and password (default values are <tt>admin/adminadmin</tt>) and log in. Click Application Server in the left pane and choose the General tab in the right pane. The HTTP port value you need is the first in the <b>HTTP Port(s):</b> line.
+</p>
+<p>Alternatively, find the following lines in the Application Server log:
+</p>
+<pre>
+WEB0712: Starting Sun-Java-System/Application-Server HTTP/1.1 on 8080
+WEB0712: Starting Sun-Java-System/Application-Server HTTP/1.1 on 8181
+WEB0712: Starting Sun-Java-System/Application-Server HTTP/1.1 on 4848
+</pre>
+<p>The value you need is in the first line.
+<br />
+</p>
+<div class="center">
+<a class="wikipage" href="Wikif987.html?page=TroubleshootingTheBPELServiceEngine">Top</a></div>
+<h3 id="section-TroubleshootingTheBPELServiceEngine-TravelReservationServiceEndpointConflict">Travel Reservation Service Endpoint Conflict</h3>
+Refer to the Service Endpoint Conflict section above for a general description of the problem. In case of the Travel Reservation Service sample, however, you have to take these additional steps.
+<p>If port 18181 is not available, and if you want to run TRS on another port, such as port 19191, perform the following steps:
+<br />
+</p>
+<p><b>Change URLs</b>
+</p>
+<ol><li> Open <tt>TravelReservationService.wsdl</tt>. 
+</li><li>In the <tt>service</tt> tag change:<br /><tt>soap:address location="http://localhost:18181/TravelReservation/buildItinerary"/</tt>
+</li></ol>to
+<tt>soap:address location="http://localhost:19191/TravelReservation/buildItinerary"/</tt>
+<ol><li>Similarly, update URL's for <tt>airlineReserved</tt>, <tt>hotelReserved</tt> and <tt>vehicleReserved</tt>.
+</li></ol><p><b>Adjust the Partner EJB project, ReservationPartnerServices</b>
+</p>
+<ol><li> In the IDE, open the ReservationPartnerServices project.<br />(The IDE created the ReservationPartnerServices project in the location where you created the TravelReservationService project.)
+</li><li> In the Projects window, expand the ReservationPartnerServices project node, expand the Configuration Files node, and then double-click the <tt>ejb-jar.xml</tt> node to open the file in the visual editor.
+</li><li> In the Design view, under Enterprise Beans, click ReservationCallBackProviderMDB to expand the entry. Expand Bean Environment and then Environment Entries.
+</li><li> Under Environment Entries, select each entry and click Edit to change the 18181 port number in the Entry Value field.<br />For example, for <tt>AirlineCallbackURL</tt>, change
+  <tt>http://localhost:18181/TravelReservation/airlineReserved</tt>
+  to
+  <tt>http://localhost:19191/TravelReservation/airlineReserved</tt>
+</li></ol><p><b>Update the Destination Property</b>
+</p>
+<ol><li> In the <tt>TravelReservationServiceApplication</tt> Composite project expand the Test node.
+</li><li> For each test case node, do the following:
+<ol><li> Right-click the test case node and choose <tt>Properties</tt>.
+</li><li> In the Properties window, update the value of the <tt>Destination</tt> property.<br />Example:<br /> <br />Change <tt>http://localhost:18181/TravelReservation/buildItinerary</tt><br />to<br />
+  <tt>http://localhost:19191/TravelReservation/buildItinerary</tt>
+</li></ol></li></ol><div class="center">
+<a class="wikipage" href="Wikif987.html?page=TroubleshootingTheBPELServiceEngine">Top</a></div>
+<h3 id="section-TroubleshootingTheBPELServiceEngine-TestRun">Test Run</h3>
+When executing a test case:
+<ul><li> If the <tt>Output.xml</tt> file is empty (it is empty after a new test case is created), then you are asked whether the <tt>Output.xml</tt> should be populated with the response from the first test run. This first test run output will indicate that the test run failed.
+</li><li> If the <tt>Output.xml</tt> file is not empty, then the results obtained are compared with the content of the file; if they match, the test execution is marked as passed.
+</li></ul><div class="center">
+<a class="wikipage" href="Wikif987.html?page=TroubleshootingTheBPELServiceEngine">Top</a></div>
+<h3 id="section-TroubleshootingTheBPELServiceEngine-TestRunFailures">Test Run Failures</h3>
+If you receive a failed test run, you can do one of the following:
+<ul><li> Check the response message after a failed test run. The response message is available under the test case node in the Projects window. The response message is time stamped.<br />You can verify that the response does not match the expected response (that is, <tt>Output.xml</tt>) and this might help you understand the problem.
+</li><li> Check the Server log file after a failed test run.<br />To do so, go to the IDE's Runtime tab. Select the <tt>View Server Log</tt> action on the GlassFish V2 Application Server node.<br />This shows the contents of the server log and might contain information about why a test run failed.
+</li></ul><p>One particular case of test run failures is related to tests that use content-based correlation embedded in <tt>Input.xml</tt> (for example, the <tt>Input.xml</tt> files in the Travel Reservation Service test cases have <tt>&lt;UniqueID>...&lt;/UniqueID></tt> as the basis for correlation). In this situation, if you run the test case when there is already a running process instance initiated by the same test case, the second process instance will not be initiated and the test will fail. The following message will appear in the GlassFish V2 Application Server log:
+</p>
+<pre>
+Exception occurred while executing a business process instance.
+com.sun.jbi.engine.bpel.core.bpel.exception.CorrelationAlreadyExists: An instance is associated with the correlation
+&lt;...&gt;
+</pre>
+<br />
+<h3 id="section-TroubleshootingTheBPELServiceEngine-DisablingFirewallsWhenUsingServers">Disabling Firewalls when Using Servers</h3>
+You might have to disable any firewall in order to successfully deploy run, debug, or test applications on the Application Server or business processes on the BPEL Server.
+<div class="center">
+<a class="wikipage" href="Wikif987.html?page=TroubleshootingTheBPELServiceEngine">Top</a></div>
+<h3 id="section-TroubleshootingTheBPELServiceEngine-RequiredCorrelationSetUsageIsNotDetectedByTheValidationSystem">Required Correlation Set Usage is Not Detected by the Validation System</h3>
+The BPEL service engine requires strict usage of correlation sets. Currently the validation system does not detect violations of the following requirements:
+<ul><li> <b>On Message:</b> The On Message element must have a valid <tt>&lt;correlations></tt> child if the On Message is used in a Pick activity that does not have the <tt>createInstance="yes"</tt> attribute.
+</li><li> <b>Receive:</b> The Receive element must have a valid <tt>&lt;correlations></tt> child if it does not have the <tt>createInstance="yes"</tt> attribute.
+</li><li> <b>On Event:</b> The On Event element must have a valid <tt>&lt;correlations></tt> child.
+</li></ul>See the NetBeans IDE 6.1 Release Notes for other known issues for the SOA pack.
+<br />
+<div class="center">
+<a class="wikipage" href="Wikif987.html?page=TroubleshootingTheBPELServiceEngine">Top</a></div>
+<p><br />
+<a class="wikipage" href="Wiki7030.html?page=BPELServiceEngineTaskHowTos">Previous</a><br />
+<a class="wikipage" href="Wiki20e8.html?page=UsingBPELDesignerServiceEngine">Home</a>
+</p>
+
+
+
+  </div>
+
+  
+  
+  <div id="pageinfo" style="display:none;" >
+
+    
+
+
+
+
+
+
+
+
+  <p>
+  This page (revision-16) was last changed on 
+  <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TroubleshootingTheBPELServiceEngine&amp;r1=16&amp;r2=15"
+    title="Show changes of last page update" >
+    
+    09-Jun-09 10:56 AM, -0700
+  </a> by rjacobus.
+  <a href="http://wiki.open-esb.java.net/rss.jsp?page=TroubleshootingTheBPELServiceEngine&amp;mode=wiki"
+    title="RSS page feed for Troubleshooting The BPEL Service Engine" ><img src="images/xml.png" border="0" alt="[RSS]"/></a>
+    
+    <br />
+    This page was created on 
+    <a  href="http://wiki.open-esb.java.net/Wiki.jsp?page=TroubleshootingTheBPELServiceEngine&amp;version=1">07-Oct-08 00:01 AM, -0700</a> by rjacobus.
+    
+  </p>    
+
+  
+
+  
+   
+  
+  <p><a href="http://wiki.open-esb.java.net/PageInfo.jsp?page=TroubleshootingTheBPELServiceEngine" id="moreinfo" >More info...</a></p>
+  
+  
+
+  <div class="tabmenu ">
+  
+  
+  
+
+  
+
+  
+
+  
+  
+  
+  
+  <span><a class="activetab" id="menu-versionHistory" onclick="TabbedSection.onclick('versionHistory')" >Version History</a></span>
+  
+
+  <span><a id="menu-incomingLinks" onclick="TabbedSection.onclick('incomingLinks')" >Incoming Links</a></span>
+
+  <span><a id="menu-outgoingLinks" onclick="TabbedSection.onclick('outgoingLinks')" >Outgoing Links</a></span>
+
+  
+  
+  </div>
+<div class="tabs ">
+  
+  <div id="versionHistory" >
+
+
+    
+    <div class="zebra-table ">
+    <table class="wikitable" >
+      <tr>
+        <th>Version</th>                        
+        <th>Date</th>
+        <th>Author</th>
+        <th>Size</th>
+        <th>Changes ...</th>
+        
+      </tr>
+
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TroubleshootingTheBPELServiceEngine&amp;version=16" accesskey="" title="">
+            16
+          </a>
+        </td>
+
+        <td>
+          09-Jun-09 10:56 AM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>13604</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TroubleshootingTheBPELServiceEngine&amp;r1=16&amp;r2=15">to previous</a>
+            
+          
+
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TroubleshootingTheBPELServiceEngine&amp;version=15" accesskey="" title="">
+            15
+          </a>
+        </td>
+
+        <td>
+          21-May-09 09:55 AM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>13503</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TroubleshootingTheBPELServiceEngine&amp;r1=15&amp;r2=14">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TroubleshootingTheBPELServiceEngine&amp;r1=16&amp;r2=15">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TroubleshootingTheBPELServiceEngine&amp;version=14" accesskey="" title="">
+            14
+          </a>
+        </td>
+
+        <td>
+          17-Dec-08 14:17 PM, -0800
+        </td>
+        <td>rjacobus</td>
+        <td>13245</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TroubleshootingTheBPELServiceEngine&amp;r1=14&amp;r2=13">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TroubleshootingTheBPELServiceEngine&amp;r1=16&amp;r2=14">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TroubleshootingTheBPELServiceEngine&amp;version=13" accesskey="" title="">
+            13
+          </a>
+        </td>
+
+        <td>
+          05-Dec-08 11:37 AM, -0800
+        </td>
+        <td>SWeber</td>
+        <td>13281</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TroubleshootingTheBPELServiceEngine&amp;r1=13&amp;r2=12">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TroubleshootingTheBPELServiceEngine&amp;r1=16&amp;r2=13">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TroubleshootingTheBPELServiceEngine&amp;version=12" accesskey="" title="">
+            12
+          </a>
+        </td>
+
+        <td>
+          10-Nov-08 13:10 PM, -0800
+        </td>
+        <td>rjacobus</td>
+        <td>13300</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TroubleshootingTheBPELServiceEngine&amp;r1=12&amp;r2=11">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TroubleshootingTheBPELServiceEngine&amp;r1=16&amp;r2=12">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TroubleshootingTheBPELServiceEngine&amp;version=11" accesskey="" title="">
+            11
+          </a>
+        </td>
+
+        <td>
+          28-Oct-08 15:16 PM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>13328</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TroubleshootingTheBPELServiceEngine&amp;r1=11&amp;r2=10">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TroubleshootingTheBPELServiceEngine&amp;r1=16&amp;r2=11">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TroubleshootingTheBPELServiceEngine&amp;version=10" accesskey="" title="">
+            10
+          </a>
+        </td>
+
+        <td>
+          17-Oct-08 15:24 PM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>13254</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TroubleshootingTheBPELServiceEngine&amp;r1=10&amp;r2=9">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TroubleshootingTheBPELServiceEngine&amp;r1=16&amp;r2=10">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TroubleshootingTheBPELServiceEngine&amp;version=9" accesskey="" title="">
+            9
+          </a>
+        </td>
+
+        <td>
+          17-Oct-08 15:17 PM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>13257</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TroubleshootingTheBPELServiceEngine&amp;r1=9&amp;r2=8">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TroubleshootingTheBPELServiceEngine&amp;r1=16&amp;r2=9">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TroubleshootingTheBPELServiceEngine&amp;version=8" accesskey="" title="">
+            8
+          </a>
+        </td>
+
+        <td>
+          17-Oct-08 15:04 PM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>13261</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TroubleshootingTheBPELServiceEngine&amp;r1=8&amp;r2=7">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TroubleshootingTheBPELServiceEngine&amp;r1=16&amp;r2=8">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TroubleshootingTheBPELServiceEngine&amp;version=7" accesskey="" title="">
+            7
+          </a>
+        </td>
+
+        <td>
+          17-Oct-08 14:30 PM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>13059</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TroubleshootingTheBPELServiceEngine&amp;r1=7&amp;r2=6">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TroubleshootingTheBPELServiceEngine&amp;r1=16&amp;r2=7">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TroubleshootingTheBPELServiceEngine&amp;version=6" accesskey="" title="">
+            6
+          </a>
+        </td>
+
+        <td>
+          16-Oct-08 14:18 PM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>1933</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TroubleshootingTheBPELServiceEngine&amp;r1=6&amp;r2=5">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TroubleshootingTheBPELServiceEngine&amp;r1=16&amp;r2=6">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TroubleshootingTheBPELServiceEngine&amp;version=5" accesskey="" title="">
+            5
+          </a>
+        </td>
+
+        <td>
+          13-Oct-08 13:15 PM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>1905</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TroubleshootingTheBPELServiceEngine&amp;r1=5&amp;r2=4">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TroubleshootingTheBPELServiceEngine&amp;r1=16&amp;r2=5">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TroubleshootingTheBPELServiceEngine&amp;version=4" accesskey="" title="">
+            4
+          </a>
+        </td>
+
+        <td>
+          13-Oct-08 11:51 AM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>1846</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TroubleshootingTheBPELServiceEngine&amp;r1=4&amp;r2=3">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TroubleshootingTheBPELServiceEngine&amp;r1=16&amp;r2=4">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TroubleshootingTheBPELServiceEngine&amp;version=3" accesskey="" title="">
+            3
+          </a>
+        </td>
+
+        <td>
+          13-Oct-08 11:50 AM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>1833</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TroubleshootingTheBPELServiceEngine&amp;r1=3&amp;r2=2">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TroubleshootingTheBPELServiceEngine&amp;r1=16&amp;r2=3">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TroubleshootingTheBPELServiceEngine&amp;version=2" accesskey="" title="">
+            2
+          </a>
+        </td>
+
+        <td>
+          07-Oct-08 00:33 AM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>1820</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TroubleshootingTheBPELServiceEngine&amp;r1=2&amp;r2=1">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TroubleshootingTheBPELServiceEngine&amp;r1=16&amp;r2=2">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TroubleshootingTheBPELServiceEngine&amp;version=1" accesskey="" title="">
+            1
+          </a>
+        </td>
+
+        <td>
+          07-Oct-08 00:01 AM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>1817</td>
+
+        <td>
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TroubleshootingTheBPELServiceEngine&amp;r1=16&amp;r2=1">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+
+    </table>  
+    </div>
+    
+
+  </div>
+
+  
+
+  <div id="incomingLinks" style="display:none;" >
+
+    <a class="wikipage" href="Wikif987.html?page=TroubleshootingTheBPELServiceEngine" accesskey="" title="">Troubleshooting The BPEL Service Engine</a>
+    <ul><li><a class="wikipage" href="Wiki21f2.html?page=BPELBluePrints">BPEL Blue Prints</a>
+</li><li><a class="wikipage" href="Wiki3879.html?page=BPELDesignerAndServiceEngineFeatures">BPEL Designer And Service Engine Features</a>
+</li><li><a class="wikipage" href="Wiki5e52.html?page=BPELDesignerAndServiceEngineOverview">BPEL Designer And Service Engine Overview</a>
+</li><li><a class="wikipage" href="Wiki5233.html?page=BPELProcessLoggingAndAlerting">BPEL Process Logging And Alerting</a>
+</li><li><a class="wikipage" href="Wikicae3.html?page=BPELServiceEngineDeploymentArtifacts">BPEL Service Engine Deployment Artifacts</a>
+</li><li><a class="wikipage" href="Wiki7030.html?page=BPELServiceEngineTaskHowTos">BPEL Service Engine Task How Tos</a>
+</li><li><a class="wikipage" href="Wiki73af.html?page=ConfiguringClusteringAndFailoverForBPEL">Configuring Clustering And Failover For BPEL</a>
+</li><li><a class="wikipage" href="Wikid4c2.html?page=ConfiguringFailoverForBPEL">Configuring Failover For BPEL</a>
+</li><li><a class="wikipage" href="Wiki0931.html?page=ConfiguringPersistenceAndRecoveryForBPEL">Configuring Persistence And Recovery For BPEL</a>
+</li><li><a class="wikipage" href="Wiki2f9d.html?page=ConfiguringTheBPELServiceEngineRuntimeProperties">Configuring The BPEL Service Engine Runtime Properties</a>
+</li><li><a class="wikipage" href="Wiki77bf.html?page=ConfiguringTheQualityOfServiceProperties">Configuring The Quality Of Service Properties</a>
+</li><li><a class="wikipage" href="Wikia9da.html?page=CreatingTheBPELModuleProject">Creating The BPEL Module Project</a>
+</li><li><a class="wikipage" href="Wiki17ca.html?page=DevelopingTheBPELProcessUsingTheBPELDiagram">Developing The BPEL Process Using The BPEL Diagram</a>
+</li><li><a class="wikipage" href="Wiki434d.html?page=MonitoringTheBPELServiceEngine">Monitoring The BPEL Service Engine</a>
+</li><li><a class="wikipage" href="Wiki0ddb.html?page=NavigatingTheBPELDesigner">Navigating The BPEL Designer</a>
+</li><li><a class="wikipage" href="Wiki1302.html?page=TestingAndDebuggingBPELProcesses">Testing And Debugging BPEL Processes</a>
+</li><li><a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">The BPEL Designer Palette Elements</a>
+</li><li><a class="wikipage" href="Wikifbc9.html?page=UnderstandingTheBPELModuleProject">Understanding The BPEL Module Project</a>
+</li><li><a class="wikipage" href="Wiki20e8.html?page=UsingBPELDesignerServiceEngine">Using BPEL Designer Service Engine</a>
+</li><li><a class="wikipage" href="Wikia3b6.html?page=UsingCorrelation">Using Correlation</a>
+</li><li><a class="wikipage" href="Wikife94.html?page=UsingDynamicPartnerLinksAndDynamicAddressing">Using Dynamic Partner Links And Dynamic Addressing</a>
+</li><li><a class="wikipage" href="Wikie39c.html?page=UsingHandlers">Using Handlers</a>
+</li><li><a class="wikipage" href="Wikiad48.html?page=UsingNormalizedMessageProperties">Using Normalized Message Properties</a>
+</li><li><a class="wikipage" href="Wiki39db.html?page=UsingTheBPELMapper">Using The BPEL Mapper</a>
+</li><li><a class="wikipage" href="Wiki1f81.html?page=ValidatingTheBPELProcess">Validating The BPEL Process</a>
+</li></ul>
+  </div>
+
+
+  <div id="outgoingLinks" style="display:none;" >
+
+    
+      <div class="ReferredPagesPlugin">
+<a class="wikipage" href="Wikif987.html?page=TroubleshootingTheBPELServiceEngine" title="ReferredPagesPlugin: depth[1] include[.*] exclude[^$] format[compact]">TroubleshootingTheBPELServiceEngine</a>
+<ul>
+<li><a class="wikipage" href="Wiki21f2.html?page=BPELBluePrints">BPELBluePrints</a></li>
+<li><a class="wikipage" href="Wiki3879.html?page=BPELDesignerAndServiceEngineFeatures">BPELDesignerAndServiceEngineFeatures</a></li>
+<li><a class="wikipage" href="Wiki5e52.html?page=BPELDesignerAndServiceEngineOverview">BPELDesignerAndServiceEngineOverview</a></li>
+<li><a class="wikipage" href="Wiki5233.html?page=BPELProcessLoggingAndAlerting">BPELProcessLoggingAndAlerting</a></li>
+<li><a class="wikipage" href="Wikicae3.html?page=BPELServiceEngineDeploymentArtifacts">BPELServiceEngineDeploymentArtifacts</a></li>
+<li><a class="wikipage" href="Wiki7030.html?page=BPELServiceEngineTaskHowTos">BPELServiceEngineTaskHowTos</a></li>
+<li><a class="wikipage" href="Wikid4c2.html?page=ConfiguringFailoverForBPEL">ConfiguringFailoverForBPEL</a></li>
+<li><a class="wikipage" href="Wiki0931.html?page=ConfiguringPersistenceAndRecoveryForBPEL">ConfiguringPersistenceAndRecoveryForBPEL</a></li>
+<li><a class="wikipage" href="Wiki2f9d.html?page=ConfiguringTheBPELServiceEngineRuntimeProperties">ConfiguringTheBPELServiceEngineRuntimeProperties</a></li>
+<li><a class="wikipage" href="Wiki77bf.html?page=ConfiguringTheQualityOfServiceProperties">ConfiguringTheQualityOfServiceProperties</a></li>
+<li><a class="wikipage" href="Wikia9da.html?page=CreatingTheBPELModuleProject">CreatingTheBPELModuleProject</a></li>
+<li><a class="wikipage" href="Wiki17ca.html?page=DevelopingTheBPELProcessUsingTheBPELDiagram">DevelopingTheBPELProcessUsingTheBPELDiagram</a></li>
+<li><a class="wikipage" href="Wiki434d.html?page=MonitoringTheBPELServiceEngine">MonitoringTheBPELServiceEngine</a></li>
+<li><a class="wikipage" href="Wiki0ddb.html?page=NavigatingTheBPELDesigner">NavigatingTheBPELDesigner</a></li>
+<li><a class="wikipage" href="Wiki1302.html?page=TestingAndDebuggingBPELProcesses">TestingAndDebuggingBPELProcesses</a></li>
+<li><a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">TheBPELDesignerPaletteElements</a></li>
+<li><a class="wikipage" href="Wikifbc9.html?page=UnderstandingTheBPELModuleProject">UnderstandingTheBPELModuleProject</a></li>
+<li><a class="wikipage" href="Wiki20e8.html?page=UsingBPELDesignerServiceEngine">UsingBPELDesignerServiceEngine</a></li>
+<li><a class="wikipage" href="Wikia3b6.html?page=UsingCorrelation">UsingCorrelation</a></li>
+<li><a class="wikipage" href="Wikife94.html?page=UsingDynamicPartnerLinksAndDynamicAddressing">UsingDynamicPartnerLinksAndDynamicAddressing</a></li>
+<li><a class="wikipage" href="Wikie39c.html?page=UsingHandlers">UsingHandlers</a></li>
+<li><a class="wikipage" href="Wikiad48.html?page=UsingNormalizedMessageProperties">UsingNormalizedMessageProperties</a></li>
+<li><a class="wikipage" href="Wiki39db.html?page=UsingTheBPELMapper">UsingTheBPELMapper</a></li>
+<li><a class="wikipage" href="Wiki1f81.html?page=ValidatingTheBPELProcess">ValidatingTheBPELProcess</a></li>
+</ul>
+</div>
+
+    
+    
+  </div>
+
+
+  
+  
+  <div style="clear:both; height:0px;" > </div>
+</div>
+ 
+
+
+
+
+
+
+
+
+
+  </div>
+
+  
+<div style="clear:both; height:0px;" > </div>
+</div>
+
+</div> 
+
+
+  
+
+
+
+<div id="favorites">
+
+
+<div class="username">G'day,
+  
+    <a title="Hi, Anonymous Guest"  href="Wiki48c3.html?page=Login">Anonymous Guest</a>
+  
+  
+  
+  
+</div>  
+
+
+
+
+
+
+
+
+<p />
+
+
+
+  
+<p />
+<p />
+
+
+<div class="wikiversion">JSPWiki v2.4.100</div>
+
+<div class="rssfeed"><a href="rss.rdf"><img src="images/xml.png" alt="[RSS]" border="0" title="Aggregate the RSS feed of the entire wiki"/></a></div>
+
+<div style="clear:both; height:0px;" > </div>
+
+</div> 
+
+  
+
+
+
+
+
+<div id='actionsBottom' class="pageactions"> 
+
+  <span class='quicklinks quick2Top'>
+    <a href="#wikibody" title='Go to Top' >&laquo;</a>
+  </span>
+
+  <span class="actionHome">
+    <a href="Wikib2ab.html?page=Main"
+       title="Go to home page Main ">Home</a>
+  </span>
+  
+  
+    
+
+    
+  
+  
+  <span class="actionIndex">
+     <a href="Wiki5f9e.html?page=PageIndex"
+       title="Alphabetically sorted list of pages [ x ]">Index</a>
+  </span>
+  
+  <span class="actionRecentChanges">
+     <a href="Wiki5fc7.html?page=RecentChanges"
+        title="Pages sorted by modification date [ u ]">Changes</a>
+  </span>
+
+  
+    
+      <span class="actionPrefs">
+        <a href="Wiki7eba.html?page=UserPreferences"
+           title="Set User Preferences" >Prefs</a>
+      </span>
+    
+  
+
+  
+    <div class="pageinfo">
+      
+        This page (revision-16) was last changed on 
+        <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TroubleshootingTheBPELServiceEngine&amp;r1=16&amp;r2=15"
+          title="Show changes of last page update" >  
+        
+        09-Jun-09 10:56 AM, -0700</a>
+      
+      
+      by rjacobus
+
+      
+    </div>  
+  
+
+  <div style="clear:both; height:0;"> </div> 
+</div>
+
+  
+ 
+  
+
+  
+
+
+<div id="footer">
+
+<table><tr><td>
+  <div class="wikiversion">
+    JSPWiki v2.4.100                       
+  </div>
+</td>
+<td>
+<br>Copyright &copy; 2011, Oracle and/or its affiliates. All rights reserved. Oracle and Java are registered trademarks of Oracle and/or its affiliates. Other names may be trademarks of their respective owners. <a href="http://www.oracle.com/"><img src="images/ora_logo_small.gif" /> </a>
+  <div class="rssfeed">
+    <a href="rss.rdf"><img src="images/xml.png" alt="[RSS]" border="0" title="Aggregate the RSS feed"/></a>
+  </div>
+</td></tr></table>
+  <div style="clear:both; height:0px;" > </div>
+
+</div>
+  
+
+  </div>
+  <div style="clear:both; height:0;" > </div>
+
+
+
+<!-- Page counters -->
+<script type="text/javascript" language="javascript">
+var sc_project=1965314; 
+var sc_invisible=1; 
+var sc_partition=17; 
+var sc_security="c5f5efea"; 
+</script>
+<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script>
+
+
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+<script type="text/javascript">
+_uacct = "UA-993823-3";
+urchinTracker();
+</script>
+</body>
+
+<!-- Mirrored from wiki.open-esb.java.net/Wiki.jsp?page=TroubleshootingTheBPELServiceEngine by HTTrack Website Copier/3.x [XR&CO'2010], Thu, 08 Jul 2010 02:16:47 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+</html>
+
+

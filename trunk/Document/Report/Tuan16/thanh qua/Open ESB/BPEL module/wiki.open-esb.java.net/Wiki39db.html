@@ -1,0 +1,1757 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+
+
+<!-- Mirrored from wiki.open-esb.java.net/Wiki.jsp?page=UsingTheBPELMapper by HTTrack Website Copier/3.x [XR&CO'2010], Thu, 08 Jul 2010 02:16:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head>
+
+  <title>Using The BPEL Mapper - OpenESB: the Open Source ESB for SOA & Integration</title>
+  
+
+
+
+
+
+<link rel="stylesheet" type="text/css" media="screen, projection" 
+     href="templates/brushed/jspwiki.css" />
+
+<!-- browser specific cssinclude not required in brushed template
+<script type="text/javascript"
+         src="/templates/brushed/cssinclude.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+  Wiki.loadBrowserSpecificCSS("brushed");
+//]]>
+</script>
+-->
+
+
+
+
+<link rel="stylesheet" type="text/css" 
+     href="templates/brushed/skins/Smart/skin.css" />
+<!-- INCLUDERESOURCES (stylesheet) -->
+
+
+
+<!--[if IE]>
+<style type="text/css" media="screen">
+img, a, div { behavior: url("templates/brushed/scripts/iepngfix.htc"); }
+</style>
+<![endif]-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="search" 
+     href="Wiki702d.html?page=FindPage"
+    title="Search Open ESB Wiki" />
+<link rel="help"   
+     href="Wikia3b7.html?page=TextFormattingRules" 
+    title="Help" />
+<link rel="start"  
+     href="Wikib2ab.html?page=Main"                
+    title="Front page" />
+<!--<link rel="stylesheet" type="text/css" media="print"
+     href="/templates/brushed/jspwiki_print.css" />
+<link rel="alternate stylesheet" type="text/css"
+     href="/templates/brushed/jspwiki_print.css" 
+    title="Print friendly" />-->
+<link rel="alternate stylesheet" type="text/css" 
+     href="templates/brushed/jspwiki.css" 
+    title="Standard" />
+<link rel="icon" type="image/png" href="images/openesb16x16.png" />
+
+<link rel="template" href="http://wiki.open-esb.java.net/templates/brushed" id="template-dir"/>
+<link rel="alternate" type="application/rss+xml" title="RSS wiki feed for the entire site." href="rss.rdf" />
+<link rel="alternate" type="application/rss+xml" title="RSS wiki feed for page Open ESB Wiki: UsingTheBPELMapper." href="http://wiki.open-esb.java.net/rss.jsp?page=UsingTheBPELMapper&amp;mode=wiki" />
+
+
+
+<script type="text/javascript"
+         src="templates/brushed/scripts/prototype.js" ></script>
+<script type="text/javascript" 
+         src="templates/brushed/scripts/brushed.js" ></script>
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+  Wiki.setBaseURL ( "index.html" );
+  Wiki.setPageName( "UsingTheBPELMapper" ); /* pagename without blanks */
+  Wiki.setUserName( "113.170.138.21" );
+
+  Wiki.setDELIM              ( "¤" );
+  Wiki.setPrefDateFormat     ( "dd-MMM-yy HH:mm a, Z" );
+  Wiki.setPrefSkinName       ( "Smart" );
+  Wiki.setPrefTimeZone       ( "" );
+  Wiki.setPrefEditAreaHeight ( "24" );
+  Wiki.setPrefShowQuickLinks ( "no" );
+  Wiki.setPrefSowCalendar    ( "no" );
+//]]>
+</script>
+<script type="text/javascript" 
+         src="templates/brushed/skins/Smart/skin.js"></script>
+
+<!-- INCLUDERESOURCES (script) -->
+
+
+  
+</head>
+
+<body class="view" id="gradient">
+<!--
+<p id="underline" class="barMargin"></p>
+-->
+<div id="wikibody" >
+  
+
+
+
+
+<div id="header">
+<!--
+  <div class="applicationlogo"> 
+    <a href="https://open-esb.dev.java.net/public/downloads.html" title="OpenESB Downloads"></a>
+  </div>
+-->  
+
+<table width="100%" id="headertable"><tr>
+  <td><a href="https://open-esb.dev.java.net/" style="border: none;"><img style="border: none;" height="60" width="304" alt="Open ESB: the Open Enterprise Service Bus... Open Standards + Open Source" src="images/ESBLogoTag-304x60C.jpg"/></a></td>
+
+
+  <td id="rhstop">
+  
+
+<div id="rhsuser" class="rhsusername">
+  Not logged in | 
+    <a title="Hi, Anonymous Guest"  href="Wiki48c3.html?page=Login">Login</a>
+  
+  
+
+  
+
+  
+</div>  
+  
+  
+<div id="oesearch" style="vertical-align: bottom">
+  <br/>
+  <br/>
+	<form action="https://open-esb.dev.java.net/SearchResults.html" id="cse-search-box"> 
+	  <div>
+	    <input type="hidden" name="cx" value="013607241216432041017:tcd_nlc0tem" />
+	    <input type="hidden" name="cof" value="FORID:11" />
+	    <input type="hidden" name="ie" value="UTF-8" />
+	    <input type="text" name="q" size="20" />
+	    <input type="submit" name="sa" value="Search" />
+	  </div>
+	</form>
+</div>
+  
+  
+  </td>
+</tr></table>
+
+<!-- ==================== Menu Structure ==================== -->
+<script type="text/javascript" src="static/menu.js" ></script>
+<div id="z_menu_02"><table width="100%"><tr><td>
+	<div id="z_menu_01">
+		<script>writeOEMenu();</script>
+	</div>
+</td></tr></table></div>
+<!-- ==================== End menu ==================== -->
+
+
+
+
+
+
+
+
+
+
+  <div class="companylogo">
+  </div>
+  
+  
+<!--
+<ul class="iconlist">
+<li class="documentation"><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=Documentation"><img src="/openesbwiki/templates/brushed/skins/Smart/images/documentation.png" width="81" height="65"/></a></li>
+<li class="link"><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsefulLinks"><img src="/openesbwiki/templates/brushed/skins/Smart/images/links.png" width="64" height="65"/></a></li>
+<li class="participate"><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=GetInvolved"><img src="/openesbwiki/templates/brushed/skins/Smart/images/participate.png" width="61" height="68"/></a></li>
+<li class="downloads"><a href="https://open-esb.dev.java.net/Downloads.html"><img src="/openesbwiki/templates/brushed/skins/Smart/images/downloads.png" width="61" height="65"/></a></li>
+</ul>
+<div style="clear: left;"></div>
+ --> 
+
+  <table width="100%">
+  <tr>
+  <td><div class="pagename2">Using The BPEL Mapper</div></td>
+  </tr>
+  </table>
+  
+
+
+  
+  <div class="searchbox">
+
+
+<form action="http://wiki.open-esb.java.net/Search.jsp"
+    onsubmit="SearchBox.submit( this.query.value )"
+ onmouseover="Element.show('searchboxMenu');"
+  onmouseout= "Element.hide('searchboxMenu');"
+        name="searchForm" id="searchForm" 
+        accept-charset="UTF-8">
+  <div>
+  
+  <input onblur="if( this.value == '' ) { this.value = 'Search'}; " 
+        onfocus="if( this.value == 'Search' ) { this.value = ''}; "
+           type="text" value="Wiki search" name="query" id="query" size="24" 
+      accesskey="f"></input>
+  </div>  
+  <div id="searchboxMenu" style='display:none;'>
+    <div>
+      <a href="javascript://nop/" 
+         onclick="SearchBox.navigation( 'Wiki195c.html?page=__PAGEHERE__','UsingTheBPELMapper' );return false;"
+         title="View the selected page">view</a> 
+      | 
+      <a href="javascript://nop/" 
+         onclick="SearchBox.navigation( 'http://wiki.open-esb.java.net/Edit.jsp?page=__PAGEHERE__','UsingTheBPELMapper' );return false;"
+         title="Edit the selected page">edit</a> 
+      | 
+      <a href="javascript://nop/" 
+         onclick="SearchBox.clone( 'http://wiki.open-esb.java.net/Edit.jsp?page=__PAGEHERE__','UsingTheBPELMapper' );return false;"
+         title="Clone this page">clone</a> 
+      |
+      <a href="javascript://nop/" 
+         onclick="SearchBox.navigation( 'Search136d.html?query=__PAGEHERE__','UsingTheBPELMapper' );return false;"
+         title="Advanced Search">find</a> 
+      [ f ]
+    </div>
+    <div id="searchResult" > </div>
+    <div id="recentSearches" > </div>
+  </div>
+
+</form>
+<script type="text/javascript">
+//<![CDATA[    
+    function updateSearchResult( )
+    {  
+      if( $F('query') == 'Search' ) return;
+      new Ajax.Updater(
+        'searchResult', 
+        'templates/brushed/FindAjax.html',
+        { 
+          asynchronous: true,
+          parameters: Form.serialize( 'searchForm' ) + "&compact=true"
+        } ); 
+    } ;
+    new Form.Element.Observer( "query", 1, updateSearchResult ); 
+//]]>
+</script>
+    
+   </div>
+
+  <div class="breadcrumbs">Your trail: <a class="wikipage" href="Wiki195c.html?page=__PAGEHERE__">__PAGEHERE__</a> &gt; <a class="wikipage" href="Wiki5f9e.html?page=PageIndex">PageIndex</a> &gt; <a class="wikipage" href="Wiki5fc7.html?page=RecentChanges">RecentChanges</a> &gt; <a class="wikipage" href="Wiki20e8.html?page=UsingBPELDesignerServiceEngine">UsingBPELDesignerServiceEngine</a> &gt; <a class="wikipage" href="Wiki5e52.html?page=BPELDesignerAndServiceEngineOverview">BPELDesignerAndServiceEngineOverview</a> &gt; <a class="wikipage" href="Wiki3879.html?page=BPELDesignerAndServiceEngineFeatures">BPELDesignerAndServiceEngineFeatures</a> &gt; <a class="wikipage" href="Wiki0ddb.html?page=NavigatingTheBPELDesigner">NavigatingTheBPELDesigner</a> &gt; <a class="wikipage" href="Wikia9da.html?page=CreatingTheBPELModuleProject">CreatingTheBPELModuleProject</a> &gt; <a class="wikipage" href="Wiki17ca.html?page=DevelopingTheBPELProcessUsingTheBPELDiagram">DevelopingTheBPELProcessUsingTheBPELDiagram</a> &gt; <a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">TheBPELDesignerPaletteElements</a></div>
+
+  <div style="clear:both; height:0;" > </div>
+
+</div>
+
+
+
+
+  
+
+
+
+
+
+<div id="actionsTop" class="pageactions"> 
+<!--
+  <span class="actionHome">
+    <a href="http://wiki.open-esb.java.net/Wiki.jsp?page=Main"
+       title="Go to home page Main ">Home</a>
+  </span>
+-->  
+  
+    
+    
+    
+<!--
+    
+  -->
+  
+  
+  <span class="actionIndex">
+     <a href="Wiki5f9e.html?page=PageIndex"
+       title="Alphabetically sorted list of pages [ x ]" accesskey="x">Index</a>
+  </span>
+  
+  <span class="actionRecentChanges">
+     <a href="Wiki5fc7.html?page=RecentChanges"
+        title="Pages sorted by modification date [ u ]" accesskey="u">Changes</a>
+  </span>
+
+  
+
+<!--
+  <span class="quicklinks quick2Bottom">
+    <a href="#footer" title="Go to Bottom" >&raquo;</a>
+  </span>
+-->
+  <div style="clear:both; height:0;"> </div> 
+</div>
+
+
+
+
+
+  <div id="page">
+
+
+
+
+
+<div class="tabmenu ">
+  
+  
+  
+  
+  
+  
+  
+
+  <span><a class="activetab" id="menu-pagecontent" onclick="TabbedSection.onclick('pagecontent')" accesskey="v" ><u>V</u>iew</a></span>
+  
+  
+  <span><a id="menu-attachments" onclick="TabbedSection.onclick('attachments')" accesskey="a" ><u>A</u>ttach (13)</a></span>
+  
+  <span><a id="menu-pageinfo" onclick="TabbedSection.onclick('pageinfo')" accesskey="i" ><u>I</u>nfo</a></span>
+  
+</div>
+<div class="tabs ">
+  <div id="pagecontent" >
+
+    
+
+
+
+
+
+
+
+<h3 id="section-UsingTheBPELMapper-UsingTheBPELDesignerAndServiceEngine">Using the BPEL Designer and Service Engine </h3>
+<p><b>Contents</b>
+</p>
+<ul><li> <a class="wikipage" href="Wiki20e8.html?page=UsingBPELDesignerServiceEngine">Using the BPEL Designer and Service Engine</a>
+</li><li> <a class="wikipage" href="Wiki5e52.html?page=BPELDesignerAndServiceEngineOverview">Overview</a>
+</li><li> <a class="wikipage" href="Wiki3879.html?page=BPELDesignerAndServiceEngineFeatures">BPEL Designer and Service Engine Features</a>
+</li><li> <a class="wikipage" href="Wikifbc9.html?page=UnderstandingTheBPELModuleProject">Understanding the BPEL Module Project</a>
+</li><li> <a class="wikipage" href="Wiki0ddb.html?page=NavigatingTheBPELDesigner">Navigating the BPEL Designer</a>
+</li><li> <a class="wikipage" href="Wikia9da.html?page=CreatingTheBPELModuleProject">Creating a BPEL Module Project</a>
+</li><li> <a class="wikipage" href="Wiki17ca.html?page=DevelopingTheBPELProcessUsingTheBPELDiagram">Developing the BPEL Process Using the BPEL Diagram</a>
+</li><li> <a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">The BPEL Designer Palette Elements</a>
+</li><li> <span style="color:#3333ff;"><b>Using the BPEL Mapper</b></span>
+<ul><li> Creating BPEL Mappings
+</li><li> Working with Predicates
+</li><li> XPath Function Reference
+</li><li> Mapping Examples
+</li><li> Using Type Cast and Pseudo-Components
+</li></ul></li><li> <a class="wikipage" href="Wikiad48.html?page=UsingNormalizedMessageProperties">Using Normalized Message Properties</a>
+</li><li> <a class="wikipage" href="Wikie39c.html?page=UsingHandlers">Using Handlers</a>
+</li><li> <a class="wikipage" href="Wikia3b6.html?page=UsingCorrelation">Using Correlation</a>
+</li><li> <a class="wikipage" href="Wiki1f81.html?page=ValidatingTheBPELProcess">Validating a BPEL Process</a>
+</li><li> <a class="wikipage" href="Wiki5233.html?page=BPELProcessLoggingAndAlerting">BPEL Process Logging and Alerting</a>
+</li><li> <a class="wikipage" href="Wiki2f9d.html?page=ConfiguringTheBPELServiceEngineRuntimeProperties">Configuring the BPEL Service Engine Runtime Properties</a>
+</li><li> <a class="wikipage" href="Wikicae3.html?page=BPELServiceEngineDeploymentArtifacts">BPEL Service Engine Deployment Artifacts</a>
+</li><li> <a class="wikipage" href="Wiki1302.html?page=TestingAndDebuggingBPELProcesses">Testing and Debugging BPEL Processes</a>
+</li><li> <a class="wikipage" href="Wiki434d.html?page=MonitoringTheBPELServiceEngine">Monitoring the BPEL Service Engine</a>
+</li><li> <a class="wikipage" href="Wiki77bf.html?page=ConfiguringTheQualityOfServiceProperties">Configuring Quality of Service (QOS) Properties, Throttling, and Redelivery</a>
+</li><li> <a class="wikipage" href="Wikife94.html?page=UsingDynamicPartnerLinksAndDynamicAddressing">Using Dynamic Partner Links and Dynamic Addressing</a>
+</li><li> <a class="wikipage" href="Wiki0931.html?page=ConfiguringPersistenceAndRecoveryForBPEL">Configuring Persistence and Recovery for the BPEL Service Engine</a>
+</li><li> <a class="wikipage" href="Wikid4c2.html?page=ConfiguringFailoverForBPEL">Configuring Failover for the BPEL Service Engine</a>
+</li><li> <a class="wikipage" href="Wiki21f2.html?page=BPELBluePrints">BPEL BluePrints</a>
+</li><li> <a class="wikipage" href="Wiki7030.html?page=BPELServiceEngineTaskHowTos">BPEL Service Engine Task How-tos</a>
+</li><li> <a class="wikipage" href="Wikif987.html?page=TroubleshootingTheBPELServiceEngine">Troubleshooting the BPEL Designer and Service Engine</a>
+</li></ul><br />
+<h2 id="section-UsingTheBPELMapper-UsingTheBPELMapper">Using the BPEL Mapper</h2>
+<hr />
+The BPEL Mapper is available from the Design or Source view of the BPEL Designer. The Mapper provides a framework for processing and directing BPEL process data. 
+<p>The BPEL Mapper framework consists of the following components:
+</p>
+<ul><li> <b>Menu Bar:</b> The menu bar provides operators, necessary elements, and XPath functions you use to create BPEL mappings. You can also enhance or extend BPEL mappings by incorporating predicates that consist of XPath functions.<br />On the right side of the menu bar, you can use the following buttons to work with function boxes, or functoids:<br /> <br />
+<ul><li> <b>Expand Mapped Nodes:</b> Expands all mapped nodes.
+</li><li> <b>Collapse All:</b> Collapses all function boxes. This command is useful when you work with numerous function boxes in the mapping pane.
+</li><li> <b>All:</b> Displays all nodes.
+</li><li> <b>Output:</b> Displays only connected nodes.
+</li></ul></li></ul><ul><li> <b>Source tree pane:</b> The source tree pane is placed on the left and contains a tree component that provides access to a business process's data variables and partnerlinks.
+</li></ul><ul><li> <b>Mapping pane:</b> The mapping pane contains a canvas for creating BPEL mappings. When you select a function from the menu bar, a function box appears in the mapping pane. If the function accepts any arguments, then the left side of the function box has one connector for each argument. If an argument is optional, then a question mark appears after the argument name. The right side of the function box has one connector for the result.<br />You can use the BPEL Mapper with the following business process elements: <br /> <br />
+<ul><li> <b>Assign activity:</b> You can define one or more copy assignments.
+</li><li> <b>If activity:</b> You can define the condition.
+</li><li> <b>Else If element within an If activity:</b> You can define the condition.
+</li><li> <b>For Each activity:</b> You can define the condition.
+</li><li> <b>Repeat Until activity:</b> You can define the condition.
+</li><li> <b>While activity:</b> You can define the condition.
+</li><li> <b>Wait activity:</b> You can specify the deadline or duration.
+</li><li> <b>onAlarm event:</b>You can specify the deadline or duration.
+</li></ul></li></ul><ul><li> <b>Destination tree pane:</b> This pane is placed on the right. Tree component of the destination pane depends on the business process element that you are mapping. <br />The pane contains the following components:<br /> <br />
+<ul><li> For an Assign activity, the right pane contains the same tree component as the left pane.
+</li><li> For an If activity, Else If element, For Each activity, Repeat Until activity, and While activity, the right pane contains a <tt>Result</tt> node.
+</li><li> For the Wait activity, the right pane contains a <tt>Deadline</tt> or <tt>Duration</tt> node.
+</li></ul></li></ul><br />
+<h4 id="section-UsingTheBPELMapper-ToOpenTheBPELMapperWindow">To open the BPEL Mapper window</h4>
+Open the BPEL diagram and do one of the following:
+<ul><li> Double-click the element that requires editing using the BPEL Mapper. The Mapper tab opens. 
+</li><li> Select an element that requires editing using the mapper, and on the diagram toolbar click the <tt>Mapper</tt> tab.
+</li></ul><br /> 
+<div class="center">
+<a class="wikipage" href="Wiki39db.html?page=UsingTheBPELMapper">Top</a></div>
+<h3 id="section-UsingTheBPELMapper-CreatingBPELMappings">Creating BPEL Mappings</h3>
+You can create a mapping from the source tree pane directly to the destination tree pane, without using any of the functions. <br />
+This type of mapping can be any of the following:
+<ul><li> Variable to variable
+</li><li> Part to part
+</li><li> XSD element to XSD element
+</li><li> XSD attribute to XSD attribute
+</li><li> Partner link to partner link
+</li></ul><p>You can also create a mapping that uses one or more XPath functions from the BPEL Mapper's menu bar. For example, if the BPEL process includes a Wait activity that waits for a period of time, then you can use the <tt>Duration Literal</tt> function to specify the duration.
+<br /> <br />
+</p>
+<h4 id="section-UsingTheBPELMapper-ToCreateAMappingWithoutUsingAnyFunctions">To create a mapping without using any functions</h4>
+<ol><li> In the source tree pane, expand the tree component until the node that you want to map from appears.
+</li><li> If the destination tree pane contains a tree component, then expand the tree component until the node that you want to map to appears.
+</li><li> Select the node in the source tree pane and drag the pointer to the node in the destination tree pane.<br />
+  A link connects the nodes.
+</li></ol><br /> 
+<h4 id="section-UsingTheBPELMapper-ToUseAFunctionInAMapping">To use a function in a mapping</h4>
+<ol><li> In the destination tree pane, expand the tree and select the node you want to map to. A blue area appears on the mapping pane. The functions you choose will appear here.<br /><table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/UsingTheBPELMapper/mapping-pane.gif" height="209" width="656" alt="Image displays the Mapping window of the BPEL Designer as described in context" /></td></tr>
+</table>
+<br />
+</li><li> Click the type of function you want from the Mapper's toolbar to display a drop-down menu with the available function.
+</li><li> Click the function.<br />A function box appears in the mapping pane.
+</li><li> Map any arguments into the appropriate connector on the left side of the function box. The source can be a node in the source tree pane or the output from another function box. If an argument is optional, then a question mark appears after the argument name.
+</li><li> Map the result from the right side of the function box. The destination can be a node in the destination tree pane or the input into another function box.
+</li></ol><table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/UsingTheBPELMapper/mapping-pane-function.gif" height="302" width="655" alt="Image shows the mapping with a function, as described in context" /></td></tr>
+</table>
+
+<br />
+<h4 id="section-UsingTheBPELMapper-ToDeleteALinkOrFunctionInAMapping">To delete a link or function in a mapping:</h4>
+<ol><li> Select the link or function.
+</li><li> Press <tt>Delete</tt>.
+</li></ol><br /> 
+<div class="center">
+<a class="wikipage" href="Wiki39db.html?page=UsingTheBPELMapper">Top</a></div>
+<p />
+<h3 id="section-UsingTheBPELMapper-WorkingWithPredicates">Working with Predicates</h3>
+The BPEL Mapper enables you to create a predicate, comprised of XPath functions, for any element or attribute.
+<p>A predicate applies a condition to a node that can have multiple values. The result is a subset of nodes that satisfy the condition.
+</p>
+<p>For example, assume that a node represents the number of products. If you want to select all products whose number is greater than 50, then you can use the <tt>greater than</tt> and <tt>number literal</tt> functions to define the condition.
+</p>
+<p>Once you create a predicate, you can use the predicate in an assignment. For example, you can copy data from a predicate in the source tree pane to a node in the destination tree pane.
+</p>
+<p>You can edit or delete an existing predicate.
+<br /> 
+</p>
+<h4 id="section-UsingTheBPELMapper-ToCreateAPredicate">To create a predicate:</h4>
+<ol><li> In the source tree pane, right-click a node (schema element or attribute) and choose <tt>New Predicate</tt>. <br />The Predicate Editor appears.
+</li><li> Use <tt>XPath</tt> functions to create the condition for the predicate. Map the result to the predicate node in the destination tree pane.
+</li><li> Click <tt>OK</tt>. <br />The editor adds the predicate node immediately below the original node. The condition appears in brackets.
+</li></ol><br />
+<h4 id="section-UsingTheBPELMapper-ToEditAPredicate">To edit a predicate:</h4>
+<ol><li> In the source tree pane, right-click the predicate node and choose <tt>Edit Predicate</tt>.
+</li><li> Modify the condition.
+</li><li> Click <tt>OK</tt>.
+</li></ol><br />
+<h4 id="section-UsingTheBPELMapper-ToDeleteAPredicate">To delete a predicate:</h4>
+<ol><li> In the source tree pane, right-click the predicate node and choose <tt>Delete Predicate</tt>.
+</li><li> Click <tt>Yes</tt>.
+</li></ol><br />
+<h4 id="section-UsingTheBPELMapper-XPathFunctionReference">XPath Function Reference</h4>
+A collection of XPath functions are available in the BPEL Mapper's menu bar. These functions are based on the XPath 1.0 specification.
+<p>Each function has zero or more arguments. Each function returns a single result.
+</p>
+<p>The menu bar contains the following drop-down menus: Operator, Boolean, String , Node, Number, Date & Time, and BPEL.
+<br /> 
+</p>
+<h4 id="section-UsingTheBPELMapper-Operator">Operator</h4>
+The Operator menu contains the following functions:
+<ul><li> <b>Greater</b> - Greater than.
+</li><li> <b>Greater or Equal</b>
+</li><li> <b>Less</b> - Less than.
+</li><li> <b>Less or Equal</b>
+</li><li> <b>Addition</b>
+</li><li> <b>Subtraction</b>
+</li><li> <b>Multiplication</b>
+</li><li> <b>Division</b> - The operator returns the quotient for a given dividend and divisor
+</li><li> <b>Remainder</b> - The operator returns the remainder for a given dividend and divisor
+</li><li> <b>Negative</b>
+</li><li> <b>Not Equal</b>
+</li><li> <b>Equal</b>
+</li></ul><h4 id="section-UsingTheBPELMapper-Boolean">Boolean</h4>
+The Boolean menu contains the following functions:
+<ul><li> <b>Logical And</b> - If both arguments are true, then the function returns true. If either argument is false, then the function returns false.
+</li><li> <b>Logical Or</b> - If either argument is true, then the function returns true. If both arguments are false, then the function returns false.
+</li><li> <b>Logical Not</b> - If the argument is false, then the function returns true. If the argument is true, then the function returns false.
+</li><li> <b>Language</b> - Returns true or false depending on whether the language of the context node is the same as or is a sublanguage of the language specified in the argument.
+</li><li> <b>Logical False</b> - Returns false.
+</li><li> <b>Logical True</b> - Returns true.
+</li><li> <b>Boolean</b> - Converts the argument to a boolean. For detailed information about the logic, see the XPath 1.0 specification.
+</li></ul><h4 id="section-UsingTheBPELMapper-String">String</h4>
+The String menu contains the following functions:
+<ul><li> <b>Contains</b> - Uses the following logic: If the first argument string contains the second argument string, then the function returns true. Otherwise, the function returns false.
+</li><li> <b>Normalize Space</b> - Returns the argument string with whitespace normalized by stripping leading and trailing whitespace and by replacing sequences of whitespace characters with a single space.
+</li><li> <b>String</b> - Converts an object to a string.
+</li><li> <b>Starts With</b> - Uses the following logic: If the first argument string starts with the second argument string, then the function returns true. Otherwise, the function returns false.
+</li><li> <b>String Length</b> - Returns the number of characters in the string.
+</li><li> <b>Substring</b> - Returns the substring of the first argument starting at the position specified in the second argument with the length specified in the third argument. The position of the first character is 1, the position of the second character is 2, and so on. The third argument is optional. If the third argument is not specified, then the function returns the substring starting at the position specified in the second argument and continuing to the end of the string.
+</li><li> <b>Substring Before</b> - Returns the substring of the first argument string that precedes the first occurrence of the second argument string in the first argument string. If the first argument string does not contain the second argument string, then the function returns an empty string.
+</li><li> <b>Substring After</b> - Returns the substring of the first argument string that follows the first occurrence of the second argument string in the first argument string. If the first argument string does not contain the second argument string, then the function returns an empty string.
+</li><li> <b>Translate</b> - Returns the first argument string with occurrences of characters in the second argument string replaced by the character at the corresponding position in the third argument string.
+</li><li> <b>Concat</b> - Returns the concatenation of the arguments.
+</li><li> <b>String Literal</b> - Enables you to enter a string literal.
+</li></ul><h4 id="section-UsingTheBPELMapper-Nodes">Nodes</h4>
+The Nodes menu contains the following functions:
+<ul><li> <b>Local Name</b> - Returns the local part of the expanded name of the node in the argument node-set that is first in document order. (An expanded name consists of a local part and a namespace URI.)
+</li><li> <b>Name</b> - Returns the qualified name that represents the expanded name of the node in the argument node-set that is first in document order. (An expanded name consists of a local part and a namespace URI.)
+</li><li> <b>Namespace URI</b> - Returns the namespace URI of the expanded name of the node in the argument node-set that is first in document order. (An expanded name consists of a local part and a namespace URI.)
+</li><li> <b>Position</b> - Returns the context position.
+</li><li> <b>Last</b> - Returns the context size.
+</li><li> <b>Count</b> - Returns the number of nodes in the argument node-set.
+</li></ul><h4 id="section-UsingTheBPELMapper-Number">Number</h4>
+The Number menu contains the following functions:
+<ul><li> <b>Number</b> - Converts the argument to a number. For detailed information about the logic, see the XPath 1.0 specification.
+</li><li> <b>Number Literal</b> - Enables you to enter a number literal.
+</li><li> <b>Round</b> - Returns the number that is closest to the argument and that is an integer.
+</li><li> <b>Sum</b> - Returns the sum, for each node in the argument node-set, of the result of converting the string values of the node to a number.
+</li><li> <b>Floor</b> - Returns the largest number that is not greater than the argument and that is an integer.
+</li><li> <b>Ceiling</b> - Returns the smallest number that is not less than the argument and that is an integer.
+</li></ul><h4 id="section-UsingTheBPELMapper-DateTime">Date & Time</h4>
+The Date & Time menu contains the following functions:
+<ul><li> <b>Current Date</b> - Provides the current date.
+</li><li> <b>Current Time</b> - Provides the current time.
+</li><li> <b>Current Date and Time</b> - Provides the current date and time.
+</li><li> <b>Deadline</b> - Provides the specified end time.
+</li><li> <b>Duration Literal</b> - Enables you to enter a duration literal. Use the format specified in the XML Schema specification.
+</li></ul><h4 id="section-UsingTheBPELMapper-BPEL">BPEL</h4>
+The BPEL menu contains the following functions:
+<ul><li> <b>Do XSL Transform</b> - This is an XPath extension function defined in WS-BPEL specification. It can be used in a BPEL Assign activity to call an XSLT transformation.
+</li><li> <b>Get Variable Property</b> - Provides the property of the variable.
+</li><li> <b>Wrap with Service Reference</b> - This is a special case of <tt>Do XSL Transform</tt> function used to transform data into <tt>Service Reference Type</tt>. The function is intended to facilitate Dynamic Addressing usage.
+</li><li> <b>Do Marshal</b> - Performs serialization of an object.
+</li><li> <b>Do UnMarshal</b> - Performs deserialization of an object.
+</li><li> <b>GUID</b> - Provides the GUID Name.
+</li><li> <b>Get BP ID</b> - Gets the Business Process Identification.
+</li><li> <b>XML Literal</b> - Enables you to enter an XML literal.
+</li></ul><p><br />
+</p>
+<div class="center">
+<a class="wikipage" href="Wiki39db.html?page=UsingTheBPELMapper">Top</a></div>
+<h3 id="section-UsingTheBPELMapper-MappingExamples">Mapping Examples</h3>
+These examples illustrate several mapping scenarios:
+<ul><li> Assign Activity Scenario
+</li><li> If Activity Scenario
+</li><li> Predicate Scenario
+</li></ul><br />
+<p />
+<h4 id="section-UsingTheBPELMapper-AssignActivityScenario">Assign Activity Scenario</h4>
+Assume that you want a BPEL process to copy data received from a partner. Do the following tasks:
+<ol><li> Add an <tt>Assign</tt> activity after the <tt>Receive</tt> activity.
+</li><li> Use the BPEL Mapper to define one or more copy assignments. To open the BPEL Mapper, double-click the Assign activity on the diagram or select the Mapper tab on the toolbar. 
+</li></ol><p>The following example shows a copy assignment that does not use any XPath functions. The itinerary part of the <tt>ItineraryIn</tt> variable is copied to the itinerary part of the <tt>ItineraryOut</tt> variable. Notice that the left pane and the right pane contain the same tree component.
+<table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/UsingTheBPELMapper/mapper_copy_tn.gif" height="229" width="619" alt="Image shows the mapping for Assign activity with direct mapping" /></td></tr>
+</table>
+
+</p>
+<p>The following example shows a copy assignment that uses the concat XPath function. The input variable value is concatenated to the end of the string literal <tt>THE VALUE:</tt> and copied to the output variable. 
+<table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/UsingTheBPELMapper/mapper_concat_tn.gif" height="269" width="711" alt="Image shows the mapping for Assign activity with concat XPath function" /></td></tr>
+</table>
+
+<br />
+</p>
+<p />
+<h4 id="section-UsingTheBPELMapper-IfActivityScenario">If Activity Scenario</h4>
+Assume that you want to execute a series of steps only if a certain condition is true. Do the following tasks:
+<ol><li> Add an If activity to the BPEL process.
+</li><li> Use the BPEL Mapper to define the Boolean condition. <br />To open the BPEL Mapper, double-click the If activity on the diagram or select the Mapper tab on the toolbar.
+</li><li> Add the steps inside the If activity.
+</li></ol><p>The following example shows a mapping for the condition. The mapping uses the <tt>Not</tt> XPath function, which is available from the <tt>Boolean</tt> node on the menu bar. If the itinerary has an airline reservation, then the <tt>Not</tt> XPath function returns true. The result is mapped to the <tt>Result</tt> node in the right pane.
+<table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/UsingTheBPELMapper/mapper_if_tn.gif" height="277" width="769" alt="Image displays the mapping for the If activity" /></td></tr>
+</table>
+
+</p>
+<h4 id="section-UsingTheBPELMapper-PredicateScenario">Predicate Scenario</h4>
+Assume that you want a BPEL process to copy itinerary data from itineraries of customers with no more than two in their party. The input records include a variable that specifies the number of passengers in the customer's party. Do the following tasks:
+<ol><li> In the left pane of the BPEL Mapper window, right-click the repeating node that is marked with an asterisk (*) and choose <tt>New Predicate</tt>.<br />The Predicate Editor window appears.
+</li><li> Add the <tt>Less</tt> XPath function to the middle pane.
+</li><li> Add the <tt>number literal</tt> XPath function to the middle pane. Set the value to <tt>3</tt>.
+</li><li> Map the variable node to the first argument of the <tt>Less</tt> XPath function.
+</li><li> Map the result of the <tt>number literal</tt> XPath function to the second argument of the <tt>Less Than</tt> XPath function.
+</li><li> Map the result of the <tt>Less</tt> XPath function to the <tt>Predicate</tt> node in the right pane.
+</li><li> Click <tt>OK</tt>.
+</li></ol><p>The following example shows how the mapping appears in the Predicate window. Once you click OK, you can use the predicate node in a copy assignment.
+<table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/UsingTheBPELMapper/mapper_predicate.gif" height="432" width="607" alt="Image shows the mapping for a predicate, as described in context" /></td></tr>
+</table>
+
+If the BPEL process received the following XML, then the predicate would select the first <tt>Air</tt> tag.
+</p>
+<pre>
+&lt;Air&gt;
+    &lt;NumberInParty&gt;2&lt;/NumberInParty&gt;
+&lt;/Air&gt;
+&lt;Air&gt;
+    &lt;NumberInParty&gt;4&lt;/NumberInParty&gt;
+&lt;/Air&gt;
+&lt;Air&gt;
+    &lt;NumberInParty&gt;6&lt;/NumberInParty&gt;
+&lt;/Air&gt;
+</pre>
+<br />
+<div class="center">
+<a class="wikipage" href="Wiki39db.html?page=UsingTheBPELMapper">Top</a></div>
+<br />
+<h3 id="section-UsingTheBPELMapper-UsingTypeCastAndPseudoComponents">Using Type Cast and Pseudo-Components</h3>
+<p>Type Cast and Pseudo-components are provided to support type inheritance, help build message structure, and prevent validation errors. Type Casting addresses a problem in which a base complex type does not contain the same elements as the derived type. 
+</p>
+<p>For example, a variable may have a base type, containing two attributes and two elements, and a derived type inherited from the base type, containing an additional attribute and element. 
+<table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/UsingTheBPELMapper/ep-bpel-typecast-types1.gif" height="382" width="460" alt="Image shows a base type and a derived complex  type in the Design view of the XML Schema" /></td></tr>
+</table>
+
+When the message is declared in a WSDL for use in BPEL, the base type is used to declare the message. So, in this example, from the Mapper view of the XML structures we see the variable's base type that does not contain the additional element and attribute.
+<table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/UsingTheBPELMapper/ep-bpel-typecast-base.gif" height="267" width="305" alt="Image shows the Mapper view displaying the variables base type" /></td></tr>
+</table>
+
+Since the Mapper is designed to allow you to graphically link elements and attributes, these structures need to be available in the mapper view. To allow mapping of derived type attributes and elements, which are implied by the base type, the Mapper enables you to cast an object to another type - in this example, to the derived type.
+</p>
+<p>To cast an object to another type:
+</p>
+<ol><li> From the Mapper view of the project's bpel file, right-click the variable that has the base type and click <tt>Cast To</tt> in the pop-up menu.<br />The Subtype Chooser appears displaying a tree with the original type as the root and subtypes under the root. If there are no subtypes, only the original type will appear in the box.<br /><table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/UsingTheBPELMapper/ep-bpel-typecast-chooser.gif" height="488" width="375" alt="Image shows the Subtype Chooser window in the Mapper view" /></td></tr>
+</table>
+<br />
+</li><li> To cast the original variable to the derived type, select <tt>derivedType</tt> in the Subtype Chooser and click <tt>OK</tt>.<br />The derivedType variable appears in the Mapper.
+</li><li> Expand the derivedType variable in the Mapper and note that the additional attribute and element are now available to use for mapping.
+</li></ol><table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/ep-bpel-typecast-derived" height="323" width="296" alt="Image shows the Bpel Mapper view containing the new derived type variable as described in context" /></td></tr>
+</table>
+
+<h4 id="section-UsingTheBPELMapper-TypeCast"> Type Cast</h4>
+The Type Cast option allows you to explicitly cast an object to another type. This only works for objects that have a schema type. In the BPEL Mapper the following object can be casted: 
+<ul><li> Schema Element 
+</li><li> Schema Attribute 
+</li><li> Variable (except variables of the WSDL Message type) 
+</li><li> Message Part 
+</li></ul><h4 id="section-UsingTheBPELMapper-PseudoComponent"> Pseudo-Component</h4>
+The Pseudo-component feature is similar to Type Cast. The XML Schema introduces xsd:any. It declares that an element can be located in the XML document and have any name and type. The BPEL mapper allows you to add to the tree elements, which correspond to xsd:any. Such elements don't appear in the schema, but they look similar to other elements. That is why they are called pseudo-elements. The user can map from and to a pseudo-element the same way as for an ordinary element. This also applies to the xsd:anyAttribute. The user can create pseudo-attributes to use for mapping and design purposes. 
+<p>In the Mapper's Input and Output trees, xsd:any appears as an element node with the name "Any Element" and xsd:anyAttribute as an attribute with the name "Any Attribute". Both have the pop-up menu item "Cast To...", which calls the special dialog box used to specify a name, namespace and type for the new pseudo-component. For xsd:any any global type can be chosen. For xsd:anyAttribute only the global simple types are suggested. In both cases the settings allow you to choose global types from several different sources. The completed pseudo-components appear in the tree with the name pattern <tt>(<i>castToElementName</i>)Any Element</tt> or <tt>(<i>castToAttributeName</i>)Any Attribute</tt>.
+<table border="0" class="imageplugin">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/UsingTheBPELMapper/ep-bpel-typecast-pseudo.gif" height="270" width="206" alt="Image shows the pseudo-components, Any Element and Any Attribute in the Mapper" /></td></tr>
+</table>
+
+</p>
+<p />
+<h4 id="section-UsingTheBPELMapper-TypeCastAndValidation">Type Cast and Validation</h4>
+<p>Validation is passive in regard to type casts and pseudo-components, meaning that validation does not object to an unknown component if it is a qualified type cast or it is declared as a pseudo-component. 
+</p>
+<h4 id="section-UsingTheBPELMapper-TypeCastAndPseudoComponentLimitations">Type Cast and Pseudo Component Limitations</h4>
+<p>The type cast is used to avoid runtime errors, but there are several reasonable limitations: 
+</p>
+<ul><li> An object of a specific schema type can be cast only to a subtype. This applies to elements, attributes, variables and message parts. The XML Schema has two derivations, extension and restriction, both of which are supported by type cast. 
+</li><li> xsd:any contains additional attributes which might restrict the possible element type. 
+</li><li> Only global types can be used when you declare a pseudo-component. Global attributes or elements cannot be used. The target of the type must be referencable, and as such should be global.
+</li><li> You cannot nest type casts, pseudo-components, and mixed declarations. 
+</li><li> You cannot add a new predicate to a casted component or its part. 
+</li><li> You cannot mix two or more type casts or pseudo components in an XPath expression. A type cast cannot be associated with a specific part of an expression, but only with the expression as a whole. 
+</li></ul><p><br />
+ 
+</p>
+<div class="center">
+<a class="wikipage" href="Wiki39db.html?page=UsingTheBPELMapper">Top</a></div>
+<p />
+<p><a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">Previous</a><br />
+<a class="wikipage" href="Wikiad48.html?page=UsingNormalizedMessageProperties">Next</a>
+</p>
+
+
+
+  </div>
+
+  
+  
+  <div id="attachments" style="display:none;" >
+
+    
+
+
+
+
+
+
+
+<div id="attachmentViewer">
+  <div class="list">
+    <h3>List of attachments &nbsp;&nbsp;&nbsp;&nbsp;
+    </h3>
+      <form action='#'>
+        <select name="attachSelect" id="attachSelect" size="16" 
+            onchange="Attach.showImage(this[this.selectedIndex], '%A4', 300, 300 )" >
+        <option value="Attachment Info" selected="selected" >--- Select Image to preview ---</option>
+        
+          
+          <option value="ep-bpel-typecast-base.gif%A4http://wiki.open-esb.java.net/attach/UsingTheBPELMapper/ep-bpel-typecast-base.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=UsingTheBPELMapper/ep-bpel-typecast-base.gif%A411853 bytes%A41" >
+            ep-bpel-typecast-base.gif (11853 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="ep-bpel-typecast-chooser.gif%A4http://wiki.open-esb.java.net/attach/UsingTheBPELMapper/ep-bpel-typecast-chooser.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=UsingTheBPELMapper/ep-bpel-typecast-chooser.gif%A424638 bytes%A41" >
+            ep-bpel-typecast-chooser.gif (24638 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="ep-bpel-typecast-derived.gif%A4http://wiki.open-esb.java.net/attach/UsingTheBPELMapper/ep-bpel-typecast-derived.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=UsingTheBPELMapper/ep-bpel-typecast-derived.gif%A417762 bytes%A41" >
+            ep-bpel-typecast-derived.gif (17762 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="ep-bpel-typecast-pseudo.gif%A4http://wiki.open-esb.java.net/attach/UsingTheBPELMapper/ep-bpel-typecast-pseudo.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=UsingTheBPELMapper/ep-bpel-typecast-pseudo.gif%A412597 bytes%A42" >
+            ep-bpel-typecast-pseudo.gif (12597 bytes , revision-2, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="ep-bpel-typecast-types.gif%A4http://wiki.open-esb.java.net/attach/UsingTheBPELMapper/ep-bpel-typecast-types.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=UsingTheBPELMapper/ep-bpel-typecast-types.gif%A421318 bytes%A41" >
+            ep-bpel-typecast-types.gif (21318 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="ep-bpel-typecast-types1.gif%A4http://wiki.open-esb.java.net/attach/UsingTheBPELMapper/ep-bpel-typecast-types1.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=UsingTheBPELMapper/ep-bpel-typecast-types1.gif%A418522 bytes%A41" >
+            ep-bpel-typecast-types1.gif (18522 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="mapper_concat_tn.gif%A4http://wiki.open-esb.java.net/attach/UsingTheBPELMapper/mapper_concat_tn.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=UsingTheBPELMapper/mapper_concat_tn.gif%A415748 bytes%A41" >
+            mapper_concat_tn.gif (15748 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="mapper_copy_tn.gif%A4http://wiki.open-esb.java.net/attach/UsingTheBPELMapper/mapper_copy_tn.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=UsingTheBPELMapper/mapper_copy_tn.gif%A410495 bytes%A41" >
+            mapper_copy_tn.gif (10495 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="mapper_if_tn.gif%A4http://wiki.open-esb.java.net/attach/UsingTheBPELMapper/mapper_if_tn.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=UsingTheBPELMapper/mapper_if_tn.gif%A417223 bytes%A41" >
+            mapper_if_tn.gif (17223 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="mapper_predicate.gif%A4http://wiki.open-esb.java.net/attach/UsingTheBPELMapper/mapper_predicate.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=UsingTheBPELMapper/mapper_predicate.gif%A435686 bytes%A41" >
+            mapper_predicate.gif (35686 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="mapper_predicate_tn.gif%A4http://wiki.open-esb.java.net/attach/UsingTheBPELMapper/mapper_predicate_tn.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=UsingTheBPELMapper/mapper_predicate_tn.gif%A435686 bytes%A42" >
+            mapper_predicate_tn.gif (35686 bytes , revision-2, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="mapping-pane-function.gif%A4http://wiki.open-esb.java.net/attach/UsingTheBPELMapper/mapping-pane-function.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=UsingTheBPELMapper/mapping-pane-function.gif%A431879 bytes%A41" >
+            mapping-pane-function.gif (31879 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="mapping-pane.gif%A4http://wiki.open-esb.java.net/attach/UsingTheBPELMapper/mapping-pane.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=UsingTheBPELMapper/mapping-pane.gif%A415455 bytes%A41" >
+            mapping-pane.gif (15455 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+      </select>
+    </form>
+    <div class="small">&nbsp;</div>
+  </div>  
+
+  <div class="preview">
+    <h3>Image preview</h3>
+    <div id="attachImg" title="No Image Selected">No Image Selected</div>
+    <a href="#" class="small" style="display:none;" id="attachInfo">More info, including version history</a>
+  </div>
+
+  <div style="clear:both; height:0px;" > </div>
+
+</div>
+
+
+  </div>
+
+  
+  <div id="pageinfo" style="display:none;" >
+
+    
+
+
+
+
+
+
+
+
+  <p>
+  This page (revision-38) was last changed on 
+  <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingTheBPELMapper&amp;r1=38&amp;r2=37"
+    title="Show changes of last page update" >
+    
+    09-Jun-09 10:35 AM, -0700
+  </a> by rjacobus.
+  <a href="http://wiki.open-esb.java.net/rss.jsp?page=UsingTheBPELMapper&amp;mode=wiki"
+    title="RSS page feed for Using The BPEL Mapper" ><img src="images/xml.png" border="0" alt="[RSS]"/></a>
+    
+    <br />
+    This page was created on 
+    <a  href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingTheBPELMapper&amp;version=1">06-Oct-08 23:45 PM, -0700</a> by rjacobus.
+    
+  </p>    
+
+  
+
+  
+   
+  
+  <p><a href="http://wiki.open-esb.java.net/PageInfo.jsp?page=UsingTheBPELMapper" id="moreinfo" >More info...</a></p>
+  
+  
+
+  <div class="tabmenu ">
+  
+  
+  
+
+  
+
+  
+
+  
+  
+  
+  
+  <span><a class="activetab" id="menu-versionHistory" onclick="TabbedSection.onclick('versionHistory')" >Version History</a></span>
+  
+
+  <span><a id="menu-incomingLinks" onclick="TabbedSection.onclick('incomingLinks')" >Incoming Links</a></span>
+
+  <span><a id="menu-outgoingLinks" onclick="TabbedSection.onclick('outgoingLinks')" >Outgoing Links</a></span>
+
+  
+  
+  </div>
+<div class="tabs ">
+  
+  <div id="versionHistory" >
+
+
+    <div class='pagination'>Pagination: <a title="Show page from 1 to 20" href='#' onclick='location.href= $("moreinfo").href + "&start=0"; ' >previous</a>&nbsp;&nbsp;<a title="Show page from 1 to 20" href='#' onclick='location.href= $("moreinfo").href + "&start=0"; ' >1</a>&nbsp;&nbsp;<span class='cursor'>2</span>&nbsp;&nbsp;<a title="Show all pages" href='#' onclick='location.href= $("moreinfo").href + "&start=-1"; ' >all</a>&nbsp;&nbsp; (Total items: 38)</div>
+    <div class="zebra-table ">
+    <table class="wikitable" >
+      <tr>
+        <th>Version</th>                        
+        <th>Date</th>
+        <th>Author</th>
+        <th>Size</th>
+        <th>Changes ...</th>
+        
+      </tr>
+
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingTheBPELMapper&amp;version=38" accesskey="" title="">
+            38
+          </a>
+        </td>
+
+        <td>
+          09-Jun-09 10:35 AM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>24894</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingTheBPELMapper&amp;r1=38&amp;r2=37">to previous</a>
+            
+          
+
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingTheBPELMapper&amp;version=37" accesskey="" title="">
+            37
+          </a>
+        </td>
+
+        <td>
+          21-May-09 09:37 AM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>24793</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingTheBPELMapper&amp;r1=37&amp;r2=36">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingTheBPELMapper&amp;r1=38&amp;r2=37">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingTheBPELMapper&amp;version=36" accesskey="" title="">
+            36
+          </a>
+        </td>
+
+        <td>
+          16-Dec-08 14:22 PM, -0800
+        </td>
+        <td>rjacobus</td>
+        <td>24790</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingTheBPELMapper&amp;r1=36&amp;r2=35">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingTheBPELMapper&amp;r1=38&amp;r2=36">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingTheBPELMapper&amp;version=35" accesskey="" title="">
+            35
+          </a>
+        </td>
+
+        <td>
+          05-Dec-08 11:27 AM, -0800
+        </td>
+        <td>SWeber</td>
+        <td>24787</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingTheBPELMapper&amp;r1=35&amp;r2=34">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingTheBPELMapper&amp;r1=38&amp;r2=35">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingTheBPELMapper&amp;version=34" accesskey="" title="">
+            34
+          </a>
+        </td>
+
+        <td>
+          01-Dec-08 11:13 AM, -0800
+        </td>
+        <td>rjacobus</td>
+        <td>24799</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingTheBPELMapper&amp;r1=34&amp;r2=33">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingTheBPELMapper&amp;r1=38&amp;r2=34">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingTheBPELMapper&amp;version=33" accesskey="" title="">
+            33
+          </a>
+        </td>
+
+        <td>
+          25-Nov-08 11:20 AM, -0800
+        </td>
+        <td>rjacobus</td>
+        <td>25005</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingTheBPELMapper&amp;r1=33&amp;r2=32">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingTheBPELMapper&amp;r1=38&amp;r2=33">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingTheBPELMapper&amp;version=32" accesskey="" title="">
+            32
+          </a>
+        </td>
+
+        <td>
+          21-Nov-08 15:03 PM, -0800
+        </td>
+        <td>rjacobus</td>
+        <td>25195</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingTheBPELMapper&amp;r1=32&amp;r2=31">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingTheBPELMapper&amp;r1=38&amp;r2=32">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingTheBPELMapper&amp;version=31" accesskey="" title="">
+            31
+          </a>
+        </td>
+
+        <td>
+          21-Nov-08 14:55 PM, -0800
+        </td>
+        <td>rjacobus</td>
+        <td>25240</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingTheBPELMapper&amp;r1=31&amp;r2=30">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingTheBPELMapper&amp;r1=38&amp;r2=31">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingTheBPELMapper&amp;version=30" accesskey="" title="">
+            30
+          </a>
+        </td>
+
+        <td>
+          21-Nov-08 09:31 AM, -0800
+        </td>
+        <td>rjacobus</td>
+        <td>24322</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingTheBPELMapper&amp;r1=30&amp;r2=29">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingTheBPELMapper&amp;r1=38&amp;r2=30">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingTheBPELMapper&amp;version=29" accesskey="" title="">
+            29
+          </a>
+        </td>
+
+        <td>
+          21-Nov-08 09:30 AM, -0800
+        </td>
+        <td>rjacobus</td>
+        <td>24318</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingTheBPELMapper&amp;r1=29&amp;r2=28">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingTheBPELMapper&amp;r1=38&amp;r2=29">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingTheBPELMapper&amp;version=28" accesskey="" title="">
+            28
+          </a>
+        </td>
+
+        <td>
+          21-Nov-08 09:28 AM, -0800
+        </td>
+        <td>rjacobus</td>
+        <td>24276</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingTheBPELMapper&amp;r1=28&amp;r2=27">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingTheBPELMapper&amp;r1=38&amp;r2=28">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingTheBPELMapper&amp;version=27" accesskey="" title="">
+            27
+          </a>
+        </td>
+
+        <td>
+          20-Nov-08 13:17 PM, -0800
+        </td>
+        <td>rjacobus</td>
+        <td>21943</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingTheBPELMapper&amp;r1=27&amp;r2=26">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingTheBPELMapper&amp;r1=38&amp;r2=27">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingTheBPELMapper&amp;version=26" accesskey="" title="">
+            26
+          </a>
+        </td>
+
+        <td>
+          19-Nov-08 10:58 AM, -0800
+        </td>
+        <td>rjacobus</td>
+        <td>21922</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingTheBPELMapper&amp;r1=26&amp;r2=25">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingTheBPELMapper&amp;r1=38&amp;r2=26">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingTheBPELMapper&amp;version=25" accesskey="" title="">
+            25
+          </a>
+        </td>
+
+        <td>
+          19-Nov-08 10:37 AM, -0800
+        </td>
+        <td>rjacobus</td>
+        <td>21412</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingTheBPELMapper&amp;r1=25&amp;r2=24">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingTheBPELMapper&amp;r1=38&amp;r2=25">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingTheBPELMapper&amp;version=24" accesskey="" title="">
+            24
+          </a>
+        </td>
+
+        <td>
+          18-Nov-08 16:26 PM, -0800
+        </td>
+        <td>rjacobus</td>
+        <td>20888</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingTheBPELMapper&amp;r1=24&amp;r2=23">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingTheBPELMapper&amp;r1=38&amp;r2=24">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingTheBPELMapper&amp;version=23" accesskey="" title="">
+            23
+          </a>
+        </td>
+
+        <td>
+          18-Nov-08 15:52 PM, -0800
+        </td>
+        <td>rjacobus</td>
+        <td>20136</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingTheBPELMapper&amp;r1=23&amp;r2=22">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingTheBPELMapper&amp;r1=38&amp;r2=23">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingTheBPELMapper&amp;version=22" accesskey="" title="">
+            22
+          </a>
+        </td>
+
+        <td>
+          17-Nov-08 15:06 PM, -0800
+        </td>
+        <td>rjacobus</td>
+        <td>19861</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingTheBPELMapper&amp;r1=22&amp;r2=21">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingTheBPELMapper&amp;r1=38&amp;r2=22">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingTheBPELMapper&amp;version=21" accesskey="" title="">
+            21
+          </a>
+        </td>
+
+        <td>
+          14-Nov-08 14:22 PM, -0800
+        </td>
+        <td>rjacobus</td>
+        <td>18497</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingTheBPELMapper&amp;r1=21&amp;r2=20">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingTheBPELMapper&amp;r1=38&amp;r2=21">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingTheBPELMapper&amp;version=20" accesskey="" title="">
+            20
+          </a>
+        </td>
+
+        <td>
+          10-Nov-08 12:58 PM, -0800
+        </td>
+        <td>rjacobus</td>
+        <td>18724</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingTheBPELMapper&amp;r1=20&amp;r2=19">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingTheBPELMapper&amp;r1=38&amp;r2=20">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+    </table>  
+    </div>
+    <div class='pagination'>Pagination: <a title="Show page from 1 to 20" href='#' onclick='location.href= $("moreinfo").href + "&start=0"; ' >previous</a>&nbsp;&nbsp;<a title="Show page from 1 to 20" href='#' onclick='location.href= $("moreinfo").href + "&start=0"; ' >1</a>&nbsp;&nbsp;<span class='cursor'>2</span>&nbsp;&nbsp;<a title="Show all pages" href='#' onclick='location.href= $("moreinfo").href + "&start=-1"; ' >all</a>&nbsp;&nbsp; (Total items: 38)</div>
+
+  </div>
+
+  
+
+  <div id="incomingLinks" style="display:none;" >
+
+    <a class="wikipage" href="Wiki39db.html?page=UsingTheBPELMapper" accesskey="" title="">Using The BPEL Mapper</a>
+    <ul><li><a class="wikipage" href="Wiki21f2.html?page=BPELBluePrints">BPEL Blue Prints</a>
+</li><li><a class="wikipage" href="Wiki3879.html?page=BPELDesignerAndServiceEngineFeatures">BPEL Designer And Service Engine Features</a>
+</li><li><a class="wikipage" href="Wiki5e52.html?page=BPELDesignerAndServiceEngineOverview">BPEL Designer And Service Engine Overview</a>
+</li><li><a class="wikipage" href="Wiki5233.html?page=BPELProcessLoggingAndAlerting">BPEL Process Logging And Alerting</a>
+</li><li><a class="wikipage" href="Wikicae3.html?page=BPELServiceEngineDeploymentArtifacts">BPEL Service Engine Deployment Artifacts</a>
+</li><li><a class="wikipage" href="Wiki7030.html?page=BPELServiceEngineTaskHowTos">BPEL Service Engine Task How Tos</a>
+</li><li><a class="wikipage" href="Wiki73af.html?page=ConfiguringClusteringAndFailoverForBPEL">Configuring Clustering And Failover For BPEL</a>
+</li><li><a class="wikipage" href="Wikid4c2.html?page=ConfiguringFailoverForBPEL">Configuring Failover For BPEL</a>
+</li><li><a class="wikipage" href="Wiki0931.html?page=ConfiguringPersistenceAndRecoveryForBPEL">Configuring Persistence And Recovery For BPEL</a>
+</li><li><a class="wikipage" href="Wiki2f9d.html?page=ConfiguringTheBPELServiceEngineRuntimeProperties">Configuring The BPEL Service Engine Runtime Properties</a>
+</li><li><a class="wikipage" href="Wiki77bf.html?page=ConfiguringTheQualityOfServiceProperties">Configuring The Quality Of Service Properties</a>
+</li><li><a class="wikipage" href="Wikia9da.html?page=CreatingTheBPELModuleProject">Creating The BPEL Module Project</a>
+</li><li><a class="wikipage" href="Wiki17ca.html?page=DevelopingTheBPELProcessUsingTheBPELDiagram">Developing The BPEL Process Using The BPEL Diagram</a>
+</li><li><a class="wikipage" href="Wiki434d.html?page=MonitoringTheBPELServiceEngine">Monitoring The BPEL Service Engine</a>
+</li><li><a class="wikipage" href="Wiki0ddb.html?page=NavigatingTheBPELDesigner">Navigating The BPEL Designer</a>
+</li><li><a class="wikipage" href="Wiki1302.html?page=TestingAndDebuggingBPELProcesses">Testing And Debugging BPEL Processes</a>
+</li><li><a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">The BPEL Designer Palette Elements</a>
+</li><li><a class="wikipage" href="Wikif987.html?page=TroubleshootingTheBPELServiceEngine">Troubleshooting The BPEL Service Engine</a>
+</li><li><a class="wikipage" href="Wikifbc9.html?page=UnderstandingTheBPELModuleProject">Understanding The BPEL Module Project</a>
+</li><li><a class="wikipage" href="Wiki20e8.html?page=UsingBPELDesignerServiceEngine">Using BPEL Designer Service Engine</a>
+</li><li><a class="wikipage" href="Wikia3b6.html?page=UsingCorrelation">Using Correlation</a>
+</li><li><a class="wikipage" href="Wikife94.html?page=UsingDynamicPartnerLinksAndDynamicAddressing">Using Dynamic Partner Links And Dynamic Addressing</a>
+</li><li><a class="wikipage" href="Wikie39c.html?page=UsingHandlers">Using Handlers</a>
+</li><li><a class="wikipage" href="Wikiad48.html?page=UsingNormalizedMessageProperties">Using Normalized Message Properties</a>
+</li><li><a class="wikipage" href="Wiki1f81.html?page=ValidatingTheBPELProcess">Validating The BPEL Process</a>
+</li></ul>
+  </div>
+
+
+  <div id="outgoingLinks" style="display:none;" >
+
+    
+      <div class="ReferredPagesPlugin">
+<a class="wikipage" href="Wiki39db.html?page=UsingTheBPELMapper" title="ReferredPagesPlugin: depth[1] include[.*] exclude[^$] format[compact]">UsingTheBPELMapper</a>
+<ul>
+<li><a class="wikipage" href="Wiki21f2.html?page=BPELBluePrints">BPELBluePrints</a></li>
+<li><a class="wikipage" href="Wiki3879.html?page=BPELDesignerAndServiceEngineFeatures">BPELDesignerAndServiceEngineFeatures</a></li>
+<li><a class="wikipage" href="Wiki5e52.html?page=BPELDesignerAndServiceEngineOverview">BPELDesignerAndServiceEngineOverview</a></li>
+<li><a class="wikipage" href="Wiki5233.html?page=BPELProcessLoggingAndAlerting">BPELProcessLoggingAndAlerting</a></li>
+<li><a class="wikipage" href="Wikicae3.html?page=BPELServiceEngineDeploymentArtifacts">BPELServiceEngineDeploymentArtifacts</a></li>
+<li><a class="wikipage" href="Wiki7030.html?page=BPELServiceEngineTaskHowTos">BPELServiceEngineTaskHowTos</a></li>
+<li><a class="wikipage" href="Wikid4c2.html?page=ConfiguringFailoverForBPEL">ConfiguringFailoverForBPEL</a></li>
+<li><a class="wikipage" href="Wiki0931.html?page=ConfiguringPersistenceAndRecoveryForBPEL">ConfiguringPersistenceAndRecoveryForBPEL</a></li>
+<li><a class="wikipage" href="Wiki2f9d.html?page=ConfiguringTheBPELServiceEngineRuntimeProperties">ConfiguringTheBPELServiceEngineRuntimeProperties</a></li>
+<li><a class="wikipage" href="Wiki77bf.html?page=ConfiguringTheQualityOfServiceProperties">ConfiguringTheQualityOfServiceProperties</a></li>
+<li><a class="wikipage" href="Wikia9da.html?page=CreatingTheBPELModuleProject">CreatingTheBPELModuleProject</a></li>
+<li><a class="wikipage" href="Wiki17ca.html?page=DevelopingTheBPELProcessUsingTheBPELDiagram">DevelopingTheBPELProcessUsingTheBPELDiagram</a></li>
+<li><a class="wikipage" href="Wiki434d.html?page=MonitoringTheBPELServiceEngine">MonitoringTheBPELServiceEngine</a></li>
+<li><a class="wikipage" href="Wiki0ddb.html?page=NavigatingTheBPELDesigner">NavigatingTheBPELDesigner</a></li>
+<li><a class="wikipage" href="Wiki1302.html?page=TestingAndDebuggingBPELProcesses">TestingAndDebuggingBPELProcesses</a></li>
+<li><a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">TheBPELDesignerPaletteElements</a></li>
+<li><a class="wikipage" href="Wikif987.html?page=TroubleshootingTheBPELServiceEngine">TroubleshootingTheBPELServiceEngine</a></li>
+<li><a class="wikipage" href="Wikifbc9.html?page=UnderstandingTheBPELModuleProject">UnderstandingTheBPELModuleProject</a></li>
+<li><a class="wikipage" href="Wiki20e8.html?page=UsingBPELDesignerServiceEngine">UsingBPELDesignerServiceEngine</a></li>
+<li><a class="wikipage" href="Wikia3b6.html?page=UsingCorrelation">UsingCorrelation</a></li>
+<li><a class="wikipage" href="Wikife94.html?page=UsingDynamicPartnerLinksAndDynamicAddressing">UsingDynamicPartnerLinksAndDynamicAddressing</a></li>
+<li><a class="wikipage" href="Wikie39c.html?page=UsingHandlers">UsingHandlers</a></li>
+<li><a class="wikipage" href="Wikiad48.html?page=UsingNormalizedMessageProperties">UsingNormalizedMessageProperties</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingTheBPELMapper/ep-bpel-typecast-base.gif">UsingTheBPELMapper/ep-bpel-typecast-base.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingTheBPELMapper/ep-bpel-typecast-chooser.gif">UsingTheBPELMapper/ep-bpel-typecast-chooser.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingTheBPELMapper/ep-bpel-typecast-derived.gif">UsingTheBPELMapper/ep-bpel-typecast-derived.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingTheBPELMapper/ep-bpel-typecast-pseudo.gif">UsingTheBPELMapper/ep-bpel-typecast-pseudo.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingTheBPELMapper/ep-bpel-typecast-types.gif">UsingTheBPELMapper/ep-bpel-typecast-types.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingTheBPELMapper/ep-bpel-typecast-types1.gif">UsingTheBPELMapper/ep-bpel-typecast-types1.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingTheBPELMapper/mapper_concat_tn.gif">UsingTheBPELMapper/mapper_concat_tn.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingTheBPELMapper/mapper_copy_tn.gif">UsingTheBPELMapper/mapper_copy_tn.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingTheBPELMapper/mapper_if_tn.gif">UsingTheBPELMapper/mapper_if_tn.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingTheBPELMapper/mapper_predicate.gif">UsingTheBPELMapper/mapper_predicate.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingTheBPELMapper/mapper_predicate_tn.gif">UsingTheBPELMapper/mapper_predicate_tn.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingTheBPELMapper/mapping-pane-function.gif">UsingTheBPELMapper/mapping-pane-function.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingTheBPELMapper/mapping-pane.gif">UsingTheBPELMapper/mapping-pane.gif</a></li>
+<li><a class="wikipage" href="Wiki1f81.html?page=ValidatingTheBPELProcess">ValidatingTheBPELProcess</a></li>
+</ul>
+</div>
+
+    
+    
+  </div>
+
+
+  
+  
+  <div style="clear:both; height:0px;" > </div>
+</div>
+ 
+
+
+
+
+
+
+
+
+
+  </div>
+
+  
+<div style="clear:both; height:0px;" > </div>
+</div>
+
+</div> 
+
+
+  
+
+
+
+<div id="favorites">
+
+
+<div class="username">G'day,
+  
+    <a title="Hi, Anonymous Guest"  href="Wiki48c3.html?page=Login">Anonymous Guest</a>
+  
+  
+  
+  
+</div>  
+
+
+
+
+
+
+
+
+<p />
+
+
+
+  
+<p />
+<p />
+
+
+<div class="wikiversion">JSPWiki v2.4.100</div>
+
+<div class="rssfeed"><a href="rss.rdf"><img src="images/xml.png" alt="[RSS]" border="0" title="Aggregate the RSS feed of the entire wiki"/></a></div>
+
+<div style="clear:both; height:0px;" > </div>
+
+</div> 
+
+  
+
+
+
+
+
+<div id='actionsBottom' class="pageactions"> 
+
+  <span class='quicklinks quick2Top'>
+    <a href="#wikibody" title='Go to Top' >&laquo;</a>
+  </span>
+
+  <span class="actionHome">
+    <a href="Wikib2ab.html?page=Main"
+       title="Go to home page Main ">Home</a>
+  </span>
+  
+  
+    
+
+    
+  
+  
+  <span class="actionIndex">
+     <a href="Wiki5f9e.html?page=PageIndex"
+       title="Alphabetically sorted list of pages [ x ]">Index</a>
+  </span>
+  
+  <span class="actionRecentChanges">
+     <a href="Wiki5fc7.html?page=RecentChanges"
+        title="Pages sorted by modification date [ u ]">Changes</a>
+  </span>
+
+  
+    
+      <span class="actionPrefs">
+        <a href="Wiki7eba.html?page=UserPreferences"
+           title="Set User Preferences" >Prefs</a>
+      </span>
+    
+  
+
+  
+    <div class="pageinfo">
+      
+        This page (revision-38) was last changed on 
+        <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingTheBPELMapper&amp;r1=38&amp;r2=37"
+          title="Show changes of last page update" >  
+        
+        09-Jun-09 10:35 AM, -0700</a>
+      
+      
+      by rjacobus
+
+      
+    </div>  
+  
+
+  <div style="clear:both; height:0;"> </div> 
+</div>
+
+  
+ 
+  
+
+  
+
+
+<div id="footer">
+
+<table><tr><td>
+  <div class="wikiversion">
+    JSPWiki v2.4.100                       
+  </div>
+</td>
+<td>
+<br>Copyright &copy; 2011, Oracle and/or its affiliates. All rights reserved. Oracle and Java are registered trademarks of Oracle and/or its affiliates. Other names may be trademarks of their respective owners. <a href="http://www.oracle.com/"><img src="images/ora_logo_small.gif" /> </a>
+  <div class="rssfeed">
+    <a href="rss.rdf"><img src="images/xml.png" alt="[RSS]" border="0" title="Aggregate the RSS feed"/></a>
+  </div>
+</td></tr></table>
+  <div style="clear:both; height:0px;" > </div>
+
+</div>
+  
+
+  </div>
+  <div style="clear:both; height:0;" > </div>
+
+
+
+<!-- Page counters -->
+<script type="text/javascript" language="javascript">
+var sc_project=1965314; 
+var sc_invisible=1; 
+var sc_partition=17; 
+var sc_security="c5f5efea"; 
+</script>
+<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script>
+
+
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+<script type="text/javascript">
+_uacct = "UA-993823-3";
+urchinTracker();
+</script>
+</body>
+
+<!-- Mirrored from wiki.open-esb.java.net/Wiki.jsp?page=UsingTheBPELMapper by HTTrack Website Copier/3.x [XR&CO'2010], Thu, 08 Jul 2010 02:16:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+</html>
+
+

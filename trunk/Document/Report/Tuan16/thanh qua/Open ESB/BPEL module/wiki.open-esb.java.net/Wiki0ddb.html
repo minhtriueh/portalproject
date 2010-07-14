@@ -1,0 +1,1284 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+
+
+<!-- Mirrored from wiki.open-esb.java.net/Wiki.jsp?page=NavigatingTheBPELDesigner by HTTrack Website Copier/3.x [XR&CO'2010], Thu, 08 Jul 2010 02:16:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head>
+
+  <title>Navigating The BPEL Designer - OpenESB: the Open Source ESB for SOA & Integration</title>
+  
+
+
+
+
+
+<link rel="stylesheet" type="text/css" media="screen, projection" 
+     href="templates/brushed/jspwiki.css" />
+
+<!-- browser specific cssinclude not required in brushed template
+<script type="text/javascript"
+         src="/templates/brushed/cssinclude.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+  Wiki.loadBrowserSpecificCSS("brushed");
+//]]>
+</script>
+-->
+
+
+
+
+<link rel="stylesheet" type="text/css" 
+     href="templates/brushed/skins/Smart/skin.css" />
+<!-- INCLUDERESOURCES (stylesheet) -->
+
+
+
+<!--[if IE]>
+<style type="text/css" media="screen">
+img, a, div { behavior: url("templates/brushed/scripts/iepngfix.htc"); }
+</style>
+<![endif]-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="search" 
+     href="Wiki702d.html?page=FindPage"
+    title="Search Open ESB Wiki" />
+<link rel="help"   
+     href="Wikia3b7.html?page=TextFormattingRules" 
+    title="Help" />
+<link rel="start"  
+     href="Wikib2ab.html?page=Main"                
+    title="Front page" />
+<!--<link rel="stylesheet" type="text/css" media="print"
+     href="/templates/brushed/jspwiki_print.css" />
+<link rel="alternate stylesheet" type="text/css"
+     href="/templates/brushed/jspwiki_print.css" 
+    title="Print friendly" />-->
+<link rel="alternate stylesheet" type="text/css" 
+     href="templates/brushed/jspwiki.css" 
+    title="Standard" />
+<link rel="icon" type="image/png" href="images/openesb16x16.png" />
+
+<link rel="template" href="http://wiki.open-esb.java.net/templates/brushed" id="template-dir"/>
+<link rel="alternate" type="application/rss+xml" title="RSS wiki feed for the entire site." href="rss.rdf" />
+<link rel="alternate" type="application/rss+xml" title="RSS wiki feed for page Open ESB Wiki: NavigatingTheBPELDesigner." href="http://wiki.open-esb.java.net/rss.jsp?page=NavigatingTheBPELDesigner&amp;mode=wiki" />
+
+
+
+<script type="text/javascript"
+         src="templates/brushed/scripts/prototype.js" ></script>
+<script type="text/javascript" 
+         src="templates/brushed/scripts/brushed.js" ></script>
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+  Wiki.setBaseURL ( "index.html" );
+  Wiki.setPageName( "NavigatingTheBPELDesigner" ); /* pagename without blanks */
+  Wiki.setUserName( "113.170.138.21" );
+
+  Wiki.setDELIM              ( "¤" );
+  Wiki.setPrefDateFormat     ( "dd-MMM-yy HH:mm a, Z" );
+  Wiki.setPrefSkinName       ( "Smart" );
+  Wiki.setPrefTimeZone       ( "" );
+  Wiki.setPrefEditAreaHeight ( "24" );
+  Wiki.setPrefShowQuickLinks ( "no" );
+  Wiki.setPrefSowCalendar    ( "no" );
+//]]>
+</script>
+<script type="text/javascript" 
+         src="templates/brushed/skins/Smart/skin.js"></script>
+
+<!-- INCLUDERESOURCES (script) -->
+
+
+  
+</head>
+
+<body class="view" id="gradient">
+<!--
+<p id="underline" class="barMargin"></p>
+-->
+<div id="wikibody" >
+  
+
+
+
+
+<div id="header">
+<!--
+  <div class="applicationlogo"> 
+    <a href="https://open-esb.dev.java.net/public/downloads.html" title="OpenESB Downloads"></a>
+  </div>
+-->  
+
+<table width="100%" id="headertable"><tr>
+  <td><a href="https://open-esb.dev.java.net/" style="border: none;"><img style="border: none;" height="60" width="304" alt="Open ESB: the Open Enterprise Service Bus... Open Standards + Open Source" src="images/ESBLogoTag-304x60C.jpg"/></a></td>
+
+
+  <td id="rhstop">
+  
+
+<div id="rhsuser" class="rhsusername">
+  Not logged in | 
+    <a title="Hi, Anonymous Guest"  href="Wiki48c3.html?page=Login">Login</a>
+  
+  
+
+  
+
+  
+</div>  
+  
+  
+<div id="oesearch" style="vertical-align: bottom">
+  <br/>
+  <br/>
+	<form action="https://open-esb.dev.java.net/SearchResults.html" id="cse-search-box"> 
+	  <div>
+	    <input type="hidden" name="cx" value="013607241216432041017:tcd_nlc0tem" />
+	    <input type="hidden" name="cof" value="FORID:11" />
+	    <input type="hidden" name="ie" value="UTF-8" />
+	    <input type="text" name="q" size="20" />
+	    <input type="submit" name="sa" value="Search" />
+	  </div>
+	</form>
+</div>
+  
+  
+  </td>
+</tr></table>
+
+<!-- ==================== Menu Structure ==================== -->
+<script type="text/javascript" src="static/menu.js" ></script>
+<div id="z_menu_02"><table width="100%"><tr><td>
+	<div id="z_menu_01">
+		<script>writeOEMenu();</script>
+	</div>
+</td></tr></table></div>
+<!-- ==================== End menu ==================== -->
+
+
+
+
+
+
+
+
+
+
+  <div class="companylogo">
+  </div>
+  
+  
+<!--
+<ul class="iconlist">
+<li class="documentation"><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=Documentation"><img src="/openesbwiki/templates/brushed/skins/Smart/images/documentation.png" width="81" height="65"/></a></li>
+<li class="link"><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsefulLinks"><img src="/openesbwiki/templates/brushed/skins/Smart/images/links.png" width="64" height="65"/></a></li>
+<li class="participate"><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=GetInvolved"><img src="/openesbwiki/templates/brushed/skins/Smart/images/participate.png" width="61" height="68"/></a></li>
+<li class="downloads"><a href="https://open-esb.dev.java.net/Downloads.html"><img src="/openesbwiki/templates/brushed/skins/Smart/images/downloads.png" width="61" height="65"/></a></li>
+</ul>
+<div style="clear: left;"></div>
+ --> 
+
+  <table width="100%">
+  <tr>
+  <td><div class="pagename2">Navigating The BPEL Designer</div></td>
+  </tr>
+  </table>
+  
+
+
+  
+  <div class="searchbox">
+
+
+<form action="http://wiki.open-esb.java.net/Search.jsp"
+    onsubmit="SearchBox.submit( this.query.value )"
+ onmouseover="Element.show('searchboxMenu');"
+  onmouseout= "Element.hide('searchboxMenu');"
+        name="searchForm" id="searchForm" 
+        accept-charset="UTF-8">
+  <div>
+  
+  <input onblur="if( this.value == '' ) { this.value = 'Search'}; " 
+        onfocus="if( this.value == 'Search' ) { this.value = ''}; "
+           type="text" value="Wiki search" name="query" id="query" size="24" 
+      accesskey="f"></input>
+  </div>  
+  <div id="searchboxMenu" style='display:none;'>
+    <div>
+      <a href="javascript://nop/" 
+         onclick="SearchBox.navigation( 'Wiki195c.html?page=__PAGEHERE__','NavigatingTheBPELDesigner' );return false;"
+         title="View the selected page">view</a> 
+      | 
+      <a href="javascript://nop/" 
+         onclick="SearchBox.navigation( 'http://wiki.open-esb.java.net/Edit.jsp?page=__PAGEHERE__','NavigatingTheBPELDesigner' );return false;"
+         title="Edit the selected page">edit</a> 
+      | 
+      <a href="javascript://nop/" 
+         onclick="SearchBox.clone( 'http://wiki.open-esb.java.net/Edit.jsp?page=__PAGEHERE__','NavigatingTheBPELDesigner' );return false;"
+         title="Clone this page">clone</a> 
+      |
+      <a href="javascript://nop/" 
+         onclick="SearchBox.navigation( 'Search136d.html?query=__PAGEHERE__','NavigatingTheBPELDesigner' );return false;"
+         title="Advanced Search">find</a> 
+      [ f ]
+    </div>
+    <div id="searchResult" > </div>
+    <div id="recentSearches" > </div>
+  </div>
+
+</form>
+<script type="text/javascript">
+//<![CDATA[    
+    function updateSearchResult( )
+    {  
+      if( $F('query') == 'Search' ) return;
+      new Ajax.Updater(
+        'searchResult', 
+        'templates/brushed/FindAjax.html',
+        { 
+          asynchronous: true,
+          parameters: Form.serialize( 'searchForm' ) + "&compact=true"
+        } ); 
+    } ;
+    new Form.Element.Observer( "query", 1, updateSearchResult ); 
+//]]>
+</script>
+    
+   </div>
+
+  <div class="breadcrumbs">Your trail: <a class="wikipage" href="Wikifbc9.html?page=UnderstandingTheBPELModuleProject">UnderstandingTheBPELModuleProject</a> &gt; <a class="wikipage" href="Wikia3b7.html?page=TextFormattingRules">TextFormattingRules</a> &gt; <a class="wikipage" href="Wikib2ab.html?page=Main">Main</a> &gt; <a class="wikipage" href="Wiki195c.html?page=__PAGEHERE__">__PAGEHERE__</a> &gt; <a class="wikipage" href="Wiki5f9e.html?page=PageIndex">PageIndex</a> &gt; <a class="wikipage" href="Wiki5fc7.html?page=RecentChanges">RecentChanges</a> &gt; <a class="wikipage" href="Wiki20e8.html?page=UsingBPELDesignerServiceEngine">UsingBPELDesignerServiceEngine</a> &gt; <a class="wikipage" href="Wiki5e52.html?page=BPELDesignerAndServiceEngineOverview">BPELDesignerAndServiceEngineOverview</a> &gt; <a class="wikipage" href="Wiki3879.html?page=BPELDesignerAndServiceEngineFeatures">BPELDesignerAndServiceEngineFeatures</a></div>
+
+  <div style="clear:both; height:0;" > </div>
+
+</div>
+
+
+
+
+  
+
+
+
+
+
+<div id="actionsTop" class="pageactions"> 
+<!--
+  <span class="actionHome">
+    <a href="http://wiki.open-esb.java.net/Wiki.jsp?page=Main"
+       title="Go to home page Main ">Home</a>
+  </span>
+-->  
+  
+    
+    
+    
+<!--
+    
+  -->
+  
+  
+  <span class="actionIndex">
+     <a href="Wiki5f9e.html?page=PageIndex"
+       title="Alphabetically sorted list of pages [ x ]" accesskey="x">Index</a>
+  </span>
+  
+  <span class="actionRecentChanges">
+     <a href="Wiki5fc7.html?page=RecentChanges"
+        title="Pages sorted by modification date [ u ]" accesskey="u">Changes</a>
+  </span>
+
+  
+
+<!--
+  <span class="quicklinks quick2Bottom">
+    <a href="#footer" title="Go to Bottom" >&raquo;</a>
+  </span>
+-->
+  <div style="clear:both; height:0;"> </div> 
+</div>
+
+
+
+
+
+  <div id="page">
+
+
+
+
+
+<div class="tabmenu ">
+  
+  
+  
+  
+  
+  
+  
+
+  <span><a class="activetab" id="menu-pagecontent" onclick="TabbedSection.onclick('pagecontent')" accesskey="v" ><u>V</u>iew</a></span>
+  
+  
+  <span><a id="menu-attachments" onclick="TabbedSection.onclick('attachments')" accesskey="a" ><u>A</u>ttach (3)</a></span>
+  
+  <span><a id="menu-pageinfo" onclick="TabbedSection.onclick('pageinfo')" accesskey="i" ><u>I</u>nfo</a></span>
+  
+</div>
+<div class="tabs ">
+  <div id="pagecontent" >
+
+    
+
+
+
+
+
+
+
+<h3 id="section-NavigatingTheBPELDesigner-UsingTheBPELDesignerAndServiceEngine">Using the BPEL Designer and Service Engine </h3>
+<p><b>Contents</b>
+</p>
+<ul><li> <a class="wikipage" href="Wiki20e8.html?page=UsingBPELDesignerServiceEngine">Using the BPEL Designer and Service Engine</a>
+</li><li> <a class="wikipage" href="Wiki5e52.html?page=BPELDesignerAndServiceEngineOverview">Overview</a>
+</li><li> <a class="wikipage" href="Wiki3879.html?page=BPELDesignerAndServiceEngineFeatures">BPEL Designer and Service Engine Features</a>
+</li><li> <a class="wikipage" href="Wikifbc9.html?page=UnderstandingTheBPELModuleProject">Understanding the BPEL Module Project</a>
+</li><li> <span style="color:#3333ff;"><b>Navigating the BPEL Designer</b></span>
+<ul><li> The BPEL Designer Window
+</li><li> The BPEL Editor Views
+</li><li> Element Documentation and Report Generation
+</li><li> The Navigator Window
+</li><li> The Properties Window
+</li><li> Scrolling
+</li><li> Zooming In and Out
+</li><li> Printing BPEL Diagrams and Source Files
+</li></ul></li><li> <a class="wikipage" href="Wikia9da.html?page=CreatingTheBPELModuleProject">Creating a BPEL Module Project</a>
+</li><li> <a class="wikipage" href="Wiki17ca.html?page=DevelopingTheBPELProcessUsingTheBPELDiagram">Developing the BPEL Process Using the BPEL Diagram</a>
+</li><li> <a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">The BPEL Designer Palette Elements</a>
+</li><li> <a class="wikipage" href="Wiki39db.html?page=UsingTheBPELMapper">Using the BPEL Mapper</a>
+</li><li> <a class="wikipage" href="Wikiad48.html?page=UsingNormalizedMessageProperties">Using Normalized Message Properties</a>
+</li><li> <a class="wikipage" href="Wikie39c.html?page=UsingHandlers">Using Handlers</a>
+</li><li> <a class="wikipage" href="Wikia3b6.html?page=UsingCorrelation">Using Correlation</a>
+</li><li> <a class="wikipage" href="Wiki1f81.html?page=ValidatingTheBPELProcess">Validating a BPEL Process</a>
+</li><li> <a class="wikipage" href="Wiki5233.html?page=BPELProcessLoggingAndAlerting">BPEL Process Logging and Alerting</a>
+</li><li> <a class="wikipage" href="Wiki2f9d.html?page=ConfiguringTheBPELServiceEngineRuntimeProperties">Configuring the BPEL Service Engine Runtime Properties</a>
+</li><li> <a class="wikipage" href="Wikicae3.html?page=BPELServiceEngineDeploymentArtifacts">BPEL Service Engine Deployment Artifacts</a>
+</li><li> <a class="wikipage" href="Wiki1302.html?page=TestingAndDebuggingBPELProcesses">Testing and Debugging BPEL Processes</a>
+</li><li> <a class="wikipage" href="Wiki434d.html?page=MonitoringTheBPELServiceEngine">Monitoring the BPEL Service Engine</a>
+</li><li> <a class="wikipage" href="Wiki77bf.html?page=ConfiguringTheQualityOfServiceProperties">Configuring Quality of Service (QOS) Properties, Throttling, and Redelivery</a>
+</li><li> <a class="wikipage" href="Wikife94.html?page=UsingDynamicPartnerLinksAndDynamicAddressing">Using Dynamic Partner Links and Dynamic Addressing</a>
+</li><li> <a class="wikipage" href="Wiki0931.html?page=ConfiguringPersistenceAndRecoveryForBPEL">Configuring Persistence and Recovery for the BPEL Service Engine</a>
+</li><li> <a class="wikipage" href="Wikid4c2.html?page=ConfiguringFailoverForBPEL">Configuring Failover for the BPEL Service Engine</a>
+</li><li> <a class="wikipage" href="Wiki21f2.html?page=BPELBluePrints">BPEL BluePrints</a>
+</li><li> <a class="wikipage" href="Wiki7030.html?page=BPELServiceEngineTaskHowTos">BPEL Service Engine Task How-tos</a>
+</li><li> <a class="wikipage" href="Wikif987.html?page=TroubleshootingTheBPELServiceEngine">Troubleshooting the BPEL Designer and Service Engine</a>
+</li></ul><br />
+<h2 id="section-NavigatingTheBPELDesigner-NavigatingTheBPELDesigner">Navigating the BPEL Designer</h2>
+<hr />
+This section explores the navigation capabilities of the BPEL Designer. 
+<ul><li> The BPEL Editor Views
+</li><li> The Navigator Window
+</li><li> The Properties Window
+</li><li> Scrolling
+</li><li> Zooming In and Out
+</li><li> Printing BPEL Diagrams and Source Files
+</li></ul><h3 id="section-NavigatingTheBPELDesigner-TheBPELDesignerWindow">The BPEL Designer Window</h3>
+The new BPEL file opens in the Design view of the BPEL Designer.
+<table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/NavigatingTheBPELDesigner/ep-bpel-se-dsgner.gif" height="414" width="600" alt="Image shows the NetBeans IDE displaying the Design view of the BPEL Designer" /></td></tr>
+</table>
+
+<p>To open the BPEL Designer, either create a new BPEL Process or open an existing BPEL Process. The image above shows the NetBeans IDE open to the BluePrint1 Project's BPEL process in the BPEL Designer. If the Pallet and Properties windows are not displayed in your current view, click <tt>Windows</tt> &rarr; <tt>Reset Windows</tt> from the NetBeans menu.<br />
+</p>
+<p>Notice the following BPEL Designer components:
+</p>
+<ul><li> The <b>BPEL Editor</b> resides in the center pane of the BPEL Designer. The Design view of the BPEL Editor enables you to visually model the business process. The BPEL Designer automatically generates BPEL code that corresponds to the visual design. 
+</li><li> The <b>Pallet</b>, available in the designers upper-right pane of the Design view, provides easy access to the BPEL elements.
+</li><li> The <b>Properties</b> window, available in the lower-right pane of the Design view, provides the property sheet for any selected component or activity.
+</li><li> The <b>Navigator</b> window, available in the lower-left pane, shows the BPEL Logical View of the BPEL process.
+</li><li> To see the <b>Source</b> view of the BPEL Editor, click the <tt>Source</tt> button. The Source view displays the code for the current process.
+</li><li> To see the <b>BPEL Mapper</b> view, select a BPEL activity in the Design view of the editor, then click the <tt>Mapper</tt> button. The Mapper view of the BPEL Editor provides a framework that enables you to define and direct BPEL process data.
+</li><li> To see the <b>BPEL Logger</b> view, select a BPEL activity in the Design view of the editor, then click the <tt>Logger</tt> button. The Logger, similar in appearance to the BPEL Mapper view, enables you to select the level of logging for the various process activities. 
+</li></ul><br />
+<div class="center">
+<a class="wikipage" href="Wiki0ddb.html?page=NavigatingTheBPELDesigner">Top</a></div>
+<h3 id="section-NavigatingTheBPELDesigner-TheBPELEditorViews">The BPEL Editor Views</h3>
+In the BPEL Editor you can switch between Source View, Design View, Mapper View and Logging View. All the views are always kept in sync. 
+<ul><li> <b>Design View:</b> The Design view is a business processes designer where you can author a diagram of your business process. In the Design view, you add, edit, and delete diagram elements. The diagram constructed in the Design view is automatically generated into BPEL source code compliant with the WS-BPEL 2.0 specification with the exceptions listed in the BPEL 2.0 Language Constructs section of the <a class="external" href="https://open-esb.dev.java.net/kb/preview3/ep-bpel-se.html">https://open-esb.dev.java.net/kb/preview3/ep-bpel-se.html</a><img class="outlink" src="http://wiki.open-esb.java.net/images/out.png" alt="" />.<br /> <br />The Design view opens by default when you double-click a BPEL file from a BPEL Module project in the Projects window. To switch to the corresponding place in the Source view, right-click an element in the Design view and select <tt>Go to Source</tt> (Alt-O).
+</li></ul><ul><li> <b>Source View:</b> The Source view shows the underlying code for a business process diagram. The Source view is based on the NetBeans IDE's XML Source view, and provides access to conveniences such as code folding, XML syntax highlighting, and code completion.<br /> <br />You can perform source level editing as well as visual designing. The BPEL Designer will perform round-trip two-way engineering to ensure that the Design view and Source view remain synchronized with each other. The NetBeans IDE automatically re-parses the BPEL source file and rebuilds the diagram every time you perform manual edits of the source file.<br /> <br />To switch to the corresponding place in the Design view, place a cursor at the line in the Source view, right-click and choose <tt>Go to Design</tt> (Alt-D). <br /> <br />
+</li><li> <b>Mapper View:</b> The BPEL Mapper provides a framework for processing and directing BPEL process data. The BPEL Mapper can be used to assign values or to set conditions. To switch to the Mapper view press <tt>Ctrl-Shift-F9</tt>, or click the <tt>Mapper</tt> tab on the editor toolbar, or just double-click an activity in the diagram. For more information, refer to <a class="wikipage" href="Wiki39db.html?page=UsingTheBPELMapper">Using the BPEL Mapper</a> section. <br /> <br />
+</li><li> <b>Logging View:</b> The Logging view provides you with the capability to set logging or alerting rules for the process. The Logging view is similar to the BPEL Mapper in use. To switch to the the Logging view press <tt>Alt-L</tt> or click the <tt>Logging</tt> tab on the editor toolbar. For more information see <a class="wikipage" href="Wiki5233.html?page=BPELProcessLoggingAndAlerting">BPEL Process Logging and Alerting</a> section.
+ <br />
+</li></ul><h3 id="section-NavigatingTheBPELDesigner-CloningDocumentViews">Cloning Document Views</h3>
+The Clone Document feature is a customization option which enables you to clone documents views. For example, if you want to see both the source and the design view of a BPEL process at the same time (or the Design and Mapper view) follow the instructions below. <br /> <br />
+Several views of one document are always kept in sync.
+<br />
+<h4 id="section-NavigatingTheBPELDesigner-ToCloneTheDocumentView">To Clone the Document View:</h4>
+<ol><li> Open the BPEL file
+</li><li> Right click the tab with the file name and choose <tt>Clone Document</tt>.  Another tab with the same document will be created.
+</li><li> Drag and drop one of the tabs to the location you choose: left, right or to the bottom of the screen. An orange frame will show you where the window you are dragging will be placed.
+</li></ol><div class="center">
+<a class="wikipage" href="Wiki0ddb.html?page=NavigatingTheBPELDesigner">Top</a></div>
+<h3 id="section-NavigatingTheBPELDesigner-ElementDocumentationAndReportGeneration"> Element Documentation and Report Generation</h3>
+The BPEL Designer includes a feature that allows you to create comments (documentation) attached to the elements of the BPEL Process. This documentation is then included with the source code of the BPEL process and can later be extracted and included in a report.
+<h4 id="section-NavigatingTheBPELDesigner-CreatingDocumentationForAnElement">Creating Documentation for an Element</h4>
+<ol><li>Select an element on the diagram or in the Navigator window.<br />
+</li><li>Click the selected element's Document icon. A Documentation window appears. <br />
+</li><li>Type any information or comments that you feel are useful into the Documentation window. This Documentation is now available anytime you open this window and is also available in the element's Properties file, added to the Documentation property.<br /> <br />Documentation that is added to the Documentation property in the element's Properties file is also available when the element's Documentation icon is selected in the Documentation window.
+</li></ol><h4 id="section-NavigatingTheBPELDesigner-GeneratingAReport">Generating a Report</h4>
+The Report Generation feature of the BPEL Designer enables you to generate a PDF document describing the BPEL Process. By creating a custom report, you can create a more verbose report or include only elements that have documentation in the report.
+<ol><li>From the BPEL Diagram toolbar press the Generate Report button. The report, in PDF format, is added to the project's Process files in the Projects window.<br /> <br /> The report includes following information:
+<ul><li>The name of the process
+</li><li>The diagram
+</li><li> Information about imported documents
+</li><li> Information about partner links
+</li><li> A list of all defined variables
+</li><li> Information about the process elements
+</li><li> Documentation created for the process elements
+</li></ul></li><li> To customize a report to include all of the element properties or to only include elements with documentation, click the Customize Report button in the BPEL Diagram toolbar.<br />A Customize Report dialog box appears.
+<ul><li> Choose Generate Verbose Report to include all of the element properties in the report.
+</li><li> Choose Include Only Elements with Documentation to only include elements with documentation to be included in the report.
+</li></ul></li><li> Click OK, and click the Generate Report button. If a report already exists, the new report will overwrite the existing report in the Projects window.
+ <br />
+</li></ol><div class="center">
+<a class="wikipage" href="Wiki0ddb.html?page=NavigatingTheBPELDesigner">Top</a></div>
+<h3 id="section-NavigatingTheBPELDesigner-TheNavigatorWindow">The Navigator Window</h3>
+The Navigator window is a companion of the BPEL Designer. If the Navigator window is not visible, you can manually invoke it by selecting <tt>Window</tt> &rarr; <tt>Navigating</tt> &rarr; <tt>Navigator</tt> from the main menu or pressing the <tt>Ctrl-7</tt> key combination. <br /> <br />
+The Navigator window provides two distinct views of the BPEL process: <tt>BPEL Logical View</tt>  and <tt>XML View</tt>. You can switch between the XML View and BPEL Logical View using the drop-down menu in the upper part of the Navigator window.
+<h4 id="section-NavigatingTheBPELDesigner-XMLView">XML View</h4>
+The XML View is identical to the Navigator view that is available for all XML documents opened in the IDE. The XML View is a companion to the BPEL Source view. Double-click any Navigator node and the Source view adjusts the current line of code to show the selected element.
+<h4 id="section-NavigatingTheBPELDesigner-LogicalView">Logical View</h4>
+The Navigator also provides the BPEL Logical View of BPEL processes. When you select BPEL constructs in the Design view, the BPEL Logical View shows the same element selected. Alternatively, when you select a node in the BPEL Logical View's tree, the corresponding element is selected on the diagram. <br /> <br />
+When you right-click a node in the BPEL Logical View it invoke a pop-up menus with actions that are relevant to the particular node. For example, for the <tt>Assign</tt> element, the actions are <tt>Go to Source</tt>, <tt>Go to Design</tt>, <tt>Wrap With</tt>, <tt>Move Up</tt>, <tt>Move Down</tt>, <tt>Toggle Breakpoint</tt>, <tt>Delete</tt>, <tt>Show BPEL Mapper</tt>, and <tt>Properties</tt>. The <tt>Go to Source</tt> and <tt>Go to Design</tt> actions, available for most of the nodes, have associated keyboard shortcuts: <tt>Alt-O</tt> for <tt>Go to Source</tt> and <tt>Alt-D</tt> for <tt>Go to Design</tt>. <br /> <br />
+In general, the nodes in the Navigator window correspond to the elements on the diagram. In addition, there are nodes, such as <tt>Variables</tt> and <tt>Correlation Sets</tt>, that are related to functionality not directly accessible from the diagram. <br /> <br />
+To view the variables used in the business process, expand the <tt>Variables</tt> node in the BPEL Logical View of the Navigator window. For variables, the following commands are available in the pop-up menu:
+<ul><li> <b>Go To Source:</b> Opens the source of the BPEL file and places the cursor at the place where the variable is mentioned for the first time.
+</li><li> <b>Go To Type Source:</b> Opens the source file that contains a definition of the variable type. This can be, for example, a WSDL file.
+</li><li> <b>Find Usages:</b> Shows usages of variables in the BPEL file. This command is also available from the pop-up menu for correlation sets and Partner Link elements.
+</li></ul>Of particular relevance is the <tt>Imports</tt> node, which lists XSD and WSDL files referenced with the help of the Import element in your BPEL file. Using the pop-up menu for the <tt>Imports</tt> node, you can add reference to an XSD or WSDL file. Note that only files located in the project folder may be referenced.
+<h4 id="section-NavigatingTheBPELDesigner-ToAddAResourceFileWSDLOrXSDAsAnImport">To add a resource file (<tt>WSDL</tt> or  <tt>XSD</tt>) as an import:</h4>
+<ol><li> In the BPEL Logical View of the Navigator window, right-click the <tt>Imports</tt> node and choose one of the following, depending on the format of the imported file: <tt>Add WSDL Import</tt> or <tt>Add Schema Import</tt>.
+</li><li> In the Create New Import dialog box, select a file in your project structure to add it as import.<br /> <br /><b>Note:</b> Before you can import a file, you must first add the files stored in your project directory to the project structure, then you can add them as imports. The files that are already referenced are displayed in the strikethrough style.<br /> <br />
+</li><li> View the values in the read-only Namespace and Type fields and click <tt>OK</tt>.<br />
+  The resource file you have just added appears under the Imports node in the Navigator window.
+</li></ol><h4 id="section-NavigatingTheBPELDesigner-ToAddAPropertyToAWSDLFile">To add a property to a WSDL file:</h4>
+From the Navigator window you can add properties and property aliases to the WSDL files referenced in the BPEL document.
+<ol><li> In the BPEL Logical View of the Navigator window, right-click a WSDL file under the <tt>Imports</tt> node and choose <tt>Add Property</tt> from the pop-up menu.
+</li><li> In the Create New Correlation Property dialog box, specify the property name.
+</li><li> Select the property type and click <tt>OK.</tt>
+</li></ol><h4 id="section-NavigatingTheBPELDesigner-ToAddAPropertyAliasToAWSDLFile">To add a property alias to a WSDL file:</h4>
+<ol><li> In the BPEL Logical View of the Navigator window, right-click a WSDL file under the <tt>Imports</tt> node and select <tt>Add Property Alias</tt> from the pop-up menu.
+</li><li> In the Create New Property Alias dialog box, click <tt>Browse</tt> next to the Property field to specify the property.
+</li><li> In the Property Chooser dialog box, select the property for which you are creating the alias and click <tt>OK.</tt> The Property Type field in the Create New Property Alias dialog box is populated with the type.
+</li><li> In the Map Property To tree, expand the WSDL file node and select the message or message part.
+</li><li> To add a query, enter the query string in the Query text field.
+  If the Synchronous with Tree checkbox is selected, the Query field is updated each time you change the selection in the Map Property To tree.
+</li><li> Click <tt>OK</tt>.<br />
+</li></ol><p>For more information on defining properties and property aliases with the WSDL Editor, refer to the <a class="editpage" href="http://wiki.open-esb.java.net/Edit.jsp?page=UsingTheWSDLEditor" title="Create 'UsingTheWSDLEditor'">Using the WSDL Editor</a>.
+<br />
+</p>
+<div class="center">
+<a class="wikipage" href="Wiki0ddb.html?page=NavigatingTheBPELDesigner">Top</a></div>
+<h3 id="section-NavigatingTheBPELDesigner-ThePropertiesWindow">The Properties Window</h3>
+The Properties window contains the properties information for the currently selected element of the process. You can also use the IDE's Properties window to configure all BPEL element properties. The contents of the Properties window differs depending on the active element of the process. To open the Properties window, choose <tt>Window</tt> &rarr; <tt>Properties</tt> or press <tt>Ctrl-Shift-7</tt>.
+<br />
+<div class="center">
+<a class="wikipage" href="Wiki0ddb.html?page=NavigatingTheBPELDesigner">Top</a></div>
+<h3 id="section-NavigatingTheBPELDesigner-Scrolling">Scrolling</h3>
+When you open a BPEL file from the Projects window, the diagram opens in the Editing Mode of the Design view by default. In this mode, you can edit the diagram and scroll through it. The Editing Mode is enabled when the Navigation mode is selected on the Editor toolbar.
+<table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/NavigatingTheBPELDesigner/navigation_mode_on.gif" height="135" width="418" /></td></tr>
+</table>
+
+<p>In the Editing mode, you can scroll through the diagram by using the following methods: 
+</p>
+<ul><li> Turning the mouse wheel 
+</li><li> Using the horizontal and vertical scroll bars
+</li><li> Using the thumbnail view to select the section of the diagram to display. To access the thumbnail view, click the Thumbnail button located below vertical scroll bar, or press <tt>Ctrl+B</tt>
+</li><li> Pressing the Tab key to move through elements
+</li></ul><h3 id="section-NavigatingTheBPELDesigner-CollapsingAndExpandingProcessBlocksInTheDiagram">Collapsing and Expanding Process Blocks in the Diagram</h3>
+The diagram enables you to collapse and expand process blocks to allow you to focus on other processes. 
+<p>To collapse and expand a process block:
+</p>
+<ol><li> Click on the block's border to highlight the block. A <tt>Collapse</tt> button appears above the left corner of the block.
+</li><li> Click the <tt>Collapse</tt> button. The process block is displayed as a small block in the diagram flow.
+</li><li> To expand the process block, click the Expand icon in the center of the collapsed process block. That block is expanded.
+</li></ol><h3 id="section-NavigatingTheBPELDesigner-ZoomingInAndOutOfTheDiagram">Zooming In and Out of the Diagram</h3>
+The zoom feature allows you to reduce the size of your diagram to see more of it, or to enlarge the diagram  for a closer view. <br />
+You can change the zoom value using the Zoom Value drop-down list on the Editor toolbar.
+<ul><li> To scale the diagram to fit the window, click <tt>Fit Diagram</tt>. 
+</li><li> To scale the diagram width to fit the window width, click the <tt>Fit Width</tt> button. <br /> <br /><b>Note:</b> The minimum scale size is 33%. Some large diagrams might not fit entirely the window. <br />
+</li></ul><p>To change the scale do one of the following:
+</p>
+<ul><li> Click the <tt>Zoom In</tt> or <tt>Zoom Out</tt> button on the toolbar.
+</li><li> Click the <tt>Fit Diagram</tt> button on the toolbar to scale the diagram to fit the window. 
+</li><li> Click the <tt>Fit Width</tt> button on the toolbar to scale the diagram width to fit the window.
+</li><li> Turn on Navigation Mode on the toolbar, then you can zoom in and out using the mouse wheel.
+</li></ul><br />
+<div class="center">
+<a class="wikipage" href="Wiki0ddb.html?page=NavigatingTheBPELDesigner">Top</a></div>
+<h3 id="section-NavigatingTheBPELDesigner-PrintingBPELDiagramsAndSourceFiles">Printing BPEL Diagrams and Source Files</h3>
+You can print BPEL diagrams and source files and customize printing settings, including border, headers, footers, colors, line numbers, and zooming, to suit your preferences. 
+<h4 id="section-NavigatingTheBPELDesigner-ToPreviewAndPrintABPELDiagramOrSourceFile">To preview and print a BPEL diagram or source file:</h4>
+<ol><li> Open a BPEL file in the Design view.
+</li><li> Choose <tt>File</tt> from the main menu and select one of the following commands: 
+<ul><li> <b>Print Preview:</b> Previews the print layout or configure print settings.
+</li><li> <b>Print to HTML:</b> Prints the .bpel file as an HTML file. 
+</li></ul></li></ol><h4 id="section-NavigatingTheBPELDesigner-ToCustomizePrintOptions">To customize print options:</h4>
+<ol><li> In the NetBeans IDE, select the object you want to print.
+</li><li> In the Print Preview window, click <tt>Print Options</tt>. The Print Options dialog box opens.
+</li><li> Change the print settings to suit your preferences:
+<ul><li> <b>Print Border:</b> Adds a border to the printed page. Click the Color icon to change the border color.
+</li><li> <b>Print Header and Print Footer:</b> Specifies the text, alignment, color, and font of the header and footer.
+<ul><li> To hide the header or footer, clear the Print Header or Print Footer checkboxes, respectively.
+</li><li> To specify the header or footer pattern text, click in the field corresponding to the alignment (Left, Center, or Right) and select one of the buttons below. For example, to add the time of printing at the bottom left corner, select the Print Footer checkbox, click into the Left field, and click the <tt>Time of printing</tt> icon.
+</li><li> Click the Choose Footer Color and Choose Footer Font icons to modify the color and the font for the page header and footer.
+</li></ul></li><li> <b>Line Numbers:</b> Specifies whether to print line numbers for source files. 
+</li><li> <b>Wrap Lines:</b> Wraps the lines to fit them on the page.
+</li><li>  <b>Print as in Editor:</b> The printed page will look like you see it in the editor. 
+</li><li> <b>Text Font and Color:</b> Specifies the color and font of the text when you are printing, for example, source files. 
+</li><li> <b>Background Color: </b> Specifies the background color. 
+</li><li> <b>Line spacing:</b> Specifies the value for line spacing. 
+</li><li> <b>Zoom:</b> Specifies the scale for the printed text or diagram on the page. You can select to fit width or height or choose a specific zoom scale.
+</li></ul></li><li> Click OK.
+</li></ol><h4 id="section-NavigatingTheBPELDesigner-ToCustomizePageSettings">To customize page settings:</h4>
+<ol><li> In the NetBeans IDE, select an object you want to print.
+</li><li> Choose <tt>File</tt> &rarr; <tt>Print Preview</tt>.
+</li><li> In the Print Preview window, click <tt>Page Setup</tt>. The Page Setup dialog box opens.
+</li><li> You can also invoke the Page Setup dialog box by choosing File &rarr; Page Setup.
+</li><li> On the Page Setup page specify the following parameters:
+<ul><li> Paper size 
+</li><li> Source of the paper
+</li><li> Paper orientation
+</li><li> Margin sizes
+</li></ul></li><li> Click the <tt>Printer</tt> button and specify the printer. 
+</li><li> Click <tt>Ok</tt>.
+</li></ol><div class="information">
+Note: You can also easily print your diagram as part of a report created by clicking the Generate Report button. For more information on generating reports see Element Documentation and Report Generation above.
+</div>
+<br />
+<div class="center">
+<a class="wikipage" href="Wiki0ddb.html?page=NavigatingTheBPELDesigner">Top</a></div>
+<p><a class="wikipage" href="Wikifbc9.html?page=UnderstandingTheBPELModuleProject">Previous</a><br />
+<a class="wikipage" href="Wikia9da.html?page=CreatingTheBPELModuleProject">Next</a>
+</p>
+
+
+
+  </div>
+
+  
+  
+  <div id="attachments" style="display:none;" >
+
+    
+
+
+
+
+
+
+
+<div id="attachmentViewer">
+  <div class="list">
+    <h3>List of attachments &nbsp;&nbsp;&nbsp;&nbsp;
+    </h3>
+      <form action='#'>
+        <select name="attachSelect" id="attachSelect" size="16" 
+            onchange="Attach.showImage(this[this.selectedIndex], '%A4', 300, 300 )" >
+        <option value="Attachment Info" selected="selected" >--- Select Image to preview ---</option>
+        
+          
+          <option value="ep-bpel-designer-bp1.gif%A4http://wiki.open-esb.java.net/attach/NavigatingTheBPELDesigner/ep-bpel-designer-bp1.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=NavigatingTheBPELDesigner/ep-bpel-designer-bp1.gif%A436706 bytes%A42" >
+            ep-bpel-designer-bp1.gif (36706 bytes , revision-2, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="ep-bpel-se-dsgner.gif%A4http://wiki.open-esb.java.net/attach/NavigatingTheBPELDesigner/ep-bpel-se-dsgner.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=NavigatingTheBPELDesigner/ep-bpel-se-dsgner.gif%A442956 bytes%A41" >
+            ep-bpel-se-dsgner.gif (42956 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="navigation_mode_on.gif%A4http://wiki.open-esb.java.net/attach/NavigatingTheBPELDesigner/navigation_mode_on.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=NavigatingTheBPELDesigner/navigation_mode_on.gif%A416308 bytes%A41" >
+            navigation_mode_on.gif (16308 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+      </select>
+    </form>
+    <div class="small">&nbsp;</div>
+  </div>  
+
+  <div class="preview">
+    <h3>Image preview</h3>
+    <div id="attachImg" title="No Image Selected">No Image Selected</div>
+    <a href="#" class="small" style="display:none;" id="attachInfo">More info, including version history</a>
+  </div>
+
+  <div style="clear:both; height:0px;" > </div>
+
+</div>
+
+
+  </div>
+
+  
+  <div id="pageinfo" style="display:none;" >
+
+    
+
+
+
+
+
+
+
+
+  <p>
+  This page (revision-28) was last changed on 
+  <a href="http://wiki.open-esb.java.net/Diff.jsp?page=NavigatingTheBPELDesigner&amp;r1=28&amp;r2=27"
+    title="Show changes of last page update" >
+    
+    09-Jun-09 10:32 AM, -0700
+  </a> by rjacobus.
+  <a href="http://wiki.open-esb.java.net/rss.jsp?page=NavigatingTheBPELDesigner&amp;mode=wiki"
+    title="RSS page feed for Navigating The BPEL Designer" ><img src="images/xml.png" border="0" alt="[RSS]"/></a>
+    
+    <br />
+    This page was created on 
+    <a  href="http://wiki.open-esb.java.net/Wiki.jsp?page=NavigatingTheBPELDesigner&amp;version=1">06-Oct-08 23:17 PM, -0700</a> by rjacobus.
+    
+  </p>    
+
+  
+
+  
+   
+  
+  <p><a href="http://wiki.open-esb.java.net/PageInfo.jsp?page=NavigatingTheBPELDesigner" id="moreinfo" >More info...</a></p>
+  
+  
+
+  <div class="tabmenu ">
+  
+  
+  
+
+  
+
+  
+
+  
+  
+  
+  
+  <span><a class="activetab" id="menu-versionHistory" onclick="TabbedSection.onclick('versionHistory')" >Version History</a></span>
+  
+
+  <span><a id="menu-incomingLinks" onclick="TabbedSection.onclick('incomingLinks')" >Incoming Links</a></span>
+
+  <span><a id="menu-outgoingLinks" onclick="TabbedSection.onclick('outgoingLinks')" >Outgoing Links</a></span>
+
+  
+  
+  </div>
+<div class="tabs ">
+  
+  <div id="versionHistory" >
+
+
+    <div class='pagination'>Pagination: <a title="Show page from 1 to 20" href='#' onclick='location.href= $("moreinfo").href + "&start=0"; ' >previous</a>&nbsp;&nbsp;<a title="Show page from 1 to 20" href='#' onclick='location.href= $("moreinfo").href + "&start=0"; ' >1</a>&nbsp;&nbsp;<span class='cursor'>2</span>&nbsp;&nbsp;<a title="Show all pages" href='#' onclick='location.href= $("moreinfo").href + "&start=-1"; ' >all</a>&nbsp;&nbsp; (Total items: 28)</div>
+    <div class="zebra-table ">
+    <table class="wikitable" >
+      <tr>
+        <th>Version</th>                        
+        <th>Date</th>
+        <th>Author</th>
+        <th>Size</th>
+        <th>Changes ...</th>
+        
+      </tr>
+
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=NavigatingTheBPELDesigner&amp;version=28" accesskey="" title="">
+            28
+          </a>
+        </td>
+
+        <td>
+          09-Jun-09 10:32 AM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>21021</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=NavigatingTheBPELDesigner&amp;r1=28&amp;r2=27">to previous</a>
+            
+          
+
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=NavigatingTheBPELDesigner&amp;version=27" accesskey="" title="">
+            27
+          </a>
+        </td>
+
+        <td>
+          26-May-09 09:45 AM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>20920</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=NavigatingTheBPELDesigner&amp;r1=27&amp;r2=26">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=NavigatingTheBPELDesigner&amp;r1=28&amp;r2=27">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=NavigatingTheBPELDesigner&amp;version=26" accesskey="" title="">
+            26
+          </a>
+        </td>
+
+        <td>
+          21-May-09 12:15 PM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>20923</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=NavigatingTheBPELDesigner&amp;r1=26&amp;r2=25">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=NavigatingTheBPELDesigner&amp;r1=28&amp;r2=26">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=NavigatingTheBPELDesigner&amp;version=25" accesskey="" title="">
+            25
+          </a>
+        </td>
+
+        <td>
+          21-May-09 09:22 AM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>20965</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=NavigatingTheBPELDesigner&amp;r1=25&amp;r2=24">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=NavigatingTheBPELDesigner&amp;r1=28&amp;r2=25">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=NavigatingTheBPELDesigner&amp;version=24" accesskey="" title="">
+            24
+          </a>
+        </td>
+
+        <td>
+          21-May-09 09:21 AM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>20916</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=NavigatingTheBPELDesigner&amp;r1=24&amp;r2=23">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=NavigatingTheBPELDesigner&amp;r1=28&amp;r2=24">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=NavigatingTheBPELDesigner&amp;version=23" accesskey="" title="">
+            23
+          </a>
+        </td>
+
+        <td>
+          10-Dec-08 14:26 PM, -0800
+        </td>
+        <td>rjacobus</td>
+        <td>18319</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=NavigatingTheBPELDesigner&amp;r1=23&amp;r2=22">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=NavigatingTheBPELDesigner&amp;r1=28&amp;r2=23">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=NavigatingTheBPELDesigner&amp;version=22" accesskey="" title="">
+            22
+          </a>
+        </td>
+
+        <td>
+          10-Dec-08 14:09 PM, -0800
+        </td>
+        <td>rjacobus</td>
+        <td>18314</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=NavigatingTheBPELDesigner&amp;r1=22&amp;r2=21">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=NavigatingTheBPELDesigner&amp;r1=28&amp;r2=22">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=NavigatingTheBPELDesigner&amp;version=21" accesskey="" title="">
+            21
+          </a>
+        </td>
+
+        <td>
+          05-Dec-08 11:25 AM, -0800
+        </td>
+        <td>SWeber</td>
+        <td>18361</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=NavigatingTheBPELDesigner&amp;r1=21&amp;r2=20">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=NavigatingTheBPELDesigner&amp;r1=28&amp;r2=21">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=NavigatingTheBPELDesigner&amp;version=20" accesskey="" title="">
+            20
+          </a>
+        </td>
+
+        <td>
+          14-Nov-08 13:20 PM, -0800
+        </td>
+        <td>rjacobus</td>
+        <td>18373</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=NavigatingTheBPELDesigner&amp;r1=20&amp;r2=19">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=NavigatingTheBPELDesigner&amp;r1=28&amp;r2=20">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+    </table>  
+    </div>
+    <div class='pagination'>Pagination: <a title="Show page from 1 to 20" href='#' onclick='location.href= $("moreinfo").href + "&start=0"; ' >previous</a>&nbsp;&nbsp;<a title="Show page from 1 to 20" href='#' onclick='location.href= $("moreinfo").href + "&start=0"; ' >1</a>&nbsp;&nbsp;<span class='cursor'>2</span>&nbsp;&nbsp;<a title="Show all pages" href='#' onclick='location.href= $("moreinfo").href + "&start=-1"; ' >all</a>&nbsp;&nbsp; (Total items: 28)</div>
+
+  </div>
+
+  
+
+  <div id="incomingLinks" style="display:none;" >
+
+    <a class="wikipage" href="Wiki0ddb.html?page=NavigatingTheBPELDesigner" accesskey="" title="">Navigating The BPEL Designer</a>
+    <ul><li><a class="wikipage" href="Wiki21f2.html?page=BPELBluePrints">BPEL Blue Prints</a>
+</li><li><a class="wikipage" href="Wiki3879.html?page=BPELDesignerAndServiceEngineFeatures">BPEL Designer And Service Engine Features</a>
+</li><li><a class="wikipage" href="Wiki5e52.html?page=BPELDesignerAndServiceEngineOverview">BPEL Designer And Service Engine Overview</a>
+</li><li><a class="wikipage" href="Wiki5233.html?page=BPELProcessLoggingAndAlerting">BPEL Process Logging And Alerting</a>
+</li><li><a class="wikipage" href="Wikicae3.html?page=BPELServiceEngineDeploymentArtifacts">BPEL Service Engine Deployment Artifacts</a>
+</li><li><a class="wikipage" href="Wiki7030.html?page=BPELServiceEngineTaskHowTos">BPEL Service Engine Task How Tos</a>
+</li><li><a class="wikipage" href="Wiki73af.html?page=ConfiguringClusteringAndFailoverForBPEL">Configuring Clustering And Failover For BPEL</a>
+</li><li><a class="wikipage" href="Wikid4c2.html?page=ConfiguringFailoverForBPEL">Configuring Failover For BPEL</a>
+</li><li><a class="wikipage" href="Wiki0931.html?page=ConfiguringPersistenceAndRecoveryForBPEL">Configuring Persistence And Recovery For BPEL</a>
+</li><li><a class="wikipage" href="Wiki2f9d.html?page=ConfiguringTheBPELServiceEngineRuntimeProperties">Configuring The BPEL Service Engine Runtime Properties</a>
+</li><li><a class="wikipage" href="Wiki77bf.html?page=ConfiguringTheQualityOfServiceProperties">Configuring The Quality Of Service Properties</a>
+</li><li><a class="wikipage" href="Wikia9da.html?page=CreatingTheBPELModuleProject">Creating The BPEL Module Project</a>
+</li><li><a class="wikipage" href="Wiki17ca.html?page=DevelopingTheBPELProcessUsingTheBPELDiagram">Developing The BPEL Process Using The BPEL Diagram</a>
+</li><li><a class="wikipage" href="Wiki434d.html?page=MonitoringTheBPELServiceEngine">Monitoring The BPEL Service Engine</a>
+</li><li><a class="wikipage" href="Wiki1302.html?page=TestingAndDebuggingBPELProcesses">Testing And Debugging BPEL Processes</a>
+</li><li><a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">The BPEL Designer Palette Elements</a>
+</li><li><a class="wikipage" href="Wikif987.html?page=TroubleshootingTheBPELServiceEngine">Troubleshooting The BPEL Service Engine</a>
+</li><li><a class="wikipage" href="Wikifbc9.html?page=UnderstandingTheBPELModuleProject">Understanding The BPEL Module Project</a>
+</li><li><a class="wikipage" href="Wiki20e8.html?page=UsingBPELDesignerServiceEngine">Using BPEL Designer Service Engine</a>
+</li><li><a class="wikipage" href="Wikia3b6.html?page=UsingCorrelation">Using Correlation</a>
+</li><li><a class="wikipage" href="Wikife94.html?page=UsingDynamicPartnerLinksAndDynamicAddressing">Using Dynamic Partner Links And Dynamic Addressing</a>
+</li><li><a class="wikipage" href="Wikie39c.html?page=UsingHandlers">Using Handlers</a>
+</li><li><a class="wikipage" href="Wikiad48.html?page=UsingNormalizedMessageProperties">Using Normalized Message Properties</a>
+</li><li><a class="wikipage" href="Wiki39db.html?page=UsingTheBPELMapper">Using The BPEL Mapper</a>
+</li><li><a class="wikipage" href="Wiki1f81.html?page=ValidatingTheBPELProcess">Validating The BPEL Process</a>
+</li></ul>
+  </div>
+
+
+  <div id="outgoingLinks" style="display:none;" >
+
+    
+      <div class="ReferredPagesPlugin">
+<a class="wikipage" href="Wiki0ddb.html?page=NavigatingTheBPELDesigner" title="ReferredPagesPlugin: depth[1] include[.*] exclude[^$] format[compact]">NavigatingTheBPELDesigner</a>
+<ul>
+<li><a class="wikipage" href="Wiki21f2.html?page=BPELBluePrints">BPELBluePrints</a></li>
+<li><a class="wikipage" href="Wiki3879.html?page=BPELDesignerAndServiceEngineFeatures">BPELDesignerAndServiceEngineFeatures</a></li>
+<li><a class="wikipage" href="Wiki5e52.html?page=BPELDesignerAndServiceEngineOverview">BPELDesignerAndServiceEngineOverview</a></li>
+<li><a class="wikipage" href="Wiki5233.html?page=BPELProcessLoggingAndAlerting">BPELProcessLoggingAndAlerting</a></li>
+<li><a class="wikipage" href="Wikicae3.html?page=BPELServiceEngineDeploymentArtifacts">BPELServiceEngineDeploymentArtifacts</a></li>
+<li><a class="wikipage" href="Wiki7030.html?page=BPELServiceEngineTaskHowTos">BPELServiceEngineTaskHowTos</a></li>
+<li><a class="wikipage" href="Wikid4c2.html?page=ConfiguringFailoverForBPEL">ConfiguringFailoverForBPEL</a></li>
+<li><a class="wikipage" href="Wiki0931.html?page=ConfiguringPersistenceAndRecoveryForBPEL">ConfiguringPersistenceAndRecoveryForBPEL</a></li>
+<li><a class="wikipage" href="Wiki2f9d.html?page=ConfiguringTheBPELServiceEngineRuntimeProperties">ConfiguringTheBPELServiceEngineRuntimeProperties</a></li>
+<li><a class="wikipage" href="Wiki77bf.html?page=ConfiguringTheQualityOfServiceProperties">ConfiguringTheQualityOfServiceProperties</a></li>
+<li><a class="wikipage" href="Wikia9da.html?page=CreatingTheBPELModuleProject">CreatingTheBPELModuleProject</a></li>
+<li><a class="wikipage" href="Wiki17ca.html?page=DevelopingTheBPELProcessUsingTheBPELDiagram">DevelopingTheBPELProcessUsingTheBPELDiagram</a></li>
+<li><a class="wikipage" href="Wiki434d.html?page=MonitoringTheBPELServiceEngine">MonitoringTheBPELServiceEngine</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=NavigatingTheBPELDesigner/ep-bpel-designer-bp1.gif">NavigatingTheBPELDesigner/ep-bpel-designer-bp1.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=NavigatingTheBPELDesigner/ep-bpel-se-dsgner.gif">NavigatingTheBPELDesigner/ep-bpel-se-dsgner.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=NavigatingTheBPELDesigner/navigation_mode_on.gif">NavigatingTheBPELDesigner/navigation_mode_on.gif</a></li>
+<li><a class="wikipage" href="Wiki1302.html?page=TestingAndDebuggingBPELProcesses">TestingAndDebuggingBPELProcesses</a></li>
+<li><a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">TheBPELDesignerPaletteElements</a></li>
+<li><a class="wikipage" href="Wikif987.html?page=TroubleshootingTheBPELServiceEngine">TroubleshootingTheBPELServiceEngine</a></li>
+<li><a class="wikipage" href="Wikifbc9.html?page=UnderstandingTheBPELModuleProject">UnderstandingTheBPELModuleProject</a></li>
+<li><a class="wikipage" href="Wiki20e8.html?page=UsingBPELDesignerServiceEngine">UsingBPELDesignerServiceEngine</a></li>
+<li><a class="wikipage" href="Wikia3b6.html?page=UsingCorrelation">UsingCorrelation</a></li>
+<li><a class="wikipage" href="Wikife94.html?page=UsingDynamicPartnerLinksAndDynamicAddressing">UsingDynamicPartnerLinksAndDynamicAddressing</a></li>
+<li><a class="wikipage" href="Wikie39c.html?page=UsingHandlers">UsingHandlers</a></li>
+<li><a class="wikipage" href="Wikiad48.html?page=UsingNormalizedMessageProperties">UsingNormalizedMessageProperties</a></li>
+<li><a class="wikipage" href="Wiki39db.html?page=UsingTheBPELMapper">UsingTheBPELMapper</a></li>
+<li><a class="wikipage" href="Wiki1f81.html?page=ValidatingTheBPELProcess">ValidatingTheBPELProcess</a></li>
+</ul>
+</div>
+
+    
+    
+  </div>
+
+
+  
+  
+  <div style="clear:both; height:0px;" > </div>
+</div>
+ 
+
+
+
+
+
+
+
+
+
+  </div>
+
+  
+<div style="clear:both; height:0px;" > </div>
+</div>
+
+</div> 
+
+
+  
+
+
+
+<div id="favorites">
+
+
+<div class="username">G'day,
+  
+    <a title="Hi, Anonymous Guest"  href="Wiki48c3.html?page=Login">Anonymous Guest</a>
+  
+  
+  
+  
+</div>  
+
+
+
+
+
+
+
+
+<p />
+
+
+
+  
+<p />
+<p />
+
+
+<div class="wikiversion">JSPWiki v2.4.100</div>
+
+<div class="rssfeed"><a href="rss.rdf"><img src="images/xml.png" alt="[RSS]" border="0" title="Aggregate the RSS feed of the entire wiki"/></a></div>
+
+<div style="clear:both; height:0px;" > </div>
+
+</div> 
+
+  
+
+
+
+
+
+<div id='actionsBottom' class="pageactions"> 
+
+  <span class='quicklinks quick2Top'>
+    <a href="#wikibody" title='Go to Top' >&laquo;</a>
+  </span>
+
+  <span class="actionHome">
+    <a href="Wikib2ab.html?page=Main"
+       title="Go to home page Main ">Home</a>
+  </span>
+  
+  
+    
+
+    
+  
+  
+  <span class="actionIndex">
+     <a href="Wiki5f9e.html?page=PageIndex"
+       title="Alphabetically sorted list of pages [ x ]">Index</a>
+  </span>
+  
+  <span class="actionRecentChanges">
+     <a href="Wiki5fc7.html?page=RecentChanges"
+        title="Pages sorted by modification date [ u ]">Changes</a>
+  </span>
+
+  
+    
+      <span class="actionPrefs">
+        <a href="Wiki7eba.html?page=UserPreferences"
+           title="Set User Preferences" >Prefs</a>
+      </span>
+    
+  
+
+  
+    <div class="pageinfo">
+      
+        This page (revision-28) was last changed on 
+        <a href="http://wiki.open-esb.java.net/Diff.jsp?page=NavigatingTheBPELDesigner&amp;r1=28&amp;r2=27"
+          title="Show changes of last page update" >  
+        
+        09-Jun-09 10:32 AM, -0700</a>
+      
+      
+      by rjacobus
+
+      
+    </div>  
+  
+
+  <div style="clear:both; height:0;"> </div> 
+</div>
+
+  
+ 
+  
+
+  
+
+
+<div id="footer">
+
+<table><tr><td>
+  <div class="wikiversion">
+    JSPWiki v2.4.100                       
+  </div>
+</td>
+<td>
+<br>Copyright &copy; 2011, Oracle and/or its affiliates. All rights reserved. Oracle and Java are registered trademarks of Oracle and/or its affiliates. Other names may be trademarks of their respective owners. <a href="http://www.oracle.com/"><img src="images/ora_logo_small.gif" /> </a>
+  <div class="rssfeed">
+    <a href="rss.rdf"><img src="images/xml.png" alt="[RSS]" border="0" title="Aggregate the RSS feed"/></a>
+  </div>
+</td></tr></table>
+  <div style="clear:both; height:0px;" > </div>
+
+</div>
+  
+
+  </div>
+  <div style="clear:both; height:0;" > </div>
+
+
+
+<!-- Page counters -->
+<script type="text/javascript" language="javascript">
+var sc_project=1965314; 
+var sc_invisible=1; 
+var sc_partition=17; 
+var sc_security="c5f5efea"; 
+</script>
+<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script>
+
+
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+<script type="text/javascript">
+_uacct = "UA-993823-3";
+urchinTracker();
+</script>
+</body>
+
+<!-- Mirrored from wiki.open-esb.java.net/Wiki.jsp?page=NavigatingTheBPELDesigner by HTTrack Website Copier/3.x [XR&CO'2010], Thu, 08 Jul 2010 02:16:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+</html>
+
+

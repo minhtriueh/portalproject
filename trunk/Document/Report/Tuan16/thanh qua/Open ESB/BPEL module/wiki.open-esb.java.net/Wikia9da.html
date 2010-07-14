@@ -1,0 +1,1591 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+
+
+<!-- Mirrored from wiki.open-esb.java.net/Wiki.jsp?page=CreatingTheBPELModuleProject by HTTrack Website Copier/3.x [XR&CO'2010], Thu, 08 Jul 2010 02:16:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head>
+
+  <title>Creating The BPEL Module Project - OpenESB: the Open Source ESB for SOA & Integration</title>
+  
+
+
+
+
+
+<link rel="stylesheet" type="text/css" media="screen, projection" 
+     href="templates/brushed/jspwiki.css" />
+
+<!-- browser specific cssinclude not required in brushed template
+<script type="text/javascript"
+         src="/templates/brushed/cssinclude.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+  Wiki.loadBrowserSpecificCSS("brushed");
+//]]>
+</script>
+-->
+
+
+
+
+<link rel="stylesheet" type="text/css" 
+     href="templates/brushed/skins/Smart/skin.css" />
+<!-- INCLUDERESOURCES (stylesheet) -->
+
+
+
+<!--[if IE]>
+<style type="text/css" media="screen">
+img, a, div { behavior: url("templates/brushed/scripts/iepngfix.htc"); }
+</style>
+<![endif]-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="search" 
+     href="Wiki702d.html?page=FindPage"
+    title="Search Open ESB Wiki" />
+<link rel="help"   
+     href="Wikia3b7.html?page=TextFormattingRules" 
+    title="Help" />
+<link rel="start"  
+     href="Wikib2ab.html?page=Main"                
+    title="Front page" />
+<!--<link rel="stylesheet" type="text/css" media="print"
+     href="/templates/brushed/jspwiki_print.css" />
+<link rel="alternate stylesheet" type="text/css"
+     href="/templates/brushed/jspwiki_print.css" 
+    title="Print friendly" />-->
+<link rel="alternate stylesheet" type="text/css" 
+     href="templates/brushed/jspwiki.css" 
+    title="Standard" />
+<link rel="icon" type="image/png" href="images/openesb16x16.png" />
+
+<link rel="template" href="http://wiki.open-esb.java.net/templates/brushed" id="template-dir"/>
+<link rel="alternate" type="application/rss+xml" title="RSS wiki feed for the entire site." href="rss.rdf" />
+<link rel="alternate" type="application/rss+xml" title="RSS wiki feed for page Open ESB Wiki: CreatingTheBPELModuleProject." href="http://wiki.open-esb.java.net/rss.jsp?page=CreatingTheBPELModuleProject&amp;mode=wiki" />
+
+
+
+<script type="text/javascript"
+         src="templates/brushed/scripts/prototype.js" ></script>
+<script type="text/javascript" 
+         src="templates/brushed/scripts/brushed.js" ></script>
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+  Wiki.setBaseURL ( "index.html" );
+  Wiki.setPageName( "CreatingTheBPELModuleProject" ); /* pagename without blanks */
+  Wiki.setUserName( "113.170.138.21" );
+
+  Wiki.setDELIM              ( "¤" );
+  Wiki.setPrefDateFormat     ( "dd-MMM-yy HH:mm a, Z" );
+  Wiki.setPrefSkinName       ( "Smart" );
+  Wiki.setPrefTimeZone       ( "" );
+  Wiki.setPrefEditAreaHeight ( "24" );
+  Wiki.setPrefShowQuickLinks ( "no" );
+  Wiki.setPrefSowCalendar    ( "no" );
+//]]>
+</script>
+<script type="text/javascript" 
+         src="templates/brushed/skins/Smart/skin.js"></script>
+
+<!-- INCLUDERESOURCES (script) -->
+
+
+  
+</head>
+
+<body class="view" id="gradient">
+<!--
+<p id="underline" class="barMargin"></p>
+-->
+<div id="wikibody" >
+  
+
+
+
+
+<div id="header">
+<!--
+  <div class="applicationlogo"> 
+    <a href="https://open-esb.dev.java.net/public/downloads.html" title="OpenESB Downloads"></a>
+  </div>
+-->  
+
+<table width="100%" id="headertable"><tr>
+  <td><a href="https://open-esb.dev.java.net/" style="border: none;"><img style="border: none;" height="60" width="304" alt="Open ESB: the Open Enterprise Service Bus... Open Standards + Open Source" src="images/ESBLogoTag-304x60C.jpg"/></a></td>
+
+
+  <td id="rhstop">
+  
+
+<div id="rhsuser" class="rhsusername">
+  Not logged in | 
+    <a title="Hi, Anonymous Guest"  href="Wiki48c3.html?page=Login">Login</a>
+  
+  
+
+  
+
+  
+</div>  
+  
+  
+<div id="oesearch" style="vertical-align: bottom">
+  <br/>
+  <br/>
+	<form action="https://open-esb.dev.java.net/SearchResults.html" id="cse-search-box"> 
+	  <div>
+	    <input type="hidden" name="cx" value="013607241216432041017:tcd_nlc0tem" />
+	    <input type="hidden" name="cof" value="FORID:11" />
+	    <input type="hidden" name="ie" value="UTF-8" />
+	    <input type="text" name="q" size="20" />
+	    <input type="submit" name="sa" value="Search" />
+	  </div>
+	</form>
+</div>
+  
+  
+  </td>
+</tr></table>
+
+<!-- ==================== Menu Structure ==================== -->
+<script type="text/javascript" src="static/menu.js" ></script>
+<div id="z_menu_02"><table width="100%"><tr><td>
+	<div id="z_menu_01">
+		<script>writeOEMenu();</script>
+	</div>
+</td></tr></table></div>
+<!-- ==================== End menu ==================== -->
+
+
+
+
+
+
+
+
+
+
+  <div class="companylogo">
+  </div>
+  
+  
+<!--
+<ul class="iconlist">
+<li class="documentation"><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=Documentation"><img src="/openesbwiki/templates/brushed/skins/Smart/images/documentation.png" width="81" height="65"/></a></li>
+<li class="link"><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsefulLinks"><img src="/openesbwiki/templates/brushed/skins/Smart/images/links.png" width="64" height="65"/></a></li>
+<li class="participate"><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=GetInvolved"><img src="/openesbwiki/templates/brushed/skins/Smart/images/participate.png" width="61" height="68"/></a></li>
+<li class="downloads"><a href="https://open-esb.dev.java.net/Downloads.html"><img src="/openesbwiki/templates/brushed/skins/Smart/images/downloads.png" width="61" height="65"/></a></li>
+</ul>
+<div style="clear: left;"></div>
+ --> 
+
+  <table width="100%">
+  <tr>
+  <td><div class="pagename2">Creating The BPEL Module Project</div></td>
+  </tr>
+  </table>
+  
+
+
+  
+  <div class="searchbox">
+
+
+<form action="http://wiki.open-esb.java.net/Search.jsp"
+    onsubmit="SearchBox.submit( this.query.value )"
+ onmouseover="Element.show('searchboxMenu');"
+  onmouseout= "Element.hide('searchboxMenu');"
+        name="searchForm" id="searchForm" 
+        accept-charset="UTF-8">
+  <div>
+  
+  <input onblur="if( this.value == '' ) { this.value = 'Search'}; " 
+        onfocus="if( this.value == 'Search' ) { this.value = ''}; "
+           type="text" value="Wiki search" name="query" id="query" size="24" 
+      accesskey="f"></input>
+  </div>  
+  <div id="searchboxMenu" style='display:none;'>
+    <div>
+      <a href="javascript://nop/" 
+         onclick="SearchBox.navigation( 'Wiki195c.html?page=__PAGEHERE__','CreatingTheBPELModuleProject' );return false;"
+         title="View the selected page">view</a> 
+      | 
+      <a href="javascript://nop/" 
+         onclick="SearchBox.navigation( 'http://wiki.open-esb.java.net/Edit.jsp?page=__PAGEHERE__','CreatingTheBPELModuleProject' );return false;"
+         title="Edit the selected page">edit</a> 
+      | 
+      <a href="javascript://nop/" 
+         onclick="SearchBox.clone( 'http://wiki.open-esb.java.net/Edit.jsp?page=__PAGEHERE__','CreatingTheBPELModuleProject' );return false;"
+         title="Clone this page">clone</a> 
+      |
+      <a href="javascript://nop/" 
+         onclick="SearchBox.navigation( 'Search136d.html?query=__PAGEHERE__','CreatingTheBPELModuleProject' );return false;"
+         title="Advanced Search">find</a> 
+      [ f ]
+    </div>
+    <div id="searchResult" > </div>
+    <div id="recentSearches" > </div>
+  </div>
+
+</form>
+<script type="text/javascript">
+//<![CDATA[    
+    function updateSearchResult( )
+    {  
+      if( $F('query') == 'Search' ) return;
+      new Ajax.Updater(
+        'searchResult', 
+        'templates/brushed/FindAjax.html',
+        { 
+          asynchronous: true,
+          parameters: Form.serialize( 'searchForm' ) + "&compact=true"
+        } ); 
+    } ;
+    new Form.Element.Observer( "query", 1, updateSearchResult ); 
+//]]>
+</script>
+    
+   </div>
+
+  <div class="breadcrumbs">Your trail: <a class="wikipage" href="Wikifbc9.html?page=UnderstandingTheBPELModuleProject">UnderstandingTheBPELModuleProject</a> &gt; <a class="wikipage" href="Wikia3b7.html?page=TextFormattingRules">TextFormattingRules</a> &gt; <a class="wikipage" href="Wikib2ab.html?page=Main">Main</a> &gt; <a class="wikipage" href="Wiki195c.html?page=__PAGEHERE__">__PAGEHERE__</a> &gt; <a class="wikipage" href="Wiki5f9e.html?page=PageIndex">PageIndex</a> &gt; <a class="wikipage" href="Wiki5fc7.html?page=RecentChanges">RecentChanges</a> &gt; <a class="wikipage" href="Wiki20e8.html?page=UsingBPELDesignerServiceEngine">UsingBPELDesignerServiceEngine</a> &gt; <a class="wikipage" href="Wiki5e52.html?page=BPELDesignerAndServiceEngineOverview">BPELDesignerAndServiceEngineOverview</a> &gt; <a class="wikipage" href="Wiki3879.html?page=BPELDesignerAndServiceEngineFeatures">BPELDesignerAndServiceEngineFeatures</a> &gt; <a class="wikipage" href="Wiki0ddb.html?page=NavigatingTheBPELDesigner">NavigatingTheBPELDesigner</a></div>
+
+  <div style="clear:both; height:0;" > </div>
+
+</div>
+
+
+
+
+  
+
+
+
+
+
+<div id="actionsTop" class="pageactions"> 
+<!--
+  <span class="actionHome">
+    <a href="http://wiki.open-esb.java.net/Wiki.jsp?page=Main"
+       title="Go to home page Main ">Home</a>
+  </span>
+-->  
+  
+    
+    
+    
+<!--
+    
+  -->
+  
+  
+  <span class="actionIndex">
+     <a href="Wiki5f9e.html?page=PageIndex"
+       title="Alphabetically sorted list of pages [ x ]" accesskey="x">Index</a>
+  </span>
+  
+  <span class="actionRecentChanges">
+     <a href="Wiki5fc7.html?page=RecentChanges"
+        title="Pages sorted by modification date [ u ]" accesskey="u">Changes</a>
+  </span>
+
+  
+
+<!--
+  <span class="quicklinks quick2Bottom">
+    <a href="#footer" title="Go to Bottom" >&raquo;</a>
+  </span>
+-->
+  <div style="clear:both; height:0;"> </div> 
+</div>
+
+
+
+
+
+  <div id="page">
+
+
+
+
+
+<div class="tabmenu ">
+  
+  
+  
+  
+  
+  
+  
+
+  <span><a class="activetab" id="menu-pagecontent" onclick="TabbedSection.onclick('pagecontent')" accesskey="v" ><u>V</u>iew</a></span>
+  
+  
+  <span><a id="menu-attachments" onclick="TabbedSection.onclick('attachments')" accesskey="a" ><u>A</u>ttach (21)</a></span>
+  
+  <span><a id="menu-pageinfo" onclick="TabbedSection.onclick('pageinfo')" accesskey="i" ><u>I</u>nfo</a></span>
+  
+</div>
+<div class="tabs ">
+  <div id="pagecontent" >
+
+    
+
+
+
+
+
+
+
+<h3 id="section-CreatingTheBPELModuleProject-UsingTheBPELDesignerAndServiceEngine">Using the BPEL Designer and Service Engine </h3>
+<p><b>Contents</b>
+</p>
+<ul><li> <a class="wikipage" href="Wiki20e8.html?page=UsingBPELDesignerServiceEngine">Using the BPEL Designer and Service Engine</a>
+</li><li> <a class="wikipage" href="Wiki5e52.html?page=BPELDesignerAndServiceEngineOverview">Overview</a>
+</li><li> <a class="wikipage" href="Wiki3879.html?page=BPELDesignerAndServiceEngineFeatures">BPEL Designer and Service Engine Features</a>
+</li><li> <a class="wikipage" href="Wikifbc9.html?page=UnderstandingTheBPELModuleProject">Understanding the BPEL Module Project</a>
+</li><li> <a class="wikipage" href="Wiki0ddb.html?page=NavigatingTheBPELDesigner">Navigating the BPEL Designer</a>
+</li><li> <span style="color:#3333ff;"><b>Creating a BPEL Module Project</b></span>
+<ul><li> Software Requirements and Installation
+</li><li> Starting GlassFish 
+</li><li> Creating a New BPEL Module Project
+</li><li> Creating the XML Schema and the WSDL Document
+</li><li> Creating a BPEL Process Using the BPEL Designer
+</li><li> Creating a Composite Application Project
+</li><li> Building and Deploying the Composite Application Project
+</li><li> Testing the Composite Application
+</li></ul></li><li> <a class="wikipage" href="Wiki17ca.html?page=DevelopingTheBPELProcessUsingTheBPELDiagram">Developing the BPEL Process Using the BPEL Diagram</a>
+</li><li> <a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">The BPEL Designer Palette Elements</a>
+</li><li> <a class="wikipage" href="Wiki39db.html?page=UsingTheBPELMapper">Using the BPEL Mapper</a>
+</li><li> <a class="wikipage" href="Wikiad48.html?page=UsingNormalizedMessageProperties">Using Normalized Message Properties</a>
+</li><li> <a class="wikipage" href="Wikie39c.html?page=UsingHandlers">Using Handlers</a>
+</li><li> <a class="wikipage" href="Wikia3b6.html?page=UsingCorrelation">Using Correlation</a>
+</li><li> <a class="wikipage" href="Wiki1f81.html?page=ValidatingTheBPELProcess">Validating a BPEL Process</a>
+</li><li> <a class="wikipage" href="Wiki5233.html?page=BPELProcessLoggingAndAlerting">BPEL Process Logging and Alerting</a>
+</li><li> <a class="wikipage" href="Wiki2f9d.html?page=ConfiguringTheBPELServiceEngineRuntimeProperties">Configuring the BPEL Service Engine Runtime Properties</a>
+</li><li> <a class="wikipage" href="Wikicae3.html?page=BPELServiceEngineDeploymentArtifacts">BPEL Service Engine Deployment Artifacts</a>
+</li><li> <a class="wikipage" href="Wiki1302.html?page=TestingAndDebuggingBPELProcesses">Testing and Debugging BPEL Processes</a>
+</li><li> <a class="wikipage" href="Wiki434d.html?page=MonitoringTheBPELServiceEngine">Monitoring the BPEL Service Engine</a>
+</li><li> <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=ConfiguringQualityOfServiceProperties">Configuring Quality of Service (QOS) Properties, Throttling, and Redelivery</a>
+</li><li> <a class="wikipage" href="Wikife94.html?page=UsingDynamicPartnerLinksAndDynamicAddressing">Using Dynamic Partner Links and Dynamic Addressing</a>
+</li><li> <a class="wikipage" href="Wiki0931.html?page=ConfiguringPersistenceAndRecoveryForBPEL">Configuring Persistence and Recovery for the BPEL Service Engine</a>
+</li><li> <a class="wikipage" href="Wikid4c2.html?page=ConfiguringFailoverForBPEL">Configuring Failover for the BPEL Service Engine</a>
+</li><li> <a class="wikipage" href="Wiki21f2.html?page=BPELBluePrints">BPEL BluePrints</a>
+</li><li> <a class="wikipage" href="Wiki7030.html?page=BPELServiceEngineTaskHowTos">BPEL Service Engine Task How-tos</a>
+</li><li> <a class="wikipage" href="Wikif987.html?page=TroubleshootingTheBPELServiceEngine">Troubleshooting the BPEL Designer and Service Engine</a>
+</li></ul><h2 id="section-CreatingTheBPELModuleProject-CreatingABPELModuleProject">Creating a BPEL Module Project</h2>
+<hr />
+The proceeding sections describe the steps used to create a simple BPEL Module project. To demonstrate the procedures we are using the Synchronous sample project provided with GlassFish ESB. <br />
+<p>Accordingly, the typical procedure to follow when building a BPEL process is:
+</p>
+<ol><li> Create a new BPEL Module Project using the New Project wizard. Creating the BPEL module project also includes:
+<ul><li> Create an XML Schema using the XSD Editor.
+</li><li> Create the WSDL Documents using the New WSDL Editor.
+</li><li> Create the BPEL Processes using the BPEL Designer.
+</li></ul></li><li> Create a Composite Application Project.<br />When new projects are created using the sample projects that are included with GlassFish, the Composite Application projects are created automatically. When you create a project from scratch, you need to create the Composite Application project manually.
+</li><li> Add the JBI Modules to the Composite Application Project.
+</li><li> (Optional) Build the Composite Application project and make sure that the Application Server is started.
+</li><li> Deploy the Composite Application Project to the BPEL Service Engine.
+</li><li> Create test cases. <br />For sample processes, test cases are automatically created. For new projects, you need to create at least one test case.
+</li><li> Run one or all test cases.
+</li><li> (Optional) Debug the BPEL process.
+</li></ol><h3 id="section-CreatingTheBPELModuleProject-SoftwareRequirementsAndInstallation">Software Requirements and Installation</h3>
+<p>It is assumed that you have installed the following software for this tutorial:
+</p>
+<ul><li> <a class="external" href="https://open-esb.dev.java.net/Downloads.html">GlassFish ESB</a><img class="outlink" src="http://wiki.open-esb.java.net/images/out.png" alt="" />, which includes the following:
+<ul><li> GlassFish v2 Update Release 2 (UR2)
+</li><li> NetBeans IDE 6.1 ML
+</li><li> Open ESB core components
+</li><li> Java Business Integration (JBI) service engines
+</li><li> Java Business Integration (JBI) binding components
+</li><li> Java Business Integration (JBI) component tooling 
+</li></ul></li><li> <a class="external" href="http://java.sun.com/javase/downloads/index.jsp">JDK (Java Development Kit) 6</a><img class="outlink" src="http://wiki.open-esb.java.net/images/out.png" alt="" /><br /> <br /><b>Note:</b> You must have the JDK (Java Development Kit) software installed and JAVA_HOME set as an environment variable, prior to installing GlassFish ESB or the installation will halt. See <a class="external" href="http://wiki.open-esb.java.net/Wiki.jsp?page=Inst_jdk_javahome_t.txt">Installing the JDK Software and Setting JAVA_HOME</a><img class="outlink" src="http://wiki.open-esb.java.net/images/out.png" alt="" /> for details.<br /> <br />
+</li></ul>To get the latest installation of Glassfish ESB, see <a class="external" href="https://open-esb.dev.java.net/Downloads.html">GlassFish ESB Downloads</a><img class="outlink" src="http://wiki.open-esb.java.net/images/out.png" alt="" />.<br /> <br />
+To download Shared Libraries, JAR files, or NetBeans-module files for the BPEL Service Engine, see <a class="external" href="https://open-esb.dev.java.net/BPELSE.html">BPEL Service Engine Downloads</a><img class="outlink" src="http://wiki.open-esb.java.net/images/out.png" alt="" />
+<p />
+<div class="center">
+<a class="wikipage" href="Wikia9da.html?page=CreatingTheBPELModuleProject">Top</a></div>
+<h3 id="section-CreatingTheBPELModuleProject-StartingGlassFish">Starting GlassFish </h3>
+The BPEL Service Engine starts together with GlassFish. Before deploying and performing test runs of a Composite Application project in the NetBeans IDE, make sure that the GlassFish Application Server is started.
+<h4 id="section-CreatingTheBPELModuleProject-ToCheckTheStatusOfTheGlassFishV2ApplicationServerInTheNetBeansIDE">To Check the Status of the GlassFish V2 Application Server in the NetBeans IDE</h4>
+<ol><li> If the Services window is not visible, choose <tt>Window</tt> &rarr; <tt>Services</tt>.
+</li><li> In the Services window, expand the <tt>Servers</tt> node.<br /> <br />The <tt>Servers</tt> node should contain a <tt>GlassFish V2</tt> subnode. If the <tt>GlassFish V2</tt> node is not present, see "<tt>To Register the GlassFish V2 Application Server with the NetBeans IDE</tt>".<br /> <br />If a green arrow badge appears on the <tt>GlassFish V2</tt> node, the server is running. If a green arrow badge is not present, see "<tt>To Start the GlassFish V2 Application Server in the NetBeans IDE</tt>".
+</li></ol><h4 id="section-CreatingTheBPELModuleProject-ToRegisterTheGlassFishV2ApplicationServerWithTheNetBeansIDE">To Register the GlassFish V2 Application Server with the NetBeans IDE</h4>
+<ol><li> If the Services window is not visible, choose Window &rarr; Services.
+</li><li> In the Services window, right-click the <tt>Servers</tt> node and choose Add Server from the pop-up menu.<br />The Add Server Instance dialog box opens. <br />
+</li><li> In the Choose Server page of the dialog box, select <tt>GlassFish V2</tt> from the Server drop-down list.
+</li><li> (Optional) In the Name field, change the default name for the server.<br />The IDE uses this name to identify the server.<br />
+</li><li> Click <tt>Next</tt>.<br />The Platform Location Folder page opens.
+</li><li> In the Platform Location field, click <tt>Browse</tt> and select the installation location of the application server.
+</li><li> Select the <tt>Register Local Default Domain</tt> radio button and click <tt>Next.</tt>
+</li><li> Enter the user name and password for the domain's administrator.<br />If you accepted the default values during the installation, the user name is <tt>admin</tt> and the password is <tt>adminadmin</tt>.
+</li><li> Click <tt>Finish</tt>.
+</li></ol><h4 id="section-CreatingTheBPELModuleProject-ToStartTheGlassFishV2ApplicationServerInTheNetBeansIDE">To Start the GlassFish V2 Application Server in the NetBeans IDE</h4>
+<ol><li> In the Services window, right-click the <tt>GlassFish V2</tt> node and choose <tt>Start</tt>.
+</li><li> Wait until the following message appears in the Output window:<br />"<tt>Application server startup complete.</tt>"<br /> <br />When the server is running, the IDE displays a green arrow badge on the<tt>GlassFish V2</tt> node.<br /> <br />The BPEL Service Engine is represented as <tt>sun-bpel-engine</tt> in the Services window of the IDE, under the <tt>GlassFish V2</tt> &rarr; <tt>JBI</tt> nodes.
+</li></ol><p />
+<div class="center">
+<a class="wikipage" href="Wikia9da.html?page=CreatingTheBPELModuleProject">Top</a></div>
+<h3 id="section-CreatingTheBPELModuleProject-CreatingANewBPELModuleProject">Creating a New BPEL Module Project</h3>
+The following sections use the Synchronous sample project, and provide step-by-step directions for creating a simple BPEL module project, using the Synchronous sample project.
+<h4 id="section-CreatingTheBPELModuleProject-CreateABPELModuleProject">Create a BPEL Module Project</h4>
+<ol><li> In the NetBeans IDE, choose <tt>File</tt> &rarr; <tt>New Project</tt>.<br />The New Projects wizard appears. 
+</li><li> Under Categories, select <tt>Service Oriented Architecture</tt>.
+</li><li> Under Projects, select <tt>BPEL Module</tt> and click <tt>Next</tt>.<table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/CreatingTheBPELModuleProject/ep-bpel-newproject21.gif" height="429" width="600" alt="mage displays the New Project dialog box" /></td></tr>
+</table>
+<br />
+</li><li> In the Name and Location page, enter the project name (for this example <tt>HelloWorld</tt>) and specify the project location or accept the defaults.<table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/CreatingTheBPELModuleProject/ep-bpel-newbpelmodule21.gif" height="423" width="600" alt="Image displays the New BPEL Module dialog bo" /></td></tr>
+</table>
+<br />
+</li><li> Click Finish.<br />The Projects window now contains a project node for the BPEL Module project.<table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/CreatingTheBPELModuleProject/ep-bpel-project-helloworld.gif" height="161" width="302" alt="Image shows new BPEL module project in the Projects window" /></td></tr>
+</table>
+
+</li></ol><div class="center">
+<a class="wikipage" href="Wikia9da.html?page=CreatingTheBPELModuleProject">Top</a></div>
+<h3 id="section-CreatingTheBPELModuleProject-CreatingTheXMLSchemaAndTheWSDLDocument">Creating the XML Schema and the WSDL Document</h3>
+Generally, the steps used to create a BPEL module project are:
+<ol><li> Create a New BPEL Project 
+</li><li> Create the XML Schema or XSD file
+</li><li> Create the WSDL Documents
+</li><li> Create the BPEL Process <br />
+</li></ol><p>The XSD file (XML Schema) helps to define the projects message structure or operations. Complex message structures are defined in the XSD file and imported into the WSDL Document. <br />
+</p>
+<p>The WSDL Documents define the interfaces for the project. The BPEL Designer enables you to graphically design your BPEL business process. <br />
+</p>
+<p>To create the XML Schema and WSDL Document for this tutorial, following the directions provided in <a class="external" href="http://www.netbeans.org/kb/61/soa/helloworldca.html">Creating a "Hello World" Composite Application</a><img class="outlink" src="http://wiki.open-esb.java.net/images/out.png" alt="" />.
+</p>
+<div class="center">
+<a class="wikipage" href="Wikia9da.html?page=CreatingTheBPELModuleProject">Top</a></div>
+<h3 id="section-CreatingTheBPELModuleProject-CreatingABPELProcessUsingTheBPELDesigner">Creating a BPEL Process Using the BPEL Designer</h3>
+Now that you have created your XML Schema and WSDL Document, you can create your BPEL process.
+<h4 id="section-CreatingTheBPELModuleProject-CreateTheBPELProcess">Create the BPEL Process</h4>
+<ol><li> In the Projects window, expand the BPEL Module, right-click the <tt>Process Files</tt> node, and choose <tt>New</tt> &rarr; <tt>BPEL Process</tt> from the pop-up menu.<br />The <tt>New BPEL Process</tt> dialog box appears.<br /><table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/CreatingTheBPELModuleProject/ep-bpel-new-process21.gif" height="371" width="600" alt="Image shows the New BPEL Process dialog box" /></td></tr>
+</table>
+<br />
+</li><li> Enter a name for the process file name (HelloWorldProcess for this example), and click <tt>Finish</tt>.<br />The new BPEL file opens in the Design view of the BPEL Designer.<br /><table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/CreatingTheBPELModuleProject/ep-bpel-designer21.gif" height="407" width="600" alt="Image shows the NetBeans IDE displaying the Design view of the BPEL Designer" /></td></tr>
+</table>
+<br />If the Palette and Properties windows are not displayed in your current view, click <tt>Windows</tt> &rarr; <tt>Reset Windows</tt> on the NetBeans menu.
+</li></ol><h4 id="section-CreatingTheBPELModuleProject-AddAPartnerLinkToTheBPELProcess">Add a Partner Link to the BPEL Process</h4>
+<ol><li> In the Projects window, expand your project's <tt>Process Files</tt> node and select the <tt>.wsdl </tt>file (Synchronous.wsdl for this example).
+</li><li> Drag the <tt>.wsdl</tt> file from the Projects window to the left side of the Design view canvas. The IDE provides visual prompts to show you where you can drop the selection.<br />The BPEL Editor adds a partner link to the canvas.<br /><table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/CreatingTheBPELModuleProject/ep-bpel-partner-link21.gif" height="389" width="604" alt="Image shows a new partner link added to the BPEL process in the BPEL Editor" /></td></tr>
+</table>
+
+</li></ol><br />
+<h4 id="section-CreatingTheBPELModuleProject-AddAReceiveActivityToTheBPELProcess">Add a <tt>Receive</tt> Activity to the BPEL Process</h4>
+<ol><li> From the Web Service section of the Palette window, select the <tt>Receive</tt> activity. 
+</li><li> Drag the <tt>Receive</tt> activity to the <tt>HelloWorldProcess</tt> process box in the Design view canvas, between the <tt>Process Start</tt> and the <tt>Process End</tt> activities.<br />The <tt>Receive1</tt> activity is added to the process box.
+</li><li> Click the Receive1 activity's Edit icon.<br />The Receive1 Property Editor appears.
+</li><li> On the Main tab, change the value in the Name field to <tt>start</tt>.
+</li><li> From the Partner Link drop-down list, choose <tt>PartnerLink1</tt>.<br />The IDE populates the Operation field with <tt>NewWSDLOperation</tt>.
+</li><li> Click the <tt>Create</tt> button next to the Input Variable Field.<br />The New Input Variable dialog box appears. <br />Click <tt>OK</tt> to accept the default values.
+</li><li> Click <tt>OK</tt> to close the Receive1 Property Editor.<br />The Design view displays the new connection between <tt>PartnerLink1</tt> and the <tt>Start</tt> activity in the process box.
+</li></ol><table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/CreatingTheBPELModuleProject/ep-bpel-receive21.gif" height="482" width="504" alt="Image shows the partner link connected to the new Start activity in the BPEL Editor" /></td></tr>
+</table>
+
+<br />
+<h4 id="section-CreatingTheBPELModuleProject-AddAReplyActivityToTheBPELProcess">Add a <tt>Reply</tt> Activity to the BPEL Process</h4>
+<ol><li> Select the <tt>Reply</tt> activity in the Web Service section of the Palette. Drag and drop the <tt>Reply</tt> to the prompt between the <tt>Start</tt> activity and the <tt>Process End</tt> activity in the process box on the design view canvas.<br />A Reply1 activity is added to the design view canvas.
+</li><li> Click the Reply1 activity's <tt>Edit</tt> icon.<br />The Reply1 Property Editor appears.
+</li><li> On the Main tab, change the value in the Name field to <tt>End</tt>.
+</li><li> From the Partner Link drop-down list, choose <tt>PartnerLink1</tt>.<br />The IDE populates the Operation field with <tt>NewWSDLOperation</tt>.
+</li><li> To create anew output variable, make sure that <tt>Normal Response</tt> is selected, and click the <tt>Create</tt> button next to the Input Variable Field. <br />The New Input Variable dialog box appears. Click <tt>OK</tt> to accept the default values.
+</li><li> Click <tt>OK</tt> to close the Reply1 Property Editor. <br />The Design view displays the new connection between the <tt>End</tt> activity in the process box and <tt>PartnerLink1</tt>.
+</li></ol><table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/CreatingTheBPELModuleProject/ep-bpel-reply21.gif" height="443" width="443" alt="Image shows the new Start activity connected to the partner link in the BPEL Editor" /></td></tr>
+</table>
+
+<br />
+<h4 id="section-CreatingTheBPELModuleProject-AddAnAssignActivityToTheBPELProcess">Add an <tt>Assign</tt> Activity to the BPEL Process</h4>
+<ol><li> Select the <tt>Assign</tt> activity in the Basic Activities section of the Palette. Drag and drop the <tt>Assign</tt> to the prompt between the <tt>Start</tt> activity and the <tt>End</tt> activity in the process box on the design view canvas.<br />The <tt>Assign1</tt> activity is added to the design view canvas.
+</li><li> Select the <tt>Assign1</tt> activity and click the Mapper button on the editors toolbar.<br />The BPEL Mapper appears.
+</li><li> Map the <tt>paramA</tt> node under <tt>Variables</tt> &rarr; <tt>NewWSDLOperationIn</tt> &rarr; <tt>inputType</tt> in the Output pane of the BPEL Mapper, to the <tt>paramA</tt> node under <tt>Variables</tt> &rarr; <tt>NewWSDLOperationOut</tt> &rarr; <tt>resultType</tt> in the Input pane of the Mapper. To do this, select the<tt>paramA</tt> node under <tt>Variables</tt> &rarr; <tt>NewWSDLOperationIn</tt> &rarr; <tt>inputType</tt> in the Output pane, and drag your cursor to the <tt>paramA</tt> node under <tt>Variables</tt> &rarr; <tt>NewWSDLOperationOut</tt> &rarr; <tt>resultType</tt> in the Input pane.<br />This assignment copies the input statement into the output.<br /><table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/CreatingTheBPELModuleProject/ep-bpel-mapper21.gif" height="231" width="600" alt="Image shows the BPEL Mapper as described in context" /></td></tr>
+</table>
+
+</li><li> To save your changes click the <tt>Save Al</tt>l icon in the IDE menu bar.
+</li></ol><div class="center">
+<a class="wikipage" href="Wikia9da.html?page=CreatingTheBPELModuleProject">Top</a></div>
+<h3 id="section-CreatingTheBPELModuleProject-CreatingACompositeApplicationProject">Creating a Composite Application Project</h3>
+A BPEL Module project is not directly deployable. You must first add a BPEL Module project, as a JBI module, to a Composite Application project. You can then deploy the Composite Application project. Deploying the project makes the service assembly available to the application server and enables its service units to run.
+<h4 id="section-CreatingTheBPELModuleProject-CreateANewCompositeApplicationProject">Create a New Composite Application Project</h4>
+<ol><li> Choose <tt>File</tt> &rarr; <tt>New Project</tt> (or <tt>Ctrl-Shift-N</tt>).
+</li><li> In the Categories list choose <tt>Service Oriented Architecture</tt>, in the Projects list choose <tt>Composite Application</tt>, and click <tt>Next</tt>.
+</li><li> In the Name and Location page, change the project name to <tt>HelloWorldApplication</tt>, and specify the location of project files.
+</li><li> To set the new Composite Application the main project as main, leave the Set as Main Project checkbox selected, and click <tt>Finish</tt>.
+</li><li> To add the BPEL Module as a JBI module to the Composite Application project, right-click the new Composite Application and choose <tt>Add JBI Module</tt> from the pop-up menu. <br />The <tt>Select Project</tt> dialog box opens.
+</li><li> Select the <tt>HelloWorld</tt> project you created earlier and click <tt>Add Project JAR Files</tt>.
+  The <tt>Select Project</tt> dialog box closes and the <tt>HelloWorld.jar</tt> file is added to the <tt>JBI Modules</tt> node of the <tt>HelloWorldApplication</tt> Composite Application
+</li></ol><div class="center">
+<a class="wikipage" href="Wikia9da.html?page=CreatingTheBPELModuleProject">Top</a></div>
+<h3 id="section-CreatingTheBPELModuleProject-BuildingAndDeployingTheCompositeApplicationProject">Building and Deploying the Composite Application Project</h3>
+Building a project compiles the BPEL source file and packages the BPEL file and web service artifacts, including WSDL and XSD files, into a JAR archive.
+<p>Deploying the project compiles the files in the Composite Application project, packages the compiled BPEL and related web service artifacts (including WSDL and XSD files) into an archive, and deploys them to the Application Server.
+</p>
+<h4 id="section-CreatingTheBPELModuleProject-BuildAndDeployTheCompositeApplicationProject">Build and Deploy the Composite Application Project</h4>
+<ol><li> Right-click the Composite Application project's node, and choose <tt>Build</tt> from the pop-up menu.
+  When the build is complete the Output window reports "<tt>Build Successful</tt>."<br /> <br />If the Output window is not visible, choose <tt>Window</tt> &rarr; <tt>Output</tt> &rarr; <tt>Output</tt>.<br /> <br />
+</li><li> Right-click the Composite Application project's node, and choose <tt>Deploy</tt>.<br />Deployment has succeeded when you see a <tt>Build successful</tt> message in the GlassFish tab of the Output window.
+</li><li> Open the Services window and expand <tt>Servers</tt> &rarr; <tt>GlassFish V2</tt> &rarr; <tt>JBI</tt> &rarr; <tt>Service Assemblies</tt> to see your new deployed Service Assembly.<br /> <br />
+  If you do not see the deployed project, right-click the <tt>Service Assemblies</tt> node and choose Refresh.
+</li></ol><table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/CreatingTheBPELModuleProject/ep-bpel-service-assembly21.gif" height="291" width="297" alt="Image shows the new Service Assembly in the Services window as described in context" /></td></tr>
+</table>
+
+<div class="center">
+<a class="wikipage" href="Wikia9da.html?page=CreatingTheBPELModuleProject">Top</a></div>
+<h3 id="section-CreatingTheBPELModuleProject-TestingTheCompositeApplication">Testing the Composite Application</h3>
+You can test your Composite Application project by adding test cases, binding to the operation, supplying input, and then using the tester.
+<h4 id="section-CreatingTheBPELModuleProject-TestTheHelloWorldApplicationCompositeApplicationProject">Test the HelloWorldApplication Composite Application Project</h4>
+<ol><li> In the Projects window, expand the <tt>HelloWorldApplication</tt> project node, right-click the <tt>Test</tt> node, and choose <tt>New Test Case</tt> from the pop-up menu.<br />The New Test Case wizard opens.
+</li><li> Accept the default test case name, <tt>TestCase1</tt>, and click <tt>Next</tt>.
+</li><li> From the <tt>Select the WSDL Document</tt> page, expand the <tt>HelloWorld - Proecss Files</tt> node, select <tt>Synchronous.wsdl</tt>, and click <tt>Next</tt>.
+</li><li> From the <tt>Select the Operation to Test</tt> page, select the <tt>Operation1</tt> and click <tt>Finish</tt>.<br />A new <tt>TestCase1</tt> node is added under the project's Test node in the Projects window, containing two subnodes, Input and Output.<br />The Source Editor appears containing the Input file, <tt>Input.xml</tt><br /> <br /><b>Note:</b> If the Source Editor does not contain a tab for <tt>Input.xml</tt>, double-click the <tt>Input</tt> node in the Projects window to open the file.<br /> <br />
+</li><li> From the <tt>Input.xml</tt> tab of the Source Editor, do the following:
+<ol><li> Locate the line: 
+</li></ol></li></ol><pre>
+&amp;lt;syn:paramA&gt;?string?&amp;lt;syn:paramA&gt;
+</pre>
+<ol><li><ol><li> Replace <tt>?string?</tt> with <tt>Hello World</tt>, so that the line appears as follows:
+</li></ol></li></ol><pre>
+&amp;lt;syn:paramA&gt;Hello World&amp;lt;syn:paramA&gt;
+</pre>
+<ol><li><ol><li> From the NetBeans IDE menu bar, click the <tt>Save All</tt> button.<br /><table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/CreatingTheBPELModuleProject/ep-bpel-testcase1.gif" height="225" width="600" alt="Image shows the Source Editor containing the Input.xml as described in context" /></td></tr>
+</table>
+
+</li></ol></li><li> In the Projects window, double-click the Output node under <tt>Test</tt> &rarr; <tt>TestCase1</tt>.<br />Output.xml is opened in the Source Editor. Initially, Output.xml is empty until the first test run populates the file. 
+</li><li> In the Projects window, right-click the <tt>TestCase1</tt> node and choose <tt>Run</tt> from the pop-up menu.<br />When the Overwrite Empty Output dialog box appears, click <tt>Yes</tt> to accept new output. The first test run populates the Output.xml file displayed in the Source Editor.<table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/CreatingTheBPELModuleProject/ep-bpel-test-populated.gif" height="217" width="600" alt="Image shows the Source Editor containing the Input.xml as described in context" /></td></tr>
+</table>
+<br />The test compares the output to the contents of the output file. Because the first run of the test has nothing to compare itself to, the first test fails. Subsequent test runs will compare their output with the contents of Output.xml and should succeed. 
+</li><li> Run the test again.<br />The testcase is compared to the current output file and succeeds. 
+</li></ol><div class="center">
+<a class="wikipage" href="Wikia9da.html?page=CreatingTheBPELModuleProject">Top</a></div>
+<h3 id="section-CreatingTheBPELModuleProject-Summary">Summary</h3>
+You just created the HelloWorld, synchronous sample project. This sample project is available in the NetBeans IDE's samples file under Project/Samples/SOA/Synchronous BPEL Process.
+This tutorial above demonstrates how to:
+<ul><li> Create a Bpel Module project
+</li><li> Use the BPEL Designer to create a BPEL process
+</li><li> Build and deploy a Composite Application project to GlassFish
+</li><li> Create and run test cases
+</li></ul><div class="center">
+<a class="wikipage" href="Wikia9da.html?page=CreatingTheBPELModuleProject">Top</a></div>
+<p><br />
+</p>
+<p><a class="wikipage" href="Wiki0ddb.html?page=NavigatingTheBPELDesigner">Previous</a><br /> 
+<a class="wikipage" href="Wiki17ca.html?page=DevelopingTheBPELProcessUsingTheBPELDiagram">Next</a>
+</p>
+
+
+
+  </div>
+
+  
+  
+  <div id="attachments" style="display:none;" >
+
+    
+
+
+
+
+
+
+
+<div id="attachmentViewer">
+  <div class="list">
+    <h3>List of attachments &nbsp;&nbsp;&nbsp;&nbsp;
+    </h3>
+      <form action='#'>
+        <select name="attachSelect" id="attachSelect" size="16" 
+            onchange="Attach.showImage(this[this.selectedIndex], '%A4', 300, 300 )" >
+        <option value="Attachment Info" selected="selected" >--- Select Image to preview ---</option>
+        
+          
+          <option value="ep-bpel-designer.gif%A4http://wiki.open-esb.java.net/attach/CreatingTheBPELModuleProject/ep-bpel-designer.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=CreatingTheBPELModuleProject/ep-bpel-designer.gif%A459390 bytes%A41" >
+            ep-bpel-designer.gif (59390 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="ep-bpel-designer21.gif%A4http://wiki.open-esb.java.net/attach/CreatingTheBPELModuleProject/ep-bpel-designer21.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=CreatingTheBPELModuleProject/ep-bpel-designer21.gif%A441923 bytes%A41" >
+            ep-bpel-designer21.gif (41923 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="ep-bpel-mapper.gif%A4http://wiki.open-esb.java.net/attach/CreatingTheBPELModuleProject/ep-bpel-mapper.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=CreatingTheBPELModuleProject/ep-bpel-mapper.gif%A440019 bytes%A41" >
+            ep-bpel-mapper.gif (40019 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="ep-bpel-mapper21.gif%A4http://wiki.open-esb.java.net/attach/CreatingTheBPELModuleProject/ep-bpel-mapper21.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=CreatingTheBPELModuleProject/ep-bpel-mapper21.gif%A424192 bytes%A41" >
+            ep-bpel-mapper21.gif (24192 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="ep-bpel-new-bpel-module.gif%A4http://wiki.open-esb.java.net/attach/CreatingTheBPELModuleProject/ep-bpel-new-bpel-module.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=CreatingTheBPELModuleProject/ep-bpel-new-bpel-module.gif%A448638 bytes%A41" >
+            ep-bpel-new-bpel-module.gif (48638 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="ep-bpel-new-process.gif%A4http://wiki.open-esb.java.net/attach/CreatingTheBPELModuleProject/ep-bpel-new-process.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=CreatingTheBPELModuleProject/ep-bpel-new-process.gif%A455839 bytes%A41" >
+            ep-bpel-new-process.gif (55839 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="ep-bpel-new-process21.gif%A4http://wiki.open-esb.java.net/attach/CreatingTheBPELModuleProject/ep-bpel-new-process21.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=CreatingTheBPELModuleProject/ep-bpel-new-process21.gif%A426593 bytes%A41" >
+            ep-bpel-new-process21.gif (26593 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="ep-bpel-new-project.gif%A4http://wiki.open-esb.java.net/attach/CreatingTheBPELModuleProject/ep-bpel-new-project.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=CreatingTheBPELModuleProject/ep-bpel-new-project.gif%A467677 bytes%A41" >
+            ep-bpel-new-project.gif (67677 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="ep-bpel-newbpelmodule21.gif%A4http://wiki.open-esb.java.net/attach/CreatingTheBPELModuleProject/ep-bpel-newbpelmodule21.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=CreatingTheBPELModuleProject/ep-bpel-newbpelmodule21.gif%A427067 bytes%A42" >
+            ep-bpel-newbpelmodule21.gif (27067 bytes , revision-2, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="ep-bpel-newproject21.gif%A4http://wiki.open-esb.java.net/attach/CreatingTheBPELModuleProject/ep-bpel-newproject21.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=CreatingTheBPELModuleProject/ep-bpel-newproject21.gif%A431571 bytes%A41" >
+            ep-bpel-newproject21.gif (31571 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="ep-bpel-partner-link.gif%A4http://wiki.open-esb.java.net/attach/CreatingTheBPELModuleProject/ep-bpel-partner-link.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=CreatingTheBPELModuleProject/ep-bpel-partner-link.gif%A440213 bytes%A42" >
+            ep-bpel-partner-link.gif (40213 bytes , revision-2, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="ep-bpel-partner-link21.gif%A4http://wiki.open-esb.java.net/attach/CreatingTheBPELModuleProject/ep-bpel-partner-link21.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=CreatingTheBPELModuleProject/ep-bpel-partner-link21.gif%A432522 bytes%A41" >
+            ep-bpel-partner-link21.gif (32522 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="ep-bpel-project-helloworld.gif%A4http://wiki.open-esb.java.net/attach/CreatingTheBPELModuleProject/ep-bpel-project-helloworld.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=CreatingTheBPELModuleProject/ep-bpel-project-helloworld.gif%A45928 bytes%A41" >
+            ep-bpel-project-helloworld.gif (5928 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="ep-bpel-receive.gif%A4http://wiki.open-esb.java.net/attach/CreatingTheBPELModuleProject/ep-bpel-receive.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=CreatingTheBPELModuleProject/ep-bpel-receive.gif%A426726 bytes%A42" >
+            ep-bpel-receive.gif (26726 bytes , revision-2, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="ep-bpel-receive21.gif%A4http://wiki.open-esb.java.net/attach/CreatingTheBPELModuleProject/ep-bpel-receive21.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=CreatingTheBPELModuleProject/ep-bpel-receive21.gif%A429513 bytes%A41" >
+            ep-bpel-receive21.gif (29513 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="ep-bpel-reply.gif%A4http://wiki.open-esb.java.net/attach/CreatingTheBPELModuleProject/ep-bpel-reply.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=CreatingTheBPELModuleProject/ep-bpel-reply.gif%A424545 bytes%A42" >
+            ep-bpel-reply.gif (24545 bytes , revision-2, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="ep-bpel-reply21.gif%A4http://wiki.open-esb.java.net/attach/CreatingTheBPELModuleProject/ep-bpel-reply21.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=CreatingTheBPELModuleProject/ep-bpel-reply21.gif%A426009 bytes%A41" >
+            ep-bpel-reply21.gif (26009 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="ep-bpel-service-assembly.gif%A4http://wiki.open-esb.java.net/attach/CreatingTheBPELModuleProject/ep-bpel-service-assembly.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=CreatingTheBPELModuleProject/ep-bpel-service-assembly.gif%A422977 bytes%A41" >
+            ep-bpel-service-assembly.gif (22977 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="ep-bpel-service-assembly21.gif%A4http://wiki.open-esb.java.net/attach/CreatingTheBPELModuleProject/ep-bpel-service-assembly21.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=CreatingTheBPELModuleProject/ep-bpel-service-assembly21.gif%A410191 bytes%A41" >
+            ep-bpel-service-assembly21.gif (10191 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="ep-bpel-test-populated.gif%A4http://wiki.open-esb.java.net/attach/CreatingTheBPELModuleProject/ep-bpel-test-populated.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=CreatingTheBPELModuleProject/ep-bpel-test-populated.gif%A442296 bytes%A41" >
+            ep-bpel-test-populated.gif (42296 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="ep-bpel-testcase1.gif%A4http://wiki.open-esb.java.net/attach/CreatingTheBPELModuleProject/ep-bpel-testcase1.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=CreatingTheBPELModuleProject/ep-bpel-testcase1.gif%A437668 bytes%A41" >
+            ep-bpel-testcase1.gif (37668 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+      </select>
+    </form>
+    <div class="small">&nbsp;</div>
+  </div>  
+
+  <div class="preview">
+    <h3>Image preview</h3>
+    <div id="attachImg" title="No Image Selected">No Image Selected</div>
+    <a href="#" class="small" style="display:none;" id="attachInfo">More info, including version history</a>
+  </div>
+
+  <div style="clear:both; height:0px;" > </div>
+
+</div>
+
+
+  </div>
+
+  
+  <div id="pageinfo" style="display:none;" >
+
+    
+
+
+
+
+
+
+
+
+  <p>
+  This page (revision-34) was last changed on 
+  <a href="http://wiki.open-esb.java.net/Diff.jsp?page=CreatingTheBPELModuleProject&amp;r1=34&amp;r2=33"
+    title="Show changes of last page update" >
+    
+    09-Jun-09 10:33 AM, -0700
+  </a> by rjacobus.
+  <a href="http://wiki.open-esb.java.net/rss.jsp?page=CreatingTheBPELModuleProject&amp;mode=wiki"
+    title="RSS page feed for Creating The BPEL Module Project" ><img src="images/xml.png" border="0" alt="[RSS]"/></a>
+    
+    <br />
+    This page was created on 
+    <a  href="http://wiki.open-esb.java.net/Wiki.jsp?page=CreatingTheBPELModuleProject&amp;version=1">06-Oct-08 23:41 PM, -0700</a> by rjacobus.
+    
+  </p>    
+
+  
+
+  
+   
+  
+  <p><a href="http://wiki.open-esb.java.net/PageInfo.jsp?page=CreatingTheBPELModuleProject" id="moreinfo" >More info...</a></p>
+  
+  
+
+  <div class="tabmenu ">
+  
+  
+  
+
+  
+
+  
+
+  
+  
+  
+  
+  <span><a class="activetab" id="menu-versionHistory" onclick="TabbedSection.onclick('versionHistory')" >Version History</a></span>
+  
+
+  <span><a id="menu-incomingLinks" onclick="TabbedSection.onclick('incomingLinks')" >Incoming Links</a></span>
+
+  <span><a id="menu-outgoingLinks" onclick="TabbedSection.onclick('outgoingLinks')" >Outgoing Links</a></span>
+
+  
+  
+  </div>
+<div class="tabs ">
+  
+  <div id="versionHistory" >
+
+
+    <div class='pagination'>Pagination: <a title="Show page from 1 to 20" href='#' onclick='location.href= $("moreinfo").href + "&start=0"; ' >previous</a>&nbsp;&nbsp;<a title="Show page from 1 to 20" href='#' onclick='location.href= $("moreinfo").href + "&start=0"; ' >1</a>&nbsp;&nbsp;<span class='cursor'>2</span>&nbsp;&nbsp;<a title="Show all pages" href='#' onclick='location.href= $("moreinfo").href + "&start=-1"; ' >all</a>&nbsp;&nbsp; (Total items: 34)</div>
+    <div class="zebra-table ">
+    <table class="wikitable" >
+      <tr>
+        <th>Version</th>                        
+        <th>Date</th>
+        <th>Author</th>
+        <th>Size</th>
+        <th>Changes ...</th>
+        
+      </tr>
+
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=CreatingTheBPELModuleProject&amp;version=34" accesskey="" title="">
+            34
+          </a>
+        </td>
+
+        <td>
+          09-Jun-09 10:33 AM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>20754</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=CreatingTheBPELModuleProject&amp;r1=34&amp;r2=33">to previous</a>
+            
+          
+
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=CreatingTheBPELModuleProject&amp;version=33" accesskey="" title="">
+            33
+          </a>
+        </td>
+
+        <td>
+          26-May-09 15:26 PM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>20653</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=CreatingTheBPELModuleProject&amp;r1=33&amp;r2=32">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=CreatingTheBPELModuleProject&amp;r1=34&amp;r2=33">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=CreatingTheBPELModuleProject&amp;version=32" accesskey="" title="">
+            32
+          </a>
+        </td>
+
+        <td>
+          26-May-09 15:24 PM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>20651</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=CreatingTheBPELModuleProject&amp;r1=32&amp;r2=31">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=CreatingTheBPELModuleProject&amp;r1=34&amp;r2=32">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=CreatingTheBPELModuleProject&amp;version=31" accesskey="" title="">
+            31
+          </a>
+        </td>
+
+        <td>
+          26-May-09 13:03 PM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>20638</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=CreatingTheBPELModuleProject&amp;r1=31&amp;r2=30">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=CreatingTheBPELModuleProject&amp;r1=34&amp;r2=31">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=CreatingTheBPELModuleProject&amp;version=30" accesskey="" title="">
+            30
+          </a>
+        </td>
+
+        <td>
+          26-May-09 12:22 PM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>20598</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=CreatingTheBPELModuleProject&amp;r1=30&amp;r2=29">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=CreatingTheBPELModuleProject&amp;r1=34&amp;r2=30">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=CreatingTheBPELModuleProject&amp;version=29" accesskey="" title="">
+            29
+          </a>
+        </td>
+
+        <td>
+          26-May-09 11:45 AM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>20597</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=CreatingTheBPELModuleProject&amp;r1=29&amp;r2=28">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=CreatingTheBPELModuleProject&amp;r1=34&amp;r2=29">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=CreatingTheBPELModuleProject&amp;version=28" accesskey="" title="">
+            28
+          </a>
+        </td>
+
+        <td>
+          26-May-09 09:51 AM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>20585</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=CreatingTheBPELModuleProject&amp;r1=28&amp;r2=27">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=CreatingTheBPELModuleProject&amp;r1=34&amp;r2=28">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=CreatingTheBPELModuleProject&amp;version=27" accesskey="" title="">
+            27
+          </a>
+        </td>
+
+        <td>
+          21-May-09 09:36 AM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>20584</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=CreatingTheBPELModuleProject&amp;r1=27&amp;r2=26">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=CreatingTheBPELModuleProject&amp;r1=34&amp;r2=27">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=CreatingTheBPELModuleProject&amp;version=26" accesskey="" title="">
+            26
+          </a>
+        </td>
+
+        <td>
+          21-May-09 09:25 AM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>20582</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=CreatingTheBPELModuleProject&amp;r1=26&amp;r2=25">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=CreatingTheBPELModuleProject&amp;r1=34&amp;r2=26">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=CreatingTheBPELModuleProject&amp;version=25" accesskey="" title="">
+            25
+          </a>
+        </td>
+
+        <td>
+          05-Dec-08 11:26 AM, -0800
+        </td>
+        <td>SWeber</td>
+        <td>20580</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=CreatingTheBPELModuleProject&amp;r1=25&amp;r2=24">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=CreatingTheBPELModuleProject&amp;r1=34&amp;r2=25">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=CreatingTheBPELModuleProject&amp;version=24" accesskey="" title="">
+            24
+          </a>
+        </td>
+
+        <td>
+          10-Nov-08 12:56 PM, -0800
+        </td>
+        <td>rjacobus</td>
+        <td>20592</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=CreatingTheBPELModuleProject&amp;r1=24&amp;r2=23">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=CreatingTheBPELModuleProject&amp;r1=34&amp;r2=24">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=CreatingTheBPELModuleProject&amp;version=23" accesskey="" title="">
+            23
+          </a>
+        </td>
+
+        <td>
+          29-Oct-08 10:10 AM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>20620</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=CreatingTheBPELModuleProject&amp;r1=23&amp;r2=22">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=CreatingTheBPELModuleProject&amp;r1=34&amp;r2=23">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=CreatingTheBPELModuleProject&amp;version=22" accesskey="" title="">
+            22
+          </a>
+        </td>
+
+        <td>
+          29-Oct-08 10:04 AM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>20466</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=CreatingTheBPELModuleProject&amp;r1=22&amp;r2=21">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=CreatingTheBPELModuleProject&amp;r1=34&amp;r2=22">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=CreatingTheBPELModuleProject&amp;version=21" accesskey="" title="">
+            21
+          </a>
+        </td>
+
+        <td>
+          28-Oct-08 15:02 PM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>20422</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=CreatingTheBPELModuleProject&amp;r1=21&amp;r2=20">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=CreatingTheBPELModuleProject&amp;r1=34&amp;r2=21">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=CreatingTheBPELModuleProject&amp;version=20" accesskey="" title="">
+            20
+          </a>
+        </td>
+
+        <td>
+          16-Oct-08 14:07 PM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>20348</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=CreatingTheBPELModuleProject&amp;r1=20&amp;r2=19">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=CreatingTheBPELModuleProject&amp;r1=34&amp;r2=20">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+    </table>  
+    </div>
+    <div class='pagination'>Pagination: <a title="Show page from 1 to 20" href='#' onclick='location.href= $("moreinfo").href + "&start=0"; ' >previous</a>&nbsp;&nbsp;<a title="Show page from 1 to 20" href='#' onclick='location.href= $("moreinfo").href + "&start=0"; ' >1</a>&nbsp;&nbsp;<span class='cursor'>2</span>&nbsp;&nbsp;<a title="Show all pages" href='#' onclick='location.href= $("moreinfo").href + "&start=-1"; ' >all</a>&nbsp;&nbsp; (Total items: 34)</div>
+
+  </div>
+
+  
+
+  <div id="incomingLinks" style="display:none;" >
+
+    <a class="wikipage" href="Wikia9da.html?page=CreatingTheBPELModuleProject" accesskey="" title="">Creating The BPEL Module Project</a>
+    <ul><li><a class="wikipage" href="Wiki21f2.html?page=BPELBluePrints">BPEL Blue Prints</a>
+</li><li><a class="wikipage" href="Wiki3879.html?page=BPELDesignerAndServiceEngineFeatures">BPEL Designer And Service Engine Features</a>
+</li><li><a class="wikipage" href="Wiki5e52.html?page=BPELDesignerAndServiceEngineOverview">BPEL Designer And Service Engine Overview</a>
+</li><li><a class="wikipage" href="Wiki5233.html?page=BPELProcessLoggingAndAlerting">BPEL Process Logging And Alerting</a>
+</li><li><a class="wikipage" href="Wikicae3.html?page=BPELServiceEngineDeploymentArtifacts">BPEL Service Engine Deployment Artifacts</a>
+</li><li><a class="wikipage" href="Wiki7030.html?page=BPELServiceEngineTaskHowTos">BPEL Service Engine Task How Tos</a>
+</li><li><a class="wikipage" href="Wiki73af.html?page=ConfiguringClusteringAndFailoverForBPEL">Configuring Clustering And Failover For BPEL</a>
+</li><li><a class="wikipage" href="Wikid4c2.html?page=ConfiguringFailoverForBPEL">Configuring Failover For BPEL</a>
+</li><li><a class="wikipage" href="Wiki0931.html?page=ConfiguringPersistenceAndRecoveryForBPEL">Configuring Persistence And Recovery For BPEL</a>
+</li><li><a class="wikipage" href="Wiki2f9d.html?page=ConfiguringTheBPELServiceEngineRuntimeProperties">Configuring The BPEL Service Engine Runtime Properties</a>
+</li><li><a class="wikipage" href="Wiki77bf.html?page=ConfiguringTheQualityOfServiceProperties">Configuring The Quality Of Service Properties</a>
+</li><li><a class="wikipage" href="Wiki17ca.html?page=DevelopingTheBPELProcessUsingTheBPELDiagram">Developing The BPEL Process Using The BPEL Diagram</a>
+</li><li><a class="wikipage" href="Wiki434d.html?page=MonitoringTheBPELServiceEngine">Monitoring The BPEL Service Engine</a>
+</li><li><a class="wikipage" href="Wiki0ddb.html?page=NavigatingTheBPELDesigner">Navigating The BPEL Designer</a>
+</li><li><a class="wikipage" href="Wiki1302.html?page=TestingAndDebuggingBPELProcesses">Testing And Debugging BPEL Processes</a>
+</li><li><a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">The BPEL Designer Palette Elements</a>
+</li><li><a class="wikipage" href="Wikif987.html?page=TroubleshootingTheBPELServiceEngine">Troubleshooting The BPEL Service Engine</a>
+</li><li><a class="wikipage" href="Wikifbc9.html?page=UnderstandingTheBPELModuleProject">Understanding The BPEL Module Project</a>
+</li><li><a class="wikipage" href="Wiki20e8.html?page=UsingBPELDesignerServiceEngine">Using BPEL Designer Service Engine</a>
+</li><li><a class="wikipage" href="Wikia3b6.html?page=UsingCorrelation">Using Correlation</a>
+</li><li><a class="wikipage" href="Wikife94.html?page=UsingDynamicPartnerLinksAndDynamicAddressing">Using Dynamic Partner Links And Dynamic Addressing</a>
+</li><li><a class="wikipage" href="Wikie39c.html?page=UsingHandlers">Using Handlers</a>
+</li><li><a class="wikipage" href="Wikiad48.html?page=UsingNormalizedMessageProperties">Using Normalized Message Properties</a>
+</li><li><a class="wikipage" href="Wiki39db.html?page=UsingTheBPELMapper">Using The BPEL Mapper</a>
+</li><li><a class="wikipage" href="Wiki1f81.html?page=ValidatingTheBPELProcess">Validating The BPEL Process</a>
+</li></ul>
+  </div>
+
+
+  <div id="outgoingLinks" style="display:none;" >
+
+    
+      <div class="ReferredPagesPlugin">
+<a class="wikipage" href="Wikia9da.html?page=CreatingTheBPELModuleProject" title="ReferredPagesPlugin: depth[1] include[.*] exclude[^$] format[compact]">CreatingTheBPELModuleProject</a>
+<ul>
+<li><a class="wikipage" href="Wiki21f2.html?page=BPELBluePrints">BPELBluePrints</a></li>
+<li><a class="wikipage" href="Wiki3879.html?page=BPELDesignerAndServiceEngineFeatures">BPELDesignerAndServiceEngineFeatures</a></li>
+<li><a class="wikipage" href="Wiki5e52.html?page=BPELDesignerAndServiceEngineOverview">BPELDesignerAndServiceEngineOverview</a></li>
+<li><a class="wikipage" href="Wiki5233.html?page=BPELProcessLoggingAndAlerting">BPELProcessLoggingAndAlerting</a></li>
+<li><a class="wikipage" href="Wikicae3.html?page=BPELServiceEngineDeploymentArtifacts">BPELServiceEngineDeploymentArtifacts</a></li>
+<li><a class="wikipage" href="Wiki7030.html?page=BPELServiceEngineTaskHowTos">BPELServiceEngineTaskHowTos</a></li>
+<li><a class="wikipage" href="Wikid4c2.html?page=ConfiguringFailoverForBPEL">ConfiguringFailoverForBPEL</a></li>
+<li><a class="wikipage" href="Wiki0931.html?page=ConfiguringPersistenceAndRecoveryForBPEL">ConfiguringPersistenceAndRecoveryForBPEL</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=ConfiguringQualityOfServiceProperties">ConfiguringQualityOfServiceProperties</a></li>
+<li><a class="wikipage" href="Wiki2f9d.html?page=ConfiguringTheBPELServiceEngineRuntimeProperties">ConfiguringTheBPELServiceEngineRuntimeProperties</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=CreatingTheBPELModuleProject/ep-bpel-designer.gif">CreatingTheBPELModuleProject/ep-bpel-designer.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=CreatingTheBPELModuleProject/ep-bpel-designer21.gif">CreatingTheBPELModuleProject/ep-bpel-designer21.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=CreatingTheBPELModuleProject/ep-bpel-mapper.gif">CreatingTheBPELModuleProject/ep-bpel-mapper.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=CreatingTheBPELModuleProject/ep-bpel-mapper21.gif">CreatingTheBPELModuleProject/ep-bpel-mapper21.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=CreatingTheBPELModuleProject/ep-bpel-new-bpel-module.gif">CreatingTheBPELModuleProject/ep-bpel-new-bpel-module.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=CreatingTheBPELModuleProject/ep-bpel-new-process.gif">CreatingTheBPELModuleProject/ep-bpel-new-process.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=CreatingTheBPELModuleProject/ep-bpel-new-process21.gif">CreatingTheBPELModuleProject/ep-bpel-new-process21.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=CreatingTheBPELModuleProject/ep-bpel-new-project.gif">CreatingTheBPELModuleProject/ep-bpel-new-project.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=CreatingTheBPELModuleProject/ep-bpel-newbpelmodule21.gif">CreatingTheBPELModuleProject/ep-bpel-newbpelmodule21.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=CreatingTheBPELModuleProject/ep-bpel-newproject21.gif">CreatingTheBPELModuleProject/ep-bpel-newproject21.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=CreatingTheBPELModuleProject/ep-bpel-partner-link.gif">CreatingTheBPELModuleProject/ep-bpel-partner-link.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=CreatingTheBPELModuleProject/ep-bpel-partner-link21.gif">CreatingTheBPELModuleProject/ep-bpel-partner-link21.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=CreatingTheBPELModuleProject/ep-bpel-project-helloworld.gif">CreatingTheBPELModuleProject/ep-bpel-project-helloworld.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=CreatingTheBPELModuleProject/ep-bpel-receive.gif">CreatingTheBPELModuleProject/ep-bpel-receive.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=CreatingTheBPELModuleProject/ep-bpel-receive21.gif">CreatingTheBPELModuleProject/ep-bpel-receive21.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=CreatingTheBPELModuleProject/ep-bpel-reply.gif">CreatingTheBPELModuleProject/ep-bpel-reply.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=CreatingTheBPELModuleProject/ep-bpel-reply21.gif">CreatingTheBPELModuleProject/ep-bpel-reply21.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=CreatingTheBPELModuleProject/ep-bpel-service-assembly.gif">CreatingTheBPELModuleProject/ep-bpel-service-assembly.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=CreatingTheBPELModuleProject/ep-bpel-service-assembly21.gif">CreatingTheBPELModuleProject/ep-bpel-service-assembly21.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=CreatingTheBPELModuleProject/ep-bpel-test-populated.gif">CreatingTheBPELModuleProject/ep-bpel-test-populated.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=CreatingTheBPELModuleProject/ep-bpel-testcase1.gif">CreatingTheBPELModuleProject/ep-bpel-testcase1.gif</a></li>
+<li><a class="wikipage" href="Wiki17ca.html?page=DevelopingTheBPELProcessUsingTheBPELDiagram">DevelopingTheBPELProcessUsingTheBPELDiagram</a></li>
+<li><a class="wikipage" href="Wiki434d.html?page=MonitoringTheBPELServiceEngine">MonitoringTheBPELServiceEngine</a></li>
+<li><a class="wikipage" href="Wiki0ddb.html?page=NavigatingTheBPELDesigner">NavigatingTheBPELDesigner</a></li>
+<li><a class="wikipage" href="Wiki1302.html?page=TestingAndDebuggingBPELProcesses">TestingAndDebuggingBPELProcesses</a></li>
+<li><a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">TheBPELDesignerPaletteElements</a></li>
+<li><a class="wikipage" href="Wikif987.html?page=TroubleshootingTheBPELServiceEngine">TroubleshootingTheBPELServiceEngine</a></li>
+<li><a class="wikipage" href="Wikifbc9.html?page=UnderstandingTheBPELModuleProject">UnderstandingTheBPELModuleProject</a></li>
+<li><a class="wikipage" href="Wiki20e8.html?page=UsingBPELDesignerServiceEngine">UsingBPELDesignerServiceEngine</a></li>
+<li><a class="wikipage" href="Wikia3b6.html?page=UsingCorrelation">UsingCorrelation</a></li>
+<li><a class="wikipage" href="Wikife94.html?page=UsingDynamicPartnerLinksAndDynamicAddressing">UsingDynamicPartnerLinksAndDynamicAddressing</a></li>
+<li><a class="wikipage" href="Wikie39c.html?page=UsingHandlers">UsingHandlers</a></li>
+<li><a class="wikipage" href="Wikiad48.html?page=UsingNormalizedMessageProperties">UsingNormalizedMessageProperties</a></li>
+<li><a class="wikipage" href="Wiki39db.html?page=UsingTheBPELMapper">UsingTheBPELMapper</a></li>
+<li><a class="wikipage" href="Wiki1f81.html?page=ValidatingTheBPELProcess">ValidatingTheBPELProcess</a></li>
+</ul>
+</div>
+
+    
+    
+  </div>
+
+
+  
+  
+  <div style="clear:both; height:0px;" > </div>
+</div>
+ 
+
+
+
+
+
+
+
+
+
+  </div>
+
+  
+<div style="clear:both; height:0px;" > </div>
+</div>
+
+</div> 
+
+
+  
+
+
+
+<div id="favorites">
+
+
+<div class="username">G'day,
+  
+    <a title="Hi, Anonymous Guest"  href="Wiki48c3.html?page=Login">Anonymous Guest</a>
+  
+  
+  
+  
+</div>  
+
+
+
+
+
+
+
+
+<p />
+
+
+
+  
+<p />
+<p />
+
+
+<div class="wikiversion">JSPWiki v2.4.100</div>
+
+<div class="rssfeed"><a href="rss.rdf"><img src="images/xml.png" alt="[RSS]" border="0" title="Aggregate the RSS feed of the entire wiki"/></a></div>
+
+<div style="clear:both; height:0px;" > </div>
+
+</div> 
+
+  
+
+
+
+
+
+<div id='actionsBottom' class="pageactions"> 
+
+  <span class='quicklinks quick2Top'>
+    <a href="#wikibody" title='Go to Top' >&laquo;</a>
+  </span>
+
+  <span class="actionHome">
+    <a href="Wikib2ab.html?page=Main"
+       title="Go to home page Main ">Home</a>
+  </span>
+  
+  
+    
+
+    
+  
+  
+  <span class="actionIndex">
+     <a href="Wiki5f9e.html?page=PageIndex"
+       title="Alphabetically sorted list of pages [ x ]">Index</a>
+  </span>
+  
+  <span class="actionRecentChanges">
+     <a href="Wiki5fc7.html?page=RecentChanges"
+        title="Pages sorted by modification date [ u ]">Changes</a>
+  </span>
+
+  
+    
+      <span class="actionPrefs">
+        <a href="Wiki7eba.html?page=UserPreferences"
+           title="Set User Preferences" >Prefs</a>
+      </span>
+    
+  
+
+  
+    <div class="pageinfo">
+      
+        This page (revision-34) was last changed on 
+        <a href="http://wiki.open-esb.java.net/Diff.jsp?page=CreatingTheBPELModuleProject&amp;r1=34&amp;r2=33"
+          title="Show changes of last page update" >  
+        
+        09-Jun-09 10:33 AM, -0700</a>
+      
+      
+      by rjacobus
+
+      
+    </div>  
+  
+
+  <div style="clear:both; height:0;"> </div> 
+</div>
+
+  
+ 
+  
+
+  
+
+
+<div id="footer">
+
+<table><tr><td>
+  <div class="wikiversion">
+    JSPWiki v2.4.100                       
+  </div>
+</td>
+<td>
+<br>Copyright &copy; 2011, Oracle and/or its affiliates. All rights reserved. Oracle and Java are registered trademarks of Oracle and/or its affiliates. Other names may be trademarks of their respective owners. <a href="http://www.oracle.com/"><img src="images/ora_logo_small.gif" /> </a>
+  <div class="rssfeed">
+    <a href="rss.rdf"><img src="images/xml.png" alt="[RSS]" border="0" title="Aggregate the RSS feed"/></a>
+  </div>
+</td></tr></table>
+  <div style="clear:both; height:0px;" > </div>
+
+</div>
+  
+
+  </div>
+  <div style="clear:both; height:0;" > </div>
+
+
+
+<!-- Page counters -->
+<script type="text/javascript" language="javascript">
+var sc_project=1965314; 
+var sc_invisible=1; 
+var sc_partition=17; 
+var sc_security="c5f5efea"; 
+</script>
+<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script>
+
+
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+<script type="text/javascript">
+_uacct = "UA-993823-3";
+urchinTracker();
+</script>
+</body>
+
+<!-- Mirrored from wiki.open-esb.java.net/Wiki.jsp?page=CreatingTheBPELModuleProject by HTTrack Website Copier/3.x [XR&CO'2010], Thu, 08 Jul 2010 02:16:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+</html>
+
+
