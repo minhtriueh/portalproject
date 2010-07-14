@@ -1,0 +1,1312 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+
+
+<!-- Mirrored from wiki.open-esb.java.net/Wiki.jsp?page=UsingNormalizedMessageProperties by HTTrack Website Copier/3.x [XR&CO'2010], Thu, 08 Jul 2010 02:16:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head>
+
+  <title>Using Normalized Message Properties - OpenESB: the Open Source ESB for SOA & Integration</title>
+  
+
+
+
+
+
+<link rel="stylesheet" type="text/css" media="screen, projection" 
+     href="templates/brushed/jspwiki.css" />
+
+<!-- browser specific cssinclude not required in brushed template
+<script type="text/javascript"
+         src="/templates/brushed/cssinclude.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+  Wiki.loadBrowserSpecificCSS("brushed");
+//]]>
+</script>
+-->
+
+
+
+
+<link rel="stylesheet" type="text/css" 
+     href="templates/brushed/skins/Smart/skin.css" />
+<!-- INCLUDERESOURCES (stylesheet) -->
+
+
+
+<!--[if IE]>
+<style type="text/css" media="screen">
+img, a, div { behavior: url("templates/brushed/scripts/iepngfix.htc"); }
+</style>
+<![endif]-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="search" 
+     href="Wiki702d.html?page=FindPage"
+    title="Search Open ESB Wiki" />
+<link rel="help"   
+     href="Wikia3b7.html?page=TextFormattingRules" 
+    title="Help" />
+<link rel="start"  
+     href="Wikib2ab.html?page=Main"                
+    title="Front page" />
+<!--<link rel="stylesheet" type="text/css" media="print"
+     href="/templates/brushed/jspwiki_print.css" />
+<link rel="alternate stylesheet" type="text/css"
+     href="/templates/brushed/jspwiki_print.css" 
+    title="Print friendly" />-->
+<link rel="alternate stylesheet" type="text/css" 
+     href="templates/brushed/jspwiki.css" 
+    title="Standard" />
+<link rel="icon" type="image/png" href="images/openesb16x16.png" />
+
+<link rel="template" href="http://wiki.open-esb.java.net/templates/brushed" id="template-dir"/>
+<link rel="alternate" type="application/rss+xml" title="RSS wiki feed for the entire site." href="rss.rdf" />
+<link rel="alternate" type="application/rss+xml" title="RSS wiki feed for page Open ESB Wiki: UsingNormalizedMessageProperties." href="http://wiki.open-esb.java.net/rss.jsp?page=UsingNormalizedMessageProperties&amp;mode=wiki" />
+
+
+
+<script type="text/javascript"
+         src="templates/brushed/scripts/prototype.js" ></script>
+<script type="text/javascript" 
+         src="templates/brushed/scripts/brushed.js" ></script>
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+  Wiki.setBaseURL ( "index.html" );
+  Wiki.setPageName( "UsingNormalizedMessageProperties" ); /* pagename without blanks */
+  Wiki.setUserName( "113.170.138.21" );
+
+  Wiki.setDELIM              ( "¤" );
+  Wiki.setPrefDateFormat     ( "dd-MMM-yy HH:mm a, Z" );
+  Wiki.setPrefSkinName       ( "Smart" );
+  Wiki.setPrefTimeZone       ( "" );
+  Wiki.setPrefEditAreaHeight ( "24" );
+  Wiki.setPrefShowQuickLinks ( "no" );
+  Wiki.setPrefSowCalendar    ( "no" );
+//]]>
+</script>
+<script type="text/javascript" 
+         src="templates/brushed/skins/Smart/skin.js"></script>
+
+<!-- INCLUDERESOURCES (script) -->
+
+
+  
+</head>
+
+<body class="view" id="gradient">
+<!--
+<p id="underline" class="barMargin"></p>
+-->
+<div id="wikibody" >
+  
+
+
+
+
+<div id="header">
+<!--
+  <div class="applicationlogo"> 
+    <a href="https://open-esb.dev.java.net/public/downloads.html" title="OpenESB Downloads"></a>
+  </div>
+-->  
+
+<table width="100%" id="headertable"><tr>
+  <td><a href="https://open-esb.dev.java.net/" style="border: none;"><img style="border: none;" height="60" width="304" alt="Open ESB: the Open Enterprise Service Bus... Open Standards + Open Source" src="images/ESBLogoTag-304x60C.jpg"/></a></td>
+
+
+  <td id="rhstop">
+  
+
+<div id="rhsuser" class="rhsusername">
+  Not logged in | 
+    <a title="Hi, Anonymous Guest"  href="Wiki48c3.html?page=Login">Login</a>
+  
+  
+
+  
+
+  
+</div>  
+  
+  
+<div id="oesearch" style="vertical-align: bottom">
+  <br/>
+  <br/>
+	<form action="https://open-esb.dev.java.net/SearchResults.html" id="cse-search-box"> 
+	  <div>
+	    <input type="hidden" name="cx" value="013607241216432041017:tcd_nlc0tem" />
+	    <input type="hidden" name="cof" value="FORID:11" />
+	    <input type="hidden" name="ie" value="UTF-8" />
+	    <input type="text" name="q" size="20" />
+	    <input type="submit" name="sa" value="Search" />
+	  </div>
+	</form>
+</div>
+  
+  
+  </td>
+</tr></table>
+
+<!-- ==================== Menu Structure ==================== -->
+<script type="text/javascript" src="static/menu.js" ></script>
+<div id="z_menu_02"><table width="100%"><tr><td>
+	<div id="z_menu_01">
+		<script>writeOEMenu();</script>
+	</div>
+</td></tr></table></div>
+<!-- ==================== End menu ==================== -->
+
+
+
+
+
+
+
+
+
+
+  <div class="companylogo">
+  </div>
+  
+  
+<!--
+<ul class="iconlist">
+<li class="documentation"><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=Documentation"><img src="/openesbwiki/templates/brushed/skins/Smart/images/documentation.png" width="81" height="65"/></a></li>
+<li class="link"><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsefulLinks"><img src="/openesbwiki/templates/brushed/skins/Smart/images/links.png" width="64" height="65"/></a></li>
+<li class="participate"><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=GetInvolved"><img src="/openesbwiki/templates/brushed/skins/Smart/images/participate.png" width="61" height="68"/></a></li>
+<li class="downloads"><a href="https://open-esb.dev.java.net/Downloads.html"><img src="/openesbwiki/templates/brushed/skins/Smart/images/downloads.png" width="61" height="65"/></a></li>
+</ul>
+<div style="clear: left;"></div>
+ --> 
+
+  <table width="100%">
+  <tr>
+  <td><div class="pagename2">Using Normalized Message Properties</div></td>
+  </tr>
+  </table>
+  
+
+
+  
+  <div class="searchbox">
+
+
+<form action="http://wiki.open-esb.java.net/Search.jsp"
+    onsubmit="SearchBox.submit( this.query.value )"
+ onmouseover="Element.show('searchboxMenu');"
+  onmouseout= "Element.hide('searchboxMenu');"
+        name="searchForm" id="searchForm" 
+        accept-charset="UTF-8">
+  <div>
+  
+  <input onblur="if( this.value == '' ) { this.value = 'Search'}; " 
+        onfocus="if( this.value == 'Search' ) { this.value = ''}; "
+           type="text" value="Wiki search" name="query" id="query" size="24" 
+      accesskey="f"></input>
+  </div>  
+  <div id="searchboxMenu" style='display:none;'>
+    <div>
+      <a href="javascript://nop/" 
+         onclick="SearchBox.navigation( 'Wiki195c.html?page=__PAGEHERE__','UsingNormalizedMessageProperties' );return false;"
+         title="View the selected page">view</a> 
+      | 
+      <a href="javascript://nop/" 
+         onclick="SearchBox.navigation( 'http://wiki.open-esb.java.net/Edit.jsp?page=__PAGEHERE__','UsingNormalizedMessageProperties' );return false;"
+         title="Edit the selected page">edit</a> 
+      | 
+      <a href="javascript://nop/" 
+         onclick="SearchBox.clone( 'http://wiki.open-esb.java.net/Edit.jsp?page=__PAGEHERE__','UsingNormalizedMessageProperties' );return false;"
+         title="Clone this page">clone</a> 
+      |
+      <a href="javascript://nop/" 
+         onclick="SearchBox.navigation( 'Search136d.html?query=__PAGEHERE__','UsingNormalizedMessageProperties' );return false;"
+         title="Advanced Search">find</a> 
+      [ f ]
+    </div>
+    <div id="searchResult" > </div>
+    <div id="recentSearches" > </div>
+  </div>
+
+</form>
+<script type="text/javascript">
+//<![CDATA[    
+    function updateSearchResult( )
+    {  
+      if( $F('query') == 'Search' ) return;
+      new Ajax.Updater(
+        'searchResult', 
+        'templates/brushed/FindAjax.html',
+        { 
+          asynchronous: true,
+          parameters: Form.serialize( 'searchForm' ) + "&compact=true"
+        } ); 
+    } ;
+    new Form.Element.Observer( "query", 1, updateSearchResult ); 
+//]]>
+</script>
+    
+   </div>
+
+  <div class="breadcrumbs">Your trail: <a class="wikipage" href="Wiki5f9e.html?page=PageIndex">PageIndex</a> &gt; <a class="wikipage" href="Wiki5fc7.html?page=RecentChanges">RecentChanges</a> &gt; <a class="wikipage" href="Wiki20e8.html?page=UsingBPELDesignerServiceEngine">UsingBPELDesignerServiceEngine</a> &gt; <a class="wikipage" href="Wiki5e52.html?page=BPELDesignerAndServiceEngineOverview">BPELDesignerAndServiceEngineOverview</a> &gt; <a class="wikipage" href="Wiki3879.html?page=BPELDesignerAndServiceEngineFeatures">BPELDesignerAndServiceEngineFeatures</a> &gt; <a class="wikipage" href="Wiki0ddb.html?page=NavigatingTheBPELDesigner">NavigatingTheBPELDesigner</a> &gt; <a class="wikipage" href="Wikia9da.html?page=CreatingTheBPELModuleProject">CreatingTheBPELModuleProject</a> &gt; <a class="wikipage" href="Wiki17ca.html?page=DevelopingTheBPELProcessUsingTheBPELDiagram">DevelopingTheBPELProcessUsingTheBPELDiagram</a> &gt; <a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">TheBPELDesignerPaletteElements</a> &gt; <a class="wikipage" href="Wiki39db.html?page=UsingTheBPELMapper">UsingTheBPELMapper</a></div>
+
+  <div style="clear:both; height:0;" > </div>
+
+</div>
+
+
+
+
+  
+
+
+
+
+
+<div id="actionsTop" class="pageactions"> 
+<!--
+  <span class="actionHome">
+    <a href="http://wiki.open-esb.java.net/Wiki.jsp?page=Main"
+       title="Go to home page Main ">Home</a>
+  </span>
+-->  
+  
+    
+    
+    
+<!--
+    
+  -->
+  
+  
+  <span class="actionIndex">
+     <a href="Wiki5f9e.html?page=PageIndex"
+       title="Alphabetically sorted list of pages [ x ]" accesskey="x">Index</a>
+  </span>
+  
+  <span class="actionRecentChanges">
+     <a href="Wiki5fc7.html?page=RecentChanges"
+        title="Pages sorted by modification date [ u ]" accesskey="u">Changes</a>
+  </span>
+
+  
+
+<!--
+  <span class="quicklinks quick2Bottom">
+    <a href="#footer" title="Go to Bottom" >&raquo;</a>
+  </span>
+-->
+  <div style="clear:both; height:0;"> </div> 
+</div>
+
+
+
+
+
+  <div id="page">
+
+
+
+
+
+<div class="tabmenu ">
+  
+  
+  
+  
+  
+  
+  
+
+  <span><a class="activetab" id="menu-pagecontent" onclick="TabbedSection.onclick('pagecontent')" accesskey="v" ><u>V</u>iew</a></span>
+  
+  
+  <span><a id="menu-attachments" onclick="TabbedSection.onclick('attachments')" accesskey="a" ><u>A</u>ttach (4)</a></span>
+  
+  <span><a id="menu-pageinfo" onclick="TabbedSection.onclick('pageinfo')" accesskey="i" ><u>I</u>nfo</a></span>
+  
+</div>
+<div class="tabs ">
+  <div id="pagecontent" >
+
+    
+
+
+
+
+
+
+
+<h3 id="section-UsingNormalizedMessageProperties-UsingTheBPELDesignerAndServiceEngine">Using the BPEL Designer and Service Engine </h3>
+<p><b>Contents</b>
+</p>
+<ul><li> <a class="wikipage" href="Wiki20e8.html?page=UsingBPELDesignerServiceEngine">Using the BPEL Designer and Service Engine</a>
+</li><li> <a class="wikipage" href="Wiki5e52.html?page=BPELDesignerAndServiceEngineOverview">Overview</a>
+</li><li> <a class="wikipage" href="Wiki3879.html?page=BPELDesignerAndServiceEngineFeatures">BPEL Designer and Service Engine Features</a>
+</li><li> <a class="wikipage" href="Wikifbc9.html?page=UnderstandingTheBPELModuleProject">Understanding the BPEL Module Project</a>
+</li><li> <a class="wikipage" href="Wiki0ddb.html?page=NavigatingTheBPELDesigner">Navigating the BPEL Designer</a>
+</li><li> <a class="wikipage" href="Wikia9da.html?page=CreatingTheBPELModuleProject">Creating a BPEL Module Project</a>
+</li><li> <a class="wikipage" href="Wiki17ca.html?page=DevelopingTheBPELProcessUsingTheBPELDiagram">Developing the BPEL Process Using the BPEL Diagram</a>
+</li><li> <a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">The BPEL Designer Palette Elements</a>
+</li><li> <a class="wikipage" href="Wiki39db.html?page=UsingTheBPELMapper">Using the BPEL Mapper</a>
+</li><li> <span style="color:#3333ff;"><b>Using Normalized Message Properties</b></span>
+<ul><li> Using Normalized Message Properties in a BPEL Process
+</li><li> Adding Additional Normalized Message Properties to a BPEL Process
+</li><li> BPEL Code Generation Using NM Properties
+</li><li> General Normalized Message Properties
+</li><li> Binding Component Specific Normalized Message Properties
+</li></ul></li><li> <a class="wikipage" href="Wikie39c.html?page=UsingHandlers">Using Handlers</a>
+</li><li> <a class="wikipage" href="Wikia3b6.html?page=UsingCorrelation">Using Correlation</a>
+</li><li> <a class="wikipage" href="Wiki1f81.html?page=ValidatingTheBPELProcess">Validating a BPEL Process</a>
+</li><li> <a class="wikipage" href="Wiki5233.html?page=BPELProcessLoggingAndAlerting">BPEL Process Logging and Alerting</a>
+</li><li> <a class="wikipage" href="Wiki2f9d.html?page=ConfiguringTheBPELServiceEngineRuntimeProperties">Configuring the BPEL Service Engine Runtime Properties</a>
+</li><li> <a class="wikipage" href="Wikicae3.html?page=BPELServiceEngineDeploymentArtifacts">BPEL Service Engine Deployment Artifacts</a>
+</li><li> <a class="wikipage" href="Wiki1302.html?page=TestingAndDebuggingBPELProcesses">Testing and Debugging BPEL Processes</a>
+</li><li> <a class="wikipage" href="Wiki434d.html?page=MonitoringTheBPELServiceEngine">Monitoring the BPEL Service Engine</a>
+</li><li> <a class="wikipage" href="Wiki77bf.html?page=ConfiguringTheQualityOfServiceProperties">Configuring Quality of Service (QOS) Properties, Throttling, and Redelivery</a>
+</li><li> <a class="wikipage" href="Wikife94.html?page=UsingDynamicPartnerLinksAndDynamicAddressing">Using Dynamic Partner Links and Dynamic Addressing</a>
+</li><li> <a class="wikipage" href="Wiki0931.html?page=ConfiguringPersistenceAndRecoveryForBPEL">Configuring Persistence and Recovery for the BPEL Service Engine</a>
+</li><li> <a class="wikipage" href="Wikid4c2.html?page=ConfiguringFailoverForBPEL">Configuring Failover for the BPEL Service Engine</a>
+</li><li> <a class="wikipage" href="Wiki21f2.html?page=BPELBluePrints">BPEL BluePrints</a>
+</li><li> <a class="wikipage" href="Wiki7030.html?page=BPELServiceEngineTaskHowTos">BPEL Service Engine Task How-tos</a>
+</li><li> <a class="wikipage" href="Wikif987.html?page=TroubleshootingTheBPELServiceEngine">Troubleshooting the BPEL Designer and Service Engine</a>
+</li></ul><br />
+<h2 id="section-UsingNormalizedMessageProperties-UsingNormalizedMessageProperties">Using Normalized Message Properties</h2>
+<hr />
+<p>Normalized Message properties are commonly used to specify metadata that is associated with message content. <tt>javax.jbi.security.subject</tt> and <tt>javax.jbi.message.protocol.type</tt> are two examples of standard normalized Message properties defined in the JBI Specification.
+</p>
+<p>Normalized Message properties are used to provide additional capabilities in Open ESB, such as:
+</p>
+<ul><li> Getting and Setting transport context properties. For example, HTTP headers in the incoming HTTP request, or file names read by the File Binding Component
+</li><li> Getting and Setting protocol specific headers or context properties (SOAP headers)
+</li><li> Getting and Setting additional message metadata. For example. a unique message identifier, or an endpoint name associated with a message
+</li><li> Dynamic configurations. For example, to dynamically overwrite the statically configured destination file name at runtime
+</li></ul><p>Some of the use cases mentioned above require protocol/binding specific properties, typically used by a particular binding component. Other properties are considered common or general purpose properties that all participating JBI components make use of, for example, the message ID property, which can be utilized to uniquely identify or track a given message in the integration.
+<br />
+</p>
+<div class="center">
+<a class="wikipage" href="Wikiad48.html?page=UsingNormalizedMessageProperties">Top</a></div>
+<h3 id="section-UsingNormalizedMessageProperties-UsingNormalizedMessagePropertiesInABPELProcess">Using Normalized Message Properties in a BPEL Process</h3>
+The Normalized Message properties are accessed from the BPEL Designer Mapper view. When you expand a variable's Properties folder it exposes the variable's predefined NM properties, as well as the regular BPEL specific WSDL properties used in correlation sets, assigns, and to build expressions. If the specific NM property you need is not currently listed, additional NM properties can be added.
+<br />
+<h3 id="section-UsingNormalizedMessageProperties-UsingPredefinedNormalizedMessagePropertiesInABPELProcess">Using Predefined Normalized Message Properties in a BPEL Process</h3>
+ Predefined Normalized Message properties are ready for use, from a variable's Properties file.
+<h4 id="section-UsingNormalizedMessageProperties-ToUsePredefinedNormalizedMessagePropertiesInABPELProcess">To use predefined normalized message properties in a BPEL process</h4>
+<ol><li> From the Design View diagram, select the activity with the process you want to edit.
+</li><li> Click <tt>Mapper</tt> to switch to the Mapper view of the BPEL process.
+</li><li> From the Output pane, expand the variable you want to edit and its Properties file.<br />The Properties file contains the predefined Normalized Message (NM) properties.<table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/UsingNormalizedMessageProperties/ep-bpel-se-nmprops.gif" height="520" width="617" alt="Image shows the BPEL Designer Mapper view as described in context" /></td></tr>
+</table>
+ <br />
+</li><li> To use a predefined NM Property, select the property and use it to build an expression or an assign.
+</li></ol><br />
+<div class="center">
+<a class="wikipage" href="Wikiad48.html?page=UsingNormalizedMessageProperties">Top</a></div>
+<h3 id="section-UsingNormalizedMessageProperties-AddingAdditionalNormalizedMessagePropertiesToABPELProcess">Adding Additional Normalized Message Properties to a BPEL Process</h3>
+If the specific NM Property you want is not listed, you can add additional NM properties. 
+<p>There are two options available when adding NM Properties:
+</p>
+<ul><li> <b>Add NM Property Shortcut:</b> This option typically supports <b>simple type</b> properties, in that it does not grant access to some data within the NM Property. 
+</li><li> <b>Add NM Property:</b> This option provides access to data within the NM property used to build expressions.
+</li></ul><h4 id="section-UsingNormalizedMessageProperties-ToAddANormalizedMessagePropertyShortcutToABPELProcess"> To add a Normalized Message Property Shortcut to a BPEL process</h4>
+<ol><li> From the Output or Input panes of the BPEL Mapper, expand the node for the variable to which you want to add an NM property. 
+</li><li> Right-click that variables <tt>Properties</tt> directory node and select <tt>Add NM Property Shortcut</tt> from the pop-up menu.<br />The Add NM Property Shortcut dialog box appears.
+</li><li> Enter the information for the new NM property into the the Add NM Property Shortcut dialog box, as follows:
+<ul><li> <b>Property Name:</b> The NM property name (see each binding component's documentation for available NM properties).
+</li><li> <b>Display Name:</b> The display name for the NM property.<br />This is a user-defined name that appears in the Mapper tree. The display name is optional.<table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/UsingNormalizedMessageProperties/ep-bpel-se-nmprop-shortcut.gif" height="157" width="357" alt="Image shows the NM Property Shortcut dialog box" /></td></tr>
+</table>
+
+</li></ul></li><li> Click OK. <br />The new NM property is added to the Mapper tree under the variables Properties directory. The property can now be used in assigns and to build expressions.
+</li></ol><br />
+<div class="center">
+<a class="wikipage" href="Wikiad48.html?page=UsingNormalizedMessageProperties">Top</a></div>
+<h4 id="section-UsingNormalizedMessageProperties-ToEditAnNMPropertyShortcut">To edit an NM Property Shortcut</h4>
+<ol><li> To edit an existing NM property shortcut, right-click the NM property shortcut in the BPEL Mapper tree and choose <tt>Edit NM Property Shortcut</tt> in the pop-up menu.<br />The Add NM Property Shortcut dialog box appears.
+</li><li> Edit the NM Property Name or Display Name, and click <tt>OK</tt>.
+</li></ol><h4 id="section-UsingNormalizedMessageProperties-ToDeleteAnNMPropertyShortcut">To delete an NM Property Shortcut</h4>
+<ol><li> To delete an NM property shortcut, right-click the property in the Mapper tree.
+</li><li> Choose <tt>Delete NM Property Shortcut</tt> in the pop-up menu.<br />The NM Property Shortcut is deleted.
+</li></ol><h4 id="section-UsingNormalizedMessageProperties-ToAddANormalizedMessagePropertyToABPELProcess">To add a Normalized Message Property to a BPEL process</h4>
+<ol><li> From the Output or Input panes of the BPEL Mapper, expand the node for the variable to which you want to add an NM property. Right-click that variables <tt>Properties</tt> directory node and select <tt>Add NM Property</tt> from the pop-up menu.
+  The Add NM Property dialog box appears.
+</li><li> Enter the information for the new NM property in the the Add NM Property dialog box, as follows:
+<ul><li> <b>Property Name:</b> User-defined property name. This name is displayed in mapper tree and stored in WSDL file.
+</li><li> <b>Type or Element:</b>Displays the property type or element associated with the selected node in the <tt>Map Property To</tt> tree.
+</li><li> <b>Associate property with message:</b> Specifies with which message type the property is associated.
+<ul><li> <b>Checked</b> indicates that the new NM property is associated with all variables of the specified message type. For example, in the image below, the new NM property will be associated with the <i>requestMessage</i> type.
+</li><li> <b>Unchecked</b> indicates that the new NM property is associated with all variables of any message type.
+</li></ul></li><li> <b>Map Property To:</b> The <tt>Map Property To</tt> tree displays all of the predefined NM properties. This is used to build a query or choose a property type. 
+  When you select a node within the property tree the <tt>Type or Element</tt> and <tt>Query</tt> fields are populated automatically. Valid endpoint nodes are displayed in bold.
+</li><li> <b>New NM Property:</b> Select the <tt>New NM Property </tt>checkbox to add a specific NM property, and enter the name of the property in the <tt>New NM Property</tt> field. The new NM property is added to the <tt>Map Property To</tt> tree.
+</li><li> <b>Sync with tree:</b>When this checkbox is selected, the Query field is automatically synchronized with the selected node in the <tt>Map Property To</tt> tree.
+</li><li> <b>Query:</b> Displays the query type associated with the selected node in the <tt>Map Property To</tt> tree.<table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/UsingNormalizedMessageProperties/ep-bpel-se-nmprops-add.gif" height="537" width="434" alt="Image shows the NM Property dialog box" /></td></tr>
+</table>
+
+</li></ul></li><li> Click OK.<br />The new NM property name is added to the tree in the BPEL Mapper, and the NM property is stored in <tt>nmPropertiesDefinitions.wsdl</tt> as a pair of elements: <tt>&lt;vprop:property></tt> and <tt>&lt;vprop:propertyAlias></tt>.<table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/UsingNormalizedMessageProperties/ep-bpel-se-nmprops-definition.gif" height="383" width="707" alt="Image shows the elements of the new NM property in the nmPropertiesDefinitions.wsdl" /></td></tr>
+</table>
+
+</li></ol>The new NM property can now be used in assigns and to build expressions.
+<br />
+<h4 id="section-UsingNormalizedMessageProperties-ToDeleteAnNMProperty">To delete an NM Property</h4>
+<ol><li> To delete a new NM property, right-click the property in the Mapper tree.
+</li><li> Choose <tt>Delete NM Property</tt> in the pop-up menu.<br />The property is deleted.
+</li></ol><br />
+<div class="center">
+<a class="wikipage" href="Wikiad48.html?page=UsingNormalizedMessageProperties">Top</a></div>
+<h3 id="section-UsingNormalizedMessageProperties-BPELCodeGenerationUsingNMProperties">BPEL Code Generation Using NM Properties</h3>
+<p>Data copied from an NM property or an NM property shortcut generates code that is similar to the following:
+</p>
+<pre>
+&lt;from variable="inputVar" sxnmp:nmProperty="org.glassfish.openesb.file.outbound.dcom.username"/&gt;
+</pre>
+<p>Data copied from WSDL properties based on NM property generates code that is similar to the following:
+</p>
+<pre>
+&lt;from variable="inputVar" property="ns3:DemoNMProperty"/&gt;
+</pre>
+<p>When you use properties and NM properties to build an expression, code similar to the following code is generated:
+</p>
+<pre>
+&lt;from&gt;concat(bpws:getVariableProperty('inputVar', 'ns3:DemoNMProperty'), 
+sxnmp:getVariableNMProperty('inputVar','org.glassfish.openesb.file.outbound.dcom.
+username'))&lt;/from&gt;
+</pre>
+<p>When an NM property is used in a condition, code similar to the following code is generated:
+</p>
+<pre>
+&lt;condition&gt;sxnmp:getVariableNMProperty('inputVar', 'my.nmProperty.boolean') &lt;/condition&gt;
+</pre>
+<br />
+<div class="center">
+<a class="wikipage" href="Wikiad48.html?page=UsingNormalizedMessageProperties">Top</a></div>
+<h3 id="section-UsingNormalizedMessageProperties-GeneralNormalizedMessageProperties">General Normalized Message Properties</h3>
+Normalized Message properties are either <b>General</b>, available to all participating JBI components, or <b>protocol/binding specific</b>, used by a particular binding component. The following General NM properties are available to all binding components.Table&nbsp;1 General Normalized Message Properties
+<table class="wikitable" border="1"><tr class="odd"><th>Property Name </th><th>Type </th><th>Description and Use </th><th /></tr>
+<tr><td>org.glassfish.openesb.messaging.<b>groupid</b> </td><td>java.lang.String </td><td>Uniquely identifies a message with the group to which a message belongs. For example, it applies the RM sequence group number for SOAP messages, or a time stamped file name (where the file record message comes from). <br /> <br />This property is optional.  </td><td /></tr>
+<tr class="odd"><td>org.glassfish.openesb.messaging.<b>messageid</b> </td><td>java.lang.String </td><td>Uniquely identifies a message. For batch processing this might be a record number (for example, a particular record in a file), or a GUID.<br /> <br />This property is mandatory.  </td><td /></tr>
+<tr><td>org.glassfish.openesb.messaging.<b>lastrecord</b> </td><td>java.lang.String </td><td>The value is a string representation of boolean ("true" or "false"). This property can be used to signal the last record in a group, e.g. the last record in a RM sequence for SOAP messages, or the last record in a file when multiple record processing is turned on for File BC.<br /> <br />This property is optional. </td><td /></tr>
+<tr class="odd"><td>org.glassfish.openesb.exchange.<b>endpointname</b> </td><td>java.lang.String </td><td>The value a string representation of the endpoint name set on the exchange. This represents the endpoint name of the "owner" of the message, and could be made available by JBI runtime. </td><td /></tr>
+</table><p />
+<h3 id="section-UsingNormalizedMessageProperties-BindingComponentSpecificNormalizedMessageProperties">Binding Component Specific Normalized Message Properties</h3>
+Binding components each have their own protocol specific Normalized Message properties. These include inbound and outbound specific, as well as general NM properties for each binding component. 
+<p>For a list of binding component specific NM properties, refer to the following:
+</p>
+<ul><li> <a class="external" href="http://wiki.open-esb.java.net/Wiki.jsp?page=FileBCNMProperties">http://wiki.open-esb.java.net/Wiki.jsp?page=FileBCNMProperties</a><img class="outlink" src="http://wiki.open-esb.java.net/images/out.png" alt="" /> 
+</li><li> <a class="external" href="http://wiki.open-esb.java.net/Wiki.jsp?page=HTTPBCNMProperty">http://wiki.open-esb.java.net/Wiki.jsp?page=HTTPBCNMProperty</a><img class="outlink" src="http://wiki.open-esb.java.net/images/out.png" alt="" /> 
+</li><li> <a class="external" href="http://wiki.open-esb.java.net/Wiki.jsp?page=JMSBCNMProperties">http://wiki.open-esb.java.net/Wiki.jsp?page=JMSBCNMProperties</a><img class="outlink" src="http://wiki.open-esb.java.net/images/out.png" alt="" />
+</li></ul><br />
+<div class="center">
+<a class="wikipage" href="Wikiad48.html?page=UsingNormalizedMessageProperties">Top</a></div>
+<br />
+<p><a class="wikipage" href="Wiki39db.html?page=UsingTheBPELMapper">Previous</a><br />
+<a class="wikipage" href="Wikie39c.html?page=UsingHandlers">Next</a>
+</p>
+
+
+
+  </div>
+
+  
+  
+  <div id="attachments" style="display:none;" >
+
+    
+
+
+
+
+
+
+
+<div id="attachmentViewer">
+  <div class="list">
+    <h3>List of attachments &nbsp;&nbsp;&nbsp;&nbsp;
+    </h3>
+      <form action='#'>
+        <select name="attachSelect" id="attachSelect" size="16" 
+            onchange="Attach.showImage(this[this.selectedIndex], '%A4', 300, 300 )" >
+        <option value="Attachment Info" selected="selected" >--- Select Image to preview ---</option>
+        
+          
+          <option value="ep-bpel-se-nmprop-shortcut.gif%A4http://wiki.open-esb.java.net/attach/UsingNormalizedMessageProperties/ep-bpel-se-nmprop-shortcut.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=UsingNormalizedMessageProperties/ep-bpel-se-nmprop-shortcut.gif%A410937 bytes%A41" >
+            ep-bpel-se-nmprop-shortcut.gif (10937 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="ep-bpel-se-nmprops-add.gif%A4http://wiki.open-esb.java.net/attach/UsingNormalizedMessageProperties/ep-bpel-se-nmprops-add.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=UsingNormalizedMessageProperties/ep-bpel-se-nmprops-add.gif%A466950 bytes%A41" >
+            ep-bpel-se-nmprops-add.gif (66950 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="ep-bpel-se-nmprops-definition.gif%A4http://wiki.open-esb.java.net/attach/UsingNormalizedMessageProperties/ep-bpel-se-nmprops-definition.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=UsingNormalizedMessageProperties/ep-bpel-se-nmprops-definition.gif%A481420 bytes%A41" >
+            ep-bpel-se-nmprops-definition.gif (81420 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="ep-bpel-se-nmprops.gif%A4http://wiki.open-esb.java.net/attach/UsingNormalizedMessageProperties/ep-bpel-se-nmprops.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=UsingNormalizedMessageProperties/ep-bpel-se-nmprops.gif%A440099 bytes%A41" >
+            ep-bpel-se-nmprops.gif (40099 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+      </select>
+    </form>
+    <div class="small">&nbsp;</div>
+  </div>  
+
+  <div class="preview">
+    <h3>Image preview</h3>
+    <div id="attachImg" title="No Image Selected">No Image Selected</div>
+    <a href="#" class="small" style="display:none;" id="attachInfo">More info, including version history</a>
+  </div>
+
+  <div style="clear:both; height:0px;" > </div>
+
+</div>
+
+
+  </div>
+
+  
+  <div id="pageinfo" style="display:none;" >
+
+    
+
+
+
+
+
+
+
+
+  <p>
+  This page (revision-13) was last changed on 
+  <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingNormalizedMessageProperties&amp;r1=13&amp;r2=12"
+    title="Show changes of last page update" >
+    
+    09-Jun-09 10:36 AM, -0700
+  </a> by rjacobus.
+  <a href="http://wiki.open-esb.java.net/rss.jsp?page=UsingNormalizedMessageProperties&amp;mode=wiki"
+    title="RSS page feed for Using Normalized Message Properties" ><img src="images/xml.png" border="0" alt="[RSS]"/></a>
+    
+    <br />
+    This page was created on 
+    <a  href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingNormalizedMessageProperties&amp;version=1">28-Oct-08 09:31 AM, -0700</a> by rjacobus.
+    
+  </p>    
+
+  
+
+  
+   
+  
+  <p><a href="http://wiki.open-esb.java.net/PageInfo.jsp?page=UsingNormalizedMessageProperties" id="moreinfo" >More info...</a></p>
+  
+  
+
+  <div class="tabmenu ">
+  
+  
+  
+
+  
+
+  
+
+  
+  
+  
+  
+  <span><a class="activetab" id="menu-versionHistory" onclick="TabbedSection.onclick('versionHistory')" >Version History</a></span>
+  
+
+  <span><a id="menu-incomingLinks" onclick="TabbedSection.onclick('incomingLinks')" >Incoming Links</a></span>
+
+  <span><a id="menu-outgoingLinks" onclick="TabbedSection.onclick('outgoingLinks')" >Outgoing Links</a></span>
+
+  
+  
+  </div>
+<div class="tabs ">
+  
+  <div id="versionHistory" >
+
+
+    
+    <div class="zebra-table ">
+    <table class="wikitable" >
+      <tr>
+        <th>Version</th>                        
+        <th>Date</th>
+        <th>Author</th>
+        <th>Size</th>
+        <th>Changes ...</th>
+        
+      </tr>
+
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingNormalizedMessageProperties&amp;version=13" accesskey="" title="">
+            13
+          </a>
+        </td>
+
+        <td>
+          09-Jun-09 10:36 AM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>13128</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingNormalizedMessageProperties&amp;r1=13&amp;r2=12">to previous</a>
+            
+          
+
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingNormalizedMessageProperties&amp;version=12" accesskey="" title="">
+            12
+          </a>
+        </td>
+
+        <td>
+          21-May-09 09:38 AM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>13027</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingNormalizedMessageProperties&amp;r1=12&amp;r2=11">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingNormalizedMessageProperties&amp;r1=13&amp;r2=12">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingNormalizedMessageProperties&amp;version=11" accesskey="" title="">
+            11
+          </a>
+        </td>
+
+        <td>
+          05-Dec-08 11:27 AM, -0800
+        </td>
+        <td>SWeber</td>
+        <td>13024</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingNormalizedMessageProperties&amp;r1=11&amp;r2=10">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingNormalizedMessageProperties&amp;r1=13&amp;r2=11">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingNormalizedMessageProperties&amp;version=10" accesskey="" title="">
+            10
+          </a>
+        </td>
+
+        <td>
+          10-Nov-08 12:59 PM, -0800
+        </td>
+        <td>rjacobus</td>
+        <td>13036</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingNormalizedMessageProperties&amp;r1=10&amp;r2=9">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingNormalizedMessageProperties&amp;r1=13&amp;r2=10">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingNormalizedMessageProperties&amp;version=9" accesskey="" title="">
+            9
+          </a>
+        </td>
+
+        <td>
+          29-Oct-08 11:05 AM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>13064</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingNormalizedMessageProperties&amp;r1=9&amp;r2=8">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingNormalizedMessageProperties&amp;r1=13&amp;r2=9">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingNormalizedMessageProperties&amp;version=8" accesskey="" title="">
+            8
+          </a>
+        </td>
+
+        <td>
+          28-Oct-08 15:30 PM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>12651</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingNormalizedMessageProperties&amp;r1=8&amp;r2=7">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingNormalizedMessageProperties&amp;r1=13&amp;r2=8">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingNormalizedMessageProperties&amp;version=7" accesskey="" title="">
+            7
+          </a>
+        </td>
+
+        <td>
+          28-Oct-08 15:17 PM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>12651</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingNormalizedMessageProperties&amp;r1=7&amp;r2=6">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingNormalizedMessageProperties&amp;r1=13&amp;r2=7">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingNormalizedMessageProperties&amp;version=6" accesskey="" title="">
+            6
+          </a>
+        </td>
+
+        <td>
+          28-Oct-08 14:47 PM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>12665</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingNormalizedMessageProperties&amp;r1=6&amp;r2=5">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingNormalizedMessageProperties&amp;r1=13&amp;r2=6">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingNormalizedMessageProperties&amp;version=5" accesskey="" title="">
+            5
+          </a>
+        </td>
+
+        <td>
+          28-Oct-08 14:39 PM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>12398</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingNormalizedMessageProperties&amp;r1=5&amp;r2=4">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingNormalizedMessageProperties&amp;r1=13&amp;r2=5">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingNormalizedMessageProperties&amp;version=4" accesskey="" title="">
+            4
+          </a>
+        </td>
+
+        <td>
+          28-Oct-08 14:31 PM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>12369</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingNormalizedMessageProperties&amp;r1=4&amp;r2=3">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingNormalizedMessageProperties&amp;r1=13&amp;r2=4">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingNormalizedMessageProperties&amp;version=3" accesskey="" title="">
+            3
+          </a>
+        </td>
+
+        <td>
+          28-Oct-08 10:32 AM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>12285</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingNormalizedMessageProperties&amp;r1=3&amp;r2=2">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingNormalizedMessageProperties&amp;r1=13&amp;r2=3">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingNormalizedMessageProperties&amp;version=2" accesskey="" title="">
+            2
+          </a>
+        </td>
+
+        <td>
+          28-Oct-08 10:15 AM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>12059</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingNormalizedMessageProperties&amp;r1=2&amp;r2=1">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingNormalizedMessageProperties&amp;r1=13&amp;r2=2">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingNormalizedMessageProperties&amp;version=1" accesskey="" title="">
+            1
+          </a>
+        </td>
+
+        <td>
+          28-Oct-08 09:31 AM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>11675</td>
+
+        <td>
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingNormalizedMessageProperties&amp;r1=13&amp;r2=1">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+
+    </table>  
+    </div>
+    
+
+  </div>
+
+  
+
+  <div id="incomingLinks" style="display:none;" >
+
+    <a class="wikipage" href="Wikiad48.html?page=UsingNormalizedMessageProperties" accesskey="" title="">Using Normalized Message Properties</a>
+    <ul><li><a class="wikipage" href="Wiki21f2.html?page=BPELBluePrints">BPEL Blue Prints</a>
+</li><li><a class="wikipage" href="Wiki3879.html?page=BPELDesignerAndServiceEngineFeatures">BPEL Designer And Service Engine Features</a>
+</li><li><a class="wikipage" href="Wiki5e52.html?page=BPELDesignerAndServiceEngineOverview">BPEL Designer And Service Engine Overview</a>
+</li><li><a class="wikipage" href="Wiki5233.html?page=BPELProcessLoggingAndAlerting">BPEL Process Logging And Alerting</a>
+</li><li><a class="wikipage" href="Wikicae3.html?page=BPELServiceEngineDeploymentArtifacts">BPEL Service Engine Deployment Artifacts</a>
+</li><li><a class="wikipage" href="Wiki7030.html?page=BPELServiceEngineTaskHowTos">BPEL Service Engine Task How Tos</a>
+</li><li><a class="wikipage" href="Wiki73af.html?page=ConfiguringClusteringAndFailoverForBPEL">Configuring Clustering And Failover For BPEL</a>
+</li><li><a class="wikipage" href="Wikid4c2.html?page=ConfiguringFailoverForBPEL">Configuring Failover For BPEL</a>
+</li><li><a class="wikipage" href="Wiki0931.html?page=ConfiguringPersistenceAndRecoveryForBPEL">Configuring Persistence And Recovery For BPEL</a>
+</li><li><a class="wikipage" href="Wiki2f9d.html?page=ConfiguringTheBPELServiceEngineRuntimeProperties">Configuring The BPEL Service Engine Runtime Properties</a>
+</li><li><a class="wikipage" href="Wiki77bf.html?page=ConfiguringTheQualityOfServiceProperties">Configuring The Quality Of Service Properties</a>
+</li><li><a class="wikipage" href="Wikia9da.html?page=CreatingTheBPELModuleProject">Creating The BPEL Module Project</a>
+</li><li><a class="wikipage" href="Wiki17ca.html?page=DevelopingTheBPELProcessUsingTheBPELDiagram">Developing The BPEL Process Using The BPEL Diagram</a>
+</li><li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=MQBC_IN115305">MQBC_IN 115305</a>
+</li><li><a class="wikipage" href="Wiki434d.html?page=MonitoringTheBPELServiceEngine">Monitoring The BPEL Service Engine</a>
+</li><li><a class="wikipage" href="Wiki0ddb.html?page=NavigatingTheBPELDesigner">Navigating The BPEL Designer</a>
+</li><li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=SchedulerBindingComponentProperties">Scheduler Binding Component Properties</a>
+</li><li><a class="wikipage" href="Wiki1302.html?page=TestingAndDebuggingBPELProcesses">Testing And Debugging BPEL Processes</a>
+</li><li><a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">The BPEL Designer Palette Elements</a>
+</li><li><a class="wikipage" href="Wikif987.html?page=TroubleshootingTheBPELServiceEngine">Troubleshooting The BPEL Service Engine</a>
+</li><li><a class="wikipage" href="Wikifbc9.html?page=UnderstandingTheBPELModuleProject">Understanding The BPEL Module Project</a>
+</li><li><a class="wikipage" href="Wiki20e8.html?page=UsingBPELDesignerServiceEngine">Using BPEL Designer Service Engine</a>
+</li><li><a class="wikipage" href="Wikia3b6.html?page=UsingCorrelation">Using Correlation</a>
+</li><li><a class="wikipage" href="Wikife94.html?page=UsingDynamicPartnerLinksAndDynamicAddressing">Using Dynamic Partner Links And Dynamic Addressing</a>
+</li><li><a class="wikipage" href="Wikie39c.html?page=UsingHandlers">Using Handlers</a>
+</li><li><a class="wikipage" href="Wiki39db.html?page=UsingTheBPELMapper">Using The BPEL Mapper</a>
+</li><li><a class="wikipage" href="Wiki1f81.html?page=ValidatingTheBPELProcess">Validating The BPEL Process</a>
+</li></ul>
+  </div>
+
+
+  <div id="outgoingLinks" style="display:none;" >
+
+    
+      <div class="ReferredPagesPlugin">
+<a class="wikipage" href="Wikiad48.html?page=UsingNormalizedMessageProperties" title="ReferredPagesPlugin: depth[1] include[.*] exclude[^$] format[compact]">UsingNormalizedMessageProperties</a>
+<ul>
+<li><a class="wikipage" href="Wiki21f2.html?page=BPELBluePrints">BPELBluePrints</a></li>
+<li><a class="wikipage" href="Wiki3879.html?page=BPELDesignerAndServiceEngineFeatures">BPELDesignerAndServiceEngineFeatures</a></li>
+<li><a class="wikipage" href="Wiki5e52.html?page=BPELDesignerAndServiceEngineOverview">BPELDesignerAndServiceEngineOverview</a></li>
+<li><a class="wikipage" href="Wiki5233.html?page=BPELProcessLoggingAndAlerting">BPELProcessLoggingAndAlerting</a></li>
+<li><a class="wikipage" href="Wikicae3.html?page=BPELServiceEngineDeploymentArtifacts">BPELServiceEngineDeploymentArtifacts</a></li>
+<li><a class="wikipage" href="Wiki7030.html?page=BPELServiceEngineTaskHowTos">BPELServiceEngineTaskHowTos</a></li>
+<li><a class="wikipage" href="Wikid4c2.html?page=ConfiguringFailoverForBPEL">ConfiguringFailoverForBPEL</a></li>
+<li><a class="wikipage" href="Wiki0931.html?page=ConfiguringPersistenceAndRecoveryForBPEL">ConfiguringPersistenceAndRecoveryForBPEL</a></li>
+<li><a class="wikipage" href="Wiki2f9d.html?page=ConfiguringTheBPELServiceEngineRuntimeProperties">ConfiguringTheBPELServiceEngineRuntimeProperties</a></li>
+<li><a class="wikipage" href="Wiki77bf.html?page=ConfiguringTheQualityOfServiceProperties">ConfiguringTheQualityOfServiceProperties</a></li>
+<li><a class="wikipage" href="Wikia9da.html?page=CreatingTheBPELModuleProject">CreatingTheBPELModuleProject</a></li>
+<li><a class="wikipage" href="Wiki17ca.html?page=DevelopingTheBPELProcessUsingTheBPELDiagram">DevelopingTheBPELProcessUsingTheBPELDiagram</a></li>
+<li><a class="wikipage" href="Wiki434d.html?page=MonitoringTheBPELServiceEngine">MonitoringTheBPELServiceEngine</a></li>
+<li><a class="wikipage" href="Wiki0ddb.html?page=NavigatingTheBPELDesigner">NavigatingTheBPELDesigner</a></li>
+<li><a class="wikipage" href="Wiki1302.html?page=TestingAndDebuggingBPELProcesses">TestingAndDebuggingBPELProcesses</a></li>
+<li><a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">TheBPELDesignerPaletteElements</a></li>
+<li><a class="wikipage" href="Wikif987.html?page=TroubleshootingTheBPELServiceEngine">TroubleshootingTheBPELServiceEngine</a></li>
+<li><a class="wikipage" href="Wikifbc9.html?page=UnderstandingTheBPELModuleProject">UnderstandingTheBPELModuleProject</a></li>
+<li><a class="wikipage" href="Wiki20e8.html?page=UsingBPELDesignerServiceEngine">UsingBPELDesignerServiceEngine</a></li>
+<li><a class="wikipage" href="Wikia3b6.html?page=UsingCorrelation">UsingCorrelation</a></li>
+<li><a class="wikipage" href="Wikife94.html?page=UsingDynamicPartnerLinksAndDynamicAddressing">UsingDynamicPartnerLinksAndDynamicAddressing</a></li>
+<li><a class="wikipage" href="Wikie39c.html?page=UsingHandlers">UsingHandlers</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingNormalizedMessageProperties/ep-bpel-se-nmprop-shortcut.gif">UsingNormalizedMessageProperties/ep-bpel-se-nmprop-shortcut.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingNormalizedMessageProperties/ep-bpel-se-nmprops-add.gif">UsingNormalizedMessageProperties/ep-bpel-se-nmprops-add.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingNormalizedMessageProperties/ep-bpel-se-nmprops-definition.gif">UsingNormalizedMessageProperties/ep-bpel-se-nmprops-definition.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingNormalizedMessageProperties/ep-bpel-se-nmprops.gif">UsingNormalizedMessageProperties/ep-bpel-se-nmprops.gif</a></li>
+<li><a class="wikipage" href="Wiki39db.html?page=UsingTheBPELMapper">UsingTheBPELMapper</a></li>
+<li><a class="wikipage" href="Wiki1f81.html?page=ValidatingTheBPELProcess">ValidatingTheBPELProcess</a></li>
+</ul>
+</div>
+
+    
+    
+  </div>
+
+
+  
+  
+  <div style="clear:both; height:0px;" > </div>
+</div>
+ 
+
+
+
+
+
+
+
+
+
+  </div>
+
+  
+<div style="clear:both; height:0px;" > </div>
+</div>
+
+</div> 
+
+
+  
+
+
+
+<div id="favorites">
+
+
+<div class="username">G'day,
+  
+    <a title="Hi, Anonymous Guest"  href="Wiki48c3.html?page=Login">Anonymous Guest</a>
+  
+  
+  
+  
+</div>  
+
+
+
+
+
+
+
+
+<p />
+
+
+
+  
+<p />
+<p />
+
+
+<div class="wikiversion">JSPWiki v2.4.100</div>
+
+<div class="rssfeed"><a href="rss.rdf"><img src="images/xml.png" alt="[RSS]" border="0" title="Aggregate the RSS feed of the entire wiki"/></a></div>
+
+<div style="clear:both; height:0px;" > </div>
+
+</div> 
+
+  
+
+
+
+
+
+<div id='actionsBottom' class="pageactions"> 
+
+  <span class='quicklinks quick2Top'>
+    <a href="#wikibody" title='Go to Top' >&laquo;</a>
+  </span>
+
+  <span class="actionHome">
+    <a href="Wikib2ab.html?page=Main"
+       title="Go to home page Main ">Home</a>
+  </span>
+  
+  
+    
+
+    
+  
+  
+  <span class="actionIndex">
+     <a href="Wiki5f9e.html?page=PageIndex"
+       title="Alphabetically sorted list of pages [ x ]">Index</a>
+  </span>
+  
+  <span class="actionRecentChanges">
+     <a href="Wiki5fc7.html?page=RecentChanges"
+        title="Pages sorted by modification date [ u ]">Changes</a>
+  </span>
+
+  
+    
+      <span class="actionPrefs">
+        <a href="Wiki7eba.html?page=UserPreferences"
+           title="Set User Preferences" >Prefs</a>
+      </span>
+    
+  
+
+  
+    <div class="pageinfo">
+      
+        This page (revision-13) was last changed on 
+        <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingNormalizedMessageProperties&amp;r1=13&amp;r2=12"
+          title="Show changes of last page update" >  
+        
+        09-Jun-09 10:36 AM, -0700</a>
+      
+      
+      by rjacobus
+
+      
+    </div>  
+  
+
+  <div style="clear:both; height:0;"> </div> 
+</div>
+
+  
+ 
+  
+
+  
+
+
+<div id="footer">
+
+<table><tr><td>
+  <div class="wikiversion">
+    JSPWiki v2.4.100                       
+  </div>
+</td>
+<td>
+<br>Copyright &copy; 2011, Oracle and/or its affiliates. All rights reserved. Oracle and Java are registered trademarks of Oracle and/or its affiliates. Other names may be trademarks of their respective owners. <a href="http://www.oracle.com/"><img src="images/ora_logo_small.gif" /> </a>
+  <div class="rssfeed">
+    <a href="rss.rdf"><img src="images/xml.png" alt="[RSS]" border="0" title="Aggregate the RSS feed"/></a>
+  </div>
+</td></tr></table>
+  <div style="clear:both; height:0px;" > </div>
+
+</div>
+  
+
+  </div>
+  <div style="clear:both; height:0;" > </div>
+
+
+
+<!-- Page counters -->
+<script type="text/javascript" language="javascript">
+var sc_project=1965314; 
+var sc_invisible=1; 
+var sc_partition=17; 
+var sc_security="c5f5efea"; 
+</script>
+<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script>
+
+
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+<script type="text/javascript">
+_uacct = "UA-993823-3";
+urchinTracker();
+</script>
+</body>
+
+<!-- Mirrored from wiki.open-esb.java.net/Wiki.jsp?page=UsingNormalizedMessageProperties by HTTrack Website Copier/3.x [XR&CO'2010], Thu, 08 Jul 2010 02:16:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+</html>
+
+

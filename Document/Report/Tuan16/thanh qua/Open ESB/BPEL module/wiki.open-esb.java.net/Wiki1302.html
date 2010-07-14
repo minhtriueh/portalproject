@@ -1,0 +1,1417 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+
+
+<!-- Mirrored from wiki.open-esb.java.net/Wiki.jsp?page=TestingAndDebuggingBPELProcesses by HTTrack Website Copier/3.x [XR&CO'2010], Thu, 08 Jul 2010 02:16:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head>
+
+  <title>Testing And Debugging BPEL Processes - OpenESB: the Open Source ESB for SOA & Integration</title>
+  
+
+
+
+
+
+<link rel="stylesheet" type="text/css" media="screen, projection" 
+     href="templates/brushed/jspwiki.css" />
+
+<!-- browser specific cssinclude not required in brushed template
+<script type="text/javascript"
+         src="/templates/brushed/cssinclude.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+  Wiki.loadBrowserSpecificCSS("brushed");
+//]]>
+</script>
+-->
+
+
+
+
+<link rel="stylesheet" type="text/css" 
+     href="templates/brushed/skins/Smart/skin.css" />
+<!-- INCLUDERESOURCES (stylesheet) -->
+
+
+
+<!--[if IE]>
+<style type="text/css" media="screen">
+img, a, div { behavior: url("templates/brushed/scripts/iepngfix.htc"); }
+</style>
+<![endif]-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="search" 
+     href="Wiki702d.html?page=FindPage"
+    title="Search Open ESB Wiki" />
+<link rel="help"   
+     href="Wikia3b7.html?page=TextFormattingRules" 
+    title="Help" />
+<link rel="start"  
+     href="Wikib2ab.html?page=Main"                
+    title="Front page" />
+<!--<link rel="stylesheet" type="text/css" media="print"
+     href="/templates/brushed/jspwiki_print.css" />
+<link rel="alternate stylesheet" type="text/css"
+     href="/templates/brushed/jspwiki_print.css" 
+    title="Print friendly" />-->
+<link rel="alternate stylesheet" type="text/css" 
+     href="templates/brushed/jspwiki.css" 
+    title="Standard" />
+<link rel="icon" type="image/png" href="images/openesb16x16.png" />
+
+<link rel="template" href="http://wiki.open-esb.java.net/templates/brushed" id="template-dir"/>
+<link rel="alternate" type="application/rss+xml" title="RSS wiki feed for the entire site." href="rss.rdf" />
+<link rel="alternate" type="application/rss+xml" title="RSS wiki feed for page Open ESB Wiki: TestingAndDebuggingBPELProcesses." href="http://wiki.open-esb.java.net/rss.jsp?page=TestingAndDebuggingBPELProcesses&amp;mode=wiki" />
+
+
+
+<script type="text/javascript"
+         src="templates/brushed/scripts/prototype.js" ></script>
+<script type="text/javascript" 
+         src="templates/brushed/scripts/brushed.js" ></script>
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+  Wiki.setBaseURL ( "index.html" );
+  Wiki.setPageName( "TestingAndDebuggingBPELProcesses" ); /* pagename without blanks */
+  Wiki.setUserName( "113.170.138.21" );
+
+  Wiki.setDELIM              ( "¤" );
+  Wiki.setPrefDateFormat     ( "dd-MMM-yy HH:mm a, Z" );
+  Wiki.setPrefSkinName       ( "Smart" );
+  Wiki.setPrefTimeZone       ( "" );
+  Wiki.setPrefEditAreaHeight ( "24" );
+  Wiki.setPrefShowQuickLinks ( "no" );
+  Wiki.setPrefSowCalendar    ( "no" );
+//]]>
+</script>
+<script type="text/javascript" 
+         src="templates/brushed/skins/Smart/skin.js"></script>
+
+<!-- INCLUDERESOURCES (script) -->
+
+
+  
+</head>
+
+<body class="view" id="gradient">
+<!--
+<p id="underline" class="barMargin"></p>
+-->
+<div id="wikibody" >
+  
+
+
+
+
+<div id="header">
+<!--
+  <div class="applicationlogo"> 
+    <a href="https://open-esb.dev.java.net/public/downloads.html" title="OpenESB Downloads"></a>
+  </div>
+-->  
+
+<table width="100%" id="headertable"><tr>
+  <td><a href="https://open-esb.dev.java.net/" style="border: none;"><img style="border: none;" height="60" width="304" alt="Open ESB: the Open Enterprise Service Bus... Open Standards + Open Source" src="images/ESBLogoTag-304x60C.jpg"/></a></td>
+
+
+  <td id="rhstop">
+  
+
+<div id="rhsuser" class="rhsusername">
+  Not logged in | 
+    <a title="Hi, Anonymous Guest"  href="Wiki48c3.html?page=Login">Login</a>
+  
+  
+
+  
+
+  
+</div>  
+  
+  
+<div id="oesearch" style="vertical-align: bottom">
+  <br/>
+  <br/>
+	<form action="https://open-esb.dev.java.net/SearchResults.html" id="cse-search-box"> 
+	  <div>
+	    <input type="hidden" name="cx" value="013607241216432041017:tcd_nlc0tem" />
+	    <input type="hidden" name="cof" value="FORID:11" />
+	    <input type="hidden" name="ie" value="UTF-8" />
+	    <input type="text" name="q" size="20" />
+	    <input type="submit" name="sa" value="Search" />
+	  </div>
+	</form>
+</div>
+  
+  
+  </td>
+</tr></table>
+
+<!-- ==================== Menu Structure ==================== -->
+<script type="text/javascript" src="static/menu.js" ></script>
+<div id="z_menu_02"><table width="100%"><tr><td>
+	<div id="z_menu_01">
+		<script>writeOEMenu();</script>
+	</div>
+</td></tr></table></div>
+<!-- ==================== End menu ==================== -->
+
+
+
+
+
+
+
+
+
+
+  <div class="companylogo">
+  </div>
+  
+  
+<!--
+<ul class="iconlist">
+<li class="documentation"><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=Documentation"><img src="/openesbwiki/templates/brushed/skins/Smart/images/documentation.png" width="81" height="65"/></a></li>
+<li class="link"><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsefulLinks"><img src="/openesbwiki/templates/brushed/skins/Smart/images/links.png" width="64" height="65"/></a></li>
+<li class="participate"><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=GetInvolved"><img src="/openesbwiki/templates/brushed/skins/Smart/images/participate.png" width="61" height="68"/></a></li>
+<li class="downloads"><a href="https://open-esb.dev.java.net/Downloads.html"><img src="/openesbwiki/templates/brushed/skins/Smart/images/downloads.png" width="61" height="65"/></a></li>
+</ul>
+<div style="clear: left;"></div>
+ --> 
+
+  <table width="100%">
+  <tr>
+  <td><div class="pagename2">Testing And Debugging BPEL Processes</div></td>
+  </tr>
+  </table>
+  
+
+
+  
+  <div class="searchbox">
+
+
+<form action="http://wiki.open-esb.java.net/Search.jsp"
+    onsubmit="SearchBox.submit( this.query.value )"
+ onmouseover="Element.show('searchboxMenu');"
+  onmouseout= "Element.hide('searchboxMenu');"
+        name="searchForm" id="searchForm" 
+        accept-charset="UTF-8">
+  <div>
+  
+  <input onblur="if( this.value == '' ) { this.value = 'Search'}; " 
+        onfocus="if( this.value == 'Search' ) { this.value = ''}; "
+           type="text" value="Wiki search" name="query" id="query" size="24" 
+      accesskey="f"></input>
+  </div>  
+  <div id="searchboxMenu" style='display:none;'>
+    <div>
+      <a href="javascript://nop/" 
+         onclick="SearchBox.navigation( 'Wiki195c.html?page=__PAGEHERE__','TestingAndDebuggingBPELProcesses' );return false;"
+         title="View the selected page">view</a> 
+      | 
+      <a href="javascript://nop/" 
+         onclick="SearchBox.navigation( 'http://wiki.open-esb.java.net/Edit.jsp?page=__PAGEHERE__','TestingAndDebuggingBPELProcesses' );return false;"
+         title="Edit the selected page">edit</a> 
+      | 
+      <a href="javascript://nop/" 
+         onclick="SearchBox.clone( 'http://wiki.open-esb.java.net/Edit.jsp?page=__PAGEHERE__','TestingAndDebuggingBPELProcesses' );return false;"
+         title="Clone this page">clone</a> 
+      |
+      <a href="javascript://nop/" 
+         onclick="SearchBox.navigation( 'Search136d.html?query=__PAGEHERE__','TestingAndDebuggingBPELProcesses' );return false;"
+         title="Advanced Search">find</a> 
+      [ f ]
+    </div>
+    <div id="searchResult" > </div>
+    <div id="recentSearches" > </div>
+  </div>
+
+</form>
+<script type="text/javascript">
+//<![CDATA[    
+    function updateSearchResult( )
+    {  
+      if( $F('query') == 'Search' ) return;
+      new Ajax.Updater(
+        'searchResult', 
+        'templates/brushed/FindAjax.html',
+        { 
+          asynchronous: true,
+          parameters: Form.serialize( 'searchForm' ) + "&compact=true"
+        } ); 
+    } ;
+    new Form.Element.Observer( "query", 1, updateSearchResult ); 
+//]]>
+</script>
+    
+   </div>
+
+  <div class="breadcrumbs">Your trail: <a class="wikipage" href="Wiki17ca.html?page=DevelopingTheBPELProcessUsingTheBPELDiagram">DevelopingTheBPELProcessUsingTheBPELDiagram</a> &gt; <a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">TheBPELDesignerPaletteElements</a> &gt; <a class="wikipage" href="Wiki39db.html?page=UsingTheBPELMapper">UsingTheBPELMapper</a> &gt; <a class="wikipage" href="Wikiad48.html?page=UsingNormalizedMessageProperties">UsingNormalizedMessageProperties</a> &gt; <a class="wikipage" href="Wikie39c.html?page=UsingHandlers">UsingHandlers</a> &gt; <a class="wikipage" href="Wikia3b6.html?page=UsingCorrelation">UsingCorrelation</a> &gt; <a class="wikipage" href="Wiki1f81.html?page=ValidatingTheBPELProcess">ValidatingTheBPELProcess</a> &gt; <a class="wikipage" href="Wiki5233.html?page=BPELProcessLoggingAndAlerting">BPELProcessLoggingAndAlerting</a> &gt; <a class="wikipage" href="Wiki2f9d.html?page=ConfiguringTheBPELServiceEngineRuntimeProperties">ConfiguringTheBPELServiceEngineRuntimeProperties</a> &gt; <a class="wikipage" href="Wikicae3.html?page=BPELServiceEngineDeploymentArtifacts">BPELServiceEngineDeploymentArtifacts</a></div>
+
+  <div style="clear:both; height:0;" > </div>
+
+</div>
+
+
+
+
+  
+
+
+
+
+
+<div id="actionsTop" class="pageactions"> 
+<!--
+  <span class="actionHome">
+    <a href="http://wiki.open-esb.java.net/Wiki.jsp?page=Main"
+       title="Go to home page Main ">Home</a>
+  </span>
+-->  
+  
+    
+    
+    
+<!--
+    
+  -->
+  
+  
+  <span class="actionIndex">
+     <a href="Wiki5f9e.html?page=PageIndex"
+       title="Alphabetically sorted list of pages [ x ]" accesskey="x">Index</a>
+  </span>
+  
+  <span class="actionRecentChanges">
+     <a href="Wiki5fc7.html?page=RecentChanges"
+        title="Pages sorted by modification date [ u ]" accesskey="u">Changes</a>
+  </span>
+
+  
+
+<!--
+  <span class="quicklinks quick2Bottom">
+    <a href="#footer" title="Go to Bottom" >&raquo;</a>
+  </span>
+-->
+  <div style="clear:both; height:0;"> </div> 
+</div>
+
+
+
+
+
+  <div id="page">
+
+
+
+
+
+<div class="tabmenu ">
+  
+  
+  
+  
+  
+  
+  
+
+  <span><a class="activetab" id="menu-pagecontent" onclick="TabbedSection.onclick('pagecontent')" accesskey="v" ><u>V</u>iew</a></span>
+  
+  
+  <span><a id="menu-attachments" onclick="TabbedSection.onclick('attachments')" accesskey="a" ><u>A</u>ttach (12)</a></span>
+  
+  <span><a id="menu-pageinfo" onclick="TabbedSection.onclick('pageinfo')" accesskey="i" ><u>I</u>nfo</a></span>
+  
+</div>
+<div class="tabs ">
+  <div id="pagecontent" >
+
+    
+
+
+
+
+
+
+
+<h3 id="section-TestingAndDebuggingBPELProcesses-UsingTheBPELDesignerAndServiceEngine">Using the BPEL Designer and Service Engine </h3>
+<p><b>Contents</b>
+</p>
+<ul><li> <a class="wikipage" href="Wiki20e8.html?page=UsingBPELDesignerServiceEngine">Using the BPEL Designer and Service Engine</a>
+</li><li> <a class="wikipage" href="Wiki5e52.html?page=BPELDesignerAndServiceEngineOverview">Overview</a>
+</li><li> <a class="wikipage" href="Wiki3879.html?page=BPELDesignerAndServiceEngineFeatures">BPEL Designer and Service Engine Features</a>
+</li><li> <a class="wikipage" href="Wikifbc9.html?page=UnderstandingTheBPELModuleProject">Understanding the BPEL Module Project</a>
+</li><li> <a class="wikipage" href="Wiki0ddb.html?page=NavigatingTheBPELDesigner">Navigating the BPEL Designer</a>
+</li><li> <a class="wikipage" href="Wikia9da.html?page=CreatingTheBPELModuleProject">Creating a BPEL Module Project</a>
+</li><li> <a class="wikipage" href="Wiki17ca.html?page=DevelopingTheBPELProcessUsingTheBPELDiagram">Developing the BPEL Process Using the BPEL Diagram</a>
+</li><li> <a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">The BPEL Designer Palette Elements</a>
+</li><li> <a class="wikipage" href="Wiki39db.html?page=UsingTheBPELMapper">Using the BPEL Mapper</a>
+</li><li> <a class="wikipage" href="Wikiad48.html?page=UsingNormalizedMessageProperties">Using Normalized Message Properties</a>
+</li><li> <a class="wikipage" href="Wikie39c.html?page=UsingHandlers">Using Handlers</a>
+</li><li> <a class="wikipage" href="Wikia3b6.html?page=UsingCorrelation">Using Correlation</a>
+</li><li> <a class="wikipage" href="Wiki1f81.html?page=ValidatingTheBPELProcess">Validating a BPEL Process</a>
+</li><li> <a class="wikipage" href="Wiki5233.html?page=BPELProcessLoggingAndAlerting">BPEL Process Logging and Alerting</a>
+</li><li> <a class="wikipage" href="Wiki2f9d.html?page=ConfiguringTheBPELServiceEngineRuntimeProperties">Configuring the BPEL Service Engine Runtime Properties</a>
+</li><li> <a class="wikipage" href="Wikicae3.html?page=BPELServiceEngineDeploymentArtifacts">BPEL Service Engine Deployment Artifacts</a>
+</li><li> <span style="color:#3333ff;"><b>Testing and Debugging BPEL Processes</b></span>
+<ul><li> Testing a BPEL Process
+</li><li> Debugging BPEL Processes
+</li><li> BPEL Debugger Windows
+</li></ul></li><li> <a class="wikipage" href="Wiki434d.html?page=MonitoringTheBPELServiceEngine">Monitoring the BPEL Service Engine</a>
+</li><li> <a class="wikipage" href="Wiki77bf.html?page=ConfiguringTheQualityOfServiceProperties">Configuring Quality of Service (QOS) Properties, Throttling, and Redelivery</a>
+</li><li> <a class="wikipage" href="Wikife94.html?page=UsingDynamicPartnerLinksAndDynamicAddressing">Using Dynamic Partner Links and Dynamic Addressing</a>
+</li><li> <a class="wikipage" href="Wiki0931.html?page=ConfiguringPersistenceAndRecoveryForBPEL">Configuring Persistence and Recovery for the BPEL Service Engine</a>
+</li><li> <a class="wikipage" href="Wikid4c2.html?page=ConfiguringFailoverForBPEL">Configuring Failover for the BPEL Service Engine</a>
+</li><li> <a class="wikipage" href="Wiki21f2.html?page=BPELBluePrints">BPEL BluePrints</a>
+</li><li> <a class="wikipage" href="Wiki7030.html?page=BPELServiceEngineTaskHowTos">BPEL Service Engine Task How-tos</a>
+</li><li> <a class="wikipage" href="Wikif987.html?page=TroubleshootingTheBPELServiceEngine">Troubleshooting the BPEL Designer and Service Engine</a>
+</li></ul><br />
+<h2 id="section-TestingAndDebuggingBPELProcesses-TestingAndDebuggingBPELProcesses">Testing and Debugging BPEL Processes</h2>
+<hr />
+<p>The section describes how to test and debug BPEL processes.
+Testing a BPEL Process
+Debugging BPEL Processes
+BPEL Debugger Windows
+</p>
+<h3 id="section-TestingAndDebuggingBPELProcesses-TestingABPELProcess">Testing a BPEL Process</h3>
+<p>Testing a deployed business process application involves using test cases that act as remote partner services, which send SOAP messages to the BPEL Service Engine.
+</p>
+<p>In simple words, the interaction process is as follows: 
+</p>
+<ul><li> The BPEL Service Engine receives the SOAP message, creates an instance of the BPEL process, and starts executing the instance. A BPEL process can have many running instances. 
+</li><li> The BPEL Service Engine receives a message and, using correlation, routes it to the appropriate instance of the process. If an instance does not yet exist, a new instance is created.
+</li></ul><p>To test-run a deployed business process application, you need to configure test cases to act as remote partner services, sending SOAP messages to the BPEL Service Engine.
+<br />
+</p>
+<h4 id="section-TestingAndDebuggingBPELProcesses-CreatingAndRunningATestCase">Creating and Running a Test Case</h4>
+In order to obtain test results you must do the following:
+<ol><li> Add a test case and bind it to a BPEL operation.
+</li><li> Set the Test Properties.
+</li><li> Customize the test input file.
+</li><li> Run the test.
+</li></ol><p>All steps in this section assume the following:
+</p>
+<ul><li> You have already created a new BPEL Module project containing a WSDL file that defines the operation you want to test.
+</li><li> You have successfully completed a build of the BPEL Module project.
+</li><li> You have added your BPEL Module project to a Composite Application project as a JBI Module.
+</li></ul><br />
+<h4 id="section-TestingAndDebuggingBPELProcesses-AddingBindingATestCase">Adding/Binding a Test Case</h4>
+<p>To add a test case and bind it to a BPEL operation:
+</p>
+<ol><li> In the NetBeans IDE Projects window, expand your Composite Application project to expose the <tt>Test</tt> folder.
+</li><li> Right-click <tt>Test</tt>, and choose <tt>New Test Case</tt> from the pop-up menu.
+  This launches the New Test Case wizard.
+</li><li> In the <tt>Enter the Test Case Name</tt> step, enter a name for the test case and click <tt>Next</tt>.
+</li><li> In the <tt>Select the WSDL Document</tt> step, open the BPEL Module project,select the WSDL file containing the operation you want to test, and click <tt>Next</tt>.
+</li><li> In the <tt>Select the Operation to Test</tt> step, select the operation you want to test, and click <tt>Finish</tt>.<br />A new folder is created under the Test node in the Projects tree, containing two files: <tt>Input.xml</tt> and <tt>Output.xml</tt>.
+</li></ol><p><b>Note:</b> If you view the test case in the Files window, you see Concurrent.properties as a third file.
+<br />
+</p>
+<h4 id="section-TestingAndDebuggingBPELProcesses-SettingTheTestProperties">Setting the Test Properties</h4>
+To set the test properties:
+<ol><li> In the Projects window, under the Composite Application &rarr; Test node, right-click the node for the test case and choose <tt>Properties</tt> from the pop-up menu.
+</li><li> Set the properties of the test case as follows:
+<ul><li> <b>Description:</b> String
+</li><li> <b>Destination:</b> : URL (from the WSDL file's <tt>&lt;soap:address location="THIS"></tt> tag)<br />
+  Identifies the location of the web service to be tested.
+</li><li> <b>SoapAction:</b> (default = blank)
+</li><li> <b>Input File:</b> (read-only; generated by system)<br />
+  The name of the input file. This file contains the input data for the test case. 
+</li><li> <b>Output File:</b> (read-only; generated by system)<br />
+  The name of the output file. This file contains the output data for the test case.
+</li><li> <b>Concurrent Threads:</b> : Integer; default = 1<br />
+  Each thread can invoke the test case multiple times (see the following property). Thus, if conc=2 and inv=3, the test case will be run 6 times (two threads, each run thrice).
+</li><li> <b>Invokes Per Thread:</b> : Integer; default = 1<br />
+  The number of times each thread invokes the test case.  
+</li><li> <b>Test Timeout (sec):</b> : Integer; default = 30<br />
+  How long each thread has to finish. If it does not finish in the allotted time, then an exception is thrown. 
+</li><li> <b>Calculate Throughput:</b>  Boolean
+</li><li> <b>Comparison Type:</b> Drop-down list with the following options:
+<ul><li> <b>identical:</b> Considers the output and actual output as a stream of characters.
+</li><li> <b>binary:</b> Considers the output and actual output as a stream of bytes.
+</li><li> <b>equals:</b> Considers the output and actual output as a XML documents.
+</li></ul></li><li> <b>Feature Status:</b> drop-down list with the following options:
+<ul><li> <b>progress:</b> Marks test completion as "success", regardless of actual outcome.
+</li><li> <b>done:</b> Records actual outcome of test.
+</li></ul></li></ul></li></ol><br />
+<div class="center">
+<a class="wikipage" href="Wiki1302.html?page=TestingAndDebuggingBPELProcesses">Top</a></div>
+<h4 id="section-TestingAndDebuggingBPELProcesses-CustomizingTestInput">Customizing Test Input</h4>
+<p>To customize test input:
+</p>
+<ol><li> In the Projects window, expand the Test node and the node for a specific test case.
+</li><li> Right-click Input.xml and click Edit.
+</li><li> Modify the contents as needed. For example, wherever you see &lt;value>?string?&lt;/value> click within ?string? and replace it with a string of any length. However, within such strings, do not include the characters < (less-than sign) or & (ampersand) unless you use them with XML semantics.
+</li><li> When you are satisfied, click Save.
+</li><li> Right-click Output.xml and click Edit to examine the contents:
+<ul><li> It is empty. This is a special state that triggers a special operation when the test is run.
+</li><li> Each time the test is run, the current output is compared to the contents of Output.xml. If any differences are detected, they will be stored in the Actual_yymmddhhmmss .xml file under the test case folder. However, in the special case where Output.xml starts null, then the output is written to Output.xml.
+</li><li> In each run after the first, assuming Output.xml is no longer null, its contents are preserved. In other words, a previous output is never overwritten by new results.
+</li></ul></li></ol><br />
+<h4 id="section-TestingAndDebuggingBPELProcesses-RunningATestCase">Running a Test Case</h4>
+<p><b>Running a Single Test Case</b>
+</p>
+<p>To run a single test case, right-click the node for your specific test case, and choose <tt>Run</tt>. Check the Output window for the results.
+</p>
+<p><b>Running All the Test Cases for a Project</b>
+</p>
+<p>To run all test cases in a project, right-click your Composite Application project and choose <tt>Test</tt> (Alt+F6) from the pop-up menu. Check the Output window for the results.
+<br />
+</p>
+<h4 id="section-TestingAndDebuggingBPELProcesses-LookingAtTestCaseResults">Looking at Test Case Results</h4>
+The first time you run your test, the results correctly report that it has failed. This happens because the output produced does not match the (empty) <tt>Output.xml</tt> file, and the file&rsquo;s null content is replaced with the output of the first run. If you run the test again without changing the input, the second and subsequent runs report success, since the output matches the contents of <tt>Output.xml</tt>.
+<p>Test results are displayed in the Output window. Detailed results are also displayed in the JUnit Test Results window, which opens automatically when you run a test case.
+ 
+If you change the value in the <tt>Input.xml</tt> and re-run the test:
+</p>
+<ul><li> If the feature-status property is set to progress, then the test indicates success even though a mismatch occurred.
+</li><li> If the feature-status property is set to done, then the test indicates failure.
+</li></ul><p>If you right-click the test case node and click <tt>Diff</tt> in the pop-up menu, the window displays the difference between the latest output and the contents of <tt>Output.xml</tt>.
+</p>
+<p><br />
+</p>
+<div class="center">
+<a class="wikipage" href="Wiki1302.html?page=TestingAndDebuggingBPELProcesses">Top</a></div>
+<p />
+<h3 id="section-TestingAndDebuggingBPELProcesses-DebuggingBPELProcesses">Debugging BPEL Processes</h3>
+Debugging a BPEL process follows the same general principles as debugging a Java application. Debugging a BPEL process involves setting breakpoints in the source code and executing the process step-by-step within a debugging session. The BPEL Debugger provides a visual representation of the BPEL process execution. This enables you to view and change variables, monitor the results of executing expressions, and use fault breakpoints to monitor the state of variables before a fault is thrown.
+<br />
+<h4 id="section-TestingAndDebuggingBPELProcesses-StepsInDebuggingBPELProcesses">Steps in Debugging BPEL Processes</h4>
+The main steps in debugging BPEL processes are:
+<ol><li> Confirm that the GlassFish application server has started.
+</li><li> Create test cases.<br />For sample processes, test cases are automatically created; for new projects, you need to create at least one test case.
+</li><li> Open the BPEL process file either in the Source view or Design view.
+</li><li> Set breakpoints in the code or on the diagram. Optionally, add watches for XPath expressions in your process or add fault breakpoints.
+</li><li> Start a debugging session. Watch the BPEL Debugger Console window for confirmation that the debugging session has started.
+</li><li> Within the debugging session, run one or several test cases.
+</li><li> View execution of BPEL processes on the diagram in the Design view or in the BPEL Process Execution window and view running instances of BPEL processes in the BPEL Process Instances window.
+</li><li> When an instance stops at a breakpoint, step through the code or the diagram, examine the values of variables in the BPEL Variables window, or observe the values of XPath expressions in the Watches window.
+</li><li> Finish the debugging session.
+</li></ol><br />
+<h4 id="section-TestingAndDebuggingBPELProcesses-StartingAndFinishingABPELDebuggingSession">Starting and Finishing a BPEL Debugging Session</h4>
+A debugging session begins when you connect the BPEL Debugger to the BPEL Service Engine. Only one debugging session can be running with the BPEL Service Engine at a given time.
+<p>After a BPEL debugging session starts, you can execute process instances  step-by-step, inspecting the values of BPEL variables and XPath expressions in the Local Variables and Watches windows. You can monitor the execution of a BPEL process within a debugger session on the diagram in the Design view: the activities that are being executed are highlighted on the diagram as the current execution position advances. The BPEL Process Execution window also shows the execution of the BPEL process.
+</p>
+<p><br />
+</p>
+<div class="center">
+<a class="wikipage" href="Wiki1302.html?page=TestingAndDebuggingBPELProcesses">Top</a></div>
+<h4 id="section-TestingAndDebuggingBPELProcesses-ToPrepareTheDebuggingEnvironment">To prepare the debugging environment</h4>
+<ol><li> In the Services window, make sure that the GlassFish V2 Application Server is running. The Application Server is running if it has subnodes and is marked with a green triangle. <br />If the server is not started, right-click the server node and choose <tt>Start</tt> from the pop-up menu.<table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/TestingAndDebuggingBPELProcesses/asrun.gif" height="213" width="309" alt="Image shows the GlassFish Application Server in the Services window with the green triangle indicating that it is running" /></td></tr>
+</table>
+
+</li><li> In the IDE, open the BPEL process in either the Source or Design view. 
+</li><li> Set breakpoints in the BPEL process. <br />To set breakpoints in the Source view, click next to the line where you want to set the breakpoint.<br /><table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/TestingAndDebuggingBPELProcesses/thumb-setbp.gif" height="207" width="600" alt="Image shows a breakpoint set in the Source view" /></td></tr>
+</table>
+<br /> <br />To set breakpoints on the diagram, switch to the Design view, right-click the element and choose Toggle Breakpoint from the pop-up menu. A red square appears at the top of the element with a breakpoint.<table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/TestingAndDebuggingBPELProcesses/brkpntdiag.gif" height="114" width="161" alt="Image shows an element in the Design view with red square icon indicating a breakpoint" /></td></tr>
+</table>
+<br /> <br />The Toggle Breakpoint pop-up menu command is also available for the elements in the Navigator BPEL Logical View. For the elements with breakpoints, the Navigator shows a small red box (ReceiveItinerary)<br /><table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/TestingAndDebuggingBPELProcesses/brkpntnav.gif" height="258" width="312" alt="Image shows a Navigator element with a breakpoint icon" /></td></tr>
+</table>
+<br />
+</li><li> Optionally, you can add watches to monitor XPath expressions. To add a watch, copy the XPath expression you want to monitor, choose Run &rarr; Add Watch from the main menu, and paste the expression into the Watch Expression field. Click <tt>OK</tt>.
+</li></ol><br />
+  <b>Note:</b> You can also add XPath expressions that are not present in the code, but are valuable from a debugging point of view.
+<table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/TestingAndDebuggingBPELProcesses/addwatch.gif" height="84" width="385" alt="Image shows the Watch Expression set" /></td></tr>
+</table>
+
+<br />
+<div class="center">
+<a class="wikipage" href="Wiki1302.html?page=TestingAndDebuggingBPELProcesses">Top</a></div>
+<h4 id="section-TestingAndDebuggingBPELProcesses-ToStartAndFinishADebuggingSessionOnTheBPELEngine">To start and finish a debugging session on the BPEL Engine:</h4>
+<ol><li> In the Projects window, right-click the Composite Applications project you want to debug and choose <tt>Debug (BPEL)</tt> from the pop-up menu.<br /> A debug session is established on the BPEL Service Engine.
+</li><li> Watch the BPEL Debugger Console window for confirmation. The connection might take some time to complete. <br />When it is successfully completed, you can see the new session in the Sessions window and the following messages in the BPEL Debugger Console:
+<ul><li> <tt>11:35:17 Connecting to localhost:3343</tt>
+</li><li> <tt>11:36:19 Debug session started</tt><br /> <br />Note that the Debug (BPEL) command performs the following actions:<br /> <br />
+<ul><li> Enables debugging with the BPEL Service Engine (sets the <tt>DebugEnabled</tt> property of the BPEL Service Engine to <tt>true</tt>)
+</li><li> Builds the Composite Application project and all JBI Modules added to this project
+</li><li> Deploys the Composite Application project to the BPEL Service Engine
+</li><li> Starts the debugging session by connecting the BPEL Debugger to the BPEL Service Engine
+  Therefore, whenever you start a debugging session you can be sure that the latest version of the BPEL process is deployed on the BPEL Service Engine.
+</li></ul></li></ul></li><li> Now you can run a test case and monitor the execution of the BPEL process until it stops or reaches a breakpoint. As the process advances, the current context is displayed on the diagram and in the BPEL Process Execution window.<br /> <br />If you have several debugging sessions (you may have a Java debugging session running at the same time) and want to change the current session, double-click the name of this session in the Sessions window. Alternatively, right-click the session you want to make current and select Make Current. This session becomes current and the BPEL Process Instances, Watches and Local Variables Windows are updated to show the data related to the new current session.<br /> <br />
+</li><li> To finish a debugging session, open the pop-up menu for the session you want to stop and choose <tt>Finish</tt> in the Sessions window, or select <tt>Finish Debugger Session</tt> on the toolbar.<br />A message that the debugging session is finished is displayed in the BPEL Debugger Console.
+</li><li> To finish all debugging sessions, in the Sessions window, right-click any session and choose <tt>Finish All</tt>.
+</li></ol><br />
+<div class="center">
+<a class="wikipage" href="Wiki1302.html?page=TestingAndDebuggingBPELProcesses">Top</a></div>
+<h4 id="section-TestingAndDebuggingBPELProcesses-UsingBreakpointsToDebugBPELProcesses">Using Breakpoints to Debug BPEL Processes</h4>
+Breakpoints are used to instruct the BPEL Debugger to stop execution at the specified place of a BPEL process. When a BPEL process instance reaches a breakpoint, it becomes suspended and you can step into the code, change the current process instance in the BPEL Process Instances window, track the execution of the process instance in the BPEL Process Execution window and in the Design view, examine the values of variables in the Local Variables window, view the process partner links in the Partner Links window and view the values of XPath expressions in the Watches window.
+<p>You can also use fault breakpoints to check the values of variables before a fault is thrown.
+</p>
+<p>To view and organize the breakpoints currently set in the IDE, open the Breakpoints window by choosing Windows &rarr; Debugging &rarr; Breakpoints (Alt-Shift-5). For each breakpoint, you can see the name of the file and the line where this breakpoint is located. In the Breakpoints window you can enable and disable breakpoints by checking or removing the checkbox in the Enabled column.
+</p>
+<p><br />
+<h4 id="section-TestingAndDebuggingBPELProcesses-ToSetABreakpointInABPELProcess">To set a breakpoint in a BPEL process:</h4>
+</p>
+<ol><li> In the NetBeans IDE, open your BPEL file in either the Source or Design view. 
+</li><li> Do one of the following: 
+<ul><li> In the Source view, click the left margin of the row where you want to place a breakpoint. 
+</li><li> In the Design view, right-click an element where you want to place a breakpoint and choose <tt>Toggle Breakpoint </tt>(Ctrl-F8). 
+</li></ul></li></ol><p>In the Design view, breakpoints are displayed as small red squares on top of specific elements. In the Source view, breakpoints are shown as red squares on the left margins of code lines. 
+</p>
+<p>Alternatively, you can set and remove breakpoints in the BPEL Logical view of the Navigator window by choosing Toggle Breakpoint from the pop-up menu. In the Navigator window breakpoints are shown as small red squares attached to elements.
+  
+Once the project has reached the breakpoint it is suspended. You can manage the subsequent execution using the commands available in the Run menu or as buttons on the toolbar.
+<br />
+</p>
+<h4 id="section-TestingAndDebuggingBPELProcesses-DebuggingCommands">Debugging Commands</h4>
+The following commands are available from within the debugging session :
+<ul><li> <b>Pause:</b> Once the user activates this action, the process will continue till it reaches the first element on which it can stop. If there is no current process instance, the debugger will wait for the first execution event from any process instance. 
+</li><li> <b>Continue (F5):</b> Once the process has reached the breakpoint or is paused you can choose Continue. This action causes the current process instance to run until it encounters the next breakpoint or until the instance completes. The state of the instance changes to Running.
+</li><li> <b>Step Into (F7):</b> Steps to the next BPEL activity. As you step, the current line indicator advances, the current position is highlighted on the diagram, and the contents of the BPEL Debugger windows change accordingly. If the current activity has any enclosed elements, the process will step to the first enclosed element. Sometimes it is not visible on the diagram but is reflected in the BPEL Process Execution window. For example, if an Assign activity has &lt;copy> element inside it, from the Assign the process will step to Copy. 
+</li><li> <b>Step Over (F8):</b> Steps to the next BPEL activity of the same level as the current activity. If the current activity has any enclosed elements, they all are executed without suspension.
+</li><li> <b>Step Out (Ctrl-F7):</b> Steps to the next higher level activity of the process. For example, an Assign activity has several Copy elements inside. If one of the Copy elements is the current activity, performing Step Out will move you to the next activity of the Assign level and you will not have to step through all the Copy elements.
+</li><li> <b>Run to Cursor (F4):</b> Runs the BPEL process to the position selected in the Navigator window (BPEL Logical View), on the diagram (in the Design view) or to the cursor location in the Source view. When the location of the cursor is reached, the process instance becomes suspended.
+</li></ul><br />
+<h4 id="section-TestingAndDebuggingBPELProcesses-ToRemoveABreakpointFromTheBPELProcess">To remove a breakpoint from the BPEL process</h4>
+<ol><li> In the Source view, On the diagram, click the left margin of the line that contains the breakpoint.
+</li><li> In the Breakpoints window, right-click the breakpoint you want to remove and choose <tt>Delete</tt>.<br />Choosing <tt>Delete All</tt> from the pop-up menu removes all breakpoints currently set in the NetBeans IDE.
+</li><li> In the Design view, right-click the element that has a red breakpoint mark and choose <tt>Toggle Breakpoint</tt>.
+</li></ol><br />
+<h4 id="section-TestingAndDebuggingBPELProcesses-ToDisableABreakpoint">To disable a breakpoint</h4>
+<ul><li> On the diagram, click on the small red square indicating the breakpoint. <br />This disables the breakpoint but does not remove it completely.
+</li><li> In the Breakpoints window, clear the <tt>Enabled </tt>checkbox for the breakpoint you want to disable.
+</li></ul><br />
+<h4 id="section-TestingAndDebuggingBPELProcesses-GroupOperationsOverBreakpoints">Group operations over breakpoints</h4>
+The toolbar contains three buttons for group operations over the process breakpoints.
+<ul><li> <b>Enable Breakpoints for Selected Element:</b> Enables all the breakpoints for the selected element and it's enclosed elements.
+</li><li> <b>Disable Breakpoints for Selected Element:</b> Disables all the breakpoints for the selected element and it's enclosed elements. 
+</li><li> <b>Delete Breakpoints for Selected Element:</b> Deletes all the breakpoints for the selected element and it's enclosed elements. If no element is selected on the diagram, the Process element is  selected by default for the operations.
+</li></ul><br />
+<h4 id="section-TestingAndDebuggingBPELProcesses-MonitoringTheExecutionOfBPELProcesses">Monitoring the Execution of BPEL Processes</h4>
+When a running process reaches a breakpoint, the Design view highlights the current position of the debugger and uses colors to differentiate between the states of BPEL activities. As the process advances, the colors and icons for the activities on the diagram are updated to reflect the execution progress.
+<p>On the diagram, the following notation is used:
+</p>
+<ul><li> <b>Green color (glowing):</b> The breakpoint set for the activity is reached.
+</li><li> <b>Gray color (grayed-out effect):</b> The activity has not been executed yet.
+</li><li> <b>Green triangle:</b> The activity is now being executed.
+</li><li> <b>Blue triangle:</b> The activity has been successfully completed.
+</li></ul><table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/TestingAndDebuggingBPELProcesses/thumb-debug.gif" height="371" width="350" alt="Image shows the diagram with monitoring icons as described in context" /></td></tr>
+</table>
+
+<p>You can also monitor the execution of current BPEL process instances in the BPEL Process Execution window (see below).
+</p>
+<p><br />
+</p>
+<div class="center">
+<a class="wikipage" href="Wiki1302.html?page=TestingAndDebuggingBPELProcesses">Top</a></div>
+<h3 id="section-TestingAndDebuggingBPELProcesses-BPELDebuggerWindows">BPEL Debugger Windows</h3>
+When a debugging session starts, debugger windows are displayed below the editing area. The Sessions, BPEL Process Instances, BPEL Variables, and BPEL Process Execution windows contain information related to BPEL processes running within the current debugging section.
+<p>If a debugger window is not displayed, choose <tt>Window</tt> &rarr; <tt>Debugging</tt> &rarr; "window-name" (for example, <tt>Window</tt> &rarr; <tt>Debugging</tt> &rarr; <tt>BPEL Process Instances</tt>).
+</p>
+<p>The Breakpoints and Watches are standard IDE debugger windows. They display all breakpoints and watches set in the NetBeans IDE.
+<br />
+</p>
+<h4 id="section-TestingAndDebuggingBPELProcesses-SessionsWindow">Sessions Window</h4>
+The Sessions window lists all open debugging sessions, including Java and BPEL debugging sessions. For the BPEL Service Engine, only one session can be started. However, the Sessions window also displays other open debugging sessions, such as Java sessions. Only one of the open debugging sessions can be current, and it is shown in bold. Other debugger windows, such as BPEL Process Instances, BPEL Process Execution, and BPEL Variables, display data related only to the current debugging session.
+<p>The information provided for each session includes:
+</p>
+<ul><li> <b>Name:</b> The name of the session. 
+</li><li> <b>State:</b> The current state of the session. Sessions can be starting or running.
+</li><li> <b>Language:</b> The language of the application debugged in this session.
+</li></ul><p>You can perform the following actions on sessions available in the pop-up menu:
+</p>
+<ul><li> <b>Make current:</b> Makes the selected session current.
+</li><li> <b>Finish:</b> Finishes the selected session.
+</li><li> <b>Finish all:</b> Finishes all debugging sessions.
+</li></ul><table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/TestingAndDebuggingBPELProcesses/sessions.gif" height="120" width="600" alt="Image shows the Sessions window as described in context" /></td></tr>
+</table>
+
+<br />
+<h4 id="section-TestingAndDebuggingBPELProcesses-BPELProcessInstancesWindow">BPEL Process Instances Window</h4>
+The BPEL Process Instances window lists all BPEL process instances deployed to the BPEL Service Engine and their currently running instances. For each process instance correlation sets and Faults are listed as subnodes.
+<p>If the current session is not a BPEL Debugger session, this window is empty. The BPEL Process Instances window is populated when a debugging session starts on the BPEL Service Engine, or when the current session is a BPEL Debugger session. 
+</p>
+<p>The information displayed for each process instance includes the instance name, unique instance ID, and its state. 
+</p>
+<p>Process instances can exist in one of the following states:
+</p>
+<ul><li> <b>Running:</b> The instance is currently being executed on the BPEL Service Engine.
+</li><li> <b>Suspended:</b> The instance has been suspended for some reason. For example, the process instance has reached a breakpoint.
+</li><li> <b>Unknown:</b> The status of the instance is unknown.
+</li></ul><p>A process instance that is current is shown in bold. A process instance  becomes current when it reaches a breakpoint or when you manually make it  current.
+</p>
+<p><b>To make a process instance current, do one of the following:</b>
+</p>
+<ul><li> Double-click the process instance.
+</li><li> Right-click the process instance and choose Make Current from the pop-up menu.
+</li></ul><p><b>To terminate a process instance:</b>
+</p>
+<ul><li> Right-click the process instance and select Terminate from the pop-up menu. The process instance is terminated and removed from the list. 
+</li></ul><h4 id="section-TestingAndDebuggingBPELProcesses-CorrelationSetsAndFaultsInformation">Correlation Sets and Faults information</h4>
+For the Correlation Sets node the information comes out during the process execution. 
+<p>For each process instance correlation set, a list of properties it includes  is shown. For the properties, type and value information is displayed. For more information on Correlation sets, properties, and property aliases, see: <a class="wikipage" href="Wikia3b6.html?page=UsingCorrelation">Using Correlation</a>.
+<table border="0" class="imageplugin" align=" left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/TestingAndDebuggingBPELProcesses/instances.gif" height="249" width="650" alt="Image shows the BPEL Process Instances window as described in context" /></td></tr>
+</table>
+
+</p>
+<h4 id="section-TestingAndDebuggingBPELProcesses-LocalVariablesWindow">Local Variables Window</h4>
+The Local Variables window shows the structure of local variables and their values for the current process instance and current position. The current position is the place where the current process instance became suspended. When you change the current process instance, the records in the Local Variables window are updated to reflect the variables for the new current process instance and the new current position.
+<p>The structure of local variables is shown as a tree. The information provided for each variable includes the variable name and value.
+</p>
+<p>In the Local Variables window you can do the following:
+</p>
+<ul><li> View the variable structure. To do this, expand the variable node in the tree.
+</li><li> View and edit the values of variables. To edit the value of a variable, click the ellipsis (...) button and enter the new value in the editor window.
+</li><li> The structure of local variables is shown as a tree. The information provided for each variable includes the variable name and value.
+</li></ul><table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/TestingAndDebuggingBPELProcesses/variables.gif" height="296" width="650" alt="Image shows the Local Variables window as described in context" /></td></tr>
+</table>
+
+<p><br />
+</p>
+<div class="center">
+<a class="wikipage" href="Wiki1302.html?page=TestingAndDebuggingBPELProcesses">Top</a></div>
+<h4 id="section-TestingAndDebuggingBPELProcesses-WatchesWindow">Watches Window</h4>
+The Watches window shows the list of XPath expressions that you want to monitor. You add watches explicitly before or during the debugging session. The Watches window shows the expression and its value. The value of the expression may change as the process advances depending on the logic of your process.<table border="0" class="imageplugin">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/TestingAndDebuggingBPELProcesses/watches.gif" height="187" width="582" /></td></tr>
+</table>
+
+<p />
+<p><b>To set watches in the BPEL process:</b>
+</p>
+<ol><li> (Optional) Be sure that the Watches window is visible or choose <tt>Window</tt> &rarr; <tt>Debugging</tt> &rarr; <tt>Watches</tt> (Alt-Shift-2) to view it.
+</li><li> If you want to enter an XPath expression from your BPEL process, copy it using one of the following methods: 
+<ul><li> In the Source view, copy the XPath expression you want to watch. The XPath expressions can be found inside the &lt;condition> tag. 
+</li><li> In the Design view, select an element that has an expression and copy the expression from the Condition row in the Properties window.
+</li></ul></li><li> Right-click inside the <tt>Watches</tt> window and choose <tt>New Watch</tt>. 
+</li><li> In the <tt>Watch Expression</tt> field of the <tt>New Watch</tt> dialog box, do one of the following:
+<ul><li> Paste the XPath expression you have copied.
+</li><li> Enter any valid expression that is compliant with XPath 1.1.
+</li></ul></li><li> (Optional) If needed, add more watches.
+</li><li> Ensure that a debugging session is running and perform a test run.
+</li><li> As the process instance reaches a breakpoint and becomes suspended, examine the values of the expressions being watched in the Value column of the Watches window.
+</li></ol><br />
+<h4 id="section-TestingAndDebuggingBPELProcesses-BPELProcessExecutionWindow">BPEL Process Execution Window</h4>
+The BPEL Process Execution window graphically represents the progress of executing the current BPEL process instance in the BPEL Debugger. When you change the current process instance, the process tree in the BPEL Process Execution window is updated to reflect the state of the new current process instance and the new current position. 
+<p>In the BPEL Process Execution window, the following colors are used to display the state of BPEL activities:
+</p>
+<ul><li> <b>Green:</b> The activity is being executed at the moment.
+</li><li> <b>Gray:</b> The activity has not been executed yet.
+</li><li> <b>Black:</b> The activity has been executed.
+</li></ul><p>BPEL Process Execution Window displays the following information:
+</p>
+<ul><li> <b>Name:</b> The name of the activity.
+</li><li> <b>Thread:</b> The thread in which the activity is/was executed. For the nodes that have not yet been executed no thread information is provided.
+</li><li> <b>Line:</b> Contains the path to the file and the line number for the activity in the file.
+</li><li> <b>XPath:</b> Shows XPath expression pointing to the activity. <table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/TestingAndDebuggingBPELProcesses/execution.gif" height="279" width="650" alt="Image shows the BPEL Process Execution window as described in context" /></td></tr>
+</table>
+
+</li></ul><p><b>Note:</b> In the BPEL Process Execution window, you can only view the progress of executing BPEL processes. You cannot perform any actions in this window.
+</p>
+<p><br />
+</p>
+<div class="center">
+<a class="wikipage" href="Wiki1302.html?page=TestingAndDebuggingBPELProcesses">Top</a></div>
+<h4 id="section-TestingAndDebuggingBPELProcesses-BPELPartnerLinksWindow">BPEL Partner Links Window</h4>
+The Partner Links window lists the all the partner links defined in the BPEL Process. 
+<p>The information provided for the partner links includes:
+</p>
+<ul><li> <b>My Role</b> 
+</li><li> <b>Partner Role</b> (for two-way operations only) 
+</li><li> <b>Endpoint:</b> The endpoint information is available for dynamically defined partner links only. For more information see the Dynamic Addressing section of <a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">The BPEL Designer Palette Elements</a>. <table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/TestingAndDebuggingBPELProcesses/plwindow.gif" height="204" width="650" alt="Image shows the BPEL Partner Links Window as described in context" /></td></tr>
+</table>
+
+</li></ul><br />
+<h4 id="section-TestingAndDebuggingBPELProcesses-BPELDebuggerConsoleMessages">BPEL Debugger Console Messages</h4>
+You can see the following messages in the BPEL Debugger Console:
+<p><tt>Connecting to &lt;host>:&lt;port></tt><br />
+-- The Debugger is attempting to connect to the BPEL service engine. 
+</p>
+<p><tt>Debug session started</tt><br />
+-- The Debugger has successfully connected to the BPEL service engine and the debug session has started. 
+</p>
+<p><tt>Unable to start a debug session : Unable to connect to &lt;host>:&lt;port> : Connection timed out: connect</tt><br />
+-- If you see this message, verify the following:
+</p>
+<ul><li> The GlassFish V2 Application Server is running.
+</li><li> The BPEL service engine is started.
+</li><li> The DebugEnabled property of the BPEL service engine is set to <tt>true</tt>.
+</li><li> The host name is the host name of the machine that runs the GlassFish V2 Application Server you are connecting to ( <tt>localhost</tt> by default).
+</li><li> The port value is the same as the DebugPort property of the BPEL service engine you are connecting to (<tt>3343</tt> by default).
+</li></ul><p><tt>Unable to start a debug session : Already connected to &lt;host>:&lt;port></tt><br />
+-- You already have a running debug session attached to this particular service engine. 
+</p>
+<p><tt>Debug session terminated : Target disconnected</tt><br />
+-- The Debugger lost connection to the server. Check that the server is running and the network is up. 
+</p>
+<p><tt>Stop connecting</tt><br />
+-- You explicitly terminated the debug session when it was connecting. 
+</p>
+<p><tt>Debug session finished</tt><br />
+-- You explicitly terminated the debug session when it was running. 
+</p>
+<p><br />
+</p>
+<div class="center">
+<a class="wikipage" href="Wiki1302.html?page=TestingAndDebuggingBPELProcesses">Top</a></div>
+<p><br />
+</p>
+<p><a class="wikipage" href="Wikicae3.html?page=BPELServiceEngineDeploymentArtifacts">Previous</a><br />
+<a class="wikipage" href="Wiki434d.html?page=MonitoringTheBPELServiceEngine">Next</a>
+</p>
+
+
+
+  </div>
+
+  
+  
+  <div id="attachments" style="display:none;" >
+
+    
+
+
+
+
+
+
+
+<div id="attachmentViewer">
+  <div class="list">
+    <h3>List of attachments &nbsp;&nbsp;&nbsp;&nbsp;
+    </h3>
+      <form action='#'>
+        <select name="attachSelect" id="attachSelect" size="16" 
+            onchange="Attach.showImage(this[this.selectedIndex], '%A4', 300, 300 )" >
+        <option value="Attachment Info" selected="selected" >--- Select Image to preview ---</option>
+        
+          
+          <option value="addwatch.gif%A4http://wiki.open-esb.java.net/attach/TestingAndDebuggingBPELProcesses/addwatch.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=TestingAndDebuggingBPELProcesses/addwatch.gif%A41883 bytes%A41" >
+            addwatch.gif (1883 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="asrun.gif%A4http://wiki.open-esb.java.net/attach/TestingAndDebuggingBPELProcesses/asrun.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=TestingAndDebuggingBPELProcesses/asrun.gif%A47087 bytes%A41" >
+            asrun.gif (7087 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="brkpntdiag.gif%A4http://wiki.open-esb.java.net/attach/TestingAndDebuggingBPELProcesses/brkpntdiag.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=TestingAndDebuggingBPELProcesses/brkpntdiag.gif%A44104 bytes%A41" >
+            brkpntdiag.gif (4104 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="brkpntnav.gif%A4http://wiki.open-esb.java.net/attach/TestingAndDebuggingBPELProcesses/brkpntnav.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=TestingAndDebuggingBPELProcesses/brkpntnav.gif%A47431 bytes%A41" >
+            brkpntnav.gif (7431 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="execution.gif%A4http://wiki.open-esb.java.net/attach/TestingAndDebuggingBPELProcesses/execution.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=TestingAndDebuggingBPELProcesses/execution.gif%A421423 bytes%A43" >
+            execution.gif (21423 bytes , revision-3, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="instances.gif%A4http://wiki.open-esb.java.net/attach/TestingAndDebuggingBPELProcesses/instances.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=TestingAndDebuggingBPELProcesses/instances.gif%A412818 bytes%A43" >
+            instances.gif (12818 bytes , revision-3, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="plwindow.gif%A4http://wiki.open-esb.java.net/attach/TestingAndDebuggingBPELProcesses/plwindow.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=TestingAndDebuggingBPELProcesses/plwindow.gif%A416116 bytes%A43" >
+            plwindow.gif (16116 bytes , revision-3, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="sessions.gif%A4http://wiki.open-esb.java.net/attach/TestingAndDebuggingBPELProcesses/sessions.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=TestingAndDebuggingBPELProcesses/sessions.gif%A48543 bytes%A43" >
+            sessions.gif (8543 bytes , revision-3, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="thumb-debug.gif%A4http://wiki.open-esb.java.net/attach/TestingAndDebuggingBPELProcesses/thumb-debug.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=TestingAndDebuggingBPELProcesses/thumb-debug.gif%A413204 bytes%A43" >
+            thumb-debug.gif (13204 bytes , revision-3, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="thumb-setbp.gif%A4http://wiki.open-esb.java.net/attach/TestingAndDebuggingBPELProcesses/thumb-setbp.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=TestingAndDebuggingBPELProcesses/thumb-setbp.gif%A49603 bytes%A43" >
+            thumb-setbp.gif (9603 bytes , revision-3, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="variables.gif%A4http://wiki.open-esb.java.net/attach/TestingAndDebuggingBPELProcesses/variables.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=TestingAndDebuggingBPELProcesses/variables.gif%A418747 bytes%A43" >
+            variables.gif (18747 bytes , revision-3, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="watches.gif%A4http://wiki.open-esb.java.net/attach/TestingAndDebuggingBPELProcesses/watches.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=TestingAndDebuggingBPELProcesses/watches.gif%A46058 bytes%A42" >
+            watches.gif (6058 bytes , revision-2, by&nbsp;rjacobus)
+          </option>
+        
+      </select>
+    </form>
+    <div class="small">&nbsp;</div>
+  </div>  
+
+  <div class="preview">
+    <h3>Image preview</h3>
+    <div id="attachImg" title="No Image Selected">No Image Selected</div>
+    <a href="#" class="small" style="display:none;" id="attachInfo">More info, including version history</a>
+  </div>
+
+  <div style="clear:both; height:0px;" > </div>
+
+</div>
+
+
+  </div>
+
+  
+  <div id="pageinfo" style="display:none;" >
+
+    
+
+
+
+
+
+
+
+
+  <p>
+  This page (revision-24) was last changed on 
+  <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TestingAndDebuggingBPELProcesses&amp;r1=24&amp;r2=23"
+    title="Show changes of last page update" >
+    
+    09-Jun-09 10:52 AM, -0700
+  </a> by rjacobus.
+  <a href="http://wiki.open-esb.java.net/rss.jsp?page=TestingAndDebuggingBPELProcesses&amp;mode=wiki"
+    title="RSS page feed for Testing And Debugging BPEL Processes" ><img src="images/xml.png" border="0" alt="[RSS]"/></a>
+    
+    <br />
+    This page was created on 
+    <a  href="http://wiki.open-esb.java.net/Wiki.jsp?page=TestingAndDebuggingBPELProcesses&amp;version=1">06-Oct-08 23:53 PM, -0700</a> by rjacobus.
+    
+  </p>    
+
+  
+
+  
+   
+  
+  <p><a href="http://wiki.open-esb.java.net/PageInfo.jsp?page=TestingAndDebuggingBPELProcesses" id="moreinfo" >More info...</a></p>
+  
+  
+
+  <div class="tabmenu ">
+  
+  
+  
+
+  
+
+  
+
+  
+  
+  
+  
+  <span><a class="activetab" id="menu-versionHistory" onclick="TabbedSection.onclick('versionHistory')" >Version History</a></span>
+  
+
+  <span><a id="menu-incomingLinks" onclick="TabbedSection.onclick('incomingLinks')" >Incoming Links</a></span>
+
+  <span><a id="menu-outgoingLinks" onclick="TabbedSection.onclick('outgoingLinks')" >Outgoing Links</a></span>
+
+  
+  
+  </div>
+<div class="tabs ">
+  
+  <div id="versionHistory" >
+
+
+    <div class='pagination'>Pagination: <a title="Show page from 1 to 20" href='#' onclick='location.href= $("moreinfo").href + "&start=0"; ' >previous</a>&nbsp;&nbsp;<a title="Show page from 1 to 20" href='#' onclick='location.href= $("moreinfo").href + "&start=0"; ' >1</a>&nbsp;&nbsp;<span class='cursor'>2</span>&nbsp;&nbsp;<a title="Show all pages" href='#' onclick='location.href= $("moreinfo").href + "&start=-1"; ' >all</a>&nbsp;&nbsp; (Total items: 24)</div>
+    <div class="zebra-table ">
+    <table class="wikitable" >
+      <tr>
+        <th>Version</th>                        
+        <th>Date</th>
+        <th>Author</th>
+        <th>Size</th>
+        <th>Changes ...</th>
+        
+      </tr>
+
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TestingAndDebuggingBPELProcesses&amp;version=24" accesskey="" title="">
+            24
+          </a>
+        </td>
+
+        <td>
+          09-Jun-09 10:52 AM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>32943</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TestingAndDebuggingBPELProcesses&amp;r1=24&amp;r2=23">to previous</a>
+            
+          
+
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TestingAndDebuggingBPELProcesses&amp;version=23" accesskey="" title="">
+            23
+          </a>
+        </td>
+
+        <td>
+          21-May-09 09:44 AM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>32842</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TestingAndDebuggingBPELProcesses&amp;r1=23&amp;r2=22">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TestingAndDebuggingBPELProcesses&amp;r1=24&amp;r2=23">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TestingAndDebuggingBPELProcesses&amp;version=22" accesskey="" title="">
+            22
+          </a>
+        </td>
+
+        <td>
+          17-Dec-08 10:55 AM, -0800
+        </td>
+        <td>rjacobus</td>
+        <td>32839</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TestingAndDebuggingBPELProcesses&amp;r1=22&amp;r2=21">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TestingAndDebuggingBPELProcesses&amp;r1=24&amp;r2=22">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TestingAndDebuggingBPELProcesses&amp;version=21" accesskey="" title="">
+            21
+          </a>
+        </td>
+
+        <td>
+          17-Dec-08 09:54 AM, -0800
+        </td>
+        <td>rjacobus</td>
+        <td>32844</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TestingAndDebuggingBPELProcesses&amp;r1=21&amp;r2=20">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TestingAndDebuggingBPELProcesses&amp;r1=24&amp;r2=21">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TestingAndDebuggingBPELProcesses&amp;version=20" accesskey="" title="">
+            20
+          </a>
+        </td>
+
+        <td>
+          17-Dec-08 09:42 AM, -0800
+        </td>
+        <td>rjacobus</td>
+        <td>32836</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TestingAndDebuggingBPELProcesses&amp;r1=20&amp;r2=19">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TestingAndDebuggingBPELProcesses&amp;r1=24&amp;r2=20">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+    </table>  
+    </div>
+    <div class='pagination'>Pagination: <a title="Show page from 1 to 20" href='#' onclick='location.href= $("moreinfo").href + "&start=0"; ' >previous</a>&nbsp;&nbsp;<a title="Show page from 1 to 20" href='#' onclick='location.href= $("moreinfo").href + "&start=0"; ' >1</a>&nbsp;&nbsp;<span class='cursor'>2</span>&nbsp;&nbsp;<a title="Show all pages" href='#' onclick='location.href= $("moreinfo").href + "&start=-1"; ' >all</a>&nbsp;&nbsp; (Total items: 24)</div>
+
+  </div>
+
+  
+
+  <div id="incomingLinks" style="display:none;" >
+
+    <a class="wikipage" href="Wiki1302.html?page=TestingAndDebuggingBPELProcesses" accesskey="" title="">Testing And Debugging BPEL Processes</a>
+    <ul><li><a class="wikipage" href="Wiki21f2.html?page=BPELBluePrints">BPEL Blue Prints</a>
+</li><li><a class="wikipage" href="Wiki3879.html?page=BPELDesignerAndServiceEngineFeatures">BPEL Designer And Service Engine Features</a>
+</li><li><a class="wikipage" href="Wiki5e52.html?page=BPELDesignerAndServiceEngineOverview">BPEL Designer And Service Engine Overview</a>
+</li><li><a class="wikipage" href="Wiki5233.html?page=BPELProcessLoggingAndAlerting">BPEL Process Logging And Alerting</a>
+</li><li><a class="wikipage" href="Wikicae3.html?page=BPELServiceEngineDeploymentArtifacts">BPEL Service Engine Deployment Artifacts</a>
+</li><li><a class="wikipage" href="Wiki7030.html?page=BPELServiceEngineTaskHowTos">BPEL Service Engine Task How Tos</a>
+</li><li><a class="wikipage" href="Wiki73af.html?page=ConfiguringClusteringAndFailoverForBPEL">Configuring Clustering And Failover For BPEL</a>
+</li><li><a class="wikipage" href="Wikid4c2.html?page=ConfiguringFailoverForBPEL">Configuring Failover For BPEL</a>
+</li><li><a class="wikipage" href="Wiki0931.html?page=ConfiguringPersistenceAndRecoveryForBPEL">Configuring Persistence And Recovery For BPEL</a>
+</li><li><a class="wikipage" href="Wiki2f9d.html?page=ConfiguringTheBPELServiceEngineRuntimeProperties">Configuring The BPEL Service Engine Runtime Properties</a>
+</li><li><a class="wikipage" href="Wiki77bf.html?page=ConfiguringTheQualityOfServiceProperties">Configuring The Quality Of Service Properties</a>
+</li><li><a class="wikipage" href="Wikia9da.html?page=CreatingTheBPELModuleProject">Creating The BPEL Module Project</a>
+</li><li><a class="wikipage" href="Wiki17ca.html?page=DevelopingTheBPELProcessUsingTheBPELDiagram">Developing The BPEL Process Using The BPEL Diagram</a>
+</li><li><a class="wikipage" href="Wiki434d.html?page=MonitoringTheBPELServiceEngine">Monitoring The BPEL Service Engine</a>
+</li><li><a class="wikipage" href="Wiki0ddb.html?page=NavigatingTheBPELDesigner">Navigating The BPEL Designer</a>
+</li><li><a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">The BPEL Designer Palette Elements</a>
+</li><li><a class="wikipage" href="Wikif987.html?page=TroubleshootingTheBPELServiceEngine">Troubleshooting The BPEL Service Engine</a>
+</li><li><a class="wikipage" href="Wikifbc9.html?page=UnderstandingTheBPELModuleProject">Understanding The BPEL Module Project</a>
+</li><li><a class="wikipage" href="Wiki20e8.html?page=UsingBPELDesignerServiceEngine">Using BPEL Designer Service Engine</a>
+</li><li><a class="wikipage" href="Wikia3b6.html?page=UsingCorrelation">Using Correlation</a>
+</li><li><a class="wikipage" href="Wikife94.html?page=UsingDynamicPartnerLinksAndDynamicAddressing">Using Dynamic Partner Links And Dynamic Addressing</a>
+</li><li><a class="wikipage" href="Wikie39c.html?page=UsingHandlers">Using Handlers</a>
+</li><li><a class="wikipage" href="Wikiad48.html?page=UsingNormalizedMessageProperties">Using Normalized Message Properties</a>
+</li><li><a class="wikipage" href="Wiki39db.html?page=UsingTheBPELMapper">Using The BPEL Mapper</a>
+</li><li><a class="wikipage" href="Wiki1f81.html?page=ValidatingTheBPELProcess">Validating The BPEL Process</a>
+</li></ul>
+  </div>
+
+
+  <div id="outgoingLinks" style="display:none;" >
+
+    
+      <div class="ReferredPagesPlugin">
+<a class="wikipage" href="Wiki1302.html?page=TestingAndDebuggingBPELProcesses" title="ReferredPagesPlugin: depth[1] include[.*] exclude[^$] format[compact]">TestingAndDebuggingBPELProcesses</a>
+<ul>
+<li><a class="wikipage" href="Wiki21f2.html?page=BPELBluePrints">BPELBluePrints</a></li>
+<li><a class="wikipage" href="Wiki3879.html?page=BPELDesignerAndServiceEngineFeatures">BPELDesignerAndServiceEngineFeatures</a></li>
+<li><a class="wikipage" href="Wiki5e52.html?page=BPELDesignerAndServiceEngineOverview">BPELDesignerAndServiceEngineOverview</a></li>
+<li><a class="wikipage" href="Wiki5233.html?page=BPELProcessLoggingAndAlerting">BPELProcessLoggingAndAlerting</a></li>
+<li><a class="wikipage" href="Wikicae3.html?page=BPELServiceEngineDeploymentArtifacts">BPELServiceEngineDeploymentArtifacts</a></li>
+<li><a class="wikipage" href="Wiki7030.html?page=BPELServiceEngineTaskHowTos">BPELServiceEngineTaskHowTos</a></li>
+<li><a class="wikipage" href="Wikid4c2.html?page=ConfiguringFailoverForBPEL">ConfiguringFailoverForBPEL</a></li>
+<li><a class="wikipage" href="Wiki0931.html?page=ConfiguringPersistenceAndRecoveryForBPEL">ConfiguringPersistenceAndRecoveryForBPEL</a></li>
+<li><a class="wikipage" href="Wiki2f9d.html?page=ConfiguringTheBPELServiceEngineRuntimeProperties">ConfiguringTheBPELServiceEngineRuntimeProperties</a></li>
+<li><a class="wikipage" href="Wiki77bf.html?page=ConfiguringTheQualityOfServiceProperties">ConfiguringTheQualityOfServiceProperties</a></li>
+<li><a class="wikipage" href="Wikia9da.html?page=CreatingTheBPELModuleProject">CreatingTheBPELModuleProject</a></li>
+<li><a class="wikipage" href="Wiki17ca.html?page=DevelopingTheBPELProcessUsingTheBPELDiagram">DevelopingTheBPELProcessUsingTheBPELDiagram</a></li>
+<li><a class="wikipage" href="Wiki434d.html?page=MonitoringTheBPELServiceEngine">MonitoringTheBPELServiceEngine</a></li>
+<li><a class="wikipage" href="Wiki0ddb.html?page=NavigatingTheBPELDesigner">NavigatingTheBPELDesigner</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TestingAndDebuggingBPELProcesses/addwatch.gif">TestingAndDebuggingBPELProcesses/addwatch.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TestingAndDebuggingBPELProcesses/asrun.gif">TestingAndDebuggingBPELProcesses/asrun.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TestingAndDebuggingBPELProcesses/brkpntdiag.gif">TestingAndDebuggingBPELProcesses/brkpntdiag.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TestingAndDebuggingBPELProcesses/brkpntnav.gif">TestingAndDebuggingBPELProcesses/brkpntnav.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TestingAndDebuggingBPELProcesses/execution.gif">TestingAndDebuggingBPELProcesses/execution.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TestingAndDebuggingBPELProcesses/instances.gif">TestingAndDebuggingBPELProcesses/instances.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TestingAndDebuggingBPELProcesses/plwindow.gif">TestingAndDebuggingBPELProcesses/plwindow.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TestingAndDebuggingBPELProcesses/sessions.gif">TestingAndDebuggingBPELProcesses/sessions.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TestingAndDebuggingBPELProcesses/thumb-debug.gif">TestingAndDebuggingBPELProcesses/thumb-debug.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TestingAndDebuggingBPELProcesses/thumb-setbp.gif">TestingAndDebuggingBPELProcesses/thumb-setbp.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TestingAndDebuggingBPELProcesses/variables.gif">TestingAndDebuggingBPELProcesses/variables.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TestingAndDebuggingBPELProcesses/watches.gif">TestingAndDebuggingBPELProcesses/watches.gif</a></li>
+<li><a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">TheBPELDesignerPaletteElements</a></li>
+<li><a class="wikipage" href="Wikif987.html?page=TroubleshootingTheBPELServiceEngine">TroubleshootingTheBPELServiceEngine</a></li>
+<li><a class="wikipage" href="Wikifbc9.html?page=UnderstandingTheBPELModuleProject">UnderstandingTheBPELModuleProject</a></li>
+<li><a class="wikipage" href="Wiki20e8.html?page=UsingBPELDesignerServiceEngine">UsingBPELDesignerServiceEngine</a></li>
+<li><a class="wikipage" href="Wikia3b6.html?page=UsingCorrelation">UsingCorrelation</a></li>
+<li><a class="wikipage" href="Wikife94.html?page=UsingDynamicPartnerLinksAndDynamicAddressing">UsingDynamicPartnerLinksAndDynamicAddressing</a></li>
+<li><a class="wikipage" href="Wikie39c.html?page=UsingHandlers">UsingHandlers</a></li>
+<li><a class="wikipage" href="Wikiad48.html?page=UsingNormalizedMessageProperties">UsingNormalizedMessageProperties</a></li>
+<li><a class="wikipage" href="Wiki39db.html?page=UsingTheBPELMapper">UsingTheBPELMapper</a></li>
+<li><a class="wikipage" href="Wiki1f81.html?page=ValidatingTheBPELProcess">ValidatingTheBPELProcess</a></li>
+</ul>
+</div>
+
+    
+    
+  </div>
+
+
+  
+  
+  <div style="clear:both; height:0px;" > </div>
+</div>
+ 
+
+
+
+
+
+
+
+
+
+  </div>
+
+  
+<div style="clear:both; height:0px;" > </div>
+</div>
+
+</div> 
+
+
+  
+
+
+
+<div id="favorites">
+
+
+<div class="username">G'day,
+  
+    <a title="Hi, Anonymous Guest"  href="Wiki48c3.html?page=Login">Anonymous Guest</a>
+  
+  
+  
+  
+</div>  
+
+
+
+
+
+
+
+
+<p />
+
+
+
+  
+<p />
+<p />
+
+
+<div class="wikiversion">JSPWiki v2.4.100</div>
+
+<div class="rssfeed"><a href="rss.rdf"><img src="images/xml.png" alt="[RSS]" border="0" title="Aggregate the RSS feed of the entire wiki"/></a></div>
+
+<div style="clear:both; height:0px;" > </div>
+
+</div> 
+
+  
+
+
+
+
+
+<div id='actionsBottom' class="pageactions"> 
+
+  <span class='quicklinks quick2Top'>
+    <a href="#wikibody" title='Go to Top' >&laquo;</a>
+  </span>
+
+  <span class="actionHome">
+    <a href="Wikib2ab.html?page=Main"
+       title="Go to home page Main ">Home</a>
+  </span>
+  
+  
+    
+
+    
+  
+  
+  <span class="actionIndex">
+     <a href="Wiki5f9e.html?page=PageIndex"
+       title="Alphabetically sorted list of pages [ x ]">Index</a>
+  </span>
+  
+  <span class="actionRecentChanges">
+     <a href="Wiki5fc7.html?page=RecentChanges"
+        title="Pages sorted by modification date [ u ]">Changes</a>
+  </span>
+
+  
+    
+      <span class="actionPrefs">
+        <a href="Wiki7eba.html?page=UserPreferences"
+           title="Set User Preferences" >Prefs</a>
+      </span>
+    
+  
+
+  
+    <div class="pageinfo">
+      
+        This page (revision-24) was last changed on 
+        <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TestingAndDebuggingBPELProcesses&amp;r1=24&amp;r2=23"
+          title="Show changes of last page update" >  
+        
+        09-Jun-09 10:52 AM, -0700</a>
+      
+      
+      by rjacobus
+
+      
+    </div>  
+  
+
+  <div style="clear:both; height:0;"> </div> 
+</div>
+
+  
+ 
+  
+
+  
+
+
+<div id="footer">
+
+<table><tr><td>
+  <div class="wikiversion">
+    JSPWiki v2.4.100                       
+  </div>
+</td>
+<td>
+<br>Copyright &copy; 2011, Oracle and/or its affiliates. All rights reserved. Oracle and Java are registered trademarks of Oracle and/or its affiliates. Other names may be trademarks of their respective owners. <a href="http://www.oracle.com/"><img src="images/ora_logo_small.gif" /> </a>
+  <div class="rssfeed">
+    <a href="rss.rdf"><img src="images/xml.png" alt="[RSS]" border="0" title="Aggregate the RSS feed"/></a>
+  </div>
+</td></tr></table>
+  <div style="clear:both; height:0px;" > </div>
+
+</div>
+  
+
+  </div>
+  <div style="clear:both; height:0;" > </div>
+
+
+
+<!-- Page counters -->
+<script type="text/javascript" language="javascript">
+var sc_project=1965314; 
+var sc_invisible=1; 
+var sc_partition=17; 
+var sc_security="c5f5efea"; 
+</script>
+<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script>
+
+
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+<script type="text/javascript">
+_uacct = "UA-993823-3";
+urchinTracker();
+</script>
+</body>
+
+<!-- Mirrored from wiki.open-esb.java.net/Wiki.jsp?page=TestingAndDebuggingBPELProcesses by HTTrack Website Copier/3.x [XR&CO'2010], Thu, 08 Jul 2010 02:16:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+</html>
+
+

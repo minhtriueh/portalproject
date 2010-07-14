@@ -1,0 +1,1330 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+
+
+<!-- Mirrored from wiki.open-esb.java.net/Wiki.jsp?page=BPELProcessLoggingAndAlerting by HTTrack Website Copier/3.x [XR&CO'2010], Thu, 08 Jul 2010 02:16:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head>
+
+  <title>BPEL Process Logging And Alerting - OpenESB: the Open Source ESB for SOA & Integration</title>
+  
+
+
+
+
+
+<link rel="stylesheet" type="text/css" media="screen, projection" 
+     href="templates/brushed/jspwiki.css" />
+
+<!-- browser specific cssinclude not required in brushed template
+<script type="text/javascript"
+         src="/templates/brushed/cssinclude.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+  Wiki.loadBrowserSpecificCSS("brushed");
+//]]>
+</script>
+-->
+
+
+
+
+<link rel="stylesheet" type="text/css" 
+     href="templates/brushed/skins/Smart/skin.css" />
+<!-- INCLUDERESOURCES (stylesheet) -->
+
+
+
+<!--[if IE]>
+<style type="text/css" media="screen">
+img, a, div { behavior: url("templates/brushed/scripts/iepngfix.htc"); }
+</style>
+<![endif]-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="search" 
+     href="Wiki702d.html?page=FindPage"
+    title="Search Open ESB Wiki" />
+<link rel="help"   
+     href="Wikia3b7.html?page=TextFormattingRules" 
+    title="Help" />
+<link rel="start"  
+     href="Wikib2ab.html?page=Main"                
+    title="Front page" />
+<!--<link rel="stylesheet" type="text/css" media="print"
+     href="/templates/brushed/jspwiki_print.css" />
+<link rel="alternate stylesheet" type="text/css"
+     href="/templates/brushed/jspwiki_print.css" 
+    title="Print friendly" />-->
+<link rel="alternate stylesheet" type="text/css" 
+     href="templates/brushed/jspwiki.css" 
+    title="Standard" />
+<link rel="icon" type="image/png" href="images/openesb16x16.png" />
+
+<link rel="template" href="http://wiki.open-esb.java.net/templates/brushed" id="template-dir"/>
+<link rel="alternate" type="application/rss+xml" title="RSS wiki feed for the entire site." href="rss.rdf" />
+<link rel="alternate" type="application/rss+xml" title="RSS wiki feed for page Open ESB Wiki: BPELProcessLoggingAndAlerting." href="http://wiki.open-esb.java.net/rss.jsp?page=BPELProcessLoggingAndAlerting&amp;mode=wiki" />
+
+
+
+<script type="text/javascript"
+         src="templates/brushed/scripts/prototype.js" ></script>
+<script type="text/javascript" 
+         src="templates/brushed/scripts/brushed.js" ></script>
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+  Wiki.setBaseURL ( "index.html" );
+  Wiki.setPageName( "BPELProcessLoggingAndAlerting" ); /* pagename without blanks */
+  Wiki.setUserName( "113.170.138.21" );
+
+  Wiki.setDELIM              ( "¤" );
+  Wiki.setPrefDateFormat     ( "dd-MMM-yy HH:mm a, Z" );
+  Wiki.setPrefSkinName       ( "Smart" );
+  Wiki.setPrefTimeZone       ( "" );
+  Wiki.setPrefEditAreaHeight ( "24" );
+  Wiki.setPrefShowQuickLinks ( "no" );
+  Wiki.setPrefSowCalendar    ( "no" );
+//]]>
+</script>
+<script type="text/javascript" 
+         src="templates/brushed/skins/Smart/skin.js"></script>
+
+<!-- INCLUDERESOURCES (script) -->
+
+
+  
+</head>
+
+<body class="view" id="gradient">
+<!--
+<p id="underline" class="barMargin"></p>
+-->
+<div id="wikibody" >
+  
+
+
+
+
+<div id="header">
+<!--
+  <div class="applicationlogo"> 
+    <a href="https://open-esb.dev.java.net/public/downloads.html" title="OpenESB Downloads"></a>
+  </div>
+-->  
+
+<table width="100%" id="headertable"><tr>
+  <td><a href="https://open-esb.dev.java.net/" style="border: none;"><img style="border: none;" height="60" width="304" alt="Open ESB: the Open Enterprise Service Bus... Open Standards + Open Source" src="images/ESBLogoTag-304x60C.jpg"/></a></td>
+
+
+  <td id="rhstop">
+  
+
+<div id="rhsuser" class="rhsusername">
+  Not logged in | 
+    <a title="Hi, Anonymous Guest"  href="Wiki48c3.html?page=Login">Login</a>
+  
+  
+
+  
+
+  
+</div>  
+  
+  
+<div id="oesearch" style="vertical-align: bottom">
+  <br/>
+  <br/>
+	<form action="https://open-esb.dev.java.net/SearchResults.html" id="cse-search-box"> 
+	  <div>
+	    <input type="hidden" name="cx" value="013607241216432041017:tcd_nlc0tem" />
+	    <input type="hidden" name="cof" value="FORID:11" />
+	    <input type="hidden" name="ie" value="UTF-8" />
+	    <input type="text" name="q" size="20" />
+	    <input type="submit" name="sa" value="Search" />
+	  </div>
+	</form>
+</div>
+  
+  
+  </td>
+</tr></table>
+
+<!-- ==================== Menu Structure ==================== -->
+<script type="text/javascript" src="static/menu.js" ></script>
+<div id="z_menu_02"><table width="100%"><tr><td>
+	<div id="z_menu_01">
+		<script>writeOEMenu();</script>
+	</div>
+</td></tr></table></div>
+<!-- ==================== End menu ==================== -->
+
+
+
+
+
+
+
+
+
+
+  <div class="companylogo">
+  </div>
+  
+  
+<!--
+<ul class="iconlist">
+<li class="documentation"><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=Documentation"><img src="/openesbwiki/templates/brushed/skins/Smart/images/documentation.png" width="81" height="65"/></a></li>
+<li class="link"><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsefulLinks"><img src="/openesbwiki/templates/brushed/skins/Smart/images/links.png" width="64" height="65"/></a></li>
+<li class="participate"><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=GetInvolved"><img src="/openesbwiki/templates/brushed/skins/Smart/images/participate.png" width="61" height="68"/></a></li>
+<li class="downloads"><a href="https://open-esb.dev.java.net/Downloads.html"><img src="/openesbwiki/templates/brushed/skins/Smart/images/downloads.png" width="61" height="65"/></a></li>
+</ul>
+<div style="clear: left;"></div>
+ --> 
+
+  <table width="100%">
+  <tr>
+  <td><div class="pagename2">BPEL Process Logging And Alerting</div></td>
+  </tr>
+  </table>
+  
+
+
+  
+  <div class="searchbox">
+
+
+<form action="http://wiki.open-esb.java.net/Search.jsp"
+    onsubmit="SearchBox.submit( this.query.value )"
+ onmouseover="Element.show('searchboxMenu');"
+  onmouseout= "Element.hide('searchboxMenu');"
+        name="searchForm" id="searchForm" 
+        accept-charset="UTF-8">
+  <div>
+  
+  <input onblur="if( this.value == '' ) { this.value = 'Search'}; " 
+        onfocus="if( this.value == 'Search' ) { this.value = ''}; "
+           type="text" value="Wiki search" name="query" id="query" size="24" 
+      accesskey="f"></input>
+  </div>  
+  <div id="searchboxMenu" style='display:none;'>
+    <div>
+      <a href="javascript://nop/" 
+         onclick="SearchBox.navigation( 'Wiki195c.html?page=__PAGEHERE__','BPELProcessLoggingAndAlerting' );return false;"
+         title="View the selected page">view</a> 
+      | 
+      <a href="javascript://nop/" 
+         onclick="SearchBox.navigation( 'http://wiki.open-esb.java.net/Edit.jsp?page=__PAGEHERE__','BPELProcessLoggingAndAlerting' );return false;"
+         title="Edit the selected page">edit</a> 
+      | 
+      <a href="javascript://nop/" 
+         onclick="SearchBox.clone( 'http://wiki.open-esb.java.net/Edit.jsp?page=__PAGEHERE__','BPELProcessLoggingAndAlerting' );return false;"
+         title="Clone this page">clone</a> 
+      |
+      <a href="javascript://nop/" 
+         onclick="SearchBox.navigation( 'Search136d.html?query=__PAGEHERE__','BPELProcessLoggingAndAlerting' );return false;"
+         title="Advanced Search">find</a> 
+      [ f ]
+    </div>
+    <div id="searchResult" > </div>
+    <div id="recentSearches" > </div>
+  </div>
+
+</form>
+<script type="text/javascript">
+//<![CDATA[    
+    function updateSearchResult( )
+    {  
+      if( $F('query') == 'Search' ) return;
+      new Ajax.Updater(
+        'searchResult', 
+        'templates/brushed/FindAjax.html',
+        { 
+          asynchronous: true,
+          parameters: Form.serialize( 'searchForm' ) + "&compact=true"
+        } ); 
+    } ;
+    new Form.Element.Observer( "query", 1, updateSearchResult ); 
+//]]>
+</script>
+    
+   </div>
+
+  <div class="breadcrumbs">Your trail: <a class="wikipage" href="Wiki3879.html?page=BPELDesignerAndServiceEngineFeatures">BPELDesignerAndServiceEngineFeatures</a> &gt; <a class="wikipage" href="Wiki0ddb.html?page=NavigatingTheBPELDesigner">NavigatingTheBPELDesigner</a> &gt; <a class="wikipage" href="Wikia9da.html?page=CreatingTheBPELModuleProject">CreatingTheBPELModuleProject</a> &gt; <a class="wikipage" href="Wiki17ca.html?page=DevelopingTheBPELProcessUsingTheBPELDiagram">DevelopingTheBPELProcessUsingTheBPELDiagram</a> &gt; <a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">TheBPELDesignerPaletteElements</a> &gt; <a class="wikipage" href="Wiki39db.html?page=UsingTheBPELMapper">UsingTheBPELMapper</a> &gt; <a class="wikipage" href="Wikiad48.html?page=UsingNormalizedMessageProperties">UsingNormalizedMessageProperties</a> &gt; <a class="wikipage" href="Wikie39c.html?page=UsingHandlers">UsingHandlers</a> &gt; <a class="wikipage" href="Wikia3b6.html?page=UsingCorrelation">UsingCorrelation</a> &gt; <a class="wikipage" href="Wiki1f81.html?page=ValidatingTheBPELProcess">ValidatingTheBPELProcess</a></div>
+
+  <div style="clear:both; height:0;" > </div>
+
+</div>
+
+
+
+
+  
+
+
+
+
+
+<div id="actionsTop" class="pageactions"> 
+<!--
+  <span class="actionHome">
+    <a href="http://wiki.open-esb.java.net/Wiki.jsp?page=Main"
+       title="Go to home page Main ">Home</a>
+  </span>
+-->  
+  
+    
+    
+    
+<!--
+    
+  -->
+  
+  
+  <span class="actionIndex">
+     <a href="Wiki5f9e.html?page=PageIndex"
+       title="Alphabetically sorted list of pages [ x ]" accesskey="x">Index</a>
+  </span>
+  
+  <span class="actionRecentChanges">
+     <a href="Wiki5fc7.html?page=RecentChanges"
+        title="Pages sorted by modification date [ u ]" accesskey="u">Changes</a>
+  </span>
+
+  
+
+<!--
+  <span class="quicklinks quick2Bottom">
+    <a href="#footer" title="Go to Bottom" >&raquo;</a>
+  </span>
+-->
+  <div style="clear:both; height:0;"> </div> 
+</div>
+
+
+
+
+
+  <div id="page">
+
+
+
+
+
+<div class="tabmenu ">
+  
+  
+  
+  
+  
+  
+  
+
+  <span><a class="activetab" id="menu-pagecontent" onclick="TabbedSection.onclick('pagecontent')" accesskey="v" ><u>V</u>iew</a></span>
+  
+  
+  <span><a id="menu-attachments" onclick="TabbedSection.onclick('attachments')" accesskey="a" ><u>A</u>ttach (2)</a></span>
+  
+  <span><a id="menu-pageinfo" onclick="TabbedSection.onclick('pageinfo')" accesskey="i" ><u>I</u>nfo</a></span>
+  
+</div>
+<div class="tabs ">
+  <div id="pagecontent" >
+
+    
+
+
+
+
+
+
+
+<h3 id="section-BPELProcessLoggingAndAlerting-UsingTheBPELDesignerAndServiceEngine">Using the BPEL Designer and Service Engine </h3>
+<p><b>Contents</b>
+</p>
+<ul><li> <a class="wikipage" href="Wiki20e8.html?page=UsingBPELDesignerServiceEngine">Using the BPEL Designer and Service Engine</a>
+</li><li> <a class="wikipage" href="Wiki5e52.html?page=BPELDesignerAndServiceEngineOverview">Overview</a>
+</li><li> <a class="wikipage" href="Wiki3879.html?page=BPELDesignerAndServiceEngineFeatures">BPEL Designer and Service Engine Features</a>
+</li><li> <a class="wikipage" href="Wikifbc9.html?page=UnderstandingTheBPELModuleProject">Understanding the BPEL Module Project</a>
+</li><li> <a class="wikipage" href="Wiki0ddb.html?page=NavigatingTheBPELDesigner">Navigating the BPEL Designer</a>
+</li><li> <a class="wikipage" href="Wikia9da.html?page=CreatingTheBPELModuleProject">Creating a BPEL Module Project</a>
+</li><li> <a class="wikipage" href="Wiki17ca.html?page=DevelopingTheBPELProcessUsingTheBPELDiagram">Developing the BPEL Process Using the BPEL Diagram</a>
+</li><li> <a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">The BPEL Designer Palette Elements</a>
+</li><li> <a class="wikipage" href="Wiki39db.html?page=UsingTheBPELMapper">Using the BPEL Mapper</a>
+</li><li> <a class="wikipage" href="Wikiad48.html?page=UsingNormalizedMessageProperties">Using Normalized Message Properties</a>
+</li><li> <a class="wikipage" href="Wikie39c.html?page=UsingHandlers">Using Handlers</a>
+</li><li> <a class="wikipage" href="Wikia3b6.html?page=UsingCorrelation">Using Correlation</a>
+</li><li> <a class="wikipage" href="Wiki1f81.html?page=ValidatingTheBPELProcess">Validating a BPEL Process</a>
+</li><li> <span style="color:#3333ff;"><b>BPEL Process Logging and Alerting</b></span>
+<ul><li> Defining Logging
+</li><li> Defininf Alerting
+</li></ul></li><li> <a class="wikipage" href="Wiki2f9d.html?page=ConfiguringTheBPELServiceEngineRuntimeProperties">Configuring the BPEL Service Engine Runtime Properties</a>
+</li><li> <a class="wikipage" href="Wikicae3.html?page=BPELServiceEngineDeploymentArtifacts">BPEL Service Engine Deployment Artifacts</a>
+</li><li> <a class="wikipage" href="Wiki1302.html?page=TestingAndDebuggingBPELProcesses">Testing and Debugging BPEL Processes</a>
+</li><li> <a class="wikipage" href="Wiki434d.html?page=MonitoringTheBPELServiceEngine">Monitoring the BPEL Service Engine</a>
+</li><li> <a class="wikipage" href="Wiki77bf.html?page=ConfiguringTheQualityOfServiceProperties">Configuring Quality of Service (QOS) Properties, Throttling, and Redelivery</a>
+</li><li> <a class="wikipage" href="Wikife94.html?page=UsingDynamicPartnerLinksAndDynamicAddressing">Using Dynamic Partner Links and Dynamic Addressing</a>
+</li><li> <a class="wikipage" href="Wiki0931.html?page=ConfiguringPersistenceAndRecoveryForBPEL">Configuring Persistence and Recovery for the BPEL Service Engine</a>
+</li><li> <a class="wikipage" href="Wikid4c2.html?page=ConfiguringFailoverForBPEL">Configuring Failover for the BPEL Service Engine</a>
+</li><li> <a class="wikipage" href="Wiki21f2.html?page=BPELBluePrints">BPEL BluePrints</a>
+</li><li> <a class="wikipage" href="Wiki7030.html?page=BPELServiceEngineTaskHowTos">BPEL Service Engine Task How-tos</a>
+</li><li> <a class="wikipage" href="Wikif987.html?page=TroubleshootingTheBPELServiceEngine">Troubleshooting the BPEL Designer and Service Engine</a>
+</li></ul><br />
+<h2 id="section-BPELProcessLoggingAndAlerting-BPELProcessLoggingAndAlerting">BPEL Process Logging and Alerting</h2>
+<hr />
+<p>The Sun BPEL Service Engine provides you with the ability to trace the message or expression values during the process execution. The Logging and Alerting feature make use of standart WS-BPEL extension mechanism. Logging and alerting are supported for almost all BPEL activities.
+</p>
+<p>The NetBeans IDE provides the ability to define logging and alerting for the process activities. 
+</p>
+<ul><li> Logging is used to write specified expression values or partner links endpoint reference information to the server log. 
+</li><li> Alerting allows you to receive an alert with this information. 
+</li></ul><p>After you set the logging or alerting conditions and the BPEL process is executed, specified expression values are written to the server log file or an alert is sent to the user, depending on the log level.
+</p>
+<p>Both logging and alerting are defined in the Logging mapper. The Logging mapper is available from the Design or Source view menu bar. 
+<br />
+</p>
+<div class="center">
+<a class="wikipage" href="Wiki5233.html?page=BPELProcessLoggingAndAlerting">Top</a></div>
+<h3 id="section-BPELProcessLoggingAndAlerting-DefiningLogging">Defining Logging</h3>
+<p>When you defining logging for an activity using the Logging mapper, you can trace the value of the following components:
+</p>
+<ul><li> Variable
+</li><li> Part
+</li><li> Expression
+</li></ul>In the mappings you can use one or more XPath functions from the menu bar.
+<h4 id="section-BPELProcessLoggingAndAlerting-ToLogTheVariableValue">To log the variable value</h4>
+<ol><li> On the diagram, select an activity. The logging will be performed in connection with the selected activity's execution.
+</li><li> Go to the Logging tab of the BPEL Editor. The Logging mapper opens. You can also open the Logging mapper by right clicking the activity and choosing Go To > Logging (Alt-L).
+</li><li> In the Output (source) tree pane, expand the variables tree until the variable to be traced is visible.
+</li><li> In the Input (destination) tree pane expand the activity node. The nodes designating the moment of logging become visible.
+</li><li> Choose when the logging entry should be made and expand the appropriate node:
+<ul><li> <b>LOG_onStart:</b> The variable value is written to the log when the activity starts. 
+</li><li> <b>LOG_onComplete:</b> The variable value is written to the log when the activity execution is complete. 
+</li></ul></li><li> Define the level of logging. Drag the connection from the variable to be traced to the appropriate node in the destination tree pane. The following levels of logging are available: 
+<ul><li> <b>Severe</b>
+</li><li> <b>Warning</b>
+</li><li> <b>Info</b>
+</li><li> <b>Config</b>
+</li><li> <b>Fine</b>
+</li><li> <b>Finer</b>
+</li></ul></li></ol>To make a search of the value recorded to the log file, you can concatenate the value with the string literal as shown on the figure below.
+<table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/BPELProcessLoggingAndAlerting/logging-mapper.gif" height="400" width="670" alt="Image shows the Logging mapper as described in contex" /></td></tr>
+</table>
+
+In the Design view a small icon appears to the lower-right of the activity when it has logging defined. By clicking the icon you can switch to the Logging mapper.
+<table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/BPELProcessLoggingAndAlerting/logging-icon.gif" height="85" width="102" /></td></tr>
+</table>
+
+<p>  The entry to the log is only made if the log level defined for the variable corresponds to the log level specified for the BPEL Service Engine on the application server. 
+</p>
+<h4 id="section-BPELProcessLoggingAndAlerting-SettingTheLogLevelForTheBPELServiceEngine">Setting the log level for the BPEL Service Engine</h4>
+The log level for the BPEL Service Engine is specified in the GlassFish Admin Console.
+To set the log level for the BPEL Service Engine:
+<ol><li> In the NetBeans Services window, expand the Servers node and ensure that the GlassFish application server is running. A green arrow badge next to the server node indicates that the server is running. If the server is not running, right click the server name and choose Start from the context menu. 
+</li><li> Open the Admin Console in your browser. To do this, follow the steps:
+<ul><li> Right click GlassFish V2 application server node, and choose Properties from the context menu. The Servers window opens. On the Servers pane, GlassFish V2 should be selected. 
+</li><li> On the Connection tab, copy the contents of the Location field (by default it is <tt>localhost:4848</tt>).
+</li><li> Paste the string to the browser and press Enter. The Sun Java System Application Server Admin Console opens in the browser window.
+</li></ul></li><li> Log in to the Admin Console using your username and password. By default, the username is <tt>admin</tt> and the password is <tt>adminadmin</tt>.
+</li><li> On the left pane under the JBI node choose Components > sun-bpel-engine. The BPEL service engine properties page opens.
+</li><li> On the BPEL service engine properties page, select the Loggers tab. On the Loggers tab you can specify log levels for the individual loggers.
+</li><li> Choose the appropriate log level for the sun-bpel-engine from the drop down list. <br /> <br />
+  If logging is defined for a process activity, and the log level specified for it corresponds to the log level set for the BPEL SE, after you perform a test run of the process, the selected variable value will be written to the server log file.
+</li></ol><p><b>Note:</b> The project should be deployed to the application server. 
+</p>
+<h4 id="section-BPELProcessLoggingAndAlerting-ToViewTheLogFile">To view the log file</h4>
+<ol><li> In the Services window, under the Servers node, right click GlassFish V2 application server node and choose View Server log from the context menu. TheGlassFish server log opens in the Output window. The activity message value will be included in the log, you can use Search to find it. Note, that some overhead information is hidden. 
+</li><li> You can also open the log in a text editor and see the full information. Navigate to <b>&lt;application server installation directory &rarr; domains/domain1/log/ and open the <tt>server.log</tt> file with the text editor. <br />The information provided in the log includes the following points, divided with the vertical bar:
+</b><ul><li> Date and time of the entry
+</li><li> Log level 
+</li><li> Manager type (for logging this is Trace Manager)
+</li><li> Thread
+</li><li> The message value
+  Here is the sample of the log entry :
+</li></ul></li></ol><pre>
+[#|2008-03-25T09:26:18.796+0300|INFO|sun-
+appserver9.1|com.sun.jbi.engine.bpel.core.bpel.trace.BPELTraceManager|_ThreadID=26;_ThreadName=BPELSEInOutThread8;|&lt;?xml 
+version="1.0" encoding="UTF-8"?&gt;&lt;jbi:message xmlns:msgns="http://localhost/SynchronousSample/SynchronousSample" 
+name="input1" type="msgns:requestMessage" version="1.0"xmlns:jbi="http://java.sun.com/xml/ns/jbi/wsdl-11-
+wrapper"&gt;&lt;jbi:part&gt;&lt;syn:typeA xmlns:syn="http://xml.netbeans.org/schema/SynchronousSample"&gt; &lt;syn:paramA&gt;Hello 
+World&lt;/syn:paramA&gt;&lt;/syn:typeA&gt;&lt;/jbi:part&gt;&lt;/jbi:message&gt;|#]
+</pre>
+<p><br />
+</p>
+<div class="center">
+<a class="wikipage" href="Wiki5233.html?page=BPELProcessLoggingAndAlerting">Top</a></div>
+<h3 id="section-BPELProcessLoggingAndAlerting-DefiningAlerting">Defining Alerting</h3>
+The Alerting feature enables you to get notification in case specified events happen. Alerting events are connected with the execution of the process activities. 
+<p>As a general rule-of-thumb, whenever you log you may also want to consider sending an alert notification of the appropriate severity as you see fit. Fatal, Critical, and Major Alert Notification Severities map well to a SEVERE logging category. The Minor and Warning Alert Notification Severities map well to a WARNING logging category. The Info Alert Notification Severity maps well to an INFO logging category.
+</p>
+<p>The general workflow for defining alerting is as follows:
+</p>
+<ol><li> Set the alert level for your activity. This is done from the Logging Mapper, similar to the way you define Logging. Map the variable in the Output pane for which you want an alert, to the appropriate Alert activity and alert level, for example, <tt>ALERT_onComplete</tt> - <tt>major</tt>.<br />The Alert notification levels are:<br />
+<ul><li> Fatal
+</li><li> Critical
+</li><li> Major
+</li><li> Minor
+</li><li> Warning
+</li></ul></li><li> Ensure the application server is running and deploy the project.
+</li><li> From the Admin Console, choose or create MBean client and subscribe to getting event notifications. The client will extract alerting messages and perforn specified actions (write to log/send e-mail/do nothing).
+</li><li> Run the process and get notified.
+</li></ol><p><br />
+</p>
+<div class="center">
+<a class="wikipage" href="Wiki5233.html?page=BPELProcessLoggingAndAlerting">Top</a></div>
+<p><a class="wikipage" href="Wiki1f81.html?page=ValidatingTheBPELProcess">Previous</a><br />
+<a class="wikipage" href="Wiki2f9d.html?page=ConfiguringTheBPELServiceEngineRuntimeProperties">Next</a>
+</p>
+
+
+
+  </div>
+
+  
+  
+  <div id="attachments" style="display:none;" >
+
+    
+
+
+
+
+
+
+
+<div id="attachmentViewer">
+  <div class="list">
+    <h3>List of attachments &nbsp;&nbsp;&nbsp;&nbsp;
+    </h3>
+      <form action='#'>
+        <select name="attachSelect" id="attachSelect" size="16" 
+            onchange="Attach.showImage(this[this.selectedIndex], '%A4', 300, 300 )" >
+        <option value="Attachment Info" selected="selected" >--- Select Image to preview ---</option>
+        
+          
+          <option value="logging-icon.gif%A4http://wiki.open-esb.java.net/attach/BPELProcessLoggingAndAlerting/logging-icon.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=BPELProcessLoggingAndAlerting/logging-icon.gif%A43463 bytes%A41" >
+            logging-icon.gif (3463 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="logging-mapper.gif%A4http://wiki.open-esb.java.net/attach/BPELProcessLoggingAndAlerting/logging-mapper.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=BPELProcessLoggingAndAlerting/logging-mapper.gif%A430816 bytes%A41" >
+            logging-mapper.gif (30816 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+      </select>
+    </form>
+    <div class="small">&nbsp;</div>
+  </div>  
+
+  <div class="preview">
+    <h3>Image preview</h3>
+    <div id="attachImg" title="No Image Selected">No Image Selected</div>
+    <a href="#" class="small" style="display:none;" id="attachInfo">More info, including version history</a>
+  </div>
+
+  <div style="clear:both; height:0px;" > </div>
+
+</div>
+
+
+  </div>
+
+  
+  <div id="pageinfo" style="display:none;" >
+
+    
+
+
+
+
+
+
+
+
+  <p>
+  This page (revision-15) was last changed on 
+  <a href="http://wiki.open-esb.java.net/Diff.jsp?page=BPELProcessLoggingAndAlerting&amp;r1=15&amp;r2=14"
+    title="Show changes of last page update" >
+    
+    09-Jun-09 10:51 AM, -0700
+  </a> by rjacobus.
+  <a href="http://wiki.open-esb.java.net/rss.jsp?page=BPELProcessLoggingAndAlerting&amp;mode=wiki"
+    title="RSS page feed for BPEL Process Logging And Alerting" ><img src="images/xml.png" border="0" alt="[RSS]"/></a>
+    
+    <br />
+    This page was created on 
+    <a  href="http://wiki.open-esb.java.net/Wiki.jsp?page=BPELProcessLoggingAndAlerting&amp;version=1">06-Oct-08 23:49 PM, -0700</a> by rjacobus.
+    
+  </p>    
+
+  
+
+  
+   
+  
+  <p><a href="http://wiki.open-esb.java.net/PageInfo.jsp?page=BPELProcessLoggingAndAlerting" id="moreinfo" >More info...</a></p>
+  
+  
+
+  <div class="tabmenu ">
+  
+  
+  
+
+  
+
+  
+
+  
+  
+  
+  
+  <span><a class="activetab" id="menu-versionHistory" onclick="TabbedSection.onclick('versionHistory')" >Version History</a></span>
+  
+
+  <span><a id="menu-incomingLinks" onclick="TabbedSection.onclick('incomingLinks')" >Incoming Links</a></span>
+
+  <span><a id="menu-outgoingLinks" onclick="TabbedSection.onclick('outgoingLinks')" >Outgoing Links</a></span>
+
+  
+  
+  </div>
+<div class="tabs ">
+  
+  <div id="versionHistory" >
+
+
+    
+    <div class="zebra-table ">
+    <table class="wikitable" >
+      <tr>
+        <th>Version</th>                        
+        <th>Date</th>
+        <th>Author</th>
+        <th>Size</th>
+        <th>Changes ...</th>
+        
+      </tr>
+
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=BPELProcessLoggingAndAlerting&amp;version=15" accesskey="" title="">
+            15
+          </a>
+        </td>
+
+        <td>
+          09-Jun-09 10:51 AM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>9857</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=BPELProcessLoggingAndAlerting&amp;r1=15&amp;r2=14">to previous</a>
+            
+          
+
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=BPELProcessLoggingAndAlerting&amp;version=14" accesskey="" title="">
+            14
+          </a>
+        </td>
+
+        <td>
+          21-May-09 09:41 AM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>9756</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=BPELProcessLoggingAndAlerting&amp;r1=14&amp;r2=13">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=BPELProcessLoggingAndAlerting&amp;r1=15&amp;r2=14">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=BPELProcessLoggingAndAlerting&amp;version=13" accesskey="" title="">
+            13
+          </a>
+        </td>
+
+        <td>
+          05-Dec-08 11:31 AM, -0800
+        </td>
+        <td>SWeber</td>
+        <td>9753</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=BPELProcessLoggingAndAlerting&amp;r1=13&amp;r2=12">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=BPELProcessLoggingAndAlerting&amp;r1=15&amp;r2=13">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=BPELProcessLoggingAndAlerting&amp;version=12" accesskey="" title="">
+            12
+          </a>
+        </td>
+
+        <td>
+          26-Nov-08 14:29 PM, -0800
+        </td>
+        <td>rjacobus</td>
+        <td>9765</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=BPELProcessLoggingAndAlerting&amp;r1=12&amp;r2=11">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=BPELProcessLoggingAndAlerting&amp;r1=15&amp;r2=12">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=BPELProcessLoggingAndAlerting&amp;version=11" accesskey="" title="">
+            11
+          </a>
+        </td>
+
+        <td>
+          26-Nov-08 10:37 AM, -0800
+        </td>
+        <td>rjacobus</td>
+        <td>9778</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=BPELProcessLoggingAndAlerting&amp;r1=11&amp;r2=10">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=BPELProcessLoggingAndAlerting&amp;r1=15&amp;r2=11">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=BPELProcessLoggingAndAlerting&amp;version=10" accesskey="" title="">
+            10
+          </a>
+        </td>
+
+        <td>
+          10-Nov-08 13:01 PM, -0800
+        </td>
+        <td>rjacobus</td>
+        <td>9142</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=BPELProcessLoggingAndAlerting&amp;r1=10&amp;r2=9">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=BPELProcessLoggingAndAlerting&amp;r1=15&amp;r2=10">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=BPELProcessLoggingAndAlerting&amp;version=9" accesskey="" title="">
+            9
+          </a>
+        </td>
+
+        <td>
+          28-Oct-08 15:07 PM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>9170</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=BPELProcessLoggingAndAlerting&amp;r1=9&amp;r2=8">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=BPELProcessLoggingAndAlerting&amp;r1=15&amp;r2=9">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=BPELProcessLoggingAndAlerting&amp;version=8" accesskey="" title="">
+            8
+          </a>
+        </td>
+
+        <td>
+          16-Oct-08 14:12 PM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>9096</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=BPELProcessLoggingAndAlerting&amp;r1=8&amp;r2=7">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=BPELProcessLoggingAndAlerting&amp;r1=15&amp;r2=8">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=BPELProcessLoggingAndAlerting&amp;version=7" accesskey="" title="">
+            7
+          </a>
+        </td>
+
+        <td>
+          13-Oct-08 20:57 PM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>9068</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=BPELProcessLoggingAndAlerting&amp;r1=7&amp;r2=6">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=BPELProcessLoggingAndAlerting&amp;r1=15&amp;r2=7">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=BPELProcessLoggingAndAlerting&amp;version=6" accesskey="" title="">
+            6
+          </a>
+        </td>
+
+        <td>
+          13-Oct-08 20:51 PM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>8996</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=BPELProcessLoggingAndAlerting&amp;r1=6&amp;r2=5">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=BPELProcessLoggingAndAlerting&amp;r1=15&amp;r2=6">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=BPELProcessLoggingAndAlerting&amp;version=5" accesskey="" title="">
+            5
+          </a>
+        </td>
+
+        <td>
+          13-Oct-08 19:28 PM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>8719</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=BPELProcessLoggingAndAlerting&amp;r1=5&amp;r2=4">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=BPELProcessLoggingAndAlerting&amp;r1=15&amp;r2=5">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=BPELProcessLoggingAndAlerting&amp;version=4" accesskey="" title="">
+            4
+          </a>
+        </td>
+
+        <td>
+          13-Oct-08 19:24 PM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>8698</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=BPELProcessLoggingAndAlerting&amp;r1=4&amp;r2=3">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=BPELProcessLoggingAndAlerting&amp;r1=15&amp;r2=4">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=BPELProcessLoggingAndAlerting&amp;version=3" accesskey="" title="">
+            3
+          </a>
+        </td>
+
+        <td>
+          13-Oct-08 12:11 PM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>8147</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=BPELProcessLoggingAndAlerting&amp;r1=3&amp;r2=2">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=BPELProcessLoggingAndAlerting&amp;r1=15&amp;r2=3">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=BPELProcessLoggingAndAlerting&amp;version=2" accesskey="" title="">
+            2
+          </a>
+        </td>
+
+        <td>
+          07-Oct-08 00:25 AM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>1814</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=BPELProcessLoggingAndAlerting&amp;r1=2&amp;r2=1">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=BPELProcessLoggingAndAlerting&amp;r1=15&amp;r2=2">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=BPELProcessLoggingAndAlerting&amp;version=1" accesskey="" title="">
+            1
+          </a>
+        </td>
+
+        <td>
+          06-Oct-08 23:49 PM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>1811</td>
+
+        <td>
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=BPELProcessLoggingAndAlerting&amp;r1=15&amp;r2=1">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+
+    </table>  
+    </div>
+    
+
+  </div>
+
+  
+
+  <div id="incomingLinks" style="display:none;" >
+
+    <a class="wikipage" href="Wiki5233.html?page=BPELProcessLoggingAndAlerting" accesskey="" title="">BPEL Process Logging And Alerting</a>
+    <ul><li><a class="wikipage" href="Wiki21f2.html?page=BPELBluePrints">BPEL Blue Prints</a>
+</li><li><a class="wikipage" href="Wiki3879.html?page=BPELDesignerAndServiceEngineFeatures">BPEL Designer And Service Engine Features</a>
+</li><li><a class="wikipage" href="Wiki5e52.html?page=BPELDesignerAndServiceEngineOverview">BPEL Designer And Service Engine Overview</a>
+</li><li><a class="wikipage" href="Wikicae3.html?page=BPELServiceEngineDeploymentArtifacts">BPEL Service Engine Deployment Artifacts</a>
+</li><li><a class="wikipage" href="Wiki7030.html?page=BPELServiceEngineTaskHowTos">BPEL Service Engine Task How Tos</a>
+</li><li><a class="wikipage" href="Wiki73af.html?page=ConfiguringClusteringAndFailoverForBPEL">Configuring Clustering And Failover For BPEL</a>
+</li><li><a class="wikipage" href="Wikid4c2.html?page=ConfiguringFailoverForBPEL">Configuring Failover For BPEL</a>
+</li><li><a class="wikipage" href="Wiki0931.html?page=ConfiguringPersistenceAndRecoveryForBPEL">Configuring Persistence And Recovery For BPEL</a>
+</li><li><a class="wikipage" href="Wiki2f9d.html?page=ConfiguringTheBPELServiceEngineRuntimeProperties">Configuring The BPEL Service Engine Runtime Properties</a>
+</li><li><a class="wikipage" href="Wiki77bf.html?page=ConfiguringTheQualityOfServiceProperties">Configuring The Quality Of Service Properties</a>
+</li><li><a class="wikipage" href="Wikia9da.html?page=CreatingTheBPELModuleProject">Creating The BPEL Module Project</a>
+</li><li><a class="wikipage" href="Wiki17ca.html?page=DevelopingTheBPELProcessUsingTheBPELDiagram">Developing The BPEL Process Using The BPEL Diagram</a>
+</li><li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=LoggingAndStatisticsMonitoring">Logging And Statistics Monitoring</a>
+</li><li><a class="wikipage" href="Wiki434d.html?page=MonitoringTheBPELServiceEngine">Monitoring The BPEL Service Engine</a>
+</li><li><a class="wikipage" href="Wiki0ddb.html?page=NavigatingTheBPELDesigner">Navigating The BPEL Designer</a>
+</li><li><a class="wikipage" href="Wiki1302.html?page=TestingAndDebuggingBPELProcesses">Testing And Debugging BPEL Processes</a>
+</li><li><a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">The BPEL Designer Palette Elements</a>
+</li><li><a class="wikipage" href="Wikif987.html?page=TroubleshootingTheBPELServiceEngine">Troubleshooting The BPEL Service Engine</a>
+</li><li><a class="wikipage" href="Wikifbc9.html?page=UnderstandingTheBPELModuleProject">Understanding The BPEL Module Project</a>
+</li><li><a class="wikipage" href="Wiki20e8.html?page=UsingBPELDesignerServiceEngine">Using BPEL Designer Service Engine</a>
+</li><li><a class="wikipage" href="Wikia3b6.html?page=UsingCorrelation">Using Correlation</a>
+</li><li><a class="wikipage" href="Wikife94.html?page=UsingDynamicPartnerLinksAndDynamicAddressing">Using Dynamic Partner Links And Dynamic Addressing</a>
+</li><li><a class="wikipage" href="Wikie39c.html?page=UsingHandlers">Using Handlers</a>
+</li><li><a class="wikipage" href="Wikiad48.html?page=UsingNormalizedMessageProperties">Using Normalized Message Properties</a>
+</li><li><a class="wikipage" href="Wiki39db.html?page=UsingTheBPELMapper">Using The BPEL Mapper</a>
+</li><li><a class="wikipage" href="Wiki1f81.html?page=ValidatingTheBPELProcess">Validating The BPEL Process</a>
+</li></ul>
+  </div>
+
+
+  <div id="outgoingLinks" style="display:none;" >
+
+    
+      <div class="ReferredPagesPlugin">
+<a class="wikipage" href="Wiki5233.html?page=BPELProcessLoggingAndAlerting" title="ReferredPagesPlugin: depth[1] include[.*] exclude[^$] format[compact]">BPELProcessLoggingAndAlerting</a>
+<ul>
+<li><a class="wikipage" href="Wiki21f2.html?page=BPELBluePrints">BPELBluePrints</a></li>
+<li><a class="wikipage" href="Wiki3879.html?page=BPELDesignerAndServiceEngineFeatures">BPELDesignerAndServiceEngineFeatures</a></li>
+<li><a class="wikipage" href="Wiki5e52.html?page=BPELDesignerAndServiceEngineOverview">BPELDesignerAndServiceEngineOverview</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=BPELProcessLoggingAndAlerting/logging-icon.gif">BPELProcessLoggingAndAlerting/logging-icon.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=BPELProcessLoggingAndAlerting/logging-mapper.gif">BPELProcessLoggingAndAlerting/logging-mapper.gif</a></li>
+<li><a class="wikipage" href="Wikicae3.html?page=BPELServiceEngineDeploymentArtifacts">BPELServiceEngineDeploymentArtifacts</a></li>
+<li><a class="wikipage" href="Wiki7030.html?page=BPELServiceEngineTaskHowTos">BPELServiceEngineTaskHowTos</a></li>
+<li><a class="wikipage" href="Wikid4c2.html?page=ConfiguringFailoverForBPEL">ConfiguringFailoverForBPEL</a></li>
+<li><a class="wikipage" href="Wiki0931.html?page=ConfiguringPersistenceAndRecoveryForBPEL">ConfiguringPersistenceAndRecoveryForBPEL</a></li>
+<li><a class="wikipage" href="Wiki2f9d.html?page=ConfiguringTheBPELServiceEngineRuntimeProperties">ConfiguringTheBPELServiceEngineRuntimeProperties</a></li>
+<li><a class="wikipage" href="Wiki77bf.html?page=ConfiguringTheQualityOfServiceProperties">ConfiguringTheQualityOfServiceProperties</a></li>
+<li><a class="wikipage" href="Wikia9da.html?page=CreatingTheBPELModuleProject">CreatingTheBPELModuleProject</a></li>
+<li><a class="wikipage" href="Wiki17ca.html?page=DevelopingTheBPELProcessUsingTheBPELDiagram">DevelopingTheBPELProcessUsingTheBPELDiagram</a></li>
+<li><a class="wikipage" href="Wiki434d.html?page=MonitoringTheBPELServiceEngine">MonitoringTheBPELServiceEngine</a></li>
+<li><a class="wikipage" href="Wiki0ddb.html?page=NavigatingTheBPELDesigner">NavigatingTheBPELDesigner</a></li>
+<li><a class="wikipage" href="Wiki1302.html?page=TestingAndDebuggingBPELProcesses">TestingAndDebuggingBPELProcesses</a></li>
+<li><a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">TheBPELDesignerPaletteElements</a></li>
+<li><a class="wikipage" href="Wikif987.html?page=TroubleshootingTheBPELServiceEngine">TroubleshootingTheBPELServiceEngine</a></li>
+<li><a class="wikipage" href="Wikifbc9.html?page=UnderstandingTheBPELModuleProject">UnderstandingTheBPELModuleProject</a></li>
+<li><a class="wikipage" href="Wiki20e8.html?page=UsingBPELDesignerServiceEngine">UsingBPELDesignerServiceEngine</a></li>
+<li><a class="wikipage" href="Wikia3b6.html?page=UsingCorrelation">UsingCorrelation</a></li>
+<li><a class="wikipage" href="Wikife94.html?page=UsingDynamicPartnerLinksAndDynamicAddressing">UsingDynamicPartnerLinksAndDynamicAddressing</a></li>
+<li><a class="wikipage" href="Wikie39c.html?page=UsingHandlers">UsingHandlers</a></li>
+<li><a class="wikipage" href="Wikiad48.html?page=UsingNormalizedMessageProperties">UsingNormalizedMessageProperties</a></li>
+<li><a class="wikipage" href="Wiki39db.html?page=UsingTheBPELMapper">UsingTheBPELMapper</a></li>
+<li><a class="wikipage" href="Wiki1f81.html?page=ValidatingTheBPELProcess">ValidatingTheBPELProcess</a></li>
+</ul>
+</div>
+
+    
+    
+  </div>
+
+
+  
+  
+  <div style="clear:both; height:0px;" > </div>
+</div>
+ 
+
+
+
+
+
+
+
+
+
+  </div>
+
+  
+<div style="clear:both; height:0px;" > </div>
+</div>
+
+</div> 
+
+
+  
+
+
+
+<div id="favorites">
+
+
+<div class="username">G'day,
+  
+    <a title="Hi, Anonymous Guest"  href="Wiki48c3.html?page=Login">Anonymous Guest</a>
+  
+  
+  
+  
+</div>  
+
+
+
+
+
+
+
+
+<p />
+
+
+
+  
+<p />
+<p />
+
+
+<div class="wikiversion">JSPWiki v2.4.100</div>
+
+<div class="rssfeed"><a href="rss.rdf"><img src="images/xml.png" alt="[RSS]" border="0" title="Aggregate the RSS feed of the entire wiki"/></a></div>
+
+<div style="clear:both; height:0px;" > </div>
+
+</div> 
+
+  
+
+
+
+
+
+<div id='actionsBottom' class="pageactions"> 
+
+  <span class='quicklinks quick2Top'>
+    <a href="#wikibody" title='Go to Top' >&laquo;</a>
+  </span>
+
+  <span class="actionHome">
+    <a href="Wikib2ab.html?page=Main"
+       title="Go to home page Main ">Home</a>
+  </span>
+  
+  
+    
+
+    
+  
+  
+  <span class="actionIndex">
+     <a href="Wiki5f9e.html?page=PageIndex"
+       title="Alphabetically sorted list of pages [ x ]">Index</a>
+  </span>
+  
+  <span class="actionRecentChanges">
+     <a href="Wiki5fc7.html?page=RecentChanges"
+        title="Pages sorted by modification date [ u ]">Changes</a>
+  </span>
+
+  
+    
+      <span class="actionPrefs">
+        <a href="Wiki7eba.html?page=UserPreferences"
+           title="Set User Preferences" >Prefs</a>
+      </span>
+    
+  
+
+  
+    <div class="pageinfo">
+      
+        This page (revision-15) was last changed on 
+        <a href="http://wiki.open-esb.java.net/Diff.jsp?page=BPELProcessLoggingAndAlerting&amp;r1=15&amp;r2=14"
+          title="Show changes of last page update" >  
+        
+        09-Jun-09 10:51 AM, -0700</a>
+      
+      
+      by rjacobus
+
+      
+    </div>  
+  
+
+  <div style="clear:both; height:0;"> </div> 
+</div>
+
+  
+ 
+  
+
+  
+
+
+<div id="footer">
+
+<table><tr><td>
+  <div class="wikiversion">
+    JSPWiki v2.4.100                       
+  </div>
+</td>
+<td>
+<br>Copyright &copy; 2011, Oracle and/or its affiliates. All rights reserved. Oracle and Java are registered trademarks of Oracle and/or its affiliates. Other names may be trademarks of their respective owners. <a href="http://www.oracle.com/"><img src="images/ora_logo_small.gif" /> </a>
+  <div class="rssfeed">
+    <a href="rss.rdf"><img src="images/xml.png" alt="[RSS]" border="0" title="Aggregate the RSS feed"/></a>
+  </div>
+</td></tr></table>
+  <div style="clear:both; height:0px;" > </div>
+
+</div>
+  
+
+  </div>
+  <div style="clear:both; height:0;" > </div>
+
+
+
+<!-- Page counters -->
+<script type="text/javascript" language="javascript">
+var sc_project=1965314; 
+var sc_invisible=1; 
+var sc_partition=17; 
+var sc_security="c5f5efea"; 
+</script>
+<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script>
+
+
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+<script type="text/javascript">
+_uacct = "UA-993823-3";
+urchinTracker();
+</script>
+</body>
+
+<!-- Mirrored from wiki.open-esb.java.net/Wiki.jsp?page=BPELProcessLoggingAndAlerting by HTTrack Website Copier/3.x [XR&CO'2010], Thu, 08 Jul 2010 02:16:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+</html>
+
+

@@ -1,0 +1,1487 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+
+
+<!-- Mirrored from wiki.open-esb.java.net/Wiki.jsp?page=UsingHandlers by HTTrack Website Copier/3.x [XR&CO'2010], Thu, 08 Jul 2010 02:16:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head>
+
+  <title>Using Handlers - OpenESB: the Open Source ESB for SOA & Integration</title>
+  
+
+
+
+
+
+<link rel="stylesheet" type="text/css" media="screen, projection" 
+     href="templates/brushed/jspwiki.css" />
+
+<!-- browser specific cssinclude not required in brushed template
+<script type="text/javascript"
+         src="/templates/brushed/cssinclude.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+  Wiki.loadBrowserSpecificCSS("brushed");
+//]]>
+</script>
+-->
+
+
+
+
+<link rel="stylesheet" type="text/css" 
+     href="templates/brushed/skins/Smart/skin.css" />
+<!-- INCLUDERESOURCES (stylesheet) -->
+
+
+
+<!--[if IE]>
+<style type="text/css" media="screen">
+img, a, div { behavior: url("templates/brushed/scripts/iepngfix.htc"); }
+</style>
+<![endif]-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="search" 
+     href="Wiki702d.html?page=FindPage"
+    title="Search Open ESB Wiki" />
+<link rel="help"   
+     href="Wikia3b7.html?page=TextFormattingRules" 
+    title="Help" />
+<link rel="start"  
+     href="Wikib2ab.html?page=Main"                
+    title="Front page" />
+<!--<link rel="stylesheet" type="text/css" media="print"
+     href="/templates/brushed/jspwiki_print.css" />
+<link rel="alternate stylesheet" type="text/css"
+     href="/templates/brushed/jspwiki_print.css" 
+    title="Print friendly" />-->
+<link rel="alternate stylesheet" type="text/css" 
+     href="templates/brushed/jspwiki.css" 
+    title="Standard" />
+<link rel="icon" type="image/png" href="images/openesb16x16.png" />
+
+<link rel="template" href="http://wiki.open-esb.java.net/templates/brushed" id="template-dir"/>
+<link rel="alternate" type="application/rss+xml" title="RSS wiki feed for the entire site." href="rss.rdf" />
+<link rel="alternate" type="application/rss+xml" title="RSS wiki feed for page Open ESB Wiki: UsingHandlers." href="http://wiki.open-esb.java.net/rss.jsp?page=UsingHandlers&amp;mode=wiki" />
+
+
+
+<script type="text/javascript"
+         src="templates/brushed/scripts/prototype.js" ></script>
+<script type="text/javascript" 
+         src="templates/brushed/scripts/brushed.js" ></script>
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+  Wiki.setBaseURL ( "index.html" );
+  Wiki.setPageName( "UsingHandlers" ); /* pagename without blanks */
+  Wiki.setUserName( "113.170.138.21" );
+
+  Wiki.setDELIM              ( "¤" );
+  Wiki.setPrefDateFormat     ( "dd-MMM-yy HH:mm a, Z" );
+  Wiki.setPrefSkinName       ( "Smart" );
+  Wiki.setPrefTimeZone       ( "" );
+  Wiki.setPrefEditAreaHeight ( "24" );
+  Wiki.setPrefShowQuickLinks ( "no" );
+  Wiki.setPrefSowCalendar    ( "no" );
+//]]>
+</script>
+<script type="text/javascript" 
+         src="templates/brushed/skins/Smart/skin.js"></script>
+
+<!-- INCLUDERESOURCES (script) -->
+
+
+  
+</head>
+
+<body class="view" id="gradient">
+<!--
+<p id="underline" class="barMargin"></p>
+-->
+<div id="wikibody" >
+  
+
+
+
+
+<div id="header">
+<!--
+  <div class="applicationlogo"> 
+    <a href="https://open-esb.dev.java.net/public/downloads.html" title="OpenESB Downloads"></a>
+  </div>
+-->  
+
+<table width="100%" id="headertable"><tr>
+  <td><a href="https://open-esb.dev.java.net/" style="border: none;"><img style="border: none;" height="60" width="304" alt="Open ESB: the Open Enterprise Service Bus... Open Standards + Open Source" src="images/ESBLogoTag-304x60C.jpg"/></a></td>
+
+
+  <td id="rhstop">
+  
+
+<div id="rhsuser" class="rhsusername">
+  Not logged in | 
+    <a title="Hi, Anonymous Guest"  href="Wiki48c3.html?page=Login">Login</a>
+  
+  
+
+  
+
+  
+</div>  
+  
+  
+<div id="oesearch" style="vertical-align: bottom">
+  <br/>
+  <br/>
+	<form action="https://open-esb.dev.java.net/SearchResults.html" id="cse-search-box"> 
+	  <div>
+	    <input type="hidden" name="cx" value="013607241216432041017:tcd_nlc0tem" />
+	    <input type="hidden" name="cof" value="FORID:11" />
+	    <input type="hidden" name="ie" value="UTF-8" />
+	    <input type="text" name="q" size="20" />
+	    <input type="submit" name="sa" value="Search" />
+	  </div>
+	</form>
+</div>
+  
+  
+  </td>
+</tr></table>
+
+<!-- ==================== Menu Structure ==================== -->
+<script type="text/javascript" src="static/menu.js" ></script>
+<div id="z_menu_02"><table width="100%"><tr><td>
+	<div id="z_menu_01">
+		<script>writeOEMenu();</script>
+	</div>
+</td></tr></table></div>
+<!-- ==================== End menu ==================== -->
+
+
+
+
+
+
+
+
+
+
+  <div class="companylogo">
+  </div>
+  
+  
+<!--
+<ul class="iconlist">
+<li class="documentation"><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=Documentation"><img src="/openesbwiki/templates/brushed/skins/Smart/images/documentation.png" width="81" height="65"/></a></li>
+<li class="link"><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsefulLinks"><img src="/openesbwiki/templates/brushed/skins/Smart/images/links.png" width="64" height="65"/></a></li>
+<li class="participate"><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=GetInvolved"><img src="/openesbwiki/templates/brushed/skins/Smart/images/participate.png" width="61" height="68"/></a></li>
+<li class="downloads"><a href="https://open-esb.dev.java.net/Downloads.html"><img src="/openesbwiki/templates/brushed/skins/Smart/images/downloads.png" width="61" height="65"/></a></li>
+</ul>
+<div style="clear: left;"></div>
+ --> 
+
+  <table width="100%">
+  <tr>
+  <td><div class="pagename2">Using Handlers</div></td>
+  </tr>
+  </table>
+  
+
+
+  
+  <div class="searchbox">
+
+
+<form action="http://wiki.open-esb.java.net/Search.jsp"
+    onsubmit="SearchBox.submit( this.query.value )"
+ onmouseover="Element.show('searchboxMenu');"
+  onmouseout= "Element.hide('searchboxMenu');"
+        name="searchForm" id="searchForm" 
+        accept-charset="UTF-8">
+  <div>
+  
+  <input onblur="if( this.value == '' ) { this.value = 'Search'}; " 
+        onfocus="if( this.value == 'Search' ) { this.value = ''}; "
+           type="text" value="Wiki search" name="query" id="query" size="24" 
+      accesskey="f"></input>
+  </div>  
+  <div id="searchboxMenu" style='display:none;'>
+    <div>
+      <a href="javascript://nop/" 
+         onclick="SearchBox.navigation( 'Wiki195c.html?page=__PAGEHERE__','UsingHandlers' );return false;"
+         title="View the selected page">view</a> 
+      | 
+      <a href="javascript://nop/" 
+         onclick="SearchBox.navigation( 'http://wiki.open-esb.java.net/Edit.jsp?page=__PAGEHERE__','UsingHandlers' );return false;"
+         title="Edit the selected page">edit</a> 
+      | 
+      <a href="javascript://nop/" 
+         onclick="SearchBox.clone( 'http://wiki.open-esb.java.net/Edit.jsp?page=__PAGEHERE__','UsingHandlers' );return false;"
+         title="Clone this page">clone</a> 
+      |
+      <a href="javascript://nop/" 
+         onclick="SearchBox.navigation( 'Search136d.html?query=__PAGEHERE__','UsingHandlers' );return false;"
+         title="Advanced Search">find</a> 
+      [ f ]
+    </div>
+    <div id="searchResult" > </div>
+    <div id="recentSearches" > </div>
+  </div>
+
+</form>
+<script type="text/javascript">
+//<![CDATA[    
+    function updateSearchResult( )
+    {  
+      if( $F('query') == 'Search' ) return;
+      new Ajax.Updater(
+        'searchResult', 
+        'templates/brushed/FindAjax.html',
+        { 
+          asynchronous: true,
+          parameters: Form.serialize( 'searchForm' ) + "&compact=true"
+        } ); 
+    } ;
+    new Form.Element.Observer( "query", 1, updateSearchResult ); 
+//]]>
+</script>
+    
+   </div>
+
+  <div class="breadcrumbs">Your trail: <a class="wikipage" href="Wiki5fc7.html?page=RecentChanges">RecentChanges</a> &gt; <a class="wikipage" href="Wiki20e8.html?page=UsingBPELDesignerServiceEngine">UsingBPELDesignerServiceEngine</a> &gt; <a class="wikipage" href="Wiki5e52.html?page=BPELDesignerAndServiceEngineOverview">BPELDesignerAndServiceEngineOverview</a> &gt; <a class="wikipage" href="Wiki3879.html?page=BPELDesignerAndServiceEngineFeatures">BPELDesignerAndServiceEngineFeatures</a> &gt; <a class="wikipage" href="Wiki0ddb.html?page=NavigatingTheBPELDesigner">NavigatingTheBPELDesigner</a> &gt; <a class="wikipage" href="Wikia9da.html?page=CreatingTheBPELModuleProject">CreatingTheBPELModuleProject</a> &gt; <a class="wikipage" href="Wiki17ca.html?page=DevelopingTheBPELProcessUsingTheBPELDiagram">DevelopingTheBPELProcessUsingTheBPELDiagram</a> &gt; <a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">TheBPELDesignerPaletteElements</a> &gt; <a class="wikipage" href="Wiki39db.html?page=UsingTheBPELMapper">UsingTheBPELMapper</a> &gt; <a class="wikipage" href="Wikiad48.html?page=UsingNormalizedMessageProperties">UsingNormalizedMessageProperties</a></div>
+
+  <div style="clear:both; height:0;" > </div>
+
+</div>
+
+
+
+
+  
+
+
+
+
+
+<div id="actionsTop" class="pageactions"> 
+<!--
+  <span class="actionHome">
+    <a href="http://wiki.open-esb.java.net/Wiki.jsp?page=Main"
+       title="Go to home page Main ">Home</a>
+  </span>
+-->  
+  
+    
+    
+    
+<!--
+    
+  -->
+  
+  
+  <span class="actionIndex">
+     <a href="Wiki5f9e.html?page=PageIndex"
+       title="Alphabetically sorted list of pages [ x ]" accesskey="x">Index</a>
+  </span>
+  
+  <span class="actionRecentChanges">
+     <a href="Wiki5fc7.html?page=RecentChanges"
+        title="Pages sorted by modification date [ u ]" accesskey="u">Changes</a>
+  </span>
+
+  
+
+<!--
+  <span class="quicklinks quick2Bottom">
+    <a href="#footer" title="Go to Bottom" >&raquo;</a>
+  </span>
+-->
+  <div style="clear:both; height:0;"> </div> 
+</div>
+
+
+
+
+
+  <div id="page">
+
+
+
+
+
+<div class="tabmenu ">
+  
+  
+  
+  
+  
+  
+  
+
+  <span><a class="activetab" id="menu-pagecontent" onclick="TabbedSection.onclick('pagecontent')" accesskey="v" ><u>V</u>iew</a></span>
+  
+  
+  <span><a id="menu-attachments" onclick="TabbedSection.onclick('attachments')" accesskey="a" ><u>A</u>ttach (5)</a></span>
+  
+  <span><a id="menu-pageinfo" onclick="TabbedSection.onclick('pageinfo')" accesskey="i" ><u>I</u>nfo</a></span>
+  
+</div>
+<div class="tabs ">
+  <div id="pagecontent" >
+
+    
+
+
+
+
+
+
+
+<h3 id="section-UsingHandlers-UsingTheBPELDesignerAndServiceEngine">Using the BPEL Designer and Service Engine </h3>
+<p><b>Contents</b>
+</p>
+<ul><li> <a class="wikipage" href="Wiki20e8.html?page=UsingBPELDesignerServiceEngine">Using the BPEL Designer and Service Engine</a>
+</li><li> <a class="wikipage" href="Wiki5e52.html?page=BPELDesignerAndServiceEngineOverview">Overview</a>
+</li><li> <a class="wikipage" href="Wiki3879.html?page=BPELDesignerAndServiceEngineFeatures">BPEL Designer and Service Engine Features</a>
+</li><li> <a class="wikipage" href="Wikifbc9.html?page=UnderstandingTheBPELModuleProject">Understanding the BPEL Module Project</a>
+</li><li> <a class="wikipage" href="Wiki0ddb.html?page=NavigatingTheBPELDesigner">Navigating the BPEL Designer</a>
+</li><li> <a class="wikipage" href="Wikia9da.html?page=CreatingTheBPELModuleProject">Creating a BPEL Module Project</a>
+</li><li> <a class="wikipage" href="Wiki17ca.html?page=DevelopingTheBPELProcessUsingTheBPELDiagram">Developing the BPEL Process Using the BPEL Diagram</a>
+</li><li> <a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">The BPEL Designer Palette Elements</a>
+</li><li> <a class="wikipage" href="Wiki39db.html?page=UsingTheBPELMapper">Using the BPEL Mapper</a>
+</li><li> <a class="wikipage" href="Wikiad48.html?page=UsingNormalizedMessageProperties">Using Normalized Message Properties</a>
+</li><li> <span style="color:#3333ff;"><b>Using Handlers</b></span>
+<ul><li> Using a Fault Handler
+</li><li> Using an Event Handler
+</li><li> Using a Compensation Handler
+</li><li> Using a Termination Handler
+</li></ul></li><li> <a class="wikipage" href="Wikia3b6.html?page=UsingCorrelation">Using Correlation</a>
+</li><li> <a class="wikipage" href="Wiki1f81.html?page=ValidatingTheBPELProcess">Validating a BPEL Process</a>
+</li><li> <a class="wikipage" href="Wiki5233.html?page=BPELProcessLoggingAndAlerting">BPEL Process Logging and Alerting</a>
+</li><li> <a class="wikipage" href="Wiki2f9d.html?page=ConfiguringTheBPELServiceEngineRuntimeProperties">Configuring the BPEL Service Engine Runtime Properties</a>
+</li><li> <a class="wikipage" href="Wikicae3.html?page=BPELServiceEngineDeploymentArtifacts">BPEL Service Engine Deployment Artifacts</a>
+</li><li> <a class="wikipage" href="Wiki1302.html?page=TestingAndDebuggingBPELProcesses">Testing and Debugging BPEL Processes</a>
+</li><li> <a class="wikipage" href="Wiki434d.html?page=MonitoringTheBPELServiceEngine">Monitoring the BPEL Service Engine</a>
+</li><li> <a class="wikipage" href="Wiki77bf.html?page=ConfiguringTheQualityOfServiceProperties">Configuring Quality of Service (QOS) Properties, Throttling, and Redelivery</a>
+</li><li> <a class="wikipage" href="Wikife94.html?page=UsingDynamicPartnerLinksAndDynamicAddressing">Using Dynamic Partner Links and Dynamic Addressing</a>
+</li><li> <a class="wikipage" href="Wiki0931.html?page=ConfiguringPersistenceAndRecoveryForBPEL">Configuring Persistence and Recovery for the BPEL Service Engine</a>
+</li><li> <a class="wikipage" href="Wikid4c2.html?page=ConfiguringFailoverForBPEL">Configuring Failover for the BPEL Service Engine</a>
+</li><li> <a class="wikipage" href="Wiki21f2.html?page=BPELBluePrints">BPEL BluePrints</a>
+</li><li> <a class="wikipage" href="Wiki7030.html?page=BPELServiceEngineTaskHowTos">BPEL Service Engine Task How-tos</a>
+</li><li> <a class="wikipage" href="Wikif987.html?page=TroubleshootingTheBPELServiceEngine">Troubleshooting the BPEL Designer and Service Engine</a>
+</li></ul><h2 id="section-UsingHandlers-UsingHandlers">Using Handlers</h2>
+<hr />
+<p>The following sections describe the various BPEL handlers, the circumstances under which you would use each handler, and the use of those elements within the context of the BPEL Designer.
+</p>
+<p>The BPEL Handlers are:
+</p>
+<ul><li> The Fault Handler
+</li><li> The Event Handler
+</li><li> The Compensation Handler
+</li><li> The Termination Handler
+</li></ul><h3 id="section-UsingHandlers-UsingAFaultHandler">Using a Fault Handler</h3>
+<h4 id="section-UsingHandlers-WhenToUse">When to Use</h4>
+The BPEL language provides the capability to catch and manage exceptions using fault handlers. For example, exceptions occur when web services return different data than was expected. If faults are not handled, the entire BPEL process can be thrown into a faulted state. Therefore, to prevent the entire process from fault, you can add fault handlers to catch and manage exceptions within particular Scopes.
+<p>Each fault handler contains an activity that runs in case of an error. For example, a partner service is notified if an error has occurred. Fault handlers can be added to the entire process or to individual Scope elements.
+</p>
+<p>You can attach one Fault Handler container to either the Process or the Scope elements. Inside the Fault Handlers container, you can create several Catch activities configured to catch specific kinds of faults, or one Catch All handler element to catch all the exceptions not caught by specific handlers.
+</p>
+<h4 id="section-UsingHandlers-Usage">Usage</h4>
+<ol><li> Right-click the <tt>Scope</tt> or <tt>Process</tt> element and choose <tt>Add</tt> &rarr; <tt>Fault Handlers</tt>.<br />
+  An empty container element appears.
+</li><li> Right-click the Fault Handler container and choose <tt>Add</tt> &rarr; <tt>Catch</tt> or <tt>Add</tt> &rarr; <tt>Catch All</tt>.<br /> You can add as many specific <tt>Catch</tt> elements as you wish to the Fault Handlers group. You can add only one <tt>Catch All</tt> element per Fault Handlers container.
+</li><li> Add an activity to the Catch or Catch All element that will be executed in case of a fault.
+</li></ol><h4 id="section-UsingHandlers-CatchElement">Catch Element</h4>
+Use this element to intercept and deal with a specific kind of fault.
+<p>This element is used within an appropriate Fault Handlers container element.
+</p>
+<h4 id="section-UsingHandlers-CatchElementProperties">Catch Element Properties</h4>
+The properties of the <tt>Catch</tt> element are defined in the Properties window. You can also right-click the element on the diagram and choose <tt>Properties</tt>. 
+<p>The available properties are:
+</p>
+<ul><li> <b>Fault Name</b> - Selects the qname of the fault from the list of faults, which contains faults defined in the WSDL files. You can also specify a new user-defined fault in a fault handler or in a throw.
+</li><li> <b>Fault Variable Name</b> - Specifies the name of a variable. The <tt>Catch</tt> is the receiver of the fault. The fault is produced by either a throw, a partner, or system. The fault variable puts the message's data into the fault. This variable is created and initialized in the <tt>Catch</tt>. 
+</li><li> <b>Fault Variable Type</b> - Specify the type of the variable. The type can be either Message (WSDL) or Global Element (XSD).
+</li></ul><table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/UsingHandlers/catchproperties.gif" height="161" width="462" alt="Image shows the Catch Element Properties" /></td></tr>
+</table>
+
+<p />
+<h4 id="section-UsingHandlers-CatchAllElement">Catch All Element</h4>
+Use the Catch All element to intercept and deal with all faults that are not caught by an associated catch element.
+<p>The Catch All element is used within a fault handler window along with one or more Catch elements. It is defined within a Fault Handlers container element along with one or more Catch elements.
+</p>
+<p>There are no properties for the Catch All element. Its behavior is pre-defined and requires no property configuration.
+</p>
+<p><br />
+</p>
+<div class="center">
+<a class="wikipage" href="Wikie39c.html?page=UsingHandlers">Top</a></div>
+<p />
+<h3 id="section-UsingHandlers-UsingAnEventHandler">Using an Event Handler</h3>
+<h4 id="section-UsingHandlers-WhenToUse">When to Use</h4>
+The entire BPEL process as well as each individual Scope can be associated with a set of Event Handlers that are invoked concurrently if the corresponding event occurs. The actions taken within an Event Handler can be any type of activity, such as Sequence or Flow. The only immediate child of an Event Handler is Scope, so when you drag an element from the Palette into an Event Handler, it is automatically wrapped in Scope.
+<p>There are two types of events:
+</p>
+<ul><li> Incoming messages, which correspond to a request/response or one-way operation in WSDL. These messages are specified using the On Event elements.
+</li><li> Alarms, or timers, which invoke activities after the specified periods or when a deadline is reached. The times are specified using the On Alarm elements.
+</li></ul><p><b>Note:</b> Event handlers <i>do not</i> interfere with the main flow of the business process. If an event occurs, and an event handler is executed, the main flow will be executed also. 
+</p>
+<p>This means, one shouldn't use event handlers, for example, to send replies to requests received in the main fllow, because the main flow might also send a reply which will never be seen by the client, and this can lead to various issues.
+</p>
+<p>On the contrary, a good use-case for event handlers would be to request a business process status. In this case, the activities in the event handler will collect data about the state of the business process, and then reply to the request that triggered the event handler.
+<table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/UsingHandlers/good-bad-event-h1.gif" height="312" width="534" alt="Image shows a diagram that illustrates bad and good practices for using Event Handlers as described in context" /></td></tr>
+</table>
+
+The picture can be a bit misleading. The request should be caught by handler itself but not by an internal Receive.
+I mean that the inbound arrow should come to handler itself, but not to an internal circle, which can be treated like a receive. 
+</p>
+<p />
+<h4 id="section-UsingHandlers-Usage">Usage</h4>
+<ol><li> Right-click the <tt>Process</tt> element or any <tt>Scope</tt> and choose Add &rarr; <tt>Event Handlers</tt>.
+</li><li> Once you have added an Event Handlers container, you can right-click on the Event Handlers element to add an <tt>On Event</tt> or <tt>On Alarm</tt> branch. You may add as many specific <tt>On Event</tt> or <tt>On Alarm</tt> elements as you wish, to the Event Handlers group.
+</li></ol><h4 id="section-UsingHandlers-OnEventElement">On Event Element</h4>
+The On Event element indicates that the specified event waits for a message to arrive. The interpretation of this tag and its attributes is very similar to the Receive activity.
+<h4 id="section-UsingHandlers-Usage">Usage</h4>
+<ol><li> Right-click the <tt>Event Handlers</tt> container and choose <tt>Add</tt> &rarr; <tt>On Event</tt>.
+</li><li> Double-click the On Event element to open a Property Editor to specify/change the following:
+<ul><li> The partner link
+</li><li> The operation associated with the On Event element
+</li><li> The event variable
+</li></ul></li></ol><table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/UsingHandlers/oneventpropeditor.gif" height="224" width="476" alt="Image shows the On Event property editor" /></td></tr>
+</table>
+
+<p>  Right-click the <tt>On Event</tt> element and choose <tt>Properties</tt> to open a Properties window to review and modify the properties of the element. In addition to the properties present in the Property Editor dialog box, the Properties window contains the Port Type and Type field.
+<table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/UsingHandlers/oneventproperties.gif" height="242" width="459" alt="Image shows the On Event Properties window" /></td></tr>
+</table>
+
+</p>
+<p>The Correlations tab in the On Event Property Editor dialog box enables you to examine or specify a correlation set.
+</p>
+<p>The tab shows:
+</p>
+<ul><li> The correlation set name
+</li><li> The initiation of a correlator
+</li></ul><p>You can add a correlation set by clicking the Add button. For more information see <a class="wikipage" href="Wikia3b6.html?page=UsingCorrelation">Using Correlation</a>.
+</p>
+<h4 id="section-UsingHandlers-OnAlarmElement">On Alarm Element</h4>
+The On Alarm element specifies the deadline for or the duration of the nested Scope.
+<h4 id="section-UsingHandlers-OnAlarmElementProperties">On Alarm Element Properties</h4>
+The properties of the On Alarm element are defined in the Properties window, invoked by right-clicking the element on the diagram and choosing Properties. 
+<p>The available properties are:
+</p>
+<ul><li> <b>Alarm Type:</b> Used to choose the type of alarm.<br />The available options are:
+<ul><li> <b>For:</b> Sets the duration for the process to wait.
+</li><li> <b>Until:</b> Specifies the deadline for the process.
+</li><li> <b>Repeat Every:</b> Specifies the frequency of process initiation. It initiates the process each time the specified duration period expires. The clock for the very first duration starts when the associated scope starts.
+</li><li> <b>For + Repeat Every:</b> Specifies the frequency of process initiation after the duration of a specified wait time. The process is initiated each time the duration period specified in the Repeat Every field expires.&nbsp;The first alarm is fired when the period of time specified in the For field expires.
+</li><li> <b>Until + Repeat Every:</b> Specifies the frequency of process initiation based on the specified deadline. The process will be initiated each time the duration period specified in the Repeat Every field expires.&nbsp;The first alarm is fired when the deadline specified in the Until field is reached.
+</li></ul></li><li> The second (and third, where available) property is used to specify the duration or deadline for the selected alarm type.
+</li></ul><p><br />
+</p>
+<div class="center">
+<a class="wikipage" href="Wikie39c.html?page=UsingHandlers">Top</a></div>
+<h3 id="section-UsingHandlers-UsingACompensationHandler">Using a Compensation Handler</h3>
+<h4 id="section-UsingHandlers-WhenToUse">When to Use </h4>
+A business process often contains several nested transactions. The overall business transaction can fail or be cancelled after many enclosed transactions have already been processed. Then it is necessary to reverse the effect obtained during process execution. For example, a travel planning process can include several nested transactions to book a ticket, to reserve a hotel and a car. If the trip is cancelled, the reservation transactions must be compensated for by canceling transactions in the appropriate order. For such cases, WS-BPEL provides you with the capability to define compensation actions. 
+<p>A Compensation Handler is a container for the activities that perform compensation actions. You can add one Compensation Handler to either the <tt>Scope</tt> or the <tt>Invoke</tt> elements. The compensation handler can be invoked using the CompensateScope element or the Compensate element activity. 
+</p>
+<p>For a more information regarding the Compensation Handler, see <a class="external" href="http://docs.oasis-open.org/wsbpel/2.0/OS/wsbpel-v2.0-OS.html#_Toc164738526">BPEL Specification - Compensation Handlers</a><img class="outlink" src="http://wiki.open-esb.java.net/images/out.png" alt="" />
+</p>
+<h4 id="section-UsingHandlers-ToAddACompensationHandlerToScopeOrInvokeElements">To add a Compensation Handler to Scope or Invoke elements</h4>
+<ol><li> Right-click the <tt>Scope</tt> or <tt>Invoke</tt> element and choose <tt>Add</tt> &rarr; <tt>Compensation  Handler</tt>. An empty container element appears. 
+</li><li> From the Palette, drag one or several activities that will be executed and place them inside the Compensation Handler container. Configure the properties of each activity. 
+</li></ol><p><b>Note:</b> You do not have to configure any properties for the Compensation Handler.
+</p>
+<p />
+<p><br />
+</p>
+<div class="center">
+<a class="wikipage" href="Wikie39c.html?page=UsingHandlers">Top</a></div>
+<h3 id="section-UsingHandlers-UsingATerminationHandler">Using a Termination Handler</h3>
+<h4 id="section-UsingHandlers-WhenToUse">When to Use</h4>
+The termination handler is used to control the termination of a running scope. The termination of a running scope happens if a scope or process enclosing it has faulted. 
+<p> When a fault is thrown inside a scope or process, a fault handler associated  with the scope or process should be run, but before that all the running  activities inside the faulted scope or process should be terminated. If a faulted scope or process has any enclosed scopes which are still running, they also should be terminated. Terminating a scope means terminating activities  inside it and executing the termination handler associated with the scope. 
+</p>
+<p>Note that a scope can only be terminated if it is either running normally or when it is running its compensation handler or termination handler. If a scope is completed, is faulted, or is running its fault handlers, it cannot be terminated.
+</p>
+<p>The termination handler is a container for the activities that will be performed in case a scope is terminated. You can add one termination handler for a scope. 
+</p>
+<p>If a fault occurs inside the termination handler of a scope, the fault is not propagated to the enclosing scope. 
+</p>
+<h4 id="section-UsingHandlers-ToAddATerminationHandlerToScopeOrProcessElements">To add a Termination Handler to Scope or Process elements</h4>
+<ol><li> In the Design view right-click the <tt>Scope</tt> element and choose <tt>Add</tt> &rarr; <tt>Termination Handler</tt>. An empty container element appears. 
+</li><li> From the Palette, drag one or several activities that will be executed and place them inside the Termination Handler container. Configure the properties of each activity. 
+</li></ol><p><b>Note:</b> You do not have to configure any properties for the termination handler.
+</p>
+<p />
+<p><br />
+</p>
+<div class="center">
+<a class="wikipage" href="Wikie39c.html?page=UsingHandlers">Top</a></div>
+<p><a class="wikipage" href="Wikiad48.html?page=UsingNormalizedMessageProperties">Previous</a><br />
+<a class="wikipage" href="Wikia3b6.html?page=UsingCorrelation">Next</a>
+</p>
+
+
+
+  </div>
+
+  
+  
+  <div id="attachments" style="display:none;" >
+
+    
+
+
+
+
+
+
+
+<div id="attachmentViewer">
+  <div class="list">
+    <h3>List of attachments &nbsp;&nbsp;&nbsp;&nbsp;
+    </h3>
+      <form action='#'>
+        <select name="attachSelect" id="attachSelect" size="16" 
+            onchange="Attach.showImage(this[this.selectedIndex], '%A4', 300, 300 )" >
+        <option value="Attachment Info" selected="selected" >--- Select Image to preview ---</option>
+        
+          
+          <option value="catchproperties.gif%A4http://wiki.open-esb.java.net/attach/UsingHandlers/catchproperties.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=UsingHandlers/catchproperties.gif%A42600 bytes%A41" >
+            catchproperties.gif (2600 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="good-bad-event-h.gif%A4http://wiki.open-esb.java.net/attach/UsingHandlers/good-bad-event-h.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=UsingHandlers/good-bad-event-h.gif%A47675 bytes%A41" >
+            good-bad-event-h.gif (7675 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="good-bad-event-h1.gif%A4http://wiki.open-esb.java.net/attach/UsingHandlers/good-bad-event-h1.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=UsingHandlers/good-bad-event-h1.gif%A46081 bytes%A41" >
+            good-bad-event-h1.gif (6081 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="oneventpropeditor.gif%A4http://wiki.open-esb.java.net/attach/UsingHandlers/oneventpropeditor.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=UsingHandlers/oneventpropeditor.gif%A43448 bytes%A41" >
+            oneventpropeditor.gif (3448 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="oneventproperties.gif%A4http://wiki.open-esb.java.net/attach/UsingHandlers/oneventproperties.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=UsingHandlers/oneventproperties.gif%A44090 bytes%A41" >
+            oneventproperties.gif (4090 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+      </select>
+    </form>
+    <div class="small">&nbsp;</div>
+  </div>  
+
+  <div class="preview">
+    <h3>Image preview</h3>
+    <div id="attachImg" title="No Image Selected">No Image Selected</div>
+    <a href="#" class="small" style="display:none;" id="attachInfo">More info, including version history</a>
+  </div>
+
+  <div style="clear:both; height:0px;" > </div>
+
+</div>
+
+
+  </div>
+
+  
+  <div id="pageinfo" style="display:none;" >
+
+    
+
+
+
+
+
+
+
+
+  <p>
+  This page (revision-18) was last changed on 
+  <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingHandlers&amp;r1=18&amp;r2=17"
+    title="Show changes of last page update" >
+    
+    09-Jun-09 10:36 AM, -0700
+  </a> by rjacobus.
+  <a href="http://wiki.open-esb.java.net/rss.jsp?page=UsingHandlers&amp;mode=wiki"
+    title="RSS page feed for Using Handlers" ><img src="images/xml.png" border="0" alt="[RSS]"/></a>
+    
+    <br />
+    This page was created on 
+    <a  href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingHandlers&amp;version=1">06-Oct-08 23:46 PM, -0700</a> by rjacobus.
+    
+  </p>    
+
+  
+
+  
+   
+  
+  <p><a href="http://wiki.open-esb.java.net/PageInfo.jsp?page=UsingHandlers" id="moreinfo" >More info...</a></p>
+  
+  
+
+  <div class="tabmenu ">
+  
+  
+  
+
+  
+
+  
+
+  
+  
+  
+  
+  <span><a class="activetab" id="menu-versionHistory" onclick="TabbedSection.onclick('versionHistory')" >Version History</a></span>
+  
+
+  <span><a id="menu-incomingLinks" onclick="TabbedSection.onclick('incomingLinks')" >Incoming Links</a></span>
+
+  <span><a id="menu-outgoingLinks" onclick="TabbedSection.onclick('outgoingLinks')" >Outgoing Links</a></span>
+
+  
+  
+  </div>
+<div class="tabs ">
+  
+  <div id="versionHistory" >
+
+
+    
+    <div class="zebra-table ">
+    <table class="wikitable" >
+      <tr>
+        <th>Version</th>                        
+        <th>Date</th>
+        <th>Author</th>
+        <th>Size</th>
+        <th>Changes ...</th>
+        
+      </tr>
+
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingHandlers&amp;version=18" accesskey="" title="">
+            18
+          </a>
+        </td>
+
+        <td>
+          09-Jun-09 10:36 AM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>14213</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingHandlers&amp;r1=18&amp;r2=17">to previous</a>
+            
+          
+
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingHandlers&amp;version=17" accesskey="" title="">
+            17
+          </a>
+        </td>
+
+        <td>
+          21-May-09 09:40 AM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>14112</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingHandlers&amp;r1=17&amp;r2=16">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingHandlers&amp;r1=18&amp;r2=17">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingHandlers&amp;version=16" accesskey="" title="">
+            16
+          </a>
+        </td>
+
+        <td>
+          05-Dec-08 11:28 AM, -0800
+        </td>
+        <td>SWeber</td>
+        <td>14109</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingHandlers&amp;r1=16&amp;r2=15">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingHandlers&amp;r1=18&amp;r2=16">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingHandlers&amp;version=15" accesskey="" title="">
+            15
+          </a>
+        </td>
+
+        <td>
+          26-Nov-08 09:10 AM, -0800
+        </td>
+        <td>rjacobus</td>
+        <td>14121</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingHandlers&amp;r1=15&amp;r2=14">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingHandlers&amp;r1=18&amp;r2=15">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingHandlers&amp;version=14" accesskey="" title="">
+            14
+          </a>
+        </td>
+
+        <td>
+          26-Nov-08 09:00 AM, -0800
+        </td>
+        <td>rjacobus</td>
+        <td>13934</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingHandlers&amp;r1=14&amp;r2=13">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingHandlers&amp;r1=18&amp;r2=14">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingHandlers&amp;version=13" accesskey="" title="">
+            13
+          </a>
+        </td>
+
+        <td>
+          26-Nov-08 08:28 AM, -0800
+        </td>
+        <td>rjacobus</td>
+        <td>13686</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingHandlers&amp;r1=13&amp;r2=12">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingHandlers&amp;r1=18&amp;r2=13">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingHandlers&amp;version=12" accesskey="" title="">
+            12
+          </a>
+        </td>
+
+        <td>
+          10-Nov-08 13:00 PM, -0800
+        </td>
+        <td>rjacobus</td>
+        <td>13362</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingHandlers&amp;r1=12&amp;r2=11">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingHandlers&amp;r1=18&amp;r2=12">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingHandlers&amp;version=11" accesskey="" title="">
+            11
+          </a>
+        </td>
+
+        <td>
+          28-Oct-08 15:32 PM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>13390</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingHandlers&amp;r1=11&amp;r2=10">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingHandlers&amp;r1=18&amp;r2=11">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingHandlers&amp;version=10" accesskey="" title="">
+            10
+          </a>
+        </td>
+
+        <td>
+          28-Oct-08 15:04 PM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>13376</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingHandlers&amp;r1=10&amp;r2=9">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingHandlers&amp;r1=18&amp;r2=10">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingHandlers&amp;version=9" accesskey="" title="">
+            9
+          </a>
+        </td>
+
+        <td>
+          16-Oct-08 14:10 PM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>13302</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingHandlers&amp;r1=9&amp;r2=8">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingHandlers&amp;r1=18&amp;r2=9">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingHandlers&amp;version=8" accesskey="" title="">
+            8
+          </a>
+        </td>
+
+        <td>
+          13-Oct-08 18:53 PM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>13274</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingHandlers&amp;r1=8&amp;r2=7">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingHandlers&amp;r1=18&amp;r2=8">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingHandlers&amp;version=7" accesskey="" title="">
+            7
+          </a>
+        </td>
+
+        <td>
+          13-Oct-08 12:01 PM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>13239</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingHandlers&amp;r1=7&amp;r2=6">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingHandlers&amp;r1=18&amp;r2=7">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingHandlers&amp;version=6" accesskey="" title="">
+            6
+          </a>
+        </td>
+
+        <td>
+          13-Oct-08 10:59 AM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>13226</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingHandlers&amp;r1=6&amp;r2=5">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingHandlers&amp;r1=18&amp;r2=6">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingHandlers&amp;version=5" accesskey="" title="">
+            5
+          </a>
+        </td>
+
+        <td>
+          13-Oct-08 10:35 AM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>13148</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingHandlers&amp;r1=5&amp;r2=4">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingHandlers&amp;r1=18&amp;r2=5">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingHandlers&amp;version=4" accesskey="" title="">
+            4
+          </a>
+        </td>
+
+        <td>
+          13-Oct-08 10:21 AM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>13148</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingHandlers&amp;r1=4&amp;r2=3">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingHandlers&amp;r1=18&amp;r2=4">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingHandlers&amp;version=3" accesskey="" title="">
+            3
+          </a>
+        </td>
+
+        <td>
+          13-Oct-08 08:20 AM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>12140</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingHandlers&amp;r1=3&amp;r2=2">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingHandlers&amp;r1=18&amp;r2=3">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingHandlers&amp;version=2" accesskey="" title="">
+            2
+          </a>
+        </td>
+
+        <td>
+          07-Oct-08 00:23 AM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>1795</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingHandlers&amp;r1=2&amp;r2=1">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingHandlers&amp;r1=18&amp;r2=2">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingHandlers&amp;version=1" accesskey="" title="">
+            1
+          </a>
+        </td>
+
+        <td>
+          06-Oct-08 23:46 PM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>1792</td>
+
+        <td>
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingHandlers&amp;r1=18&amp;r2=1">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+
+    </table>  
+    </div>
+    
+
+  </div>
+
+  
+
+  <div id="incomingLinks" style="display:none;" >
+
+    <a class="wikipage" href="Wikie39c.html?page=UsingHandlers" accesskey="" title="">Using Handlers</a>
+    <ul><li><a class="wikipage" href="Wiki21f2.html?page=BPELBluePrints">BPEL Blue Prints</a>
+</li><li><a class="wikipage" href="Wiki3879.html?page=BPELDesignerAndServiceEngineFeatures">BPEL Designer And Service Engine Features</a>
+</li><li><a class="wikipage" href="Wiki5e52.html?page=BPELDesignerAndServiceEngineOverview">BPEL Designer And Service Engine Overview</a>
+</li><li><a class="wikipage" href="Wiki5233.html?page=BPELProcessLoggingAndAlerting">BPEL Process Logging And Alerting</a>
+</li><li><a class="wikipage" href="Wikicae3.html?page=BPELServiceEngineDeploymentArtifacts">BPEL Service Engine Deployment Artifacts</a>
+</li><li><a class="wikipage" href="Wiki7030.html?page=BPELServiceEngineTaskHowTos">BPEL Service Engine Task How Tos</a>
+</li><li><a class="wikipage" href="Wiki73af.html?page=ConfiguringClusteringAndFailoverForBPEL">Configuring Clustering And Failover For BPEL</a>
+</li><li><a class="wikipage" href="Wikid4c2.html?page=ConfiguringFailoverForBPEL">Configuring Failover For BPEL</a>
+</li><li><a class="wikipage" href="Wiki0931.html?page=ConfiguringPersistenceAndRecoveryForBPEL">Configuring Persistence And Recovery For BPEL</a>
+</li><li><a class="wikipage" href="Wiki2f9d.html?page=ConfiguringTheBPELServiceEngineRuntimeProperties">Configuring The BPEL Service Engine Runtime Properties</a>
+</li><li><a class="wikipage" href="Wiki77bf.html?page=ConfiguringTheQualityOfServiceProperties">Configuring The Quality Of Service Properties</a>
+</li><li><a class="wikipage" href="Wikia9da.html?page=CreatingTheBPELModuleProject">Creating The BPEL Module Project</a>
+</li><li><a class="wikipage" href="Wiki17ca.html?page=DevelopingTheBPELProcessUsingTheBPELDiagram">Developing The BPEL Process Using The BPEL Diagram</a>
+</li><li><a class="wikipage" href="Wiki434d.html?page=MonitoringTheBPELServiceEngine">Monitoring The BPEL Service Engine</a>
+</li><li><a class="wikipage" href="Wiki0ddb.html?page=NavigatingTheBPELDesigner">Navigating The BPEL Designer</a>
+</li><li><a class="wikipage" href="Wiki1302.html?page=TestingAndDebuggingBPELProcesses">Testing And Debugging BPEL Processes</a>
+</li><li><a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">The BPEL Designer Palette Elements</a>
+</li><li><a class="wikipage" href="Wikif987.html?page=TroubleshootingTheBPELServiceEngine">Troubleshooting The BPEL Service Engine</a>
+</li><li><a class="wikipage" href="Wikifbc9.html?page=UnderstandingTheBPELModuleProject">Understanding The BPEL Module Project</a>
+</li><li><a class="wikipage" href="Wiki20e8.html?page=UsingBPELDesignerServiceEngine">Using BPEL Designer Service Engine</a>
+</li><li><a class="wikipage" href="Wikia3b6.html?page=UsingCorrelation">Using Correlation</a>
+</li><li><a class="wikipage" href="Wikife94.html?page=UsingDynamicPartnerLinksAndDynamicAddressing">Using Dynamic Partner Links And Dynamic Addressing</a>
+</li><li><a class="wikipage" href="Wikiad48.html?page=UsingNormalizedMessageProperties">Using Normalized Message Properties</a>
+</li><li><a class="wikipage" href="Wiki39db.html?page=UsingTheBPELMapper">Using The BPEL Mapper</a>
+</li><li><a class="wikipage" href="Wiki1f81.html?page=ValidatingTheBPELProcess">Validating The BPEL Process</a>
+</li></ul>
+  </div>
+
+
+  <div id="outgoingLinks" style="display:none;" >
+
+    
+      <div class="ReferredPagesPlugin">
+<a class="wikipage" href="Wikie39c.html?page=UsingHandlers" title="ReferredPagesPlugin: depth[1] include[.*] exclude[^$] format[compact]">UsingHandlers</a>
+<ul>
+<li><a class="wikipage" href="Wiki21f2.html?page=BPELBluePrints">BPELBluePrints</a></li>
+<li><a class="wikipage" href="Wiki3879.html?page=BPELDesignerAndServiceEngineFeatures">BPELDesignerAndServiceEngineFeatures</a></li>
+<li><a class="wikipage" href="Wiki5e52.html?page=BPELDesignerAndServiceEngineOverview">BPELDesignerAndServiceEngineOverview</a></li>
+<li><a class="wikipage" href="Wiki5233.html?page=BPELProcessLoggingAndAlerting">BPELProcessLoggingAndAlerting</a></li>
+<li><a class="wikipage" href="Wikicae3.html?page=BPELServiceEngineDeploymentArtifacts">BPELServiceEngineDeploymentArtifacts</a></li>
+<li><a class="wikipage" href="Wiki7030.html?page=BPELServiceEngineTaskHowTos">BPELServiceEngineTaskHowTos</a></li>
+<li><a class="wikipage" href="Wikid4c2.html?page=ConfiguringFailoverForBPEL">ConfiguringFailoverForBPEL</a></li>
+<li><a class="wikipage" href="Wiki0931.html?page=ConfiguringPersistenceAndRecoveryForBPEL">ConfiguringPersistenceAndRecoveryForBPEL</a></li>
+<li><a class="wikipage" href="Wiki2f9d.html?page=ConfiguringTheBPELServiceEngineRuntimeProperties">ConfiguringTheBPELServiceEngineRuntimeProperties</a></li>
+<li><a class="wikipage" href="Wiki77bf.html?page=ConfiguringTheQualityOfServiceProperties">ConfiguringTheQualityOfServiceProperties</a></li>
+<li><a class="wikipage" href="Wikia9da.html?page=CreatingTheBPELModuleProject">CreatingTheBPELModuleProject</a></li>
+<li><a class="wikipage" href="Wiki17ca.html?page=DevelopingTheBPELProcessUsingTheBPELDiagram">DevelopingTheBPELProcessUsingTheBPELDiagram</a></li>
+<li><a class="wikipage" href="Wiki434d.html?page=MonitoringTheBPELServiceEngine">MonitoringTheBPELServiceEngine</a></li>
+<li><a class="wikipage" href="Wiki0ddb.html?page=NavigatingTheBPELDesigner">NavigatingTheBPELDesigner</a></li>
+<li><a class="wikipage" href="Wiki1302.html?page=TestingAndDebuggingBPELProcesses">TestingAndDebuggingBPELProcesses</a></li>
+<li><a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">TheBPELDesignerPaletteElements</a></li>
+<li><a class="wikipage" href="Wikif987.html?page=TroubleshootingTheBPELServiceEngine">TroubleshootingTheBPELServiceEngine</a></li>
+<li><a class="wikipage" href="Wikifbc9.html?page=UnderstandingTheBPELModuleProject">UnderstandingTheBPELModuleProject</a></li>
+<li><a class="wikipage" href="Wiki20e8.html?page=UsingBPELDesignerServiceEngine">UsingBPELDesignerServiceEngine</a></li>
+<li><a class="wikipage" href="Wikia3b6.html?page=UsingCorrelation">UsingCorrelation</a></li>
+<li><a class="wikipage" href="Wikife94.html?page=UsingDynamicPartnerLinksAndDynamicAddressing">UsingDynamicPartnerLinksAndDynamicAddressing</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingHandlers/catchproperties.gif">UsingHandlers/catchproperties.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingHandlers/good-bad-event-h.gif">UsingHandlers/good-bad-event-h.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingHandlers/good-bad-event-h1.gif">UsingHandlers/good-bad-event-h1.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingHandlers/oneventpropeditor.gif">UsingHandlers/oneventpropeditor.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingHandlers/oneventproperties.gif">UsingHandlers/oneventproperties.gif</a></li>
+<li><a class="wikipage" href="Wikiad48.html?page=UsingNormalizedMessageProperties">UsingNormalizedMessageProperties</a></li>
+<li><a class="wikipage" href="Wiki39db.html?page=UsingTheBPELMapper">UsingTheBPELMapper</a></li>
+<li><a class="wikipage" href="Wiki1f81.html?page=ValidatingTheBPELProcess">ValidatingTheBPELProcess</a></li>
+</ul>
+</div>
+
+    
+    
+  </div>
+
+
+  
+  
+  <div style="clear:both; height:0px;" > </div>
+</div>
+ 
+
+
+
+
+
+
+
+
+
+  </div>
+
+  
+<div style="clear:both; height:0px;" > </div>
+</div>
+
+</div> 
+
+
+  
+
+
+
+<div id="favorites">
+
+
+<div class="username">G'day,
+  
+    <a title="Hi, Anonymous Guest"  href="Wiki48c3.html?page=Login">Anonymous Guest</a>
+  
+  
+  
+  
+</div>  
+
+
+
+
+
+
+
+
+<p />
+
+
+
+  
+<p />
+<p />
+
+
+<div class="wikiversion">JSPWiki v2.4.100</div>
+
+<div class="rssfeed"><a href="rss.rdf"><img src="images/xml.png" alt="[RSS]" border="0" title="Aggregate the RSS feed of the entire wiki"/></a></div>
+
+<div style="clear:both; height:0px;" > </div>
+
+</div> 
+
+  
+
+
+
+
+
+<div id='actionsBottom' class="pageactions"> 
+
+  <span class='quicklinks quick2Top'>
+    <a href="#wikibody" title='Go to Top' >&laquo;</a>
+  </span>
+
+  <span class="actionHome">
+    <a href="Wikib2ab.html?page=Main"
+       title="Go to home page Main ">Home</a>
+  </span>
+  
+  
+    
+
+    
+  
+  
+  <span class="actionIndex">
+     <a href="Wiki5f9e.html?page=PageIndex"
+       title="Alphabetically sorted list of pages [ x ]">Index</a>
+  </span>
+  
+  <span class="actionRecentChanges">
+     <a href="Wiki5fc7.html?page=RecentChanges"
+        title="Pages sorted by modification date [ u ]">Changes</a>
+  </span>
+
+  
+    
+      <span class="actionPrefs">
+        <a href="Wiki7eba.html?page=UserPreferences"
+           title="Set User Preferences" >Prefs</a>
+      </span>
+    
+  
+
+  
+    <div class="pageinfo">
+      
+        This page (revision-18) was last changed on 
+        <a href="http://wiki.open-esb.java.net/Diff.jsp?page=UsingHandlers&amp;r1=18&amp;r2=17"
+          title="Show changes of last page update" >  
+        
+        09-Jun-09 10:36 AM, -0700</a>
+      
+      
+      by rjacobus
+
+      
+    </div>  
+  
+
+  <div style="clear:both; height:0;"> </div> 
+</div>
+
+  
+ 
+  
+
+  
+
+
+<div id="footer">
+
+<table><tr><td>
+  <div class="wikiversion">
+    JSPWiki v2.4.100                       
+  </div>
+</td>
+<td>
+<br>Copyright &copy; 2011, Oracle and/or its affiliates. All rights reserved. Oracle and Java are registered trademarks of Oracle and/or its affiliates. Other names may be trademarks of their respective owners. <a href="http://www.oracle.com/"><img src="images/ora_logo_small.gif" /> </a>
+  <div class="rssfeed">
+    <a href="rss.rdf"><img src="images/xml.png" alt="[RSS]" border="0" title="Aggregate the RSS feed"/></a>
+  </div>
+</td></tr></table>
+  <div style="clear:both; height:0px;" > </div>
+
+</div>
+  
+
+  </div>
+  <div style="clear:both; height:0;" > </div>
+
+
+
+<!-- Page counters -->
+<script type="text/javascript" language="javascript">
+var sc_project=1965314; 
+var sc_invisible=1; 
+var sc_partition=17; 
+var sc_security="c5f5efea"; 
+</script>
+<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script>
+
+
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+<script type="text/javascript">
+_uacct = "UA-993823-3";
+urchinTracker();
+</script>
+</body>
+
+<!-- Mirrored from wiki.open-esb.java.net/Wiki.jsp?page=UsingHandlers by HTTrack Website Copier/3.x [XR&CO'2010], Thu, 08 Jul 2010 02:16:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+</html>
+
+

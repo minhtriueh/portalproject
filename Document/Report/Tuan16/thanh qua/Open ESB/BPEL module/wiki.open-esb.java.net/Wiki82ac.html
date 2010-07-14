@@ -1,0 +1,2011 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+
+
+<!-- Mirrored from wiki.open-esb.java.net/Wiki.jsp?page=TheBPELDesignerPaletteElements by HTTrack Website Copier/3.x [XR&CO'2010], Thu, 08 Jul 2010 02:16:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head>
+
+  <title>The BPEL Designer Palette Elements - OpenESB: the Open Source ESB for SOA & Integration</title>
+  
+
+
+
+
+
+<link rel="stylesheet" type="text/css" media="screen, projection" 
+     href="templates/brushed/jspwiki.css" />
+
+<!-- browser specific cssinclude not required in brushed template
+<script type="text/javascript"
+         src="/templates/brushed/cssinclude.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+  Wiki.loadBrowserSpecificCSS("brushed");
+//]]>
+</script>
+-->
+
+
+
+
+<link rel="stylesheet" type="text/css" 
+     href="templates/brushed/skins/Smart/skin.css" />
+<!-- INCLUDERESOURCES (stylesheet) -->
+
+
+
+<!--[if IE]>
+<style type="text/css" media="screen">
+img, a, div { behavior: url("templates/brushed/scripts/iepngfix.htc"); }
+</style>
+<![endif]-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="search" 
+     href="Wiki702d.html?page=FindPage"
+    title="Search Open ESB Wiki" />
+<link rel="help"   
+     href="Wikia3b7.html?page=TextFormattingRules" 
+    title="Help" />
+<link rel="start"  
+     href="Wikib2ab.html?page=Main"                
+    title="Front page" />
+<!--<link rel="stylesheet" type="text/css" media="print"
+     href="/templates/brushed/jspwiki_print.css" />
+<link rel="alternate stylesheet" type="text/css"
+     href="/templates/brushed/jspwiki_print.css" 
+    title="Print friendly" />-->
+<link rel="alternate stylesheet" type="text/css" 
+     href="templates/brushed/jspwiki.css" 
+    title="Standard" />
+<link rel="icon" type="image/png" href="images/openesb16x16.png" />
+
+<link rel="template" href="http://wiki.open-esb.java.net/templates/brushed" id="template-dir"/>
+<link rel="alternate" type="application/rss+xml" title="RSS wiki feed for the entire site." href="rss.rdf" />
+<link rel="alternate" type="application/rss+xml" title="RSS wiki feed for page Open ESB Wiki: TheBPELDesignerPaletteElements." href="http://wiki.open-esb.java.net/rss.jsp?page=TheBPELDesignerPaletteElements&amp;mode=wiki" />
+
+
+
+<script type="text/javascript"
+         src="templates/brushed/scripts/prototype.js" ></script>
+<script type="text/javascript" 
+         src="templates/brushed/scripts/brushed.js" ></script>
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+  Wiki.setBaseURL ( "index.html" );
+  Wiki.setPageName( "TheBPELDesignerPaletteElements" ); /* pagename without blanks */
+  Wiki.setUserName( "113.170.138.21" );
+
+  Wiki.setDELIM              ( "¤" );
+  Wiki.setPrefDateFormat     ( "dd-MMM-yy HH:mm a, Z" );
+  Wiki.setPrefSkinName       ( "Smart" );
+  Wiki.setPrefTimeZone       ( "" );
+  Wiki.setPrefEditAreaHeight ( "24" );
+  Wiki.setPrefShowQuickLinks ( "no" );
+  Wiki.setPrefSowCalendar    ( "no" );
+//]]>
+</script>
+<script type="text/javascript" 
+         src="templates/brushed/skins/Smart/skin.js"></script>
+
+<!-- INCLUDERESOURCES (script) -->
+
+
+  
+</head>
+
+<body class="view" id="gradient">
+<!--
+<p id="underline" class="barMargin"></p>
+-->
+<div id="wikibody" >
+  
+
+
+
+
+<div id="header">
+<!--
+  <div class="applicationlogo"> 
+    <a href="https://open-esb.dev.java.net/public/downloads.html" title="OpenESB Downloads"></a>
+  </div>
+-->  
+
+<table width="100%" id="headertable"><tr>
+  <td><a href="https://open-esb.dev.java.net/" style="border: none;"><img style="border: none;" height="60" width="304" alt="Open ESB: the Open Enterprise Service Bus... Open Standards + Open Source" src="images/ESBLogoTag-304x60C.jpg"/></a></td>
+
+
+  <td id="rhstop">
+  
+
+<div id="rhsuser" class="rhsusername">
+  Not logged in | 
+    <a title="Hi, Anonymous Guest"  href="Wiki48c3.html?page=Login">Login</a>
+  
+  
+
+  
+
+  
+</div>  
+  
+  
+<div id="oesearch" style="vertical-align: bottom">
+  <br/>
+  <br/>
+	<form action="https://open-esb.dev.java.net/SearchResults.html" id="cse-search-box"> 
+	  <div>
+	    <input type="hidden" name="cx" value="013607241216432041017:tcd_nlc0tem" />
+	    <input type="hidden" name="cof" value="FORID:11" />
+	    <input type="hidden" name="ie" value="UTF-8" />
+	    <input type="text" name="q" size="20" />
+	    <input type="submit" name="sa" value="Search" />
+	  </div>
+	</form>
+</div>
+  
+  
+  </td>
+</tr></table>
+
+<!-- ==================== Menu Structure ==================== -->
+<script type="text/javascript" src="static/menu.js" ></script>
+<div id="z_menu_02"><table width="100%"><tr><td>
+	<div id="z_menu_01">
+		<script>writeOEMenu();</script>
+	</div>
+</td></tr></table></div>
+<!-- ==================== End menu ==================== -->
+
+
+
+
+
+
+
+
+
+
+  <div class="companylogo">
+  </div>
+  
+  
+<!--
+<ul class="iconlist">
+<li class="documentation"><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=Documentation"><img src="/openesbwiki/templates/brushed/skins/Smart/images/documentation.png" width="81" height="65"/></a></li>
+<li class="link"><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsefulLinks"><img src="/openesbwiki/templates/brushed/skins/Smart/images/links.png" width="64" height="65"/></a></li>
+<li class="participate"><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=GetInvolved"><img src="/openesbwiki/templates/brushed/skins/Smart/images/participate.png" width="61" height="68"/></a></li>
+<li class="downloads"><a href="https://open-esb.dev.java.net/Downloads.html"><img src="/openesbwiki/templates/brushed/skins/Smart/images/downloads.png" width="61" height="65"/></a></li>
+</ul>
+<div style="clear: left;"></div>
+ --> 
+
+  <table width="100%">
+  <tr>
+  <td><div class="pagename2">The BPEL Designer Palette Elements</div></td>
+  </tr>
+  </table>
+  
+
+
+  
+  <div class="searchbox">
+
+
+<form action="http://wiki.open-esb.java.net/Search.jsp"
+    onsubmit="SearchBox.submit( this.query.value )"
+ onmouseover="Element.show('searchboxMenu');"
+  onmouseout= "Element.hide('searchboxMenu');"
+        name="searchForm" id="searchForm" 
+        accept-charset="UTF-8">
+  <div>
+  
+  <input onblur="if( this.value == '' ) { this.value = 'Search'}; " 
+        onfocus="if( this.value == 'Search' ) { this.value = ''}; "
+           type="text" value="Wiki search" name="query" id="query" size="24" 
+      accesskey="f"></input>
+  </div>  
+  <div id="searchboxMenu" style='display:none;'>
+    <div>
+      <a href="javascript://nop/" 
+         onclick="SearchBox.navigation( 'Wiki195c.html?page=__PAGEHERE__','TheBPELDesignerPaletteElements' );return false;"
+         title="View the selected page">view</a> 
+      | 
+      <a href="javascript://nop/" 
+         onclick="SearchBox.navigation( 'http://wiki.open-esb.java.net/Edit.jsp?page=__PAGEHERE__','TheBPELDesignerPaletteElements' );return false;"
+         title="Edit the selected page">edit</a> 
+      | 
+      <a href="javascript://nop/" 
+         onclick="SearchBox.clone( 'http://wiki.open-esb.java.net/Edit.jsp?page=__PAGEHERE__','TheBPELDesignerPaletteElements' );return false;"
+         title="Clone this page">clone</a> 
+      |
+      <a href="javascript://nop/" 
+         onclick="SearchBox.navigation( 'Search136d.html?query=__PAGEHERE__','TheBPELDesignerPaletteElements' );return false;"
+         title="Advanced Search">find</a> 
+      [ f ]
+    </div>
+    <div id="searchResult" > </div>
+    <div id="recentSearches" > </div>
+  </div>
+
+</form>
+<script type="text/javascript">
+//<![CDATA[    
+    function updateSearchResult( )
+    {  
+      if( $F('query') == 'Search' ) return;
+      new Ajax.Updater(
+        'searchResult', 
+        'templates/brushed/FindAjax.html',
+        { 
+          asynchronous: true,
+          parameters: Form.serialize( 'searchForm' ) + "&compact=true"
+        } ); 
+    } ;
+    new Form.Element.Observer( "query", 1, updateSearchResult ); 
+//]]>
+</script>
+    
+   </div>
+
+  <div class="breadcrumbs">Your trail: <a class="wikipage" href="Wikib2ab.html?page=Main">Main</a> &gt; <a class="wikipage" href="Wiki195c.html?page=__PAGEHERE__">__PAGEHERE__</a> &gt; <a class="wikipage" href="Wiki5f9e.html?page=PageIndex">PageIndex</a> &gt; <a class="wikipage" href="Wiki5fc7.html?page=RecentChanges">RecentChanges</a> &gt; <a class="wikipage" href="Wiki20e8.html?page=UsingBPELDesignerServiceEngine">UsingBPELDesignerServiceEngine</a> &gt; <a class="wikipage" href="Wiki5e52.html?page=BPELDesignerAndServiceEngineOverview">BPELDesignerAndServiceEngineOverview</a> &gt; <a class="wikipage" href="Wiki3879.html?page=BPELDesignerAndServiceEngineFeatures">BPELDesignerAndServiceEngineFeatures</a> &gt; <a class="wikipage" href="Wiki0ddb.html?page=NavigatingTheBPELDesigner">NavigatingTheBPELDesigner</a> &gt; <a class="wikipage" href="Wikia9da.html?page=CreatingTheBPELModuleProject">CreatingTheBPELModuleProject</a> &gt; <a class="wikipage" href="Wiki17ca.html?page=DevelopingTheBPELProcessUsingTheBPELDiagram">DevelopingTheBPELProcessUsingTheBPELDiagram</a></div>
+
+  <div style="clear:both; height:0;" > </div>
+
+</div>
+
+
+
+
+  
+
+
+
+
+
+<div id="actionsTop" class="pageactions"> 
+<!--
+  <span class="actionHome">
+    <a href="http://wiki.open-esb.java.net/Wiki.jsp?page=Main"
+       title="Go to home page Main ">Home</a>
+  </span>
+-->  
+  
+    
+    
+    
+<!--
+    
+  -->
+  
+  
+  <span class="actionIndex">
+     <a href="Wiki5f9e.html?page=PageIndex"
+       title="Alphabetically sorted list of pages [ x ]" accesskey="x">Index</a>
+  </span>
+  
+  <span class="actionRecentChanges">
+     <a href="Wiki5fc7.html?page=RecentChanges"
+        title="Pages sorted by modification date [ u ]" accesskey="u">Changes</a>
+  </span>
+
+  
+
+<!--
+  <span class="quicklinks quick2Bottom">
+    <a href="#footer" title="Go to Bottom" >&raquo;</a>
+  </span>
+-->
+  <div style="clear:both; height:0;"> </div> 
+</div>
+
+
+
+
+
+  <div id="page">
+
+
+
+
+
+<div class="tabmenu ">
+  
+  
+  
+  
+  
+  
+  
+
+  <span><a class="activetab" id="menu-pagecontent" onclick="TabbedSection.onclick('pagecontent')" accesskey="v" ><u>V</u>iew</a></span>
+  
+  
+  <span><a id="menu-attachments" onclick="TabbedSection.onclick('attachments')" accesskey="a" ><u>A</u>ttach (19)</a></span>
+  
+  <span><a id="menu-pageinfo" onclick="TabbedSection.onclick('pageinfo')" accesskey="i" ><u>I</u>nfo</a></span>
+  
+</div>
+<div class="tabs ">
+  <div id="pagecontent" >
+
+    
+
+
+
+
+
+
+
+<h3 id="section-TheBPELDesignerPaletteElements-UsingTheBPELDesignerAndServiceEngine">Using the BPEL Designer and Service Engine </h3>
+<p><b>Contents</b>
+</p>
+<ul><li> <a class="wikipage" href="Wiki20e8.html?page=UsingBPELDesignerServiceEngine">Using the BPEL Designer and Service Engine</a>
+</li><li> <a class="wikipage" href="Wiki5e52.html?page=BPELDesignerAndServiceEngineOverview">Overview</a>
+</li><li> <a class="wikipage" href="Wiki3879.html?page=BPELDesignerAndServiceEngineFeatures">BPEL Designer and Service Engine Features</a>
+</li><li> <a class="wikipage" href="Wikifbc9.html?page=UnderstandingTheBPELModuleProject">Understanding the BPEL Module Project</a>
+</li><li> <a class="wikipage" href="Wiki0ddb.html?page=NavigatingTheBPELDesigner">Navigating the BPEL Designer</a>
+</li><li> <a class="wikipage" href="Wikia9da.html?page=CreatingTheBPELModuleProject">Creating a BPEL Module Project</a>
+</li><li> <a class="wikipage" href="Wiki17ca.html?page=DevelopingTheBPELProcessUsingTheBPELDiagram">Developing the BPEL Process Using the BPEL Diagram</a>
+</li><li> <span style="color:#3333ff;"><b>The BPEL Designer Palette Elements</b></span>
+<ul><li> The Process Element
+</li><li> Using the Invoke Element
+</li><li> Using the Receive Element
+</li><li> Using the Reply Element
+</li><li> Using the Partner Link Element
+</li><li> Using the Assign Element
+</li><li> Using the JavaScript Element
+</li><li> Using the Validate Element
+</li><li> Using the Empty Element
+</li><li> Using the Wait Element
+</li><li> Using the Throw Element
+</li><li> Using the Rethrow Element
+</li><li> Using the Exit Element
+</li><li> Using the Compensate Element
+</li><li> Using the CompensateScope Element
+</li><li> Using the If Element
+</li><li> Using the While Element
+</li><li> Using the Repeat Until Element
+</li><li> Using the For Each Element
+</li><li> Using the Pick Element
+</li><li> Using the Flow Element
+</li><li> Using the Sequence Element
+</li><li> Using the Scope Element
+</li></ul></li><li> <a class="wikipage" href="Wiki39db.html?page=UsingTheBPELMapper">Using the BPEL Mapper</a>
+</li><li> <a class="wikipage" href="Wikiad48.html?page=UsingNormalizedMessageProperties">Using Normalized Message Properties</a>
+</li><li> <a class="wikipage" href="Wikie39c.html?page=UsingHandlers">Using Handlers</a>
+</li><li> <a class="wikipage" href="Wikia3b6.html?page=UsingCorrelation">Using Correlation</a>
+</li><li> <a class="wikipage" href="Wiki1f81.html?page=ValidatingTheBPELProcess">Validating a BPEL Process</a>
+</li><li> <a class="wikipage" href="Wiki5233.html?page=BPELProcessLoggingAndAlerting">BPEL Process Logging and Alerting</a>
+</li><li> <a class="wikipage" href="Wiki2f9d.html?page=ConfiguringTheBPELServiceEngineRuntimeProperties">Configuring the BPEL Service Engine Runtime Properties</a>
+</li><li> <a class="wikipage" href="Wikicae3.html?page=BPELServiceEngineDeploymentArtifacts">BPEL Service Engine Deployment Artifacts</a>
+</li><li> <a class="wikipage" href="Wiki1302.html?page=TestingAndDebuggingBPELProcesses">Testing and Debugging BPEL Processes</a>
+</li><li> <a class="wikipage" href="Wiki434d.html?page=MonitoringTheBPELServiceEngine">Monitoring the BPEL Service Engine</a>
+</li><li> <a class="wikipage" href="Wiki77bf.html?page=ConfiguringTheQualityOfServiceProperties">Configuring Quality of Service (QOS) Properties, Throttling, and Redelivery</a>
+</li><li> <a class="wikipage" href="Wikife94.html?page=UsingDynamicPartnerLinksAndDynamicAddressing">Using Dynamic Partner Links and Dynamic Addressing</a>
+</li><li> <a class="wikipage" href="Wiki0931.html?page=ConfiguringPersistenceAndRecoveryForBPEL">Configuring Persistence and Recovery for the BPEL Service Engine</a>
+</li><li> <a class="wikipage" href="Wikid4c2.html?page=ConfiguringFailoverForBPEL">Configuring Failover for the BPEL Service Engine</a>
+</li><li> <a class="wikipage" href="Wiki21f2.html?page=BPELBluePrints">BPEL BluePrints</a>
+</li><li> <a class="wikipage" href="Wiki7030.html?page=BPELServiceEngineTaskHowTos">BPEL Service Engine Task How-tos</a>
+</li><li> <a class="wikipage" href="Wikif987.html?page=TroubleshootingTheBPELServiceEngine">Troubleshooting the BPEL Designer and Service Engine</a>
+</li></ul><h2 id="section-TheBPELDesignerPaletteElements-TheBPELDesignerPaletteElements">The BPEL Designer Palette Elements</h2>
+<hr />
+A process diagram represents the connected elements in a business process. To edit a diagram, icons in the Design view Palette are dragged and dropped onto the BPEL diagram. These icons represent Web Service activities, basic activities, and structured activities in the business process.
+<h3 id="section-TheBPELDesignerPaletteElements-Placeholders">Placeholders </h3>
+The BPEL Designer diagram provides placeholder the mark places on the diagram where you can insert an element. The behavior of element placeholders illustrates how the BPEL Designer enforces the rules of the WS-BPEL 2.0 specification.
+<p>When you drag an element from the Palette, you can see placeholders showing acceptable drop points for this element. These drop points reflect the construction logic of the diagram. As you move the mouse pointer on the diagram, a placeholder that is active for the current mouse pointer position is highlighted. Align the dragged element with one of the placeholders and release the mouse button to insert the element.
+</p>
+<p>Some placeholders are always present on the diagram marking the places where it is necessary to insert an activity so that the BPEL process is valid. These are the places inside container elements, for example the <tt>If</tt> element.
+</p>
+<p />
+<h3 id="section-TheBPELDesignerPaletteElements-TheProcessElement">The Process Element</h3>
+The <tt>Process</tt> element is already present in your diagram. The New Project wizard always creates a skeletal BPEL file that contains at least a <tt>process</tt> element. Therefore, the <tt>Process</tt> element is not available in the Palette. The <tt>Process</tt> element is assumed to be present, as it is the minimum requirement for a BPEL file.
+<table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/TheBPELDesignerPaletteElements/process.gif" height="228" width="389" alt="Image shows the BPEL diagram with a representation of a process in the Travel Reservation Service sample" /></td></tr>
+</table>
+
+<h4 id="section-TheBPELDesignerPaletteElements-Usage">Usage</h4>
+<ol><li>Right-click the <tt>Process</tt> element and choose <tt>Add</tt> from the pop-up menu to add the following:
+<ul><li> Variable<br />
+</li><li> Correlation Set<br />
+</li><li> Event Handlers<br />
+</li><li> Fault Handlers<br />
+</li><li> WSDL Import<br /> 
+</li><li> Schema Import<br />
+</li></ul></li><li>Specify the name and the target namespace of the Process element in the Properties window, invoked by right-clicking the element and choosing Properties.
+</li></ol><h4 id="section-TheBPELDesignerPaletteElements-Processes">Processes</h4>
+A BPEL process can be synchronous or asynchronous. A synchronous BPEL process blocks the client (the one which is using the process) until the process finishes and returns a result to the client. An asynchronous process does not block the client. Rather it uses a callback to return the result (if any). Usually we use asynchronous processes for longer-lasting processes and synchronous for processes that return a result in a relatively short time. If a BPEL process uses asynchronous web services, the process itself is usually also asynchronous.
+<p><br /> 
+</p>
+<div class="center">
+<a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">Top</a></div>
+<h3 id="section-TheBPELDesignerPaletteElements-TheWebServiceElements">The Web Service Elements</h3>
+The Web Service section of the BPEL Designer Palette contains icons for the following business process elements: 
+<ul><li> Invoke 
+</li><li> Partner Link
+</li><li> Receive
+</li><li> Reply
+</li></ul>These elements represent requests, responses, and agreements between a process and its partner services. 
+<h3 id="section-TheBPELDesignerPaletteElements-UsingTheInvokeElement">Using the Invoke Element</h3>
+The <tt>Invoke</tt> element enables the business process to invoke a one-way or request-response operation on a <tt>portType</tt> offered by a partner. It enables the business process to send messages to partners. The operation is defined in the partner's WSDL file.
+<h4 id="section-TheBPELDesignerPaletteElements-Usage">Usage</h4>
+<ol><li> In the Design view, drag the <tt>Invoke</tt> element from the Palette to the diagram.
+</li><li> Perform one of the following procedures to associate the <tt>Invoke</tt> element with a <tt>Partner Link</tt> element:
+<ul><li> Directly draw a message flow from the <tt>Invoke</tt> element to the target <tt>Partner Link</tt>.
+</li><li> Double-click the <tt>Invoke</tt> element. A dialog opens where you can examine or change the following:
+<ul><li> The name of the <tt>Invoke</tt> element.
+</li><li> The partner link that is invoked.
+</li><li> The operation associated with the <tt>Invoke</tt> element.
+</li><li> The input variable associated with the <tt>Invoke</tt> element.
+</li><li> The output variable.
+</li></ul></li></ul></li></ol><p>Both input and output variables can be created or browsed through this dialog.
+<table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/invoke_property_editor1.gif" height="254" width="432" alt="Image shows the Invoke element properties editor" /></td></tr>
+</table>
+
+</p>
+<p>In the Property Editor dialog box, you can either create a variable or use an existing variable to hold input and output data. Click the <tt>Create</tt> button to create a variable for the <tt>Invoke</tt> element, and click <tt>Browse</tt> to choose an existing variable.
+</p>
+<p>Note that when you click the Browse button, the Input Variable Chooser or the Output Variable Chooser dialog boxes opens. In these dialog boxes, a checkbox with the option to show variables with appropriate types appears. This checkbox restricts the list of available variables to those which are of the proper type for the activity you are configuring. In this way the Design view helps you develop valid BPEL code.
+</p>
+<h4 id="section-TheBPELDesignerPaletteElements-Correlations">Correlations</h4>
+Correlation sets on invoke activities, which deal with outbound operations, are used to validate that outgoing messages contain data which is consistent with the data contained within specified correlation set instances.
+The Correlations tab in the Invoke Property Editor dialog box enables you to examine or specify a correlation set.
+<table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/TheBPELDesignerPaletteElements/invokecorrelations1.gif" height="254" width="470" alt="Image shows the Correlation tab of the Input Variable Chooser dialog box as described in context" /></td></tr>
+</table>
+
+<p>The tab shows:
+</p>
+<ul><li> Names of correlation sets
+</li><li> The initiation of a correlator
+</li><li> The pattern associated with the correlation
+</li></ul>For more information see <a class="wikipage" href="Wikia3b6.html?page=UsingCorrelation">Using Correlation</a>.
+<p><br />
+</p>
+<div class="center">
+<a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">Top</a></div>
+<h3 id="section-TheBPELDesignerPaletteElements-UsingTheReceiveElement">Using the Receive Element</h3>
+The <tt>Receive</tt> element allows the business process to do a blocking wait for a particular message to arrive.
+<h4 id="section-TheBPELDesignerPaletteElements-Usage">Usage</h4>
+<ol><li> In the Design view, drag the <tt>Receive</tt> element from the Palette to the diagram.
+</li><li> Double-click the <tt>Receive</tt> element (or right-click it and choose <tt>Edit</tt>) to configure its properties. Here the example is provided for the Travel Reservation Service sample:
+<ul><li> The name of the <tt>Receive</tt> element (<tt>ReceiveItinerary</tt> ).
+</li><li> The partner link (<tt>Travel</tt>).
+</li><li> The operation associated with the <tt>Receive</tt> element (<tt>buildItinerary</tt>).
+</li><li> The input variable to the <tt>Receive</tt> element (<tt>ItineraryIn</tt> ).<br />Select <tt>Browse </tt>for the <tt>Input</tt> Variable to open the Input Variable chooser, where you can choose other variables associated with this process.<br />Select <tt>Create</tt> to create a new variable.
+</li><li> Create Instance. If selected, an instance of the BPEL process starts when an associated message arrives. <br />Note that if the Receive activity is the first activity in your business process, the Create Instance checkbox must be selected. 
+</li></ul></li></ol><p />
+<p>You can also edit some of the element's properties in the Properties window. To open the window, right-click the <tt>Receive</tt> element and choose <tt>Properties</tt> or choose <tt>Window</tt> &rarr; <tt>Properties</tt> (Ctrl-Shift-7) from the main menu. You can edit the information by clicking on the ellipsis button. You cant edit the shadowed information from this window, to change it open the property editor as described above.
+<table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/TheBPELDesignerPaletteElements/ep-bpel-receive-prop%20copy.gif" height="253" width="416" alt="Image shows the Receive Properties window as described in context" /></td></tr>
+</table>
+
+</p>
+<p />
+<h4 id="section-TheBPELDesignerPaletteElements-Correlations">Correlations</h4>
+The Correlations tab in the <tt>Receive</tt> Property Editor dialog box enables you to examine or specify a correlation set.
+<p />
+<p>The tab shows:
+</p>
+<ul><li> Names of correlation sets
+</li><li> The initiation of a correlator
+</li></ul>For more information see <a class="wikipage" href="Wikia3b6.html?page=UsingCorrelation">Using Correlation</a>.
+<p><br />
+</p>
+<div class="center">
+<a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">Top</a></div>
+<h3 id="section-TheBPELDesignerPaletteElements-UsingTheReplyElement">Using the Reply Element</h3>
+Use this activity to return a message from the process to the same partner that initiated the operation. The combination of Receive and Reply activities creates a request-response operation.
+<p>This activity is used in a synchronous (request/response) operation, and specifies the same partner, port type and operation as the Receive activity that invoked the process.
+</p>
+<h4 id="section-TheBPELDesignerPaletteElements-Usage">Usage</h4>
+<ol><li> In the Design view, drag the <tt>Reply</tt> element from the Palette to the diagram.
+</li><li> Double-click the <tt>Reply</tt> element (or right-click and choose Edit) to open a Property Editor dialog box for the <tt>Reply</tt> element. In this dialog box, you can specify the following:
+<ul><li> The name of the element.
+</li><li> The Partner Link.
+</li><li> The operation.
+</li><li> Type of response: Normal Response or Fault Response.
+<ul><li> Select Normal Response if the Reply element is to be used for the normal response message type.<br />Optionally, specify the output variable: either create a new output variable or browse for an existing variable.
+</li><li> Select Fault Response if the Reply element is to be used to send a fault message. <br />Choose a fault name and, optionally, specify the fault variable: either create a new fault variable or browse for an existing variable.
+</li></ul></li></ul></li></ol><p>You can also edit some of the element's properties in the Properties window. To open the window, right-click the <tt>Receive</tt> element and choose <tt>Properties</tt> or choose <tt>Window</tt> &rarr; <tt>Properties</tt> (Ctrl-Shift-7) from the main menu.
+</p>
+<p>You can edit the information by clicking on the ellipsis button. You cant edit the shadowed information from this window, to change it open the property editor as described above.
+</p>
+<h4 id="section-TheBPELDesignerPaletteElements-Correlations">Correlations</h4>
+The Correlations tab in the <tt>Reply</tt> Property Editor dialog box enables you to examine or specify a correlation set.
+<p>The tab shows:
+</p>
+<ul><li> Names of correlation sets
+</li><li> The initiation of a correlator
+</li></ul>For more information see <a class="wikipage" href="Wikia3b6.html?page=UsingCorrelation">UsingCorrelation</a>.
+<p><br />
+</p>
+<div class="center">
+<a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">Top</a></div>
+<h3 id="section-TheBPELDesignerPaletteElements-ThePartnerLinkPropertyEditor">The Partner Link Property Editor</h3>
+<p>The Partner Link Property Editor dialog box enables you to establish partner links for your BPEL processes.
+</p>
+<p>The Partner Link Property Editor dialog box enables you to establish partner links for your BPEL processes. The Partner Link Property Editor is invoked by double-clicking a Partner Link element on the diagram, or right-clicking the Partner Link element and choosing Edit. The Partner Link Property Editor also appears when you drag the Partner Link element, a WSDL file node, or a web service node to the diagram.
+</p>
+<p>With the Partner Link Property Editor, you can specify:
+</p>
+<ul><li> The Partner Link name<br />
+</li><li> The WSDL file associated with the Partner Link<br />
+</li></ul><p>Further on you can choose whether to use the existing partner link type or create a new partner link type.
+</p>
+<p>If the WSDL file you selected contains partner link types, the Use Existing Partner Link Type option is selected and the Partner Link Type drop-down list is populated with the partner link types found in the WSDL file. You can use one of the existing partner link types or select the Use a Newly Created Partner Link Type option to create a new partner link type.
+</p>
+<p>If the WSDL file does not contain partner link types, the Use a Newly Created Partner Link Type option is selected.
+</p>
+<ul><li> <b>Use Existing Partner Link Type</b><br />
+<ol><li> Choose the partner link type from the drop-down list. The My Role and/or Partner Role fields are filled in automatically.<br />
+</li><li> To swap the roles of the business process itself (My Role) and the partner (Partner Role), click the Swap Roles button.<br />
+</li></ol></li><li> <b>Use a Newly Created Partner Link Type</b><br />
+<ol><li> Specify the WSDL file in which to add a partner link type. You can do one of the following:<br />
+<ul><li> Add the partner link type to the wrapper WSDL file, as suggested by the IDE in the Create in File field by default. If you choose this option, the IDE will automatically create the wrapper WSDL file in your project structure. You can use wrapper WSDL files when the original WSDL file is read-only or when you do not want to modify the original WSDL file. The original WSDL file will be imported to the newly created wrapper WSDL file.<br />
+</li><li> Add the partner link type to a WSDL file within your project. Click Browse and locate the WSDL file in which to add the partner link type.<br />
+</li></ul></li><li> Specify the partner link type name.<br />
+</li><li> Specify the role of the business process itself (My Role) and/or the role of the partner (Partner Role) as follows:<br />
+<ol><li> Select the appropriate checkbox.<br />
+</li><li> Specify the role name.<br />
+</li><li> Choose the port type from the drop-down list.<br />
+</li></ol></li></ol></li></ul><table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/TheBPELDesignerPaletteElements/plpropedit.gif" height="492" width="416" alt="Image shows the PartnerLink property editor" /></td></tr>
+</table>
+
+<p>You can also review and modify the Partner Link's properties in the Properties window invoked by right-clicking the element and choosing Properties.
+</p>
+<h4 id="section-TheBPELDesignerPaletteElements-PartnerLinkLayout">Partner Link Layout</h4>
+<p>The partner links are placed in the left and right margins of the process diagram. Service requestors are placed on the left side, service providers are placed on the right side. To define the role and to choose the appropriate side for each partner link the IDE uses the order of roles defined for the partnerLinkType in the WSDL file. The role defined first in the partnerLinkType in the WSDL file is considered to be a service role, the second defined role is considered to be the role for the requestor and callback receiver. If the roles are defined in the reverse order in the WSDL file (the callback receiver role is defined in the first place, and the service role in the second place) then you get the improper partner link layout in the BPEL process diagram, though the operation is not damaged. If a partner link appears on the wrong side you should go to the WSDL file and swap places for the role definitions in the partnerLinkType.
+</p>
+<h4 id="section-TheBPELDesignerPaletteElements-DynamicPartnerLinksAndDynamicAddressing">Dynamic Partner Links and Dynamic Addressing</h4>
+<p>During the design-time of an application, you may need to configure certain services whose endpoints (addresses) are not known beforehand, or it may be necessary to change an endpoint reference while the application is running. The Dynamic Partner link feature allows you to dynamically assign an endpoint reference to the partner link. This means that you can use one partner link for subsequent calls to different web-services (provided that the services use the same interface).
+</p>
+<p><b>Assigning an Endpoint Reference</b>
+</p>
+<p>Each partner link defines abstract information and concrete information. While abstract information, describing the web-service interface, should be static, the concrete information, such as the address and port, can be discovered and used dynamically.
+</p>
+<div class="information">
+Note - For successful deployment of the process, a partner link should be completely defined. When you deploy the project, the WSDL file for the partner link should contain and define both the abstract and the concrete information for the partner link, including address and port, though later the concrete information can be changed independently from the WSDL file.<br />
+</div>
+<div class="information">
+Note - The BPEL specification mandates that only the partner endpoint reference (EPR) can be changed dynamically. In BPEL terms, only the partnerRole of a partner link element can have a new value assigned. The myRole value doesn't change after the BPEL has been deployed.<br />
+</div>
+<p />
+<p>To assign a new endpoint reference to a partner link you can use the standard Assign activity and the BPEL Mapper.
+</p>
+<p>The EPR information can be provided in several different ways:
+</p>
+<ul><li>  <b>Use literal to construct endpoint:</b> Provide the endpoint address as literal syntax and map it to the partner link. <br />
+</li><li> <b>Use an existing partner link's endpoint:</b> Extract a partner link's endpoint and assign it to another partner link in the BPEL Mapper.<br />
+</li><li> <b>Use an incoming message to extract the endpoint address:</b> Define the message with the end point schema as part of it, and use the message variable to assign the endpoint to the partner link at runtime.<br />
+</li><li> <b>Using a database query to provide an endpoint address</b> The BPEL service does a dynamic addressing invocation, with the address coming from a database.<br />
+</li></ul><p>Each of these options is explained in more detail in the advanced section of this book. For more information on each of these alternatives, see Using Dynamic Partner Links and Dynamic Addressing.
+</p>
+<p>If you use an incoming message, an EPR schema should be defined as a part of the message in WSDL. To assign the EPR to a partner link, use the message variable.
+</p>
+<h4 id="section-TheBPELDesignerPaletteElements-ToAssignANewEndpointReferenceToAPartnerLinkFromAVariable">To assign a new endpoint reference to a partner link from a variable:</h4>
+<ol><li> Create a new Assign activity in the process.
+</li><li> Open the BPEL Mapper.
+</li><li> In the target tree on the right, find the partner link to which you want to deliver a new concrete part.
+</li><li> In the source tree, find a variable containing the new endpoint address.
+ The address of the web-service can be defined in terms of different schemas, and the JBI container requires a special data type called ServiceRefType which is a simple wrapper for any endpoint-describing data type.
+ <b>To wrap your data:</b>
+</li></ol><ul><li> In the mapper toolbar, choose BPEL &rarr; Wrap with Service Reference.<br />
+</li></ul><table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/TheBPELDesignerPaletteElements/wrap-with-server-ref.gif" height="212" width="617" alt="Image shows Wrap with Service Reference function in the Mapper" /></td></tr>
+</table>
+
+<ul><li> This function is a doXslTranform function that uses a predefined XSL-style sheet. A new concrete part is assigned to the partner link.<br />
+</li></ul><table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/TheBPELDesignerPaletteElements/pl-new-epr-assigned1.gif" height="223" width="650" alt="Image shows a New Endpoint Reference Assigned to the Partner Link" /></td></tr>
+</table>
+
+<div class="information">
+Note - The runtime supports only schemas included into WS-BPEL 2.0 specification. The WS-Addressing schema is not included in the BPEL specification and as a result it is not supported by the BPEL runtime. When the WS-Addressing schema is used for the first time it is copied from NetBeans global catalog to the BPEL Module project source root and further the project refers to the local copy of the schema. The adressing.xsd schema also appears among the Module's procees files in the Projects window.<br />
+</div> 
+<br />
+<p>See <a class="wikipage" href="Wikife94.html?page=UsingDynamicPartnerLinksAndDynamicAddressing">Using Dynamic Partner Links and Dynamic Addressing</a> for more use cases and further information.
+</p>
+<p><br />
+</p>
+<div class="center">
+<a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">Top</a></div>
+<h3 id="section-TheBPELDesignerPaletteElements-TheBasicActivities">The Basic Activities</h3>
+The Basic Activities section of the BPEL Designer Palette contains icons for the following business process elements: 
+<ul><li> Assign
+</li><li> JavaScript
+</li><li> Validate
+</li><li> Empty
+</li><li> Wait
+</li><li> Throw
+</li><li> ReThrow
+</li><li> Exit
+</li><li> Compensate
+</li><li> CompensateScope
+</li></ul><h3 id="section-TheBPELDesignerPaletteElements-UsingTheAssignElement">Using the Assign Element</h3>
+The <tt>Assign</tt> activity assigns values to variables. You use the <tt>Assign</tt> element to copy data from one variable to another, construct and calculate the values of expressions, and store new data in variables. Expressions are required to perform simple computation or operate message selections, properties, and literal constants to produce a new value for variables. The <tt>Assign</tt> activity can contain one or more elementary assignments.
+<h4 id="section-TheBPELDesignerPaletteElements-Usage">Usage</h4>
+Use the BPEL Mapper to define the copy rules for the <tt>Assign</tt> activity or add expressions. For more information, refer to the <a class="wikipage" href="Wiki39db.html?page=UsingTheBPELMapper">Assign Activity Scenario</a> section of the guide, under Mapping Examples.
+<p>Double-click the <tt>Assign</tt> activity on the diagram to open Mapper view of the activity. If this window is not visible, you can invoke it manually, by choosing <tt>Window</tt> &rarr; <tt>Other</tt> &rarr; <tt>BPEL Mapper</tt> from the main menu.
+</p>
+<h4 id="section-TheBPELDesignerPaletteElements-AssignElementProperties">Assign Element Properties</h4>
+The Properties window of the Assign element, invoked by right-clicking the element and choosing Properties, contains two properties:
+<ul><li> <b>Name:</b> The name of the element.<br />
+</li><li> <b>Assignments Count:</b>The number of assignment rules specified for the element.<br />
+</li><li> <b>Validate:</b> Specifies whether the Assign activity validates variables modified by the activity. When the value is &ldquo;yes&rdquo; , the Assign activity will validate all of the variables it modifies. If the validation fails because one of the variables is invalid to its corresponding XML definition, then a standard fault <tt>bpel:invalidVariables</tt> is thrown. The default value is N/A.<br />
+</li><li> <b>Documentation:</b> User documentation attached to the element. This documentation is included with the source code of the BPEL process and can be extracted and included in a report.<br /> 
+</li></ul><p><br />
+</p>
+<div class="center">
+<a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">Top</a></div>
+<h3 id="section-TheBPELDesignerPaletteElements-UsingTheJavaScriptElement">Using the JavaScript Element</h3>
+The JavaScript activity acts like an Assign activity that enables you to use JavaScript (E4X), rather than using XPath 1.0. In many cases JavaScript can perform the same logic as XPath with much fewer processes.
+<h4 id="section-TheBPELDesignerPaletteElements-Usage">Usage</h4>
+Drag the JavaScript element from the Palette to the diagram. The JavaScript activity is added to the diagram and an empty extension assign operation is added to the source.<br /><table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/TheBPELDesignerPaletteElements/ep-bpel-se-jscode.gif" height="132" width="600" alt="Image displays the empty extension assign operation created by the JavaScript element in the BPEL Designer Source View" /></td></tr>
+</table>
+
+<p>Double-click the JavaScript element in the diagram to open the JavaScript Editor. From the editor you can assign input and output expressions, and add your JavaScript code to the editor's text field.<br /> 
+<table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/TheBPELDesignerPaletteElements/ep-bpel-se-jscript-editor.gif" height="452" width="560" alt="Image shows the JavaScript Editor" /></td></tr>
+</table>
+
+</p>
+<p>The JavaScript Editor's Input button opens a dialog box to specify the input mapping between BPEL and JavaScript variables.<br />
+<table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/TheBPELDesignerPaletteElements/ep-bpel-se-jscript-input.gif" height="368" width="460" alt="Image shows the JavaScript Editor Input dialog box" /></td></tr>
+</table>
+
+</p>
+<p>In the same way, the editor's Output button opens another dialog box to specify the output mapping between JavaScript and BPEL variables.<br />
+<table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/TheBPELDesignerPaletteElements/ep-bpel-se-jscript-output.gif" height="377" width="460" alt="Image shows the JavaScript Editor Output dialog box" /></td></tr>
+</table>
+
+</p>
+<h4 id="section-TheBPELDesignerPaletteElements-JavaScriptElementProperties">JavaScript Element Properties</h4>
+The Properties window of the Assign element, invoked by right-clicking the element and choosing Properties, contains two properties:<br />
+<ul><li> <b>Name</b>: The name of the element.
+</li><li> <b>Validate</b>: Specifies whether the JavaScript (Assign) activity validates any variables modified by the activity. When the value is "yes", the activity will validate all of the variables it modifies. If the validation fails because one of the variables is invalid to its corresponding XML definition, then a standard fault, <tt>bpel:invalidVariables</tt>, is thrown. The default value is N/A.
+</li><li> <b>Documentation</b>: User documentation attached to the element. This documentation is included with the source code of the BPEL process and can be extracted and included in a report.
+</li></ul><br />
+<div class="center">
+<a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">Top</a></div>
+<h3 id="section-TheBPELDesignerPaletteElements-UsingTheValidateElement">Using the Validate Element</h3>
+The Validate element is used to validate the values of variables against their associated XML and WSDL data definition. The element includes a Variables property that lists the variables for the process, and allows you to specify which variables to validate. When one or more variables prove invalid against a corresponding XML definition, a standard fault, <tt>bpel:invalidVariables</tt>, is thrown.
+<h4 id="section-TheBPELDesignerPaletteElements-Usage">Usage</h4>
+Drag and drop the Validate element to the diagram between Process Start and Process End. From the Validate Properties, click the Variables edit button. Select the variables you want validated from the Variables dialog box.<br />
+<table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/TheBPELDesignerPaletteElements/ep-bpel-validate-prop.gif" height="273" width="250" alt="Image shows the Validate element Variables property Variables dialog box" /></td></tr>
+</table>
+
+<p />
+<p />
+<p><br />
+</p>
+<div class="center">
+<a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">Top</a></div>
+<h3 id="section-TheBPELDesignerPaletteElements-UsingTheEmptyElement">Using the Empty Element</h3>
+The <tt>Empty</tt> element has no operation associated with it. It is usually used as a placeholder within a process, to catch and suppress faults, or to help synchronize actions within a flow activity that are executed concurrently.
+<p>The <tt>Empty</tt> element can be used when someone else will be implementing a business process, or when the activities within a flow activity need to be synchronized.
+</p>
+<h4 id="section-TheBPELDesignerPaletteElements-Usage">Usage</h4>
+Drag the <tt>Empty</tt> element from the Palette to the diagram.
+<p><br />
+</p>
+<div class="center">
+<a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">Top</a></div>
+<h3 id="section-TheBPELDesignerPaletteElements-UsingTheWaitElement">Using the Wait Element</h3>
+Use the <tt>Wait</tt> element to specify a wait condition based on a unit of time or a duration.
+<p>Double-click the <tt>Wait</tt> element on the diagram to open Mapper view of the activity. 
+</p>
+<h4 id="section-TheBPELDesignerPaletteElements-Usage">Usage</h4>
+Drag the <tt>Wait</tt> element from the Palette to the diagram. <br />Like other elements, it must be placed in the correct position in the process flow; otherwise you will not see the element in the diagram.
+<h4 id="section-TheBPELDesignerPaletteElements-WaitElementProperties">Wait Element Properties</h4>
+The properties of the Wait element are configured from the Properties window. <br />
+<ul><li> <b>Name</b>: Specifies the name of the element.
+</li><li> <b>Alarm Type</b>: Specifies the type of alarm. The available options are:
+<ul><li> <b>For</b>: Specifies a duration for the process to wait
+</li><li> <b>Until</b>: Specifies the time until which the process is delayed.
+</li></ul></li><li> <b>For</b>: Specifies the wait time in years, months, days, hours, minutes, and seconds. Click the edit button to open the Wait For dialog box where you specify the time in accordance with the selected expiration type.<br /><table border="0" class="imageplugin" align="left|center|right">
+<tr><td><img src="http://wiki.open-esb.java.net/attach/TheBPELDesignerPaletteElements/ep-bpel-wait-props%20copy.gif" height="305" width="375" alt="Image shows the Wait Properties window" /></td></tr>
+</table>
+<br />
+</li><li> <b>Documentation</b>:  User documentation attached to the element. This documentation is included with the source code of the BPEL process and can be extracted and included in a report.
+</li></ul><p />
+<p><br />
+</p>
+<div class="center">
+<a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">Top</a></div>
+<h3 id="section-TheBPELDesignerPaletteElements-UsingTheThrowElement">Using the Throw Element</h3>
+Use this activity to signal an internal fault.
+<h4 id="section-TheBPELDesignerPaletteElements-Usage">Usage</h4>
+In defining the properties of this element, you can specify a fault name and a fault variable. These details can then be passed onto a fault handler that is configured to deal with this kind of exception.
+<h4 id="section-TheBPELDesignerPaletteElements-ThrowElementProperties">Throw Element Properties</h4>
+The properties of the Throw element are configured from the Properties window. 
+<p>The options are:
+</p>
+<ul><li> <b>Name</b>
+</li><li> <b>Fault Name</b>: The <tt>Fault Name</tt> is a QName. You can use any name. The dialog box lets you choose a standard or already defined fault or specify a new one. The next time the the dialog box is opened, the newly defined faults appear inside of User Defined Faults folder. These are collected from the current BPEL file only. Clicking the ellipsis button (...) invokes the Fault Name dialog box.<br />You can use the WSDL Editor to add fault definitions to the WSDL file. <br />For more information, see the <tt>Configuring Port Types Using the WSDL View</tt> section of <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingWSDLEditor">Using the  WSDL Editor</a>.
+</li><li> <b>Fault Variable</b>: The <tt>Fault</tt> variable is a piece of data which is transfered from the point where the fault happens to the point where it is cached. Click the ellipsis button (...), specify the name of the variable that will contain the fault message (already declared in the BPEL file).
+</li><li> <b>Documentation</b> 
+</li></ul><br />
+<div class="center">
+<a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">Top</a></div>
+<h3 id="section-TheBPELDesignerPaletteElements-UsingTheRethrowElement">Using the Rethrow Element</h3>
+The <tt>Rethrow</tt> activity can only be used within a fault handler. The <tt>Rethrow </tt>activity is used to rethrow the fault caught by the fault handler. Before adding the <tt>Rethrow </tt>element to the BPEL process, add a <tt>Fault Handler</tt> element or <tt>Scope</tt> element to the Process and add a <tt>Catch</tt> or <tt>Catch All</tt> element to the <tt>Fault Handler</tt> container.
+<h4 id="section-TheBPELDesignerPaletteElements-Usage">Usage</h4>
+<ul><li> If you have not added a <tt>Fault Handler</tt> container to the diagram, in the Design view right-click the <tt>Scope</tt> or <tt>Process</tt> element and choose <tt>Add</tt> &rarr; <tt>Add Fault Handlers</tt>. 
+</li><li> Right-click the <tt>Fault Handler</tt> container and choose <tt>Add</tt> &rarr; <tt>Add Catch</tt> or <tt>Add</tt> &rarr; <tt>Catch All</tt>. 
+</li><li> Drag the <tt>Rethrow</tt> element from the Palette to the diagram and place it inside the <tt>Catch</tt> or <tt>Catch all</tt> element of the <tt>Fault Handler</tt> container.
+</li></ul><p>There are no properties to be defined for the <tt>Rethrow</tt> element, as it rethrows the fault caught by the fault handler.
+</p>
+<p><br />
+</p>
+<div class="center">
+<a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">Top</a></div>
+<h3 id="section-TheBPELDesignerPaletteElements-UsingTheExitElement">Using the Exit Element</h3>
+Use this activity to halt the execution of an activity or a process: either within the process, within a structured activity, or within a handler.
+<h4 id="section-TheBPELDesignerPaletteElements-Usage">Usage</h4>
+In the Design view, drag the <tt>Exit</tt> element from the Palette to the diagram.
+<p><b>Note:</b> BPEL runtime does not support <tt>Exit</tt> within the <tt>Flow</tt> and <tt>On Alarm</tt> elements, or within the <tt>On Event</tt> child of the <tt>Event Handler</tt> element.
+</p>
+<p><br />
+</p>
+<div class="center">
+<a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">Top</a></div>
+<h3 id="section-TheBPELDesignerPaletteElements-UsingTheCompensateElement">Using the Compensate Element</h3>
+The <tt>Compensate</tt> element is used to start compensation on all inner scopes that have successfully completed. The <tt>Compensate</tt> activity can only be used within <tt>Catch</tt>, <tt>CatchAll</tt>, <tt>Compensation Handler</tt> or <tt>Termination Handler</tt> elements. Before adding Compensate element to the process, be certain to add one of the following to either the <tt>Process</tt> or <tt>Scope</tt> element:
+<ul><li> A Fault Handler and Catch or Catch All
+</li><li> A Compensation Handler
+</li><li> A Termination Handler
+</li></ul><p>The <tt>Compensate</tt> activity causes compensation of all scopes immediately enclosed in the scope containing the fault handler, compensation handler, or termination handler with the <tt>Compensate</tt> activity.
+</p>
+<h4 id="section-TheBPELDesignerPaletteElements-Usage">Usage</h4>
+From the Palette, drag the <tt>Compensate</tt> activity and place it inside the <tt>Catch</tt>, <tt>CatchAll</tt>, <tt>Compensation Handler</tt> or <tt>Termination Handler</tt> element on the diagram. The <tt>Compensate</tt> activity requires no property configuration, its behavior is pre-defined. 
+<p><br />
+</p>
+<div class="center">
+<a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">Top</a></div>
+<h3 id="section-TheBPELDesignerPaletteElements-UsingTheCompensateScopeElement">Using the CompensateScope Element</h3>
+The <tt>CompensateScope</tt> element is used to start compensation on a specific scope that has successfully completed. The <tt>CompensateScope</tt> activity can only be used within <tt>Catch</tt>, <tt>CatchAll</tt>, <tt>Compensation Handler</tt> or <tt>Termination Handler</tt> elements. Before adding the CompositeScope element, add one of the following to the <tt>Process</tt> or <tt>Scope</tt> element:
+<ul><li> A <tt>Fault Handler</tt> and <tt>Catch</tt> or <tt>Catch All</tt> 
+</li><li> A <tt>Compensation Handler</tt>
+</li><li> A <tt>Termination Handler</tt>
+</li></ul><p>The <tt>CompensateScope</tt> activity can compensate one specified <tt>Scope</tt> or <tt>Invoke</tt> element, enclosed in a scope that contains the handler with the <tt>CompensateScope</tt> activity, by invoking the compensation handler of the <tt>Scope</tt> or <tt>Invoke</tt> element.
+</p>
+<h4 id="section-TheBPELDesignerPaletteElements-Usage">Usage</h4>
+<ol><li> From the Palette, drag the <tt>CompensateScope</tt> activity and place it inside the <tt>Catch</tt>, <tt>CatchAll</tt>, <tt>Compensation Handler</tt> or <tt>Termination Handler</tt> element on the diagram. 
+</li><li> Right-click the <tt>CompensateScope</tt> element and choose Properties.
+</li><li> In the Properties dialog box, configure the following: 
+<ul><li> <b>Name</b>: Enter an arbitrary name. 
+</li><li> <b>Target</b>: From the drop-down list, select a <tt>Scope</tt> or an <tt>Invoke</tt> activity to compensate. 
+</li><li> <b>Documentation</b>: User documentation attached to the element. This documentation is included with the source code of the BPEL process and can be extracted and included in a report.
+</li></ul></li></ol><p><br />
+</p>
+<div class="center">
+<a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">Top</a></div>
+<h3 id="section-TheBPELDesignerPaletteElements-TheStructuredActivities">The Structured Activities</h3>
+The Structured Activities section of the BPEL Designer Palette contains icons for the following business process elements: 
+<ul><li> If
+</li><li> While
+</li><li> Repeat Until
+</li><li> For Each
+</li><li> Flow
+</li><li> Sequence
+</li><li> Pick
+</li><li> Scope
+</li></ul>These elements can group activities within a process in order to apply certain rules, or they can place certain restrictions on activities.
+<p />
+<h3 id="section-TheBPELDesignerPaletteElements-UsingTheIfElement">Using the If Element</h3>
+The <tt>If</tt> activity supports conditional behavior of a business process instance. The <tt>If</tt> activity consists of conditional branches defined by the <tt>If</tt> and <tt>Else If</tt> elements, followed by an optional <tt>Else</tt> branch. The conditions on <tt>If</tt> and <tt>Else If</tt> branches are evaluated in the order they appear. During execution, the first branch whose condition holds true is taken and provides the activity specified for the <tt>If</tt> activity. In other words, if there are several <tt>Else If</tt> branches whose conditions hold true, only the first of them will be executed.
+<p>If none of the branches evaluates to true, then the <tt>Else</tt> path is chosen. If the <tt>Else</tt> branch is not explicitly specified, this branch is considered to contain an <tt>Empty </tt>activity. The If activity is complete when the activity of the selected branch completes.
+</p>
+<h4 id="section-TheBPELDesignerPaletteElements-Usage">Usage</h4>
+<ol><li> In the Design view, drag the <tt>If</tt> element from the Palette to the diagram.
+</li><li> Double-click the <tt>If</tt> element on the diagram or select the <tt>Mapper</tt> tab on the toolbar.<br />The BPEL Mapper opens.
+</li><li> Specify the condition for the <tt>If </tt>element using the BPEL Mapper.<br />For more information, refer to the If Activity Scenario section of the guide. <br />You can also specify the condition manually in the Properties window, invoked by right-clicking the element and choosing <tt>Properties</tt>.
+</li><li> (Optional) In the Properties window, enter the name for the <tt>If</tt> element.
+</li><li> Add the element that will be executed, if the condition is true, into the <tt>If</tt> element. Configure the nested element.<br /> If you add another element into the <tt>If</tt> element, the nested elements are automatically wrapped in the <tt>Sequence</tt> element.
+</li><li> Add other branches (<tt>Else If</tt> and <tt>Else</tt>) as described below.
+</li></ol><h4 id="section-TheBPELDesignerPaletteElements-AddingAnElseIfBranchToTheIfElement">Adding an <tt>Else If</tt> Branch to the <tt>If</tt> Element</h4>
+<ol><li> Right-click the <tt>If</tt> element and choose <tt>Add Else If</tt>.
+</li><li> Add an activity to the <tt>Else If</tt> that will be executed if the condition defined for this <tt>Else If</tt> element is true. To define a condition, use the BPEL Mapper.
+</li><li> (Optional) Add more <tt>Else If</tt> activities by choosing <tt>Add Else If</tt> and add activities to them.
+</li></ol><h4 id="section-TheBPELDesignerPaletteElements-AddingAnElseBranchToTheIfElement">Adding an <tt>Else</tt> Branch to the <tt>If</tt> Element</h4>
+Drag the activity you want to be executed on the <tt>Else</tt> branch onto the connector path marked with a slash mark. Configure the nested activity.
+<h4 id="section-TheBPELDesignerPaletteElements-ReorderingElseIfBranches">Reordering <tt>Else If</tt> Branches</h4>
+In the Design view, drag the <tt>Else If</tt> branch that you want reordered and drop it onto the placeholder that appears next to another <tt>Else If</tt> branch.
+<p><br />
+</p>
+<div class="center">
+<a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">Top</a></div>
+<h3 id="section-TheBPELDesignerPaletteElements-UsingTheWhileElement">Using the While Element</h3>
+Use the <tt>While</tt> element to repeatedly execute one or more activities as long as specific conditions are in place at the beginning of each iteration. This element contains other elements that are repeated while success criteria you specify are met. If the condition you specify leads to false, none of the activities listed will be executed.
+<p><b>Note:</b> the <tt>While</tt> element first checks the validity of the condition and then executes the iterative activity. Conversely, the <tt>RepeatUntil</tt> element first executes the activity and then checks the validity of the condition.
+</p>
+<h4 id="section-TheBPELDesignerPaletteElements-Usage">Usage</h4>
+<ol><li> In the Design view, drag the <tt>While</tt> element from the Palette to the diagram.
+</li><li> Drag an activity that will be repeatedly executed and place it inside the <tt>While</tt> element. If needed, configure the activity's properties.
+</li><li> Use the Properties window to specify the name and condition of the <tt>While</tt> element. You can enter the condition manually or use the BPEL Mapper to generate the condition for you. 
+</li></ol><p><br />
+</p>
+<div class="center">
+<a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">Top</a></div>
+<h3 id="section-TheBPELDesignerPaletteElements-UsingTheRepeatUntilElement">Using the RepeatUntil Element</h3>
+Use the <tt>RepeatUntil</tt> element to repeatedly execute one or more activities as long as specific conditions are in place after the execution of each iteration. This element contains other elements that are repeated until the success criteria you specify are met. If the condition you specify leads to true, the activities listed will be executed once.
+<p><b>Note:</b> the <tt>RepeatUntil</tt> element first executes the iterative activity and then checks the validity of the condition. Conversely, the <tt>While</tt> element first checks the validity of the condition and then executes the activity.
+</p>
+<h4 id="section-TheBPELDesignerPaletteElements-Usage">Usage</h4>
+<ol><li> In the Design view, drag the <tt>RepeatUntil</tt> element from the Palette to the diagram.
+</li><li> Drag activities that will be repeatedly executed and place them inside the <tt>RepeatUntil</tt> element.<br />If needed, configure the activity's properties.
+</li><li> Use the Properties window to specify the name and condition of the <tt>RepeatUntil</tt> element. You can enter the condition manually or use the <a class="wikipage" href="Wiki39db.html?page=UsingTheBPELMapper">BPEL Mapper</a> to generate the condition for you.
+</li></ol><p><br />
+</p>
+<div class="center">
+<a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">Top</a></div>
+<h3 id="section-TheBPELDesignerPaletteElements-UsingTheForEachElement">Using the ForEach Element</h3>
+Use the <tt>ForEach</tt> element to repeatedly execute its contained scope activity exactly N+1 times where N equals the <i>final counter value</i> minus the <i>start counter value</i>.
+<h4 id="section-TheBPELDesignerPaletteElements-Usage">Usage</h4>
+<ol><li> In the Design view, drag the <tt>For Each</tt> element from the Palette to the diagram.
+</li><li> Add elements that will be repeatedly executed from the Palette into the <tt>For Each</tt> element. The elements that you add are automatically wrapped into the <tt>Scope</tt> element.
+</li><li> Right-click the <tt>For Each</tt> element and choose <tt>Properties</tt> to open its Properties window.<br />The Properties window for the For Each element includes the following properties:
+<ul><li> <b>Name</b>: Specifies the name of the For Each element.
+</li><li> <b>Counter Variable Name</b>: Declares the counter variable name.
+</li><li> <b>Start Counter Value</b>: Sets the start counter value. Use the <a class="wikipage" href="Wiki39db.html?page=UsingTheBPELMapper">BPEL Mapper</a> to generate an integer value expression.
+</li><li> <b>Final Counter Value</b>: Sets the final counter value. Use the <a class="wikipage" href="Wiki39db.html?page=UsingTheBPELMapper">BPEL Mapper</a> to generate an integer value expression.<br />When the <tt>ForEach</tt> activity is started, the expressions in start counter value and final Counter value are evaluated for the first and only time. That is, once the two values are returned they remain constant for the lifespan of the activity. If the start counter value is greater than the final counter value, then no iteration will be performed.
+</li><li> <b>Completion Condition</b>: (Optional) Specifies an integer value expression. After execution of each directly enclosed activity, the number of completed activities is checked against this value. When the number of completed activities equals the value of the specified expression, no further activities are started. When the expression value is greater than the available number of iterations, then no iteration will be started.
+</li><li> <b>Count Completed Branches Only</b>: (Optional) If this checkbox is selected, it tells the runtime to only count the branches that have completed successfully. If this checkbox is cleared, all branches, completed successfully or unsuccessfully, will be counted.
+</li></ul></li></ol><p><br />
+</p>
+<div class="center">
+<a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">Top</a></div>
+<h3 id="section-TheBPELDesignerPaletteElements-UsingThePickElement">Using the Pick Element</h3>
+The <tt>Pick</tt> element blocks the process and waits until one of the specified events occurs. After the specific event occurs, the activity associated with this event is performed. The possible events are the arrival of a message or a timer-based alarm. The occurrence of the events is mutually exclusive. If more than one of the events occurs, then the selection of the activity to perform depends on which event occurred first.
+The <tt>Pick</tt> activity provides two branches, <tt>On Message</tt> and <tt>On Alarm</tt>. The branch whose condition is satisfied first (i.e. a message is received or the specified timer expires) is executed. When you add a Pick element to your diagram, it automatically includes one <tt>On Message</tt> statement in which you specify the properties of the message that the process awaits from a partner service. Each <tt>Pick</tt> element must include at least one <tt>On Message</tt> statement. The <tt>On Alarm</tt> branch contains a timer you can use to specify how long the process is to wait.
+<h4 id="section-TheBPELDesignerPaletteElements-Usage">Usage</h4>
+<ol><li> In the <tt>Design</tt> view, drag the <tt>Pick</tt> element from the Palette to the diagram.
+</li><li> For the <tt>On Message</tt> branch, configure the properties of the message for which the process is waiting. The configuration is similar to that of the <tt>Usage</tt> element.
+</li><li> From the Palette, drag the activity that will be executed and place it inside the <tt>On Message</tt> branch. Configure the activity's properties.
+</li><li> (Optional) Add more <tt>On Message</tt> branches by choosing <tt>Add</tt> &rarr; <tt>On Message</tt> from the pop-up menu and configure them as described above.
+</li><li> (Optional) Add one or more <tt>On Alarm</tt> branches following the procedure below.
+</li></ol><h4 id="section-TheBPELDesignerPaletteElements-AddingAnOnAlarmBranch">Adding an <tt>On Alarm</tt> branch</h4>
+<ol><li> Right-click the <tt>Pick</tt> element and choose <tt>Add</tt> &rarr; <tt>On Alarm</tt> from the pop-up menu.
+</li><li> Configure the timer via the Properties window, invoked by right-clicking the element and choosing <tt>Properties</tt>. The available options are:
+<ul><li> <b>Alarm Type</b>: Used to choose the type of alarm. The type can be one of the following:
+<ul><li> <b>For</b>: Specifies a duration for the process to wait.
+</li><li> <b>Until</b>: Specifies a deadline for the process.
+</li></ul></li><li> <b>For</b>: Specifies the wait time in years, months, days, hours, minutes, and seconds. Click the edit button to open the For dialog box where you specify the time in accordance with the selected expiration type.<br />
+</li><li> <b>Documentation</b>:  User documentation attached to the element. This documentation is included with the source code of the BPEL process and can be extracted and included in a report.<br />
+</li></ul></li><li> Find the activity you want executed after the time expires, and drag it from the Palette to the placeholder inside the <tt>On Alarm</tt> element.
+</li><li> (Optional) Add one or more <tt>On Alarm</tt> branches as described above.
+</li></ol><h4 id="section-TheBPELDesignerPaletteElements-PickElementProperties">Pick Element Properties</h4>
+The Properties window for the <tt>Pick</tt> element, invoked by right-clicking the element and choosing Properties, includes the following fields:
+<ul><li> <b>Create Instance</b>: If set to <tt>yes</tt>, a new process instance will be created when the specified event occurs. If you do not plan to start a new process instance, keep the default <tt>N/A</tt> value.
+</li><li> <b>Name</b>: This is used to specify the name for the element.
+</li><li> <b>Documentation</b>:  User documentation attached to the element. This documentation is included with the source code of the BPEL process and can be extracted and included in a report.<br />
+</li></ul><p><br />
+</p>
+<div class="center">
+<a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">Top</a></div>
+<h3 id="section-TheBPELDesignerPaletteElements-UsingTheFlowElement">Using the Flow Element</h3>
+Use the <tt>Flow</tt> element to define a set of activities that will execute concurrently (in parallel).
+<p>The <tt>Flow</tt> activity is a structured activity, containing other activities separated into individual control paths or branches. You can embed as many paths in the activity as you want, and they will all be executed simultaneously.
+</p>
+<p>During execution, each path is executed concurrently, and the activities on each are executed in the order in which they appear, unless they are the source of a link. When the activities are the source of a link, the condition of the link and the join condition of the activity must be evaluated. If the link conditions that lead to an activity conflict with those of its join condition, then a fault is thrown on that activity.
+</p>
+<h4 id="section-TheBPELDesignerPaletteElements-Usage">Usage</h4>
+<ol><li> In the Design view, drag the <tt>Flow</tt> Element from the Palette to the diagram.
+</li><li> Drag an element to the placeholder inside the <tt>Flow</tt> element. <br />If you add another element into the same branch of the <tt>Flow</tt> element, the elements within a branch are automatically wrapped in the Sequence element.
+</li></ol><h4 id="section-TheBPELDesignerPaletteElements-AddingBranchesToTheFlowElement">Adding Branches to the <tt>Flow</tt> Element</h4>
+You can add one or more branches to the <tt>Flow</tt> element. The <tt>Flow</tt> element has a special user interaction style. It always shows a placeholder for the next branch that you might wish to add. To add a new branch, drag an element from the Palette to the immediately available "next branch" placeholder.
+<h4 id="section-TheBPELDesignerPaletteElements-ChangingTheOrderOfElementsInsideFlow">Changing the Order of Elements inside <tt>Flow</tt></h4>
+To change the order of activities inside the <tt>Flow</tt> element:
+<ol><li> In the Design view, right-click the <tt>Flow</tt> element and select <tt>Change Order</tt>.
+</li><li> Select an element and use the <tt>Move up</tt> or <tt>Move down</tt> buttons to change the position of the element inside the container.
+</li></ol><p><br />
+</p>
+<div class="center">
+<a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">Top</a></div>
+<h3 id="section-TheBPELDesignerPaletteElements-UsingTheSequenceElement">Using the Sequence Element</h3>
+Use the <tt>Sequence</tt> element to nest a series of activities into your process. The activities within a sequence will execute in strict sequential order. Process execution returns to the business process when the last activity within the nest has completed.
+<h4 id="section-TheBPELDesignerPaletteElements-Usage">Usage</h4>
+Drag the <tt>Sequence</tt> element from the Palette to the diagram.
+<h4 id="section-TheBPELDesignerPaletteElements-AddingChildActivitiesToTheSequence">Adding Child Activities to the Sequence</h4>
+You can add one or more child activities to the <tt>Sequence</tt>. The <tt>Sequence</tt> element has a special user interaction style. It always shows one or more valid placeholders for the next activity that you might wish to add. 
+<p>To add a new child activity, drag and drop an element from the Palette onto the immediately available next or previous activity placeholder.
+</p>
+<h4 id="section-TheBPELDesignerPaletteElements-ChangingTheOrderOfElementsInsideSequence">Changing the Order of Elements inside Sequence</h4>
+To change the order of activities inside the <tt>Sequence</tt> element:
+<ol><li> In the Design view, right-click the <tt>Sequence</tt> element and select <tt>Change Order</tt>.
+</li><li> Select an element and use the <tt>Move up</tt> or <tt>Move down</tt> buttons to change the position of the element inside the container.
+</li></ol><p><br />
+</p>
+<div class="center">
+<a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">Top</a></div>
+<h3 id="section-TheBPELDesignerPaletteElements-UsingTheScopeElement">Using the Scope Element</h3>
+The <tt>Scope</tt> activity is essentially a collection of child activities that can have their own variables, Fault and Event Handlers, and correlation sets. The <tt>Scope</tt> activity provides the behavior context for the child elements. The attributes defined for a parent Scope have local visibility inside this <tt>Scope</tt>. For example, the variables declared for a <tt>Scope</tt> are visible only inside that <tt>Scope</tt> and all nested <tt>Scopes</tt>. These variables can then be used for the child activities of this Scope.
+<h4 id="section-TheBPELDesignerPaletteElements-Usage">Usage</h4>
+<ol><li> In the Design view, drag the <tt>Scope</tt> element from the Palette to the diagram.
+</li><li> Right-click the element and choose Add from the pop-up menu to add the following:
+<ul><li> Variables
+</li><li> <a class="wikipage" href="Wikie39c.html?page=UsingHandlers">Event Handler</a>
+</li><li> <a class="wikipage" href="Wikie39c.html?page=UsingHandlers">Fault Handler</a>
+</li></ul></li><li> In the Design view, drag elements from the Palette and place them inside the <tt>Scope</tt> element.
+</li><li> Configure the elements.
+</li><li> (Optional) Specify the name of the <tt>Scope</tt> element in the Properties window, invoked by right-clicking the element and choosing Properties.
+</li></ol><h4 id="section-TheBPELDesignerPaletteElements-Variables">Variables</h4>
+Variables in BPEL programming function just as they do in other programming languages: they hold temporary values, form parts of expressions, or are passed as parameters to external partners. Normally, you need a variable for every message sent to or received from a partner service. The BPEL Designer supports the following types of variables:
+<ul><li> <b>WSDL Message type</b>: These variables correspond to web service message types that are defined in WSDL files imported by the process. In a BPEL file ( <tt>.bpel</tt>), these variables must specify a value for the <tt>messageType</tt> attribute. Message type variables are used to hold data in interactions between the process and its partner services.
+</li><li> <b>XML Schema type</b>: These variables correspond to <i>simple</i> or <i>complex</i> XML Schema data types. The XML schema types themselves are defined in XML Schema files (<tt>.xsd</tt>) or in WSDL files that are imported into the process. In a BPEL file, variables of this type must specify a value for the <tt>type</tt> attribute.
+</li><li> <b>XML Schema element</b>: These variables correspond to XML Schema elements.The XML schema elements themselves are defined in XML Schema files (<tt>.xsd</tt>) or in WSDL files that are imported into the process. In a BPEL file, variables of this type must specify a value for the <tt>element</tt> attribute.
+</li><li> <b>Built-in type</b>: Variables of this type are standard simple types defined in the XML Schema specification.
+</li></ul><h4 id="section-TheBPELDesignerPaletteElements-GlobalAndLocalVariables">Global and Local Variables</h4>
+The variables defined at the Process root are global variables, which have a global visibility throughout the entire process. The variables defined within a particular Scope are visible only inside that Scope and all nested Scopes. These variables are called local variables. A variable defined for an inner <tt>Scope</tt> element can hide an upper defined variable of the same name.
+<p>The name of a variable must be unique among the names of all variables defined within the same Scope.
+</p>
+<h4 id="section-TheBPELDesignerPaletteElements-ToDefineAVariable">To define a variable</h4>
+<ol><li> Right-click the <tt>Process</tt> or <tt>Scope</tt> element and select <tt>Add</tt> &rarr; <tt>Variable</tt>.
+</li><li> In the Create New Variable dialog box, name the variable. The name should be unique within this Scope element.
+</li><li> Expand the node corresponding to the type of the new variable and select its type. You have the following options:
+<ul><li> <b>Built-in Types</b>: Expand the <tt>Built-in Types</tt> node, select the type's name, and click <tt>OK</tt>.
+</li><li> <b>Message Type</b>: Expand a <tt>.wsdl</tt> file node, select a message type and click <tt>OK</tt>.
+</li><li> <b>XML Schema</b>: Expand an <tt>.xsd</tt> file node or a <tt>.wsdl</tt> file that contains an embedded schema. Expand the <tt>Global Complex Type</tt>, <tt>Global Simple Type</tt>, or <tt>Global Elements Simple</tt> nodes, select the appropriate type, and click <tt>OK</tt>.<br />For your convenience, global types of variables are displayed in bold.
+</li></ul></li><li> (Optional) Clear the <tt>Show Imported Files Only</tt> checkbox to view the contents of non-imported WSDL and XML schema files.
+</li><li> Click <tt>OK</tt>.
+</li></ol><p>  By default, the Create New Variable dialog box only shows those files that have already been referenced in the process. However, the project may contain other WSDL and XSD files which have not yet been imported into the process. If you select a type for the new variable that is defined in a non-imported file, the IDE will automatically add the required import to the BPEL process.
+</p>
+<p>  You can also add variables from the the Navigator Window window. To add a variable, select <tt>BPEL Logical View</tt> in the Navigator, expand your BPEL Module project's node, right-click the <tt>Variables</tt> node and choose <tt>Add Variable</tt>.
+</p>
+<h4 id="section-TheBPELDesignerPaletteElements-ToEditAVariable">To edit a variable:</h4>
+<ol><li> In the Navigator window, select <tt>BPEL Logical View</tt>.
+</li><li> Expand BPEL Module project's node &rarr; <tt>Variables</tt> and double-click the variable you want to edit.
+</li><li> In the Property Editor dialog box for the variable, change the variable type and name.
+</li><li> Click <tt>OK</tt>.
+</li></ol><p><br />
+</p>
+<div class="center">
+<a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements">Top</a></div>
+<p><br />
+</p>
+<p><a class="wikipage" href="Wiki17ca.html?page=DevelopingTheBPELProcessUsingTheBPELDiagram">Previous</a><br />
+<a class="wikipage" href="Wiki39db.html?page=UsingTheBPELMapper">Next</a>
+</p>
+
+
+
+  </div>
+
+  
+  
+  <div id="attachments" style="display:none;" >
+
+    
+
+
+
+
+
+
+
+<div id="attachmentViewer">
+  <div class="list">
+    <h3>List of attachments &nbsp;&nbsp;&nbsp;&nbsp;
+    </h3>
+      <form action='#'>
+        <select name="attachSelect" id="attachSelect" size="16" 
+            onchange="Attach.showImage(this[this.selectedIndex], '%A4', 300, 300 )" >
+        <option value="Attachment Info" selected="selected" >--- Select Image to preview ---</option>
+        
+          
+          <option value="ep-bpel-receive-prop copy.gif%A4http://wiki.open-esb.java.net/attach/TheBPELDesignerPaletteElements/ep-bpel-receive-prop%20copy.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=TheBPELDesignerPaletteElements/ep-bpel-receive-prop%20copy.gif%A419399 bytes%A41" >
+            ep-bpel-receive-prop copy.gif (19399 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="ep-bpel-se-jscode.gif%A4http://wiki.open-esb.java.net/attach/TheBPELDesignerPaletteElements/ep-bpel-se-jscode.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=TheBPELDesignerPaletteElements/ep-bpel-se-jscode.gif%A411158 bytes%A41" >
+            ep-bpel-se-jscode.gif (11158 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="ep-bpel-se-jscript-editor.gif%A4http://wiki.open-esb.java.net/attach/TheBPELDesignerPaletteElements/ep-bpel-se-jscript-editor.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=TheBPELDesignerPaletteElements/ep-bpel-se-jscript-editor.gif%A425335 bytes%A41" >
+            ep-bpel-se-jscript-editor.gif (25335 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="ep-bpel-se-jscript-input.gif%A4http://wiki.open-esb.java.net/attach/TheBPELDesignerPaletteElements/ep-bpel-se-jscript-input.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=TheBPELDesignerPaletteElements/ep-bpel-se-jscript-input.gif%A419619 bytes%A41" >
+            ep-bpel-se-jscript-input.gif (19619 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="ep-bpel-se-jscript-output.gif%A4http://wiki.open-esb.java.net/attach/TheBPELDesignerPaletteElements/ep-bpel-se-jscript-output.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=TheBPELDesignerPaletteElements/ep-bpel-se-jscript-output.gif%A419502 bytes%A41" >
+            ep-bpel-se-jscript-output.gif (19502 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="ep-bpel-validate-prop.gif%A4http://wiki.open-esb.java.net/attach/TheBPELDesignerPaletteElements/ep-bpel-validate-prop.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=TheBPELDesignerPaletteElements/ep-bpel-validate-prop.gif%A418163 bytes%A41" >
+            ep-bpel-validate-prop.gif (18163 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="ep-bpel-wait-props copy.gif%A4http://wiki.open-esb.java.net/attach/TheBPELDesignerPaletteElements/ep-bpel-wait-props%20copy.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=TheBPELDesignerPaletteElements/ep-bpel-wait-props%20copy.gif%A422456 bytes%A41" >
+            ep-bpel-wait-props copy.gif (22456 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="invoke_property_editor.gif%A4http://wiki.open-esb.java.net/attach/TheBPELDesignerPaletteElements/invoke_property_editor.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=TheBPELDesignerPaletteElements/invoke_property_editor.gif%A46419 bytes%A41" >
+            invoke_property_editor.gif (6419 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="invokecorrelations1.gif%A4http://wiki.open-esb.java.net/attach/TheBPELDesignerPaletteElements/invokecorrelations1.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=TheBPELDesignerPaletteElements/invokecorrelations1.gif%A411582 bytes%A41" >
+            invokecorrelations1.gif (11582 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="pl-new-epr-assigned.gif%A4http://wiki.open-esb.java.net/attach/TheBPELDesignerPaletteElements/pl-new-epr-assigned.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=TheBPELDesignerPaletteElements/pl-new-epr-assigned.gif%A419414 bytes%A41" >
+            pl-new-epr-assigned.gif (19414 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="pl-new-epr-assigned1.gif%A4http://wiki.open-esb.java.net/attach/TheBPELDesignerPaletteElements/pl-new-epr-assigned1.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=TheBPELDesignerPaletteElements/pl-new-epr-assigned1.gif%A420946 bytes%A41" >
+            pl-new-epr-assigned1.gif (20946 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="plpropedit.gif%A4http://wiki.open-esb.java.net/attach/TheBPELDesignerPaletteElements/plpropedit.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=TheBPELDesignerPaletteElements/plpropedit.gif%A411135 bytes%A41" >
+            plpropedit.gif (11135 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="process.gif%A4http://wiki.open-esb.java.net/attach/TheBPELDesignerPaletteElements/process.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=TheBPELDesignerPaletteElements/process.gif%A49614 bytes%A41" >
+            process.gif (9614 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="receiveproperties3.gif%A4http://wiki.open-esb.java.net/attach/TheBPELDesignerPaletteElements/receiveproperties3.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=TheBPELDesignerPaletteElements/receiveproperties3.gif%A422760 bytes%A42" >
+            receiveproperties3.gif (22760 bytes , revision-2, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="throwproperties.gif%A4http://wiki.open-esb.java.net/attach/TheBPELDesignerPaletteElements/throwproperties.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=TheBPELDesignerPaletteElements/throwproperties.gif%A44551 bytes%A41" >
+            throwproperties.gif (4551 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="waitproperties.gif%A4http://wiki.open-esb.java.net/attach/TheBPELDesignerPaletteElements/waitproperties.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=TheBPELDesignerPaletteElements/waitproperties.gif%A411314 bytes%A42" >
+            waitproperties.gif (11314 bytes , revision-2, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="waitproperties1.gif%A4http://wiki.open-esb.java.net/attach/TheBPELDesignerPaletteElements/waitproperties1.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=TheBPELDesignerPaletteElements/waitproperties1.gif%A418222 bytes%A41" >
+            waitproperties1.gif (18222 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="wrap-with-serv-ref.gif%A4http://wiki.open-esb.java.net/attach/TheBPELDesignerPaletteElements/wrap-with-serv-ref.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=TheBPELDesignerPaletteElements/wrap-with-serv-ref.gif%A421847 bytes%A41" >
+            wrap-with-serv-ref.gif (21847 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+          
+          <option value="wrap-with-server-ref.gif%A4http://wiki.open-esb.java.net/attach/TheBPELDesignerPaletteElements/wrap-with-server-ref.gif%A4http://wiki.open-esb.java.net/PageInfo.jsp?page=TheBPELDesignerPaletteElements/wrap-with-server-ref.gif%A422464 bytes%A41" >
+            wrap-with-server-ref.gif (22464 bytes , revision-1, by&nbsp;rjacobus)
+          </option>
+        
+      </select>
+    </form>
+    <div class="small">&nbsp;</div>
+  </div>  
+
+  <div class="preview">
+    <h3>Image preview</h3>
+    <div id="attachImg" title="No Image Selected">No Image Selected</div>
+    <a href="#" class="small" style="display:none;" id="attachInfo">More info, including version history</a>
+  </div>
+
+  <div style="clear:both; height:0px;" > </div>
+
+</div>
+
+
+  </div>
+
+  
+  <div id="pageinfo" style="display:none;" >
+
+    
+
+
+
+
+
+
+
+
+  <p>
+  This page (revision-54) was last changed on 
+  <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TheBPELDesignerPaletteElements&amp;r1=54&amp;r2=53"
+    title="Show changes of last page update" >
+    
+    09-Jun-09 11:06 AM, -0700
+  </a> by rjacobus.
+  <a href="http://wiki.open-esb.java.net/rss.jsp?page=TheBPELDesignerPaletteElements&amp;mode=wiki"
+    title="RSS page feed for The BPEL Designer Palette Elements" ><img src="images/xml.png" border="0" alt="[RSS]"/></a>
+    
+    <br />
+    This page was created on 
+    <a  href="http://wiki.open-esb.java.net/Wiki.jsp?page=TheBPELDesignerPaletteElements&amp;version=1">06-Oct-08 23:44 PM, -0700</a> by rjacobus.
+    
+  </p>    
+
+  
+
+  
+   
+  
+  <p><a href="http://wiki.open-esb.java.net/PageInfo.jsp?page=TheBPELDesignerPaletteElements" id="moreinfo" >More info...</a></p>
+  
+  
+
+  <div class="tabmenu ">
+  
+  
+  
+
+  
+
+  
+
+  
+  
+  
+  
+  <span><a class="activetab" id="menu-versionHistory" onclick="TabbedSection.onclick('versionHistory')" >Version History</a></span>
+  
+
+  <span><a id="menu-incomingLinks" onclick="TabbedSection.onclick('incomingLinks')" >Incoming Links</a></span>
+
+  <span><a id="menu-outgoingLinks" onclick="TabbedSection.onclick('outgoingLinks')" >Outgoing Links</a></span>
+
+  
+  
+  </div>
+<div class="tabs ">
+  
+  <div id="versionHistory" >
+
+
+    <div class='pagination'>Pagination: <a title="Show page from 21 to 40" href='#' onclick='location.href= $("moreinfo").href + "&start=20"; ' >previous</a>&nbsp;&nbsp;<a title="Show page from 1 to 20" href='#' onclick='location.href= $("moreinfo").href + "&start=0"; ' >1</a>&nbsp;&nbsp;<a title="Show page from 21 to 40" href='#' onclick='location.href= $("moreinfo").href + "&start=20"; ' >2</a>&nbsp;&nbsp;<span class='cursor'>3</span>&nbsp;&nbsp;<a title="Show all pages" href='#' onclick='location.href= $("moreinfo").href + "&start=-1"; ' >all</a>&nbsp;&nbsp; (Total items: 54)</div>
+    <div class="zebra-table ">
+    <table class="wikitable" >
+      <tr>
+        <th>Version</th>                        
+        <th>Date</th>
+        <th>Author</th>
+        <th>Size</th>
+        <th>Changes ...</th>
+        
+      </tr>
+
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TheBPELDesignerPaletteElements&amp;version=54" accesskey="" title="">
+            54
+          </a>
+        </td>
+
+        <td>
+          09-Jun-09 11:06 AM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>52617</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TheBPELDesignerPaletteElements&amp;r1=54&amp;r2=53">to previous</a>
+            
+          
+
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TheBPELDesignerPaletteElements&amp;version=53" accesskey="" title="">
+            53
+          </a>
+        </td>
+
+        <td>
+          09-Jun-09 11:00 AM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>52613</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TheBPELDesignerPaletteElements&amp;r1=53&amp;r2=52">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TheBPELDesignerPaletteElements&amp;r1=54&amp;r2=53">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TheBPELDesignerPaletteElements&amp;version=52" accesskey="" title="">
+            52
+          </a>
+        </td>
+
+        <td>
+          09-Jun-09 10:34 AM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>52464</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TheBPELDesignerPaletteElements&amp;r1=52&amp;r2=51">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TheBPELDesignerPaletteElements&amp;r1=54&amp;r2=52">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TheBPELDesignerPaletteElements&amp;version=51" accesskey="" title="">
+            51
+          </a>
+        </td>
+
+        <td>
+          09-Jun-09 10:01 AM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>52363</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TheBPELDesignerPaletteElements&amp;r1=51&amp;r2=50">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TheBPELDesignerPaletteElements&amp;r1=54&amp;r2=51">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TheBPELDesignerPaletteElements&amp;version=50" accesskey="" title="">
+            50
+          </a>
+        </td>
+
+        <td>
+          09-Jun-09 09:55 AM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>52370</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TheBPELDesignerPaletteElements&amp;r1=50&amp;r2=49">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TheBPELDesignerPaletteElements&amp;r1=54&amp;r2=50">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TheBPELDesignerPaletteElements&amp;version=49" accesskey="" title="">
+            49
+          </a>
+        </td>
+
+        <td>
+          09-Jun-09 09:37 AM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>52366</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TheBPELDesignerPaletteElements&amp;r1=49&amp;r2=48">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TheBPELDesignerPaletteElements&amp;r1=54&amp;r2=49">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TheBPELDesignerPaletteElements&amp;version=48" accesskey="" title="">
+            48
+          </a>
+        </td>
+
+        <td>
+          29-May-09 10:23 AM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>53677</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TheBPELDesignerPaletteElements&amp;r1=48&amp;r2=47">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TheBPELDesignerPaletteElements&amp;r1=54&amp;r2=48">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TheBPELDesignerPaletteElements&amp;version=47" accesskey="" title="">
+            47
+          </a>
+        </td>
+
+        <td>
+          28-May-09 16:01 PM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>53488</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TheBPELDesignerPaletteElements&amp;r1=47&amp;r2=46">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TheBPELDesignerPaletteElements&amp;r1=54&amp;r2=47">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TheBPELDesignerPaletteElements&amp;version=46" accesskey="" title="">
+            46
+          </a>
+        </td>
+
+        <td>
+          22-May-09 14:21 PM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>49108</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TheBPELDesignerPaletteElements&amp;r1=46&amp;r2=45">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TheBPELDesignerPaletteElements&amp;r1=54&amp;r2=46">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TheBPELDesignerPaletteElements&amp;version=45" accesskey="" title="">
+            45
+          </a>
+        </td>
+
+        <td>
+          22-May-09 14:10 PM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>49221</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TheBPELDesignerPaletteElements&amp;r1=45&amp;r2=44">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TheBPELDesignerPaletteElements&amp;r1=54&amp;r2=45">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TheBPELDesignerPaletteElements&amp;version=44" accesskey="" title="">
+            44
+          </a>
+        </td>
+
+        <td>
+          22-May-09 14:08 PM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>49216</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TheBPELDesignerPaletteElements&amp;r1=44&amp;r2=43">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TheBPELDesignerPaletteElements&amp;r1=54&amp;r2=44">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TheBPELDesignerPaletteElements&amp;version=43" accesskey="" title="">
+            43
+          </a>
+        </td>
+
+        <td>
+          22-May-09 14:06 PM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>49213</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TheBPELDesignerPaletteElements&amp;r1=43&amp;r2=42">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TheBPELDesignerPaletteElements&amp;r1=54&amp;r2=43">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TheBPELDesignerPaletteElements&amp;version=42" accesskey="" title="">
+            42
+          </a>
+        </td>
+
+        <td>
+          21-May-09 09:37 AM, -0700
+        </td>
+        <td>rjacobus</td>
+        <td>49206</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TheBPELDesignerPaletteElements&amp;r1=42&amp;r2=41">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TheBPELDesignerPaletteElements&amp;r1=54&amp;r2=42">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TheBPELDesignerPaletteElements&amp;version=41" accesskey="" title="">
+            41
+          </a>
+        </td>
+
+        <td>
+          16-Dec-08 11:37 AM, -0800
+        </td>
+        <td>rjacobus</td>
+        <td>49203</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TheBPELDesignerPaletteElements&amp;r1=41&amp;r2=40">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TheBPELDesignerPaletteElements&amp;r1=54&amp;r2=41">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      <tr>
+        <td>
+          <a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TheBPELDesignerPaletteElements&amp;version=40" accesskey="" title="">
+            40
+          </a>
+        </td>
+
+        <td>
+          16-Dec-08 11:34 AM, -0800
+        </td>
+        <td>rjacobus</td>
+        <td>49339</td>
+
+        <td>
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TheBPELDesignerPaletteElements&amp;r1=40&amp;r2=39">to previous</a>
+             | 
+          
+
+          
+            <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TheBPELDesignerPaletteElements&amp;r1=54&amp;r2=40">to last</a>
+          
+        </td>
+
+        
+        
+      </tr>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+    </table>  
+    </div>
+    <div class='pagination'>Pagination: <a title="Show page from 21 to 40" href='#' onclick='location.href= $("moreinfo").href + "&start=20"; ' >previous</a>&nbsp;&nbsp;<a title="Show page from 1 to 20" href='#' onclick='location.href= $("moreinfo").href + "&start=0"; ' >1</a>&nbsp;&nbsp;<a title="Show page from 21 to 40" href='#' onclick='location.href= $("moreinfo").href + "&start=20"; ' >2</a>&nbsp;&nbsp;<span class='cursor'>3</span>&nbsp;&nbsp;<a title="Show all pages" href='#' onclick='location.href= $("moreinfo").href + "&start=-1"; ' >all</a>&nbsp;&nbsp; (Total items: 54)</div>
+
+  </div>
+
+  
+
+  <div id="incomingLinks" style="display:none;" >
+
+    <a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements" accesskey="" title="">The BPEL Designer Palette Elements</a>
+    <ul><li><a class="wikipage" href="Wiki21f2.html?page=BPELBluePrints">BPEL Blue Prints</a>
+</li><li><a class="wikipage" href="Wiki3879.html?page=BPELDesignerAndServiceEngineFeatures">BPEL Designer And Service Engine Features</a>
+</li><li><a class="wikipage" href="Wiki5e52.html?page=BPELDesignerAndServiceEngineOverview">BPEL Designer And Service Engine Overview</a>
+</li><li><a class="wikipage" href="Wiki5233.html?page=BPELProcessLoggingAndAlerting">BPEL Process Logging And Alerting</a>
+</li><li><a class="wikipage" href="Wikicae3.html?page=BPELServiceEngineDeploymentArtifacts">BPEL Service Engine Deployment Artifacts</a>
+</li><li><a class="wikipage" href="Wiki7030.html?page=BPELServiceEngineTaskHowTos">BPEL Service Engine Task How Tos</a>
+</li><li><a class="wikipage" href="Wiki73af.html?page=ConfiguringClusteringAndFailoverForBPEL">Configuring Clustering And Failover For BPEL</a>
+</li><li><a class="wikipage" href="Wikid4c2.html?page=ConfiguringFailoverForBPEL">Configuring Failover For BPEL</a>
+</li><li><a class="wikipage" href="Wiki0931.html?page=ConfiguringPersistenceAndRecoveryForBPEL">Configuring Persistence And Recovery For BPEL</a>
+</li><li><a class="wikipage" href="Wiki2f9d.html?page=ConfiguringTheBPELServiceEngineRuntimeProperties">Configuring The BPEL Service Engine Runtime Properties</a>
+</li><li><a class="wikipage" href="Wiki77bf.html?page=ConfiguringTheQualityOfServiceProperties">Configuring The Quality Of Service Properties</a>
+</li><li><a class="wikipage" href="Wikia9da.html?page=CreatingTheBPELModuleProject">Creating The BPEL Module Project</a>
+</li><li><a class="wikipage" href="Wiki17ca.html?page=DevelopingTheBPELProcessUsingTheBPELDiagram">Developing The BPEL Process Using The BPEL Diagram</a>
+</li><li><a class="wikipage" href="Wiki434d.html?page=MonitoringTheBPELServiceEngine">Monitoring The BPEL Service Engine</a>
+</li><li><a class="wikipage" href="Wiki0ddb.html?page=NavigatingTheBPELDesigner">Navigating The BPEL Designer</a>
+</li><li><a class="wikipage" href="Wiki1302.html?page=TestingAndDebuggingBPELProcesses">Testing And Debugging BPEL Processes</a>
+</li><li><a class="wikipage" href="Wikif987.html?page=TroubleshootingTheBPELServiceEngine">Troubleshooting The BPEL Service Engine</a>
+</li><li><a class="wikipage" href="Wikifbc9.html?page=UnderstandingTheBPELModuleProject">Understanding The BPEL Module Project</a>
+</li><li><a class="wikipage" href="Wiki20e8.html?page=UsingBPELDesignerServiceEngine">Using BPEL Designer Service Engine</a>
+</li><li><a class="wikipage" href="Wikia3b6.html?page=UsingCorrelation">Using Correlation</a>
+</li><li><a class="wikipage" href="Wikife94.html?page=UsingDynamicPartnerLinksAndDynamicAddressing">Using Dynamic Partner Links And Dynamic Addressing</a>
+</li><li><a class="wikipage" href="Wikie39c.html?page=UsingHandlers">Using Handlers</a>
+</li><li><a class="wikipage" href="Wikiad48.html?page=UsingNormalizedMessageProperties">Using Normalized Message Properties</a>
+</li><li><a class="wikipage" href="Wiki39db.html?page=UsingTheBPELMapper">Using The BPEL Mapper</a>
+</li><li><a class="wikipage" href="Wiki1f81.html?page=ValidatingTheBPELProcess">Validating The BPEL Process</a>
+</li></ul>
+  </div>
+
+
+  <div id="outgoingLinks" style="display:none;" >
+
+    
+      <div class="ReferredPagesPlugin">
+<a class="wikipage" href="Wiki82ac.html?page=TheBPELDesignerPaletteElements" title="ReferredPagesPlugin: depth[1] include[.*] exclude[^$] format[compact]">TheBPELDesignerPaletteElements</a>
+<ul>
+<li><a class="wikipage" href="Wiki21f2.html?page=BPELBluePrints">BPELBluePrints</a></li>
+<li><a class="wikipage" href="Wiki3879.html?page=BPELDesignerAndServiceEngineFeatures">BPELDesignerAndServiceEngineFeatures</a></li>
+<li><a class="wikipage" href="Wiki5e52.html?page=BPELDesignerAndServiceEngineOverview">BPELDesignerAndServiceEngineOverview</a></li>
+<li><a class="wikipage" href="Wiki5233.html?page=BPELProcessLoggingAndAlerting">BPELProcessLoggingAndAlerting</a></li>
+<li><a class="wikipage" href="Wikicae3.html?page=BPELServiceEngineDeploymentArtifacts">BPELServiceEngineDeploymentArtifacts</a></li>
+<li><a class="wikipage" href="Wiki7030.html?page=BPELServiceEngineTaskHowTos">BPELServiceEngineTaskHowTos</a></li>
+<li><a class="wikipage" href="Wikid4c2.html?page=ConfiguringFailoverForBPEL">ConfiguringFailoverForBPEL</a></li>
+<li><a class="wikipage" href="Wiki0931.html?page=ConfiguringPersistenceAndRecoveryForBPEL">ConfiguringPersistenceAndRecoveryForBPEL</a></li>
+<li><a class="wikipage" href="Wiki2f9d.html?page=ConfiguringTheBPELServiceEngineRuntimeProperties">ConfiguringTheBPELServiceEngineRuntimeProperties</a></li>
+<li><a class="wikipage" href="Wiki77bf.html?page=ConfiguringTheQualityOfServiceProperties">ConfiguringTheQualityOfServiceProperties</a></li>
+<li><a class="wikipage" href="Wikia9da.html?page=CreatingTheBPELModuleProject">CreatingTheBPELModuleProject</a></li>
+<li><a class="wikipage" href="Wiki17ca.html?page=DevelopingTheBPELProcessUsingTheBPELDiagram">DevelopingTheBPELProcessUsingTheBPELDiagram</a></li>
+<li><a class="wikipage" href="Wiki434d.html?page=MonitoringTheBPELServiceEngine">MonitoringTheBPELServiceEngine</a></li>
+<li><a class="wikipage" href="Wiki0ddb.html?page=NavigatingTheBPELDesigner">NavigatingTheBPELDesigner</a></li>
+<li><a class="wikipage" href="Wiki1302.html?page=TestingAndDebuggingBPELProcesses">TestingAndDebuggingBPELProcesses</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TheBPELDesignerPaletteElements/ep-bpel-receive-prop%20copy.gif">TheBPELDesignerPaletteElements/ep-bpel-receive-prop copy.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TheBPELDesignerPaletteElements/ep-bpel-se-jscode.gif">TheBPELDesignerPaletteElements/ep-bpel-se-jscode.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TheBPELDesignerPaletteElements/ep-bpel-se-jscript-editor.gif">TheBPELDesignerPaletteElements/ep-bpel-se-jscript-editor.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TheBPELDesignerPaletteElements/ep-bpel-se-jscript-input.gif">TheBPELDesignerPaletteElements/ep-bpel-se-jscript-input.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TheBPELDesignerPaletteElements/ep-bpel-se-jscript-output.gif">TheBPELDesignerPaletteElements/ep-bpel-se-jscript-output.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TheBPELDesignerPaletteElements/ep-bpel-validate-prop.gif">TheBPELDesignerPaletteElements/ep-bpel-validate-prop.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TheBPELDesignerPaletteElements/ep-bpel-wait-props%20copy.gif">TheBPELDesignerPaletteElements/ep-bpel-wait-props copy.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TheBPELDesignerPaletteElements/invoke_property_editor.gif">TheBPELDesignerPaletteElements/invoke_property_editor.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TheBPELDesignerPaletteElements/invokecorrelations1.gif">TheBPELDesignerPaletteElements/invokecorrelations1.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TheBPELDesignerPaletteElements/pl-new-epr-assigned.gif">TheBPELDesignerPaletteElements/pl-new-epr-assigned.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TheBPELDesignerPaletteElements/pl-new-epr-assigned1.gif">TheBPELDesignerPaletteElements/pl-new-epr-assigned1.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TheBPELDesignerPaletteElements/plpropedit.gif">TheBPELDesignerPaletteElements/plpropedit.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TheBPELDesignerPaletteElements/process.gif">TheBPELDesignerPaletteElements/process.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TheBPELDesignerPaletteElements/receiveproperties3.gif">TheBPELDesignerPaletteElements/receiveproperties3.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TheBPELDesignerPaletteElements/throwproperties.gif">TheBPELDesignerPaletteElements/throwproperties.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TheBPELDesignerPaletteElements/waitproperties.gif">TheBPELDesignerPaletteElements/waitproperties.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TheBPELDesignerPaletteElements/waitproperties1.gif">TheBPELDesignerPaletteElements/waitproperties1.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TheBPELDesignerPaletteElements/wrap-with-serv-ref.gif">TheBPELDesignerPaletteElements/wrap-with-serv-ref.gif</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=TheBPELDesignerPaletteElements/wrap-with-server-ref.gif">TheBPELDesignerPaletteElements/wrap-with-server-ref.gif</a></li>
+<li><a class="wikipage" href="Wikif987.html?page=TroubleshootingTheBPELServiceEngine">TroubleshootingTheBPELServiceEngine</a></li>
+<li><a class="wikipage" href="Wikifbc9.html?page=UnderstandingTheBPELModuleProject">UnderstandingTheBPELModuleProject</a></li>
+<li><a class="wikipage" href="Wiki20e8.html?page=UsingBPELDesignerServiceEngine">UsingBPELDesignerServiceEngine</a></li>
+<li><a class="wikipage" href="Wikia3b6.html?page=UsingCorrelation">UsingCorrelation</a></li>
+<li><a class="wikipage" href="Wikife94.html?page=UsingDynamicPartnerLinksAndDynamicAddressing">UsingDynamicPartnerLinksAndDynamicAddressing</a></li>
+<li><a class="wikipage" href="Wikie39c.html?page=UsingHandlers">UsingHandlers</a></li>
+<li><a class="wikipage" href="Wikiad48.html?page=UsingNormalizedMessageProperties">UsingNormalizedMessageProperties</a></li>
+<li><a class="wikipage" href="Wiki39db.html?page=UsingTheBPELMapper">UsingTheBPELMapper</a></li>
+<li><a class="wikipage" href="http://wiki.open-esb.java.net/Wiki.jsp?page=UsingWSDLEditor">UsingWSDLEditor</a></li>
+<li><a class="wikipage" href="Wiki1f81.html?page=ValidatingTheBPELProcess">ValidatingTheBPELProcess</a></li>
+</ul>
+</div>
+
+    
+    
+  </div>
+
+
+  
+  
+  <div style="clear:both; height:0px;" > </div>
+</div>
+ 
+
+
+
+
+
+
+
+
+
+  </div>
+
+  
+<div style="clear:both; height:0px;" > </div>
+</div>
+
+</div> 
+
+
+  
+
+
+
+<div id="favorites">
+
+
+<div class="username">G'day,
+  
+    <a title="Hi, Anonymous Guest"  href="Wiki48c3.html?page=Login">Anonymous Guest</a>
+  
+  
+  
+  
+</div>  
+
+
+
+
+
+
+
+
+<p />
+
+
+
+  
+<p />
+<p />
+
+
+<div class="wikiversion">JSPWiki v2.4.100</div>
+
+<div class="rssfeed"><a href="rss.rdf"><img src="images/xml.png" alt="[RSS]" border="0" title="Aggregate the RSS feed of the entire wiki"/></a></div>
+
+<div style="clear:both; height:0px;" > </div>
+
+</div> 
+
+  
+
+
+
+
+
+<div id='actionsBottom' class="pageactions"> 
+
+  <span class='quicklinks quick2Top'>
+    <a href="#wikibody" title='Go to Top' >&laquo;</a>
+  </span>
+
+  <span class="actionHome">
+    <a href="Wikib2ab.html?page=Main"
+       title="Go to home page Main ">Home</a>
+  </span>
+  
+  
+    
+
+    
+  
+  
+  <span class="actionIndex">
+     <a href="Wiki5f9e.html?page=PageIndex"
+       title="Alphabetically sorted list of pages [ x ]">Index</a>
+  </span>
+  
+  <span class="actionRecentChanges">
+     <a href="Wiki5fc7.html?page=RecentChanges"
+        title="Pages sorted by modification date [ u ]">Changes</a>
+  </span>
+
+  
+    
+      <span class="actionPrefs">
+        <a href="Wiki7eba.html?page=UserPreferences"
+           title="Set User Preferences" >Prefs</a>
+      </span>
+    
+  
+
+  
+    <div class="pageinfo">
+      
+        This page (revision-54) was last changed on 
+        <a href="http://wiki.open-esb.java.net/Diff.jsp?page=TheBPELDesignerPaletteElements&amp;r1=54&amp;r2=53"
+          title="Show changes of last page update" >  
+        
+        09-Jun-09 11:06 AM, -0700</a>
+      
+      
+      by rjacobus
+
+      
+    </div>  
+  
+
+  <div style="clear:both; height:0;"> </div> 
+</div>
+
+  
+ 
+  
+
+  
+
+
+<div id="footer">
+
+<table><tr><td>
+  <div class="wikiversion">
+    JSPWiki v2.4.100                       
+  </div>
+</td>
+<td>
+<br>Copyright &copy; 2011, Oracle and/or its affiliates. All rights reserved. Oracle and Java are registered trademarks of Oracle and/or its affiliates. Other names may be trademarks of their respective owners. <a href="http://www.oracle.com/"><img src="images/ora_logo_small.gif" /> </a>
+  <div class="rssfeed">
+    <a href="rss.rdf"><img src="images/xml.png" alt="[RSS]" border="0" title="Aggregate the RSS feed"/></a>
+  </div>
+</td></tr></table>
+  <div style="clear:both; height:0px;" > </div>
+
+</div>
+  
+
+  </div>
+  <div style="clear:both; height:0;" > </div>
+
+
+
+<!-- Page counters -->
+<script type="text/javascript" language="javascript">
+var sc_project=1965314; 
+var sc_invisible=1; 
+var sc_partition=17; 
+var sc_security="c5f5efea"; 
+</script>
+<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script>
+
+
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+<script type="text/javascript">
+_uacct = "UA-993823-3";
+urchinTracker();
+</script>
+</body>
+
+<!-- Mirrored from wiki.open-esb.java.net/Wiki.jsp?page=TheBPELDesignerPaletteElements by HTTrack Website Copier/3.x [XR&CO'2010], Thu, 08 Jul 2010 02:16:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+</html>
+
+

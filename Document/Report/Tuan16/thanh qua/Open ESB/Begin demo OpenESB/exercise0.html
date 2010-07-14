@@ -1,0 +1,955 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html><head>
+
+                             
+ 
+ 
+ <style type="text/css"> /* <![CDATA[ */
+ @import "/branding/css/tigris.css";
+ @import "/branding/css/inst.css";
+ /* ]]> */</style>
+ <link rel="stylesheet" type="text/css" href="exercise0_files/print.css" media="print">
+ <script src="exercise0_files/tigris.js" type="text/javascript"></script>
+  
+             
+ 
+  <script src="exercise0_files/alm.js" type="text/javascript"></script>
+ <style type="text/css">
+    /* <![CDATA[ */
+    @import "/branding/css/alm.css";
+   /* ]]> */
+ </style>
+ 
+ 
+ 
+ 
+                                                       <title>
+        open-esb:        Guided Tour: Installation
+    </title>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <meta http-equiv="Content-Style-Type" content="text/css">
+ <meta name="version" content="4.5.2.148.4">
+ 
+ 
+  
+
+<script type="text/javascript" src="exercise0_files/urchin.js"></script></head><body class="composite">
+ 
+ 
+ <div id="collabnet">
+ <div id="login"> 
+     <div>
+      <a href="https://www.dev.java.net/servlets/Login?detour=https://open-esb.dev.java.net/60mintutorial/exercise0.html">Login</a>
+      |    <a href="https://www.dev.java.net/servlets/Join">Register</a>    </div>
+ </div>
+ <a href="http://www.collab.net/special/clickpbc0502.html" id="cnlogo">
+<span class="alt">CollabNet Enterprise Edition</span></a>
+</div>
+ 
+ 
+ 
+ 
+ 
+
+<div class="topline">
+<div class="topbar">
+<div id="banner">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+	<tbody><tr>
+		<td>
+		  	<div><a href="https://open-esb.dev.java.net/"><img src="exercise0_files/ESBLogoTag-304x60C.jpg" alt="The Open Enterprise Service Bus: Open Standards + Open Source" width="304" height="60"></a></div>
+  		</td>
+	  	<td class="right" style="vertical-align: bottom;">
+  			<div id="domainlinks">
+				
+								<div id="loginbox">
+												<div>
+				   <a href="https://www.dev.java.net/servlets/TLogin?detour=https://open-esb.dev.java.net/60mintutorial/exercise0.html">Login</a>								|    <a href="https://www.dev.java.net/servlets/Join">Register</a>								</div>
+								</div>
+								
+			</div>
+		<div id="oesearch" style="vertical-align: bottom;">
+  <br>
+  <br>
+	<form action="https://open-esb.dev.java.net/SearchResults.html" id="cse-search-box"> 
+	  <div>
+	    <input name="cx" value="013607241216432041017:tcd_nlc0tem" type="hidden">
+	    <input name="cof" value="FORID:11" type="hidden">
+	    <input name="ie" value="UTF-8" type="hidden">
+	    <input name="q" size="20" type="text">
+	    <input name="sa" value="Search" type="submit">
+	  </div>
+	</form>
+</div></td>
+  	</tr>
+</tbody></table>
+</div>
+</div>
+</div> 
+ 
+ 
+ 
+ <div id="z_menu_02"><table width="100%"><tbody><tr><td>
+	<div id="z_menu_01">
+		<script>writeOEMenu();</script><ul><li><a href="javascript:none">Community</a>
+<ul>
+<li><a href="https://open-esb.dev.java.net/AboutOpenEsb.html">About</a></li>
+<li><a href="https://open-esb.dev.java.net/ContactUs.html">Contact us</a></li>
+<li><a href="https://open-esb.dev.java.net/MailingLists.html">Mailing lists</a></li>
+<li><a href="https://open-esb.dev.java.net/IssueTracker.html">Issue tracker</a></li>
+<li><a href="https://open-esb.dev.java.net/Roadmap.html">Road map</a></li>
+<li><a href="https://open-esb.dev.java.net/Governance.html">Governance</a></li>
+</ul>
+</li></ul>
+<ul><li><a href="https://open-esb.dev.java.net/Downloads.html">Download</a>
+</li></ul>
+<ul><li><a href="javascript:none">Documentation</a>
+<ul>
+<li><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=FAQ">FAQ</a></li>
+<li><a href="https://open-esb.dev.java.net/Books.html">Books</a></li>
+<li><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=Documentation">OpenESB Documentation</a></li>
+<li><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=GlassFishESBDocs">GlassFish ESB Documentation</a></li>
+</ul>
+</li></ul>
+<ul><li><a href="https://open-esb.dev.java.net/ProductSupport.html">Support</a>
+</li></ul>
+<ul><li><a href="javascript:none">Projects</a>
+<ul>
+<li class="cathead"><a href="javascript:none">Components</a></li>
+<li><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=BPELSE">BPEL SE</a></li>
+<li><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=IEPSE">Event Processor SE</a></li>
+<li><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=HTTPBC">HTTP/SOAP BC</a></li>
+<li><a href="https://open-esb.dev.java.net/Components.html">All components...</a></li>
+<li class="cathead"><a href="javascript:none">Platform</a></li>
+<li><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=Encoders">Encoders</a></li>
+<li><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=OpenESBJavaSE">OpenESB on bare JVM</a></li>
+<li><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=OpenESBJBoss">Port to JBoss</a></li>
+<li><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=OpenESBWebSphere">Port to WebSphere</a></li>
+<li><a href="https://open-esb.dev.java.net/Platform.html">All platform facilities...</a></li>
+<li class="cathead"><a href="javascript:none">Sub projects</a></li>
+<li><a href="https://open-jbi-components.dev.java.net/">Open JBI Components</a></li>
+<li><a href="https://fuji.dev.java.net/">Fuji (incubator)</a></li>
+<li><a href="https://openesb-glassfish-addons.dev.java.net/">GlassFish Addons</a></li>
+<li><a href="https://jmsjca.dev.java.net/">JMSJCA</a></li>
+<li><a href="https://esb-console.dev.java.net/">ESB Console (incubator)</a></li>
+<li><a href="https://keychain.dev.java.net/">Keychain</a></li>
+<li><a href="https://open-esb.dev.java.net/Subprojects.html">All sub projects...</a></li>
+</ul>
+</li></ul>
+<ul><li><a href="javascript:none">Developer zone</a>
+<ul>
+<li><a href="https://open-esb.dev.java.net/SourceAccess.html">Source access &amp; build instructions</a></li>
+<li><a href="https://open-esb.dev.java.net/ContributionProcess.html">Become a contributor</a></li>
+<li><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=HelpWantedForOpenESB">Help wanted</a></li>
+<li><a href="https://open-esb.dev.java.net/DevelopingComponents.html">Developing components</a></li>
+</ul>
+</li></ul>
+<ul><li><a href="javascript:none">Partners</a>
+<ul>
+<li><a href="https://open-esb.dev.java.net/CommunityPartnerDirectory.html">Community partners</a></li>
+<li><a href="https://open-esb.dev.java.net/ImplementationSupport.html">Implementation support</a></li>
+</ul>
+</li></ul>
+<ul><li><a href="javascript:none">Resources</a>
+<ul>
+<li><a href="http://wiki.open-esb.java.net/Wiki.jsp?page=BlogsofInterest">Blogs</a></li>
+<li><a href="https://open-esb.dev.java.net/MiscCaseStudies.html">Case Studies</a></li>
+<li><a href="https://open-esb.dev.java.net/OrganizationsUsingOpenESB.html">Organizations using OpenESB</a></li>
+<li><a href="https://open-esb.dev.java.net/servlets/ProjectNewsList">Announcements</a></li>
+</ul>
+</li></ul>
+<ul><li><a href="https://glassfish.dev.java.net/"><img src="exercise0_files/sparkyMenu20.jpg"></a>
+<ul>
+<li class="widemenu"><a href="http://blogs.sun.com/theaquarium"><img src="exercise0_files/TheAquarium.gif"></a></li>
+<li class="widemenu"><a href="https://mural.dev.java.net/"><img src="exercise0_files/mural.gif"></a></li>
+<li class="widemenu"><a href="https://glassfish.dev.java.net/"><img src="exercise0_files/glassfish-180x36.png"></a></li>
+<li class="widemenu"><a href="https://opensso.dev.java.net/"><img src="exercise0_files/opensso.png"></a></li>
+<li class="widemenu"><a href="https://opends.dev.java.net/"><img src="exercise0_files/opends.png"></a></li>
+<li class="widemenu"><a href="https://portal.dev.java.net/"><img src="exercise0_files/openportal.png"></a></li>
+<li class="widemenu"><a href="https://portal.dev.java.net/"><img src="exercise0_files/websynergy.png"></a></li>
+</ul>
+</li></ul>
+
+	</div>
+</td></tr></tbody></table></div><div id="toptabs">
+
+<table border="0" cellpadding="4" cellspacing="0"><tbody><tr>
+
+
+<td>   <a href="https://www.dev.java.net/servlets/StartPage">My pages</a></td>
+
+<th><a href="http://community.java.net/projects/">Projects</a></th>
+
+
+  <td><a href="http://community.java.net/">Communities</a></td>
+
+
+
+<td><a href="http://www.java.net/">java.net</a></td>
+
+
+</tr></tbody></table>
+</div>
+
+  
+ 
+ <div id="breadcrumbs">
+   <a href="https://www.dev.java.net/servlets/ProjectList">Projects</a>    &gt;
+     
+
+    <a href="https://glassfish.dev.java.net/">glassfish</a>
+     &gt;
+     
+
+   <strong>   <a href="https://open-esb.dev.java.net/">open-esb</a>
+   </strong>  </div>
+ 
+ 
+ 
+ 
+<table id="main" width="100%" border="0" cellpadding="4" cellspacing="0">
+<tbody><tr>
+<td id="navcol">
+ 
+ 
+ <dl class="navgroup">
+ <dt>Get Involved</dt>
+ <dd>
+  <ul>
+   
+   <li><a href="http://www.java.net/about-javanet">About java.net</a></li>
+   <li><a href="http://www.java.net/request-project">Create a Project</a></li>
+   <li><a href="http://www.java.net/publicize-your-project">Publicize your Project</a></li>
+   <li><a href="http://www.java.net/projectowner">Your Content</a></li>
+   <li><a href="http://www.java.net/submit-content">Submit Content</a></li>
+   <li><a href="https://java-net.dev.java.net/">java-net Project</a></li>
+   <li><a href="https://open-esb.dev.java.net/servlets/OpenCollabNet">Site Help</a></li>
+   <li><a href="mailto:spamreport@admin.dev.java.net">Report Inappropriate Content</a></li>
+   
+  </ul>
+ </dd>
+ </dl>
+
+
+
+  
+             
+ 
+  
+ 
+                                                           <dl id="projecttools" class="navgroup">
+   <dt>Project tools</dt>
+   <dd>
+    <ul>
+          <li>   <a href="https://open-esb.dev.java.net/servlets/ProjectHome;jsessionid=4DBF7F4963FB056A64B08818A38EB1D1">Project home</a></li>
+           
+       
+ 
+   </ul>
+</dd>
+ 
+ 
+                  
+ 
+   <dd><ul>
+    <li>   <a href="https://open-esb.dev.java.net/servlets/ProjectNewsList;jsessionid=4DBF7F4963FB056A64B08818A38EB1D1">Announcements</a></li>
+ 
+ 
+            
+ 
+        <li>   <a href="https://open-esb.dev.java.net/servlets/ProjectForumView;jsessionid=4DBF7F4963FB056A64B08818A38EB1D1">Discussion forums</a></li>
+  
+ 
+         
+ 
+   <li>   <a href="https://open-esb.dev.java.net/servlets/ProjectMailingListList;jsessionid=4DBF7F4963FB056A64B08818A38EB1D1">Mailing lists</a></li>
+      </ul></dd>
+       
+ 
+            
+ 
+   <dd><ul>
+    <li>   <a href="https://open-esb.dev.java.net/servlets/ProjectDocumentList;jsessionid=4DBF7F4963FB056A64B08818A38EB1D1">Documents &amp; files</a></li>
+ 
+ 
+         
+ 
+   <li>
+<a href="https://open-esb.dev.java.net/source/browse/open-esb/">CVS</a>
+
+
+</li>
+      </ul></dd>
+       
+ 
+               
+ 
+   <dd><ul>
+  <li>   <a href="https://open-esb.dev.java.net/servlets/ProjectIssues;jsessionid=4DBF7F4963FB056A64B08818A38EB1D1">Issue tracker</a></li>
+ 
+ 
+                               	</ul>
+       </dd>
+                <dd>
+      <!-- ================================== -->
+<!-- Begin code from project_tools.html -->
+<!-- ================================== -->
+
+<!-- Import style sheet; this should formally go into the <head> section, but it also works when done here 
+     (tested on IE6, IE7, FF2, FF3, Opera9.5, Safari3.1(Win), Safari3(Mac)
+-->
+<link rel="stylesheet" type="text/css" href="exercise0_files/oe.css">
+<link rel="icon" type="image/png" href="https://open-esb.dev.java.net/images/openesb16x16.png">" /&gt;
+
+
+<!-- ==================== Menu Structure ==================== -->
+<script type="text/javascript" src="exercise0_files/menu.js"></script>
+
+<!-- ==================== End menu ==================== -->
+
+
+<!-- ==================== Search area ==================== -->
+
+<!-- ==================== End search area ==================== -->
+
+
+<script>
+/**
+ *  Moves the menu to the top of the page
+ */
+function placemenu() {
+  var tomove = document.getElementById("z_menu_02");
+  var removed = tomove.parentNode.removeChild(tomove);
+  var target = document.getElementById("toptabs");
+  target.parentNode.insertBefore(removed, target);
+}
+
+
+/**
+ *  Modifies the banner image
+ *  Walks the tree (no tree walker defined in IE6) to find the java.net image
+ *  and replaces it with the OE image
+ */
+function modifyBannerImage(node) {
+  if (node.childNodes != null) {
+    for (var i = 0; i < node.childNodes.length; i++) {
+      var n = node.childNodes[i];
+      if (n.nodeName == "IMG") {
+        n.src = "https://open-esb.dev.java.net/images/ESBLogoTag-304x60C.jpg"
+        n.alt = "The Open Enterprise Service Bus: Open Standards + Open Source";
+        n.width = 304;
+        n.height = 60;
+        n.parentNode.href = "https://open-esb.dev.java.net";
+      } else {
+        modifyBannerImage(n);
+      }
+    }
+  }
+}
+
+
+/**
+ * Loads a script dynamically
+ */
+function dhtmlLoadScript(url) {
+   var e = document.createElement("script");
+   e.src = url;
+   e.type="text/javascript";
+   document.getElementsByTagName("head")[0].appendChild(e);
+}
+
+/**
+ *  Function to load when loading is complete; can be used to change
+ *  the windows's URL after Google is finished.
+ */
+var loadOnComplete;
+
+/**
+ * Tries to invoke Google analytics when the script is loaded
+ */
+function google() {
+  if (typeof urchinTracker == "undefined" || !urchinTracker) {
+    window.setTimeout(google, 200);
+  } else {
+    _uacct = "UA-993823-1";
+    urchinTracker();
+    if (loadOnComplete) {
+      window.setTimeout(loadOnComplete, 200);
+      
+    }
+  }
+}
+
+/**
+ *  Called on load of the page
+ */
+function oeload() {
+   // Google
+   dhtmlLoadScript("https://ssl.google-analytics.com/urchin.js");
+   window.setTimeout(google, 100);
+}
+
+/**
+ *  Adds a new function to be called on load of the page. Note that 
+ *  changing the URL of the page will interrupt the Google Analytics
+ *  loading. Set loadOnComplete instead.
+ */
+function addLoadEvent(func) {
+  var oldonload = window.onload;
+  if (typeof window.onload != 'function') {
+    window.onload = func;
+  } else {
+    window.onload = function() {
+      if (oldonload)  oldonload();
+      func();
+    }
+  }
+}
+
+/**
+ *  Moves the search area
+ */
+function moveSearch() {
+  var tomove = document.getElementById("oesearch");
+  var removed = tomove.parentNode.removeChild(tomove);
+  var domainlinks = document.getElementById("loginbox").parentNode;
+  domainlinks.parentNode.appendChild(removed);
+  domainlinks.parentNode.style.cssText = "vertical-align: bottom";
+}
+
+/**
+ * Reads a cookie
+ */
+function readCookie(name) {
+	var nameEQ = name + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0;i < ca.length;i++) {
+		var c = ca[i];
+		while (c.charAt(0)==' ') c = c.substring(1,c.length);
+		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+	}
+	return null;
+}
+
+/**
+ * Turns on navbar if the navbar cookie is set
+ */
+function checkNavBar() {
+  if (readCookie("navbar")) {
+    var navbar = document.getElementById("navcol");
+    if (navbar) {
+	navbar.style.display = 'block';
+     }
+   }
+}
+
+
+
+/**
+ *  Executed while the page is loading
+ */
+// =======================================================================
+addLoadEvent(oeload);
+placemenu();
+modifyBannerImage(document.getElementById("banner"));
+moveSearch();
+checkNavBar();
+// =======================================================================
+
+</script>
+
+
+
+<!-- Google Analytics -->
+<!-- MOVED TO oeload
+<script src="https://ssl.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-993823-1";
+urchinTracker();
+</script>
+-->
+
+<!-- the following code is required by statcounter for project Open ESB. REMOVE ONLY if this file is included in a project other than Open ESB -->
+<!-- Start of StatCounter Code -->
+<script type="text/javascript" language="javascript">
+var sc_project=2077605;
+var sc_invisible=1;
+var sc_partition=19;
+var sc_security="f8b7737d";
+sc_https=1; 
+</script>
+<!-- MOVED TO oeload
+<script type="text/javascript" language="javascript" src="https://secure.statcounter.com/counter/counter.js"></script>
+<noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="https://c2.statcounter.com/counter.php?sc_project=2077605&java=0&security=f8b7737d&invisible=1" alt="website stat" border="0"></a></noscript>
+-->
+<!-- End of StatCounter Code -->
+
+
+<!-- ================================== -->
+<!-- End code from project_tools.html   -->
+<!-- ================================== -->
+
+      </dd> 
+          
+     </dl>
+   
+
+
+
+
+<form action="https://open-esb.dev.java.net/servlets/Search;jsessionid=4DBF7F4963FB056A64B08818A38EB1D1" method="get">
+ <dl id="searchbox" class="navgroup">
+  
+      <dt>Search</dt>
+  <dd>
+   <div>
+       <select name="scope">
+           <option value="project" selected="selected">This project</option>
+               <option value="domain">All projects</option>
+    </select>
+      </div>
+   <div>
+    <input name="resultsPerPage" value="40" type="hidden"> 
+    <input name="query" size="10" maxlength="99" type="text"> 
+    <input name="Button" value="Go" type="submit">
+   </div>
+   <div>
+       <a href="https://open-esb.dev.java.net/servlets/Search;jsessionid=4DBF7F4963FB056A64B08818A38EB1D1?mode=advanced">Advanced search</a>   </div>
+  </dd>
+
+ </dl>
+</form>
+
+
+<dl id="helptext" class="navgroup">
+ <dt>How do I...</dt>
+ <dd>
+  <ul>
+     
+   <li> <a href="http://www.collab.net/rn/" onclick="return launch(this.href, 1)" title="Note: link may open in new window" class="helplink">
+ 
+ Get release notes for CollabNet 4.5.2?</a>
+</li>
+
+   <li><a href="https://open-esb.dev.java.net/nonav/servlets/HelpTOC" onclick="return launch(this.href, 1)" title="Note: link may open in new window" class="helplink">Get help?</a></li>
+  </ul>
+ </dd>
+</dl>
+
+ 
+ 
+<div class="strut">&nbsp;</div>
+</td>
+<td id="midcol">
+ 
+<div id="bodycol">
+ 
+ 
+ 
+        
+                 
+                 
+           
+    
+  
+
+ 
+ 
+
+
+
+
+<h1>Prerequisites: Install and Setup Environment</h1>
+These prerequisite steps run through the installation and setup of the
+software required to build the application in your environment. It is
+recommended that you
+follow all of the steps outlined here in order, although you can jump
+directly
+to the required section if you've been here before:
+<ul>
+  <li><a href="#Install_GlassFish_ESB">Install GlassFish ESB</a></li>
+  <li><a href="#Configure_GlassFish_ESB">Configure GlassFish ESB</a></li>
+  <li><a href="#Database_Setup">Configure Java DB Database</a></li>
+  <li><a href="#Setup_database_table">Setup Java DB Table</a></li>
+  <li><a href="#JDBCRuntimeSetup">Configure GlassFish runtime for Java
+DB</a></li>
+  <li><a href="#Install_Prebuilt_App">Install pre-built application</a></li>
+</ul>
+<h2><a name="Install_GlassFish_ESB"></a>Install GlassFish ESB</h2>
+<ol>
+  <li>Install JDK™ 6 if it is not already available on your machine.
+You can get the latest <a href="http://java.sun.com/javase/downloads">here</a>.</li>
+  <li>Download the latest version of the <b>GlassFish ESB Installer</b>
+    <a href="https://open-esb.dev.java.net/Downloads.html">here</a>.</li>
+  <li>Once it has finished downloading, launch the <b>GlassFish ESB</b>
+installer and click <b>Next</b> on the first screen...
+    <p><img style="width: 600px; height: 450px;" alt="" src="exercise0_files/openesbinstaller1.png"></p>
+  </li>
+  <li>Click the checkbox to accept the license terms of agreement and
+click <b>Next</b>...
+    <p><img style="width: 600px; height: 450px;" alt="" src="exercise0_files/openesbinstaller2.png"></p>
+  </li>
+  <li>Point the installer to your pre-installed JDK 6 and provide the
+location in which to install the NetBeans portion of GlassFish ESB.
+    <p><img style="width: 600px; height: 450px;" alt="" src="exercise0_files/openesbinstaller3.png"></p>
+    <br>
+  </li>
+  <li>For the runtime, GlassFish™ v2, provide the
+same JDK 6 pre-installed location as before. Use the default options
+throughout.
+If, however, some ports are already taken (e.g. admin port on 4848 may
+be taken if you already have GlassFish separately installed), use ports
+9090 (HTTP), 9191 (HTTPS) and 4949 (Admin port) for the remainder of
+this tutorial.&nbsp;
+    <p><img style="width: 600px; height: 450px;" alt="" src="exercise0_files/openesbinstaller4.png"></p>
+    <br>
+  </li>
+  <li>Click the <b>Install</b> button to begin the installation
+process on your machine.
+    <p><img style="width: 600px; height: 544px;" alt="" src="exercise0_files/openesbinstaller5.png"></p>
+    <br>
+  </li>
+  <li>Once the installation is completed, you are offered a chance to
+register your copy of GlassFish ESB. Although registration is optional,
+it is quick and easy to do and is
+highly recommended in order to gain access to future tutorials,
+whitepapers and premium technical content.
+    <p><img style="width: 600px; height: 541px;" alt="" src="exercise0_files/openesbinstaller6.png"></p>
+  </li>
+</ol>
+<h2><a name="Configure_GlassFish_ESB"></a>Configure GlassFish ESB</h2>
+<ol>
+  <li>Start the NetBeans IDE:</li>
+  <ul>
+    <li>On Windows, click the newly created <b>GlassFish ESB</b>
+desktop
+icon, or <b><i>Start &gt; All Programs &gt; GlassFish ESB &gt;
+GlassFish ESB<br>
+      </i></b></li>
+    <li>On UNIX systems such as Solaris or Linux, open a terminal
+window, navigate to the home directory to which you installed the
+NetBeans IDE and type:<span style="font-family: monospace;"> </span><tt style="font-weight: bold;">/bin/netbeans</tt>
+      <p> </p>
+    </li>
+  </ul>
+  <li>Upon startup, you may be prompted to import settings from a
+previous installation of
+NetBeans; select <b>No</b>.</li>
+  <li>To verify GlassFish was installed correctly and to start it from
+the NetBeans IDE:
+    <ul>
+      <li>Select <b>Services</b> tab</li>
+      <li>Expand the <b>Servers</b> tree and locate the <b>GlassFish
+V2</b> node</li>
+      <li>Right-click on the <b>GlassFish V2</b> node and select <b>Start</b>
+        <p><img alt="" src="exercise0_files/nbruntime.PNG" style="width: 290px; height: 436px;"></p>
+      </li>
+      <li>If you are prompted for a master password, enter your <b><tt>admin</tt></b>
+user password. If you did not change this during installation, use the
+default password of <b><tt>adminadmin</tt></b>. If the server is
+started successfully, the GlassFish V2 node will display the additional
+nodes shown in the screenshot below:
+        <p><img alt="" src="exercise0_files/nbruntimestarted.PNG" style="width: 288px; height: 247px;"></p>
+      </li>
+      <p style="color: rgb(0, 102, 0); font-style: italic;">Note: If
+GlassFish fails to start, examine the Output window of
+the GlassFish V2 log file to determine the reason that startup has
+failed. The most likely cause is a port clash so ensure that nothing
+else is running on the required ports (selected during installation)
+and retry the operation. </p>
+    </ul>
+  </li>
+</ol>
+<h2><a name="Database_Setup"></a>Configure Java DB Database</h2>
+<ol>
+  <li><a href="https://open-esb.dev.java.net/60mintutorial/exercise2.html">Exercise 2</a> requires the use of a
+database that GlassFish ESB
+can communicate with via JDBC. This tutorial covers the steps for
+setting up Java DB - Sun's supported distribution of the open source
+Apache Derby database which is bundled with JDK 6 - although it is
+possible to use any database that provides a JDBC driver with metadata
+support.</li>
+  <ul>
+    <li>NetBeans provides an easy-to-use interface to create,
+start/stop and connect to Java DB databases. The required Java DB JDBC
+driver is available by default in NetBeans and GlassFish, so you do not
+need to explicity install anything additional for this exercise.<br>
+    </li>
+    <li>The setup and implementation steps are similar for other
+databases. It is important that the database-specific JDBC driver is
+installed into NetBeans under <b>Services&nbsp;&gt;&nbsp;Databases&nbsp;&gt;Drivers</b>
+and into the <b><tt>.../glassfish/lib</tt></b> directory if you decide
+to continue this tutorial with another database.<br>
+    </li>
+  </ul>
+  <br>
+  <li>Java DB can be started either in embedded mode or as a separate
+Java Virtual Machine (JVM) process. This tutorial describes the use of
+the latter and connects to the Java DB instance using the client-server
+driver. The <b>NetBeans plugin for Java DB</b> will be used to start
+the Java DB server (in a separate JVM) and also to connect (as a
+client) to this instance from NetBeans.<br>
+    <br>
+  </li>
+  <li>Create a new Java DB database in NetBeans. To do this, right
+click on <b>Services &gt; Databases &gt; Java DB</b> and select <b>Create
+Database</b> as shown below.</li>
+  <p><img style="width: 385px; height: 260px;" alt="" src="exercise0_files/createjavadb.png"><br>
+  </p>
+  <li>Now enter the values indicated below for the new database and
+click 'OK' to submit the form:<br>
+    <p><img style="width: 427px; height: 223px;" alt="" src="exercise0_files/createjavadb2.png"><br>
+    </p>
+    <p style="color: rgb(0, 102, 0); font-style: italic;">Submitting
+this form does 3 things: </p>
+    <ul>
+      <li>Creates a new Java DB database called 'javaonedb'</li>
+      <li>Starts the Java DB service as a separate java process</li>
+      <li>Automatically creates a client connection to this DB instance
+for use as needed</li>
+    </ul>
+  </li>
+</ol>
+<h2><a name="Setup_database_table"></a>Setup Java DB Table</h2>
+<ol>
+  <li>Right-click on the newly created Java DB connection from NetBeans
+and select <b>Connect</b> as shown below<br>
+  </li>
+  <br>
+  <img style="width: 527px; height: 338px;" src="exercise0_files/createjavadb3.png" alt=""><br>
+  <br>
+  <li>After connecting, right click again on the connection and select <b>'Execute
+Command...'</b> </li>
+  <br>
+  <img style="width: 516px; height: 285px;" src="exercise0_files/createjavadb4.png" alt=""><br>
+  <br>
+  <li>Copy and paste the following Data Definition Language (DDL)
+for creating the required database table into the SQL command window in
+the right pane and execute the command by clicking the <b>Run SQL</b>
+icon as indicated below:</li>
+</ol>
+<ol>
+  <div class="code">
+  <pre><b>DROP TABLE JAVAONEPOLLS;<br><br>CREATE TABLE JAVAONEPOLLS (REC_ID<br>	INT NOT NULL PRIMARY KEY GENERATED ALWAYS AS IDENTITY, <br>	USERNAME VARCHAR(50) NOT NULL, <br>	USER_CONTINENT VARCHAR(50) NOT NULL, <br>	USER_INDUSTRY VARCHAR(50), <br>	USER_TECH VARCHAR(50), <br>	USER_SOA_EXP VARCHAR(50), <br>	JAVAONE_TECH_INTEREST VARCHAR(1000), <br>	JAVAONE_TECH_RATING VARCHAR(20), <br>	JAVAONE_VENUE_RATING VARCHAR(50), <br>	JAVAONE_WEATHER_RATING VARCHAR(50), <br>	JAVAONE_PREF_VENUE VARCHAR(100));</b></pre>
+  </div>
+  <p>Click on the <b>Run SQL</b> icon to execute the above statements.
+Any error from the <bdrop table=""> command (specifically DROP
+statement) can be safely ignored
+since this table would
+not have been
+created yet unless you are repeating parts of this tutorial.<br>
+  </bdrop></p>
+  <p><img style="width: 549px; height: 310px;" alt="" src="exercise0_files/createjavadb5.png"><br>
+  </p>
+</ol>
+<h2><a name="JDBCRuntimeSetup"></a>Configure GlassFish runtime for Java
+DB</h2>
+<ol>
+  <li>GlassFish already has the Java DB client driver required to
+communicate to a Java DB instance pre-installed in its classpath, so it
+is only necessary to configure the connection pool and JDBC resource.
+These can be set up using the GlassFish admin console.</li>
+  <li>From the Services tab in the NetBeans IDE, right click on the
+running GlassFish V2 node and select <b>View Admin Console</b>.</li>
+  <br>
+  <img style="width: 282px; height: 333px;" alt="" src="exercise0_files/viewadminconsole.JPG"><br>
+  <p style="color: rgb(0, 102, 0); font-style: italic;">Note: It
+is necessary to start the GlassFish V2 instance first in order to see
+this option.</p>
+  <li>This will open a browser login screen to the admin console
+(running on the default port of 4848). Login with the following
+credentials:
+    <p>user = <tt>admin</tt><br>
+password = <tt>adminadmin</tt> </p>
+  </li>
+  <li>On the left pane, browse to <b>Resources &gt; JDBC &gt;
+Connection Pools</b></li>
+  <li>Create a new JDBC Connection Pool by selecting the 'New..' button
+and specify the values as shown in Step 1 of 2, below:<br>
+    <p><img style="width: 526px; height: 226px;" alt="" src="exercise0_files/javadbconnectionpool1.png"> </p>
+  </li>
+  <li>Click <b>Next</b> to go to Step 2 of 2. </li>
+  <br>
+  <ul>
+    <li>Default values
+will be used for all settings other than the connection properties. </li>
+    <li>Scroll down to
+the <b>Additional Properties</b> section at the bottom of the page and
+specify the Java DB connection parameters as shown below. These values
+will be used to open a new connection to Java DB as required by the
+GlassFish application server. </li>
+    <br>
+    <table border="1" cellpadding="2" cellspacing="2">
+      <tbody>
+        <tr>
+          <td><b>Name</b><br>
+          </td>
+          <td><b>Value</b><br>
+          </td>
+        </tr>
+        <tr>
+          <td>ConnectionAttributes<br>
+          </td>
+          <td>;user=javaone;password=javaone;create=true<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top;">DatabaseName<br>
+          </td>
+          <td style="vertical-align: top;">javaonedb<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top;">Password<br>
+          </td>
+          <td style="vertical-align: top;">javaone<br>
+          </td>
+        </tr>
+        <tr>
+          <td>User</td>
+          <td>javaone<br>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p><span style="color: rgb(0, 102, 0); font-style: italic;">Note:
+User
+and Password are
+intentionally entered twice as both individual property and connection
+attribute.</span></p>
+    <li>Click <b>Finish</b> after entering the
+last property (i.e. <tt>User
+= javaone</tt>). </li>
+    <br>
+    <img style="width: 485px; height: 401px;" alt="" src="exercise0_files/javadbconnectionpool2.png">
+  </ul>
+  <br>
+  <li>Ensure that the connection properties were setup properly. To do
+so, open the connection pool by clicking on <b>JavaDBPool</b> under <b>Resources
+&gt; JDBC &gt; Connection Pools</b> and click the <b>Ping</b> button
+to test the connection to the database as shown below:</li>
+  <br>
+  <img style="width: 523px; height: 261px;" alt="" src="exercise0_files/mysqlconnectionpoolping.png"><br>
+  <p>If the connection was successful, you will see the 'Ping
+Succeeded' message above.<br>
+  <span style="color: rgb(0, 102, 0); font-style: italic;"><br>
+Note: If ping failed, make sure the Java DB server
+was started from Netbeans (</span><span style="font-weight: bold; color: rgb(0, 102, 0); font-style: italic;">Service
+&gt; Databases &gt; Java DB</span><span style="color: rgb(0, 102, 0); font-style: italic;">, right
+click and 'Start Server'). Also verify that the connection
+properties above (host, port, user, password) are correct. For
+instance, if the error is "connection failure authentication occurred",
+chances are you forgot to specify the user and password in the
+ConnectionAttributes property
+(";user=javaone;password=javaone;create=true")</span></p>
+  <li>Create a JDBC Resource using the connection pool created in the
+last step (on the left pane, expand '<b>Resources &gt; JDBC &gt; JDBC
+Resources</b>').<br>
+  </li>
+  <li>Specify a JNDI Name e.g. <b>jdbc/javadb</b>, and select the Pool
+Name <b>JavaDBPool</b> as created in the previous step from the list.
+Make a note of the jndi name of this resource as it will be referenced
+in the design time.</li>
+  <br>
+  <img style="width: 446px; height: 242px;" alt="" src="exercise0_files/mysqljdbcresource.png" align="middle"><br>
+</ol>
+<h2><a name="Install_Prebuilt_App"></a>Install pre-built application</h2>
+<p>Follow these steps to deploy the pre-built <b>Poll Submit</b> web
+application to the GlassFish application server:<br>
+</p>
+<ol>
+  <li>Firstly, download the WAR file for the pre-built application to
+be deployed from <a href="https://open-esb.dev.java.net/60mintutorial/exercises/exercise0/JavaOnePollInterface.war">here</a>
+and save it to a local folder.</li>
+  <li>Once it is downloaded, the WAR file can be deployed from the
+GlassFish admin console. Launch the GlassFish admin console, for
+example from NetBeans as shown below:</li>
+  <br>
+  <img style="width: 282px; height: 333px;" alt="" src="exercise0_files/viewadminconsole.JPG"><br>
+  <br>
+  <li>Open the <span style="color: blue;">Applications &gt; Web
+Applications</span> on the left pane and click the <b>Deploy...</b>
+button</li>
+  <br>
+  <img style="width: 621px; height: 263px;" alt="" src="exercise0_files/deploywebapp.png"><br>
+  <br>
+  <li>Click the <b>Browse...</b> button and use the dialog box to
+locate the
+location of the saved WAR file, then click the <b>OK</b> button to
+deploy the web application.
+    <p style="color: rgb(0, 102, 0); font-style: italic;">Note: Some
+browsers may display a dialog box
+warning that the <b>"Selected file does not match Application type.
+Continue deployment?"</b>. Click <b>OK</b> to continue deployment if
+this is encountered. If you get an error <b>"Illegal class modifiers"</b>
+during deploy, you will have to build the WAR from source using the project
+zip file as seen in step 7 below.</p>
+  </li>
+  <li>In the next dialog, launch the deployed web application as shown
+below:</li>
+  <br>
+  <img style="width: 375px; height: 187px;" alt="" src="exercise0_files/launchwebapp.png"><br>
+  <br>
+  <li>Verify that the JavaOne poll page is displayed correctly.</li>
+  <p style="color: rgb(0, 102, 0); font-style: italic;">Note: You may
+also enter the URL directly from
+a browser: <a href="http://localhost:8080/JavaOnePollInterface">http://localhost:8080/JavaOnePollInterface</a></p>
+  <li>Interested in learning more about how the web application was
+built?
+    <ul>
+      <li>The document <a href="https://open-esb.dev.java.net/60mintutorial/exercises/exercise0/JavaOnePollInterface.pdf">JavaOnePollInterface.pdf</a>
+describes how the web interface apps were built in NetBeans using
+Project Woodstock and Java Server Faces</li>
+      <li>The complete NetBeans project with this implementation is
+also
+available for your reference. Just download and extract the <a href="https://open-esb.dev.java.net/60mintutorial/exercises/exercise0/JavaOnePollInterface.zip">project
+zip file</a>, and open the project <b>JavaOnePollInterface</b> within
+NetBeans.</li>
+      <li>Author: <a href="mailto:paul.wickstrom@sun.com">Paul
+Wickstrom</a><br>
+      </li>
+    </ul>
+  </li>
+</ol>
+<p><a href="https://open-esb.dev.java.net/60mintutorial/index.html">Back to Introduction</a> &nbsp; <a href="https://open-esb.dev.java.net/60mintutorial/exercise1.html">Forward to Exercise 1</a></p>
+
+</div>
+</td>
+</tr>
+</tbody></table>
+ 
+ 
+ <div id="footer">
+   <div align="center"><p><a href="http://today.java.net/pub/q/java_net_rss"><img src="exercise0_files/xml.gif" alt="XML" style="vertical-align: middle;" width="36" height="14"></a>&nbsp;<b>java.net RSS</b></p>
+</div>   
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+   	<tbody><tr>
+   		<td><a href="http://www.oracle.com/" onclick="return launch(this.href, 1)"><img src="exercise0_files/logo_oracle_footer.gif" id="logooracle" alt="Oracle"></a> </td>
+
+ 		<td><div align="center"><a href="http://java-net.dev.java.net/feedback.html" onclick="return launch(this.href, 1)" title="Note: link may open in new window" class="helplink">Feedback</a>   |
+ 		<a href="http://www.java.net/javanet-faq">FAQ</a> |
+<!-- 		<a href="http://java.net/presscenter/">Press</a> |   -->
+ 		 <a href="http://www.collab.net/developers/tools/" onclick="return launch(this.href, 1)" title="Note: link may open in new window">Developer tools</a></div>
+<div align="center">
+ 
+ 	<a href="http://www.java.net/javanet-web-site-terms-use">Terms of Use</a> |
+        <a href="http://www.sun.com/privacy/">Privacy</a> | 
+	<a href="http://www.sun.com/suntrademarks/">Trademarks</a> |  
+ 	<a href="https://java-net.dev.java.net/sitemap.html">Site Map</a> 
+</div>
+<div align="center">	<p>Copyright © 2010, Oracle and/or its affiliates.
+All rights reserved. Oracle and Java are registered trademarks of
+Oracle and/or its affiliates. Other names may be trademarks of their
+respective owners. </p><p>© 1995 - 2007 CollabNet. CollabNet is a registered trademark of CollabNet, Inc.</p>    </div></td>
+	   
+<td><a href="http://www.collab.net/special/clickpbc0502.html" id="poweredby"><span class="alt">Powered by CollabNet</span></a><br>
+<a href="http://www.cognisync.com/" onclick="return launch(this.href, 1)"><img src="exercise0_files/cognisync.jpg" id="cognisync" alt="Cognisync" width="74" height="19"></a>
+</td>
+</tr></tbody></table>
+		
+		<!-- Begin SiteCatalyst code  -->
+		<script language="JavaScript" src="exercise0_files/s_code_remote.js"></script><script type="text/javascript" src="exercise0_files/metrics_group1.js"></script>
+<!-- End SiteCatalyst code --> 
+ 
+</div></body></html>
