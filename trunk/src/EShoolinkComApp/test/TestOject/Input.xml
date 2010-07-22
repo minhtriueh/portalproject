@@ -1,0 +1,16 @@
+<soapenv:Envelope xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:esc="http://xml.netbeans.org/schema/EschoolinkObject">
+  <soapenv:Body>
+    <esc:Truong>
+      <esc:id>1</esc:id>
+      <esc:tenTruong>asdad</esc:tenTruong>
+      <esc:diaChiTruong>asada</esc:diaChiTruong>
+      <esc:ngayThanhLapTruong>2008-09-29</esc:ngayThanhLapTruong>
+      <esc:loaiHinhTruong>sdfsfs</esc:loaiHinhTruong>
+      <esc:dienThoaiTruong>21</esc:dienThoaiTruong>
+      <esc:websiteTruong>asdsfs</esc:websiteTruong>
+      <esc:gioiThieuTruong>dsfsfsfsfsfsf</esc:gioiThieuTruong>
+      <!--Zero or more repetitions:-->
+      
+    </esc:Truong>
+  </soapenv:Body>
+</soapenv:Envelope>
