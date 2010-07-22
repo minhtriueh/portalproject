@@ -7,6 +7,36 @@
         </identification>
         <service-unit>
             <identification>
+                <name>EShoolinkComApp-QuanLyGiaoVien</name>
+                <description>Represents this Service Unit</description>
+            </identification>
+            <target>
+                <artifacts-zip>QuanLyGiaoVien.jar</artifacts-zip>
+                <component-name>sun-bpel-engine</component-name>
+            </target>
+        </service-unit>
+        <service-unit>
+            <identification>
+                <name>EShoolinkComApp-QuanLyHeThong</name>
+                <description>Represents this Service Unit</description>
+            </identification>
+            <target>
+                <artifacts-zip>QuanLyHeThong.jar</artifacts-zip>
+                <component-name>sun-bpel-engine</component-name>
+            </target>
+        </service-unit>
+        <service-unit>
+            <identification>
+                <name>EShoolinkComApp-QuanLyHocSinh</name>
+                <description>Represents this Service Unit</description>
+            </identification>
+            <target>
+                <artifacts-zip>QuanLyHocSinh.jar</artifacts-zip>
+                <component-name>sun-bpel-engine</component-name>
+            </target>
+        </service-unit>
+        <service-unit>
+            <identification>
                 <name>EShoolinkComApp-sun-database-binding</name>
                 <description>Represents this Service Unit</description>
             </identification>
