@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process
+    name="TaoTaiKhoan"
+    targetNamespace="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/TaoTaiKhoan"
+    xmlns:tns="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/TaoTaiKhoan"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
+    xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor"
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2" xmlns:ns0="http://j2ee.netbeans.org/xsd/tableSchema" xmlns:sxxf="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/XPathFunctions">
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoTaiKhoan" location="../interface_WSDL/TaoTaiKhoan.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_NguoiDung_insert" location="../DB_WSDL/insert/DB_NguoiDung_insert.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    
+    <partnerLinks>
+        <partnerLink name="plInsertTaiKhoan" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_NguoiDung_insert" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="plTaoTaiKhoan" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoTaiKhoan" partnerLinkType="tns:TaoTaiKhoan" myRole="TaoTaiKhoanPortTypeRole"/>
+    </partnerLinks>
+    <variables>
+        <variable name="FindLastIDOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_NguoiDung_insert" messageType="tns:outputMsg"/>
+        <variable name="TaoTaiKhoanOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoTaiKhoan" messageType="tns:TaoTaiKhoanOperationResponse"/>
+        <variable name="TaoTaiKhoanOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoTaiKhoan" messageType="tns:TaoTaiKhoanOperationRequest"/>
+        <variable name="FindLastIDIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_NguoiDung_insert" messageType="tns:inputMsg"/>
+        <variable name="InsertTaiKhoanOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_NguoiDung_insert" messageType="tns:RetMsg"/>
+        <variable name="InsertTaiKhoanIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_NguoiDung_insert" messageType="tns:inputMsg"/>
+    </variables>
+    <sequence>
+        <receive name="Receive1" createInstance="yes" partnerLink="plTaoTaiKhoan" operation="TaoTaiKhoanOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoTaiKhoan" portType="tns:TaoTaiKhoanPortType" variable="TaoTaiKhoanOperationIn"/>
+        <assign name="Assign1">
+            <copy>
+                <from variable="TaoTaiKhoanOperationIn" part="UserName"/>
+                <to>$InsertTaiKhoanIn.part/ns0:nguoidung_Record/ns0:username</to>
+            </copy>
+            <copy>
+                <from variable="TaoTaiKhoanOperationIn" part="passWD"/>
+                <to>$InsertTaiKhoanIn.part/ns0:nguoidung_Record/ns0:password</to>
+            </copy>
+            <copy>
+                <from>sxxf:current-date()</from>
+                <to>$InsertTaiKhoanIn.part/ns0:nguoidung_Record/ns0:ngaytao</to>
+            </copy>
+        </assign>
+        <invoke name="Invoke1" partnerLink="plInsertTaiKhoan" operation="insert" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_NguoiDung_insert" portType="tns:jdbcPortType" inputVariable="InsertTaiKhoanIn" outputVariable="InsertTaiKhoanOut"/>
+        <assign name="Assign2">
+            <copy>
+                <from variable="TaoTaiKhoanOperationIn" part="UserName"/>
+                <to>$FindLastIDIn.part/ns0:nguoidung_Record/ns0:username</to>
+            </copy>
+        </assign>
+        <invoke name="Invoke2" partnerLink="plInsertTaiKhoan" operation="findLastID" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_NguoiDung_insert" portType="tns:jdbcPortType" inputVariable="FindLastIDIn" outputVariable="FindLastIDOut"/>
+        <assign name="Assign3">
+            <copy>
+                <from>$FindLastIDOut.part/ns0:nguoidung_Record/ns0:id_nguoidung</from>
+                <to variable="TaoTaiKhoanOperationOut" part="idTaiKhoan"/>
+            </copy>
+        </assign>
+        <reply name="Reply1" partnerLink="plTaoTaiKhoan" operation="TaoTaiKhoanOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoTaiKhoan" portType="tns:TaoTaiKhoanPortType" variable="TaoTaiKhoanOperationOut"/>
+    </sequence>
+</process>
+
+
+
