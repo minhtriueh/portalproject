@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="DB_NguoiDungFind" targetNamespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_NguoiDungFind" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:ns="http://j2ee.netbeans.org/xsd/tableSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_NguoiDungFind" xmlns:plink="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/">
+  <types>
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/">
+            <xsd:import namespace="http://j2ee.netbeans.org/xsd/tableSchema" schemaLocation="nguoidung.xsd"/>
+	</xsd:schema>
+  </types>
+  <message name="inputMsg">
+    <part name="part" element="ns:nguoidung"/>
+  </message>
+  <message name="outputMsg">
+    <part name="part" element="ns:nguoidung"/>
+  </message>
+  <message name="RetMsg">
+    <part name="part" type="xsd:int"/>
+  </message>
+  <portType name="jdbcPortType">
+    <operation name="findLastID">
+      <input name="inputFindLastID" message="tns:inputMsg"/>
+      <output name="outputFindLastID" message="tns:outputMsg"/>
+    </operation>
+    <operation name="update">
+      <input name="inputUpdate" message="tns:inputMsg"/>
+      <output name="outputUpdate" message="tns:RetMsg"/>
+    </operation>
+    <operation name="delete">
+      <input name="inputDelete" message="tns:inputMsg"/>
+      <output name="outputDelete" message="tns:RetMsg"/>
+    </operation>
+    <operation name="find">
+      <input name="inputFind" message="tns:inputMsg"/>
+      <output name="outputFind" message="tns:outputMsg"/>
+    </operation>
+  </portType>
+  <binding name="binding" type="tns:jdbcPortType">
+    <jdbc:binding xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/"/>
+    <operation name="findLastID">
+    <jdbc:operation xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/"/>
+      <input name="inputFindLastID">
+    <jdbc:input xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" 
+    MarkColumnName=""
+    MarkColumnValue=""
+    MoveRowToTableName=""
+    PKName="id_nguoidung"
+    PollMilliSeconds="5000"
+    PollingPostProcessing="MoveRow"
+    TableName="nguoidung"
+    Transaction="NOTransaction"
+    numberOfRecords=""
+    operationType="findLastID"
+    paramOrder="username"
+    sql="
+          SELECT
+            id_nguoidung
+          FROM
+            nguoidung
+          WHERE
+            username = ?
+          ORDER BY
+            id_nguoidung DESC"  />
+      </input>
+      <output name="outputFindLastID">
+    <jdbc:output xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" returnPartName="part"/>
+      </output>
+    </operation>
+    <operation name="update">
+    <jdbc:operation xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/"/>
+      <input name="inputUpdate">
+    <jdbc:input xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" MarkColumnName="" MarkColumnValue="" MoveRowToTableName="" PKName="id_nguoidung" PollMilliSeconds="5000" PollingPostProcessing="MoveRow" TableName="nguoidung" Transaction="NOTransaction" numberOfRecords="" operationType="update" paramOrder="id_nguoidung,ngaytao,password,username" sql="update nguoidung set nguoidung.id_nguoidung  = ?,nguoidung.ngaytao  = ?,nguoidung.password  = ?,nguoidung.username  = ?"/>
+      </input>
+      <output name="outputUpdate">
+    <jdbc:output xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" returnPartName="part"/>
+      </output>
+    </operation>
+    <operation name="delete">
+    <jdbc:operation xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/"/>
+      <input name="inputDelete">
+    <jdbc:input xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" MarkColumnName="" MarkColumnValue="" MoveRowToTableName="" PKName="id_nguoidung" PollMilliSeconds="5000" PollingPostProcessing="MoveRow" TableName="nguoidung" Transaction="NOTransaction" numberOfRecords="" operationType="delete" paramOrder="" sql="delete from nguoidung"/>
+      </input>
+      <output name="outputDelete">
+    <jdbc:output xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" returnPartName="part"/>
+      </output>
+    </operation>
+    <operation name="find">
+    <jdbc:operation xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/"/>
+      <input name="inputFind">
+    <jdbc:input xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" MarkColumnName="" MarkColumnValue="" MoveRowToTableName="" PKName="id_nguoidung" PollMilliSeconds="5000" PollingPostProcessing="MoveRow" TableName="nguoidung" Transaction="NOTransaction" numberOfRecords="" operationType="find" paramOrder="" sql="select id_nguoidung,ngaytao,password,username from nguoidung"/>
+      </input>
+      <output name="outputFind">
+    <jdbc:output xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" returnPartName="part"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="service">
+    <port name="port" binding="tns:binding">
+    <jdbc:address xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" jndiName="jdbc/eschoolinkdb"/>
+    </port>
+  </service>
+    <plink:partnerLinkType xmlns:plink="http://docs.oasis-open.org/wsbpel/2.0/plnktype" name="jdbcpartner">
+        <plink:role name="jdbcPortTypeRole" portType="tns:jdbcPortType"/>
+    </plink:partnerLinkType>
+</definitions>
+
