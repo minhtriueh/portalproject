@@ -48,6 +48,8 @@
     <xsd:element name="SoDiemDanh" type="tns:SoDiemDanh"/>
     <xsd:element name="ThonXom" type="tns:ThonXom"/>
     <xsd:element name="XaPhuongThiTran" type="tns:XaPhuongThiTran"/>
+    <xsd:element name="ThoiKhoaBieu" type="tns:ThoiKhoaBieu"/>
+    <xsd:element name="ChiTietThoiKhoaBieu" type="tns:ChiTietThoiKhoaBieu"/>
     <xsd:complexType name="Truong">
         <xsd:sequence>
             <xsd:element name="id" type="xsd:long"></xsd:element>
@@ -128,6 +130,7 @@
             <xsd:element name="id" type="xsd:long"></xsd:element>
             <xsd:element name="tenLop" type="xsd:string"></xsd:element>
             <xsd:element name="siSoLop" type="xsd:int"></xsd:element>
+            <xsd:element ref="tns:ThoiKhoaBieu"></xsd:element>
             <xsd:element ref="tns:GiaoVien" maxOccurs="unbounded" minOccurs="0"></xsd:element>
             <xsd:element ref="tns:MonHoc" maxOccurs="unbounded" minOccurs="0"></xsd:element>
             <xsd:element ref="tns:GiaoVienChuNhiem" minOccurs="0"></xsd:element>
@@ -392,7 +395,7 @@
             <xsd:element name="id" type="xsd:long"></xsd:element>
             <xsd:element name="tenKhuVuc" type="xsd:string"></xsd:element>
             <xsd:element name="moTa" type="xsd:string"></xsd:element>
-            <xsd:element ref="tns:QuanHuyenThanhPho" maxOccurs="unbounded"></xsd:element>
+            <xsd:element ref="tns:ThonXom" maxOccurs="unbounded"></xsd:element>
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="LoaiDiem">
@@ -437,7 +440,7 @@
         <xsd:sequence>
             <xsd:element name="id" type="xsd:long"></xsd:element>
             <xsd:element ref="tns:SoDiem" maxOccurs="unbounded" minOccurs="0"></xsd:element>
-            <xsd:element ref="tns:ChiTietHocBa" maxOccurs="unbounded" minOccurs="0"></xsd:element>
+            <xsd:element ref="tns:HocBa" maxOccurs="unbounded" minOccurs="0"></xsd:element>
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="SoDiemDanh">
@@ -460,7 +463,26 @@
             <xsd:element ref="tns:ThonXom"></xsd:element>
         </xsd:sequence>
     </xsd:complexType>
+    <xsd:complexType name="ThoiKhoaBieu">
+        <xsd:sequence>
+            <xsd:element name="id" type="xsd:long"></xsd:element>
+            <xsd:element ref="tns:NamHoc"></xsd:element>
+            <xsd:element ref="tns:ChiTietThoiKhoaBieu" maxOccurs="unbounded"></xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="ChiTietThoiKhoaBieu">
+        <xsd:sequence>
+            <xsd:element name="id" type="xsd:long"></xsd:element>
+            <xsd:element name="thu" type="xsd:int"></xsd:element>
+            <xsd:element name="monHoc" type="xsd:string"></xsd:element>
+            <xsd:element name="soTiet" type="xsd:int"></xsd:element>
+            <xsd:element ref="tns:GiaoVien"></xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
 </xsd:schema>
+
+
+
 
 
 

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process
+    name="TaoLoaiHocSinh"
+    targetNamespace="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/TaoLoaiHocSinh"
+    xmlns:tns="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/TaoLoaiHocSinh"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
+    xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor"
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2" xmlns:ns0="http://j2ee.netbeans.org/xsd/tableSchema">
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoLoaiHocSinh" location="../interface_WSDL/TaoLoaiHocSinh.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_LoaiHocSinh" location="../DB_WSDL/insert/DB_LoaiHocSinh.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <partnerLinks>
+        <partnerLink name="PartnerLink2" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_LoaiHocSinh" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="PartnerLink1" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoLoaiHocSinh" partnerLinkType="tns:TaoLoaiHocSinh" myRole="TaoLoaiHocSinhPortTypeRole"/>
+    </partnerLinks>
+    <variables>
+        <variable name="FindOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_LoaiHocSinh" messageType="tns:outputMsg"/>
+        <variable name="FindIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_LoaiHocSinh" messageType="tns:inputMsg"/>
+        <variable name="InsertOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_LoaiHocSinh" messageType="tns:RetMsg"/>
+        <variable name="InsertIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_LoaiHocSinh" messageType="tns:inputMsg"/>
+        <variable name="TaoLoaiHocSinhOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoLoaiHocSinh" messageType="tns:TaoLoaiHocSinhOperationResponse"/>
+        <variable name="TaoLoaiHocSinhOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoLoaiHocSinh" messageType="tns:TaoLoaiHocSinhOperationRequest"/>
+    </variables>
+    <sequence>
+        <receive name="Receive1" createInstance="yes" partnerLink="PartnerLink1" operation="TaoLoaiHocSinhOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoLoaiHocSinh" portType="tns:TaoLoaiHocSinhPortType" variable="TaoLoaiHocSinhOperationIn"/>
+        <assign name="Assign1">
+            <copy>
+                <from variable="TaoLoaiHocSinhOperationIn" part="tenLoaiHocSinh"/>
+                <to>$InsertIn.part/ns0:loaihocsinh_Record/ns0:tenloaihocsinh</to>
+            </copy>
+            <copy>
+                <from variable="TaoLoaiHocSinhOperationIn" part="moTa"/>
+                <to>$InsertIn.part/ns0:loaihocsinh_Record/ns0:mota</to>
+            </copy>
+        </assign>
+        <invoke name="Invoke1" partnerLink="PartnerLink2" operation="insert" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_LoaiHocSinh" portType="tns:jdbcPortType" inputVariable="InsertIn" outputVariable="InsertOut"/>
+        <assign name="Assign2">
+            <copy>
+                <from>0</from>
+                <to>$FindIn.part/ns0:loaihocsinh_Record/ns0:id_loaihocsinh</to>
+            </copy>
+        </assign>
+        <invoke name="Invoke2" partnerLink="PartnerLink2" operation="find" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_LoaiHocSinh" portType="tns:jdbcPortType" inputVariable="FindIn" outputVariable="FindOut"/>
+        <assign name="Assign3">
+            <copy>
+                <from>$FindOut.part/ns0:loaihocsinh_Record/ns0:id_loaihocsinh</from>
+                <to variable="TaoLoaiHocSinhOperationOut" part="id"/>
+            </copy>
+        </assign>
+        <reply name="Reply1" partnerLink="PartnerLink1" operation="TaoLoaiHocSinhOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoLoaiHocSinh" portType="tns:TaoLoaiHocSinhPortType" variable="TaoLoaiHocSinhOperationOut"/>
+    </sequence>
+</process>
+
+
+
+

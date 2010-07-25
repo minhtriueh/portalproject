@@ -14,12 +14,11 @@
         <part name="tenHocSinh" type="xsd:string"/>
         <part name="ngaySinh" type="xsd:date"/>
         <part name="gioiTinh" type="xsd:string"/>
-        <part name="soNha" type="xsd:string"/>
+        <part name="diaChiNhaO" type="xsd:string"/>
         <part name="thonXomKhuPho" type="ns0:ThonXom"/>
         <part name="xaPhuongThiTran" type="ns0:XaPhuongThiTran"/>
         <part name="quanHuyenThanhPho" type="ns0:QuanHuyenThanhPho"/>
-        <part name="khuVuc" type="ns0:KhuVuc"/>
-        <part name="danTan" type="ns0:DanToc"/>
+        <part name="danToc" type="ns0:DanToc"/>
         <part name="tonGiao" type="xsd:string"/>
         <part name="hinhAnh" type="xsd:string"/>
         <part name="ketNapDoi" type="xsd:boolean"/>
@@ -27,10 +26,11 @@
         <part name="ketNapDoan" type="xsd:boolean"/>
         <part name="ngayVaoDoan" type="xsd:date"/>
         <part name="ghiChu" type="xsd:string"/>
-        <part name="cheDoUuTien" type="ns0:CheDoUuTien"/>
-        <part name="thanhPhanGiaDinh" type="ns0:ThanhPhanGiaDinh"/>
-        <part name="khoiLop" type="ns0:KhoiLop"/>
-        <part name="lop" type="ns0:Lop"/>
+        <part name="idCheDoUuTien" type="xsd:long"/>
+        <part name="idThanhPhanGiaDinh" type="xsd:long"/>
+        <part name="idKhoiLop" type="xsd:long"/>
+        <part name="idLop" type="xsd:long"/>
+        <part name="idLoaiHocSinh" type="xsd:long"/>
     </message>
     <message name="ThemHocSinhOperationResponse">
         <part name="part1" type="xsd:boolean"/>
@@ -48,6 +48,7 @@ A partner link type characterizes the conversational relationship between two se
         <plnk:role name="ThemHocSinhPortTypeRole" portType="tns:ThemHocSinhPortType"/>
     </plnk:partnerLinkType>
 </definitions>
+
 
 
 
