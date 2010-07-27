@@ -2,7 +2,7 @@
 <definitions name="DB_Truong_Insert" targetNamespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_Truong_Insert" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:ns="http://j2ee.netbeans.org/xsd/tableSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_Truong_Insert" xmlns:plink="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/">
   <types>
     <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/">
-            <xsd:import namespace="http://j2ee.netbeans.org/xsd/tableSchema" schemaLocation="truong.xsd"/>
+            <xsd:import namespace="http://j2ee.netbeans.org/xsd/tableSchema" schemaLocation="../../DB_WSDL/insert/XSD/truong.xsd"/>
 	</xsd:schema>
   </types>
   <message name="outputMsg">
@@ -29,7 +29,7 @@
     <operation name="insert">
     <jdbc:operation xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/"/>
       <input name="inputInsert">
-    <jdbc:input xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" MarkColumnName="" MarkColumnValue="" MoveRowToTableName="" PKName="id_truong" PollMilliSeconds="5000" PollingPostProcessing="MoveRow" TableName="truong" Transaction="NOTransaction" numberOfRecords="" operationType="insert" 
+    <jdbc:input xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" MarkColumnName="" MarkColumnValue="" MoveRowToTableName="" PKName="id_truong" PollMilliSeconds="5000" PollingPostProcessing="MoveRow" TableName="truong" Transaction="NOTransaction" numberOfRecords="" operationType="insert"
     paramOrder="diachitruong,dienthoaitruong,gioithieutruong,loaihinhtruong,ngaythanhlaptruong,tentruong,websitetruong"
     sql="insert into truong (diachitruong,dienthoaitruong,gioithieutruong,loaihinhtruong,ngaythanhlaptruong,tentruong,websitetruong) values (?,?,?,?,?,?,?)"/>
       </input>
@@ -44,7 +44,7 @@
     paramOrder=""
     sql="SELECT
   id_truong,
-  diachitruong, 
+  diachitruong,
   dienthoaitruong,
   gioithieutruong,
   loaihinhtruong,
@@ -71,4 +71,5 @@ LIMIT 1 OFFSET 0"/>
         <plink:role name="jdbcPortTypeRole" portType="tns:jdbcPortType"/>
     </plink:partnerLinkType>
 </definitions>
+
 
