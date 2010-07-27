@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process
+    name="TaoThonXom"
+    targetNamespace="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/TaoThonXom"
+    xmlns:tns="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/TaoThonXom"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
+    xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor"
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2" xmlns:ns0="http://j2ee.netbeans.org/xsd/tableSchema">
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoThonXom" location="../../interface_WSDL/TaoDiaChi/TaoThonXom.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_TaoThonXom" location="../../DB_WSDL/insert/TaoDiaChi/DB_TaoThonXom.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <partnerLinks>
+        <partnerLink name="plDBTaoThonXom" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_TaoThonXom" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="plTaoThonXom" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoThonXom" partnerLinkType="tns:TaoThonXom" myRole="TaoThonXomPortTypeRole"/>
+    </partnerLinks>
+    <variables>
+        <variable name="ExecuteOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_TaoThonXom" messageType="tns:outputMsg"/>
+        <variable name="ExecuteIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_TaoThonXom" messageType="tns:inputMsg"/>
+        <variable name="TaoThonXomOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoThonXom" messageType="tns:TaoThonXomOperationResponse"/>
+        <variable name="TaoThonXomOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoThonXom" messageType="tns:TaoThonXomOperationRequest"/>
+    </variables>
+    <sequence>
+        <receive name="Receive1" createInstance="yes" partnerLink="plTaoThonXom" operation="TaoThonXomOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoThonXom" portType="tns:TaoThonXomPortType" variable="TaoThonXomOperationIn"/>
+        <assign name="Assign1">
+            <copy>
+                <from variable="TaoThonXomOperationIn" part="tenthonxom"/>
+                <to>$ExecuteIn.part/ns0:tenthonxom</to>
+            </copy>
+            <copy>
+                <from variable="TaoThonXomOperationIn" part="id_khuvuc"/>
+                <to>$ExecuteIn.part/ns0:id_khuvuc</to>
+            </copy>
+            <copy>
+                <from variable="TaoThonXomOperationIn" part="id_xaphuongthitran"/>
+                <to>$ExecuteIn.part/ns0:id_xaphuongthitran</to>
+            </copy>
+        </assign>
+        <invoke name="Invoke1" partnerLink="plDBTaoThonXom" operation="execute" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_TaoThonXom" portType="tns:jdbcPortType" inputVariable="ExecuteIn" outputVariable="ExecuteOut"/>
+        <assign name="Assign2">
+            <copy>
+                <from>$ExecuteOut.part/ns0:returnValue</from>
+                <to variable="TaoThonXomOperationOut" part="part1"/>
+            </copy>
+        </assign>
+        <reply name="Reply1" partnerLink="plTaoThonXom" operation="TaoThonXomOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoThonXom" portType="tns:TaoThonXomPortType" variable="TaoThonXomOperationOut"/>
+    </sequence>
+</process>
+

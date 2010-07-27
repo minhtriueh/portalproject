@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
   <xsd:schema elementFormDefault="qualified" targetNamespace="http://j2ee.netbeans.org/xsd/tableSchema" xmlns="http://j2ee.netbeans.org/xsd/tableSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <xsd:element name="nguoidung" type="nguoidung"></xsd:element>
-    <xsd:complexType name="nguoidung">
-      <xsd:sequence>
-        <xsd:element maxOccurs="unbounded" ref="nguoidung_Record"></xsd:element>
-      </xsd:sequence>
-    </xsd:complexType>
-    <xsd:element name="nguoidung_Record">
+    <xsd:element name="create_xaphuongthitran_Request">
       <xsd:complexType>
         <xsd:sequence>
-          <xsd:element name="id_nguoidung">
+          <xsd:element name="tenxaphuongthitran">
+            <xsd:complexType>
+              <xsd:simpleContent>
+                <xsd:extension base="xsd:string">
+                  <xsd:attribute name="isNull" type="xsd:boolean"></xsd:attribute>
+                  <xsd:attribute name="isDefaultColumn" type="xsd:boolean"></xsd:attribute>
+                </xsd:extension>
+              </xsd:simpleContent>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="id_quanhuyenthanhpho">
             <xsd:complexType>
               <xsd:simpleContent>
                 <xsd:extension base="xsd:long">
@@ -19,30 +23,16 @@
               </xsd:simpleContent>
             </xsd:complexType>
           </xsd:element>
-          <xsd:element name="ngaytao">
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="create_xaphuongthitran_Response">
+      <xsd:complexType>
+        <xsd:sequence>
+          <xsd:element name="returnValue">
             <xsd:complexType>
               <xsd:simpleContent>
-                <xsd:extension base="xsd:string">
-                  <xsd:attribute name="isNull" type="xsd:boolean"></xsd:attribute>
-                  <xsd:attribute name="isDefaultColumn" type="xsd:boolean"></xsd:attribute>
-                </xsd:extension>
-              </xsd:simpleContent>
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="password">
-            <xsd:complexType>
-              <xsd:simpleContent>
-                <xsd:extension base="xsd:string">
-                  <xsd:attribute name="isNull" type="xsd:boolean"></xsd:attribute>
-                  <xsd:attribute name="isDefaultColumn" type="xsd:boolean"></xsd:attribute>
-                </xsd:extension>
-              </xsd:simpleContent>
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="username">
-            <xsd:complexType>
-              <xsd:simpleContent>
-                <xsd:extension base="xsd:string">
+                <xsd:extension base="xsd:long">
                   <xsd:attribute name="isNull" type="xsd:boolean"></xsd:attribute>
                   <xsd:attribute name="isDefaultColumn" type="xsd:boolean"></xsd:attribute>
                 </xsd:extension>

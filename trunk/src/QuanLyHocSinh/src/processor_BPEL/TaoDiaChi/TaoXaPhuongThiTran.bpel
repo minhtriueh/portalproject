@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process
+    name="TaoXaPhuongThiTran"
+    targetNamespace="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/TaoXaPhuongThiTran"
+    xmlns:tns="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/TaoXaPhuongThiTran"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
+    xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor"
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2" xmlns:ns0="http://j2ee.netbeans.org/xsd/tableSchema">
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoXaPhuongThiTran" location="../../interface_WSDL/TaoDiaChi/TaoXaPhuongThiTran.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_TaoXaPhuongThiTran" location="../../DB_WSDL/insert/TaoDiaChi/DB_TaoXaPhuongThiTran.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <partnerLinks>
+        <partnerLink name="plDBTaoXPTT" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_TaoXaPhuongThiTran" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="plTaoXPTT" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoXaPhuongThiTran" partnerLinkType="tns:TaoXaPhuongThiTran" myRole="TaoXaPhuongThiTranPortTypeRole"/>
+    </partnerLinks>
+    <variables>
+        <variable name="ExecuteOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_TaoXaPhuongThiTran" messageType="tns:outputMsg"/>
+        <variable name="ExecuteIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_TaoXaPhuongThiTran" messageType="tns:inputMsg"/>
+        <variable name="TaoXaPhuongThiTranOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoXaPhuongThiTran" messageType="tns:TaoXaPhuongThiTranOperationResponse"/>
+        <variable name="TaoXaPhuongThiTranOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoXaPhuongThiTran" messageType="tns:TaoXaPhuongThiTranOperationRequest"/>
+    </variables>
+    <sequence>
+        <receive name="Receive1" createInstance="yes" partnerLink="plTaoXPTT" operation="TaoXaPhuongThiTranOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoXaPhuongThiTran" portType="tns:TaoXaPhuongThiTranPortType" variable="TaoXaPhuongThiTranOperationIn"/>
+        <assign name="Assign1">
+            <copy>
+                <from variable="TaoXaPhuongThiTranOperationIn" part="tenxaphuongthitran"/>
+                <to>$ExecuteIn.part/ns0:tenxaphuongthitran</to>
+            </copy>
+            <copy>
+                <from variable="TaoXaPhuongThiTranOperationIn" part="id_quanhuyenthanhpho"/>
+                <to>$ExecuteIn.part/ns0:id_quanhuyenthanhpho</to>
+            </copy>
+        </assign>
+        <invoke name="Invoke1" partnerLink="plDBTaoXPTT" operation="execute" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_TaoXaPhuongThiTran" portType="tns:jdbcPortType" inputVariable="ExecuteIn" outputVariable="ExecuteOut"/>
+        <assign name="Assign2">
+            <copy>
+                <from>$ExecuteOut.part/ns0:returnValue</from>
+                <to variable="TaoXaPhuongThiTranOperationOut" part="id"/>
+            </copy>
+        </assign>
+        <reply name="Reply1" partnerLink="plTaoXPTT" operation="TaoXaPhuongThiTranOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoXaPhuongThiTran" portType="tns:TaoXaPhuongThiTranPortType" variable="TaoXaPhuongThiTranOperationOut"/>
+    </sequence>
+</process>
+
