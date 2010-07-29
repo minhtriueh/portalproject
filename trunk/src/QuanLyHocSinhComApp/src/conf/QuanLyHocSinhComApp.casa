@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<casa xmlns="http://java.sun.com/xml/ns/casa" xmlns:ns1="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_DanToc_insert" xmlns:ns10="QuanLyHocSinhComApp" xmlns:ns11="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoCheDoUuTien" xmlns:ns12="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoDanToc" xmlns:ns13="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoKhuVuc" xmlns:ns14="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoLoaiHocSinh" xmlns:ns15="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoQuanHuyenThanhPho" xmlns:ns16="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoThonXom" xmlns:ns17="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoXaPhuongThiTran" xmlns:ns18="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoTruong" xmlns:ns19="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/ThemHocSinh" xmlns:ns2="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_Truong_Insert" xmlns:ns20="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/TaoCheDoUuTien" xmlns:ns21="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/TaoDanToc" xmlns:ns22="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/TaoKhuVuc" xmlns:ns23="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/TaoQuanHuyenThanhPho" xmlns:ns24="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/TaoThonXom" xmlns:ns25="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/TaoTinh" xmlns:ns26="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/TaoXaPhuongThiTran" xmlns:ns27="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/TaoLoaiHocSinh" xmlns:ns28="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/TaoTruong" xmlns:ns29="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/ThemHocSinh" xmlns:ns3="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_TaoThonXom" xmlns:ns4="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoTinh" xmlns:ns5="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_LoaiHocSinh" xmlns:ns6="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_TaoKhuVuc" xmlns:ns7="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_TaoXaPhuongThiTran" xmlns:ns8="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_quanhuyenthanhpho_insert" xmlns:ns9="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_CheDoUuTienInsert" xmlns:xlink="http://www.w3.org/2000/xlink">
+    <endpoints>
+        <endpoint endpoint-name="port" interface-name="ns1:jdbcPortType" name="endpoint1" service-name="ns1:service"/>
+        <endpoint endpoint-name="port" interface-name="ns2:jdbcPortType" name="endpoint2" service-name="ns2:service"/>
+        <endpoint endpoint-name="port" interface-name="ns3:jdbcPortType" name="endpoint3" service-name="ns3:service"/>
+        <endpoint endpoint-name="port" interface-name="ns4:jdbcPortType" name="endpoint4" service-name="ns4:service"/>
+        <endpoint endpoint-name="port" interface-name="ns5:jdbcPortType" name="endpoint5" service-name="ns5:service"/>
+        <endpoint endpoint-name="port" interface-name="ns6:jdbcPortType" name="endpoint6" service-name="ns6:service"/>
+        <endpoint endpoint-name="port" interface-name="ns7:jdbcPortType" name="endpoint7" service-name="ns7:service"/>
+        <endpoint endpoint-name="port" interface-name="ns8:jdbcPortType" name="endpoint8" service-name="ns8:service"/>
+        <endpoint endpoint-name="port" interface-name="ns9:jdbcPortType" name="endpoint9" service-name="ns9:service"/>
+        <endpoint endpoint-name="TaoCheDoUuTien" interface-name="ns11:TaoCheDoUuTienPortType" name="endpoint10" service-name="ns10:QuanLyHocSinhComAppService1"/>
+        <endpoint endpoint-name="TaoDanToc" interface-name="ns12:TaoDanTocPortType" name="endpoint11" service-name="ns10:QuanLyHocSinhComAppService2"/>
+        <endpoint endpoint-name="TaoKhuVuc" interface-name="ns13:TaoKhuVucPortType" name="endpoint12" service-name="ns10:QuanLyHocSinhComAppService3"/>
+        <endpoint endpoint-name="TaoLoaiHocSinh" interface-name="ns14:TaoLoaiHocSinhPortType" name="endpoint13" service-name="ns10:QuanLyHocSinhComAppService4"/>
+        <endpoint endpoint-name="TaoQuanHuyenThanhPho" interface-name="ns15:TaoQuanHuyenThanhPhoPortType" name="endpoint14" service-name="ns10:QuanLyHocSinhComAppService5"/>
+        <endpoint endpoint-name="TaoThonXom" interface-name="ns16:TaoThonXomPortType" name="endpoint15" service-name="ns10:QuanLyHocSinhComAppService6"/>
+        <endpoint endpoint-name="TaoXaPhuongThiTran" interface-name="ns17:TaoXaPhuongThiTranPortType" name="endpoint16" service-name="ns10:QuanLyHocSinhComAppService7"/>
+        <endpoint endpoint-name="TaoTruong" interface-name="ns18:TaoTruongPortType" name="endpoint17" service-name="ns10:QuanLyHocSinhComAppService8"/>
+        <endpoint endpoint-name="TaoTinh" interface-name="ns4:TaoTinhPortType" name="endpoint18" service-name="ns10:QuanLyHocSinhComAppService9"/>
+        <endpoint endpoint-name="ThemHocSinh" interface-name="ns19:ThemHocSinhPortType" name="endpoint19" service-name="ns10:QuanLyHocSinhComAppService11"/>
+        <endpoint display-name="plTaoCheDoUuTien" endpoint-name="TaoCheDoUuTienPortTypeRole_myRole" file-path="processor_BPEL\TaoCheDoUuTien.bpel" interface-name="ns11:TaoCheDoUuTienPortType" name="endpoint20" process-name="TaoCheDoUuTien" service-name="ns20:plTaoCheDoUuTien"/>
+        <endpoint display-name="PartnerLink1" endpoint-name="TaoDanTocPortTypeRole_myRole" file-path="processor_BPEL\TaoDanToc.bpel" interface-name="ns12:TaoDanTocPortType" name="endpoint21" process-name="TaoDanToc" service-name="ns21:PartnerLink1"/>
+        <endpoint display-name="plTaoKhuVuc" endpoint-name="TaoKhuVucPortTypeRole_myRole" file-path="processor_BPEL\TaoDiaChi\TaoKhuVuc.bpel" interface-name="ns13:TaoKhuVucPortType" name="endpoint22" process-name="TaoKhuVuc" service-name="ns22:plTaoKhuVuc"/>
+        <endpoint display-name="PartnerLink1" endpoint-name="TaoQuanHuyenThanhPhoPortTypeRole_myRole" file-path="processor_BPEL\TaoDiaChi\TaoQuanHuyenThanhPho.bpel" interface-name="ns15:TaoQuanHuyenThanhPhoPortType" name="endpoint23" process-name="TaoQuanHuyenThanhPho" service-name="ns23:PartnerLink1"/>
+        <endpoint display-name="plTaoThonXom" endpoint-name="TaoThonXomPortTypeRole_myRole" file-path="processor_BPEL\TaoDiaChi\TaoThonXom.bpel" interface-name="ns16:TaoThonXomPortType" name="endpoint24" process-name="TaoThonXom" service-name="ns24:plTaoThonXom"/>
+        <endpoint display-name="PartnerLink1" endpoint-name="TaoTinhPortTypeRole_myRole" file-path="processor_BPEL\TaoDiaChi\TaoTinh.bpel" interface-name="ns4:TaoTinhPortType" name="endpoint25" process-name="TaoTinh" service-name="ns25:PartnerLink1"/>
+        <endpoint display-name="plTaoXPTT" endpoint-name="TaoXaPhuongThiTranPortTypeRole_myRole" file-path="processor_BPEL\TaoDiaChi\TaoXaPhuongThiTran.bpel" interface-name="ns17:TaoXaPhuongThiTranPortType" name="endpoint26" process-name="TaoXaPhuongThiTran" service-name="ns26:plTaoXPTT"/>
+        <endpoint display-name="PartnerLink1" endpoint-name="TaoLoaiHocSinhPortTypeRole_myRole" file-path="processor_BPEL\TaoLoaiHocSinh.bpel" interface-name="ns14:TaoLoaiHocSinhPortType" name="endpoint27" process-name="TaoLoaiHocSinh" service-name="ns27:PartnerLink1"/>
+        <endpoint display-name="PartnerLink1" endpoint-name="TaoTruongPortTypeRole_myRole" file-path="processor_BPEL\TaoTruong.bpel" interface-name="ns18:TaoTruongPortType" name="endpoint28" process-name="TaoTruong" service-name="ns28:PartnerLink1"/>
+        <endpoint display-name="PartnerLink1" endpoint-name="ThemHocSinhPortTypeRole_myRole" file-path="processor_BPEL\ThemHocSinh.bpel" interface-name="ns19:ThemHocSinhPortType" name="endpoint29" process-name="ThemHocSinh" service-name="ns29:PartnerLink1"/>
+        <endpoint display-name="PartnerLink1" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\TaoCheDoUuTien.bpel" interface-name="ns9:jdbcPortType" name="endpoint30" process-name="TaoCheDoUuTien" service-name="ns20:PartnerLink1"/>
+        <endpoint display-name="PartnerLink2" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\TaoDanToc.bpel" interface-name="ns1:jdbcPortType" name="endpoint31" process-name="TaoDanToc" service-name="ns21:PartnerLink2"/>
+        <endpoint display-name="plDB" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\TaoDiaChi\TaoKhuVuc.bpel" interface-name="ns6:jdbcPortType" name="endpoint32" process-name="TaoKhuVuc" service-name="ns22:plDB"/>
+        <endpoint display-name="PartnerLink2" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\TaoDiaChi\TaoQuanHuyenThanhPho.bpel" interface-name="ns8:jdbcPortType" name="endpoint33" process-name="TaoQuanHuyenThanhPho" service-name="ns23:PartnerLink2"/>
+        <endpoint display-name="plDBTaoThonXom" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\TaoDiaChi\TaoThonXom.bpel" interface-name="ns3:jdbcPortType" name="endpoint34" process-name="TaoThonXom" service-name="ns24:plDBTaoThonXom"/>
+        <endpoint display-name="PartnerLink2" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\TaoDiaChi\TaoTinh.bpel" interface-name="ns4:jdbcPortType" name="endpoint35" process-name="TaoTinh" service-name="ns25:PartnerLink2"/>
+        <endpoint display-name="plDBTaoXPTT" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\TaoDiaChi\TaoXaPhuongThiTran.bpel" interface-name="ns7:jdbcPortType" name="endpoint36" process-name="TaoXaPhuongThiTran" service-name="ns26:plDBTaoXPTT"/>
+        <endpoint display-name="PartnerLink2" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\TaoLoaiHocSinh.bpel" interface-name="ns5:jdbcPortType" name="endpoint37" process-name="TaoLoaiHocSinh" service-name="ns27:PartnerLink2"/>
+        <endpoint display-name="PartnerLink2" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\TaoTruong.bpel" interface-name="ns2:jdbcPortType" name="endpoint38" process-name="TaoTruong" service-name="ns28:PartnerLink2"/>
+    </endpoints>
+    <service-units>
+        <service-engine-service-unit artifacts-zip="QuanLyHocSinh.jar" component-name="sun-bpel-engine" defined="true" description="Represents this Service Unit" internal="true" name="QuanLyHocSinhComApp-QuanLyHocSinh" unit-name="QuanLyHocSinh" unknown="false" x="143" y="99">
+            <provides endpoint="endpoint20"/>
+            <provides endpoint="endpoint21"/>
+            <provides endpoint="endpoint22"/>
+            <provides endpoint="endpoint23"/>
+            <provides endpoint="endpoint24"/>
+            <provides endpoint="endpoint25"/>
+            <provides endpoint="endpoint26"/>
+            <provides endpoint="endpoint27"/>
+            <provides endpoint="endpoint28"/>
+            <provides endpoint="endpoint29"/>
+            <consumes endpoint="endpoint30"/>
+            <consumes endpoint="endpoint31"/>
+            <consumes endpoint="endpoint32"/>
+            <consumes endpoint="endpoint33"/>
+            <consumes endpoint="endpoint34"/>
+            <consumes endpoint="endpoint35"/>
+            <consumes endpoint="endpoint36"/>
+            <consumes endpoint="endpoint37"/>
+            <consumes endpoint="endpoint38"/>
+        </service-engine-service-unit>
+        <binding-component-service-unit artifacts-zip="sun-database-binding.jar" component-name="sun-database-binding" description="Represents this Service Unit" name="QuanLyHocSinhComApp-sun-database-binding" unit-name="sun-database-binding">
+            <ports>
+                <port x="67" y="1677">
+                    <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/insert/DB_CheDoUuTienInsert.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint9"/>
+                    <provides endpoint="endpoint9"/>
+                </port>
+                <port x="67" y="1571">
+                    <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/insert/DB_DanToc_insert.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint1"/>
+                    <provides endpoint="endpoint1"/>
+                </port>
+                <port x="67" y="1465">
+                    <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/insert/DB_LoaiHocSinh.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint5"/>
+                    <provides endpoint="endpoint5"/>
+                </port>
+                <port x="67" y="1359">
+                    <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/insert/DB_Truong_Insert.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint2"/>
+                    <provides endpoint="endpoint2"/>
+                </port>
+                <port x="67" y="1253">
+                    <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/insert/TaoDiaChi/DB_quanhuyenthanhpho_insert.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint8"/>
+                    <provides endpoint="endpoint8"/>
+                </port>
+                <port x="67" y="1147">
+                    <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/insert/TaoDiaChi/DB_TaoKhuVuc.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint6"/>
+                    <provides endpoint="endpoint6"/>
+                </port>
+                <port x="67" y="1041">
+                    <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/insert/TaoDiaChi/DB_TaoThonXom.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint3"/>
+                    <provides endpoint="endpoint3"/>
+                </port>
+                <port x="67" y="935">
+                    <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/insert/TaoDiaChi/DB_TaoTinh.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint4"/>
+                    <provides endpoint="endpoint4"/>
+                </port>
+                <port x="67" y="829">
+                    <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/insert/TaoDiaChi/DB_TaoXaPhuongThiTran.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint7"/>
+                    <provides endpoint="endpoint7"/>
+                </port>
+            </ports>
+        </binding-component-service-unit>
+        <binding-component-service-unit artifacts-zip="sun-http-binding.jar" component-name="sun-http-binding" description="Represents this Service Unit" name="QuanLyHocSinhComApp-sun-http-binding" unit-name="sun-http-binding">
+            <ports>
+                <port bindingType="soap" x="67" y="39">
+                    <link xlink:href="../jbiasa/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QuanLyHocSinhComAppService1']/port[@name='TaoCheDoUuTien'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint10"/>
+                    <provides endpoint="endpoint10"/>
+                </port>
+                <port bindingType="soap" x="67" y="118">
+                    <link xlink:href="../jbiasa/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QuanLyHocSinhComAppService2']/port[@name='TaoDanToc'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint11"/>
+                    <provides endpoint="endpoint11"/>
+                </port>
+                <port bindingType="soap" x="67" y="197">
+                    <link xlink:href="../jbiasa/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QuanLyHocSinhComAppService3']/port[@name='TaoKhuVuc'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint12"/>
+                    <provides endpoint="endpoint12"/>
+                </port>
+                <port bindingType="soap" x="67" y="276">
+                    <link xlink:href="../jbiasa/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QuanLyHocSinhComAppService4']/port[@name='TaoLoaiHocSinh'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint13"/>
+                    <provides endpoint="endpoint13"/>
+                </port>
+                <port bindingType="soap" x="67" y="355">
+                    <link xlink:href="../jbiasa/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QuanLyHocSinhComAppService5']/port[@name='TaoQuanHuyenThanhPho'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint14"/>
+                    <provides endpoint="endpoint14"/>
+                </port>
+                <port bindingType="soap" x="67" y="434">
+                    <link xlink:href="../jbiasa/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QuanLyHocSinhComAppService6']/port[@name='TaoThonXom'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint15"/>
+                    <provides endpoint="endpoint15"/>
+                </port>
+                <port bindingType="soap" x="67" y="671">
+                    <link xlink:href="../jbiasa/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QuanLyHocSinhComAppService7']/port[@name='TaoXaPhuongThiTran'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint16"/>
+                    <provides endpoint="endpoint16"/>
+                </port>
+                <port bindingType="soap" x="67" y="592">
+                    <link xlink:href="../jbiasa/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QuanLyHocSinhComAppService8']/port[@name='TaoTruong'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint17"/>
+                    <provides endpoint="endpoint17"/>
+                </port>
+                <port bindingType="soap" x="67" y="513">
+                    <link xlink:href="../jbiasa/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QuanLyHocSinhComAppService9']/port[@name='TaoTinh'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint18"/>
+                    <provides endpoint="endpoint18"/>
+                </port>
+                <port bindingType="soap" x="67" y="750">
+                    <link xlink:href="../jbiasa/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QuanLyHocSinhComAppService11']/port[@name='ThemHocSinh'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint19"/>
+                    <provides endpoint="endpoint19"/>
+                </port>
+            </ports>
+        </binding-component-service-unit>
+    </service-units>
+    <connections>
+        <connection consumer="endpoint11" provider="endpoint21" state="new"/>
+        <connection consumer="endpoint15" provider="endpoint24" state="new"/>
+        <connection consumer="endpoint31" provider="endpoint1" state="unchanged"/>
+        <connection consumer="endpoint38" provider="endpoint2" state="unchanged"/>
+        <connection consumer="endpoint13" provider="endpoint27" state="new"/>
+        <connection consumer="endpoint19" provider="endpoint29" state="new"/>
+        <connection consumer="endpoint14" provider="endpoint23" state="new"/>
+        <connection consumer="endpoint10" provider="endpoint20" state="new"/>
+        <connection consumer="endpoint34" provider="endpoint3" state="unchanged"/>
+        <connection consumer="endpoint35" provider="endpoint4" state="unchanged"/>
+        <connection consumer="endpoint37" provider="endpoint5" state="unchanged"/>
+        <connection consumer="endpoint12" provider="endpoint22" state="new"/>
+        <connection consumer="endpoint32" provider="endpoint6" state="unchanged"/>
+        <connection consumer="endpoint16" provider="endpoint26" state="new"/>
+        <connection consumer="endpoint36" provider="endpoint7" state="unchanged"/>
+        <connection consumer="endpoint18" provider="endpoint25" state="new"/>
+        <connection consumer="endpoint33" provider="endpoint8" state="unchanged"/>
+        <connection consumer="endpoint17" provider="endpoint28" state="new"/>
+        <connection consumer="endpoint30" provider="endpoint9" state="unchanged">
+            <redelivery xmlns="http://www.sun.com/jbi/qos/redelivery">
+                <on-failure>
+                    <delete/>
+                </on-failure>
+            </redelivery>
+        </connection>
+    </connections>
+    <porttypes>
+        <link xlink:href="../jbiasa/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/portType[@name='dummyCasaPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/insert/DB_CheDoUuTienInsert.wsdl#xpointer(/definitions/portType[@name='jdbcPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/insert/DB_DanToc_insert.wsdl#xpointer(/definitions/portType[@name='jdbcPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/insert/DB_HocSinh_insert.wsdl#xpointer(/definitions/portType[@name='jdbcPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/insert/DB_LoaiHocSinh.wsdl#xpointer(/definitions/portType[@name='jdbcPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/insert/DB_Truong_Insert.wsdl#xpointer(/definitions/portType[@name='jdbcPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/insert/TaoDiaChi/DB_quanhuyenthanhpho_insert.wsdl#xpointer(/definitions/portType[@name='jdbcPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/insert/TaoDiaChi/DB_TaoKhuVuc.wsdl#xpointer(/definitions/portType[@name='jdbcPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/insert/TaoDiaChi/DB_TaoThonXom.wsdl#xpointer(/definitions/portType[@name='jdbcPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/insert/TaoDiaChi/DB_TaoTinh.wsdl#xpointer(/definitions/portType[@name='jdbcPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/insert/TaoDiaChi/DB_TaoXaPhuongThiTran.wsdl#xpointer(/definitions/portType[@name='jdbcPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/interface_WSDL/TaoCheDoUuTien.wsdl#xpointer(/definitions/portType[@name='TaoCheDoUuTienPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/interface_WSDL/TaoDanToc.wsdl#xpointer(/definitions/portType[@name='TaoDanTocPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/interface_WSDL/TaoDiaChi/TaoKhuVuc.wsdl#xpointer(/definitions/portType[@name='TaoKhuVucPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/interface_WSDL/TaoDiaChi/TaoQuanHuyenThanhPho.wsdl#xpointer(/definitions/portType[@name='TaoQuanHuyenThanhPhoPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/interface_WSDL/TaoDiaChi/TaoThonXom.wsdl#xpointer(/definitions/portType[@name='TaoThonXomPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/interface_WSDL/TaoDiaChi/TaoTinh.wsdl#xpointer(/definitions/portType[@name='TaoTinhPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/interface_WSDL/TaoDiaChi/TaoXaPhuongThiTran.wsdl#xpointer(/definitions/portType[@name='TaoXaPhuongThiTranPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/interface_WSDL/TaoLoaiHocSinh.wsdl#xpointer(/definitions/portType[@name='TaoLoaiHocSinhPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/interface_WSDL/TaoTruong.wsdl#xpointer(/definitions/portType[@name='TaoTruongPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/interface_WSDL/ThemHocSinh.wsdl#xpointer(/definitions/portType[@name='ThemHocSinhPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/portType[@name='dummyCasaPortType'])" xlink:type="simple"/>
+    </porttypes>
+    <bindings>
+        <link xlink:href="../jbiasa/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding1'])" xlink:type="simple"/>
+        <link xlink:href="../jbiasa/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding2'])" xlink:type="simple"/>
+        <link xlink:href="../jbiasa/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding3'])" xlink:type="simple"/>
+        <link xlink:href="../jbiasa/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding4'])" xlink:type="simple"/>
+        <link xlink:href="../jbiasa/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding5'])" xlink:type="simple"/>
+        <link xlink:href="../jbiasa/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding6'])" xlink:type="simple"/>
+        <link xlink:href="../jbiasa/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding8'])" xlink:type="simple"/>
+        <link xlink:href="../jbiasa/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding7'])" xlink:type="simple"/>
+        <link xlink:href="../jbiasa/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding9'])" xlink:type="simple"/>
+        <link xlink:href="../jbiasa/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding11'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/insert/DB_CheDoUuTienInsert.wsdl#xpointer(/definitions/binding[@name='binding'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/insert/DB_DanToc_insert.wsdl#xpointer(/definitions/binding[@name='binding'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/insert/DB_HocSinh_insert.wsdl#xpointer(/definitions/binding[@name='binding'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/insert/DB_LoaiHocSinh.wsdl#xpointer(/definitions/binding[@name='binding'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/insert/DB_Truong_Insert.wsdl#xpointer(/definitions/binding[@name='binding'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/insert/TaoDiaChi/DB_quanhuyenthanhpho_insert.wsdl#xpointer(/definitions/binding[@name='binding'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/insert/TaoDiaChi/DB_TaoKhuVuc.wsdl#xpointer(/definitions/binding[@name='binding'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/insert/TaoDiaChi/DB_TaoThonXom.wsdl#xpointer(/definitions/binding[@name='binding'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/insert/TaoDiaChi/DB_TaoTinh.wsdl#xpointer(/definitions/binding[@name='binding'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/insert/TaoDiaChi/DB_TaoXaPhuongThiTran.wsdl#xpointer(/definitions/binding[@name='binding'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding1'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding2'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding3'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding4'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding5'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding6'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding8'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding7'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding9'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding11'])" xlink:type="simple"/>
+    </bindings>
+    <services>
+        <link xlink:href="../jbiasa/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QuanLyHocSinhComAppService1'])" xlink:type="simple"/>
+        <link xlink:href="../jbiasa/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QuanLyHocSinhComAppService2'])" xlink:type="simple"/>
+        <link xlink:href="../jbiasa/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QuanLyHocSinhComAppService3'])" xlink:type="simple"/>
+        <link xlink:href="../jbiasa/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QuanLyHocSinhComAppService4'])" xlink:type="simple"/>
+        <link xlink:href="../jbiasa/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QuanLyHocSinhComAppService5'])" xlink:type="simple"/>
+        <link xlink:href="../jbiasa/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QuanLyHocSinhComAppService6'])" xlink:type="simple"/>
+        <link xlink:href="../jbiasa/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QuanLyHocSinhComAppService7'])" xlink:type="simple"/>
+        <link xlink:href="../jbiasa/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QuanLyHocSinhComAppService8'])" xlink:type="simple"/>
+        <link xlink:href="../jbiasa/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QuanLyHocSinhComAppService9'])" xlink:type="simple"/>
+        <link xlink:href="../jbiasa/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QuanLyHocSinhComAppService11'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/insert/DB_CheDoUuTienInsert.wsdl#xpointer(/definitions/service[@name='service'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/insert/DB_DanToc_insert.wsdl#xpointer(/definitions/service[@name='service'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/insert/DB_HocSinh_insert.wsdl#xpointer(/definitions/service[@name='service'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/insert/DB_LoaiHocSinh.wsdl#xpointer(/definitions/service[@name='service'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/insert/DB_Truong_Insert.wsdl#xpointer(/definitions/service[@name='service'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/insert/TaoDiaChi/DB_quanhuyenthanhpho_insert.wsdl#xpointer(/definitions/service[@name='service'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/insert/TaoDiaChi/DB_TaoKhuVuc.wsdl#xpointer(/definitions/service[@name='service'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/insert/TaoDiaChi/DB_TaoThonXom.wsdl#xpointer(/definitions/service[@name='service'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/insert/TaoDiaChi/DB_TaoTinh.wsdl#xpointer(/definitions/service[@name='service'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/insert/TaoDiaChi/DB_TaoXaPhuongThiTran.wsdl#xpointer(/definitions/service[@name='service'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QuanLyHocSinhComAppService1'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QuanLyHocSinhComAppService2'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QuanLyHocSinhComAppService3'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QuanLyHocSinhComAppService4'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QuanLyHocSinhComAppService5'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QuanLyHocSinhComAppService6'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QuanLyHocSinhComAppService7'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QuanLyHocSinhComAppService8'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QuanLyHocSinhComAppService9'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QuanLyHocSinhComAppService11'])" xlink:type="simple"/>
+    </services>
+    <regions>
+        <region name="WSDL Endpoints" width="150"/>
+        <region name="JBI Modules" width="500"/>
+        <region name="External Modules" width="200"/>
+    </regions>
+</casa>
