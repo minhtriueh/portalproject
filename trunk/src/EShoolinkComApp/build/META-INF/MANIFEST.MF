@@ -1,4 +1,0 @@
-Bundle-Name: EShoolinkComApp
-Bundle-SymbolicName: EShoolinkComApp
-Bundle-ManifestVersion: 2
-Bundle-Version: 1.0.0

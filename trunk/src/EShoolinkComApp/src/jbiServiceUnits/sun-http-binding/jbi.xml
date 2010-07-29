@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<jbi xmlns="http://java.sun.com/xml/ns/jbi" xmlns:ns1="EShoolinkComApp" xmlns:ns2="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/newProcess" xmlns:ns3="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/newWSDL" version="1.0">
-    <services binding-component="true">
-        <consumes endpoint-name="test" interface-name="ns3:newWSDLPortType" service-name="ns1:EShoolinkComAppService1"/>
-    </services>
-</jbi>
