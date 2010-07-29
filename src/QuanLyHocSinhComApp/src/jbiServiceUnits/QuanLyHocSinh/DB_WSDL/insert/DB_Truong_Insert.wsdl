@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="DB_Truong_Insert" targetNamespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_Truong_Insert" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:ns="http://j2ee.netbeans.org/xsd/tableSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_Truong_Insert" xmlns:plink="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/">
+  <types>
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/">
+            <xsd:import namespace="http://j2ee.netbeans.org/xsd/tableSchema" schemaLocation="../../DB_WSDL/insert/XSD/truong.xsd"/>
+	</xsd:schema>
+  </types>
+  <message name="outputMsg">
+    <part name="part" element="ns:truong"/>
+  </message>
+  <message name="RetMsg">
+    <part name="part" type="xsd:int"/>
+  </message>
+  <message name="inputMsg">
+    <part name="part" element="ns:truong"/>
+  </message>
+  <portType name="jdbcPortType">
+    <operation name="insert">
+      <input name="inputInsert" message="tns:inputMsg"/>
+      <output name="outputInsert" message="tns:RetMsg"/>
+    </operation>
+    <operation name="findLastID">
+      <input name="inputFind" message="tns:inputMsg"/>
+      <output name="outputFind" message="tns:outputMsg"/>
+    </operation>
+  </portType>
+  <binding name="binding" type="tns:jdbcPortType">
+    <jdbc:binding xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/"/>
+    <operation name="insert">
+    <jdbc:operation xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/"/>
+      <input name="inputInsert">
+    <jdbc:input xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" MarkColumnName="" MarkColumnValue="" MoveRowToTableName="" PKName="id_truong" PollMilliSeconds="5000" PollingPostProcessing="MoveRow" TableName="truong" Transaction="NOTransaction" numberOfRecords="" operationType="insert"
+    paramOrder="diachitruong,dienthoaitruong,gioithieutruong,loaihinhtruong,ngaythanhlaptruong,tentruong,websitetruong"
+    sql="insert into truong (diachitruong,dienthoaitruong,gioithieutruong,loaihinhtruong,ngaythanhlaptruong,tentruong,websitetruong) values (?,?,?,?,?,?,?)"/>
+      </input>
+      <output name="outputInsert">
+    <jdbc:output xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" returnPartName="part"/>
+      </output>
+    </operation>
+    <operation name="findLastID">
+    <jdbc:operation xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/"/>
+      <input name="inputFind">
+    <jdbc:input xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" MarkColumnName="" MarkColumnValue="" MoveRowToTableName="" PKName="id_truong" PollMilliSeconds="5000" PollingPostProcessing="MoveRow" TableName="truong" Transaction="NOTransaction" numberOfRecords="" operationType="findLastID"
+    paramOrder=""
+    sql="SELECT
+  id_truong,
+  diachitruong,
+  dienthoaitruong,
+  gioithieutruong,
+  loaihinhtruong,
+  ngaythanhlaptruong,
+  tentruong,
+  websitetruong
+FROM
+  truong
+ORDER BY
+  id_truong DESC
+LIMIT 1 OFFSET 0"/>
+      </input>
+      <output name="outputFind">
+    <jdbc:output xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" returnPartName="part"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="service">
+    <port name="port" binding="tns:binding">
+    <jdbc:address xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" jndiName="jdbc/eschoolinkdb"/>
+    </port>
+  </service>
+    <plink:partnerLinkType xmlns:plink="http://docs.oasis-open.org/wsbpel/2.0/plnktype" name="jdbcpartner">
+        <plink:role name="jdbcPortTypeRole" portType="tns:jdbcPortType"/>
+    </plink:partnerLinkType>
+</definitions>
+
+

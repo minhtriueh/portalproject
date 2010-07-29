@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jbi xmlns="http://java.sun.com/xml/ns/jbi" xmlns:ns1="QuanLyHocSinhComApp" xmlns:ns10="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/TaoCheDoUuTien" xmlns:ns11="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_TaoThonXom" xmlns:ns12="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/TaoTinh" xmlns:ns13="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoTinh" xmlns:ns14="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_LoaiHocSinh" xmlns:ns15="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/TaoKhuVuc" xmlns:ns16="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_TaoKhuVuc" xmlns:ns17="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/TaoXaPhuongThiTran" xmlns:ns18="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_TaoXaPhuongThiTran" xmlns:ns19="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_quanhuyenthanhpho_insert" xmlns:ns2="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/TaoDanToc" xmlns:ns20="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_CheDoUuTienInsert" xmlns:ns3="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/TaoThonXom" xmlns:ns4="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_DanToc_insert" xmlns:ns5="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/TaoTruong" xmlns:ns6="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_Truong_Insert" xmlns:ns7="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/TaoLoaiHocSinh" xmlns:ns8="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/ThemHocSinh" xmlns:ns9="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/TaoQuanHuyenThanhPho" version="1.0">
+    <services binding-component="true">
+        <provides endpoint-name="port" interface-name="ns4:jdbcPortType" service-name="ns4:service"/>
+        <provides endpoint-name="port" interface-name="ns6:jdbcPortType" service-name="ns6:service"/>
+        <provides endpoint-name="port" interface-name="ns11:jdbcPortType" service-name="ns11:service"/>
+        <provides endpoint-name="port" interface-name="ns13:jdbcPortType" service-name="ns13:service"/>
+        <provides endpoint-name="port" interface-name="ns14:jdbcPortType" service-name="ns14:service"/>
+        <provides endpoint-name="port" interface-name="ns16:jdbcPortType" service-name="ns16:service"/>
+        <provides endpoint-name="port" interface-name="ns18:jdbcPortType" service-name="ns18:service"/>
+        <provides endpoint-name="port" interface-name="ns19:jdbcPortType" service-name="ns19:service"/>
+        <provides endpoint-name="port" interface-name="ns20:jdbcPortType" service-name="ns20:service"/>
+    </services>
+</jbi>
