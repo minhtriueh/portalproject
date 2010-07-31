@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jbi xmlns="http://java.sun.com/xml/ns/jbi" xmlns:ns1="QuanLyHeThongComApp" xmlns:ns10="http://enterprise.netbeans.org/bpel/QuanLyHeThong/ThemNguoiDung" xmlns:ns11="http://enterprise.netbeans.org/bpel/QuanLyHeThong/ThemNhom" xmlns:ns12="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_ThemNhom" xmlns:ns13="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_ThemNguoiDung" xmlns:ns14="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/SuaNguoiDung" xmlns:ns15="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/XoaNguoiDung" xmlns:ns16="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/SuaNhom" xmlns:ns17="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/ThemNguoiDung" xmlns:ns18="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/XoaNhom" xmlns:ns19="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/ThemNhom" xmlns:ns2="http://enterprise.netbeans.org/bpel/QuanLyHeThong/SuaNguoiDung" xmlns:ns3="http://enterprise.netbeans.org/bpel/QuanLyHeThong/XoaNguoiDung" xmlns:ns4="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_XoaNguoiDung" xmlns:ns5="http://enterprise.netbeans.org/bpel/QuanLyHeThong/XoaNhom" xmlns:ns6="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_XoaNhom" xmlns:ns7="http://enterprise.netbeans.org/bpel/QuanLyHeThong/SuaNhom" xmlns:ns8="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_SuaNhom" xmlns:ns9="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_SuaNguoiDung" version="1.0">
+    <services binding-component="true">
+        <consumes endpoint-name="suaNguoiDung" interface-name="ns14:SuaNguoiDungPortType" service-name="ns1:QuanLyHeThongComAppService5"/>
+        <consumes endpoint-name="xoaNguoiDung" interface-name="ns15:XoaNguoiDungPortType" service-name="ns1:QuanLyHeThongComAppService6"/>
+        <consumes endpoint-name="suaNhom" interface-name="ns16:SuaNhomPortType" service-name="ns1:QuanLyHeThongComAppService2"/>
+        <consumes endpoint-name="themNguoiDung" interface-name="ns17:ThemNguoiDungPortType" service-name="ns1:QuanLyHeThongComAppService4"/>
+        <consumes endpoint-name="xoaNhom" interface-name="ns18:XoaNhomPortType" service-name="ns1:QuanLyHeThongComAppService3"/>
+        <consumes endpoint-name="themNhom" interface-name="ns19:ThemNhomPortType" service-name="ns1:QuanLyHeThongComAppService1"/>
+    </services>
+</jbi>
