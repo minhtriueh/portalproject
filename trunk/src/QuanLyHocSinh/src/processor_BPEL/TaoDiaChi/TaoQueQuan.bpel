@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process
+    name="TaoQueQuan"
+    targetNamespace="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/TaoQueQuan"
+    xmlns:tns="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/TaoQueQuan"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
+    xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor"
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2" xmlns:ns0="http://j2ee.netbeans.org/xsd/tableSchema">
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoQueQuan" location="../../interface_WSDL/TaoDiaChi/TaoQueQuan.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_TaoQueQuan" location="../../DB_WSDL/insert/TaoDiaChi/DB_TaoQueQuan.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <partnerLinks>
+        <partnerLink name="plDB" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_TaoQueQuan" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="plTaoQueQuan" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoQueQuan" partnerLinkType="tns:TaoQueQuan" myRole="TaoQueQuanPortTypeRole"/>
+    </partnerLinks>
+    <variables>
+        <variable name="ExecuteOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_TaoQueQuan" messageType="tns:outputMsg"/>
+        <variable name="ExecuteIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_TaoQueQuan" messageType="tns:inputMsg"/>
+        <variable name="TaoQueQuanOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoQueQuan" messageType="tns:TaoQueQuanOperationResponse"/>
+        <variable name="TaoQueQuanOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoQueQuan" messageType="tns:TaoQueQuanOperationRequest"/>
+    </variables>
+    <sequence>
+        <receive name="Receive1" createInstance="yes" partnerLink="plTaoQueQuan" operation="TaoQueQuanOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoQueQuan" portType="tns:TaoQueQuanPortType" variable="TaoQueQuanOperationIn"/>
+        <assign name="Assign1">
+            <copy>
+                <from variable="TaoQueQuanOperationIn" part="quequan"/>
+                <to>$ExecuteIn.part/ns0:quequan</to>
+            </copy>
+            <copy>
+                <from variable="TaoQueQuanOperationIn" part="id_tinh"/>
+                <to>$ExecuteIn.part/ns0:id_tinh</to>
+            </copy>
+            <copy>
+                <from variable="TaoQueQuanOperationIn" part="id_quanhuyenthanhpho"/>
+                <to>$ExecuteIn.part/ns0:id_quanhuyenthanhpho</to>
+            </copy>
+            <copy>
+                <from variable="TaoQueQuanOperationIn" part="id_xaphuongthitran"/>
+                <to>$ExecuteIn.part/ns0:id_xaphuongthitran</to>
+            </copy>
+            <copy>
+                <from variable="TaoQueQuanOperationIn" part="id_thonxom"/>
+                <to>$ExecuteIn.part/ns0:id_thonxom</to>
+            </copy>
+        </assign>
+        <invoke name="Invoke1" partnerLink="plDB" operation="execute" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_TaoQueQuan" portType="tns:jdbcPortType" inputVariable="ExecuteIn" outputVariable="ExecuteOut"/>
+        <assign name="Assign2">
+            <copy>
+                <from>$ExecuteOut.part/ns0:returnValue</from>
+                <to variable="TaoQueQuanOperationOut" part="id"/>
+            </copy>
+        </assign>
+        <reply name="Reply1" partnerLink="plTaoQueQuan" operation="TaoQueQuanOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoQueQuan" portType="tns:TaoQueQuanPortType" variable="TaoQueQuanOperationOut"/>
+    </sequence>
+</process>
+

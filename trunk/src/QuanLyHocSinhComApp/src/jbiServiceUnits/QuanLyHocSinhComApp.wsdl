@@ -9,7 +9,7 @@
              xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
              targetNamespace="QuanLyHocSinhComApp"
-             xmlns:tns="QuanLyHocSinhComApp" xmlns:ns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoCheDoUuTien" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoDanToc" xmlns:ns2="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoKhuVuc" xmlns:ns3="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoLoaiHocSinh" xmlns:ns4="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoQuanHuyenThanhPho" xmlns:ns5="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoThonXom" xmlns:ns6="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoTinh" xmlns:ns7="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoTruong" xmlns:ns8="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoXaPhuongThiTran" xmlns:ns9="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/ThemHocSinh">
+             xmlns:tns="QuanLyHocSinhComApp" xmlns:ns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoCheDoUuTien" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoDanToc" xmlns:ns2="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoKhuVuc" xmlns:ns3="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoLoaiHocSinh" xmlns:ns4="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoQuanHuyenThanhPho" xmlns:ns5="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoThonXom" xmlns:ns6="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoTinh" xmlns:ns7="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoTruong" xmlns:ns8="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoXaPhuongThiTran" xmlns:ns9="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/ThemHocSinh" xmlns:ns10="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoQueQuan">
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoCheDoUuTien" location="../jbiServiceUnits/QuanLyHocSinh/interface_WSDL/TaoCheDoUuTien.wsdl"/>
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoDanToc" location="../jbiServiceUnits/QuanLyHocSinh/interface_WSDL/TaoDanToc.wsdl"/>
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoKhuVuc" location="../jbiServiceUnits/QuanLyHocSinh/interface_WSDL/TaoDiaChi/TaoKhuVuc.wsdl"/>
@@ -20,6 +20,7 @@
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoTruong" location="../jbiServiceUnits/QuanLyHocSinh/interface_WSDL/TaoTruong.wsdl"/>
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoXaPhuongThiTran" location="../jbiServiceUnits/QuanLyHocSinh/interface_WSDL/TaoDiaChi/TaoXaPhuongThiTran.wsdl"/>
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/ThemHocSinh" location="../jbiServiceUnits/QuanLyHocSinh/interface_WSDL/ThemHocSinh.wsdl"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoQueQuan" location="../jbiServiceUnits/QuanLyHocSinh/interface_WSDL/TaoDiaChi/TaoQueQuan.wsdl"/>
     <portType name="dummyCasaPortType"/>
     <binding name="casaBinding1" type="ns:TaoCheDoUuTienPortType">
         <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
@@ -141,6 +142,45 @@
             </output>
         </operation>
     </binding>
+    <binding name="casaBinding10" type="ns10:TaoQueQuanPortType">
+        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="TaoQueQuanOperation">
+            <soap:operation/>
+            <input name="input1">
+                <soap:body use="literal" namespace="QuanLyHocSinhComApp"/>
+            </input>
+            <output name="output1">
+                <soap:body use="literal" namespace="QuanLyHocSinhComApp"/>
+            </output>
+        </operation>
+    </binding>
+    <binding name="casaBinding12" type="tns:dummyCasaPortType"/>
+    <binding name="casaBinding13" type="tns:dummyCasaPortType"/>
+    <binding name="casaBinding14" type="tns:dummyCasaPortType"/>
+    <binding name="casaBinding15" type="tns:dummyCasaPortType"/>
+    <binding name="casaBinding16" type="tns:dummyCasaPortType"/>
+    <binding name="casaBinding17" type="tns:dummyCasaPortType"/>
+    <binding name="casaBinding18" type="tns:dummyCasaPortType"/>
+    <binding name="casaBinding19" type="tns:dummyCasaPortType"/>
+    <binding name="casaBinding20" type="tns:dummyCasaPortType"/>
+    <binding name="casaBinding21" type="tns:dummyCasaPortType"/>
+    <binding name="casaBinding22" type="tns:dummyCasaPortType"/>
+    <binding name="casaBinding23" type="tns:dummyCasaPortType"/>
+    <binding name="casaBinding24" type="tns:dummyCasaPortType"/>
+    <binding name="casaBinding25" type="tns:dummyCasaPortType"/>
+    <binding name="casaBinding26" type="tns:dummyCasaPortType"/>
+    <binding name="casaBinding27" type="tns:dummyCasaPortType"/>
+    <binding name="casaBinding28" type="tns:dummyCasaPortType"/>
+    <binding name="casaBinding29" type="tns:dummyCasaPortType"/>
+    <binding name="casaBinding30" type="tns:dummyCasaPortType"/>
+    <binding name="casaBinding31" type="tns:dummyCasaPortType"/>
+    <binding name="casaBinding32" type="tns:dummyCasaPortType"/>
+    <binding name="casaBinding33" type="tns:dummyCasaPortType"/>
+    <binding name="casaBinding34" type="tns:dummyCasaPortType"/>
+    <binding name="casaBinding35" type="tns:dummyCasaPortType"/>
+    <binding name="casaBinding36" type="tns:dummyCasaPortType"/>
+    <binding name="casaBinding37" type="tns:dummyCasaPortType"/>
+    <binding name="casaBinding38" type="tns:dummyCasaPortType"/>
     <service name="QuanLyHocSinhComAppService1">
         <port name="TaoCheDoUuTien" binding="tns:casaBinding1">
             <soap:address location="http://localhost:${HttpDefaultPort}/QuanLyHocSinhComAppService1/TaoCheDoUuTien"/>
@@ -191,5 +231,93 @@
             <soap:address location="http://localhost:${HttpDefaultPort}/QuanLyHocSinhComAppService11/ThemHocSinh"/>
         </port>
     </service>
+    <service name="QuanLyHocSinhComAppService10">
+        <port name="TaoQueQuan" binding="tns:casaBinding10">
+            <soap:address location="http://localhost:${HttpDefaultPort}/QuanLyHocSinhComAppService10/TaoQueQuan"/>
+        </port>
+    </service>
+    <service name="QuanLyHocSinhComAppService12">
+        <port name="casaPort1" binding="tns:casaBinding12"/>
+    </service>
+    <service name="QuanLyHocSinhComAppService13">
+        <port name="casaPort2" binding="tns:casaBinding13"/>
+    </service>
+    <service name="QuanLyHocSinhComAppService14">
+        <port name="casaPort3" binding="tns:casaBinding14"/>
+    </service>
+    <service name="QuanLyHocSinhComAppService15">
+        <port name="casaPort4" binding="tns:casaBinding15"/>
+    </service>
+    <service name="QuanLyHocSinhComAppService16">
+        <port name="casaPort5" binding="tns:casaBinding16"/>
+    </service>
+    <service name="QuanLyHocSinhComAppService17">
+        <port name="casaPort6" binding="tns:casaBinding17"/>
+    </service>
+    <service name="QuanLyHocSinhComAppService18">
+        <port name="casaPort7" binding="tns:casaBinding18"/>
+    </service>
+    <service name="QuanLyHocSinhComAppService19">
+        <port name="casaPort8" binding="tns:casaBinding19"/>
+    </service>
+    <service name="QuanLyHocSinhComAppService20">
+        <port name="casaPort9" binding="tns:casaBinding20"/>
+    </service>
+    <service name="QuanLyHocSinhComAppService21">
+        <port name="casaPort10" binding="tns:casaBinding21"/>
+    </service>
+    <service name="QuanLyHocSinhComAppService22">
+        <port name="casaPort11" binding="tns:casaBinding22"/>
+    </service>
+    <service name="QuanLyHocSinhComAppService23">
+        <port name="casaPort12" binding="tns:casaBinding23"/>
+    </service>
+    <service name="QuanLyHocSinhComAppService24">
+        <port name="casaPort13" binding="tns:casaBinding24"/>
+    </service>
+    <service name="QuanLyHocSinhComAppService25">
+        <port name="casaPort14" binding="tns:casaBinding25"/>
+    </service>
+    <service name="QuanLyHocSinhComAppService26">
+        <port name="casaPort15" binding="tns:casaBinding26"/>
+    </service>
+    <service name="QuanLyHocSinhComAppService27">
+        <port name="casaPort16" binding="tns:casaBinding27"/>
+    </service>
+    <service name="QuanLyHocSinhComAppService28">
+        <port name="casaPort17" binding="tns:casaBinding28"/>
+    </service>
+    <service name="QuanLyHocSinhComAppService29">
+        <port name="casaPort18" binding="tns:casaBinding29"/>
+    </service>
+    <service name="QuanLyHocSinhComAppService30">
+        <port name="casaPort19" binding="tns:casaBinding30"/>
+    </service>
+    <service name="QuanLyHocSinhComAppService31">
+        <port name="casaPort20" binding="tns:casaBinding31"/>
+    </service>
+    <service name="QuanLyHocSinhComAppService32">
+        <port name="casaPort21" binding="tns:casaBinding32"/>
+    </service>
+    <service name="QuanLyHocSinhComAppService33">
+        <port name="casaPort22" binding="tns:casaBinding33"/>
+    </service>
+    <service name="QuanLyHocSinhComAppService34">
+        <port name="casaPort23" binding="tns:casaBinding34"/>
+    </service>
+    <service name="QuanLyHocSinhComAppService35">
+        <port name="casaPort24" binding="tns:casaBinding35"/>
+    </service>
+    <service name="QuanLyHocSinhComAppService36">
+        <port name="casaPort25" binding="tns:casaBinding36"/>
+    </service>
+    <service name="QuanLyHocSinhComAppService37">
+        <port name="casaPort26" binding="tns:casaBinding37"/>
+    </service>
+    <service name="QuanLyHocSinhComAppService38">
+        <port name="casaPort27" binding="tns:casaBinding38"/>
+    </service>
 </definitions>
+
+
 
