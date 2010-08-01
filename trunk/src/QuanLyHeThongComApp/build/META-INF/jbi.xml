@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jbi xmlns="http://java.sun.com/xml/ns/jbi" xmlns:ns1="QuanLyHeThongComApp" xmlns:ns10="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_SuaNhom" xmlns:ns11="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_SuaNguoiDung" xmlns:ns12="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_TimIdNhomTuTenNhom" xmlns:ns13="http://enterprise.netbeans.org/bpel/QuanLyHeThong/ThemNhom" xmlns:ns14="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_ThemNhom" xmlns:ns15="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_XoaNguoiDung_Nhom" xmlns:ns16="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_SuaNguoiDung_Nhom" xmlns:ns17="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_ThemNguoiDung" xmlns:ns2="http://enterprise.netbeans.org/bpel/QuanLyHeThong/SuaNguoiDung_Nhom" xmlns:ns3="http://enterprise.netbeans.org/bpel/QuanLyHeThong/XoaNguoiDung_Nhom" xmlns:ns4="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_XoaNguoiDung" xmlns:ns5="http://enterprise.netbeans.org/bpel/QuanLyHeThong/ThemNguoiDung_Nhom" xmlns:ns6="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_ThemNguoiDung_Nhom" xmlns:ns7="http://enterprise.netbeans.org/bpel/QuanLyHeThong/XoaNhom" xmlns:ns8="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_XoaNhom" xmlns:ns9="http://enterprise.netbeans.org/bpel/QuanLyHeThong/SuaNhom" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/jbi ./jbi.xsd">
+    <service-assembly>
+        <identification>
+            <name>QuanLyHeThongComApp</name>
+            <description>Represents the Service Assembly of QuanLyHeThongComApp</description>
+        </identification>
+        <service-unit>
+            <identification>
+                <name>QuanLyHeThongComApp-QuanLyHeThong</name>
+                <description>Represents this Service Unit</description>
+            </identification>
+            <target>
+                <artifacts-zip>QuanLyHeThong.jar</artifacts-zip>
+                <component-name>sun-bpel-engine</component-name>
+            </target>
+        </service-unit>
+        <service-unit>
+            <identification>
+                <name>QuanLyHeThongComApp-sun-database-binding</name>
+                <description>Represents this Service Unit</description>
+            </identification>
+            <target>
+                <artifacts-zip>sun-database-binding.jar</artifacts-zip>
+                <component-name>sun-database-binding</component-name>
+            </target>
+        </service-unit>
+        <service-unit>
+            <identification>
+                <name>QuanLyHeThongComApp-sun-http-binding</name>
+                <description>Represents this Service Unit</description>
+            </identification>
+            <target>
+                <artifacts-zip>sun-http-binding.jar</artifacts-zip>
+                <component-name>sun-http-binding</component-name>
+            </target>
+        </service-unit>
+        <connections>
+            <connection>
+                <consumer endpoint-name="suaNguoiDungNhom" service-name="ns1:QuanLyHeThongComAppService1"/>
+                <provider endpoint-name="SuaNguoiDung_NhomPortTypeRole_myRole" service-name="ns2:PL_SuaNguoiDung_Nhom"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="jdbcPortTypeRole_partnerRole" service-name="ns3:PL_DB_XoaNguoiDung"/>
+                <provider endpoint-name="port" service-name="ns4:service"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="themNguoiDungNhom" service-name="ns1:QuanLyHeThongComAppService3"/>
+                <provider endpoint-name="ThemNguoiDung_NhomPortTypeRole_myRole" service-name="ns5:PL_ThemNguoiDung_Nhom"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="jdbcPortTypeRole_partnerRole" service-name="ns5:PL_DB_ThemNguoiDung_Nhom"/>
+                <provider endpoint-name="port" service-name="ns6:service"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="jdbcPortTypeRole_partnerRole" service-name="ns7:PL_DB_XoaNhom"/>
+                <provider endpoint-name="port" service-name="ns8:service"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="jdbcPortTypeRole_partnerRole" service-name="ns9:PL_DB_SuaNhom"/>
+                <provider endpoint-name="port" service-name="ns10:service"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="suaNhom" service-name="ns1:QuanLyHeThongComAppService2"/>
+                <provider endpoint-name="SuaNhomPortTypeRole_myRole" service-name="ns9:PL_SuaNhom"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="jdbcPortTypeRole_partnerRole" service-name="ns2:PL_DB_SuaNguoiDung"/>
+                <provider endpoint-name="port" service-name="ns11:service"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="jdbcPortTypeRole_partnerRole" service-name="ns2:PL_DB_TimIdNhomTuTenNhom"/>
+                <provider endpoint-name="port" service-name="ns12:service"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="jdbcPortTypeRole_partnerRole" service-name="ns5:PL_DB_TimIdNhomTuTenNhom"/>
+                <provider endpoint-name="port" service-name="ns12:service"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="jdbcPortTypeRole_partnerRole" service-name="ns13:PL_DB_ThemNhom"/>
+                <provider endpoint-name="port" service-name="ns14:service"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="xoaNhom" service-name="ns1:QuanLyHeThongComAppService6"/>
+                <provider endpoint-name="XoaNhomPortTypeRole_myRole" service-name="ns7:PL_XoaNhom"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="xoaNguoiDungNhom" service-name="ns1:QuanLyHeThongComAppService5"/>
+                <provider endpoint-name="XoaNguoiDung_NhomPortTypeRole_myRole" service-name="ns3:PL_XoaNguoiDung_Nhom"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="jdbcPortTypeRole_partnerRole" service-name="ns3:PL_DB_XoaNguoiDung_Nhom"/>
+                <provider endpoint-name="port" service-name="ns15:service"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="jdbcPortTypeRole_partnerRole" service-name="ns2:PL_DB_SuaNguoiDung_Nhom"/>
+                <provider endpoint-name="port" service-name="ns16:service"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="themNhom" service-name="ns1:QuanLyHeThongComAppService4"/>
+                <provider endpoint-name="ThemNhomPortTypeRole_myRole" service-name="ns13:PL_ThemNhom"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="jdbcPortTypeRole_partnerRole" service-name="ns5:PL_DB_ThemNguoiDung"/>
+                <provider endpoint-name="port" service-name="ns17:service"/>
+            </connection>
+        </connections>
+    </service-assembly>
+</jbi>
