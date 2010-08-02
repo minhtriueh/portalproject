@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process
+    name="tracuuGV"
+    targetNamespace="http://enterprise.netbeans.org/bpel/QuanLyGiaoVien/tracuuGV"
+    xmlns:tns="http://enterprise.netbeans.org/bpel/QuanLyGiaoVien/tracuuGV"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
+    xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor"
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2" xmlns:ns0="http://j2ee.netbeans.org/xsd/tableSchema" xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/tracuuGV" location="../interface_WSDL/tracuuGV.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/tb_GV" location="../DB_WSDL/tb_GV.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/tb_TK" location="../DB_WSDL/WSDL/tb_TK.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/monhoc" location="../DB_WSDL/WSDL/monhoc.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/tb_dantoc" location="../DB_WSDL/WSDL/tb_dantoc.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <partnerLinks>
+        <partnerLink name="plFindGV" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/tb_GV" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="pl_TK" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/tb_TK" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="pl_DT" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/tb_dantoc" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="pltracuuGV" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/tracuuGV" partnerLinkType="tns:tracuuGV" myRole="tracuuGVPortTypeRole"/>
+    </partnerLinks>
+    <variables>
+        <variable name="FindDTOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/tb_dantoc" messageType="tns:outputMsg"/>
+        <variable name="FindDTIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/tb_dantoc" messageType="tns:inputMsg"/>
+        <variable name="FindTKOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/tb_TK" messageType="tns:outputMsg"/>
+        <variable name="FindTKIN" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/tb_TK" messageType="tns:inputMsg"/>
+        <variable name="FindGVOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/tb_GV" messageType="tns:outputMsg"/>
+        <variable name="FindGVIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/tb_GV" messageType="tns:inputMsg"/>
+        <variable name="TracuuGVOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/tracuuGV" messageType="tns:tracuuGVOperationRequest"/>
+        <variable name="TracuuGVOperationOut1" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/tracuuGV" messageType="tns:tracuuGVOperationResponse"/>
+    </variables>
+    <sequence>
+        <receive name="Receive1" createInstance="yes" partnerLink="pltracuuGV" operation="tracuuGVOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/tracuuGV" portType="tns:tracuuGVPortType" variable="TracuuGVOperationIn"/>
+        <assign name="Assign1">
+            <copy>
+                <from variable="TracuuGVOperationIn" part="id_gv"/>
+                <to>$FindGVIn.part/ns0:giaovien_Record/ns0:id_giaovien</to>
+            </copy>
+        </assign>
+        <invoke name="InvokePLGV" partnerLink="plFindGV" operation="find" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/tb_GV" portType="tns:jdbcPortType" inputVariable="FindGVIn" outputVariable="FindGVOut"/>
+        <assign name="Assign2">
+            <copy>
+                <from>$FindGVOut.part/ns0:giaovien_Record/ns0:id_nguoidung</from>
+                <to>$FindTKIN.part/ns0:nguoidung_Record/ns0:id_nguoidung</to>
+            </copy>
+        </assign>
+        <invoke name="InvokePLTK" partnerLink="pl_TK" operation="find" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/tb_TK" portType="tns:jdbcPortType" inputVariable="FindTKIN" outputVariable="FindTKOut"/>
+        <assign name="Assign3">
+            <copy>
+                <from>$FindGVOut.part/ns0:giaovien_Record/ns0:id_dantoc</from>
+                <to>$FindDTIn.part/ns0:dantoc_Record/ns0:id_dantoc</to>
+            </copy>
+        </assign>
+        <invoke name="InvokePLDT" partnerLink="pl_DT" operation="find" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/tb_dantoc" portType="tns:jdbcPortType" inputVariable="FindDTIn" outputVariable="FindDTOut"/>
+        <assign name="Assign4">
+            <copy>
+                <from>$FindDTOut.part/ns0:dantoc_Record/ns0:id_dantoc</from>
+                <to>$TracuuGVOperationOut1.result/ns1:DanToc/ns1:id</to>
+            </copy>
+            <copy>
+                <from>$FindDTOut.part/ns0:dantoc_Record/ns0:tendantoc</from>
+                <to>$TracuuGVOperationOut1.result/ns1:DanToc/ns1:tenDanToc</to>
+            </copy>
+            <copy>
+                <from>$FindDTOut.part/ns0:dantoc_Record/ns0:dantocthieuso</from>
+                <to>$TracuuGVOperationOut1.result/ns1:DanToc/ns1:danTocThieuSo</to>
+            </copy>
+            <copy>
+                <from>$FindTKOut.part/ns0:nguoidung_Record/ns0:id_nguoidung</from>
+                <to>$TracuuGVOperationOut1.result/ns1:NguoiDung/ns1:id</to>
+            </copy>
+            <copy>
+                <from>$FindTKOut.part/ns0:nguoidung_Record/ns0:ngaytao</from>
+                <to>$TracuuGVOperationOut1.result/ns1:NguoiDung/ns1:ngayTao</to>
+            </copy>
+            <copy>
+                <from>$FindTKOut.part/ns0:nguoidung_Record/ns0:password</from>
+                <to>$TracuuGVOperationOut1.result/ns1:NguoiDung/ns1:password</to>
+            </copy>
+            <copy>
+                <from>$FindTKOut.part/ns0:nguoidung_Record/ns0:username</from>
+                <to>$TracuuGVOperationOut1.result/ns1:NguoiDung/ns1:username</to>
+            </copy>
+            <copy>
+                <from>$FindGVOut.part/ns0:giaovien_Record/ns0:id_giaovien</from>
+                <to>$TracuuGVOperationOut1.result/ns1:id</to>
+            </copy>
+            <copy>
+                <from>$FindGVOut.part/ns0:giaovien_Record/ns0:choohientai</from>
+                <to>$TracuuGVOperationOut1.result/ns1:choOHienTai</to>
+            </copy>
+            <copy>
+                <from>$FindGVOut.part/ns0:giaovien_Record/ns0:chucvu</from>
+                <to>$TracuuGVOperationOut1.result/ns1:chucVu</to>
+            </copy>
+            <copy>
+                <from>$FindGVOut.part/ns0:giaovien_Record/ns0:cmnd</from>
+                <to>$TracuuGVOperationOut1.result/ns1:cmnd</to>
+            </copy>
+            <copy>
+                <from>$FindGVOut.part/ns0:giaovien_Record/ns0:email</from>
+                <to>$TracuuGVOperationOut1.result/ns1:email</to>
+            </copy>
+            <copy>
+                <from>$FindGVOut.part/ns0:giaovien_Record/ns0:gioitinh</from>
+                <to>$TracuuGVOperationOut1.result/ns1:gioiTinh</to>
+            </copy>
+            <copy>
+                <from>$FindGVOut.part/ns0:giaovien_Record/ns0:hinhanh</from>
+                <to>$TracuuGVOperationOut1.result/ns1:hinhAnh</to>
+            </copy>
+            <copy>
+                <from>$FindGVOut.part/ns0:giaovien_Record/ns0:ketnapdang</from>
+                <to>$TracuuGVOperationOut1.result/ns1:ketNapDang</to>
+            </copy>
+            <copy>
+                <from>$FindGVOut.part/ns0:giaovien_Record/ns0:ketnapdoan</from>
+                <to>$TracuuGVOperationOut1.result/ns1:ketNapDoan</to>
+            </copy>
+            <copy>
+                <from>$FindGVOut.part/ns0:giaovien_Record/ns0:noicap</from>
+                <to>$TracuuGVOperationOut1.result/ns1:noiCap</to>
+            </copy>
+            <copy>
+                <from>$FindGVOut.part/ns0:giaovien_Record/ns0:ngaycap</from>
+                <to>$TracuuGVOperationOut1.result/ns1:ngayCap</to>
+            </copy>
+            <copy>
+                <from>$FindGVOut.part/ns0:giaovien_Record/ns0:tongiao</from>
+                <to>$TracuuGVOperationOut1.result/ns1:tonGiao</to>
+            </copy>
+            <copy>
+                <from>$FindGVOut.part/ns0:giaovien_Record/ns0:quequan</from>
+                <to>$TracuuGVOperationOut1.result/ns1:queQuan</to>
+            </copy>
+            <copy>
+                <from>$FindGVOut.part/ns0:giaovien_Record/ns0:sodienthoai</from>
+                <to>$TracuuGVOperationOut1.result/ns1:soDienThoai</to>
+            </copy>
+            <copy>
+                <from>$FindGVOut.part/ns0:giaovien_Record/ns0:trinhdovanhoa</from>
+                <to>$TracuuGVOperationOut1.result/ns1:trinhDoVanHoa</to>
+            </copy>
+            <copy>
+                <from>$FindGVOut.part/ns0:giaovien_Record/ns0:tinhtrangsuckhoe</from>
+                <to>$TracuuGVOperationOut1.result/ns1:tinhTrangSucKhoe</to>
+            </copy>
+            <copy>
+                <from>$FindGVOut.part/ns0:giaovien_Record/ns0:ngayvaotruong</from>
+                <to>$TracuuGVOperationOut1.result/ns1:ngayVaoTruong</to>
+            </copy>
+            <copy>
+                <from>$FindGVOut.part/ns0:giaovien_Record/ns0:ngayvaodoan</from>
+                <to>$TracuuGVOperationOut1.result/ns1:ngayVaoDoan</to>
+            </copy>
+            <copy>
+                <from>$FindGVOut.part/ns0:giaovien_Record/ns0:ngayvaodang</from>
+                <to>$TracuuGVOperationOut1.result/ns1:ngayVaoDang</to>
+            </copy>
+            <copy>
+                <from>$FindGVOut.part/ns0:giaovien_Record/ns0:ngaysinh</from>
+                <to>$TracuuGVOperationOut1.result/ns1:ngaySinh</to>
+            </copy>
+            <copy>
+                <from>$FindGVOut.part/ns0:giaovien_Record/ns0:tengiaovien</from>
+                <to>$TracuuGVOperationOut1.result/ns1:tenGiaoVien</to>
+            </copy>
+        </assign>
+        <reply name="Reply1" partnerLink="pltracuuGV" operation="tracuuGVOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/tracuuGV" portType="tns:tracuuGVPortType" variable="TracuuGVOperationOut1"/>
+    </sequence>
+</process>
+
+
