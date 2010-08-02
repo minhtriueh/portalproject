@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="themLopWSDL" targetNamespace="http://j2ee.netbeans.org/wsdl/QuanLyChuyenMon/themLopWSDL"
+    xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyChuyenMon/themLopWSDL" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+    <types/>
+    <message name="themLopWSDLOperationRequest">
+        <part name="sisolop" type="xsd:integer"/>
+        <part name="tenlop" type="xsd:string"/>
+        <part name="id_giaovienchunhiem" type="xsd:long"/>
+        <part name="id_thoikhoabieu" type="xsd:long"/>
+        <part name="id_khoilop" type="xsd:long"/>
+    </message>
+    <message name="themLopWSDLOperationResponse">
+        <part name="id" type="xsd:long"/>
+    </message>
+    <portType name="themLopWSDLPortType">
+        <operation name="themLopWSDLOperation">
+            <input name="input1" message="tns:themLopWSDLOperationRequest"/>
+            <output name="output1" message="tns:themLopWSDLOperationResponse"/>
+        </operation>
+    </portType>
+    <binding name="themLopWSDLBinding" type="tns:themLopWSDLPortType">
+        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="themLopWSDLOperation">
+            <soap:operation/>
+            <input name="input1">
+                <soap:body use="literal" namespace="http://j2ee.netbeans.org/wsdl/QuanLyChuyenMon/themLopWSDL"/>
+            </input>
+            <output name="output1">
+                <soap:body use="literal" namespace="http://j2ee.netbeans.org/wsdl/QuanLyChuyenMon/themLopWSDL"/>
+            </output>
+        </operation>
+    </binding>
+    <service name="themLopWSDLService">
+        <port name="themLopWSDLPort" binding="tns:themLopWSDLBinding">
+            <soap:address location="http://localhost:${HttpDefaultPort}/themLopWSDLService/themLopWSDLPort"/>
+        </port>
+    </service>
+    <plnk:partnerLinkType name="themLopWSDL">
+        <!-- A partner link type is automatically generated when a new port type is added. Partner link types are used by BPEL processes. 
+In a BPEL process, a partner link represents the interaction between the BPEL process and a partner service. Each partner link is associated with a partner link type.
+A partner link type characterizes the conversational relationship between two services. The partner link type can have one or two roles.-->
+        <plnk:role name="themLopWSDLPortTypeRole" portType="tns:themLopWSDLPortType"/>
+    </plnk:partnerLinkType>
+</definitions>
+
