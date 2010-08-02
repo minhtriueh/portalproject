@@ -95,77 +95,77 @@
         </service-engine-service-unit>
         <binding-component-service-unit artifacts-zip="sun-database-binding.jar" component-name="sun-database-binding" description="Represents this Service Unit" name="QuanLyHocSinhComApp-sun-database-binding" unit-name="sun-database-binding">
             <ports>
-                <port x="67" y="2180">
+                <port x="67" y="2392">
                     <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/insert/DB_CheDoUuTienInsert.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint9"/>
                     <provides endpoint="endpoint9"/>
                 </port>
-                <port x="67" y="2074">
+                <port x="67" y="2286">
                     <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/insert/DB_DanToc_insert.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint1"/>
                     <provides endpoint="endpoint1"/>
                 </port>
-                <port x="0" y="-1">
+                <port x="67" y="145">
                     <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/insert/DB_hocba_insert.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint25"/>
                     <provides endpoint="endpoint25"/>
                 </port>
-                <port x="67" y="1968">
+                <port x="67" y="2180">
                     <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/insert/DB_LoaiHocSinh.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint5"/>
                     <provides endpoint="endpoint5"/>
                 </port>
-                <port x="67" y="1862">
+                <port x="67" y="2074">
                     <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/insert/DB_Truong_Insert.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint2"/>
                     <provides endpoint="endpoint2"/>
                 </port>
-                <port x="67" y="1756">
+                <port x="67" y="1968">
                     <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/insert/TaoDiaChi/DB_quanhuyenthanhpho_insert.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint8"/>
                     <provides endpoint="endpoint8"/>
                 </port>
-                <port x="67" y="1650">
+                <port x="67" y="1862">
                     <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/insert/TaoDiaChi/DB_TaoKhuVuc.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint6"/>
                     <provides endpoint="endpoint6"/>
                 </port>
-                <port x="67" y="436">
+                <port x="67" y="648">
                     <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/insert/TaoDiaChi/DB_TaoQueQuan.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint20"/>
                     <provides endpoint="endpoint20"/>
                 </port>
-                <port x="67" y="1544">
+                <port x="67" y="1756">
                     <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/insert/TaoDiaChi/DB_TaoThonXom.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint3"/>
                     <provides endpoint="endpoint3"/>
                 </port>
-                <port x="67" y="1438">
+                <port x="67" y="1650">
                     <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/insert/TaoDiaChi/DB_TaoTinh.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint4"/>
                     <provides endpoint="endpoint4"/>
                 </port>
-                <port x="67" y="1332">
+                <port x="67" y="1544">
                     <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/insert/TaoDiaChi/DB_TaoXaPhuongThiTran.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint7"/>
                     <provides endpoint="endpoint7"/>
                 </port>
-                <port x="67" y="330">
+                <port x="67" y="542">
                     <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/update/DB_DanToc_update.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint22"/>
                     <provides endpoint="endpoint22"/>
                 </port>
-                <port x="0" y="-1">
+                <port x="67" y="39">
                     <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/update/DB_khuvuc_update.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint26"/>
                     <provides endpoint="endpoint26"/>
                 </port>
-                <port x="67" y="224">
+                <port x="67" y="436">
                     <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/update/DB_quanhuyenthanhpho_update.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint24"/>
                     <provides endpoint="endpoint24"/>
                 </port>
-                <port x="67" y="118">
+                <port x="67" y="330">
                     <link xlink:href="../jbiServiceUnits/QuanLyHocSinh/DB_WSDL/update/DB_Tinh_update.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint23"/>
                     <provides endpoint="endpoint23"/>
@@ -174,57 +174,57 @@
         </binding-component-service-unit>
         <binding-component-service-unit artifacts-zip="sun-http-binding.jar" component-name="sun-http-binding" description="Represents this Service Unit" name="QuanLyHocSinhComApp-sun-http-binding" unit-name="sun-http-binding">
             <ports>
-                <port bindingType="soap" x="67" y="542">
+                <port bindingType="soap" x="67" y="754">
                     <link xlink:href="../jbiasa/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QuanLyHocSinhComAppService1']/port[@name='TaoCheDoUuTien'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint10"/>
                     <provides endpoint="endpoint10"/>
                 </port>
-                <port bindingType="soap" x="67" y="621">
+                <port bindingType="soap" x="67" y="833">
                     <link xlink:href="../jbiasa/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QuanLyHocSinhComAppService2']/port[@name='TaoDanToc'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint11"/>
                     <provides endpoint="endpoint11"/>
                 </port>
-                <port bindingType="soap" x="67" y="700">
+                <port bindingType="soap" x="67" y="912">
                     <link xlink:href="../jbiasa/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QuanLyHocSinhComAppService3']/port[@name='TaoKhuVuc'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint12"/>
                     <provides endpoint="endpoint12"/>
                 </port>
-                <port bindingType="soap" x="67" y="779">
+                <port bindingType="soap" x="67" y="991">
                     <link xlink:href="../jbiasa/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QuanLyHocSinhComAppService4']/port[@name='TaoLoaiHocSinh'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint13"/>
                     <provides endpoint="endpoint13"/>
                 </port>
-                <port bindingType="soap" x="67" y="858">
+                <port bindingType="soap" x="67" y="1070">
                     <link xlink:href="../jbiasa/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QuanLyHocSinhComAppService5']/port[@name='TaoQuanHuyenThanhPho'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint14"/>
                     <provides endpoint="endpoint14"/>
                 </port>
-                <port bindingType="soap" x="67" y="937">
+                <port bindingType="soap" x="67" y="1149">
                     <link xlink:href="../jbiasa/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QuanLyHocSinhComAppService6']/port[@name='TaoThonXom'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint15"/>
                     <provides endpoint="endpoint15"/>
                 </port>
-                <port bindingType="soap" x="67" y="1174">
+                <port bindingType="soap" x="67" y="1386">
                     <link xlink:href="../jbiasa/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QuanLyHocSinhComAppService7']/port[@name='TaoXaPhuongThiTran'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint16"/>
                     <provides endpoint="endpoint16"/>
                 </port>
-                <port bindingType="soap" x="67" y="1095">
+                <port bindingType="soap" x="67" y="1307">
                     <link xlink:href="../jbiasa/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QuanLyHocSinhComAppService8']/port[@name='TaoTruong'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint17"/>
                     <provides endpoint="endpoint17"/>
                 </port>
-                <port bindingType="soap" x="67" y="1016">
+                <port bindingType="soap" x="67" y="1228">
                     <link xlink:href="../jbiasa/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QuanLyHocSinhComAppService9']/port[@name='TaoTinh'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint18"/>
                     <provides endpoint="endpoint18"/>
                 </port>
-                <port bindingType="soap" x="67" y="1253">
+                <port bindingType="soap" x="67" y="1465">
                     <link xlink:href="../jbiasa/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QuanLyHocSinhComAppService11']/port[@name='ThemHocSinh'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint19"/>
                     <provides endpoint="endpoint19"/>
                 </port>
-                <port bindingType="soap" x="67" y="39">
+                <port bindingType="soap" x="67" y="251">
                     <link xlink:href="../jbiasa/QuanLyHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QuanLyHocSinhComAppService10']/port[@name='TaoQueQuan'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint21"/>
                     <provides endpoint="endpoint21"/>
@@ -496,3 +496,4 @@
         <region name="External Modules" width="200"/>
     </regions>
 </casa>
+
