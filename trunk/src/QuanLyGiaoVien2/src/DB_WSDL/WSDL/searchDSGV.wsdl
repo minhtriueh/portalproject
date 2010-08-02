@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="newWSDL" targetNamespace="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/newWSDL" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:ns="http://j2ee.netbeans.org/xsd/tableSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/newWSDL" xmlns:plink="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/">
+  <types>
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/">
+            <xsd:import namespace="http://j2ee.netbeans.org/xsd/tableSchema" schemaLocation="giaovien.xsd"/>
+	</xsd:schema>
+  </types>
+  <message name="RetMsg">
+    <part name="part" type="xsd:int"/>
+  </message>
+  <message name="outputMsg">
+    <part name="part" element="ns:giaovien"/>
+  </message>
+  <message name="inputMsg">
+    <part name="part" element="ns:giaovien"/>
+  </message>
+  <portType name="jdbcPortType">
+    <operation name="find">
+      <input name="inputFind" message="tns:inputMsg"/>
+      <output name="outputFind" message="tns:outputMsg"/>
+    </operation>
+  </portType>
+  <binding name="binding" type="tns:jdbcPortType">
+    <jdbc:binding xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/"/>
+    <operation name="find">
+    <jdbc:operation xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/"/>
+      <input name="inputFind">
+    <jdbc:input xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" MarkColumnName="" MarkColumnValue="" MoveRowToTableName="" PKName="id_giaovien" PollMilliSeconds="5000" PollingPostProcessing="MoveRow" TableName="giaovien" Transaction="NOTransaction" numberOfRecords="" operationType="find" sql="SELECT
+  giaovien.id_giaovien,
+  giaovien.choohientai,
+  giaovien.chucvu,
+  giaovien.cmnd,
+  giaovien.email,
+  giaovien.gioitinh,
+  giaovien.hinhanh,
+  giaovien.ketnapdang,
+  giaovien.ketnapdoan,
+  giaovien.ngaycap,
+  giaovien.ngayvaodang,
+  giaovien.ngayvaodoan,
+  giaovien.ngaysinh,
+  giaovien.ngayvaotruong,
+  giaovien.noicap,
+  giaovien.quequan,
+  giaovien.sodienthoai,
+  giaovien.tengiaovien,
+  giaovien.tinhtrangsuckhoe,
+  giaovien.tongiao,
+  giaovien.trinhdovanhoa,
+  giaovien.trinhdodaotao,
+  giaovien.id_nguoidung,
+  giaovien.id_dantoc,
+  giaovien.id_tobomon
+FROM
+  public.giaovien
+WHERE
+  giaovien.tengiaovien like ? AND
+  giaovien.quequan like ? AND
+  giaovien.cmnd like ? AND
+  giaovien.chucvu like ?;" paramOrder="tengiaovien,quequan,cmnd,chucvu"/>
+      </input>
+      <output name="outputFind">
+    <jdbc:output xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" returnPartName="part"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="service">
+    <port name="port" binding="tns:binding">
+    <jdbc:address xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" jndiName="jdbc/eschoolinkdb"/>
+    </port>
+  </service>
+    <plink:partnerLinkType xmlns:plink="http://docs.oasis-open.org/wsbpel/2.0/plnktype" name="jdbcpartner">
+        <plink:role name="jdbcPortTypeRole" portType="tns:jdbcPortType"/>
+    </plink:partnerLinkType>
+</definitions>
+
+
+
