@@ -1,0 +1,9 @@
+<soapenv:Envelope xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:quan="QuanLyHeThongComApp">
+  <soapenv:Body>
+    <quan:ThemNguoiDung_NhomOperation>
+      <username>a</username>
+      <password>a</password>
+      <tenNhom>admin</tenNhom>
+    </quan:ThemNguoiDung_NhomOperation>
+  </soapenv:Body>
+</soapenv:Envelope>
