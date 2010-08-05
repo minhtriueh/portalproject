@@ -9,17 +9,15 @@
     xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
     xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor"
     xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2" xmlns:ns0="http://j2ee.netbeans.org/xsd/tableSchema">
-    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoTruong" location="../interface_WSDL/TaoTruong.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
-    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_Truong_Insert" location="../DB_WSDL/insert/DB_Truong_Insert.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoTruong" location="../../interface_WSDL/TaoTruongLop/TaoTruong.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_TaoTruong" location="../../DB_WSDL/insert/TaoTruongLop/DB_TaoTruong.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
     <partnerLinks>
-        <partnerLink name="PartnerLink2" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_Truong_Insert" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="PartnerLink2" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_TaoTruong" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
         <partnerLink name="PartnerLink1" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoTruong" partnerLinkType="tns:TaoTruong" myRole="TaoTruongPortTypeRole"/>
     </partnerLinks>
     <variables>
-        <variable name="FindLastIDOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_Truong_Insert" messageType="tns:outputMsg"/>
-        <variable name="FindLastIDIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_Truong_Insert" messageType="tns:inputMsg"/>
-        <variable name="InsertOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_Truong_Insert" messageType="tns:RetMsg"/>
-        <variable name="InsertIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_Truong_Insert" messageType="tns:inputMsg"/>
+        <variable name="ExecuteOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_TaoTruong" messageType="tns:outputMsg"/>
+        <variable name="ExecuteIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_TaoTruong" messageType="tns:inputMsg"/>
         <variable name="TaoTruongOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoTruong" messageType="tns:TaoTruongOperationResponse"/>
         <variable name="TaoTruongOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoTruong" messageType="tns:TaoTruongOperationRequest"/>
     </variables>
@@ -28,44 +26,37 @@
         <assign name="Assign1">
             <copy>
                 <from variable="TaoTruongOperationIn" part="diachitruong"/>
-                <to>$InsertIn.part/ns0:truong_Record/ns0:diachitruong</to>
+                <to>$ExecuteIn.part/ns0:diachitruong</to>
             </copy>
             <copy>
                 <from variable="TaoTruongOperationIn" part="dienthoaitruong"/>
-                <to>$InsertIn.part/ns0:truong_Record/ns0:dienthoaitruong</to>
+                <to>$ExecuteIn.part/ns0:dienthoaitruong</to>
             </copy>
             <copy>
                 <from variable="TaoTruongOperationIn" part="gioithieutruong"/>
-                <to>$InsertIn.part/ns0:truong_Record/ns0:gioithieutruong</to>
+                <to>$ExecuteIn.part/ns0:gioithieutruong</to>
             </copy>
             <copy>
                 <from variable="TaoTruongOperationIn" part="loaihinhtruong"/>
-                <to>$InsertIn.part/ns0:truong_Record/ns0:loaihinhtruong</to>
+                <to>$ExecuteIn.part/ns0:loaihinhtruong</to>
             </copy>
             <copy>
                 <from variable="TaoTruongOperationIn" part="ngaythanhlaptruong"/>
-                <to>$InsertIn.part/ns0:truong_Record/ns0:ngaythanhlaptruong</to>
+                <to>$ExecuteIn.part/ns0:ngaythanhlaptruong</to>
             </copy>
             <copy>
                 <from variable="TaoTruongOperationIn" part="tentruong"/>
-                <to>$InsertIn.part/ns0:truong_Record/ns0:tentruong</to>
+                <to>$ExecuteIn.part/ns0:tentruong</to>
             </copy>
             <copy>
                 <from variable="TaoTruongOperationIn" part="websitetruong"/>
-                <to>$InsertIn.part/ns0:truong_Record/ns0:websitetruong</to>
+                <to>$ExecuteIn.part/ns0:websitetruong</to>
             </copy>
         </assign>
-        <invoke name="Invoke1" partnerLink="PartnerLink2" operation="insert" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_Truong_Insert" portType="tns:jdbcPortType" inputVariable="InsertIn" outputVariable="InsertOut"/>
+        <invoke name="Invoke1" partnerLink="PartnerLink2" operation="execute" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_TaoTruong" portType="tns:jdbcPortType" inputVariable="ExecuteIn" outputVariable="ExecuteOut"/>
         <assign name="Assign2">
             <copy>
-                <from>0</from>
-                <to>$FindLastIDIn.part/ns0:truong_Record/ns0:id_truong</to>
-            </copy>
-        </assign>
-        <invoke name="Invoke2" partnerLink="PartnerLink2" operation="findLastID" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_Truong_Insert" portType="tns:jdbcPortType" inputVariable="FindLastIDIn" outputVariable="FindLastIDOut"/>
-        <assign name="Assign3">
-            <copy>
-                <from>$FindLastIDOut.part/ns0:truong_Record/ns0:id_truong</from>
+                <from>$ExecuteOut.part/ns0:returnValue</from>
                 <to variable="TaoTruongOperationOut" part="id"/>
             </copy>
         </assign>
