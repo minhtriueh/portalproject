@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process
+    name="DangNhap"
+    targetNamespace="http://enterprise.netbeans.org/bpel/QuanLyHeThong/DangNhap"
+    xmlns:tns="http://enterprise.netbeans.org/bpel/QuanLyHeThong/DangNhap"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
+    xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor"
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2" xmlns:ns0="http://j2ee.netbeans.org/xsd/tableSchema">
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DangNhap" location="../interface_WSDL/DangNhap.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_DangNhap" location="../DB_WSDL/DB_DangNhap.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <partnerLinks>
+        <partnerLink name="PL_DB_DangNhap" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_DangNhap" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="PL_DangNhap" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DangNhap" partnerLinkType="tns:DangNhap" myRole="DangNhapPortTypeRole"/>
+    </partnerLinks>
+    <variables>
+        <variable name="DangNhapOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_DangNhap" messageType="tns:outputMsg"/>
+        <variable name="DangNhapIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_DangNhap" messageType="tns:inputMsg"/>
+        <variable name="DangNhapOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DangNhap" messageType="tns:DangNhapOperationResponse"/>
+        <variable name="DangNhapOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DangNhap" messageType="tns:DangNhapOperationRequest"/>
+    </variables>
+    <sequence>
+        <receive name="Receive1" createInstance="yes" partnerLink="PL_DangNhap" operation="DangNhapOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DangNhap" portType="tns:DangNhapPortType" variable="DangNhapOperationIn"/>
+        <assign name="Assign1">
+            <copy>
+                <from variable="DangNhapOperationIn" part="password"/>
+                <to>$DangNhapIn.part/ns0:password</to>
+            </copy>
+            <copy>
+                <from variable="DangNhapOperationIn" part="username"/>
+                <to>$DangNhapIn.part/ns0:username</to>
+            </copy>
+        </assign>
+        <invoke name="Invoke1" partnerLink="PL_DB_DangNhap" operation="execute" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_DangNhap" portType="tns:jdbcPortType" inputVariable="DangNhapIn" outputVariable="DangNhapOut"/>
+        <assign name="Assign2">
+            <copy>
+                <from>$DangNhapOut.part/ns0:returnValue &gt; 0</from>
+                <to variable="DangNhapOperationOut" part="checkDangNhap"/>
+            </copy>
+        </assign>
+        <reply name="Reply1" partnerLink="PL_DangNhap" operation="DangNhapOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DangNhap" portType="tns:DangNhapPortType" variable="DangNhapOperationOut"/>
+    </sequence>
+</process>
+
