@@ -39,11 +39,15 @@
     <message name="SuaGVOperationResponse">
         <part name="result" type="xsd:long"/>
     </message>
+     <message name="newWSDLOperationFault">
+        <part name="eror" type="xsd:string"/>
+    </message>
     <portType name="SuaGVPortType">
         <operation name="SuaGVOperation">
             <input name="input1" message="tns:SuaGVOperationRequest"/>
             <output name="output1" message="tns:SuaGVOperationResponse"/>
-        </operation>
+            <fault name="fault" message="tns:newWSDLOperationFault"/>
+       </operation>
     </portType>
     <plnk:partnerLinkType name="SuaGV">
         <!-- A partner link type is automatically generated when a new port type is added. Partner link types are used by BPEL processes. 

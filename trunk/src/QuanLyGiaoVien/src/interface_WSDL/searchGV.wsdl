@@ -18,10 +18,15 @@
     <message name="searchGVOperationResponse">
         <part name="part1" type="ns:DanhSachGiaoVien"/>
     </message>
+    <message name="faultException">
+        <part name="exeption" type="xsd:string"/>
+    </message>
     <portType name="searchGVPortType">
         <operation name="searchGVOperation">
             <input name="input1" message="tns:searchGVOperationRequest"/>
             <output name="output1" message="tns:searchGVOperationResponse"/>
+            <fault name="exeption" message="tns:faultException"/>
+
         </operation>
     </portType>
     <plnk:partnerLinkType name="searchGV">
@@ -31,6 +36,7 @@ A partner link type characterizes the conversational relationship between two se
         <plnk:role name="searchGVPortTypeRole" portType="tns:searchGVPortType"/>
     </plnk:partnerLinkType>
 </definitions>
+
 
 
 
