@@ -22,118 +22,142 @@
         <variable name="SuaGVOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/SuaGV" messageType="tns:SuaGVOperationRequest"/>
     </variables>
     <sequence>
-        <receive name="Receive1" createInstance="yes" partnerLink="pl_SuaGV" operation="SuaGVOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/SuaGV" portType="tns:SuaGVPortType" variable="SuaGVOperationIn"/>
-        <assign name="Assign1">
-            <copy>
-                <from variable="SuaGVOperationIn" part="id_giaovien"/>
-                <to>$updateIN.part/ns0:id_giaovien</to>
-            </copy>
-            <copy>
-                <from variable="SuaGVOperationIn" part="choohientai"/>
-                <to>$updateIN.part/ns0:choohientai</to>
-            </copy>
-            <copy>
-                <from variable="SuaGVOperationIn" part="chucvu"/>
-                <to>$updateIN.part/ns0:chucvu</to>
-            </copy>
-            <copy>
-                <from variable="SuaGVOperationIn" part="cmnd"/>
-                <to>$updateIN.part/ns0:cmnd</to>
-            </copy>
-            <copy>
-                <from variable="SuaGVOperationIn" part="email"/>
-                <to>$updateIN.part/ns0:email</to>
-            </copy>
-            <copy>
-                <from variable="SuaGVOperationIn" part="gioitinh"/>
-                <to>$updateIN.part/ns0:gioitinh</to>
-            </copy>
-            <copy>
-                <from variable="SuaGVOperationIn" part="hinhanh"/>
-                <to>$updateIN.part/ns0:hinhanh</to>
-            </copy>
-            <copy>
-                <from variable="SuaGVOperationIn" part="ketnapdoan"/>
-                <to>$updateIN.part/ns0:ketnapdoan</to>
-            </copy>
-            <copy>
-                <from variable="SuaGVOperationIn" part="ketnapdang"/>
-                <to>$updateIN.part/ns0:ketnapdang</to>
-            </copy>
-            <copy>
-                <from variable="SuaGVOperationIn" part="ngaycap"/>
-                <to>$updateIN.part/ns0:ngaycap</to>
-            </copy>
-            <copy>
-                <from variable="SuaGVOperationIn" part="ngaysinh"/>
-                <to>$updateIN.part/ns0:ngaysinh</to>
-            </copy>
-            <copy>
-                <from variable="SuaGVOperationIn" part="ngayvaodang"/>
-                <to>$updateIN.part/ns0:ngayvaodang</to>
-            </copy>
-            <copy>
-                <from variable="SuaGVOperationIn" part="ngayvaodoan"/>
-                <to>$updateIN.part/ns0:ngayvaodoan</to>
-            </copy>
-            <copy>
-                <from variable="SuaGVOperationIn" part="ngayvaotruong"/>
-                <to>$updateIN.part/ns0:ngayvaotruong</to>
-            </copy>
-            <copy>
-                <from variable="SuaGVOperationIn" part="noicap"/>
-                <to>$updateIN.part/ns0:noicap</to>
-            </copy>
-            <copy>
-                <from variable="SuaGVOperationIn" part="quequan"/>
-                <to>$updateIN.part/ns0:quequan</to>
-            </copy>
-            <copy>
-                <from variable="SuaGVOperationIn" part="sodienthoai"/>
-                <to>$updateIN.part/ns0:sodienthoai</to>
-            </copy>
-            <copy>
-                <from variable="SuaGVOperationIn" part="tengiaovien"/>
-                <to>$updateIN.part/ns0:tengiaovien</to>
-            </copy>
-            <copy>
-                <from variable="SuaGVOperationIn" part="tinhtrangsuckhoe"/>
-                <to>$updateIN.part/ns0:tinhtrangsuckhoe</to>
-            </copy>
-            <copy>
-                <from variable="SuaGVOperationIn" part="tongiao"/>
-                <to>$updateIN.part/ns0:tongiao</to>
-            </copy>
-            <copy>
-                <from variable="SuaGVOperationIn" part="trinhdodaotao"/>
-                <to>$updateIN.part/ns0:trinhdodaotao</to>
-            </copy>
-            <copy>
-                <from variable="SuaGVOperationIn" part="trinhdovanhoa"/>
-                <to>$updateIN.part/ns0:trinhdovanhoa</to>
-            </copy>
-            <copy>
-                <from variable="SuaGVOperationIn" part="id_nguoidung"/>
-                <to>$updateIN.part/ns0:id_nguoidung</to>
-            </copy>
-            <copy>
-                <from variable="SuaGVOperationIn" part="id_dantoc"/>
-                <to>$updateIN.part/ns0:id_dantoc</to>
-            </copy>
-            <copy>
-                <from variable="SuaGVOperationIn" part="id_tobomon"/>
-                <to>$updateIN.part/ns0:id_tobomon</to>
-            </copy>
-        </assign>
-        <invoke name="Invoke1" partnerLink="plupdateGV" operation="execute" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/updateGV" portType="tns:jdbcPortType" inputVariable="updateIN" outputVariable="updateOUT"/>
-        <assign name="Assign2">
-            <copy>
-                <from>$updateOUT.part/ns0:returnValue</from>
-                <to variable="SuaGVOperationOut" part="result"/>
-            </copy>
-        </assign>
-        <reply name="Reply1" partnerLink="pl_SuaGV" operation="SuaGVOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/SuaGV" portType="tns:SuaGVPortType" variable="SuaGVOperationOut"/>
+        <scope name="Scope1">
+            <variables>
+                <variable name="FaultVar" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/SuaGV" messageType="tns:newWSDLOperationFault"/>
+            </variables>
+            <faultHandlers>
+                <catchAll>
+                    <sequence name="Sequence2">
+                        <assign name="Assign3">
+                            <copy>
+                                <from>'UPDATE ERROR'</from>
+                                <to variable="FaultVar" part="eror"/>
+                            </copy>
+                        </assign>
+                        <reply name="Reply2" partnerLink="pl_SuaGV" operation="SuaGVOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/SuaGV" portType="tns:SuaGVPortType" faultName="tns:fault" variable="FaultVar"/>
+                    </sequence>
+                </catchAll>
+            </faultHandlers>
+            <sequence name="Sequence1" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/SuaGV">
+                <receive name="Receive1" createInstance="yes" partnerLink="pl_SuaGV" operation="SuaGVOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/SuaGV" portType="tns:SuaGVPortType" variable="SuaGVOperationIn"/>
+                    <assign name="Assign1">
+                        <copy>
+                                <from variable="SuaGVOperationIn" part="id_giaovien"/>
+                                    <to>$updateIN.part/ns0:id_giaovien</to>
+                            </copy>
+                            <copy>
+                                <from variable="SuaGVOperationIn" part="choohientai"/>
+                                    <to>$updateIN.part/ns0:choohientai</to>
+                            </copy>
+                            <copy>
+                                <from variable="SuaGVOperationIn" part="chucvu"/>
+                                    <to>$updateIN.part/ns0:chucvu</to>
+                            </copy>
+                            <copy>
+                                <from variable="SuaGVOperationIn" part="cmnd"/>
+                                    <to>$updateIN.part/ns0:cmnd</to>
+                            </copy>
+                            <copy>
+                                <from variable="SuaGVOperationIn" part="email"/>
+                                    <to>$updateIN.part/ns0:email</to>
+                            </copy>
+                            <copy>
+                                <from variable="SuaGVOperationIn" part="gioitinh"/>
+                                    <to>$updateIN.part/ns0:gioitinh</to>
+                            </copy>
+                            <copy>
+                                <from variable="SuaGVOperationIn" part="hinhanh"/>
+                                    <to>$updateIN.part/ns0:hinhanh</to>
+                            </copy>
+                            <copy>
+                                <from variable="SuaGVOperationIn" part="ketnapdoan"/>
+                                    <to>$updateIN.part/ns0:ketnapdoan</to>
+                            </copy>
+                            <copy>
+                                <from variable="SuaGVOperationIn" part="ketnapdang"/>
+                                    <to>$updateIN.part/ns0:ketnapdang</to>
+                            </copy>
+                            <copy>
+                                <from variable="SuaGVOperationIn" part="ngaycap"/>
+                                    <to>$updateIN.part/ns0:ngaycap</to>
+                            </copy>
+                            <copy>
+                                <from variable="SuaGVOperationIn" part="ngaysinh"/>
+                                    <to>$updateIN.part/ns0:ngaysinh</to>
+                            </copy>
+                            <copy>
+                                <from variable="SuaGVOperationIn" part="ngayvaodang"/>
+                                    <to>$updateIN.part/ns0:ngayvaodang</to>
+                            </copy>
+                            <copy>
+                                <from variable="SuaGVOperationIn" part="ngayvaodoan"/>
+                                    <to>$updateIN.part/ns0:ngayvaodoan</to>
+                            </copy>
+                            <copy>
+                                <from variable="SuaGVOperationIn" part="ngayvaotruong"/>
+                                    <to>$updateIN.part/ns0:ngayvaotruong</to>
+                            </copy>
+                            <copy>
+                                <from variable="SuaGVOperationIn" part="noicap"/>
+                                    <to>$updateIN.part/ns0:noicap</to>
+                            </copy>
+                            <copy>
+                                <from variable="SuaGVOperationIn" part="quequan"/>
+                                    <to>$updateIN.part/ns0:quequan</to>
+                            </copy>
+                            <copy>
+                                <from variable="SuaGVOperationIn" part="sodienthoai"/>
+                                    <to>$updateIN.part/ns0:sodienthoai</to>
+                            </copy>
+                            <copy>
+                                <from variable="SuaGVOperationIn" part="tengiaovien"/>
+                                    <to>$updateIN.part/ns0:tengiaovien</to>
+                            </copy>
+                            <copy>
+                                <from variable="SuaGVOperationIn" part="tinhtrangsuckhoe"/>
+                                    <to>$updateIN.part/ns0:tinhtrangsuckhoe</to>
+                            </copy>
+                            <copy>
+                                <from variable="SuaGVOperationIn" part="tongiao"/>
+                                    <to>$updateIN.part/ns0:tongiao</to>
+                            </copy>
+                            <copy>
+                                <from variable="SuaGVOperationIn" part="trinhdodaotao"/>
+                                    <to>$updateIN.part/ns0:trinhdodaotao</to>
+                            </copy>
+                            <copy>
+                                <from variable="SuaGVOperationIn" part="trinhdovanhoa"/>
+                                    <to>$updateIN.part/ns0:trinhdovanhoa</to>
+                            </copy>
+                            <copy>
+                                <from variable="SuaGVOperationIn" part="id_nguoidung"/>
+                                    <to>$updateIN.part/ns0:id_nguoidung</to>
+                            </copy>
+                            <copy>
+                                <from variable="SuaGVOperationIn" part="id_dantoc"/>
+                                    <to>$updateIN.part/ns0:id_dantoc</to>
+                            </copy>
+                            <copy>
+                                <from variable="SuaGVOperationIn" part="id_tobomon"/>
+                                    <to>$updateIN.part/ns0:id_tobomon</to>
+                            </copy>
+                    </assign>
+                <invoke name="Invoke1" partnerLink="plupdateGV" operation="execute" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/updateGV" portType="tns:jdbcPortType" inputVariable="updateIN" outputVariable="updateOUT"></invoke>
+                <assign name="Assign2">
+                        <copy>
+                                <from>$updateOUT.part/ns0:returnValue</from>
+                                    <to variable="SuaGVOperationOut" part="result"/>
+                            </copy>
+                    </assign>
+                    <reply name="Reply1" partnerLink="pl_SuaGV" operation="SuaGVOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/SuaGV" portType="tns:SuaGVPortType" variable="SuaGVOperationOut"/>
+            </sequence>
+        </scope>
     </sequence>
 </process>
+
+
+
+
 
 
