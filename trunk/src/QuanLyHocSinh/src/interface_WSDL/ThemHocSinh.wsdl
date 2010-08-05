@@ -31,9 +31,10 @@
         <part name="id_loaihocsinh" type="xsd:long"/>
         <part name="id_khuvuc" type="xsd:long"/>
         <part name="id_quequan" type="xsd:long"/>
+        <part name="id_tinh" type="xsd:long"/>
     </message>
     <message name="ThemHocSinhOperationResponse">
-        <part name="part1" type="xsd:boolean"/>
+        <part name="result" type="xsd:boolean"/>
     </message>
     <portType name="ThemHocSinhPortType">
         <operation name="ThemHocSinhOperation">
@@ -48,6 +49,7 @@ A partner link type characterizes the conversational relationship between two se
         <plnk:role name="ThemHocSinhPortTypeRole" portType="tns:ThemHocSinhPortType"/>
     </plnk:partnerLinkType>
 </definitions>
+
 
 
 

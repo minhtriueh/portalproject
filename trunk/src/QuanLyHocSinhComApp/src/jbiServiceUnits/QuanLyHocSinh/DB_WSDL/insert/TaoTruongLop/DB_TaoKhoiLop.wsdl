@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions name="DB_hocba_insert" targetNamespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_hocba_insert" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:ns="http://j2ee.netbeans.org/xsd/tableSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_hocba_insert" xmlns:plink="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/">
+<definitions name="DB_TaoKhoiLop" targetNamespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_TaoKhoiLop" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:ns="http://j2ee.netbeans.org/xsd/tableSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_TaoKhoiLop" xmlns:plink="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/">
   <types>
     <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/">
-            <xsd:import namespace="http://j2ee.netbeans.org/xsd/tableSchema" schemaLocation="../../DB_WSDL/insert/XSD/DB_hocba_insert.xsd"/>
+            <xsd:import namespace="http://j2ee.netbeans.org/xsd/tableSchema" schemaLocation="../../../DB_WSDL/insert/TaoTruongLop/XSD/DB_TaoKhoiLop.xsd"/>
 	</xsd:schema>
   </types>
   <message name="outputMsg">
-    <part name="part" element="ns:create_hocba_Response"/>
+    <part name="part" element="ns:create_khoilop_Response"/>
   </message>
   <message name="inputMsg">
-    <part name="part" element="ns:create_hocba_Request"/>
+    <part name="part" element="ns:create_khoilop_Request"/>
   </message>
   <portType name="jdbcPortType">
     <operation name="execute">
@@ -22,7 +22,7 @@
     <operation name="execute">
     <jdbc:operation xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/"/>
       <input name="inputExecute">
-    <jdbc:spinput xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" ExecutionString="{ ? = call create_hocba(?,?,?) }" ProcedureName="create_hocba" Transaction="NOTransaction"/>
+    <jdbc:spinput xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" ExecutionString="{ ? = call create_khoilop(?,?) }" ProcedureName="create_khoilop" Transaction="NOTransaction"/>
       </input>
       <output name="outputExecute">
     <jdbc:spoutput xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" returnPartName="part"/>
