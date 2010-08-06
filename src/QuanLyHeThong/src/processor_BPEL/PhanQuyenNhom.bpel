@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process
+    name="PhanQuyenNhom"
+    targetNamespace="http://enterprise.netbeans.org/bpel/QuanLyHeThong/PhanQuyenNhom"
+    xmlns:tns="http://enterprise.netbeans.org/bpel/QuanLyHeThong/PhanQuyenNhom"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
+    xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor"
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2" xmlns:ns0="http://j2ee.netbeans.org/xsd/tableSchema">
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/PhanQuyenNhom" location="../interface_WSDL/PhanQuyenNhom.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_TimIdNhomTuTenNhom" location="../DB_WSDL/quanlynguoidung/DB_TimIdNhomTuTenNhom.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_PhanQuyenNhom" location="../DB_WSDL/DB_PhanQuyenNhom.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <partnerLinks>
+        <partnerLink name="PL_DB_TimIdNhomTuTenNhom" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_TimIdNhomTuTenNhom" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="PL_DB_PhanQuyenNhom" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_PhanQuyenNhom" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="PL_PhanQuyenNhom" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/PhanQuyenNhom" partnerLinkType="tns:PhanQuyenNhom" myRole="PhanQuyenNhomPortTypeRole"/>
+    </partnerLinks>
+    <variables>
+        <variable name="PhanQuyenNhomOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_PhanQuyenNhom" messageType="tns:outputMsg"/>
+        <variable name="PhanQuyenNhomIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_PhanQuyenNhom" messageType="tns:inputMsg"/>
+        <variable name="TimIdNhomTuTenNhomOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_TimIdNhomTuTenNhom" messageType="tns:outputMsg"/>
+        <variable name="TimIdNhomTuTenNhomIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_TimIdNhomTuTenNhom" messageType="tns:inputMsg"/>
+        <variable name="PhanQuyenNhomOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/PhanQuyenNhom" messageType="tns:PhanQuyenNhomOperationResponse"/>
+        <variable name="PhanQuyenNhomOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/PhanQuyenNhom" messageType="tns:PhanQuyenNhomOperationRequest"/>
+    </variables>
+    <sequence>
+        <receive name="Receive1" createInstance="yes" partnerLink="PL_PhanQuyenNhom" operation="PhanQuyenNhomOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/PhanQuyenNhom" portType="tns:PhanQuyenNhomPortType" variable="PhanQuyenNhomOperationIn"/>
+        <assign name="Assign1">
+            <copy>
+                <from variable="PhanQuyenNhomOperationIn" part="tenNhom"/>
+                <to>$TimIdNhomTuTenNhomIn.part/ns0:tennhom</to>
+            </copy>
+        </assign>
+        <invoke name="Invoke1" partnerLink="PL_DB_TimIdNhomTuTenNhom" operation="execute" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_TimIdNhomTuTenNhom" portType="tns:jdbcPortType" inputVariable="TimIdNhomTuTenNhomIn" outputVariable="TimIdNhomTuTenNhomOut"/>
+        <assign name="Assign2">
+            <copy>
+                <from variable="PhanQuyenNhomOperationIn" part="idQuyen"/>
+                <to>$PhanQuyenNhomIn.part/ns0:quyens_id_quyen</to>
+            </copy>
+            <copy>
+                <from>$TimIdNhomTuTenNhomOut.part/ns0:returnValue</from>
+                <to>$PhanQuyenNhomIn.part/ns0:nhoms_id_nhom</to>
+            </copy>
+        </assign>
+        <invoke name="Invoke2" partnerLink="PL_DB_PhanQuyenNhom" operation="execute" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_PhanQuyenNhom" portType="tns:jdbcPortType" inputVariable="PhanQuyenNhomIn" outputVariable="PhanQuyenNhomOut"/>
+        <assign name="Assign3">
+            <copy>
+                <from>$PhanQuyenNhomOut.part/ns0:returnValue</from>
+                <to variable="PhanQuyenNhomOperationOut" part="idNhom"/>
+            </copy>
+        </assign>
+        <reply name="Reply1" partnerLink="PL_PhanQuyenNhom" operation="PhanQuyenNhomOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/PhanQuyenNhom" portType="tns:PhanQuyenNhomPortType" variable="PhanQuyenNhomOperationOut"/>
+    </sequence>
+</process>
+
