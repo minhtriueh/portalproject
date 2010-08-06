@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jbi xmlns="http://java.sun.com/xml/ns/jbi" xmlns:ns1="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/TaoTruong" xmlns:ns10="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoTruong" xmlns:ns2="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_TaoTruong" xmlns:ns3="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/TaoKhoiLop" xmlns:ns4="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_TaoKhoiLop" xmlns:ns5="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/TaoCoSo" xmlns:ns6="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_TaoCoSo" xmlns:ns7="QuanLyTruongLopComApp" xmlns:ns8="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoKhoiLop" xmlns:ns9="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoCoSo" version="1.0">
+    <services binding-component="true">
+        <consumes endpoint-name="TaoKhoiLop" interface-name="ns8:TaoKhoiLopPortType" service-name="ns7:QuanLyTruongLopComAppService2"/>
+        <consumes endpoint-name="TaoCoSo" interface-name="ns9:TaoCoSoPortType" service-name="ns7:QuanLyTruongLopComAppService3"/>
+        <consumes endpoint-name="TaoTruong" interface-name="ns10:TaoTruongPortType" service-name="ns7:QuanLyTruongLopComAppService1"/>
+    </services>
+</jbi>
