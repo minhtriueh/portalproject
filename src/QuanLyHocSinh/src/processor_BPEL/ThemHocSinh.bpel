@@ -9,13 +9,18 @@
     xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
     xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor"
     xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2" xmlns:ns0="http://j2ee.netbeans.org/xsd/tableSchema">
-    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/ThemHocSinh" location="../interface_WSDL/ThemHocSinh.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/ThemHocSinh" location="../interface_WSDL/HocSinh/ThemHocSinh.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_TaoHocSinh" location="../DB_WSDL/insert/DB_TaoHocSinh.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
-    <partnerLinks>
-        <partnerLink name="PartnerLink2" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_TaoHocSinh" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+   
+    
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoQueQuan" location="QuanLyDiaChi/interface_WSDL/TaoDiaChi/TaoQueQuan.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/><partnerLinks>
+    <partnerLink name="PartnerLink3" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoQueQuan" partnerLinkType="tns:TaoQueQuan" partnerRole="TaoQueQuanPortTypeRole"/>
+    <partnerLink name="PartnerLink2" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_TaoHocSinh" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
         <partnerLink name="PartnerLink1" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/ThemHocSinh" partnerLinkType="tns:ThemHocSinh" myRole="ThemHocSinhPortTypeRole"/>
     </partnerLinks>
     <variables>
+        <variable name="TaoQueQuanOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoQueQuan" messageType="tns:TaoQueQuanOperationResponse"/>
+        <variable name="TaoQueQuanOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoQueQuan" messageType="tns:TaoQueQuanOperationRequest"/>
         <variable name="ExecuteOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_TaoHocSinh" messageType="tns:outputMsg"/>
         <variable name="ExecuteIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_TaoHocSinh" messageType="tns:inputMsg"/>
         <variable name="ThemHocSinhOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/ThemHocSinh" messageType="tns:ThemHocSinhOperationResponse"/>
@@ -23,6 +28,29 @@
     </variables>
     <sequence>
         <receive name="Receive1" createInstance="yes" partnerLink="PartnerLink1" operation="ThemHocSinhOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/ThemHocSinh" portType="tns:ThemHocSinhPortType" variable="ThemHocSinhOperationIn"/>
+        <assign name="Assign3">
+            <copy>
+                <from variable="ThemHocSinhOperationIn" part="quequan"/>
+                <to variable="TaoQueQuanOperationIn" part="quequan"/>
+            </copy>
+            <copy>
+                <from variable="ThemHocSinhOperationIn" part="id_quanhuyenthanhpho_qq"/>
+                <to variable="TaoQueQuanOperationIn" part="id_quanhuyenthanhpho"/>
+            </copy>
+            <copy>
+                <from variable="ThemHocSinhOperationIn" part="id_xaphuongthitran_qq"/>
+                <to variable="TaoQueQuanOperationIn" part="id_xaphuongthitran"/>
+            </copy>
+            <copy>
+                <from variable="ThemHocSinhOperationIn" part="id_thonxom_qq"/>
+                <to variable="TaoQueQuanOperationIn" part="id_thonxom"/>
+            </copy>
+            <copy>
+                <from variable="ThemHocSinhOperationIn" part="id_tinh_qq"/>
+                <to variable="TaoQueQuanOperationIn" part="id_tinh"/>
+            </copy>
+        </assign>
+        <invoke name="Invoke2" partnerLink="PartnerLink3" operation="TaoQueQuanOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoQueQuan" portType="tns:TaoQueQuanPortType" inputVariable="TaoQueQuanOperationIn" outputVariable="TaoQueQuanOperationOut"/>
         <assign name="Assign1">
             <copy>
                 <from variable="ThemHocSinhOperationIn" part="username"/>
@@ -109,12 +137,12 @@
                 <to>$ExecuteIn.part/ns0:id_khuvuc_</to>
             </copy>
             <copy>
-                <from variable="ThemHocSinhOperationIn" part="id_quequan"/>
-                <to>$ExecuteIn.part/ns0:id_quequan_</to>
-            </copy>
-            <copy>
                 <from variable="ThemHocSinhOperationIn" part="id_tinh"/>
                 <to>$ExecuteIn.part/ns0:id_tinh_</to>
+            </copy>
+            <copy>
+                <from variable="TaoQueQuanOperationOut" part="id"/>
+                <to>$ExecuteIn.part/ns0:id_quequan_</to>
             </copy>
         </assign>
         <invoke name="Invoke1" partnerLink="PartnerLink2" operation="execute" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_TaoHocSinh" portType="tns:jdbcPortType" inputVariable="ExecuteIn" outputVariable="ExecuteOut"/>
@@ -127,5 +155,9 @@
         <reply name="Reply1" partnerLink="PartnerLink1" operation="ThemHocSinhOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/ThemHocSinh" portType="tns:ThemHocSinhPortType" variable="ThemHocSinhOperationOut"/>
     </sequence>
 </process>
+
+
+
+
 
 
