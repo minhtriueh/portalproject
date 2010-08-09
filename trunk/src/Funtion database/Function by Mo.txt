@@ -1,0 +1,294 @@
+﻿-- Function: doimatkhau(character, bigint)
+
+-- DROP FUNCTION doimatkhau(character, bigint);
+
+CREATE OR REPLACE FUNCTION doimatkhau("password" character, id_nguoidung bigint)
+  RETURNS bigint AS
+$BODY$UPDATE nguoidung
+   SET "password"=$1
+ WHERE id_nguoidung=$2 returning id_nguoidung
+;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION doimatkhau(character, bigint) OWNER TO postgres;
+
+
+
+-- Function: kiemtradangnhap(character, character)
+
+-- DROP FUNCTION kiemtradangnhap(character, character);
+
+CREATE OR REPLACE FUNCTION kiemtradangnhap("password" character, username character)
+  RETURNS bigint AS
+$BODY$SELECT 
+  nguoidung.id_nguoidung
+FROM 
+  public.nguoidung
+WHERE 
+  nguoidung."password" = $1 AND 
+  nguoidung.username = $2;$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION kiemtradangnhap(character, character) OWNER TO postgres;
+
+
+
+-- Function: suanguoidung(character, character, bigint)
+
+-- DROP FUNCTION suanguoidung(character, character, bigint);
+
+CREATE OR REPLACE FUNCTION suanguoidung("password" character, username character, id_nguoidung bigint)
+  RETURNS bigint AS
+$BODY$UPDATE nguoidung
+   SET "password"=$1, username=$2
+ WHERE id_nguoidung=$3 returning id_nguoidung;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION suanguoidung(character, character, bigint) OWNER TO postgres;
+
+
+
+-- Function: suanguoidungnhom(bigint, bigint)
+
+-- DROP FUNCTION suanguoidungnhom(bigint, bigint);
+
+CREATE OR REPLACE FUNCTION suanguoidungnhom(nhoms_id_nhom bigint, nguoidungs_id_nguoidung bigint)
+  RETURNS bigint AS
+$BODY$UPDATE nguoidung_nhom
+   SET nhoms_id_nhom=$1
+ WHERE nguoidungs_id_nguoidung=$2 returning nguoidungs_id_nguoidung;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION suanguoidungnhom(bigint, bigint) OWNER TO postgres;
+
+
+
+-- Function: suanhom(character, character, bigint)
+
+-- DROP FUNCTION suanhom(character, character, bigint);
+
+CREATE OR REPLACE FUNCTION suanhom(mota character, tennhom character, id_nhom bigint)
+  RETURNS bigint AS
+$BODY$UPDATE nhom
+   SET mota=$1, tennhom=$2
+ WHERE id_nhom=$3 returning id_nhom;$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION suanhom(character, character, bigint) OWNER TO postgres;
+
+
+
+-- Function: suanhomtunguoidung(bigint, bigint)
+
+-- DROP FUNCTION suanhomtunguoidung(bigint, bigint);
+
+CREATE OR REPLACE FUNCTION suanhomtunguoidung(nhoms_id_nhom bigint, nguoidungs_id_nguoidung bigint)
+  RETURNS bigint AS
+$BODY$UPDATE nguoidung_nhom SET nhoms_id_nhom = $1 
+where nguoidungs_id_nguoidung=$2 returning nguoidungs_id_nguoidung;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION suanhomtunguoidung(bigint, bigint) OWNER TO postgres;
+
+
+
+-- Function: themnguoidung(date, character, character)
+
+-- DROP FUNCTION themnguoidung(date, character, character);
+
+CREATE OR REPLACE FUNCTION themnguoidung(ngaytao date, "password" character, username character)
+  RETURNS bigint AS
+$BODY$INSERT INTO nguoidung(
+            ngaytao, "password", username)
+    VALUES ($1,$2,$3) returning id_nguoidung;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION themnguoidung(date, character, character) OWNER TO postgres;
+
+
+
+-- Function: themnguoidungnhom(bigint, bigint)
+
+-- DROP FUNCTION themnguoidungnhom(bigint, bigint);
+
+CREATE OR REPLACE FUNCTION themnguoidungnhom(nguoidungs_id_nguoidung bigint, nhoms_id_nhom bigint)
+  RETURNS bigint AS
+$BODY$INSERT INTO nguoidung_nhom(
+            nguoidungs_id_nguoidung, nhoms_id_nhom)
+    VALUES ($1,$2) returning nguoidungs_id_nguoidung;$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION themnguoidungnhom(bigint, bigint) OWNER TO postgres;
+
+
+
+-- Function: themnguoidungquyen(bigint, bigint)
+
+-- DROP FUNCTION themnguoidungquyen(bigint, bigint);
+
+CREATE OR REPLACE FUNCTION themnguoidungquyen(nguoidungs_id_nguoidung bigint, quyens_id_quyen bigint)
+  RETURNS bigint AS
+$BODY$INSERT INTO nguoidung_quyen(
+            nguoidungs_id_nguoidung, quyens_id_quyen)
+    VALUES ($1, $2) returning nguoidungs_id_nguoidung;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION themnguoidungquyen(bigint, bigint) OWNER TO postgres;
+
+
+
+-- Function: themnhom(character, character)
+
+-- DROP FUNCTION themnhom(character, character);
+
+CREATE OR REPLACE FUNCTION themnhom(mota character, tennhom character)
+  RETURNS bigint AS
+$BODY$INSERT INTO nhom(
+            mota, tennhom)
+    VALUES ($1,$2) returning id_nhom;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION themnhom(character, character) OWNER TO postgres;
+
+
+
+-- Function: themnhomquyen(bigint, bigint)
+
+-- DROP FUNCTION themnhomquyen(bigint, bigint);
+
+CREATE OR REPLACE FUNCTION themnhomquyen(nhoms_id_nhom bigint, quyens_id_quyen bigint)
+  RETURNS bigint AS
+$BODY$INSERT INTO nhom_quyen(
+            nhoms_id_nhom, quyens_id_quyen)
+    VALUES ($1, $2) returning nhoms_id_nhom;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION themnhomquyen(bigint, bigint) OWNER TO postgres;
+
+
+
+-- Function: timidnguoidungtuusername(character)
+
+-- DROP FUNCTION timidnguoidungtuusername(character);
+
+CREATE OR REPLACE FUNCTION timidnguoidungtuusername(username character)
+  RETURNS bigint AS
+$BODY$SELECT id_nguoidung
+  FROM nguoidung where username=$1;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION timidnguoidungtuusername(character) OWNER TO postgres;
+
+
+
+-- Function: timidnhomtuidnguoidung(bigint)
+
+-- DROP FUNCTION timidnhomtuidnguoidung(bigint);
+
+CREATE OR REPLACE FUNCTION timidnhomtuidnguoidung(nguoidungs_id_nguoidung bigint)
+  RETURNS bigint AS
+$BODY$SELECT nhoms_id_nhom
+  FROM nguoidung_nhom where nguoidungs_id_nguoidung=$1;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION timidnhomtuidnguoidung(bigint) OWNER TO postgres;
+
+
+
+-- Function: timidquyentutenquyen(character)
+
+-- DROP FUNCTION timidquyentutenquyen(character);
+
+CREATE OR REPLACE FUNCTION timidquyentutenquyen(tenquyen character)
+  RETURNS bigint AS
+$BODY$SELECT id_quyen FROM quyen where tenquyen=$1;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION timidquyentutenquyen(character) OWNER TO postgres;
+
+
+
+-- Function: timidtutennhom(character)
+
+-- DROP FUNCTION timidtutennhom(character);
+
+CREATE OR REPLACE FUNCTION timidtutennhom(tennhom character)
+  RETURNS bigint AS
+$BODY$SELECT id_nhom
+  FROM nhom where tennhom= $1;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION timidtutennhom(character) OWNER TO postgres;
+
+
+
+-- Function: uyquyen(bigint, bigint, boolean)
+
+-- DROP FUNCTION uyquyen(bigint, bigint, boolean);
+
+CREATE OR REPLACE FUNCTION uyquyen(nguoidungs_id_nguoidung bigint, quyens_id_quyen bigint, uyquyen boolean)
+  RETURNS bigint AS
+$BODY$INSERT INTO nguoidung_quyen(
+            nguoidungs_id_nguoidung, quyens_id_quyen, uyquyen)
+    VALUES ($1, $2, $3) returning nguoidungs_id_nguoidung;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION uyquyen(bigint, bigint, boolean) OWNER TO postgres;
+
+
+-- Function: xoanguoidung(bigint)
+
+-- DROP FUNCTION xoanguoidung(bigint);
+
+CREATE OR REPLACE FUNCTION xoanguoidung(id_nguoidung bigint)
+  RETURNS bigint AS
+$BODY$DELETE FROM nguoidung
+ WHERE id_nguoidung=$1 returning id_nguoidung;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION xoanguoidung(bigint) OWNER TO postgres;
+
+
+
+-- Function: xoanguoidungnhom(bigint)
+
+-- DROP FUNCTION xoanguoidungnhom(bigint);
+
+CREATE OR REPLACE FUNCTION xoanguoidungnhom(nguoidungs_id_nguoidung bigint)
+  RETURNS bigint AS
+$BODY$DELETE FROM nguoidung_nhom
+ WHERE nguoidungs_id_nguoidung=$1 returning nguoidungs_id_nguoidung;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION xoanguoidungnhom(bigint) OWNER TO postgres;
+
+
+
+-- Function: xoanhom(bigint)
+
+-- DROP FUNCTION xoanhom(bigint);
+
+CREATE OR REPLACE FUNCTION xoanhom(id_nhom bigint)
+  RETURNS bigint AS
+$BODY$DELETE FROM nhom
+ WHERE id_nhom=$1 returning id_nhom;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION xoanhom(bigint) OWNER TO postgres;
+
