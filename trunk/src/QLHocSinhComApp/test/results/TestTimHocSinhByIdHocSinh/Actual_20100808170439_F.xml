@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP-ENV:Body>
+    <m:TimHocSinhByIdHocSinhOperationResponse xmlns:m="QLHocSinhComApp" xmlns:msgns="http://j2ee.netbeans.org/wsdl/QLHocSinh/TimHocSinhByIdHocSinh">
+      <result>
+        <ns1:tenHocSinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject" isNull="false">chinh mamamamnenenen</ns1:tenHocSinh>
+        <ns1:ngaySinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject" isNull="false">2008-09-29</ns1:ngaySinh>
+        <ns1:gioiTinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject" isNull="false">nam</ns1:gioiTinh>
+        <ns1:soNha xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject" isNull="false">443 khu pho 3</ns1:soNha>
+        <ns1:tonGiao xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject" isNull="false">khong</ns1:tonGiao>
+        <ns1:hinhAnh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject" isNull="false">url hinh anh</ns1:hinhAnh>
+        <ns1:ketNapDoi xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject" isNull="false">t</ns1:ketNapDoi>
+        <ns1:ngayVaoDoi xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject" isNull="false">2004-02-15</ns1:ngayVaoDoi>
+        <ns1:ketNapDoan xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject" isNull="false">t</ns1:ketNapDoan>
+        <ns1:ngayVaoDoan xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject" isNull="false">2008-11-15</ns1:ngayVaoDoan>
+        <ns1:ghiChu xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject" isNull="false">ghi chu</ns1:ghiChu>
+        <ns1:diaChiHienTai xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:ThonXom>
+            <ns1:tenThonXom isNull="false">khu pho 5</ns1:tenThonXom>
+          </ns1:ThonXom>
+          <ns1:XaPhuongThiTran>
+            <ns1:tenXaPhuongThiTran isNull="false">Ben cau</ns1:tenXaPhuongThiTran>
+          </ns1:XaPhuongThiTran>
+          <ns1:QuanHuyenThanhPho>
+            <ns1:tenQuanHuyenThanhPho isNull="false">Ben cau</ns1:tenQuanHuyenThanhPho>
+          </ns1:QuanHuyenThanhPho>
+          <ns1:Tinh>
+            <ns1:tenTinh isNull="false">Tay Ninh</ns1:tenTinh>
+          </ns1:Tinh>
+        </ns1:diaChiHienTai>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:tenDanToc isNull="false">kinh</ns1:tenDanToc>
+          <ns1:danTocThieuSo isNull="false">f</ns1:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:LoaiHocSinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:tenLoaiHocSinh isNull="false">hs moi</ns1:tenLoaiHocSinh>
+          <ns1:moTa isNull="false">hoc sinh moi vo</ns1:moTa>
+        </ns1:LoaiHocSinh>
+        <ns1:CheDoUuTien xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:tenCheDoUuTien isNull="false">con benh binh</ns1:tenCheDoUuTien>
+          <ns1:phanTramDuocGiam isNull="false">20</ns1:phanTramDuocGiam>
+          <ns1:chuThich isNull="false">chu thich che do uu tien</ns1:chuThich>
+        </ns1:CheDoUuTien>
+        <ns1:ThanhPhanGiaDinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:ChiTietThanhPhanGiaDinh>
+            <ns1:id isNull="false">1</ns1:id>
+            <ns1:tenQuanHe isNull="false">cha con</ns1:tenQuanHe>
+            <ns1:hoTen isNull="false">nguyen huu duy</ns1:hoTen>
+            <ns1:ngaySinh isNull="false">2017-05-15</ns1:ngaySinh>
+            <ns1:ngheNghiep isNull="false">kinh doanh</ns1:ngheNghiep>
+          </ns1:ChiTietThanhPhanGiaDinh>
+          <ns1:ChiTietThanhPhanGiaDinh>
+            <ns1:id isNull="false">2</ns1:id>
+            <ns1:tenQuanHe isNull="false">me con</ns1:tenQuanHe>
+            <ns1:hoTen isNull="false">nguyen thi chinh</ns1:hoTen>
+            <ns1:ngaySinh isNull="false">2017-05-15</ns1:ngaySinh>
+            <ns1:ngheNghiep isNull="false">ke toan</ns1:ngheNghiep>
+          </ns1:ChiTietThanhPhanGiaDinh>
+        </ns1:ThanhPhanGiaDinh>
+        <ns1:QueQuan xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">6</ns1:id>
+          <ns1:queQuan isNull="false">que quan cua hoc sinh</ns1:queQuan>
+          <ns1:ThonXom>
+            <ns1:tenThonXom isNull="false">khu pho 5</ns1:tenThonXom>
+          </ns1:ThonXom>
+          <ns1:XaPhuongThiTran>
+            <ns1:tenXaPhuongThiTran isNull="false">Ben cau</ns1:tenXaPhuongThiTran>
+          </ns1:XaPhuongThiTran>
+          <ns1:QuanHuyenThanhPho>
+            <ns1:tenQuanHuyenThanhPho isNull="false">Ben cau</ns1:tenQuanHuyenThanhPho>
+          </ns1:QuanHuyenThanhPho>
+          <ns1:Tinh>
+            <ns1:tenTinh isNull="false">Tay Ninh</ns1:tenTinh>
+          </ns1:Tinh>
+        </ns1:QueQuan>
+        <ns1:NguoiDung xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:username isNull="false">chchchchchc</ns1:username>
+          <ns1:password isNull="false">1111222333</ns1:password>
+          <ns1:ngayTao isNull="false">2010-08-08</ns1:ngayTao>
+        </ns1:NguoiDung>
+        <ns1:Lop xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:tenLop isNull="false">lop 9a3</ns1:tenLop>
+          <ns1:siSoLop isNull="false">20</ns1:siSoLop>
+        </ns1:Lop>
+        <ns1:KhuVuc xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:tenKhuVuc isNull="false">khu vuc 1</ns1:tenKhuVuc>
+          <ns1:moTa isNull="false">Khu vuc uu tien</ns1:moTa>
+          <ns1:ThonXom>
+            <ns1:tenThonXom isNull="false">khu pho 5</ns1:tenThonXom>
+          </ns1:ThonXom>
+        </ns1:KhuVuc>
+      </result>
+    </m:TimHocSinhByIdHocSinhOperationResponse>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

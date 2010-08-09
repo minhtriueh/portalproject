@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process
+    name="TimHocSinhByIdHocSinh"
+    targetNamespace="http://enterprise.netbeans.org/bpel/QLHocSinh/TimHocSinhByIdHocSinh"
+    xmlns:tns="http://enterprise.netbeans.org/bpel/QLHocSinh/TimHocSinhByIdHocSinh"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
+    xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor"
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2" xmlns:ns0="http://j2ee.netbeans.org/xsd/tableSchema" xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+    <import namespace="http://j2ee.netbeans.org/wsdl/QLHocSinh/TimHocSinhByIdHocSinh" location="../interface_WSDL/TimHocSinhByIdHocSinh.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_loadHocSinhByIdHocSinh" location="../DB_WSDL/find/DB_loadHocSinhByIdHocSinh.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_loadQueQuanByID" location="../DB_WSDL/find/DB_loadQueQuanByID.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_loadThanhPhanGiaDinhByIDHocSinh" location="../DB_WSDL/find/DB_loadThanhPhanGiaDinhByIDHocSinh.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <partnerLinks>
+        <partnerLink name="PartnerLink2" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_loadHocSinhByIdHocSinh" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="loadquequan" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_loadQueQuanByID" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="loadTPGD" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_loadThanhPhanGiaDinhByIDHocSinh" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="PartnerLink1" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/TimHocSinhByIdHocSinh" partnerLinkType="tns:TimHocSinhByIdHocSinh" myRole="TimHocSinhByIdHocSinhPortTypeRole"/>
+    </partnerLinks>
+    <variables>
+        <variable name="loadTPGD_OperationOut1" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_loadThanhPhanGiaDinhByIDHocSinh" messageType="tns:outputMsg">
+            <sxed2:editor>
+                <sxed2:predicate path="$loadTPGD_OperationOut1.part/ns0:DB_loadThanhPhanGiaDinhByIDHocSinh_Record[$ForEach1Counter]" source="from"/>
+            </sxed2:editor>
+        </variable>
+        <variable name="loadTPGD_OperationIn1" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_loadThanhPhanGiaDinhByIDHocSinh" messageType="tns:inputMsg"/>
+        <variable name="loadquequan_OperationOut1" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_loadQueQuanByID" messageType="tns:outputMsg"/>
+        <variable name="loadquequan_OperationIn1" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_loadQueQuanByID" messageType="tns:inputMsg"/>
+        <variable name="Newuntitled_OperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_loadHocSinhByIdHocSinh" messageType="tns:outputMsg"/>
+        <variable name="Newuntitled_OperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_loadHocSinhByIdHocSinh" messageType="tns:inputMsg"/>
+        <variable name="TimHocSinhByIdHocSinhOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/TimHocSinhByIdHocSinh" messageType="tns:TimHocSinhByIdHocSinhOperationResponse">
+            <sxed2:editor>
+                <sxed2:predicate path="$TimHocSinhByIdHocSinhOperationOut.result/ns1:ThanhPhanGiaDinh/ns1:ChiTietThanhPhanGiaDinh[$ForEach1Counter]" source="to"/>
+            </sxed2:editor>
+        </variable>
+        <variable name="TimHocSinhByIdHocSinhOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/TimHocSinhByIdHocSinh" messageType="tns:TimHocSinhByIdHocSinhOperationRequest"/>
+    </variables>
+    <sequence>
+        <receive name="Receive1" createInstance="yes" partnerLink="PartnerLink1" operation="TimHocSinhByIdHocSinhOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/TimHocSinhByIdHocSinh" portType="tns:TimHocSinhByIdHocSinhPortType" variable="TimHocSinhByIdHocSinhOperationIn"/>
+        <assign name="Assign1">
+            <copy>
+                <from variable="TimHocSinhByIdHocSinhOperationIn" part="idhocsinh"/>
+                <to>$Newuntitled_OperationIn.part/ns0:id_hocsinh</to>
+            </copy>
+        </assign>
+        <invoke name="Invoke1" partnerLink="PartnerLink2" operation="newuntitled_Operation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_loadHocSinhByIdHocSinh" portType="tns:jdbcPortType" inputVariable="Newuntitled_OperationIn" outputVariable="Newuntitled_OperationOut"/>
+        <assign name="Assign2">
+            <copy>
+                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:tenhocsinh</from>
+                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:tenHocSinh</to>
+            </copy>
+            <copy>
+                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:gioitinh</from>
+                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:gioiTinh</to>
+            </copy>
+            <copy>
+                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:ngaysinh</from>
+                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:ngaySinh</to>
+            </copy>
+            <copy>
+                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:sonha</from>
+                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:soNha</to>
+            </copy>
+            <copy>
+                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:tongiao</from>
+                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:tonGiao</to>
+            </copy>
+            <copy>
+                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:hinhanh</from>
+                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:hinhAnh</to>
+            </copy>
+            <copy>
+                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:ghichuhocsinh</from>
+                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:ghiChu</to>
+            </copy>
+            <copy>
+                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:ketnapdoan</from>
+                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:ketNapDoan</to>
+            </copy>
+            <copy>
+                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:ketnapdoi</from>
+                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:ketNapDoi</to>
+            </copy>
+            <copy>
+                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:ngayvaodoan</from>
+                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:ngayVaoDoan</to>
+            </copy>
+            <copy>
+                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:ngayvaodoi</from>
+                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:ngayVaoDoi</to>
+            </copy>
+            <copy>
+                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:tentinh</from>
+                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:diaChiHienTai/ns1:Tinh/ns1:tenTinh</to>
+            </copy>
+            <copy>
+                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:tenquanhuyenthanhpho</from>
+                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:diaChiHienTai/ns1:QuanHuyenThanhPho/ns1:tenQuanHuyenThanhPho</to>
+            </copy>
+            <copy>
+                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:tenxaphuongthitran</from>
+                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:diaChiHienTai/ns1:XaPhuongThiTran/ns1:tenXaPhuongThiTran</to>
+            </copy>
+            <copy>
+                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:tenthonxom</from>
+                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:diaChiHienTai/ns1:ThonXom/ns1:tenThonXom</to>
+            </copy>
+            <copy>
+                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:motaloaihocsinh</from>
+                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:LoaiHocSinh/ns1:moTa</to>
+            </copy>
+            <copy>
+                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:tenloaihocsinh</from>
+                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:LoaiHocSinh/ns1:tenLoaiHocSinh</to>
+            </copy>
+            <copy>
+                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:chuthichchedouutien</from>
+                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:CheDoUuTien/ns1:chuThich</to>
+            </copy>
+            <copy>
+                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:phantramduocgiam</from>
+                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:CheDoUuTien/ns1:phanTramDuocGiam</to>
+            </copy>
+            <copy>
+                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:tenchedouutien</from>
+                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:CheDoUuTien/ns1:tenCheDoUuTien</to>
+            </copy>
+            <copy>
+                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:ngaytao</from>
+                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:NguoiDung/ns1:ngayTao</to>
+            </copy>
+            <copy>
+                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:password</from>
+                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:NguoiDung/ns1:password</to>
+            </copy>
+            <copy>
+                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:username</from>
+                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:NguoiDung/ns1:username</to>
+            </copy>
+            <copy>
+                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:motakhuvuc</from>
+                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:KhuVuc/ns1:moTa</to>
+            </copy>
+            <copy>
+                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:tenkhuvuc</from>
+                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:KhuVuc/ns1:tenKhuVuc</to>
+            </copy>
+            <copy>
+                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:tenthonxom</from>
+                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:KhuVuc/ns1:ThonXom/ns1:tenThonXom</to>
+            </copy>
+            <copy>
+                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:dantocthieuso</from>
+                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:DanToc/ns1:danTocThieuSo</to>
+            </copy>
+            <copy>
+                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:tendantoc</from>
+                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:DanToc/ns1:tenDanToc</to>
+            </copy>
+            <copy>
+                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:tenlop</from>
+                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:Lop/ns1:tenLop</to>
+            </copy>
+            <copy>
+                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:sisolop</from>
+                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:Lop/ns1:siSoLop</to>
+            </copy>
+            <copy>
+                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:id_quequan</from>
+                <to>$loadquequan_OperationIn1.part/ns0:idquequan</to>
+            </copy>
+            <copy>
+                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:id_quequan</from>
+                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:QueQuan/ns1:id</to>
+            </copy>
+        </assign>
+        <invoke name="Invoke2" partnerLink="loadquequan" operation="newuntitled_Operation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_loadQueQuanByID" portType="tns:jdbcPortType" inputVariable="loadquequan_OperationIn1" outputVariable="loadquequan_OperationOut1"/>
+        <assign name="Assign3">
+            <copy>
+                <from>$loadquequan_OperationOut1.part/ns0:DB_loadQueQuanByID_Record/ns0:quequan</from>
+                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:QueQuan/ns1:queQuan</to>
+            </copy>
+            <copy>
+                <from>$loadquequan_OperationOut1.part/ns0:DB_loadQueQuanByID_Record/ns0:tentinh</from>
+                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:QueQuan/ns1:Tinh/ns1:tenTinh</to>
+            </copy>
+            <copy>
+                <from>$loadquequan_OperationOut1.part/ns0:DB_loadQueQuanByID_Record/ns0:tenthonxom</from>
+                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:QueQuan/ns1:ThonXom/ns1:tenThonXom</to>
+            </copy>
+            <copy>
+                <from>$loadquequan_OperationOut1.part/ns0:DB_loadQueQuanByID_Record/ns0:tenxaphuongthitran</from>
+                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:QueQuan/ns1:XaPhuongThiTran/ns1:tenXaPhuongThiTran</to>
+            </copy>
+            <copy>
+                <from>$loadquequan_OperationOut1.part/ns0:DB_loadQueQuanByID_Record/ns0:tenquanhuyenthanhpho</from>
+                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:QueQuan/ns1:QuanHuyenThanhPho/ns1:tenQuanHuyenThanhPho</to>
+            </copy>
+            <copy>
+                <from variable="TimHocSinhByIdHocSinhOperationIn" part="idhocsinh"/>
+                <to>$loadTPGD_OperationIn1.part/ns0:idhocsinh</to>
+            </copy>
+        </assign>
+        <invoke name="Invoke3" partnerLink="loadTPGD" operation="newuntitled_Operation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_loadThanhPhanGiaDinhByIDHocSinh" portType="tns:jdbcPortType" inputVariable="loadTPGD_OperationIn1" outputVariable="loadTPGD_OperationOut1"/>
+        <forEach name="ForEach1" parallel="no" counterName="ForEach1Counter">
+            <startCounterValue>1</startCounterValue>
+            <finalCounterValue>count($loadTPGD_OperationOut1.part/ns0:DB_loadThanhPhanGiaDinhByIDHocSinh_Record)</finalCounterValue>
+            <scope name="Scope1">
+                <assign name="Assign4">
+                    <copy>
+                        <from>$loadTPGD_OperationOut1.part/ns0:DB_loadThanhPhanGiaDinhByIDHocSinh_Record[$ForEach1Counter]/ns0:hoten
+                            <sxed2:editor>
+                                <sxed2:predicate path="$loadTPGD_OperationOut1.part/ns0:DB_loadThanhPhanGiaDinhByIDHocSinh_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:ThanhPhanGiaDinh/ns1:ChiTietThanhPhanGiaDinh[$ForEach1Counter]/ns1:hoTen
+                            <sxed2:editor>
+                                <sxed2:predicate path="$TimHocSinhByIdHocSinhOperationOut.result/ns1:ThanhPhanGiaDinh/ns1:ChiTietThanhPhanGiaDinh[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$loadTPGD_OperationOut1.part/ns0:DB_loadThanhPhanGiaDinhByIDHocSinh_Record[$ForEach1Counter]/ns0:ngaysinh
+                            <sxed2:editor>
+                                <sxed2:predicate path="$loadTPGD_OperationOut1.part/ns0:DB_loadThanhPhanGiaDinhByIDHocSinh_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:ThanhPhanGiaDinh/ns1:ChiTietThanhPhanGiaDinh[$ForEach1Counter]/ns1:ngaySinh
+                            <sxed2:editor>
+                                <sxed2:predicate path="$TimHocSinhByIdHocSinhOperationOut.result/ns1:ThanhPhanGiaDinh/ns1:ChiTietThanhPhanGiaDinh[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$loadTPGD_OperationOut1.part/ns0:DB_loadThanhPhanGiaDinhByIDHocSinh_Record[$ForEach1Counter]/ns0:nghenghiep
+                            <sxed2:editor>
+                                <sxed2:predicate path="$loadTPGD_OperationOut1.part/ns0:DB_loadThanhPhanGiaDinhByIDHocSinh_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:ThanhPhanGiaDinh/ns1:ChiTietThanhPhanGiaDinh[$ForEach1Counter]/ns1:ngheNghiep
+                            <sxed2:editor>
+                                <sxed2:predicate path="$TimHocSinhByIdHocSinhOperationOut.result/ns1:ThanhPhanGiaDinh/ns1:ChiTietThanhPhanGiaDinh[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$loadTPGD_OperationOut1.part/ns0:DB_loadThanhPhanGiaDinhByIDHocSinh_Record[$ForEach1Counter]/ns0:tenquanhe
+                            <sxed2:editor>
+                                <sxed2:predicate path="$loadTPGD_OperationOut1.part/ns0:DB_loadThanhPhanGiaDinhByIDHocSinh_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:ThanhPhanGiaDinh/ns1:ChiTietThanhPhanGiaDinh[$ForEach1Counter]/ns1:tenQuanHe
+                            <sxed2:editor>
+                                <sxed2:predicate path="$TimHocSinhByIdHocSinhOperationOut.result/ns1:ThanhPhanGiaDinh/ns1:ChiTietThanhPhanGiaDinh[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$loadTPGD_OperationOut1.part/ns0:DB_loadThanhPhanGiaDinhByIDHocSinh_Record[$ForEach1Counter]/ns0:id_thanhphangiadinh
+                            <sxed2:editor>
+                                <sxed2:predicate path="$loadTPGD_OperationOut1.part/ns0:DB_loadThanhPhanGiaDinhByIDHocSinh_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:ThanhPhanGiaDinh/ns1:ChiTietThanhPhanGiaDinh[$ForEach1Counter]/ns1:id
+                            <sxed2:editor>
+                                <sxed2:predicate path="$TimHocSinhByIdHocSinhOperationOut.result/ns1:ThanhPhanGiaDinh/ns1:ChiTietThanhPhanGiaDinh[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                </assign>
+            </scope>
+        </forEach>
+        <reply name="Reply1" partnerLink="PartnerLink1" operation="TimHocSinhByIdHocSinhOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/TimHocSinhByIdHocSinh" portType="tns:TimHocSinhByIdHocSinhPortType" variable="TimHocSinhByIdHocSinhOperationOut"/>
+    </sequence>
+</process>
+
+
+
+
+
