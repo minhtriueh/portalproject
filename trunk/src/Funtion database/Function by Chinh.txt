@@ -219,35 +219,34 @@ $BODY$
   COST 100;
 ALTER FUNCTION create_loaihocsinh(character, character) OWNER TO postgres;
 
--- Function: create_hocsinhtemp(character, character, character, boolean, boolean, date, date, date, character, character, character, bigint, bigint, bigint, bigint, bigint, bigint, bigint, bigint, bigint, bigint, bigint)
+-- Function: create_hocsinhtemp(character, character, character, boolean, boolean, date, date, date, character, character, character, bigint, bigint, bigint, bigint, bigint, bigint, bigint, bigint, bigint, bigint)
 
--- DROP FUNCTION create_hocsinhtemp(character, character, character, boolean, boolean, date, date, date, character, character, character, bigint, bigint, bigint, bigint, bigint, bigint, bigint, bigint, bigint, bigint, bigint);
+-- DROP FUNCTION create_hocsinhtemp(character, character, character, boolean, boolean, date, date, date, character, character, character, bigint, bigint, bigint, bigint, bigint, bigint, bigint, bigint, bigint, bigint);
 
-CREATE OR REPLACE FUNCTION create_hocsinhtemp(ghichu character, gioitinh character, hinhanh character, ketnapdoan boolean, ketnapdoi boolean, ngaysinh date, ngayvaodoan date, ngayvaodoi date, sonha character, tenhocsinh character, tongiao character, id_quequan bigint, id_thonxom bigint, id_loaihocsinh bigint, id_chedouutien bigint, id_nguoidung bigint, id_khuvuc bigint, id_tinh bigint, id_xaphuongthitran bigint, id_quanhuyenthanhpho bigint, id_dantoc bigint, id_lop bigint)
+CREATE OR REPLACE FUNCTION create_hocsinhtemp(ghichu character, gioitinh character, hinhanh character, ketnapdoan boolean, ketnapdoi boolean, ngaysinh date, ngayvaodoan date, ngayvaodoi date, sonha character, tenhocsinh character, tongiao character, id_quequan bigint, id_thonxom bigint, id_loaihocsinh bigint, id_chedouutien bigint, id_nguoidung bigint, id_khuvuc bigint, id_tinh bigint, id_xaphuongthitran bigint, id_quanhuyenthanhpho bigint, id_dantoc bigint)
   RETURNS bigint AS
 $BODY$INSERT INTO hocsinh(
             bixoahaychua,ghichu, gioitinh, hinhanh, ketnapdoan, 
             ketnapdoi, ngaysinh, ngayvaodoan, ngayvaodoi, sonha, tenhocsinh, 
             tongiao, id_quequan, id_thonxom, id_loaihocsinh, id_chedouutien, 
             id_nguoidung, id_khuvuc, id_tinh, id_xaphuongthitran, id_quanhuyenthanhpho, 
-            id_dantoc,id_lop)
+            id_dantoc)
 	    VALUES (
 		false,$1, $2,$3, $4, 
             $5, $6, $7, $8, $9, $10, 
             $11, $12, $13, $14, $15, 
             $16, $17, $18, $19, $20, 
-            $21,$22
+            $21
 	    ) returning id_hocsinh;
 $BODY$
-  LANGUAGE 'sql' VOLATILE
-  COST 100;
-ALTER FUNCTION create_hocsinhtemp(character, character, character, boolean, boolean, date, date, date, character, character, character, bigint, bigint, bigint, bigint, bigint, bigint, bigint, bigint, bigint, bigint, bigint) OWNER TO postgres;
+  LANGUAGE 'sql' VOLATILE;
+
 
 -- Function: create_hocsinh(character, character, character, boolean, boolean, date, date, date, character, character, character, bigint, bigint, bigint, bigint, bigint, bigint, bigint, bigint, bigint, bigint, character, character, character, bigint, bigint, bigint, bigint)
 
 -- DROP FUNCTION create_hocsinh(character, character, character, boolean, boolean, date, date, date, character, character, character, bigint, bigint, bigint, bigint, bigint, bigint, bigint, bigint, bigint, bigint, character, character, character, bigint, bigint, bigint, bigint);
 
-CREATE OR REPLACE FUNCTION create_hocsinh(ghichu_ character, gioitinh_ character, hinhanh_ character, ketnapdoan_ boolean, ketnapdoi_ boolean, ngaysinh_ date, ngayvaodoan_ date, ngayvaodoi_ date, sonha_ character, tenhocsinh_ character, tongiao_ character, id_quequan_ bigint, id_thonxom_ bigint, id_loaihocsinh_ bigint, id_chedouutien_ bigint, id_khuvuc_ bigint, id_tinh_ bigint, id_xaphuongthitran_ bigint, id_quanhuyenthanhpho_ bigint, id_dantoc_ bigint, id_lop_ bigint, username_ character, passwd_ character, quequan_ character, id_quanhuyenthanhpho_qq bigint, id_xaphuongthitran_qq bigint, id_thonxom_qq bigint, id_tinh_qq bigint)
+CREATE OR REPLACE FUNCTION create_hocsinh(ghichu_ character, gioitinh_ character, hinhanh_ character, ketnapdoan_ boolean, ketnapdoi_ boolean, ngaysinh_ date, ngayvaodoan_ date, ngayvaodoi_ date, sonha_ character, tenhocsinh_ character, tongiao_ character, id_quequan_ bigint, id_thonxom_ bigint, id_loaihocsinh_ bigint, id_chedouutien_ bigint, id_khuvuc_ bigint, id_tinh_ bigint, id_xaphuongthitran_ bigint, id_quanhuyenthanhpho_ bigint, id_dantoc_ bigint,  username_ character, passwd_ character, quequan_ character, id_quanhuyenthanhpho_qq bigint, id_xaphuongthitran_qq bigint, id_thonxom_qq bigint, id_tinh_qq bigint)
   RETURNS bigint AS
 $BODY$
 DECLARE
@@ -279,7 +278,7 @@ BEGIN
 					ketnapdoi_, ngaysinh_, ngayvaodoan_, ngayvaodoi_, sonha_, tenhocsinh_, 
 					tongiao_, idquequan, id_thonxom_, id_loaihocsinh_, id_chedouutien_, 
 					idnguoidung, id_khuvuc_, id_tinh_, id_xaphuongthitran_, id_quanhuyenthanhpho_, 
-					id_dantoc_,id_lop_
+					id_dantoc_
 					);
 	
 	
@@ -293,7 +292,7 @@ END;
 $BODY$
   LANGUAGE 'plpgsql' VOLATILE
   COST 100;
-ALTER FUNCTION create_hocsinh(character, character, character, boolean, boolean, date, date, date, character, character, character, bigint, bigint, bigint, bigint, bigint, bigint, bigint, bigint, bigint, bigint, character, character, character, bigint, bigint, bigint, bigint) OWNER TO postgres;
+
 
 
 
@@ -339,11 +338,11 @@ $BODY$INSERT INTO truong(diachitruong, dienthoaitruong, gioithieutruong, loaihin
   COST 100;
 ALTER FUNCTION create_truong(character, character, character, character, date, character, character) OWNER TO postgres;
 
--- Function: create_coso(character, character, character, date, date, date, bigint)
+-- Function: create_coso(character, character, character, date, character, character, bigint)
 
--- DROP FUNCTION create_coso(character, character, character, date, date, date, bigint);
+-- DROP FUNCTION create_coso(character, character, character, date, character, character, bigint);
 
-CREATE OR REPLACE FUNCTION create_coso(diachicoso character, dienthoaicoso character, gioithieucoso character, ngaythanhlapcoso date, tencoso date, websitecoso date, id_truong bigint)
+CREATE OR REPLACE FUNCTION create_coso(diachicoso character, dienthoaicoso character, gioithieucoso character, ngaythanhlapcoso date, tencoso character, websitecoso character, id_truong bigint)
   RETURNS bigint AS
 $BODY$INSERT INTO coso(
             diachicoso, dienthoaicoso, gioithieucoso, ngaythanhlapcoso, 
@@ -352,7 +351,7 @@ $BODY$INSERT INTO coso(
             $5, $6, $7) returning id_coso$BODY$
   LANGUAGE 'sql' VOLATILE
   COST 100;
-ALTER FUNCTION create_coso(character, character, character, date, date, date, bigint) OWNER TO postgres;
+
 
 -- Function: create_khoilop(character, bigint)
 
@@ -422,7 +421,7 @@ id_lop bigint;
 BEGIN
 	
 	--tao lop hoc
-	id_namhoc:=create_namhoc(1 , 2009 , 2008 );
+	id_namhoc:=create_namhoc(2009 , 2008 );
 	id_truong:=create_truong('dai chi truong' , '0987665544' , 'gioi thieu truong nay' , 'ban cong' ,CURRENT_DATE, 'Truong dan lap trinh dan' , 'www.hkhokho.net' );
 	id_coso:=create_coso('dai chi co so' , '089875656454' , 'gioi thieu co so ne' , CURRENT_DATE, 'ten co so ne' , 'www.sadasdada.com' , id_truong );
 	id_khoilop:=create_khoilop('khoi lop 9' , id_coso );
@@ -495,3 +494,49 @@ $BODY$INSERT INTO thanhphangiadinh(
   LANGUAGE 'sql' VOLATILE
   COST 100;
 ALTER FUNCTION create_thanhphangiadinh(character, date, character, character, bigint) OWNER TO postgres;
+
+-- Function: chuyenlop(bigint, bigint, bigint)
+
+-- DROP FUNCTION chuyenlop(bigint, bigint, bigint);
+
+CREATE OR REPLACE FUNCTION chuyenlop(id_hocsinh_ bigint, id_lopcu_ bigint, id_lopmoi_ bigint)
+  RETURNS boolean AS
+$BODY$
+BEGIN
+	LOOP
+	-- xoa hoc sinh ra lop cu
+	DELETE FROM danhsachlop WHERE id_hocsinh = id_hocsinh_ AND id_lop = id_lopcu_ ;
+	IF not found THEN
+	RETURN false;
+	END IF;
+	--them vao lop moi
+	BEGIN
+	INSERT INTO danhsachlop(id_hocsinh, id_lop) VALUES (id_hocsinh_, id_lopmoi_);
+	RETURN true;
+        EXCEPTION WHEN unique_violation THEN
+	RETURN false;
+	END;
+	END LOOP;
+END;
+$BODY$
+  LANGUAGE 'plpgsql' VOLATILE
+  COST 100;
+ALTER FUNCTION chuyenlop(bigint, bigint, bigint) OWNER TO postgres;
+
+-- Function: create_danhsachlop(bigint, bigint)
+
+-- DROP FUNCTION create_danhsachlop(bigint, bigint);
+
+CREATE OR REPLACE FUNCTION create_danhsachlop(id_hocsinh_ bigint, id_lop_ bigint)
+  RETURNS boolean AS
+$BODY$
+BEGIN
+	INSERT INTO danhsachlop(id_hocsinh, id_lop) VALUES (id_hocsinh_, id_lop_);
+	RETURN true;
+        EXCEPTION WHEN unique_violation THEN
+	RETURN false;
+END;
+$BODY$
+  LANGUAGE 'plpgsql' VOLATILE
+  COST 100;
+ALTER FUNCTION create_danhsachlop(bigint, bigint) OWNER TO postgres;
