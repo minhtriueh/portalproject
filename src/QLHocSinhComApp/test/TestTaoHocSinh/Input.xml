@@ -1,0 +1,50 @@
+<soapenv:Envelope xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:qlh="QLHocSinhComApp" xmlns:esc="http://xml.netbeans.org/schema/EschoolinkObject">
+  <soapenv:Body>
+    <qlh:ThemHocSinhOperation>
+      <username>chchchchchc</username>
+      <password>1111222333</password>
+      <tenHocSinh>chinh mamamamnenenen</tenHocSinh>
+      <ngaySinh>2008-09-29</ngaySinh>
+      <gioiTinh>nam</gioiTinh>
+      <diaChiNhaO>443 khu pho 3</diaChiNhaO>
+      <id_thonxom>1</id_thonxom>
+      <id_xaphuongthitran>1</id_xaphuongthitran>
+      <id_quanhuyenthanhpho>1</id_quanhuyenthanhpho>
+      <id_dantoc>1</id_dantoc>
+      <tonGiao>khong</tonGiao>
+      <hinhAnh>url hinh anh</hinhAnh>
+      <ketNapDoi>true</ketNapDoi>
+      <ngayVaoDoi>2004-02-15</ngayVaoDoi>
+      <ketNapDoan>true</ketNapDoan>
+      <ngayVaoDoan>2008-11-15</ngayVaoDoan>
+      <ghiChu>ghi chu</ghiChu>
+      <id_chedouutien>1</id_chedouutien>
+      <id_lop>1</id_lop>
+      <id_loaihocsinh>1</id_loaihocsinh>
+      <id_khuvuc>1</id_khuvuc>
+      <id_tinh>1</id_tinh>
+      <quequan>que quan cua hoc sinh</quequan>
+      <id_quanhuyenthanhpho_qq>1</id_quanhuyenthanhpho_qq>
+      <id_xaphuongthitran_qq>1</id_xaphuongthitran_qq>
+      <id_thonxom_qq>1</id_thonxom_qq>
+      <id_tinh_qq>1</id_tinh_qq>
+      <thanhPhanGiaDinh>
+        <!--1 or more repetitions:-->
+        <esc:ChiTietThanhPhanGiaDinh>
+          <esc:id>?10?</esc:id>
+          <esc:tenQuanHe>cha con</esc:tenQuanHe>
+          <esc:hoTen>nguyen huu duy</esc:hoTen>
+          <esc:ngaySinh>2017-05-15</esc:ngaySinh>
+          <esc:ngheNghiep>kinh doanh</esc:ngheNghiep>
+        </esc:ChiTietThanhPhanGiaDinh>
+        <esc:ChiTietThanhPhanGiaDinh>
+          <esc:id>?10?</esc:id>
+          <esc:tenQuanHe>me con</esc:tenQuanHe>
+          <esc:hoTen>nguyen thi chinh</esc:hoTen>
+          <esc:ngaySinh>2017-05-15</esc:ngaySinh>
+          <esc:ngheNghiep>ke toan</esc:ngheNghiep>
+        </esc:ChiTietThanhPhanGiaDinh>
+      </thanhPhanGiaDinh>
+    </qlh:ThemHocSinhOperation>
+  </soapenv:Body>
+</soapenv:Envelope>

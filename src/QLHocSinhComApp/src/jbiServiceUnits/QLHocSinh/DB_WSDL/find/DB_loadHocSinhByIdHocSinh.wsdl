@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="DB_loadHocSinhByIdHocSinh" targetNamespace="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_loadHocSinhByIdHocSinh" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:ns="http://j2ee.netbeans.org/xsd/tableSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_loadHocSinhByIdHocSinh" xmlns:plink="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/">
+  <types>
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/">
+            <xsd:import namespace="http://j2ee.netbeans.org/xsd/tableSchema" schemaLocation="../../DB_WSDL/find/XSD/DB_loadHocSinhByIDHocSinh.xsd"/>
+	</xsd:schema>
+  </types>
+  <message name="outputMsg">
+    <part name="part" element="ns:DB_loadHocSinhByIdHocSinh_Response"/>
+  </message>
+  <message name="inputMsg">
+    <part name="part" element="ns:DB_loadHocSinhByIdHocSinh_Request"/>
+  </message>
+  <portType name="jdbcPortType">
+    <operation name="newuntitled_Operation">
+      <input name="input" message="tns:inputMsg"/>
+      <output name="output" message="tns:outputMsg"/>
+    </operation>
+  </portType>
+  <binding name="binding" type="tns:jdbcPortType">
+    <jdbc:binding xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/"/>
+    <operation name="newuntitled_Operation">
+    <jdbc:operation xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/"/>
+      <input name="input">
+    <jdbc:input xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" MarkColumnName="" MarkColumnValue="" MoveRowToTableName="" PKName="" PollMilliSeconds="5000" PollingPostProcessing="MoveRow" TableName="DB_loadHocSinhByIdHocSinh" Transaction="NOTransaction" numberOfRecords="" operationType="DB_loadHocSinhByIdHocSinh_Operation" paramOrder="id_hocsinh" sql="SELECT
+  hocsinh.tenhocsinh,
+  hocsinh.gioitinh,
+  hocsinh.ngaysinh,
+  hocsinh.sonha,
+  hocsinh.tongiao,
+  hocsinh.hinhanh,
+  hocsinh.ghichu AS ghichuhocsinh,
+  hocsinh.ketnapdoan,
+  hocsinh.ketnapdoi,
+  hocsinh.ngayvaodoan,
+  hocsinh.ngayvaodoi,
+  tinh.tentinh,
+  quanhuyenthanhpho.tenquanhuyenthanhpho,
+  xaphuongthitran.tenxaphuongthitran,
+  thonxom.tenthonxom,
+  loaihocsinh.mota AS motaloaihocsinh,
+  loaihocsinh.tenloaihocsinh,
+  chedouutien.chuthich AS chuthichchedouutien,
+  chedouutien.phantramduocgiam,
+  chedouutien.tenchedouutien,
+  nguoidung.ngaytao,
+  nguoidung.password,
+  nguoidung.username,
+  khuvuc.mota AS motaKhuVuc,
+  khuvuc.tenkhuvuc,
+  dantoc.dantocthieuso,
+  dantoc.tendantoc,
+  lop.tenlop,
+  lop.sisolop,
+  quequan.id_quequan
+FROM
+  public.hocsinh,
+  public.lop,
+  public.nguoidung,
+  public.loaihocsinh,
+  public.chedouutien,
+  public.dantoc,
+  public.khuvuc,
+  public.tinh,
+  public.quequan,
+  public.thonxom,
+  public.xaphuongthitran,
+  public.quanhuyenthanhpho
+WHERE
+  hocsinh.id_quequan = quequan.id_quequan AND
+  hocsinh.id_thonxom = thonxom.id_thonxom AND
+  hocsinh.id_loaihocsinh = loaihocsinh.id_loaihocsinh AND
+  hocsinh.id_chedouutien = chedouutien.id_chedouutien AND
+  hocsinh.id_nguoidung = nguoidung.id_nguoidung AND
+  hocsinh.id_khuvuc = khuvuc.id_khuvuc AND
+  hocsinh.id_tinh = tinh.id_tinh AND
+  hocsinh.id_xaphuongthitran = xaphuongthitran.id_xaphuongthitran AND
+  hocsinh.id_quanhuyenthanhpho = quanhuyenthanhpho.id_quanhuyenthanhpho AND
+  hocsinh.id_dantoc = dantoc.id_dantoc AND
+  hocsinh.id_lop = lop.id_lop AND
+  hocsinh.id_hocsinh = ? "/>
+      </input>
+      <output name="output">
+    <jdbc:output xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" returnPartName="part"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="service">
+    <port name="port" binding="tns:binding">
+    <jdbc:address xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" jndiName="jdbc/eschoolinkdb"/>
+    </port>
+  </service>
+    <plink:partnerLinkType xmlns:plink="http://docs.oasis-open.org/wsbpel/2.0/plnktype" name="jdbcpartner">
+        <plink:role name="jdbcPortTypeRole" portType="tns:jdbcPortType"/>
+    </plink:partnerLinkType>
+</definitions>
+
+
