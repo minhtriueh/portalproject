@@ -203,16 +203,6 @@
               </xsd:simpleContent>
             </xsd:complexType>
           </xsd:element>
-          <xsd:element name="id_lop_">
-            <xsd:complexType>
-              <xsd:simpleContent>
-                <xsd:extension base="xsd:long">
-                  <xsd:attribute name="isNull" type="xsd:boolean"></xsd:attribute>
-                  <xsd:attribute name="isDefaultColumn" type="xsd:boolean"></xsd:attribute>
-                </xsd:extension>
-              </xsd:simpleContent>
-            </xsd:complexType>
-          </xsd:element>
           <xsd:element name="username_">
             <xsd:complexType>
               <xsd:simpleContent>

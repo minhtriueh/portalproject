@@ -12,12 +12,16 @@
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/ThemHocSinh" location="../interface_WSDL/ThemHocSinh.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
     <import namespace="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_ThemHocSinh" location="../DB_WSDL/insert/DB_ThemHocSinh.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
     <import namespace="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_TaoThanhPhanGiaDinh" location="../DB_WSDL/insert/DB_TaoThanhPhanGiaDinh.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QLHocSinh/XepLop" location="../interface_WSDL/XepLop.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
     <partnerLinks>
         <partnerLink name="PartnerLink2" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_ThemHocSinh" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
         <partnerLink name="PartnerLink3" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_TaoThanhPhanGiaDinh" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="PartnerLink4" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/XepLop" partnerLinkType="tns:XepLop" partnerRole="XepLopPortTypeRole"/>
         <partnerLink name="PartnerLink1" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/ThemHocSinh" partnerLinkType="tns:ThemHocSinh" myRole="ThemHocSinhPortTypeRole"/>
     </partnerLinks>
     <variables>
+        <variable name="XepLopOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/XepLop" messageType="tns:XepLopOperationResponse"/>
+        <variable name="XepLopOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/XepLop" messageType="tns:XepLopOperationRequest"/>
         <variable name="ExecuteOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_ThemHocSinh" messageType="tns:outputMsg"/>
         <variable name="ExecuteIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_ThemHocSinh" messageType="tns:inputMsg"/>
         <variable name="ThemHocSinhOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/ThemHocSinh" messageType="tns:ThemHocSinhOperationResponse"/>
@@ -103,10 +107,6 @@
                 <to>$ExecuteIn.part/ns0:id_chedouutien_</to>
             </copy>
             <copy>
-                <from variable="ThemHocSinhOperationIn" part="id_lop"/>
-                <to>$ExecuteIn.part/ns0:id_lop_</to>
-            </copy>
-            <copy>
                 <from variable="ThemHocSinhOperationIn" part="id_loaihocsinh"/>
                 <to>$ExecuteIn.part/ns0:id_loaihocsinh_</to>
             </copy>
@@ -140,6 +140,22 @@
             </copy>
         </assign>
         <invoke name="Invoke2" partnerLink="PartnerLink2" operation="execute" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_ThemHocSinh" portType="tns:jdbcPortType" inputVariable="ExecuteIn" outputVariable="ExecuteOut"/>
+        <if name="If1" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/XepLop">
+            <condition>$ThemHocSinhOperationIn.id_lop &gt; 0</condition>
+            <sequence name="Sequence4">
+                <assign name="Assign5">
+                    <copy>
+                        <from>$ExecuteOut.part/ns0:returnValue</from>
+                        <to variable="XepLopOperationIn" part="idHocSinh"/>
+                    </copy>
+                    <copy>
+                        <from variable="ThemHocSinhOperationIn" part="id_lop"/>
+                        <to variable="XepLopOperationIn" part="idLop"/>
+                    </copy>
+                </assign>
+                <invoke name="Invoke4" partnerLink="PartnerLink4" operation="XepLopOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/XepLop" portType="tns:XepLopPortType" inputVariable="XepLopOperationIn" outputVariable="XepLopOperationOut"/>
+            </sequence>
+        </if>
         <forEach name="ForEach1" parallel="no" counterName="ForEach1Counter">
             <startCounterValue>1</startCounterValue>
             <finalCounterValue>count($ThemHocSinhOperationIn.thanhPhanGiaDinh/ns1:ChiTietThanhPhanGiaDinh)</finalCounterValue>
@@ -201,6 +217,10 @@
         <reply name="Reply1" partnerLink="PartnerLink1" operation="ThemHocSinhOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/ThemHocSinh" portType="tns:ThemHocSinhPortType" variable="ThemHocSinhOperationOut"/>
     </sequence>
 </process>
+
+
+
+
 
 
 
