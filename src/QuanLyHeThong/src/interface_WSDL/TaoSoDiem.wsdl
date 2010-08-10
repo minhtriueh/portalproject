@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="TaoSoDiem" targetNamespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoSoDiem"
+    xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoSoDiem" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype">
+    <types/>
+    <message name="TaoSoDiemOperationRequest">
+        <part name="hocky" type="xsd:integer"/>
+        <part name="tensodiem" type="xsd:string"/>
+        <part name="idmonhoc" type="xsd:long"/>
+        <part name="idgiaovien" type="xsd:long"/>
+        <part name="idlop" type="xsd:long"/>
+        <part name="idnamhoc" type="xsd:long"/>
+    </message>
+    <message name="TaoSoDiemOperationResponse">
+        <part name="idsodiem" type="xsd:long"/>
+    </message>
+    <portType name="TaoSoDiemPortType">
+        <operation name="TaoSoDiemOperation">
+            <input name="input1" message="tns:TaoSoDiemOperationRequest"/>
+            <output name="output1" message="tns:TaoSoDiemOperationResponse"/>
+        </operation>
+    </portType>
+    <plnk:partnerLinkType name="TaoSoDiem">
+        <!-- A partner link type is automatically generated when a new port type is added. Partner link types are used by BPEL processes. 
+In a BPEL process, a partner link represents the interaction between the BPEL process and a partner service. Each partner link is associated with a partner link type.
+A partner link type characterizes the conversational relationship between two services. The partner link type can have one or two roles.-->
+        <plnk:role name="TaoSoDiemPortTypeRole" portType="tns:TaoSoDiemPortType"/>
+    </plnk:partnerLinkType>
+</definitions>
+
