@@ -1,4 +1,7 @@
-﻿-- Function: doimatkhau(character, bigint)
+﻿-- ALTER TABLE nguoidung_quyen ADD COLUMN uyquyen boolean DEFAULT false;
+
+
+-- Function: doimatkhau(character, bigint)
 
 -- DROP FUNCTION doimatkhau(character, bigint);
 
@@ -291,4 +294,81 @@ $BODY$
   LANGUAGE 'sql' VOLATILE
   COST 100;
 ALTER FUNCTION xoanhom(bigint) OWNER TO postgres;
+
+
+-- Function: taoloaidiem(bigint, character, character)
+
+-- DROP FUNCTION taoloaidiem(bigint, character, character);
+
+CREATE OR REPLACE FUNCTION taoloaidiem(heso bigint, kyhieu character, tenloaidiem character)
+  RETURNS bigint AS
+$BODY$INSERT INTO loaidiem(
+            heso, kyhieu, tenloaidiem)
+    VALUES ($1,$2,$3) returning id_loaidiem;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION taoloaidiem(bigint, character, character) OWNER TO postgres;
+
+
+-- Function: taosodiem(integer, character, bigint, bigint, bigint, bigint)
+
+-- DROP FUNCTION taosodiem(integer, character, bigint, bigint, bigint, bigint);
+
+CREATE OR REPLACE FUNCTION taosodiem(hocky integer, tensodiem character, id_monhoc bigint, id_giaovien bigint, id_lop bigint, id_namhoc bigint)
+  RETURNS bigint AS
+$BODY$INSERT INTO sodiem(
+            hocky, tensodiem, id_monhoc, id_giaovien, id_lop, id_namhoc)
+    VALUES ($1,$2,$3,$4,$5,$6) returning id_sodiem;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION taosodiem(integer, character, bigint, bigint, bigint, bigint) OWNER TO postgres;
+
+
+
+-- Function: taochitietsodiem(bigint, bigint, bigint)
+
+-- DROP FUNCTION taochitietsodiem(bigint, bigint, bigint);
+
+CREATE OR REPLACE FUNCTION taochitietsodiem(id_hocsinh bigint, id_lop bigint, id_sodiem bigint)
+  RETURNS bigint AS
+$BODY$INSERT INTO chitietsodiem(
+            id_hocsinh, id_lop, id_sodiem)
+    VALUES ($1,$2,$3) returning id_chitietsodiem;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION taochitietsodiem(bigint, bigint, bigint) OWNER TO postgres;
+
+
+-- Function: taosolanloaidiem(bigint, bigint)
+
+-- DROP FUNCTION taosolanloaidiem(bigint, bigint);
+
+CREATE OR REPLACE FUNCTION taosolanloaidiem(id_loaidiem bigint, lan bigint)
+  RETURNS bigint AS
+$BODY$INSERT INTO danhsachloaidiem(
+            id_loaidiem, lan)
+    VALUES ($1,$2) returning id_danhsachloaidiem;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION taosolanloaidiem(bigint, bigint) OWNER TO postgres;
+
+
+-- Function: taodiem(double precision, bigint, bigint)
+
+-- DROP FUNCTION taodiem(double precision, bigint, bigint);
+
+CREATE OR REPLACE FUNCTION taodiem(diem double precision, id_loaidiem bigint, id_chitietsodiem bigint)
+  RETURNS bigint AS
+$BODY$INSERT INTO diem(
+            diem, id_loaidiem, id_chitietsodiem)
+    VALUES ($1, $2, $3) returning id_diem;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION taodiem(double precision, bigint, bigint) OWNER TO postgres;
+
 
