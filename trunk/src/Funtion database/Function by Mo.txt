@@ -393,3 +393,27 @@ $BODY$
   LANGUAGE 'plpgsql' VOLATILE
   COST 100;
 ALTER FUNCTION suadiem(bigint, double precision, bigint ,bigint) OWNER TO postgres;
+
+
+-- Function: suadiemtrungbinh(bigint,double precision)
+
+-- DROP FUNCTION suadiemtrungbinh(bigint,double precision);
+
+CREATE OR REPLACE FUNCTION suadiemtrungbinh(id_chitietsodiemIn bigint, diemtrungbinhIn double precision)
+  RETURNS boolean AS
+$BODY$
+BEGIN
+	LOOP
+	UPDATE chitietsodiem SET diemtrungbinh=diemtrungbinhIn WHERE id_chitietsodiem=id_chitietsodiemIn;
+	IF found THEN
+            RETURN true;
+        END IF;
+        RETURN false;
+        END LOOP;
+END;
+$BODY$
+  LANGUAGE 'plpgsql' VOLATILE
+  COST 100;
+ALTER FUNCTION suadiemtrungbinh(bigint,double precision) OWNER TO postgres;
+
+
