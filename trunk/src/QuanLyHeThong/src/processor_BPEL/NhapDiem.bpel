@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process
+    name="NhapDiem"
+    targetNamespace="http://enterprise.netbeans.org/bpel/QuanLyDiem/NhapDiem"
+    xmlns:tns="http://enterprise.netbeans.org/bpel/QuanLyDiem/NhapDiem"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
+    xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor"
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2" xmlns:ns0="http://xml.netbeans.org/schema/LoaiDiem" xmlns:ns1="http://j2ee.netbeans.org/xsd/tableSchema">
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/NhapDiem" location="../interface_WSDL/NhapDiem.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_SuaDiem" location="../DB_WSDL/DB_SuaDiem.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <partnerLinks>
+        <partnerLink name="PL_DB_SuaDiem" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_SuaDiem" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="PL_NhapDiem" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/NhapDiem" partnerLinkType="tns:NhapDiem" myRole="NhapDiemPortTypeRole"/>
+    </partnerLinks>
+    <variables>
+        <variable name="NhapDiemOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/NhapDiem" messageType="tns:NhapDiemOperationResponse"/>
+        <variable name="SuaDiemOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_SuaDiem" messageType="tns:outputMsg"/>
+        <variable name="SuaDiemIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_SuaDiem" messageType="tns:inputMsg"/>
+        <variable name="NhapDiemOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/NhapDiem" messageType="tns:NhapDiemOperationRequest">
+            <sxed2:editor>
+                <sxed2:predicate path="$NhapDiemOperationIn.listDiem/ns0:Diem[$ForEach1Counter]" source="from"/>
+            </sxed2:editor>
+        </variable>
+    </variables>
+    <sequence>
+        <receive name="Receive1" createInstance="yes" partnerLink="PL_NhapDiem" operation="NhapDiemOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/NhapDiem" portType="tns:NhapDiemPortType" variable="NhapDiemOperationIn"/>
+        <forEach name="ForEach1" parallel="no" counterName="ForEach1Counter">
+            <startCounterValue>1</startCounterValue>
+            <finalCounterValue>count($NhapDiemOperationIn.listDiem/ns0:Diem)</finalCounterValue>
+            <scope name="Scope1">
+                <sequence name="Sequence1">
+                    <assign name="Assign3">
+                        <copy>
+                            <from>$NhapDiemOperationIn.listDiem/ns0:Diem[$ForEach1Counter]/ns0:id_diem
+                                <sxed2:editor>
+                                    <sxed2:predicate path="$NhapDiemOperationIn.listDiem/ns0:Diem[$ForEach1Counter]" source="from"/>
+                                </sxed2:editor>
+                            </from>
+                            <to>$SuaDiemIn.part/ns1:id_diemin</to>
+                        </copy>
+                        <copy>
+                            <from>$NhapDiemOperationIn.listDiem/ns0:Diem[$ForEach1Counter]/ns0:diem
+                                <sxed2:editor>
+                                    <sxed2:predicate path="$NhapDiemOperationIn.listDiem/ns0:Diem[$ForEach1Counter]" source="from"/>
+                                </sxed2:editor>
+                            </from>
+                            <to>$SuaDiemIn.part/ns1:diemin</to>
+                        </copy>
+                        <copy>
+                            <from>$NhapDiemOperationIn.listDiem/ns0:Diem[$ForEach1Counter]/ns0:id_loaidiem
+                                <sxed2:editor>
+                                    <sxed2:predicate path="$NhapDiemOperationIn.listDiem/ns0:Diem[$ForEach1Counter]" source="from"/>
+                                </sxed2:editor>
+                            </from>
+                            <to>$SuaDiemIn.part/ns1:id_loaidiemin</to>
+                        </copy>
+                        <copy>
+                            <from>$NhapDiemOperationIn.listDiem/ns0:Diem[$ForEach1Counter]/ns0:id_chitietsodiem
+                                <sxed2:editor>
+                                    <sxed2:predicate path="$NhapDiemOperationIn.listDiem/ns0:Diem[$ForEach1Counter]" source="from"/>
+                                </sxed2:editor>
+                            </from>
+                            <to>$SuaDiemIn.part/ns1:id_chitietsodiemin</to>
+                        </copy>
+                    </assign>
+                    <invoke name="Invoke1" partnerLink="PL_DB_SuaDiem" operation="execute" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_SuaDiem" portType="tns:jdbcPortType" inputVariable="SuaDiemIn" outputVariable="SuaDiemOut"/>
+                </sequence>
+            </scope>
+        </forEach>
+        <assign name="Assign2">
+            <copy>
+                <from>$SuaDiemOut.part/ns1:returnValue</from>
+                <to variable="NhapDiemOperationOut" part="nhapDiemBoolean"/>
+            </copy>
+        </assign>
+        <reply name="Reply1" partnerLink="PL_NhapDiem" operation="NhapDiemOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/NhapDiem" portType="tns:NhapDiemPortType" variable="NhapDiemOperationOut"/>
+    </sequence>
+</process>
+
