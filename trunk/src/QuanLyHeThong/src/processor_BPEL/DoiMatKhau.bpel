@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process
+    name="DoiMatKhau"
+    targetNamespace="http://enterprise.netbeans.org/bpel/QuanLyHeThong/DoiMatKhau"
+    xmlns:tns="http://enterprise.netbeans.org/bpel/QuanLyHeThong/DoiMatKhau"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
+    xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor"
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2" xmlns:ns0="http://j2ee.netbeans.org/xsd/tableSchema">
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DoiMatKhau" location="../interface_WSDL/DoiMatKhau.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_DoiMatKhau" location="../DB_WSDL/DB_DoiMatKhau.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <partnerLinks>
+        <partnerLink name="PL_DB_DoiMatKhau" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_DoiMatKhau" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="PL_DoiMatKhau" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DoiMatKhau" partnerLinkType="tns:DoiMatKhau" myRole="DoiMatKhauPortTypeRole"/>
+    </partnerLinks>
+    <variables>
+        <variable name="DoiMatKhauOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_DoiMatKhau" messageType="tns:outputMsg"/>
+        <variable name="DoiMatKhauIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_DoiMatKhau" messageType="tns:inputMsg"/>
+        <variable name="DoiMatKhauOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DoiMatKhau" messageType="tns:DoiMatKhauOperationResponse"/>
+        <variable name="DoiMatKhauOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DoiMatKhau" messageType="tns:DoiMatKhauOperationRequest"/>
+    </variables>
+    <sequence>
+        <receive name="Receive1" createInstance="yes" partnerLink="PL_DoiMatKhau" operation="DoiMatKhauOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DoiMatKhau" portType="tns:DoiMatKhauPortType" variable="DoiMatKhauOperationIn"/>
+        <assign name="Assign1">
+            <copy>
+                <from variable="DoiMatKhauOperationIn" part="matKhau"/>
+                <to>$DoiMatKhauIn.part/ns0:password</to>
+            </copy>
+            <copy>
+                <from variable="DoiMatKhauOperationIn" part="id_nguoiDung"/>
+                <to>$DoiMatKhauIn.part/ns0:id_nguoidung</to>
+            </copy>
+        </assign>
+        <invoke name="Invoke1" partnerLink="PL_DB_DoiMatKhau" operation="execute" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_DoiMatKhau" portType="tns:jdbcPortType" inputVariable="DoiMatKhauIn" outputVariable="DoiMatKhauOut"/>
+        <assign name="Assign2">
+            <copy>
+                <from>$DoiMatKhauOut.part/ns0:returnValue</from>
+                <to variable="DoiMatKhauOperationOut" part="id_nguoiDung"/>
+            </copy>
+        </assign>
+        <reply name="Reply1" partnerLink="PL_DoiMatKhau" operation="DoiMatKhauOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DoiMatKhau" portType="tns:DoiMatKhauPortType" variable="DoiMatKhauOperationOut"/>
+    </sequence>
+</process>
+
