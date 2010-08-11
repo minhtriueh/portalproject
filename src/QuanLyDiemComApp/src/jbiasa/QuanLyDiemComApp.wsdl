@@ -9,10 +9,11 @@
              xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
              targetNamespace="QuanLyDiemComApp"
-             xmlns:tns="QuanLyDiemComApp" xmlns:ns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoLoaiDiem" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoSoDiem" xmlns:ns2="http://j2ee.netbeans.org/wsdl/QuanLyDiem/NhapDiem">
+             xmlns:tns="QuanLyDiemComApp" xmlns:ns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoLoaiDiem" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoSoDiem" xmlns:ns2="http://j2ee.netbeans.org/wsdl/QuanLyDiem/NhapDiem" xmlns:ns3="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TinhDiemTrungBinh">
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoLoaiDiem" location="../jbiServiceUnits/QuanLyDiem/interface_WSDL/TaoLoaiDiem.wsdl"/>
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoSoDiem" location="../jbiServiceUnits/QuanLyDiem/interface_WSDL/TaoSoDiem.wsdl"/>
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/NhapDiem" location="../jbiServiceUnits/QuanLyDiem/interface_WSDL/NhapDiem.wsdl"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TinhDiemTrungBinh" location="../jbiServiceUnits/QuanLyDiem/interface_WSDL/TinhDiemTrungBinh.wsdl"/>
     <portType name="dummyCasaPortType"/>
     <binding name="casaBinding1" type="ns:TaoLoaiDiemPortType">
         <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
@@ -50,6 +51,18 @@
             </output>
         </operation>
     </binding>
+    <binding name="casaBinding4" type="ns3:TinhDiemTrungBinhPortType">
+        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="TinhDiemTrungBinhOperation">
+            <soap:operation/>
+            <input name="input1">
+                <soap:body use="literal" namespace="QuanLyDiemComApp"/>
+            </input>
+            <output name="output1">
+                <soap:body use="literal" namespace="QuanLyDiemComApp"/>
+            </output>
+        </operation>
+    </binding>
     <service name="QuanLyDiemComAppService1">
         <port name="TaoLoaiDiem" binding="tns:casaBinding1">
             <soap:address location="http://localhost:18001/QuanLyDiemComApp/TaoLoaiDiem"/>
@@ -65,6 +78,12 @@
             <soap:address location="http://localhost:18001/QuanLyDiemComApp/NhapDiem"/>
         </port>
     </service>
+    <service name="QuanLyDiemComAppService4">
+        <port name="TinhDiemTrungBinh" binding="tns:casaBinding4">
+            <soap:address location="http://localhost:18001/QuanLyDiemComApp/TinhDiemTrungBinh"/>
+        </port>
+    </service>
 </definitions>
+
 
 
