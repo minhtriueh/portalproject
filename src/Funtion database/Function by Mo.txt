@@ -372,3 +372,24 @@ $BODY$
 ALTER FUNCTION taodiem(double precision, bigint, bigint) OWNER TO postgres;
 
 
+-- Function: suadiem(bigint, double, bigint ,bigint)
+
+-- DROP FUNCTION suadiem(bigint, double, bigint ,bigint);
+
+
+CREATE OR REPLACE FUNCTION suadiem(id_diemIn bigint, diemIn double precision, id_loaidiemIn bigint, id_chitietsodiemIn bigint)
+  RETURNS boolean AS
+$BODY$
+BEGIN
+	LOOP
+	UPDATE diem SET diem=diemIn , id_loaidiem=id_loaidiemIn , id_chitietsodiem=id_chitietsodiemIn WHERE id_diem = id_diemIn;
+	IF found THEN
+            RETURN true;
+        END IF;
+        RETURN false;
+        END LOOP;
+END;
+$BODY$
+  LANGUAGE 'plpgsql' VOLATILE
+  COST 100;
+ALTER FUNCTION suadiem(bigint, double precision, bigint ,bigint) OWNER TO postgres;
