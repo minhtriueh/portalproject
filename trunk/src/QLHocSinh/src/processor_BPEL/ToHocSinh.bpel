@@ -20,6 +20,7 @@
         <partnerLink name="PartnerLink1" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/ThemHocSinh" partnerLinkType="tns:ThemHocSinh" myRole="ThemHocSinhPortTypeRole"/>
     </partnerLinks>
     <variables>
+        <variable name="ThemHocSinhOperationOut1" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/ThemHocSinh" messageType="tns:ThemHocSinhOperationResponse"/>
         <variable name="XepLopOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/XepLop" messageType="tns:XepLopOperationResponse"/>
         <variable name="XepLopOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/XepLop" messageType="tns:XepLopOperationRequest"/>
         <variable name="ExecuteOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_ThemHocSinh" messageType="tns:outputMsg"/>
@@ -140,6 +141,18 @@
             </copy>
         </assign>
         <invoke name="Invoke2" partnerLink="PartnerLink2" operation="execute" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_ThemHocSinh" portType="tns:jdbcPortType" inputVariable="ExecuteIn" outputVariable="ExecuteOut"/>
+        <if name="If2">
+            <condition>0 = $ExecuteOut.part/ns0:returnValue</condition>
+            <sequence name="Sequence5">
+                <assign name="Assign6">
+                    <copy>
+                        <from>$ExecuteOut.part/ns0:returnValue</from>
+                        <to variable="ThemHocSinhOperationOut1" part="result"/>
+                    </copy>
+                </assign>
+                <reply name="Reply2" partnerLink="PartnerLink1" operation="ThemHocSinhOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/ThemHocSinh" portType="tns:ThemHocSinhPortType" variable="ThemHocSinhOperationOut1"/>
+            </sequence>
+        </if>
         <if name="If1" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/XepLop">
             <condition>$ThemHocSinhOperationIn.id_lop &gt; 0</condition>
             <sequence name="Sequence4">
@@ -217,6 +230,7 @@
         <reply name="Reply1" partnerLink="PartnerLink1" operation="ThemHocSinhOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/ThemHocSinh" portType="tns:ThemHocSinhPortType" variable="ThemHocSinhOperationOut"/>
     </sequence>
 </process>
+
 
 
 

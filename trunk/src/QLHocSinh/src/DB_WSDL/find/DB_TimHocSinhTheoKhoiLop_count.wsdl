@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions name="DB_loadHocSinhByIdHocSinh" targetNamespace="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_loadHocSinhByIdHocSinh" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:ns="http://j2ee.netbeans.org/xsd/tableSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_loadHocSinhByIdHocSinh" xmlns:plink="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/">
+<definitions name="DB_TimHocSinhTheoKhoiLop_count" targetNamespace="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_TimHocSinhTheoKhoiLop_count" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:ns="http://j2ee.netbeans.org/xsd/tableSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_TimHocSinhTheoKhoiLop_count" xmlns:plink="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/">
   <types>
     <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/">
-            <xsd:import namespace="http://j2ee.netbeans.org/xsd/tableSchema" schemaLocation="../../DB_WSDL/find/XSD/DB_loadHocSinhByIdHocSinh.xsd"/>
+            <xsd:import namespace="http://j2ee.netbeans.org/xsd/tableSchema" schemaLocation="../../DB_WSDL/find/XSD/DB_TimHocSinhTheoKhoiLop_count.xsd"/>
 	</xsd:schema>
   </types>
   <message name="outputMsg">
-    <part name="part" element="ns:DB_loadHocSinhByIdHocSinh_Response"/>
+    <part name="part" element="ns:DB_TimHocSinhTheoKhoiLop_count_Response"/>
   </message>
   <message name="inputMsg">
-    <part name="part" element="ns:DB_loadHocSinhByIdHocSinh_Request"/>
+    <part name="part" element="ns:DB_TimHocSinhTheoKhoiLop_count_Request"/>
   </message>
   <portType name="jdbcPortType">
     <operation name="newuntitled_Operation">
@@ -22,32 +22,9 @@
     <operation name="newuntitled_Operation">
     <jdbc:operation xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/"/>
       <input name="input">
-    <jdbc:input xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" MarkColumnName="" MarkColumnValue="" MoveRowToTableName="" PKName="" PollMilliSeconds="5000" PollingPostProcessing="MoveRow" TableName="DB_loadHocSinhByIdHocSinh" Transaction="NOTransaction" numberOfRecords="" operationType="DB_loadHocSinhByIdHocSinh_Operation" paramOrder="" sql="SELECT
-  hocsinh.tenhocsinh,
-  hocsinh.gioitinh,
-  hocsinh.ngaysinh,
-  hocsinh.hinhanh,
-  hocsinh.sonha AS diachi,
-  loaihocsinh.tenloaihocsinh,
-  hocsinh.ghichu,
-  hocsinh.ketnapdoan,
-  hocsinh.ketnapdoi,
-  hocsinh.ngayvaodoan,
-  hocsinh.ngayvaodoi,
-  hocsinh.tongiao,
-  hocsinh.id_quequan,
-  nguoidung.ngaytao,
-  nguoidung.&quot;password&quot;,
-  nguoidung.username,
-  khuvuc.tenkhuvuc,
-  quanhuyenthanhpho.tenquanhuyenthanhpho,
-  thonxom.tenthonxom,
-  chedouutien.tenchedouutien,
-  chedouutien.phantramduocgiam,
-  tinh.tentinh,
-  xaphuongthitran.tenxaphuongthitran,
-  dantoc.dantocthieuso,
-  dantoc.tendantoc
+    <jdbc:input xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" MarkColumnName="" MarkColumnValue="" MoveRowToTableName="" PKName="" PollMilliSeconds="5000" PollingPostProcessing="MoveRow" TableName="DB_TimHocSinhTheoKhoiLop_count" Transaction="NOTransaction" numberOfRecords="" operationType="DB_TimHocSinhTheoKhoiLop_count_Operation" paramOrder="id_khoilop,id_namhoc" sql="SELECT
+  COUNT(hocsinh.id_hocsinh)
+
 FROM
   public.hocsinh,
   public.thonxom,
@@ -58,7 +35,11 @@ FROM
   public.loaihocsinh,
   public.nguoidung,
   public.khuvuc,
-  public.chedouutien
+  public.chedouutien,
+  public.lop,
+  public.namhoc,
+  public.danhsachlop,
+  public.khoilop
 WHERE
   hocsinh.id_tinh = tinh.id_tinh AND
   hocsinh.id_dantoc = dantoc.id_dantoc AND
@@ -69,8 +50,13 @@ WHERE
   hocsinh.id_thonxom = thonxom.id_thonxom AND
   khuvuc.id_khuvuc = hocsinh.id_khuvuc AND
   chedouutien.id_chedouutien = hocsinh.id_chedouutien AND
+  lop.id_lop = danhsachlop.id_lop AND
+  lop.id_namhoc = namhoc.id_namhoc AND
+  lop.id_khoilop = khoilop.id_khoilop AND
+  danhsachlop.id_hocsinh = hocsinh.id_hocsinh AND
   hocsinh.bixoahaychua = false AND
-  hocsinh.id_hocsinh = ?"/>
+  khoilop.id_khoilop = ? AND
+  namhoc.id_namhoc = ?"/>
       </input>
       <output name="output">
     <jdbc:output xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" returnPartName="part"/>
@@ -86,4 +72,5 @@ WHERE
         <plink:role name="jdbcPortTypeRole" portType="tns:jdbcPortType"/>
     </plink:partnerLinkType>
 </definitions>
+
 
