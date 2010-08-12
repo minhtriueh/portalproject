@@ -25,6 +25,8 @@
     <jdbc:input xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" MarkColumnName="" MarkColumnValue="" MoveRowToTableName="" PKName="" PollMilliSeconds="5000" PollingPostProcessing="MoveRow" TableName="DB_TimHocSinhTheoKhoiLop" Transaction="NOTransaction" numberOfRecords="" operationType="DB_TimHocSinhTheoKhoiLop_Operation" paramOrder="id_khoilop,id_namhoc,LIMIT,OFFSET" sql="SELECT
   hocsinh.id_hocsinh,
   hocsinh.tenhocsinh,
+  hocsinh.ten,
+  hocsinh.masohocsinh,
   hocsinh.gioitinh,
   hocsinh.ngaysinh,
   hocsinh.hinhanh,
@@ -85,7 +87,7 @@ WHERE
   hocsinh.bixoahaychua = false AND
   khoilop.id_khoilop = ? AND
   namhoc.id_namhoc = ?
-
+ORDER BY lop.tenlop ASC,hocsinh.ten ASC
 LIMIT ? OFFSET ?"/>
       </input>
       <output name="output">
@@ -102,5 +104,4 @@ LIMIT ? OFFSET ?"/>
         <plink:role name="jdbcPortTypeRole" portType="tns:jdbcPortType"/>
     </plink:partnerLinkType>
 </definitions>
-
 

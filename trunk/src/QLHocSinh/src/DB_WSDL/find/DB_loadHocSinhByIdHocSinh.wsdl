@@ -22,8 +22,10 @@
     <operation name="newuntitled_Operation">
     <jdbc:operation xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/"/>
       <input name="input">
-    <jdbc:input xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" MarkColumnName="" MarkColumnValue="" MoveRowToTableName="" PKName="" PollMilliSeconds="5000" PollingPostProcessing="MoveRow" TableName="DB_loadHocSinhByIdHocSinh" Transaction="NOTransaction" numberOfRecords="" operationType="DB_loadHocSinhByIdHocSinh_Operation" paramOrder="" sql="SELECT
+    <jdbc:input xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" MarkColumnName="" MarkColumnValue="" MoveRowToTableName="" PKName="" PollMilliSeconds="5000" PollingPostProcessing="MoveRow" TableName="DB_loadHocSinhByIdHocSinh" Transaction="NOTransaction" numberOfRecords="" operationType="DB_loadHocSinhByIdHocSinh_Operation" paramOrder="id_hocsinh" sql="SELECT
   hocsinh.tenhocsinh,
+  hocsinh.ten,
+  hocsinh.masohocsinh,
   hocsinh.gioitinh,
   hocsinh.ngaysinh,
   hocsinh.hinhanh,

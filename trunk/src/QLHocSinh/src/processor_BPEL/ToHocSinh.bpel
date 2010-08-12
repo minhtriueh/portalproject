@@ -44,7 +44,7 @@
                 <to>$ExecuteIn.part/ns0:passwd_</to>
             </copy>
             <copy>
-                <from variable="ThemHocSinhOperationIn" part="tenHocSinh"/>
+                <from variable="ThemHocSinhOperationIn" part="hoVaTenLot"/>
                 <to>$ExecuteIn.part/ns0:tenhocsinh_</to>
             </copy>
             <copy>
@@ -139,6 +139,14 @@
                 <from variable="ThemHocSinhOperationIn" part="id_tinh_qq"/>
                 <to>$ExecuteIn.part/ns0:id_tinh_qq</to>
             </copy>
+            <copy>
+                <from variable="ThemHocSinhOperationIn" part="ten"/>
+                <to>$ExecuteIn.part/ns0:ten_</to>
+            </copy>
+            <copy>
+                <from variable="ThemHocSinhOperationIn" part="maso"/>
+                <to>$ExecuteIn.part/ns0:masohocsinh_</to>
+            </copy>
         </assign>
         <invoke name="Invoke2" partnerLink="PartnerLink2" operation="execute" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_ThemHocSinh" portType="tns:jdbcPortType" inputVariable="ExecuteIn" outputVariable="ExecuteOut"/>
         <if name="If2">
@@ -230,6 +238,8 @@
         <reply name="Reply1" partnerLink="PartnerLink1" operation="ThemHocSinhOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/ThemHocSinh" portType="tns:ThemHocSinhPortType" variable="ThemHocSinhOperationOut"/>
     </sequence>
 </process>
+
+
 
 
 
