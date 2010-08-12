@@ -181,7 +181,9 @@
     <xsd:complexType name="HocSinh">
         <xsd:sequence>
             <xsd:element name="id" type="xsd:long"></xsd:element>
-            <xsd:element name="tenHocSinh" type="xsd:string"></xsd:element>
+            <xsd:element name="hoVaTenLot" type="xsd:string"></xsd:element>
+            <xsd:element name="ten" type="xsd:string"></xsd:element>
+            <xsd:element name="maSo" type="xsd:string"></xsd:element>
             <xsd:element name="ngaySinh" type="xsd:date"></xsd:element>
             <xsd:element name="gioiTinh" type="xsd:string"></xsd:element>
             <xsd:element name="soNha" type="xsd:string"></xsd:element>

@@ -27,6 +27,8 @@
   lop.sisolop,
   hocsinh.id_hocsinh,
   hocsinh.tenhocsinh,
+  hocsinh.ten,
+  hocsinh.masohocsinh,
   hocsinh.gioitinh,
   hocsinh.ngaysinh,
   hocsinh.tongiao,
@@ -41,7 +43,8 @@ WHERE
   danhsachlop.id_lop = lop.id_lop AND
   danhsachlop.id_hocsinh = hocsinh.id_hocsinh AND
   hocsinh.bixoahaychua = false AND
-  danhsachlop.id_lop = ?"/>
+  danhsachlop.id_lop = ?
+ORDER BY hocsinh.ten ASC"/>
       </input>
       <output name="output">
     <jdbc:output xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" returnPartName="part"/>
@@ -57,5 +60,4 @@ WHERE
         <plink:role name="jdbcPortTypeRole" portType="tns:jdbcPortType"/>
     </plink:partnerLinkType>
 </definitions>
-
 

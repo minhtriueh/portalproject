@@ -49,7 +49,7 @@
         <assign name="Assign2">
             <copy>
                 <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:tenhocsinh</from>
-                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:tenHocSinh</to>
+                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:hoVaTenLot</to>
             </copy>
             <copy>
                 <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:gioitinh</from>
@@ -160,6 +160,14 @@
                 <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:id_quequan</from>
                 <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:QueQuan/ns1:id</to>
             </copy>
+            <copy>
+                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:ten</from>
+                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:ten</to>
+            </copy>
+            <copy>
+                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:masohocsinh</from>
+                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:maSo</to>
+            </copy>
         </assign>
         <invoke name="Invoke2" partnerLink="loadquequan" operation="newuntitled_Operation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_loadQueQuanByID" portType="tns:jdbcPortType" inputVariable="loadquequan_OperationIn1" outputVariable="loadquequan_OperationOut1"/>
         <assign name="Assign3">
@@ -260,6 +268,8 @@
         <reply name="Reply1" partnerLink="PartnerLink1" operation="TimHocSinhByIdHocSinhOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/TimHocSinhByIdHocSinh" portType="tns:TimHocSinhByIdHocSinhPortType" variable="TimHocSinhByIdHocSinhOperationOut"/>
     </sequence>
 </process>
+
+
 
 
 

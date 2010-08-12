@@ -36,6 +36,26 @@
               </xsd:simpleContent>
             </xsd:complexType>
           </xsd:element>
+          <xsd:element name="ten">
+            <xsd:complexType>
+              <xsd:simpleContent>
+                <xsd:extension base="xsd:string">
+                  <xsd:attribute name="isNull" type="xsd:boolean"></xsd:attribute>
+                  <xsd:attribute name="isDefaultColumn" type="xsd:boolean"></xsd:attribute>
+                </xsd:extension>
+              </xsd:simpleContent>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="masohocsinh">
+            <xsd:complexType>
+              <xsd:simpleContent>
+                <xsd:extension base="xsd:string">
+                  <xsd:attribute name="isNull" type="xsd:boolean"></xsd:attribute>
+                  <xsd:attribute name="isDefaultColumn" type="xsd:boolean"></xsd:attribute>
+                </xsd:extension>
+              </xsd:simpleContent>
+            </xsd:complexType>
+          </xsd:element>
           <xsd:element name="gioitinh">
             <xsd:complexType>
               <xsd:simpleContent>
