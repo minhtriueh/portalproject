@@ -60,7 +60,7 @@
                 <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:ngaySinh</to>
             </copy>
             <copy>
-                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:sonha</from>
+                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:diachi</from>
                 <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:soNha</to>
             </copy>
             <copy>
@@ -72,7 +72,7 @@
                 <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:hinhAnh</to>
             </copy>
             <copy>
-                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:ghichuhocsinh</from>
+                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:ghichu</from>
                 <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:ghiChu</to>
             </copy>
             <copy>
@@ -107,18 +107,12 @@
                 <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:tenthonxom</from>
                 <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:diaChiHienTai/ns1:ThonXom/ns1:tenThonXom</to>
             </copy>
-            <copy>
-                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:motaloaihocsinh</from>
-                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:LoaiHocSinh/ns1:moTa</to>
-            </copy>
+            
             <copy>
                 <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:tenloaihocsinh</from>
                 <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:LoaiHocSinh/ns1:tenLoaiHocSinh</to>
             </copy>
-            <copy>
-                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:chuthichchedouutien</from>
-                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:CheDoUuTien/ns1:chuThich</to>
-            </copy>
+            
             <copy>
                 <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:phantramduocgiam</from>
                 <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:CheDoUuTien/ns1:phanTramDuocGiam</to>
@@ -139,10 +133,7 @@
                 <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:username</from>
                 <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:NguoiDung/ns1:username</to>
             </copy>
-            <copy>
-                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:motakhuvuc</from>
-                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:KhuVuc/ns1:moTa</to>
-            </copy>
+            
             <copy>
                 <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:tenkhuvuc</from>
                 <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:KhuVuc/ns1:tenKhuVuc</to>
@@ -159,14 +150,8 @@
                 <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:tendantoc</from>
                 <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:DanToc/ns1:tenDanToc</to>
             </copy>
-            <copy>
-                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:tenlop</from>
-                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:Lop/ns1:tenLop</to>
-            </copy>
-            <copy>
-                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:sisolop</from>
-                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:Lop/ns1:siSoLop</to>
-            </copy>
+            
+            
             <copy>
                 <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:id_quequan</from>
                 <to>$loadquequan_OperationIn1.part/ns0:idquequan</to>

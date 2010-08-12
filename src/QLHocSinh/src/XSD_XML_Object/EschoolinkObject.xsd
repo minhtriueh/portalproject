@@ -134,9 +134,9 @@
             <xsd:element name="siSoLop" type="xsd:int"></xsd:element>
             <xsd:element ref="tns:ThoiKhoaBieu"></xsd:element>
             <xsd:element ref="tns:GiaoVien" maxOccurs="unbounded" minOccurs="0"></xsd:element>
-            <xsd:element ref="tns:MonHoc" maxOccurs="unbounded" minOccurs="0"></xsd:element>
+            
             <xsd:element ref="tns:GiaoVienChuNhiem" minOccurs="0"></xsd:element>
-            <xsd:element ref="tns:HocSinh" maxOccurs="unbounded" minOccurs="0"></xsd:element>
+            <xsd:element ref="tns:KhoiLop"></xsd:element>
         </xsd:sequence>
     </xsd:complexType>
 

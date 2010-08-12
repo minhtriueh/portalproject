@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process
+    name="TimHocSinhTheoKhoiLop"
+    targetNamespace="http://enterprise.netbeans.org/bpel/QLHocSinh/TimHocSinhTheoKhoiLop"
+    xmlns:tns="http://enterprise.netbeans.org/bpel/QLHocSinh/TimHocSinhTheoKhoiLop"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
+    xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor"
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2" xmlns:ns0="http://j2ee.netbeans.org/xsd/tableSchema" xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject" xmlns:ns2="http://xml.netbeans.org/schema/ListObject">
+    <import namespace="http://j2ee.netbeans.org/wsdl/QLHocSinh/TimHocSinhTheoKhoiLop" location="../interface_WSDL/TimHocSinhTheoKhoiLop.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_TimHocSinhTheoKhoiLop" location="../DB_WSDL/find/DB_TimHocSinhTheoKhoiLop.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_TimHocSinhTheoKhoiLop_count" location="../DB_WSDL/find/DB_TimHocSinhTheoKhoiLop_count.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <partnerLinks>
+        <partnerLink name="PartnerLink2" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_TimHocSinhTheoKhoiLop" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="PartnerLink3" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_TimHocSinhTheoKhoiLop_count" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="PartnerLink1" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/TimHocSinhTheoKhoiLop" partnerLinkType="tns:TimHocSinhTheoKhoiLop" myRole="TimHocSinhTheoKhoiLopPortTypeRole"/>
+    </partnerLinks>
+    <variables>
+        <variable name="count_OperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_TimHocSinhTheoKhoiLop_count" messageType="tns:outputMsg">
+            <sxed2:editor>
+                <sxed2:predicate path="$count_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_count_Record[1]" source="from"/>
+            </sxed2:editor>
+        </variable>
+        <variable name="count_OperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_TimHocSinhTheoKhoiLop_count" messageType="tns:inputMsg"/>
+        <variable name="load_OperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_TimHocSinhTheoKhoiLop" messageType="tns:outputMsg">
+            <sxed2:editor>
+                <sxed2:predicate path="$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]" source="from"/>
+                <sxed2:predicate path="$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[1]" source="from"/>
+            </sxed2:editor>
+        </variable>
+        <variable name="load_OperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_TimHocSinhTheoKhoiLop" messageType="tns:inputMsg"/>
+        <variable name="TimHocSinhTheoKhoiLopOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/TimHocSinhTheoKhoiLop" messageType="tns:TimHocSinhTheoKhoiLopOperationResponse">
+            <sxed2:editor>
+                <sxed2:predicate path="$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]" source="to"/>
+            </sxed2:editor>
+        </variable>
+        <variable name="TimHocSinhTheoKhoiLopOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/TimHocSinhTheoKhoiLop" messageType="tns:TimHocSinhTheoKhoiLopOperationRequest"/>
+    </variables>
+    <sequence>
+        <receive name="Receive1" createInstance="yes" partnerLink="PartnerLink1" operation="TimHocSinhTheoKhoiLopOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/TimHocSinhTheoKhoiLop" portType="tns:TimHocSinhTheoKhoiLopPortType" variable="TimHocSinhTheoKhoiLopOperationIn"/>
+        <assign name="Assign1">
+            <copy>
+                <from variable="TimHocSinhTheoKhoiLopOperationIn" part="idKhoiLop"/>
+                <to>$load_OperationIn.part/ns0:id_khoilop</to>
+            </copy>
+            <copy>
+                <from variable="TimHocSinhTheoKhoiLopOperationIn" part="idNamHoc"/>
+                <to>$load_OperationIn.part/ns0:id_namhoc</to>
+            </copy>
+            <copy>
+                <from variable="TimHocSinhTheoKhoiLopOperationIn" part="limit"/>
+                <to>$load_OperationIn.part/ns0:LIMIT</to>
+            </copy>
+            <copy>
+                <from>($TimHocSinhTheoKhoiLopOperationIn.page - 1) * $TimHocSinhTheoKhoiLopOperationIn.limit</from>
+                <to>$load_OperationIn.part/ns0:OFFSET</to>
+            </copy>
+        </assign>
+        <invoke name="Invoke1" partnerLink="PartnerLink2" operation="newuntitled_Operation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_TimHocSinhTheoKhoiLop" portType="tns:jdbcPortType" inputVariable="load_OperationIn" outputVariable="load_OperationOut"/>
+        <forEach name="ForEach1" parallel="no" counterName="ForEach1Counter">
+            <startCounterValue>1</startCounterValue>
+            <finalCounterValue>count($load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record)</finalCounterValue>
+            <scope name="Scope1">
+                <assign name="Assign2">
+                    <copy>
+                        <from>$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]/ns0:id_hocsinh
+                            <sxed2:editor>
+                                <sxed2:predicate path="$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]/ns1:id
+                            <sxed2:editor>
+                                <sxed2:predicate path="$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]/ns0:tenhocsinh
+                            <sxed2:editor>
+                                <sxed2:predicate path="$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]/ns1:tenHocSinh
+                            <sxed2:editor>
+                                <sxed2:predicate path="$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]/ns0:gioitinh
+                            <sxed2:editor>
+                                <sxed2:predicate path="$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]/ns1:gioiTinh
+                            <sxed2:editor>
+                                <sxed2:predicate path="$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]/ns0:ngaysinh
+                            <sxed2:editor>
+                                <sxed2:predicate path="$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]/ns1:ngaySinh
+                            <sxed2:editor>
+                                <sxed2:predicate path="$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]/ns0:hinhanh
+                            <sxed2:editor>
+                                <sxed2:predicate path="$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]/ns1:hinhAnh
+                            <sxed2:editor>
+                                <sxed2:predicate path="$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]/ns0:diachi
+                            <sxed2:editor>
+                                <sxed2:predicate path="$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]/ns1:soNha
+                            <sxed2:editor>
+                                <sxed2:predicate path="$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]/ns0:tenloaihocsinh
+                            <sxed2:editor>
+                                <sxed2:predicate path="$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]/ns1:LoaiHocSinh/ns1:tenLoaiHocSinh
+                            <sxed2:editor>
+                                <sxed2:predicate path="$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]/ns0:ghichu
+                            <sxed2:editor>
+                                <sxed2:predicate path="$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]/ns1:ghiChu
+                            <sxed2:editor>
+                                <sxed2:predicate path="$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]/ns0:ketnapdoan
+                            <sxed2:editor>
+                                <sxed2:predicate path="$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]/ns1:ketNapDoan
+                            <sxed2:editor>
+                                <sxed2:predicate path="$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]/ns0:ketnapdoi
+                            <sxed2:editor>
+                                <sxed2:predicate path="$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]/ns1:ketNapDoi
+                            <sxed2:editor>
+                                <sxed2:predicate path="$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]/ns0:ngayvaodoan
+                            <sxed2:editor>
+                                <sxed2:predicate path="$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]/ns1:ngayVaoDoan
+                            <sxed2:editor>
+                                <sxed2:predicate path="$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]/ns0:ngayvaodoi
+                            <sxed2:editor>
+                                <sxed2:predicate path="$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]/ns1:ngayVaoDoi
+                            <sxed2:editor>
+                                <sxed2:predicate path="$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]/ns0:tongiao
+                            <sxed2:editor>
+                                <sxed2:predicate path="$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]/ns1:tonGiao
+                            <sxed2:editor>
+                                <sxed2:predicate path="$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]/ns0:ngaytao
+                            <sxed2:editor>
+                                <sxed2:predicate path="$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]/ns1:NguoiDung/ns1:ngayTao
+                            <sxed2:editor>
+                                <sxed2:predicate path="$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]/ns0:password
+                            <sxed2:editor>
+                                <sxed2:predicate path="$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]/ns1:NguoiDung/ns1:username
+                            <sxed2:editor>
+                                <sxed2:predicate path="$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]/ns0:username
+                            <sxed2:editor>
+                                <sxed2:predicate path="$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]/ns1:NguoiDung/ns1:password
+                            <sxed2:editor>
+                                <sxed2:predicate path="$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]/ns0:tenkhuvuc
+                            <sxed2:editor>
+                                <sxed2:predicate path="$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]/ns1:KhuVuc/ns1:tenKhuVuc
+                            <sxed2:editor>
+                                <sxed2:predicate path="$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]/ns0:tenquanhuyenthanhpho
+                            <sxed2:editor>
+                                <sxed2:predicate path="$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]/ns1:diaChiHienTai/ns1:QuanHuyenThanhPho/ns1:tenQuanHuyenThanhPho
+                            <sxed2:editor>
+                                <sxed2:predicate path="$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]/ns0:tenthonxom
+                            <sxed2:editor>
+                                <sxed2:predicate path="$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]/ns1:diaChiHienTai/ns1:ThonXom/ns1:tenThonXom
+                            <sxed2:editor>
+                                <sxed2:predicate path="$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]/ns0:tentinh
+                            <sxed2:editor>
+                                <sxed2:predicate path="$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]/ns1:diaChiHienTai/ns1:Tinh/ns1:tenTinh
+                            <sxed2:editor>
+                                <sxed2:predicate path="$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]/ns0:tenxaphuongthitran
+                            <sxed2:editor>
+                                <sxed2:predicate path="$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]/ns1:diaChiHienTai/ns1:QuanHuyenThanhPho/ns1:XaPhuongThiTran/ns1:tenXaPhuongThiTran
+                            <sxed2:editor>
+                                <sxed2:predicate path="$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]/ns0:tenchedouutien
+                            <sxed2:editor>
+                                <sxed2:predicate path="$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]/ns1:CheDoUuTien/ns1:tenCheDoUuTien
+                            <sxed2:editor>
+                                <sxed2:predicate path="$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]/ns0:phantramduocgiam
+                            <sxed2:editor>
+                                <sxed2:predicate path="$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]/ns1:CheDoUuTien/ns1:phanTramDuocGiam
+                            <sxed2:editor>
+                                <sxed2:predicate path="$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]/ns0:dantocthieuso
+                            <sxed2:editor>
+                                <sxed2:predicate path="$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]/ns1:DanToc/ns1:danTocThieuSo
+                            <sxed2:editor>
+                                <sxed2:predicate path="$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]/ns0:tendantoc
+                            <sxed2:editor>
+                                <sxed2:predicate path="$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]/ns1:DanToc/ns1:tenDanToc
+                            <sxed2:editor>
+                                <sxed2:predicate path="$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]/ns0:tenlop
+                            <sxed2:editor>
+                                <sxed2:predicate path="$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]/ns1:Lop/ns1:tenLop
+                            <sxed2:editor>
+                                <sxed2:predicate path="$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]/ns0:tenkhoi
+                            <sxed2:editor>
+                                <sxed2:predicate path="$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]/ns1:Lop/ns1:KhoiLop/ns1:tenKhoi
+                            <sxed2:editor>
+                                <sxed2:predicate path="$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                </assign>
+            </scope>
+        </forEach>
+        <assign name="Assign4">
+            <copy>
+                <from variable="TimHocSinhTheoKhoiLopOperationIn" part="idKhoiLop"/>
+                <to>$count_OperationIn.part/ns0:id_khoilop</to>
+            </copy>
+            <copy>
+                <from variable="TimHocSinhTheoKhoiLopOperationIn" part="idNamHoc"/>
+                <to>$count_OperationIn.part/ns0:id_namhoc</to>
+            </copy>
+            <copy>
+                <from variable="TimHocSinhTheoKhoiLopOperationIn" part="page"/>
+                <to>$TimHocSinhTheoKhoiLopOperationOut.result/ns2:page</to>
+            </copy>
+            <copy>
+                <from variable="TimHocSinhTheoKhoiLopOperationIn" part="limit"/>
+                <to>$TimHocSinhTheoKhoiLopOperationOut.result/ns2:limit</to>
+            </copy>
+            <copy>
+                <from>$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[1]/ns0:namsau
+                    <sxed2:editor>
+                        <sxed2:predicate path="$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[1]" source="from"/>
+                    </sxed2:editor>
+                </from>
+                <to>$TimHocSinhTheoKhoiLopOperationOut.result/ns1:NamHoc/ns1:namSau</to>
+            </copy>
+            <copy>
+                <from>$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[1]/ns0:namtruoc
+                    <sxed2:editor>
+                        <sxed2:predicate path="$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[1]" source="from"/>
+                    </sxed2:editor>
+                </from>
+                <to>$TimHocSinhTheoKhoiLopOperationOut.result/ns1:NamHoc/ns1:namTruoc</to>
+            </copy>
+        </assign>
+        <invoke name="Invoke2" partnerLink="PartnerLink3" operation="newuntitled_Operation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_TimHocSinhTheoKhoiLop_count" portType="tns:jdbcPortType" inputVariable="count_OperationIn" outputVariable="count_OperationOut"/>
+        <assign name="Assign3">
+            <copy>
+                <from>$count_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_count_Record[1]/ns0:count
+                    <sxed2:editor>
+                        <sxed2:predicate path="$count_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_count_Record[1]" source="from"/>
+                    </sxed2:editor>
+                </from>
+                <to>$TimHocSinhTheoKhoiLopOperationOut.result/ns2:total</to>
+            </copy>
+        </assign>
+        <reply name="Reply1" partnerLink="PartnerLink1" operation="TimHocSinhTheoKhoiLopOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/TimHocSinhTheoKhoiLop" portType="tns:TimHocSinhTheoKhoiLopPortType" variable="TimHocSinhTheoKhoiLopOperationOut"/>
+    </sequence>
+</process>
+
