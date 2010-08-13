@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process
+    name="XemDiem"
+    targetNamespace="http://enterprise.netbeans.org/bpel/QuanLyDiem/XemDiem"
+    xmlns:tns="http://enterprise.netbeans.org/bpel/QuanLyDiem/XemDiem"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
+    xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor"
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2" xmlns:ns0="http://j2ee.netbeans.org/xsd/tableSchema" xmlns:ns1="http://xml.netbeans.org/schema/LoaiDiem">
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/XemDiem" location="../interface_WSDL/XemDiem.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachDiemCuaHocSinh" location="../DB_WSDL/DB_LayDanhSachDiemCuaHocSinh.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <partnerLinks>
+        <partnerLink name="PL_DB_LayDanhSachDiemCuaHocSinh" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachDiemCuaHocSinh" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="PL_XemDiem" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/XemDiem" partnerLinkType="tns:XemDiem" myRole="XemDiemPortTypeRole"/>
+    </partnerLinks>
+    <variables>
+        <variable name="LayDanhSachDiemCuaHocSinhOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachDiemCuaHocSinh" messageType="tns:outputMsg">
+            <sxed2:editor>
+                <sxed2:predicate path="$LayDanhSachDiemCuaHocSinhOut.part/ns0:DB_LayDanhSachDiemCuaHocSinh_Record[$ForEach1Counter]" source="from"/>
+            </sxed2:editor>
+        </variable>
+        <variable name="LayDanhSachDiemCuaHocSinhIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachDiemCuaHocSinh" messageType="tns:inputMsg"/>
+        <variable name="XemDiemOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/XemDiem" messageType="tns:XemDiemOperationResponse">
+            <sxed2:editor>
+                <sxed2:predicate path="$XemDiemOperationOut.listDiem/ns1:Diem[$ForEach1Counter]" source="to"/>
+            </sxed2:editor>
+        </variable>
+        <variable name="XemDiemOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/XemDiem" messageType="tns:XemDiemOperationRequest"/>
+    </variables>
+    <sequence>
+        <receive name="Receive1" createInstance="yes" partnerLink="PL_XemDiem" operation="XemDiemOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/XemDiem" portType="tns:XemDiemPortType" variable="XemDiemOperationIn"/>
+        <assign name="Assign1">
+            <copy>
+                <from variable="XemDiemOperationIn" part="id_hocsinh"/>
+                <to>$LayDanhSachDiemCuaHocSinhIn.part/ns0:id_hocsinh</to>
+            </copy>
+            <copy>
+                <from variable="XemDiemOperationIn" part="hocky"/>
+                <to>$LayDanhSachDiemCuaHocSinhIn.part/ns0:hocky</to>
+            </copy>
+            <copy>
+                <from variable="XemDiemOperationIn" part="id_namhoc"/>
+                <to>$LayDanhSachDiemCuaHocSinhIn.part/ns0:id_namhoc</to>
+            </copy>
+            <copy>
+                <from variable="XemDiemOperationIn" part="id_monhoc"/>
+                <to>$LayDanhSachDiemCuaHocSinhIn.part/ns0:id_monhoc</to>
+            </copy>
+            <copy>
+                <from variable="XemDiemOperationIn" part="id_lop"/>
+                <to>$LayDanhSachDiemCuaHocSinhIn.part/ns0:id_lop</to>
+            </copy>
+        </assign>
+        <invoke name="Invoke1" partnerLink="PL_DB_LayDanhSachDiemCuaHocSinh" operation="newuntitled_Operation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachDiemCuaHocSinh" portType="tns:jdbcPortType" inputVariable="LayDanhSachDiemCuaHocSinhIn" outputVariable="LayDanhSachDiemCuaHocSinhOut"/>
+        <forEach name="ForEach1" parallel="no" counterName="ForEach1Counter">
+            <startCounterValue>1</startCounterValue>
+            <finalCounterValue>count($LayDanhSachDiemCuaHocSinhOut.part/ns0:DB_LayDanhSachDiemCuaHocSinh_Record)</finalCounterValue>
+            <scope name="Scope1">
+                <assign name="Assign2">
+                    <copy>
+                        <from>$LayDanhSachDiemCuaHocSinhOut.part/ns0:DB_LayDanhSachDiemCuaHocSinh_Record[$ForEach1Counter]/ns0:id_diem
+                            <sxed2:editor>
+                                <sxed2:predicate path="$LayDanhSachDiemCuaHocSinhOut.part/ns0:DB_LayDanhSachDiemCuaHocSinh_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$XemDiemOperationOut.listDiem/ns1:Diem[$ForEach1Counter]/ns1:id_diem
+                            <sxed2:editor>
+                                <sxed2:predicate path="$XemDiemOperationOut.listDiem/ns1:Diem[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$LayDanhSachDiemCuaHocSinhOut.part/ns0:DB_LayDanhSachDiemCuaHocSinh_Record[$ForEach1Counter]/ns0:diem
+                            <sxed2:editor>
+                                <sxed2:predicate path="$LayDanhSachDiemCuaHocSinhOut.part/ns0:DB_LayDanhSachDiemCuaHocSinh_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$XemDiemOperationOut.listDiem/ns1:Diem[$ForEach1Counter]/ns1:diem
+                            <sxed2:editor>
+                                <sxed2:predicate path="$XemDiemOperationOut.listDiem/ns1:Diem[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$LayDanhSachDiemCuaHocSinhOut.part/ns0:DB_LayDanhSachDiemCuaHocSinh_Record[$ForEach1Counter]/ns0:id_loaidiem
+                            <sxed2:editor>
+                                <sxed2:predicate path="$LayDanhSachDiemCuaHocSinhOut.part/ns0:DB_LayDanhSachDiemCuaHocSinh_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$XemDiemOperationOut.listDiem/ns1:Diem[$ForEach1Counter]/ns1:id_loaidiem
+                            <sxed2:editor>
+                                <sxed2:predicate path="$XemDiemOperationOut.listDiem/ns1:Diem[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$LayDanhSachDiemCuaHocSinhOut.part/ns0:DB_LayDanhSachDiemCuaHocSinh_Record[$ForEach1Counter]/ns0:id_chitietsodiem
+                            <sxed2:editor>
+                                <sxed2:predicate path="$LayDanhSachDiemCuaHocSinhOut.part/ns0:DB_LayDanhSachDiemCuaHocSinh_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$XemDiemOperationOut.listDiem/ns1:Diem[$ForEach1Counter]/ns1:id_chitietsodiem
+                            <sxed2:editor>
+                                <sxed2:predicate path="$XemDiemOperationOut.listDiem/ns1:Diem[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                </assign>
+            </scope>
+        </forEach>
+        <reply name="Reply1" partnerLink="PL_XemDiem" operation="XemDiemOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/XemDiem" portType="tns:XemDiemPortType" variable="XemDiemOperationOut"/>
+    </sequence>
+</process>
+

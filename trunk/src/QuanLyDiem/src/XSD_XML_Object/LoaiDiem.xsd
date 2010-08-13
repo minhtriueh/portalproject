@@ -9,6 +9,7 @@
     <xsd:element name="Diem" type="tns:Diem"/>
     <xsd:element name="DiemTrungBinh" type="tns:DiemTrungBinh"/>
     <xsd:element name="ListDiemTrungBinh" type="tns:ListDiemTrungBinh"/>
+    <xsd:element name="ListDiem" type="tns:ListDiem"/>
     <xsd:complexType name="Diem">
         <xsd:sequence>
             <xsd:element name="id_diem" type="xsd:long"/>
@@ -45,6 +46,7 @@
         </xsd:sequence>
     </xsd:complexType>
 </xsd:schema>
+
 
 
 
