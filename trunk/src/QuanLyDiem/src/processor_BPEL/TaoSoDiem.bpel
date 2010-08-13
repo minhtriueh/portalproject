@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process
+    name="TaoSoDiem"
+    targetNamespace="http://enterprise.netbeans.org/bpel/QuanLyDiem/TaoSoDiem"
+    xmlns:tns="http://enterprise.netbeans.org/bpel/QuanLyDiem/TaoSoDiem"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
+    xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor"
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2" xmlns:ns0="http://j2ee.netbeans.org/xsd/tableSchema">
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoSoDiem" location="../interface_WSDL/TaoSoDiem.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TaoSoDiem" location="../DB_WSDL/DB_TaoSoDiem.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachHocSinhTuIdLop" location="../DB_WSDL/DB_LayDanhSachHocSinhTuIdLop.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TaoChiTietSoDiem" location="../DB_WSDL/DB_TaoChiTietSoDiem.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachLoaiDiem" location="../DB_WSDL/DB_LayDanhSachLoaiDiem.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TaoDiem" location="../DB_WSDL/DB_TaoDiem.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <partnerLinks>
+        <partnerLink name="PL_DB_TaoSoDiem" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TaoSoDiem" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="PL_DB_LayDanhSachHocSinhTuIdLop" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachHocSinhTuIdLop" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="PL_DB_LayDanhSachLoaiDiem" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachLoaiDiem" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="PL_DB_TaoChiTietSoDiem" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TaoChiTietSoDiem" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="PL_DB_TaoDiem" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TaoDiem" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="PL_TaoSoDiem" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoSoDiem" partnerLinkType="tns:TaoSoDiem" myRole="TaoSoDiemPortTypeRole"/>
+    </partnerLinks>
+    <variables>
+        <variable name="TaoDiemOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TaoDiem" messageType="tns:outputMsg"/>
+        <variable name="TaoDiemIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TaoDiem" messageType="tns:inputMsg"/>
+        <variable name="TaoChiTietSoDiemOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TaoChiTietSoDiem" messageType="tns:outputMsg"/>
+        <variable name="TaoChiTietSoDiemIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TaoChiTietSoDiem" messageType="tns:inputMsg"></variable>
+        <variable name="LayDanhSachLoaiDiemOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachLoaiDiem" messageType="tns:outputMsg">
+            <sxed2:editor>
+                <sxed2:predicate path="$LayDanhSachLoaiDiemOut.part/ns0:DB_LayDanhSachLoaiDiem_Record[$ForEach2Counter]" source="from"/>
+            </sxed2:editor>
+        </variable>
+        <variable name="LayDanhSachLoaiDiemIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachLoaiDiem" messageType="tns:inputMsg"/>
+        <variable name="LayDanhSachHocSinhTuIdLopOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachHocSinhTuIdLop" messageType="tns:outputMsg">
+            <sxed2:editor>
+                <sxed2:predicate path="$LayDanhSachHocSinhTuIdLopOut.part/ns0:DB_LayDanhSachHocSinhTuIdLop_Record[$ForEach1Counter]" source="from"/>
+            </sxed2:editor>
+        </variable>
+        <variable name="LayDanhSachHocSinhTuIdLopIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachHocSinhTuIdLop" messageType="tns:inputMsg"/>
+        <variable name="TaoSoDiemOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TaoSoDiem" messageType="tns:outputMsg"/>
+        <variable name="TaoSoDiemIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TaoSoDiem" messageType="tns:inputMsg"/>
+        <variable name="TaoSoDiemOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoSoDiem" messageType="tns:TaoSoDiemOperationResponse"/>
+        <variable name="TaoSoDiemOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoSoDiem" messageType="tns:TaoSoDiemOperationRequest"/>
+    </variables>
+    <sequence>
+        <receive name="Receive1" createInstance="yes" partnerLink="PL_TaoSoDiem" operation="TaoSoDiemOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoSoDiem" portType="tns:TaoSoDiemPortType" variable="TaoSoDiemOperationIn"/>
+        <assign name="Assign1">
+            <copy>
+                <from variable="TaoSoDiemOperationIn" part="hocky"/>
+                <to>$TaoSoDiemIn.part/ns0:hocky</to>
+            </copy>
+            <copy>
+                <from variable="TaoSoDiemOperationIn" part="tensodiem"/>
+                <to>$TaoSoDiemIn.part/ns0:tensodiem</to>
+            </copy>
+            <copy>
+                <from variable="TaoSoDiemOperationIn" part="idmonhoc"/>
+                <to>$TaoSoDiemIn.part/ns0:id_monhoc</to>
+            </copy>
+            <copy>
+                <from variable="TaoSoDiemOperationIn" part="idgiaovien"/>
+                <to>$TaoSoDiemIn.part/ns0:id_giaovien</to>
+            </copy>
+            <copy>
+                <from variable="TaoSoDiemOperationIn" part="idlop"/>
+                <to>$TaoSoDiemIn.part/ns0:id_lop</to>
+            </copy>
+            <copy>
+                <from variable="TaoSoDiemOperationIn" part="idnamhoc"/>
+                <to>$TaoSoDiemIn.part/ns0:id_namhoc</to>
+            </copy>
+        </assign>
+        <invoke name="Invoke1" partnerLink="PL_DB_TaoSoDiem" operation="execute" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TaoSoDiem" portType="tns:jdbcPortType" inputVariable="TaoSoDiemIn" outputVariable="TaoSoDiemOut"/>
+        <assign name="Assign2">
+            <copy>
+                <from variable="TaoSoDiemOperationIn" part="idlop"/>
+                <to>$LayDanhSachHocSinhTuIdLopIn.part/ns0:id_Lop</to>
+            </copy>
+        </assign>
+        <invoke name="Invoke2" partnerLink="PL_DB_LayDanhSachHocSinhTuIdLop" operation="newuntitled_Operation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachHocSinhTuIdLop" portType="tns:jdbcPortType" inputVariable="LayDanhSachHocSinhTuIdLopIn" outputVariable="LayDanhSachHocSinhTuIdLopOut"/>
+        <invoke name="Invoke3" partnerLink="PL_DB_LayDanhSachLoaiDiem" operation="newuntitled_Operation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachLoaiDiem" portType="tns:jdbcPortType" inputVariable="LayDanhSachLoaiDiemIn" outputVariable="LayDanhSachLoaiDiemOut"/>
+        <forEach name="ForEach1" parallel="no" counterName="ForEach1Counter">
+            <startCounterValue>1</startCounterValue>
+            <finalCounterValue>count($LayDanhSachHocSinhTuIdLopOut.part/ns0:DB_LayDanhSachHocSinhTuIdLop_Record)</finalCounterValue>
+            <scope name="Scope1">
+                <sequence name="Sequence1">
+                    <assign name="Assign3">
+                        <copy>
+                            <from variable="TaoSoDiemOperationIn" part="idlop"/>
+                            <to>$TaoChiTietSoDiemIn.part/ns0:id_lop</to>
+                        </copy>
+                        <copy>
+                            <from>$TaoSoDiemOut.part/ns0:returnValue</from>
+                            <to>$TaoChiTietSoDiemIn.part/ns0:id_sodiem</to>
+                        </copy>
+                        <copy>
+                            <from>$LayDanhSachHocSinhTuIdLopOut.part/ns0:DB_LayDanhSachHocSinhTuIdLop_Record[$ForEach1Counter]/ns0:id_hocsinh
+                                <sxed2:editor>
+                                    <sxed2:predicate path="$LayDanhSachHocSinhTuIdLopOut.part/ns0:DB_LayDanhSachHocSinhTuIdLop_Record[$ForEach1Counter]" source="from"/>
+                                </sxed2:editor>
+                            </from>
+                            <to>$TaoChiTietSoDiemIn.part/ns0:id_hocsinh</to>
+                        </copy>
+                    </assign>
+                    <invoke name="Invoke4" partnerLink="PL_DB_TaoChiTietSoDiem" operation="execute" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TaoChiTietSoDiem" portType="tns:jdbcPortType" inputVariable="TaoChiTietSoDiemIn" outputVariable="TaoChiTietSoDiemOut"/>
+                    <forEach name="ForEach2" parallel="no" counterName="ForEach2Counter">
+                        <startCounterValue>1</startCounterValue>
+                        <finalCounterValue>count($LayDanhSachLoaiDiemOut.part/ns0:DB_LayDanhSachLoaiDiem_Record)</finalCounterValue>
+                        <scope name="Scope2">
+                            <sequence name="Sequence2">
+                                <assign name="Assign5">
+                                    <copy>
+                                        <from>$LayDanhSachLoaiDiemOut.part/ns0:DB_LayDanhSachLoaiDiem_Record[$ForEach2Counter]/ns0:id_loaidiem
+                                            <sxed2:editor>
+                                                <sxed2:predicate path="$LayDanhSachLoaiDiemOut.part/ns0:DB_LayDanhSachLoaiDiem_Record[$ForEach2Counter]" source="from"/>
+                                            </sxed2:editor>
+                                        </from>
+                                        <to>$TaoDiemIn.part/ns0:id_loaidiem</to>
+                                    </copy>
+                                    <copy>
+                                        <from>$TaoChiTietSoDiemOut.part/ns0:returnValue</from>
+                                        <to>$TaoDiemIn.part/ns0:id_chitietsodiem</to>
+                                    </copy>
+                                </assign>
+                                <invoke name="Invoke5" partnerLink="PL_DB_TaoDiem" operation="execute" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TaoDiem" portType="tns:jdbcPortType" inputVariable="TaoDiemIn" outputVariable="TaoDiemOut"/>
+                            </sequence>
+                        </scope>
+                    </forEach>
+                </sequence>
+            </scope>
+        </forEach>
+        <assign name="Assign6">
+            <copy>
+                <from>$TaoSoDiemOut.part/ns0:returnValue</from>
+                <to variable="TaoSoDiemOperationOut" part="idsodiem"/>
+            </copy>
+        </assign>
+        <reply name="Reply1" partnerLink="PL_TaoSoDiem" operation="TaoSoDiemOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoSoDiem" portType="tns:TaoSoDiemPortType" variable="TaoSoDiemOperationOut"/>
+    </sequence>
+</process>
+
