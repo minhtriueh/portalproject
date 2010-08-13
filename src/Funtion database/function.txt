@@ -1,0 +1,358 @@
+
+-- Function: create_monhoc(character, bigint)
+
+-- DROP FUNCTION create_monhoc(character, bigint);
+
+CREATE OR REPLACE FUNCTION create_monhoc(ten_monhoc character, id_cuatobomon bigint)
+  RETURNS bigint AS
+$BODY$INSERT INTO monhoc(
+            tenmonhoc, id_tobomon)
+			VALUES ($1, $2) returning id_monhoc;$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION create_monhoc(character, bigint) OWNER TO postgres;
+------------------------------------------------------------------
+-- Function: removehocsinhbohoc(bigint)
+
+-- DROP FUNCTION removehocsinhbohoc(bigint);
+
+CREATE OR REPLACE FUNCTION removehocsinhbohoc(idhocsinh bigint)
+  RETURNS boolean AS
+$BODY$
+declare
+result boolean:=false;
+BEGIN
+	DELETE FROM hocsinhbohoc WHERE id_hocsinh=$1;
+	if found=true then update hocsinh set bixoahaychua=false;
+		if found=true then result=true;
+		end if;
+	 
+	end if;
+	return result;
+END;  
+$BODY$
+  LANGUAGE 'plpgsql' VOLATILE
+  COST 100;
+ALTER FUNCTION removehocsinhbohoc(bigint) OWNER TO postgres;
+------------------------------------------------------------------------
+-- Function: capnhathanhkiemhs(bigint, character)
+
+-- DROP FUNCTION capnhathanhkiemhs(bigint, character);
+
+CREATE OR REPLACE FUNCTION capnhathanhkiemhs(id_hocba bigint, tenhanhkiem character)
+  RETURNS boolean AS
+$BODY$
+BEGIN
+ Update hocba set id_hanhkiem=(select hanhkiem.id_hanhkiem from hanhkiem where hanhkiem.tenhanhkiem like $2)
+ where hocba.id_hocba=$1;
+ IF found=true Then return true;
+ Else return false;
+ end if;
+
+ END;
+
+ $BODY$
+  LANGUAGE 'plpgsql' VOLATILE
+  COST 100;
+ALTER FUNCTION capnhathanhkiemhs(bigint, character) OWNER TO postgres;
+--------------------------------------------------------------------------------
+-- Function: inserthocsinhbohoc2(bigint, integer, character, date)
+
+-- DROP FUNCTION inserthocsinhbohoc2(bigint, integer, character, date);
+
+CREATE OR REPLACE FUNCTION inserthocsinhbohoc2(idhocsinh bigint, hky integer, lydo character, ngaybh date)
+  RETURNS bigint AS
+$BODY$
+declare 
+result bigint:=1;
+Begin
+	 result = inserthocsinhbohoc($1,$2,$3,$4);
+	 update hocsinh set bixoahaychua=true where id_hocsinh=$1 ;
+	 return result;
+end;
+ $BODY$
+  LANGUAGE 'plpgsql' VOLATILE
+  COST 100;
+ALTER FUNCTION inserthocsinhbohoc2(bigint, integer, character, date) OWNER TO postgres;
+---------------------------------------------------------------------------------------------
+-- Function: inserthocsinhbohoc(bigint, integer, character, date)
+
+-- DROP FUNCTION inserthocsinhbohoc(bigint, integer, character, date);
+
+CREATE OR REPLACE FUNCTION inserthocsinhbohoc(idhocsinh bigint, hocky integer, lydo character, ngaybh date)
+  RETURNS bigint AS
+$BODY$INSERT INTO hocsinhbohoc(
+            hocky, lydobohoc, ngaybohoc, id_hocsinh)
+    VALUES ($2, $3, $4, $1) returning id_hocsinhbohoc;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION inserthocsinhbohoc(bigint, integer, character, date) OWNER TO postgres;
+---------------------------------------------------------------------------------------------
+-- Function: insertgiaovien(character, character, character, character, character, character, boolean, boolean, date, date, date, date, date, character, character, character, character, character, character, character, character, bigint, bigint, bigint)
+
+-- DROP FUNCTION insertgiaovien(character, character, character, character, character, character, boolean, boolean, date, date, date, date, date, character, character, character, character, character, character, character, character, bigint, bigint, bigint);
+
+CREATE OR REPLACE FUNCTION insertgiaovien(choohientai character, chucvu character, cmnd character, email character, gioitinh character, hinhanh character, ketnapdang boolean, ketnapdoan boolean, ngaycap date, ngaysinh date, ngayvaodang date, ngayvaodoan date, ngayvaotruong date, noicap character, quequan character, sodienthoai character, tengiaovien character, tinhtrangsuckhoe character, tongiao character, trinhdodaotao character, trinhdovanhoa character, id_nguoidung bigint, id_dantoc bigint, id_tobomon bigint)
+  RETURNS bigint AS
+$BODY$INSERT INTO giaovien(
+            choohientai, chucvu, cmnd, email, gioitinh, hinhanh, 
+            ketnapdang, ketnapdoan, ngaycap, ngaysinh, ngayvaodang, ngayvaodoan, 
+            ngayvaotruong, noicap, quequan, sodienthoai, tengiaovien, tinhtrangsuckhoe, 
+            tongiao, trinhdodaotao, trinhdovanhoa, id_nguoidung, id_dantoc, 
+            id_tobomon)
+    VALUES ($1, $2, $3, $4, $5, $6, 
+            $7, $8, $9, $10, $11, $12, 
+            $13, $14, $15, $16, $17, $18, 
+            $19, $20, $21, $22, $23, 
+            $24) returning id_giaovien;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION insertgiaovien(character, character, character, character, character, character, boolean, boolean, date, date, date, date, date, character, character, character, character, character, character, character, character, bigint, bigint, bigint) OWNER TO postgres;
+-------------------------------------------------------------------------------------------------------------------------------------
+-- Function: inserttk(date, character, character)
+
+-- DROP FUNCTION inserttk(date, character, character);
+
+CREATE OR REPLACE FUNCTION inserttk(ngay date, username character, "password" character)
+  RETURNS bigint AS
+$BODY$INSERT INTO nguoidung(
+            ngaytao, "password", username)
+    VALUES ($1, $2, $3) returning id_nguoidung
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION inserttk(date, character, character) OWNER TO postgres;
+-----------------------------------------------------------------------------------------------
+-- Function: selecttaikhoan(bigint)
+
+-- DROP FUNCTION selecttaikhoan(bigint);
+
+CREATE OR REPLACE FUNCTION selecttaikhoan(username bigint)
+  RETURNS nguoidung AS
+$BODY$SELECT 
+  *
+FROM 
+  public.nguoidung
+WHERE 
+  nguoidung.id_nguoidung = $1;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION selecttaikhoan(bigint) OWNER TO postgres;
+----------------------------------------------------------------------------
+-- Function: updategiaovien(character, character, character, character, character, character, boolean, boolean, date, date, date, date, date, character, character, character, character, character, character, character, character, bigint, bigint, bigint, bigint)
+
+-- DROP FUNCTION updategiaovien(character, character, character, character, character, character, boolean, boolean, date, date, date, date, date, character, character, character, character, character, character, character, character, bigint, bigint, bigint, bigint);
+
+CREATE OR REPLACE FUNCTION updategiaovien(choohientai character, chucvu character, cmnd character, email character, gioitinh character, hinhanh character, ketnapdang boolean, ketnapdoan boolean, ngaycap date, ngaysinh date, ngayvaodang date, ngayvaodoan date, ngayvaotruong date, noicap character, quequan character, sodienthoai character, tengiaovien character, tinhtrangsuckhoe character, tongiao character, trinhdodaotao character, trinhdovanhoa character, id_nguoidung bigint, id_dantoc bigint, id_tobomon bigint, id_giaovien bigint)
+  RETURNS bigint AS
+$BODY$UPDATE giaovien
+   SET choohientai=$1, chucvu=$2, cmnd=$3, email=$4, gioitinh=$5, 
+       hinhanh=$6, ketnapdang=$7, ketnapdoan=$8, ngaycap=$9, ngaysinh=$10, 
+       ngayvaodang=$11, ngayvaodoan=$12, ngayvaotruong=$13, noicap=$14, quequan=$15, 
+       sodienthoai=$16, tengiaovien=$17, tinhtrangsuckhoe=$18, tongiao=$19, 
+       trinhdodaotao=$20, trinhdovanhoa=$21, id_nguoidung=$22, id_dantoc=$23, 
+       id_tobomon=$24
+ WHERE id_giaovien=$25 returning id_giaovien$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION updategiaovien(character, character, character, character, character, character, boolean, boolean, date, date, date, date, date, character, character, character, character, character, character, character, character, bigint, bigint, bigint, bigint) OWNER TO postgres;
+
+---------------------------------------------------------
+-- Function: create_diem(double precision, bigint, bigint)
+
+-- DROP FUNCTION create_diem(double precision, bigint, bigint);
+
+CREATE OR REPLACE FUNCTION create_diem(_diem double precision, _idloaidiem bigint, _idchitietsodiem bigint)
+  RETURNS bigint AS
+$BODY$INSERT INTO diem(
+            diem, id_loaidiem, id_chitietsodiem)
+    VALUES ($1, $2, $3) returning id_diem;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION create_diem(double precision, bigint, bigint) OWNER TO postgres;
+-----------------------------------------------------------------
+-- Function: create_chitietsodiem(bigint, bigint, bigint)
+
+-- DROP FUNCTION create_chitietsodiem(bigint, bigint, bigint);
+
+CREATE OR REPLACE FUNCTION create_chitietsodiem(diemtrungbinh bigint,_idhocsinh bigint, _idlop bigint, _sodiem bigint)
+  RETURNS bigint AS
+$BODY$INSERT INTO chitietsodiem(
+            diemtrungbinh,id_hocsinh, id_lop, id_sodiem)
+    VALUES ($1, $2, $3,$4) returning id_chitietsodiem;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION create_chitietsodiem(bigint,bigint, bigint, bigint) OWNER TO postgres;
+
+
+----------------------------------------------------------
+-- Function: create_hanhkiem(character, character)
+
+-- DROP FUNCTION create_hanhkiem(character, character);
+
+CREATE OR REPLACE FUNCTION create_hanhkiem(_ghichu character, _tenhanhkiem character)
+  RETURNS bigint AS
+$BODY$INSERT INTO hanhkiem(
+            ghichu, tenhanhkiem)
+    VALUES ($1, $2) returning id_hanhkiem;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION create_hanhkiem(character, character) OWNER TO postgres;
+--------------------------------------------------------------------
+-- Function: create_hocba(integer, boolean, character, bigint, bigint, bigint, bigint, bigint, bigint)
+
+-- DROP FUNCTION create_hocba(integer, boolean, character, bigint, bigint, bigint, bigint, bigint, bigint);
+
+CREATE OR REPLACE FUNCTION create_hocba(_hocky integer, _lenlophayko boolean, _nhanxet character, _idhocluc bigint, _idnamhoc bigint, _idhanhkiem bigint, _idhocsinh bigint, _idlop bigint, _iddiemtrungbinh bigint)
+  RETURNS bigint AS
+$BODY$INSERT INTO hocba(
+            hocky, lenlophayko, nhanxet, id_hocluc, id_namhoc, 
+            id_hanhkiem, id_hocsinh, id_lop, diemtrungbinh)
+    VALUES ($1, $2, $3, $4, $5, $6, 
+            $7, $8, $9) returning id_hocba;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION create_hocba(integer, boolean, character, bigint, bigint, bigint, bigint, bigint, bigint) OWNER TO postgres;
+---------------------------------------------------
+-- Function: create_hocluc(double precision, double precision, character, double precision, character)
+
+-- DROP FUNCTION create_hocluc(double precision, double precision, character, double precision, character);
+
+CREATE OR REPLACE FUNCTION create_hocluc(_diemcanduoi double precision, _diemcantren double precision, _ghichu character, _khongcomonduoi double precision, _tenhocluc character)
+  RETURNS bigint AS
+$BODY$INSERT INTO hocluc(
+            diemcanduoi, diemcantren, ghichu, khongcomonduoi, 
+            tenhocluc)
+    VALUES ($1, $2, $3, $4, $5) returning id_hocluc;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION create_hocluc(double precision, double precision, character, double precision, character) OWNER TO postgres;
+-------------------------------------------------------
+-- Function: create_loaidiem(integer, character, character)
+
+-- DROP FUNCTION create_loaidiem(integer, character, character);
+
+CREATE OR REPLACE FUNCTION create_loaidiem(_heso integer, _kyhieu character, _tenloaidiem character)
+  RETURNS bigint AS
+$BODY$INSERT INTO loaidiem(
+            heso, kyhieu, tenloaidiem)
+    VALUES ($1, $2, $3) returning id_loaidiem;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION create_loaidiem(integer, character, character) OWNER TO postgres;
+----------------------------------------------------------
+-- Function: create_sodiem(integer, character, bigint, bigint, bigint)
+
+-- DROP FUNCTION create_sodiem(integer, character, bigint, bigint, bigint);
+
+CREATE OR REPLACE FUNCTION create_sodiem(_hocky integer, _tensodiem character, _idmonhoc bigint, _idgiaovien bigint, _idlop bigint)
+  RETURNS bigint AS
+$BODY$INSERT INTO sodiem(
+            hocky, tensodiem, id_monhoc, id_giaovien, id_lop)
+    VALUES ($1, $2, $3, $4, $5) returning id_sodiem;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION create_sodiem(integer, character, bigint, bigint, bigint) OWNER TO postgres;
+--------------------------------------------------------
+-- Function: create_tobomon(bigint, character, bigint)
+
+-- DROP FUNCTION create_tobomon(bigint, character, bigint);
+
+CREATE OR REPLACE FUNCTION create_tobomon(id_tobomon bigint, ten_tobomon character, id_cuacoso bigint)
+  RETURNS bigint AS
+$BODY$INSERT INTO tobomon(id_tobomon,
+            tenbomon, id_coso)
+    VALUES ($1,$2,$3) returning id_tobomon;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION create_tobomon(bigint, character, bigint) OWNER TO postgres;
+---------------------------------------------------------
+-- Function: fortest(bigint, bigint, bigint)
+
+-- DROP FUNCTION fortest(bigint, bigint, bigint);
+
+CREATE OR REPLACE FUNCTION fortest(_idlop bigint, _idgiaovien bigint, _idhocsinh bigint)
+  RETURNS boolean AS
+$BODY$
+
+declare 
+id_monhocToan bigint;
+id_monhocLy bigint;
+id_tobomonToan bigint;
+id_tobomonLy bigint;
+id_sodiemToanHky1 bigint;
+id_sodiemToanHky2 bigint;
+id_sodiemLyHky1 bigint;
+id_sodiemLyHky2 bigint;
+id_chitietsodiemToanHKI bigint;
+id_chitietsodiemToanHKII bigint;
+id_chitietsodiemLyHKI bigint;
+id_chitietsodiemLyHKII bigint;
+id_loaidiem bigint;
+id_hocba1 bigint;
+id_hocba2 bigint;
+id_diem1 bigint;
+id_diem2 bigint;
+id_diem3 bigint;
+id_diem4 bigint;
+id_hocluc bigint;
+id_hanhkiem bigint;
+Begin
+--tao to Toan
+ id_tobomonToan=create_tobomon(2,'to Toan', 1);
+ id_monhocToan=create_monhoc('Toan 12',id_tobomonToan);
+
+--tao to Ly
+ id_tobomonLy=create_tobomon(3,'to Ly', 1);
+ id_monhocLy=create_monhoc('Ly 12',id_tobomonLy);
+
+ --tao Hanhkiem
+ id_hanhkiem=create_hanhkiem('co gang hon','Tot');
+--tao hoc luc
+ id_hocluc=create_hocluc(8, 10, 'loai gioi',7,'Gioi');
+
+--tao loai diem
+ id_loaidiem=create_loaidiem(1, 'TB', 'DTB');
+
+--tao hocba
+  id_hocba1=create_hocba(1,true,'hoc rat tot',id_hocluc,1,id_hanhkiem,$3,$1,9);
+  id_hocba2=create_hocba(2,true,'hoc rat tot',id_hocluc,1,id_hanhkiem,$3,$1,8);
+--tao so diem
+ id_sodiemToanHky1=create_sodiem(1, 'So diem Toan 12 HKI', id_monhocToan, $2, $1);
+ id_sodiemLyHky1=create_sodiem(1, 'So diem Ly 12 HKI', id_monhocLy, $2, $1);
+ 
+ id_sodiemToanHky2=create_sodiem(2, 'So diem Toan 12 HKII', id_monhocToan, $2, $1);
+ id_sodiemLyHky2=create_sodiem(2, 'So diem Ly 12 HKII', id_monhocToan, $2, $1);
+ 
+ --tao chi tiet so diem
+ id_chitietsodiemToanHKI=create_chitietsodiem(8,$3,$1, id_sodiemToanHky1);
+ id_chitietsodiemToanHKII=create_chitietsodiem(9,$3,$1, id_sodiemToanHky2); 
+ id_chitietsodiemLyHKI=create_chitietsodiem(10,$3,$1, id_sodiemLyHky1);
+ id_chitietsodiemLyHKII=create_chitietsodiem(8,$3,$1, id_sodiemLyHky2);
+ --tao diem
+ id_diem1=create_diem(8,id_loaidiem,id_chitietsodiemToanHKI);
+ id_diem2=create_diem(9,id_loaidiem,id_chitietsodiemToanHKII);
+ id_diem3=create_diem(10,id_loaidiem,id_chitietsodiemLyHKI);
+ id_diem4=create_diem(8,id_loaidiem,id_chitietsodiemLyHKII);
+
+	return true;
+end;
+$BODY$
+  LANGUAGE 'plpgsql' VOLATILE
+  COST 100;
+ALTER FUNCTION fortest(bigint, bigint, bigint) OWNER TO postgres;
+
+
+
+
