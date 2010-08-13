@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP-ENV:Body>
+    <m:XemDiemOperationResponse xmlns:m="QuanLyDiemComApp" xmlns:msgns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/XemDiem">
+      <listDiem>
+        <ns1:Diem xmlns:ns1="http://xml.netbeans.org/schema/LoaiDiem">
+          <ns1:id_diem isNull="false">34</ns1:id_diem>
+          <ns1:diem isNull="false">5</ns1:diem>
+          <ns1:id_loaidiem isNull="false">2</ns1:id_loaidiem>
+          <ns1:id_chitietsodiem isNull="false">11</ns1:id_chitietsodiem>
+        </ns1:Diem>
+        <ns1:Diem xmlns:ns1="http://xml.netbeans.org/schema/LoaiDiem">
+          <ns1:id_diem isNull="false">35</ns1:id_diem>
+          <ns1:diem isNull="false">4</ns1:diem>
+          <ns1:id_loaidiem isNull="false">2</ns1:id_loaidiem>
+          <ns1:id_chitietsodiem isNull="false">11</ns1:id_chitietsodiem>
+        </ns1:Diem>
+        <ns1:Diem xmlns:ns1="http://xml.netbeans.org/schema/LoaiDiem">
+          <ns1:id_diem isNull="false">36</ns1:id_diem>
+          <ns1:diem isNull="false">6</ns1:diem>
+          <ns1:id_loaidiem isNull="false">2</ns1:id_loaidiem>
+          <ns1:id_chitietsodiem isNull="false">11</ns1:id_chitietsodiem>
+        </ns1:Diem>
+        <ns1:Diem xmlns:ns1="http://xml.netbeans.org/schema/LoaiDiem">
+          <ns1:id_diem isNull="false">37</ns1:id_diem>
+          <ns1:diem isNull="false">7</ns1:diem>
+          <ns1:id_loaidiem isNull="false">3</ns1:id_loaidiem>
+          <ns1:id_chitietsodiem isNull="false">11</ns1:id_chitietsodiem>
+        </ns1:Diem>
+        <ns1:Diem xmlns:ns1="http://xml.netbeans.org/schema/LoaiDiem">
+          <ns1:id_diem isNull="false">38</ns1:id_diem>
+          <ns1:diem isNull="false">8</ns1:diem>
+          <ns1:id_loaidiem isNull="false">3</ns1:id_loaidiem>
+          <ns1:id_chitietsodiem isNull="false">11</ns1:id_chitietsodiem>
+        </ns1:Diem>
+        <ns1:Diem xmlns:ns1="http://xml.netbeans.org/schema/LoaiDiem">
+          <ns1:id_diem isNull="false">39</ns1:id_diem>
+          <ns1:diem isNull="false">2</ns1:diem>
+          <ns1:id_loaidiem isNull="false">3</ns1:id_loaidiem>
+          <ns1:id_chitietsodiem isNull="false">11</ns1:id_chitietsodiem>
+        </ns1:Diem>
+        <ns1:Diem xmlns:ns1="http://xml.netbeans.org/schema/LoaiDiem">
+          <ns1:id_diem isNull="false">40</ns1:id_diem>
+          <ns1:diem isNull="false">6</ns1:diem>
+          <ns1:id_loaidiem isNull="false">3</ns1:id_loaidiem>
+          <ns1:id_chitietsodiem isNull="false">11</ns1:id_chitietsodiem>
+        </ns1:Diem>
+        <ns1:Diem xmlns:ns1="http://xml.netbeans.org/schema/LoaiDiem">
+          <ns1:id_diem isNull="false">41</ns1:id_diem>
+          <ns1:diem isNull="false">2</ns1:diem>
+          <ns1:id_loaidiem isNull="false">4</ns1:id_loaidiem>
+          <ns1:id_chitietsodiem isNull="false">11</ns1:id_chitietsodiem>
+        </ns1:Diem>
+        <ns1:Diem xmlns:ns1="http://xml.netbeans.org/schema/LoaiDiem">
+          <ns1:id_diem isNull="false">32</ns1:id_diem>
+          <ns1:diem isNull="false">9</ns1:diem>
+          <ns1:id_loaidiem isNull="false">1</ns1:id_loaidiem>
+          <ns1:id_chitietsodiem isNull="false">11</ns1:id_chitietsodiem>
+        </ns1:Diem>
+        <ns1:Diem xmlns:ns1="http://xml.netbeans.org/schema/LoaiDiem">
+          <ns1:id_diem isNull="false">33</ns1:id_diem>
+          <ns1:diem isNull="false">8</ns1:diem>
+          <ns1:id_loaidiem isNull="false">1</ns1:id_loaidiem>
+          <ns1:id_chitietsodiem isNull="false">11</ns1:id_chitietsodiem>
+        </ns1:Diem>
+      </listDiem>
+    </m:XemDiemOperationResponse>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
