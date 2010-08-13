@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP-ENV:Body>
+    <m:capnhathanhkiemOperationResponse xmlns:m="QLHocBaComApp" xmlns:msgns="http://j2ee.netbeans.org/wsdl/Quanlyhocsinh/capnhathanhkiem">
+      <result xmlns:msgns="http://j2ee.netbeans.org/wsdl/Quanlyhocsinh/update_hanhkiem" xmlns:ns0="http://j2ee.netbeans.org/wsdl/Quanlyhocsinh/capnhathanhkiem" isNull="false">true</result>
+    </m:capnhathanhkiemOperationResponse>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
