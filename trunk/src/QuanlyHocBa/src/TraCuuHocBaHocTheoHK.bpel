@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process
+    name="TraCuuHocBaHocTheoHK"
+    targetNamespace="http://enterprise.netbeans.org/bpel/QuanlyHocBa/TraCuuHocBaHocTheoHK"
+    xmlns:tns="http://enterprise.netbeans.org/bpel/QuanlyHocBa/TraCuuHocBaHocTheoHK"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
+    xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor"
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2" xmlns:ns0="http://j2ee.netbeans.org/xsd/tableSchema" xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/TraCuuHocBaHocTheoHK" location="WSDL/TraCuuHocBaHocTheoHK.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/Quanlyhocsinh/tracuuhocbatheohocky" location="WSDL/tracuuhocbatheohocky.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/laythongtinhschohba" location="DB_Binding/laythongtinhocsinhchohba/laythongtinhschohba.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <partnerLinks>
+        <partnerLink name="PartnerLink1" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/laythongtinhschohba" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="pl_tracuuhocbatheohocky" xmlns:tns="http://j2ee.netbeans.org/wsdl/Quanlyhocsinh/tracuuhocbatheohocky" partnerLinkType="tns:tracuuhocbatheohocky" partnerRole="tracuuhocbatheohockyPortTypeRole"/>
+        <partnerLink name="PL_tracuuhbahsinhtheohky" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/TraCuuHocBaHocTheoHK" partnerLinkType="tns:TraCuuHocBaHocTheoHK" myRole="TraCuuHocBaHocTheoHKPortTypeRole"/>
+    </partnerLinks>
+    <variables>
+        <variable name="Laythongtinhschohba_OperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/laythongtinhschohba" messageType="tns:outputMsg"/>
+        <variable name="Laythongtinhschohba_OperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/laythongtinhschohba" messageType="tns:inputMsg"/>
+        <variable name="TracuuhocbatheohockyOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/Quanlyhocsinh/tracuuhocbatheohocky" messageType="tns:tracuuhocbatheohockyOperationResponse"/>
+        <variable name="TracuuhocbatheohockyOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/Quanlyhocsinh/tracuuhocbatheohocky" messageType="tns:tracuuhocbatheohockyOperationRequest"/>
+        <variable name="TraCuuHocBaHocTheoHKOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/TraCuuHocBaHocTheoHK" messageType="tns:TraCuuHocBaHocTheoHKOperationResponse"/>
+        <variable name="TraCuuHocBaHocTheoHKOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/TraCuuHocBaHocTheoHK" messageType="tns:TraCuuHocBaHocTheoHKOperationRequest"/>
+    </variables>
+    <sequence>
+        <receive name="Receive1" createInstance="yes" partnerLink="PL_tracuuhbahsinhtheohky" operation="TraCuuHocBaHocTheoHKOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/TraCuuHocBaHocTheoHK" portType="tns:TraCuuHocBaHocTheoHKPortType" variable="TraCuuHocBaHocTheoHKOperationIn"/>
+        <assign name="Assign1">
+            <copy>
+                <from variable="TraCuuHocBaHocTheoHKOperationIn" part="id_hocsinh"/>
+                <to>$Laythongtinhschohba_OperationIn.part/ns0:id_hocsinh</to>
+            </copy>
+        </assign>
+        <invoke name="Invoke2" partnerLink="PartnerLink1" operation="laythongtinhschohba_Operation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/laythongtinhschohba" portType="tns:jdbcPortType" inputVariable="Laythongtinhschohba_OperationIn" outputVariable="Laythongtinhschohba_OperationOut"/>
+        <assign name="Assign2">
+            <copy>
+                <from>$Laythongtinhschohba_OperationOut.part/ns0:laythongtinhschohba_Record/ns0:id_hocsinh</from>
+                <to>$TraCuuHocBaHocTheoHKOperationOut.hocba/ns1:HocSinh/ns1:id</to>
+            </copy>
+            <copy>
+                <from>$Laythongtinhschohba_OperationOut.part/ns0:laythongtinhschohba_Record/ns0:tenhocsinh</from>
+                <to>$TraCuuHocBaHocTheoHKOperationOut.hocba/ns1:HocSinh/ns1:tenHocSinh</to>
+            </copy>
+            <copy>
+                <from>$Laythongtinhschohba_OperationOut.part/ns0:laythongtinhschohba_Record/ns0:ngaysinh</from>
+                <to>$TraCuuHocBaHocTheoHKOperationOut.hocba/ns1:HocSinh/ns1:ngaySinh</to>
+            </copy>
+            <copy>
+                <from>$Laythongtinhschohba_OperationOut.part/ns0:laythongtinhschohba_Record/ns0:gioitinh</from>
+                <to>$TraCuuHocBaHocTheoHKOperationOut.hocba/ns1:HocSinh/ns1:gioiTinh</to>
+            </copy>
+            <copy>
+                <from>$Laythongtinhschohba_OperationOut.part/ns0:laythongtinhschohba_Record/ns0:hinhanh</from>
+                <to>$TraCuuHocBaHocTheoHKOperationOut.hocba/ns1:HocSinh/ns1:hinhAnh</to>
+            </copy>
+            <copy>
+                <from>$Laythongtinhschohba_OperationOut.part/ns0:laythongtinhschohba_Record/ns0:sonha</from>
+                <to>$TraCuuHocBaHocTheoHKOperationOut.hocba/ns1:HocSinh/ns1:soNha</to>
+            </copy>
+            <copy>
+                <from>$Laythongtinhschohba_OperationOut.part/ns0:laythongtinhschohba_Record/ns0:tongiao</from>
+                <to>$TraCuuHocBaHocTheoHKOperationOut.hocba/ns1:HocSinh/ns1:tonGiao</to>
+            </copy>
+            <copy>
+                <from variable="TraCuuHocBaHocTheoHKOperationIn" part="id_hocsinh"/>
+                <to variable="TracuuhocbatheohockyOperationIn" part="id_hocsinh"/>
+            </copy>
+            <copy>
+                <from variable="TraCuuHocBaHocTheoHKOperationIn" part="hocky"/>
+                <to variable="TracuuhocbatheohockyOperationIn" part="hocky"/>
+            </copy>
+            <copy>
+                <from variable="TraCuuHocBaHocTheoHKOperationIn" part="namsau"/>
+                <to variable="TracuuhocbatheohockyOperationIn" part="namsau"/>
+            </copy>
+            <copy>
+                <from variable="TraCuuHocBaHocTheoHKOperationIn" part="namtruoc"/>
+                <to variable="TracuuhocbatheohockyOperationIn" part="namtruoc"/>
+            </copy>
+        </assign>
+        <invoke name="Invoke1" partnerLink="pl_tracuuhocbatheohocky" operation="tracuuhocbatheohockyOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/Quanlyhocsinh/tracuuhocbatheohocky" portType="tns:tracuuhocbatheohockyPortType" inputVariable="TracuuhocbatheohockyOperationIn" outputVariable="TracuuhocbatheohockyOperationOut"/>
+        <assign name="Assign3">
+            <copy>
+                <from variable="TracuuhocbatheohockyOperationOut" part="hocbaHK"/>
+                <to>$TraCuuHocBaHocTheoHKOperationOut.hocba/ns1:HocBaTungHK</to>
+            </copy>
+        </assign>
+        <reply name="Reply1" partnerLink="PL_tracuuhbahsinhtheohky" operation="TraCuuHocBaHocTheoHKOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/TraCuuHocBaHocTheoHK" portType="tns:TraCuuHocBaHocTheoHKPortType" variable="TraCuuHocBaHocTheoHKOperationOut"/>
+    </sequence>
+</process>
+
