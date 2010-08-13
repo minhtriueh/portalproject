@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process
+    name="tracuuhbahsinhtheohky"
+    targetNamespace="http://enterprise.netbeans.org/bpel/Quanlyhocsinh/tracuuhbahsinhtheohky"
+    xmlns:tns="http://enterprise.netbeans.org/bpel/Quanlyhocsinh/tracuuhbahsinhtheohky"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
+    xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor"
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2" xmlns:ns0="http://j2ee.netbeans.org/xsd/tableSchema" xmlns:ns1="http://xml.netbeans.org/schema/mine" xmlns:ns2="http://xml.netbeans.org/schema/EschoolinkObject">
+    <import namespace="http://j2ee.netbeans.org/wsdl/Quanlyhocsinh/tracuuhocbatheohocky" location="WSDL/tracuuhocbatheohocky.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/Quanlyhocsinh/find_HBTHK" location="DB_Binding/laydshocbahtheohky/find_HBTHK.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <partnerLinks>
+        <partnerLink name="plfindHBTHK" xmlns:tns="http://j2ee.netbeans.org/wsdl/Quanlyhocsinh/find_HBTHK" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="pltracuuhbatheohocky" xmlns:tns="http://j2ee.netbeans.org/wsdl/Quanlyhocsinh/tracuuhocbatheohocky" partnerLinkType="tns:tracuuhocbatheohocky" myRole="tracuuhocbatheohockyPortTypeRole"/>
+    </partnerLinks>
+    <variables>
+        <variable name="Find_HBTHK_OperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/Quanlyhocsinh/find_HBTHK" messageType="tns:outputMsg">
+            <sxed2:editor>
+                <sxed2:predicate path="$Find_HBTHK_OperationOut.part/ns0:find_HBTHK_Record[$ForEach1Counter]" source="from"/>
+            </sxed2:editor>
+        </variable>
+        <variable name="Find_HBTHK_OperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/Quanlyhocsinh/find_HBTHK" messageType="tns:inputMsg"/>
+        <variable name="TracuuhocbatheohockyOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/Quanlyhocsinh/tracuuhocbatheohocky" messageType="tns:tracuuhocbatheohockyOperationResponse">
+            <sxed2:editor>
+                <sxed2:predicate path="$TracuuhocbatheohockyOperationOut.hocbaHK/ns1:ListDiemTBCacMon/ns1:DiemTBMon[$ForEach1Counter]" source="to"/>
+            </sxed2:editor>
+        </variable>
+        <variable name="TracuuhocbatheohockyOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/Quanlyhocsinh/tracuuhocbatheohocky" messageType="tns:tracuuhocbatheohockyOperationRequest"/>
+    </variables>
+    <sequence>
+        <receive name="Receive1" createInstance="yes" partnerLink="pltracuuhbatheohocky" operation="tracuuhocbatheohockyOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/Quanlyhocsinh/tracuuhocbatheohocky" portType="tns:tracuuhocbatheohockyPortType" variable="TracuuhocbatheohockyOperationIn"/>
+        <assign name="Assign1">
+            <copy>
+                <from variable="TracuuhocbatheohockyOperationIn" part="id_hocsinh"/>
+                <to>$Find_HBTHK_OperationIn.part/ns0:hocsinh</to>
+            </copy>
+            <copy>
+                <from variable="TracuuhocbatheohockyOperationIn" part="hocky"/>
+                <to>$Find_HBTHK_OperationIn.part/ns0:hocky</to>
+            </copy>
+            <copy>
+                <from variable="TracuuhocbatheohockyOperationIn" part="namsau"/>
+                <to>$Find_HBTHK_OperationIn.part/ns0:namsau</to>
+            </copy>
+            <copy>
+                <from variable="TracuuhocbatheohockyOperationIn" part="namtruoc"/>
+                <to>$Find_HBTHK_OperationIn.part/ns0:namtruoc</to>
+            </copy>
+        </assign>
+        <invoke name="Invoke1" partnerLink="plfindHBTHK" operation="find_HBTHK_Operation" xmlns:tns="http://j2ee.netbeans.org/wsdl/Quanlyhocsinh/find_HBTHK" portType="tns:jdbcPortType" inputVariable="Find_HBTHK_OperationIn" outputVariable="Find_HBTHK_OperationOut"/>
+        <forEach name="ForEach1" parallel="no" counterName="ForEach1Counter">
+            <startCounterValue>1</startCounterValue>
+            <finalCounterValue>count($Find_HBTHK_OperationOut.part/ns0:find_HBTHK_Record)</finalCounterValue>
+            <scope name="Scope1">
+                <assign name="Assign2">
+                    <copy>
+                        <from>$Find_HBTHK_OperationOut.part/ns0:find_HBTHK_Record[$ForEach1Counter]/ns0:id_hocba
+                            <sxed2:editor>
+                                <sxed2:predicate path="$Find_HBTHK_OperationOut.part/ns0:find_HBTHK_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$TracuuhocbatheohockyOperationOut.hocbaHK/ns2:id</to>
+                    </copy>
+                    <copy>
+                        <from>$Find_HBTHK_OperationOut.part/ns0:find_HBTHK_Record[$ForEach1Counter]/ns0:nhanxet
+                            <sxed2:editor>
+                                <sxed2:predicate path="$Find_HBTHK_OperationOut.part/ns0:find_HBTHK_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$TracuuhocbatheohockyOperationOut.hocbaHK/ns2:nhanXet</to>
+                    </copy>
+                    <copy>
+                        <from>$Find_HBTHK_OperationOut.part/ns0:find_HBTHK_Record[$ForEach1Counter]/ns0:diemtrungbinhcanam
+                            <sxed2:editor>
+                                <sxed2:predicate path="$Find_HBTHK_OperationOut.part/ns0:find_HBTHK_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$TracuuhocbatheohockyOperationOut.hocbaHK/ns2:diemtrungbinhcanam</to>
+                    </copy>
+                    <copy>
+                        <from>$Find_HBTHK_OperationOut.part/ns0:find_HBTHK_Record[$ForEach1Counter]/ns0:tenhanhkiem
+                            <sxed2:editor>
+                                <sxed2:predicate path="$Find_HBTHK_OperationOut.part/ns0:find_HBTHK_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$TracuuhocbatheohockyOperationOut.hocbaHK/ns2:HanhKiem/ns2:tenHanhKiem</to>
+                    </copy>
+                    <copy>
+                        <from>$Find_HBTHK_OperationOut.part/ns0:find_HBTHK_Record[$ForEach1Counter]/ns0:hkghichu
+                            <sxed2:editor>
+                                <sxed2:predicate path="$Find_HBTHK_OperationOut.part/ns0:find_HBTHK_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$TracuuhocbatheohockyOperationOut.hocbaHK/ns2:HanhKiem/ns2:ghiChu</to>
+                    </copy>
+                    <copy>
+                        <from>$Find_HBTHK_OperationOut.part/ns0:find_HBTHK_Record[$ForEach1Counter]/ns0:namsau
+                            <sxed2:editor>
+                                <sxed2:predicate path="$Find_HBTHK_OperationOut.part/ns0:find_HBTHK_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$TracuuhocbatheohockyOperationOut.hocbaHK/ns2:NamHoc/ns2:namSau</to>
+                    </copy>
+                    <copy>
+                        <from>$Find_HBTHK_OperationOut.part/ns0:find_HBTHK_Record[$ForEach1Counter]/ns0:namtruoc
+                            <sxed2:editor>
+                                <sxed2:predicate path="$Find_HBTHK_OperationOut.part/ns0:find_HBTHK_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$TracuuhocbatheohockyOperationOut.hocbaHK/ns2:NamHoc/ns2:namTruoc</to>
+                    </copy>
+                    <copy>
+                        <from>$Find_HBTHK_OperationOut.part/ns0:find_HBTHK_Record[$ForEach1Counter]/ns0:hocky
+                            <sxed2:editor>
+                                <sxed2:predicate path="$Find_HBTHK_OperationOut.part/ns0:find_HBTHK_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$TracuuhocbatheohockyOperationOut.hocbaHK/ns2:NamHoc/ns2:hocKy</to>
+                    </copy>
+                    <copy>
+                        <from>$Find_HBTHK_OperationOut.part/ns0:find_HBTHK_Record[$ForEach1Counter]/ns0:tensodiem
+                            <sxed2:editor>
+                                <sxed2:predicate path="$Find_HBTHK_OperationOut.part/ns0:find_HBTHK_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$TracuuhocbatheohockyOperationOut.hocbaHK/ns2:DiemTBMon[$ForEach1Counter]/ns2:tenSoDiem
+                            <sxed2:editor>
+                                <sxed2:predicate path="$TracuuhocbatheohockyOperationOut.hocbaHK/ns2:DiemTBMon[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$Find_HBTHK_OperationOut.part/ns0:find_HBTHK_Record[$ForEach1Counter]/ns0:diemtrungbinhmon
+                            <sxed2:editor>
+                                <sxed2:predicate path="$Find_HBTHK_OperationOut.part/ns0:find_HBTHK_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$TracuuhocbatheohockyOperationOut.hocbaHK/ns2:DiemTBMon[$ForEach1Counter]/ns2:ChiTietSoDiem/ns2:diemtrungbinh
+                            <sxed2:editor>
+                                <sxed2:predicate path="$TracuuhocbatheohockyOperationOut.hocbaHK/ns2:DiemTBMon[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$Find_HBTHK_OperationOut.part/ns0:find_HBTHK_Record[$ForEach1Counter]/ns0:tenlop
+                            <sxed2:editor>
+                                <sxed2:predicate path="$Find_HBTHK_OperationOut.part/ns0:find_HBTHK_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$TracuuhocbatheohockyOperationOut.hocbaHK/ns2:Lop/ns2:tenLop</to>
+                    </copy>
+                    <copy>
+                        <from>$Find_HBTHK_OperationOut.part/ns0:find_HBTHK_Record[$ForEach1Counter]/ns0:id_lop
+                            <sxed2:editor>
+                                <sxed2:predicate path="$Find_HBTHK_OperationOut.part/ns0:find_HBTHK_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$TracuuhocbatheohockyOperationOut.hocbaHK/ns2:Lop/ns2:id</to>
+                    </copy>
+                    <copy>
+                        <from>$Find_HBTHK_OperationOut.part/ns0:find_HBTHK_Record[$ForEach1Counter]/ns0:tenhocluc
+                            <sxed2:editor>
+                                <sxed2:predicate path="$Find_HBTHK_OperationOut.part/ns0:find_HBTHK_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$TracuuhocbatheohockyOperationOut.hocbaHK/ns2:HocLuc/ns2:tenHocLuc</to>
+                    </copy>
+                    <copy>
+                        <from>$Find_HBTHK_OperationOut.part/ns0:find_HBTHK_Record[$ForEach1Counter]/ns0:hlghichu
+                            <sxed2:editor>
+                                <sxed2:predicate path="$Find_HBTHK_OperationOut.part/ns0:find_HBTHK_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$TracuuhocbatheohockyOperationOut.hocbaHK/ns2:HocLuc/ns2:ghiChu</to>
+                    </copy>
+                    <copy>
+                        <from>$Find_HBTHK_OperationOut.part/ns0:find_HBTHK_Record[$ForEach1Counter]/ns0:id_sodiem
+                            <sxed2:editor>
+                                <sxed2:predicate path="$Find_HBTHK_OperationOut.part/ns0:find_HBTHK_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$TracuuhocbatheohockyOperationOut.hocbaHK/ns2:DiemTBMon[$ForEach1Counter]/ns2:id
+                            <sxed2:editor>
+                                <sxed2:predicate path="$TracuuhocbatheohockyOperationOut.hocbaHK/ns2:DiemTBMon[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$Find_HBTHK_OperationOut.part/ns0:find_HBTHK_Record[$ForEach1Counter]/ns0:id_hanhkiem
+                            <sxed2:editor>
+                                <sxed2:predicate path="$Find_HBTHK_OperationOut.part/ns0:find_HBTHK_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$TracuuhocbatheohockyOperationOut.hocbaHK/ns2:HanhKiem/ns2:id</to>
+                    </copy>
+                    <copy>
+                        <from>$Find_HBTHK_OperationOut.part/ns0:find_HBTHK_Record[$ForEach1Counter]/ns0:id_hocluc
+                            <sxed2:editor>
+                                <sxed2:predicate path="$Find_HBTHK_OperationOut.part/ns0:find_HBTHK_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$TracuuhocbatheohockyOperationOut.hocbaHK/ns2:HocLuc/ns2:id</to>
+                    </copy>
+                    <copy>
+                        <from>$Find_HBTHK_OperationOut.part/ns0:find_HBTHK_Record[$ForEach1Counter]/ns0:id_namhoc
+                            <sxed2:editor>
+                                <sxed2:predicate path="$Find_HBTHK_OperationOut.part/ns0:find_HBTHK_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$TracuuhocbatheohockyOperationOut.hocbaHK/ns2:NamHoc/ns2:id</to>
+                    </copy>
+                </assign>
+            </scope>
+        </forEach>
+        <reply name="Reply1" partnerLink="pltracuuhbatheohocky" operation="tracuuhocbatheohockyOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/Quanlyhocsinh/tracuuhocbatheohocky" portType="tns:tracuuhocbatheohockyPortType" variable="TracuuhocbatheohockyOperationOut"/>
+    </sequence>
+</process>
+
+
+
+
+

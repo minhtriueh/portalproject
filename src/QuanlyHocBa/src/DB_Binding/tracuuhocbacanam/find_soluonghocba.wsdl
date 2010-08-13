@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="find_soluonghocba" targetNamespace="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/find_soluonghocba" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:ns="http://j2ee.netbeans.org/xsd/tableSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/find_soluonghocba" xmlns:plink="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/">
+  <types>
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/">
+            <xsd:import namespace="http://j2ee.netbeans.org/xsd/tableSchema" schemaLocation="find_soluonghocba.xsd"/>
+	</xsd:schema>
+  </types>
+  <message name="inputMsg">
+    <part name="part" element="ns:find_soluonghocba_Request"/>
+  </message>
+  <message name="outputMsg">
+    <part name="part" element="ns:find_soluonghocba_Response"/>
+  </message>
+  <portType name="jdbcPortType">
+    <operation name="find_soluonghocba_Operation">
+      <input name="input" message="tns:inputMsg"/>
+      <output name="output" message="tns:outputMsg"/>
+    </operation>
+  </portType>
+  <binding name="binding" type="tns:jdbcPortType">
+    <jdbc:binding xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/"/>
+    <operation name="find_soluonghocba_Operation">
+    <jdbc:operation xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/"/>
+      <input name="input">
+    <jdbc:input xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" MarkColumnName="" MarkColumnValue="" MoveRowToTableName="" PKName="" PollMilliSeconds="5000" PollingPostProcessing="MoveRow" TableName="find_soluonghocba" Transaction="NOTransaction" numberOfRecords="" operationType="find_soluonghocba_Operation" sql="SELECT
+  namhoc.namsau,
+  namhoc.namtruoc,
+  namhoc.id_namhoc,
+  hocba.id_hocba,
+  hocba.hocky
+FROM
+  public.hocba,
+  public.namhoc
+WHERE
+  hocba.id_namhoc = namhoc.id_namhoc and
+ id_hocsinh=? and
+namsau=? and
+namtruoc=?" paramOrder="id_hocsinh,namsau,namtruoc"/>
+      </input>
+      <output name="output">
+    <jdbc:output xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" returnPartName="part"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="service">
+    <port name="port" binding="tns:binding">
+    <jdbc:address xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" jndiName="jdbc/eschoolinkdb"/>
+    </port>
+  </service>
+    <plink:partnerLinkType xmlns:plink="http://docs.oasis-open.org/wsbpel/2.0/plnktype" name="jdbcpartner">
+        <plink:role name="jdbcPortTypeRole" portType="tns:jdbcPortType"/>
+    </plink:partnerLinkType>
+</definitions>
+
+
