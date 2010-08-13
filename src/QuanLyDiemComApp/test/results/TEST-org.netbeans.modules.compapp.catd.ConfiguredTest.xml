@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="1" hostname="nguyentanmo-PC" name="org.netbeans.modules.compapp.catd.ConfiguredTest" tests="1" time="1.024" timestamp="2010-08-13T04:40:40">
+<testsuite errors="0" failures="1" hostname="nguyentanmo-PC" name="org.netbeans.modules.compapp.catd.ConfiguredTest" tests="1" time="0.279" timestamp="2010-08-13T06:20:26">
   <properties>
     <property name="netbeans.autoupdate.country" value="VN" />
     <property name="com.sun.jbi.sa.internal.routing" value="true" />
@@ -354,8 +354,8 @@
     <property name="file.encoding" value="Cp1258" />
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
   </properties>
-  <testcase classname="org.netbeans.modules.compapp.catd.ConfiguredTest" name="TestTongKetDiem" time="1.005">
-    <failure message="[13-08-2010 11:40:41] The response is not identical to the expected output." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: [13-08-2010 11:40:41] The response is not identical to the expected output.
+  <testcase classname="org.netbeans.modules.compapp.catd.ConfiguredTest" name="TestXemDiem" time="0.256">
+    <failure message="[13-08-2010 13:20:26] The response is not identical to the expected output." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: [13-08-2010 13:20:26] The response is not identical to the expected output.
 	at org.netbeans.modules.compapp.catd.ConfiguredTest.checkExpectedOutput(ConfiguredTest.java:2348)
 	at org.netbeans.modules.compapp.catd.ConfiguredTest.checkExpectedOutput(ConfiguredTest.java:2218)
 	at org.netbeans.modules.compapp.catd.ConfiguredTest.testConcurrentSOAPRequest(ConfiguredTest.java:862)
@@ -418,12 +418,7 @@ user.language=vi
 user.name=nguyentanmo
 user.timezone=Asia/Bangkok
 user.variant=
-Test TestTongKetDiem\Concurrent.properties
-  * Difference (Delete): SOAP-ENV:Fault
-  * Difference (Add): m:TongKetDiemOperationResponse
- Failed. (Destination: http://localhost:18001/QuanLyDiemComApp/TongKetDiem)
+Test TestXemDiem\Concurrent.properties Failed. (Destination: http://localhost:18001/QuanLyDiemComApp/XemDiem)
 ]]></system-out>
-  <system-err><![CDATA[13-08-2010 11:40:40 org.netbeans.modules.csl.core.LanguageRegistry readSfs
-INFO: No CslPlugins folder
-]]></system-err>
+  <system-err><![CDATA[]]></system-err>
 </testsuite>
