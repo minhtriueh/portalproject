@@ -540,3 +540,61 @@ $BODY$
   LANGUAGE 'plpgsql' VOLATILE
   COST 100;
 ALTER FUNCTION create_danhsachlop(bigint, bigint) OWNER TO postgres;
+
+-- Function: update_thongtinhocsinh(bigint, bigint, character, character, character, boolean, boolean, date, date, date, character, character, character, bigint, bigint, bigint, bigint, bigint, bigint, bigint, bigint, character, bigint, bigint, bigint, bigint, character, character)
+
+-- DROP FUNCTION update_thongtinhocsinh(bigint, bigint, character, character, character, boolean, boolean, date, date, date, character, character, character, bigint, bigint, bigint, bigint, bigint, bigint, bigint, bigint, character, bigint, bigint, bigint, bigint, character, character);
+
+CREATE OR REPLACE FUNCTION update_thongtinhocsinh(id_hocsinh_ bigint, id_quequan_ bigint, ghichu_ character, gioitinh_ character, hinhanh_ character, ketnapdoan_ boolean, ketnapdoi_ boolean, ngaysinh_ date, ngayvaodoan_ date, ngayvaodoi_ date, sonha_ character, tenhocsinh_ character, tongiao_ character, id_thonxom_ bigint, id_loaihocsinh_ bigint, id_chedouutien_ bigint, id_khuvuc_ bigint, id_tinh_ bigint, id_xaphuongthitran_ bigint, id_quanhuyenthanhpho_ bigint, id_dantoc_ bigint, quequan_ character, id_quanhuyenthanhpho_qq bigint, id_xaphuongthitran_qq bigint, id_thonxom_qq bigint, id_tinh_qq bigint, ten_ character, masohocsinh_ character)
+  RETURNS boolean AS
+$BODY$
+BEGIN
+	LOOP
+	UPDATE hocsinh
+	   SET ghichu=ghichu_ , gioitinh=gioitinh_ , hinhanh= hinhanh_, 
+	       ketnapdoan= ketnapdoan_, ketnapdoi= ketnapdoi_, masohocsinh= masohocsinh_, ngaysinh= ngaysinh_, ngayvaodoan= ngayvaodoan_, 
+	       ngayvaodoi= ngayvaodoi_, sonha= sonha_, ten= ten_, tenhocsinh= tenhocsinh_, tongiao= tongiao_, id_tinh= id_tinh_, 
+	       id_xaphuongthitran= id_xaphuongthitran_, id_quanhuyenthanhpho= id_quanhuyenthanhpho_, id_loaihocsinh= id_loaihocsinh_, 
+	       id_chedouutien= id_chedouutien_,id_dantoc= id_dantoc_,id_thonxom= id_thonxom_, id_khuvuc= id_khuvuc_
+	   WHERE id_hocsinh= id_hocsinh_ ;
+	IF not found THEN
+            RETURN false;
+        END IF;
+        --update thong tin que quan
+        UPDATE quequan
+	   SET quequan= quequan_, id_xaphuongthitran= id_xaphuongthitran_qq, id_thonxom= id_thonxom_qq, 
+	       id_quanhuyenthanhpho= id_quanhuyenthanhpho_qq, id_tinh= id_tinh_qq
+	   WHERE id_quequan= id_quequan_;
+	IF not found THEN
+            RETURN false;
+        END IF;
+        RETURN true;
+        END LOOP;
+END;
+$BODY$
+  LANGUAGE 'plpgsql' VOLATILE
+  COST 100;
+ALTER FUNCTION update_thongtinhocsinh(bigint, bigint, character, character, character, boolean, boolean, date, date, date, character, character, character, bigint, bigint, bigint, bigint, bigint, bigint, bigint, bigint, character, bigint, bigint, bigint, bigint, character, character) OWNER TO postgres;
+
+-- Function: update_quanhegiadinh(bigint, character, date, character, character)
+
+-- DROP FUNCTION update_quanhegiadinh(bigint, character, date, character, character);
+
+CREATE OR REPLACE FUNCTION update_quanhegiadinh(id_thanhphangiadinh_ bigint, hoten_ character, ngaysinh_ date, nghenghiep_ character, tenquanhe_ character)
+  RETURNS boolean AS
+$BODY$
+BEGIN
+	LOOP
+	UPDATE thanhphangiadinh
+	   SET hoten= hoten_, ngaysinh= ngaysinh_, nghenghiep= nghenghiep_, tenquanhe= tenquanhe_
+	   WHERE id_thanhphangiadinh= id_thanhphangiadinh_ ;
+	IF found THEN
+            RETURN true;
+        END IF;
+        RETURN false;
+        END LOOP;
+END;
+$BODY$
+  LANGUAGE 'plpgsql' VOLATILE
+  COST 100;
+ALTER FUNCTION update_quanhegiadinh(bigint, character, date, character, character) OWNER TO postgres;

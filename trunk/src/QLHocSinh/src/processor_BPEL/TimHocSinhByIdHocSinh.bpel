@@ -168,6 +168,50 @@
                 <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:masohocsinh</from>
                 <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:maSo</to>
             </copy>
+            <copy>
+                <from variable="TimHocSinhByIdHocSinhOperationIn" part="idhocsinh"/>
+                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:id</to>
+            </copy>
+            <copy>
+                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:id_khuvuc</from>
+                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:KhuVuc/ns1:id</to>
+            </copy>
+            <copy>
+                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:id_tinh</from>
+                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:diaChiHienTai/ns1:Tinh/ns1:id</to>
+            </copy>
+            <copy>
+                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:id_quanhuyenthanhpho</from>
+                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:diaChiHienTai/ns1:QuanHuyenThanhPho/ns1:id</to>
+            </copy>
+            <copy>
+                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:id_xaphuongthitran</from>
+                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:diaChiHienTai/ns1:XaPhuongThiTran/ns1:id</to>
+            </copy>
+            <copy>
+                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:id_thonxom</from>
+                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:diaChiHienTai/ns1:ThonXom/ns1:id</to>
+            </copy>
+            <copy>
+                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:id_chedouutien</from>
+                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:CheDoUuTien/ns1:id</to>
+            </copy>
+            <copy>
+                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:id_dantoc</from>
+                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:DanToc/ns1:id</to>
+            </copy>
+            <copy>
+                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:id_loaihocsinh</from>
+                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:LoaiHocSinh/ns1:id</to>
+            </copy>
+            <copy>
+                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:motaloaihocsinh</from>
+                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:LoaiHocSinh/ns1:moTa</to>
+            </copy>
+            <copy>
+                <from>$Newuntitled_OperationOut.part/ns0:DB_loadHocSinhByIdHocSinh_Record/ns0:motakhuvuc</from>
+                <to>$TimHocSinhByIdHocSinhOperationOut.result/ns1:KhuVuc/ns1:moTa</to>
+            </copy>
         </assign>
         <invoke name="Invoke2" partnerLink="loadquequan" operation="newuntitled_Operation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_loadQueQuanByID" portType="tns:jdbcPortType" inputVariable="loadquequan_OperationIn1" outputVariable="loadquequan_OperationOut1"/>
         <assign name="Assign3">
@@ -268,6 +312,10 @@
         <reply name="Reply1" partnerLink="PartnerLink1" operation="TimHocSinhByIdHocSinhOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/TimHocSinhByIdHocSinh" portType="tns:TimHocSinhByIdHocSinhPortType" variable="TimHocSinhByIdHocSinhOperationOut"/>
     </sequence>
 </process>
+
+
+
+
 
 
 

@@ -2,7 +2,7 @@
 <definitions name="DB_loadHocSinhByIdHocSinh" targetNamespace="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_loadHocSinhByIdHocSinh" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:ns="http://j2ee.netbeans.org/xsd/tableSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_loadHocSinhByIdHocSinh" xmlns:plink="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/">
   <types>
     <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/">
-            <xsd:import namespace="http://j2ee.netbeans.org/xsd/tableSchema" schemaLocation="../../DB_WSDL/find/XSD/DB_loadHocSinhByIdHocSinh.xsd"/>
+            <xsd:import namespace="http://j2ee.netbeans.org/xsd/tableSchema" schemaLocation="DB_loadHocSinhByIdHocSinh.xsd"/>
 	</xsd:schema>
   </types>
   <message name="outputMsg">
@@ -30,7 +30,6 @@
   hocsinh.ngaysinh,
   hocsinh.hinhanh,
   hocsinh.sonha AS diachi,
-  loaihocsinh.tenloaihocsinh,
   hocsinh.ghichu,
   hocsinh.ketnapdoan,
   hocsinh.ketnapdoi,
@@ -38,16 +37,27 @@
   hocsinh.ngayvaodoi,
   hocsinh.tongiao,
   hocsinh.id_quequan,
+  loaihocsinh.id_loaihocsinh,
+  loaihocsinh.tenloaihocsinh,
+  loaihocsinh.mota AS motaloaihocsinh,
   nguoidung.ngaytao,
   nguoidung.&quot;password&quot;,
   nguoidung.username,
+  khuvuc.id_khuvuc,
   khuvuc.tenkhuvuc,
+  khuvuc.mota AS motakhuvuc,
+  tinh.id_tinh,
+  tinh.tentinh,
+  quanhuyenthanhpho.id_quanhuyenthanhpho,
   quanhuyenthanhpho.tenquanhuyenthanhpho,
+  xaphuongthitran.id_xaphuongthitran,
+  xaphuongthitran.tenxaphuongthitran,
+  thonxom.id_thonxom,
   thonxom.tenthonxom,
+  chedouutien.id_chedouutien,
   chedouutien.tenchedouutien,
   chedouutien.phantramduocgiam,
-  tinh.tentinh,
-  xaphuongthitran.tenxaphuongthitran,
+  dantoc.id_dantoc,
   dantoc.dantocthieuso,
   dantoc.tendantoc
 FROM

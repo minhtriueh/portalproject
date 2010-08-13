@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions name="DB_ChuyenLop" targetNamespace="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_ChuyenLop" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:ns="http://j2ee.netbeans.org/xsd/tableSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_ChuyenLop" xmlns:plink="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/">
+<definitions name="DB_UpdateThongTinHocSinh" targetNamespace="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_UpdateThongTinHocSinh" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:ns="http://j2ee.netbeans.org/xsd/tableSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_UpdateThongTinHocSinh" xmlns:plink="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/">
   <types>
     <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/">
-            <xsd:import namespace="http://j2ee.netbeans.org/xsd/tableSchema" schemaLocation="../../DB_WSDL/update/XSD/DB_ChuyenLop.xsd"/>
+            <xsd:import namespace="http://j2ee.netbeans.org/xsd/tableSchema" schemaLocation="../../DB_WSDL/update/XSD/DB_UpdateThongTinHocSinh.xsd"/>
 	</xsd:schema>
   </types>
   <message name="inputMsg">
-    <part name="part" element="ns:chuyenlop_Request"/>
+    <part name="part" element="ns:update_thongtinhocsinh_Request"/>
   </message>
   <message name="outputMsg">
-    <part name="part" element="ns:chuyenlop_Response"/>
+    <part name="part" element="ns:update_thongtinhocsinh_Response"/>
   </message>
   <portType name="jdbcPortType">
     <operation name="execute">
@@ -22,7 +22,7 @@
     <operation name="execute">
     <jdbc:operation xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/"/>
       <input name="inputExecute">
-    <jdbc:spinput xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" ExecutionString="{ ? = call chuyenlop(?,?,?) }" ProcedureName="chuyenlop" Transaction="NOTransaction"/>
+    <jdbc:spinput xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" ExecutionString="{ ? = call update_thongtinhocsinh(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) }" ProcedureName="update_thongtinhocsinh" Transaction="NOTransaction"/>
       </input>
       <output name="outputExecute">
     <jdbc:spoutput xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" returnPartName="part"/>
