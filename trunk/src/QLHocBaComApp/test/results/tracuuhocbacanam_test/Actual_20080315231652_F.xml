@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP-ENV:Body>
+    <m:tracuuhocbacanamOperationResponse xmlns:m="QLHocBaComApp" xmlns:msgns="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/tracuuhocbacanam">
+      <result>
+        <ns2:HocBaTungHK xmlns:msgns="http://j2ee.netbeans.org/wsdl/Quanlyhocsinh/tracuuhocbatheohocky" xmlns:ns0="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/tracuuhocbacanam" xmlns:ns2="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns2:id isNull="false">7</ns2:id>
+          <ns2:nhanXet isNull="false">hoc rat tot</ns2:nhanXet>
+          <ns2:diemtrungbinhcanam isNull="false">8</ns2:diemtrungbinhcanam>
+          <ns2:HanhKiem>
+            <ns2:id isNull="false">5</ns2:id>
+            <ns2:tenHanhKiem isNull="false">Kha</ns2:tenHanhKiem>
+            <ns2:ghiChu isNull="true"/>
+          </ns2:HanhKiem>
+          <ns2:HocLuc>
+            <ns2:id isNull="false">4</ns2:id>
+            <ns2:tenHocLuc isNull="false">Gioi</ns2:tenHocLuc>
+            <ns2:ghiChu isNull="false">loai gioi</ns2:ghiChu>
+          </ns2:HocLuc>
+          <ns2:NamHoc>
+            <ns2:id isNull="false">1</ns2:id>
+            <ns2:hocKy isNull="false">2</ns2:hocKy>
+            <ns2:namTruoc isNull="false">2008</ns2:namTruoc>
+            <ns2:namSau isNull="false">2009</ns2:namSau>
+          </ns2:NamHoc>
+          <ns2:DiemTBMon>
+            <ns2:id isNull="false">11</ns2:id>
+            <ns2:tenSoDiem isNull="false">So diem Toan 12 HKII</ns2:tenSoDiem>
+            <ns2:ChiTietSoDiem>
+              <ns2:diemtrungbinh isNull="false">9</ns2:diemtrungbinh>
+            </ns2:ChiTietSoDiem>
+          </ns2:DiemTBMon>
+          <ns2:DiemTBMon>
+            <ns2:id isNull="false">12</ns2:id>
+            <ns2:tenSoDiem isNull="false">So diem Ly 12 HKII</ns2:tenSoDiem>
+            <ns2:ChiTietSoDiem>
+              <ns2:diemtrungbinh isNull="false">8</ns2:diemtrungbinh>
+            </ns2:ChiTietSoDiem>
+          </ns2:DiemTBMon>
+          <ns2:Lop>
+            <ns2:id isNull="false">1</ns2:id>
+            <ns2:tenLop isNull="false">9A3</ns2:tenLop>
+          </ns2:Lop>
+        </ns2:HocBaTungHK>
+        <ns2:HocBaTungHK xmlns:msgns="http://j2ee.netbeans.org/wsdl/Quanlyhocsinh/tracuuhocbatheohocky" xmlns:ns0="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/tracuuhocbacanam" xmlns:ns2="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns2:id isNull="false">6</ns2:id>
+          <ns2:nhanXet isNull="false">co gang hon</ns2:nhanXet>
+          <ns2:diemtrungbinhcanam isNull="false">7</ns2:diemtrungbinhcanam>
+          <ns2:HanhKiem>
+            <ns2:id isNull="false">5</ns2:id>
+            <ns2:tenHanhKiem isNull="false">Kha</ns2:tenHanhKiem>
+            <ns2:ghiChu isNull="true"/>
+          </ns2:HanhKiem>
+          <ns2:HocLuc>
+            <ns2:id isNull="false">4</ns2:id>
+            <ns2:tenHocLuc isNull="false">Gioi</ns2:tenHocLuc>
+            <ns2:ghiChu isNull="false">loai gioi</ns2:ghiChu>
+          </ns2:HocLuc>
+          <ns2:NamHoc>
+            <ns2:id isNull="false">1</ns2:id>
+            <ns2:hocKy isNull="false">1</ns2:hocKy>
+            <ns2:namTruoc isNull="false">2008</ns2:namTruoc>
+            <ns2:namSau isNull="false">2009</ns2:namSau>
+          </ns2:NamHoc>
+          <ns2:DiemTBMon>
+            <ns2:id isNull="false">9</ns2:id>
+            <ns2:tenSoDiem isNull="false">So diem Toan 12 HKI</ns2:tenSoDiem>
+            <ns2:ChiTietSoDiem>
+              <ns2:diemtrungbinh isNull="false">8</ns2:diemtrungbinh>
+            </ns2:ChiTietSoDiem>
+          </ns2:DiemTBMon>
+          <ns2:DiemTBMon>
+            <ns2:id isNull="false">10</ns2:id>
+            <ns2:tenSoDiem isNull="false">So diem Ly 12 HKI</ns2:tenSoDiem>
+            <ns2:ChiTietSoDiem>
+              <ns2:diemtrungbinh isNull="false">10</ns2:diemtrungbinh>
+            </ns2:ChiTietSoDiem>
+          </ns2:DiemTBMon>
+          <ns2:Lop>
+            <ns2:id isNull="false">1</ns2:id>
+            <ns2:tenLop isNull="false">9A3</ns2:tenLop>
+          </ns2:Lop>
+        </ns2:HocBaTungHK>
+        <ns2:HocSinh xmlns:ns2="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns2:id isNull="false">1</ns2:id>
+          <ns2:tenHocSinh isNull="false">Nguyen</ns2:tenHocSinh>
+          <ns2:ngaySinh isNull="false">2009-01-02</ns2:ngaySinh>
+          <ns2:gioiTinh isNull="false">Nam</ns2:gioiTinh>
+          <ns2:soNha isNull="false">dfds</ns2:soNha>
+          <ns2:tonGiao isNull="false">Khong</ns2:tonGiao>
+          <ns2:hinhAnh isNull="false">anhne</ns2:hinhAnh>
+        </ns2:HocSinh>
+      </result>
+    </m:tracuuhocbacanamOperationResponse>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
