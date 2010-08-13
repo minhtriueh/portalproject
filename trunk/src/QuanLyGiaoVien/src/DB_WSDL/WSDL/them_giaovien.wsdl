@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions name="insertGV" targetNamespace="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/insertGV" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:ns="http://j2ee.netbeans.org/xsd/tableSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/insertGV" xmlns:plink="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/">
+<definitions name="them_giaovien" targetNamespace="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/them_giaovien" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:ns="http://j2ee.netbeans.org/xsd/tableSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/them_giaovien" xmlns:plink="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/">
   <types>
     <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/">
-            <xsd:import namespace="http://j2ee.netbeans.org/xsd/tableSchema" schemaLocation="insertGV.xsd"/>
+            <xsd:import namespace="http://j2ee.netbeans.org/xsd/tableSchema" schemaLocation="them_giaovien.xsd"/>
 	</xsd:schema>
   </types>
-  <message name="outputMsg">
-    <part name="part" element="ns:insertgiaovien_Response"/>
-  </message>
   <message name="inputMsg">
-    <part name="part" element="ns:insertgiaovien_Request"/>
+    <part name="part" element="ns:them_giaovienvaohethong_Request"/>
+  </message>
+  <message name="outputMsg">
+    <part name="part" element="ns:them_giaovienvaohethong_Response"/>
   </message>
   <portType name="jdbcPortType">
     <operation name="execute">
@@ -22,7 +22,7 @@
     <operation name="execute">
     <jdbc:operation xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/"/>
       <input name="inputExecute">
-    <jdbc:spinput xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" ExecutionString="{ ? = call insertgiaovien(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) }" ProcedureName="insertgiaovien" Transaction="NOTransaction"/>
+    <jdbc:spinput xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" ExecutionString="{ ? = call them_giaovienvaohethong(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) }" ProcedureName="them_giaovienvaohethong" Transaction="NOTransaction"/>
       </input>
       <output name="outputExecute">
     <jdbc:spoutput xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" returnPartName="part"/>
