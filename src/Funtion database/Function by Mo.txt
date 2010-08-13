@@ -417,3 +417,19 @@ $BODY$
 ALTER FUNCTION suadiemtrungbinh(bigint,double precision) OWNER TO postgres;
 
 
+-- Function: luudiemhocba(integer, integer, bigint, bigint, double precision)
+
+-- DROP FUNCTION luudiemhocba(integer, integer, bigint, bigint, double precision);
+
+CREATE OR REPLACE FUNCTION luudiemhocba(hocky integer, id_namhoc integer, id_hocsinh bigint, id_lop bigint, diemtrungbinh double precision)
+  RETURNS bigint AS
+$BODY$INSERT INTO hocba(hocky, id_namhoc,
+id_hocsinh, id_lop, diemtrungbinh)
+    VALUES ($1,$2,$3,$4,$5) returning id_hocba;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION luudiemhocba(integer, integer, bigint, bigint, double precision) OWNER TO postgres;
+
+
+
