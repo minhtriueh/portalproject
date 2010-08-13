@@ -26,19 +26,6 @@
             <variables>
                 <variable name="FaultVar" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/SuaGV" messageType="tns:newWSDLOperationFault"/>
             </variables>
-            <faultHandlers>
-                <catchAll>
-                    <sequence name="Sequence2">
-                        <assign name="Assign3">
-                            <copy>
-                                <from>'UPDATE ERROR'</from>
-                                <to variable="FaultVar" part="eror"/>
-                            </copy>
-                        </assign>
-                        <reply name="Reply2" partnerLink="pl_SuaGV" operation="SuaGVOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/SuaGV" portType="tns:SuaGVPortType" faultName="tns:fault" variable="FaultVar"/>
-                    </sequence>
-                </catchAll>
-            </faultHandlers>
             <sequence name="Sequence1" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/SuaGV">
                 <receive name="Receive1" createInstance="yes" partnerLink="pl_SuaGV" operation="SuaGVOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/SuaGV" portType="tns:SuaGVPortType" variable="SuaGVOperationIn"/>
                     <assign name="Assign1">
@@ -155,6 +142,7 @@
         </scope>
     </sequence>
 </process>
+
 
 
 

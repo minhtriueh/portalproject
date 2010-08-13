@@ -12,16 +12,14 @@
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/themGV" location="../interface_WSDL/themGV.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/insertTK" location="../DB_WSDL/insertTK.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/insertGV" location="../DB_WSDL/insertGV.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/them_giaovien" location="../DB_WSDL/WSDL/them_giaovien.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
     <partnerLinks>
-        <partnerLink name="pltk" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/insertTK" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
-        <partnerLink name="plgv" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/insertGV" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="pl_themgiaovien" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/them_giaovien" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
         <partnerLink name="pl_themGV" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/themGV" partnerLinkType="tns:themGV" myRole="themGVPortTypeRole"/>
     </partnerLinks>
     <variables>
-        <variable name="GVOUT" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/insertGV" messageType="tns:outputMsg"/>
-        <variable name="GVIN" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/insertGV" messageType="tns:inputMsg"/>
-        <variable name="TKOUT" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/insertTK" messageType="tns:outputMsg"/>
-        <variable name="TKIN" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/insertTK" messageType="tns:inputMsg"/>
+        <variable name="THemGVienOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/them_giaovien" messageType="tns:outputMsg"/>
+        <variable name="THemGVienIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/them_giaovien" messageType="tns:inputMsg"/>
         <variable name="ThemGVOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/themGV" messageType="tns:themGVOperationResponse"/>
         <variable name="ThemGVOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/themGV" messageType="tns:themGVOperationRequest"/>
     </variables>
@@ -29,126 +27,121 @@
         <receive name="Receive1" createInstance="yes" partnerLink="pl_themGV" operation="themGVOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/themGV" portType="tns:themGVPortType" variable="ThemGVOperationIn"/>
         <assign name="Assign1">
             <copy>
-                <from>sxxf:current-date()</from>
-                <to>$TKIN.part/ns0:ngay</to>
-            </copy>
-            <copy>
-                <from variable="ThemGVOperationIn" part="tengiaovien"/>
-                <to>$TKIN.part/ns0:username</to>
-            </copy>
-            <copy>
-                <from variable="ThemGVOperationIn" part="sodienthoai"/>
-                <to>$TKIN.part/ns0:password</to>
-            </copy>
-        </assign>
-        <invoke name="Invoke1" partnerLink="pltk" operation="execute" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/insertTK" portType="tns:jdbcPortType" inputVariable="TKIN" outputVariable="TKOUT"/>
-        <assign name="Assign2">
-            <copy>
                 <from variable="ThemGVOperationIn" part="choohientai"/>
-                <to>$GVIN.part/ns0:choohientai</to>
+                <to>$THemGVienIn.part/ns0:choohientai</to>
             </copy>
             <copy>
                 <from variable="ThemGVOperationIn" part="chucvu"/>
-                <to>$GVIN.part/ns0:chucvu</to>
+                <to>$THemGVienIn.part/ns0:chucvu</to>
             </copy>
             <copy>
                 <from variable="ThemGVOperationIn" part="cmnd"/>
-                <to>$GVIN.part/ns0:cmnd</to>
+                <to>$THemGVienIn.part/ns0:cmnd</to>
             </copy>
             <copy>
                 <from variable="ThemGVOperationIn" part="email"/>
-                <to>$GVIN.part/ns0:email</to>
+                <to>$THemGVienIn.part/ns0:email</to>
             </copy>
             <copy>
                 <from variable="ThemGVOperationIn" part="gioitinh"/>
-                <to>$GVIN.part/ns0:gioitinh</to>
+                <to>$THemGVienIn.part/ns0:gioitinh</to>
             </copy>
             <copy>
                 <from variable="ThemGVOperationIn" part="hinhanh"/>
-                <to>$GVIN.part/ns0:hinhanh</to>
+                <to>$THemGVienIn.part/ns0:hinhanh</to>
             </copy>
             <copy>
                 <from variable="ThemGVOperationIn" part="ketnapdang"/>
-                <to>$GVIN.part/ns0:ketnapdang</to>
+                <to>$THemGVienIn.part/ns0:ketnapdang</to>
             </copy>
             <copy>
                 <from variable="ThemGVOperationIn" part="ketnapdoan"/>
-                <to>$GVIN.part/ns0:ketnapdoan</to>
+                <to>$THemGVienIn.part/ns0:ketnapdoan</to>
             </copy>
             <copy>
                 <from variable="ThemGVOperationIn" part="ngaycap"/>
-                <to>$GVIN.part/ns0:ngaycap</to>
+                <to>$THemGVienIn.part/ns0:ngaycap</to>
             </copy>
             <copy>
                 <from variable="ThemGVOperationIn" part="ngaysinh"/>
-                <to>$GVIN.part/ns0:ngaysinh</to>
+                <to>$THemGVienIn.part/ns0:ngaysinh</to>
             </copy>
             <copy>
                 <from variable="ThemGVOperationIn" part="ngayvaodang"/>
-                <to>$GVIN.part/ns0:ngayvaodang</to>
+                <to>$THemGVienIn.part/ns0:ngayvaodang</to>
             </copy>
             <copy>
                 <from variable="ThemGVOperationIn" part="ngayvaodoan"/>
-                <to>$GVIN.part/ns0:ngayvaodoan</to>
+                <to>$THemGVienIn.part/ns0:ngayvaodoan</to>
             </copy>
             <copy>
                 <from variable="ThemGVOperationIn" part="ngayvaotruong"/>
-                <to>$GVIN.part/ns0:ngayvaotruong</to>
+                <to>$THemGVienIn.part/ns0:ngayvaotruong</to>
             </copy>
             <copy>
                 <from variable="ThemGVOperationIn" part="noicap"/>
-                <to>$GVIN.part/ns0:noicap</to>
+                <to>$THemGVienIn.part/ns0:noicap</to>
             </copy>
             <copy>
                 <from variable="ThemGVOperationIn" part="quequan"/>
-                <to>$GVIN.part/ns0:quequan</to>
+                <to>$THemGVienIn.part/ns0:quequan</to>
             </copy>
             <copy>
                 <from variable="ThemGVOperationIn" part="sodienthoai"/>
-                <to>$GVIN.part/ns0:sodienthoai</to>
+                <to>$THemGVienIn.part/ns0:sodienthoai</to>
             </copy>
             <copy>
                 <from variable="ThemGVOperationIn" part="tengiaovien"/>
-                <to>$GVIN.part/ns0:tengiaovien</to>
+                <to>$THemGVienIn.part/ns0:tengiaovien</to>
             </copy>
             <copy>
                 <from variable="ThemGVOperationIn" part="tinhtrangsuckhoe"/>
-                <to>$GVIN.part/ns0:tinhtrangsuckhoe</to>
+                <to>$THemGVienIn.part/ns0:tinhtrangsuckhoe</to>
             </copy>
             <copy>
                 <from variable="ThemGVOperationIn" part="tongiao"/>
-                <to>$GVIN.part/ns0:tongiao</to>
+                <to>$THemGVienIn.part/ns0:tongiao</to>
             </copy>
             <copy>
                 <from variable="ThemGVOperationIn" part="trinhdodaotao"/>
-                <to>$GVIN.part/ns0:trinhdodaotao</to>
+                <to>$THemGVienIn.part/ns0:trinhdodaotao</to>
             </copy>
             <copy>
                 <from variable="ThemGVOperationIn" part="trinhdovanhoa"/>
-                <to>$GVIN.part/ns0:trinhdovanhoa</to>
+                <to>$THemGVienIn.part/ns0:trinhdovanhoa</to>
             </copy>
             <copy>
                 <from variable="ThemGVOperationIn" part="id_dantoc"/>
-                <to>$GVIN.part/ns0:id_dantoc</to>
+                <to>$THemGVienIn.part/ns0:id_dantoc</to>
             </copy>
             <copy>
                 <from variable="ThemGVOperationIn" part="id_tobomon"/>
-                <to>$GVIN.part/ns0:id_tobomon</to>
+                <to>$THemGVienIn.part/ns0:id_tobomon</to>
             </copy>
             <copy>
-                <from>$TKOUT.part/ns0:returnValue</from>
-                <to>$GVIN.part/ns0:id_nguoidung</to>
+                <from>sxxf:current-date()</from>
+                <to>$THemGVienIn.part/ns0:ngaytao</to>
+            </copy>
+            <copy>
+                <from variable="ThemGVOperationIn" part="email"/>
+                <to>$THemGVienIn.part/ns0:username</to>
+            </copy>
+            <copy>
+                <from variable="ThemGVOperationIn" part="tengiaovien"/>
+                <to>$THemGVienIn.part/ns0:passwd</to>
             </copy>
         </assign>
-        <invoke name="Invoke2" partnerLink="plgv" operation="execute" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/insertGV" portType="tns:jdbcPortType" inputVariable="GVIN" outputVariable="GVOUT"/>
-        <assign name="Assign3">
+        <invoke name="Invoke1" partnerLink="pl_themgiaovien" operation="execute" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/them_giaovien" portType="tns:jdbcPortType" inputVariable="THemGVienIn" outputVariable="THemGVienOut"/>
+        <assign name="Assign2">
             <copy>
-                <from>$GVOUT.part/ns0:returnValue</from>
+                <from>$THemGVienOut.part/ns0:returnValue</from>
                 <to variable="ThemGVOperationOut" part="result"/>
             </copy>
         </assign>
         <reply name="Reply1" partnerLink="pl_themGV" operation="themGVOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/themGV" portType="tns:themGVPortType" variable="ThemGVOperationOut"/>
     </sequence>
 </process>
+
+
 
 
