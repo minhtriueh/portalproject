@@ -521,9 +521,9 @@
                     <div class="art-footer-inner">
                         <a href="#" class="art-rss-tag-icon" title="RSS"></a>
                         <div class="art-footer-text">
-                            <p><a href="#">Contact Us</a> | <a href="#">Terms of Use</a> | <a href="#">Trademarks</a>
-                                | <a href="#">Privacy Statement</a><br />
-                                Copyright &copy; 2009 ---. All Rights Reserved.</p>
+                            <p><a href="#">Trang chủ</a> | <a href="#">Giới thiệu</a> | <a href="#">Liên hệ</a>
+                                <br />
+                                Copyright &copy; 2010 ---. Bản quyền nhóm phát triển Eschoolink ĐH Nông Lâm tp HCM.</p>
                         </div>
                     </div>
                     <div class="art-footer-background"></div>
@@ -532,7 +532,7 @@
             </div>
         </div>
         <div class="cleared"></div>
-        <p class="art-page-footer"><a href="http://www.artisteer.com/">Web Template</a> created with Artisteer by duy chinh.</p>
+        <p class="art-page-footer"><a href="#">Web Template</a> by Duy Chinh.</p>
     </div>
 
 </body>
