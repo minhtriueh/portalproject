@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <xsd:schema elementFormDefault="qualified" targetNamespace="http://j2ee.netbeans.org/xsd/tableSchema" xmlns="http://j2ee.netbeans.org/xsd/tableSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="themnguoidungnhom_Request">
+      <xsd:complexType>
+        <xsd:sequence>
+          <xsd:element name="nguoidungs_id_nguoidung">
+            <xsd:complexType>
+              <xsd:simpleContent>
+                <xsd:extension base="xsd:long">
+                  <xsd:attribute name="isNull" type="xsd:boolean"></xsd:attribute>
+                  <xsd:attribute name="isDefaultColumn" type="xsd:boolean"></xsd:attribute>
+                </xsd:extension>
+              </xsd:simpleContent>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="nhoms_id_nhom">
+            <xsd:complexType>
+              <xsd:simpleContent>
+                <xsd:extension base="xsd:long">
+                  <xsd:attribute name="isNull" type="xsd:boolean"></xsd:attribute>
+                  <xsd:attribute name="isDefaultColumn" type="xsd:boolean"></xsd:attribute>
+                </xsd:extension>
+              </xsd:simpleContent>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="themnguoidungnhom_Response">
+      <xsd:complexType>
+        <xsd:sequence>
+          <xsd:element name="returnValue">
+            <xsd:complexType>
+              <xsd:simpleContent>
+                <xsd:extension base="xsd:long">
+                  <xsd:attribute name="isNull" type="xsd:boolean"></xsd:attribute>
+                  <xsd:attribute name="isDefaultColumn" type="xsd:boolean"></xsd:attribute>
+                </xsd:extension>
+              </xsd:simpleContent>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
