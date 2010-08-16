@@ -5,14 +5,21 @@
 
 -- DROP FUNCTION doimatkhau(character, bigint);
 
-CREATE OR REPLACE FUNCTION doimatkhau("password" character, id_nguoidung bigint)
-  RETURNS bigint AS
-$BODY$UPDATE nguoidung
-   SET "password"=$1
- WHERE id_nguoidung=$2 returning id_nguoidung
-;
+
+CREATE OR REPLACE FUNCTION doimatkhau(passwordin character, id_nguoidungin bigint)
+  RETURNS boolean AS
 $BODY$
-  LANGUAGE 'sql' VOLATILE
+BEGIN
+	LOOP
+	UPDATE nguoidung SET "password"=passwordin WHERE id_nguoidung=id_nguoidungin;
+	IF found THEN
+            RETURN true;
+        END IF;
+        RETURN false;
+        END LOOP;
+END;
+$BODY$
+  LANGUAGE 'plpgsql' VOLATILE
   COST 100;
 ALTER FUNCTION doimatkhau(character, bigint) OWNER TO postgres;
 
@@ -57,13 +64,20 @@ ALTER FUNCTION suanguoidung(character, character, bigint) OWNER TO postgres;
 
 -- DROP FUNCTION suanguoidungnhom(bigint, bigint);
 
-CREATE OR REPLACE FUNCTION suanguoidungnhom(nhoms_id_nhom bigint, nguoidungs_id_nguoidung bigint)
-  RETURNS bigint AS
-$BODY$UPDATE nguoidung_nhom
-   SET nhoms_id_nhom=$1
- WHERE nguoidungs_id_nguoidung=$2 returning nguoidungs_id_nguoidung;
+CREATE OR REPLACE FUNCTION suanguoidungnhom(nhoms_id_nhomin bigint, nguoidungs_id_nguoidungin bigint)
+  RETURNS boolean AS
 $BODY$
-  LANGUAGE 'sql' VOLATILE
+BEGIN
+	LOOP
+	UPDATE nguoidung_nhom SET nhoms_id_nhom=nhoms_id_nhomin WHERE nguoidungs_id_nguoidung=nguoidungs_id_nguoidungin;
+	IF found THEN
+            RETURN true;
+        END IF;
+        RETURN false;
+        END LOOP;
+END;
+$BODY$
+  LANGUAGE 'plpgsql' VOLATILE
   COST 100;
 ALTER FUNCTION suanguoidungnhom(bigint, bigint) OWNER TO postgres;
 
@@ -73,14 +87,24 @@ ALTER FUNCTION suanguoidungnhom(bigint, bigint) OWNER TO postgres;
 
 -- DROP FUNCTION suanhom(character, character, bigint);
 
-CREATE OR REPLACE FUNCTION suanhom(mota character, tennhom character, id_nhom bigint)
-  RETURNS bigint AS
-$BODY$UPDATE nhom
-   SET mota=$1, tennhom=$2
- WHERE id_nhom=$3 returning id_nhom;$BODY$
-  LANGUAGE 'sql' VOLATILE
+
+CREATE OR REPLACE FUNCTION suanhom(motain character, tennhomin character, id_nhomin bigint)
+  RETURNS boolean AS
+$BODY$
+BEGIN
+	LOOP
+	UPDATE nhom SET mota=motain, tennhom=tennhomin WHERE id_nhom=id_nhomin;
+	IF found THEN
+            RETURN true;
+        END IF;
+        RETURN false;
+        END LOOP;
+END;
+$BODY$
+  LANGUAGE 'plpgsql' VOLATILE
   COST 100;
 ALTER FUNCTION suanhom(character, character, bigint) OWNER TO postgres;
+
 
 
 
