@@ -16,36 +16,35 @@
         <partnerLink name="PL_SuaNhom" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/SuaNhom" partnerLinkType="tns:SuaNhom" myRole="SuaNhomPortTypeRole"/>
     </partnerLinks>
     <variables>
+        <variable name="SuaNhomOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_SuaNhom" messageType="tns:outputMsg"/>
+        <variable name="SuaNhomIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_SuaNhom" messageType="tns:inputMsg"/>
         <variable name="SuaNhomOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/SuaNhom" messageType="tns:SuaNhomOperationResponse"/>
-        <variable name="ExecuteOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_SuaNhom" messageType="tns:outputMsg"/>
-        <variable name="ExecuteIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_SuaNhom" messageType="tns:inputMsg"/>
         <variable name="SuaNhomOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/SuaNhom" messageType="tns:SuaNhomOperationRequest"/>
     </variables>
     <sequence>
         <receive name="Receive1" createInstance="yes" partnerLink="PL_SuaNhom" operation="SuaNhomOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/SuaNhom" portType="tns:SuaNhomPortType" variable="SuaNhomOperationIn"/>
         <assign name="Assign1">
             <copy>
-                <from variable="SuaNhomOperationIn" part="idNhom"/>
-                <to>$ExecuteIn.part/ns0:id_nhom</to>
+                <from variable="SuaNhomOperationIn" part="mota"/>
+                <to>$SuaNhomIn.part/ns0:motain</to>
             </copy>
             <copy>
-                <from variable="SuaNhomOperationIn" part="tenNhom"/>
-                <to>$ExecuteIn.part/ns0:tennhom</to>
+                <from variable="SuaNhomOperationIn" part="tennhom"/>
+                <to>$SuaNhomIn.part/ns0:tennhomin</to>
             </copy>
             <copy>
-                <from variable="SuaNhomOperationIn" part="moTa"/>
-                <to>$ExecuteIn.part/ns0:mota</to>
+                <from variable="SuaNhomOperationIn" part="id_nhom"/>
+                <to>$SuaNhomIn.part/ns0:id_nhomin</to>
             </copy>
         </assign>
-        <invoke name="Invoke1" partnerLink="PL_DB_SuaNhom" operation="execute" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_SuaNhom" portType="tns:jdbcPortType" inputVariable="ExecuteIn" outputVariable="ExecuteOut"/>
+        <invoke name="Invoke1" partnerLink="PL_DB_SuaNhom" operation="execute" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_SuaNhom" portType="tns:jdbcPortType" inputVariable="SuaNhomIn" outputVariable="SuaNhomOut"/>
         <assign name="Assign2">
             <copy>
-                <from>$ExecuteOut.part/ns0:returnValue</from>
-                <to variable="SuaNhomOperationOut" part="idNhom"/>
+                <from>$SuaNhomOut.part/ns0:returnValue</from>
+                <to variable="SuaNhomOperationOut"/>
             </copy>
         </assign>
         <reply name="Reply1" partnerLink="PL_SuaNhom" operation="SuaNhomOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/SuaNhom" portType="tns:SuaNhomPortType" variable="SuaNhomOperationOut"/>
     </sequence>
 </process>
-
 
