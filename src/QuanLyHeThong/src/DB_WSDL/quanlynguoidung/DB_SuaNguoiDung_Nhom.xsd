@@ -3,7 +3,7 @@
     <xsd:element name="suanguoidungnhom_Request">
       <xsd:complexType>
         <xsd:sequence>
-          <xsd:element name="nhoms_id_nhom">
+          <xsd:element name="nhoms_id_nhomin">
             <xsd:complexType>
               <xsd:simpleContent>
                 <xsd:extension base="xsd:long">
@@ -13,7 +13,7 @@
               </xsd:simpleContent>
             </xsd:complexType>
           </xsd:element>
-          <xsd:element name="nguoidungs_id_nguoidung">
+          <xsd:element name="nguoidungs_id_nguoidungin">
             <xsd:complexType>
               <xsd:simpleContent>
                 <xsd:extension base="xsd:long">
@@ -32,7 +32,7 @@
           <xsd:element name="returnValue">
             <xsd:complexType>
               <xsd:simpleContent>
-                <xsd:extension base="xsd:long">
+                <xsd:extension base="xsd:boolean">
                   <xsd:attribute name="isNull" type="xsd:boolean"></xsd:attribute>
                   <xsd:attribute name="isDefaultColumn" type="xsd:boolean"></xsd:attribute>
                 </xsd:extension>
