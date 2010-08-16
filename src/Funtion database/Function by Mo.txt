@@ -432,4 +432,19 @@ $BODY$
 ALTER FUNCTION luudiemhocba(integer, integer, bigint, bigint, double precision) OWNER TO postgres;
 
 
+-- Function: xetlenlop(bigint, bigint, bigint)
+
+-- DROP FUNCTION xetlenlop(bigint, bigint, bigint);
+
+CREATE OR REPLACE FUNCTION xetlenlop(id_hocsinh bigint, id_lop bigint, id_namhoc bigint)
+  RETURNS bigint AS
+$BODY$INSERT INTO lenlop(
+            id_hocsinh, id_lop, id_namhoc)
+    VALUES ($1,$2,$3) returning id_lenlop;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION xetlenlop(bigint, bigint, bigint) OWNER TO postgres;
+
+
 
