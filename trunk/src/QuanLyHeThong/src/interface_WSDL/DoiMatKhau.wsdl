@@ -6,10 +6,10 @@
     <types/>
     <message name="DoiMatKhauOperationRequest">
         <part name="matKhau" type="xsd:string"/>
-        <part name="id_nguoiDung" type="xsd:long"/>
+        <part name="id_nguoidung" type="xsd:long"/>
     </message>
     <message name="DoiMatKhauOperationResponse">
-        <part name="id_nguoiDung" type="xsd:long"/>
+        <part name="doimatkhauBoolean" type="xsd:boolean"/>
     </message>
     <portType name="DoiMatKhauPortType">
         <operation name="DoiMatKhauOperation">
