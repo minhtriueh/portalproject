@@ -26,18 +26,18 @@
         <assign name="Assign1">
             <copy>
                 <from variable="DoiMatKhauOperationIn" part="matKhau"/>
-                <to>$DoiMatKhauIn.part/ns0:password</to>
+                <to>$DoiMatKhauIn.part/ns0:passwordin</to>
             </copy>
             <copy>
-                <from variable="DoiMatKhauOperationIn" part="id_nguoiDung"/>
-                <to>$DoiMatKhauIn.part/ns0:id_nguoidung</to>
+                <from variable="DoiMatKhauOperationIn" part="id_nguoidung"/>
+                <to>$DoiMatKhauIn.part/ns0:id_nguoidungin</to>
             </copy>
         </assign>
         <invoke name="Invoke1" partnerLink="PL_DB_DoiMatKhau" operation="execute" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_DoiMatKhau" portType="tns:jdbcPortType" inputVariable="DoiMatKhauIn" outputVariable="DoiMatKhauOut"/>
         <assign name="Assign2">
             <copy>
                 <from>$DoiMatKhauOut.part/ns0:returnValue</from>
-                <to variable="DoiMatKhauOperationOut" part="id_nguoiDung"/>
+                <to variable="DoiMatKhauOperationOut" part="doimatkhauBoolean"/>
             </copy>
         </assign>
         <reply name="Reply1" partnerLink="PL_DoiMatKhau" operation="DoiMatKhauOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DoiMatKhau" portType="tns:DoiMatKhauPortType" variable="DoiMatKhauOperationOut"/>

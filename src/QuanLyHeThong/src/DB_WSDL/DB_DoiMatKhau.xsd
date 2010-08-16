@@ -3,7 +3,7 @@
     <xsd:element name="doimatkhau_Request">
       <xsd:complexType>
         <xsd:sequence>
-          <xsd:element name="password">
+          <xsd:element name="passwordin">
             <xsd:complexType>
               <xsd:simpleContent>
                 <xsd:extension base="xsd:string">
@@ -13,7 +13,7 @@
               </xsd:simpleContent>
             </xsd:complexType>
           </xsd:element>
-          <xsd:element name="id_nguoidung">
+          <xsd:element name="id_nguoidungin">
             <xsd:complexType>
               <xsd:simpleContent>
                 <xsd:extension base="xsd:long">
@@ -32,7 +32,7 @@
           <xsd:element name="returnValue">
             <xsd:complexType>
               <xsd:simpleContent>
-                <xsd:extension base="xsd:long">
+                <xsd:extension base="xsd:boolean">
                   <xsd:attribute name="isNull" type="xsd:boolean"></xsd:attribute>
                   <xsd:attribute name="isDefaultColumn" type="xsd:boolean"></xsd:attribute>
                 </xsd:extension>
