@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process
+    name="XetLenLop"
+    targetNamespace="http://enterprise.netbeans.org/bpel/QuanLyThiDuaLenLop/XetLenLop"
+    xmlns:tns="http://enterprise.netbeans.org/bpel/QuanLyThiDuaLenLop/XetLenLop"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
+    xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor"
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2" xmlns:ns0="http://j2ee.netbeans.org/xsd/tableSchema">
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyThiDuaLenLop/XetLenLop" location="../interface_WSDL/XetLenLop.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyThiDuaLenLop/DB_XetLenLop" location="../DB_WSDL/DB_XetLenLop.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <partnerLinks>
+        <partnerLink name="PartnerLink2" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyThiDuaLenLop/DB_XetLenLop" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="PartnerLink1" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyThiDuaLenLop/XetLenLop" partnerLinkType="tns:XetLenLop" myRole="XetLenLopPortTypeRole"/>
+    </partnerLinks>
+    <variables>
+        <variable name="XetLenLopOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyThiDuaLenLop/DB_XetLenLop" messageType="tns:outputMsg"/>
+        <variable name="XetLenLopIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyThiDuaLenLop/DB_XetLenLop" messageType="tns:inputMsg"/>
+        <variable name="XetLenLopOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyThiDuaLenLop/XetLenLop" messageType="tns:XetLenLopOperationResponse"/>
+        <variable name="XetLenLopOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyThiDuaLenLop/XetLenLop" messageType="tns:XetLenLopOperationRequest"/>
+    </variables>
+    <sequence>
+        <receive name="Receive1" createInstance="yes" partnerLink="PartnerLink1" operation="XetLenLopOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyThiDuaLenLop/XetLenLop" portType="tns:XetLenLopPortType" variable="XetLenLopOperationIn"/>
+        <assign name="Assign1">
+            <copy>
+                <from variable="XetLenLopOperationIn" part="id_hocsinh"/>
+                <to>$XetLenLopIn.part/ns0:id_hocsinh</to>
+            </copy>
+            <copy>
+                <from variable="XetLenLopOperationIn" part="id_lop"/>
+                <to>$XetLenLopIn.part/ns0:id_lop</to>
+            </copy>
+            <copy>
+                <from variable="XetLenLopOperationIn" part="id_namhoc"/>
+                <to>$XetLenLopIn.part/ns0:id_namhoc</to>
+            </copy>
+        </assign>
+        <invoke name="Invoke1" partnerLink="PartnerLink2" operation="execute" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyThiDuaLenLop/DB_XetLenLop" portType="tns:jdbcPortType" inputVariable="XetLenLopIn" outputVariable="XetLenLopOut"/>
+        <assign name="Assign2">
+            <copy>
+                <from>$XetLenLopOut.part/ns0:returnValue</from>
+                <to variable="XetLenLopOperationOut" part="id_lenlop"/>
+            </copy>
+        </assign>
+        <reply name="Reply1" partnerLink="PartnerLink1" operation="XetLenLopOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyThiDuaLenLop/XetLenLop" portType="tns:XetLenLopPortType" variable="XetLenLopOperationOut"/>
+    </sequence>
+</process>
+
