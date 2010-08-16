@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<casa xmlns="http://java.sun.com/xml/ns/casa" xmlns:xlink="http://www.w3.org/2000/xlink">
+    <endpoints/>
+    <service-units>
+        <service-engine-service-unit artifacts-zip="QuanLyThiDuaLenLop.jar" component-name="sun-bpel-engine" defined="true" description="Represents this Service Unit" internal="true" name="QuanLyThiDuaLenLopComApp-QuanLyThiDuaLenLop" unit-name="QuanLyThiDuaLenLop" unknown="false" x="117" y="135"/>
+    </service-units>
+    <connections/>
+    <porttypes/>
+    <bindings/>
+    <services/>
+    <regions>
+        <region name="WSDL Endpoints" width="150"/>
+        <region name="JBI Modules" width="500"/>
+        <region name="External Modules" width="200"/>
+    </regions>
+</casa>
