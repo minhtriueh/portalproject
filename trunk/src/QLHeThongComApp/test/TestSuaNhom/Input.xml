@@ -1,0 +1,9 @@
+<soapenv:Envelope xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:qlh="QLHeThongComApp">
+  <soapenv:Body>
+    <qlh:SuaNhomOperation>
+      <mota>ga</mota>
+      <tennhom>ga</tennhom>
+      <id_nhom>1</id_nhom>
+    </qlh:SuaNhomOperation>
+  </soapenv:Body>
+</soapenv:Envelope>

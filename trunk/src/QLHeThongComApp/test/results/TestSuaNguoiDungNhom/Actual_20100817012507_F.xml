@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP-ENV:Body>
+    <m:SuaNguoiDung_NhomOperationResponse xmlns:m="QLHeThongComApp" xmlns:msgns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/SuaNguoiDung_Nhom">
+      <suanguoidungnhomBoolean xmlns:msgns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_SuaNguoiDung_Nhom" xmlns:ns0="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/SuaNguoiDung_Nhom" isNull="false">true</suanguoidungnhomBoolean>
+    </m:SuaNguoiDung_NhomOperationResponse>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
