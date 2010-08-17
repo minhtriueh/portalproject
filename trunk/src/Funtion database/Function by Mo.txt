@@ -169,6 +169,42 @@ $BODY$
 ALTER FUNCTION themnguoidungquyen(bigint, bigint) OWNER TO postgres;
 
 
+-- Function: suanguoidungquyen(bigint, bigint)
+
+-- DROP FUNCTION suanguoidungquyen(bigint, bigint);
+
+CREATE OR REPLACE FUNCTION suanguoidungquyen(quyens_id_quyenin bigint, nguoidungs_id_nguoidungin bigint)
+  RETURNS boolean AS
+$BODY$
+BEGIN
+	LOOP
+	UPDATE nguoidung_quyen SET quyens_id_quyen=quyens_id_quyenin WHERE nguoidungs_id_nguoidung=nguoidungs_id_nguoidungin;
+	IF found THEN
+            RETURN true;
+        END IF;
+        RETURN false;
+        END LOOP;
+END;
+$BODY$
+  LANGUAGE 'plpgsql' VOLATILE
+  COST 100;
+ALTER FUNCTION suanguoidungquyen(bigint, bigint) OWNER TO postgres;
+
+
+-- Function: xoanguoidungquyen(bigint)
+
+-- DROP FUNCTION xoanguoidungquyen(bigint);
+
+CREATE OR REPLACE FUNCTION xoanguoidungquyen(nguoidungs_id_nguoidung bigint)
+  RETURNS bigint AS
+$BODY$DELETE FROM nguoidung_quyen
+ WHERE nguoidungs_id_nguoidung=$1 returning nguoidungs_id_nguoidung;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION xoanguoidungquyen(bigint) OWNER TO postgres;
+
+
 
 -- Function: themnhom(character, character)
 
@@ -199,6 +235,42 @@ $BODY$
   LANGUAGE 'sql' VOLATILE
   COST 100;
 ALTER FUNCTION themnhomquyen(bigint, bigint) OWNER TO postgres;
+
+
+-- Function: suanhomquyen(bigint, bigint)
+
+-- DROP FUNCTION suanhomquyen(bigint, bigint);
+
+CREATE OR REPLACE FUNCTION suanhomquyen(quyens_id_quyenin bigint, nhoms_id_nhomin bigint)
+  RETURNS boolean AS
+$BODY$
+BEGIN
+	LOOP
+	UPDATE nhom_quyen SET quyens_id_quyen=quyens_id_quyenin WHERE nhoms_id_nhom=nhoms_id_nhomin;
+	IF found THEN
+            RETURN true;
+        END IF;
+        RETURN false;
+        END LOOP;
+END;
+$BODY$
+  LANGUAGE 'plpgsql' VOLATILE
+  COST 100;
+ALTER FUNCTION suanhomquyen(bigint, bigint) OWNER TO postgres;
+
+
+-- Function: xoanhomquyen(bigint)
+
+-- DROP FUNCTION xoanhomquyen(bigint);
+
+CREATE OR REPLACE FUNCTION xoanhomquyen(nhoms_id_nhom bigint)
+  RETURNS bigint AS
+$BODY$DELETE FROM nhom_quyen
+ WHERE nhoms_id_nhom=$1 returning nhoms_id_nhom;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION xoanhomquyen(bigint) OWNER TO postgres;
 
 
 
@@ -530,3 +602,5 @@ $BODY$
   LANGUAGE 'plpgsql' VOLATILE
   COST 100;
 ALTER FUNCTION xoaquyen(bigint) OWNER TO postgres;
+
+
