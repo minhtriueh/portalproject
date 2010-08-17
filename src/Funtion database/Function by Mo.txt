@@ -471,4 +471,62 @@ $BODY$
 ALTER FUNCTION xetlenlop(bigint, bigint, bigint) OWNER TO postgres;
 
 
+-- Function: themquyen(character, character)
 
+-- DROP FUNCTION themquyen(character, character);
+
+CREATE OR REPLACE FUNCTION themquyen(mota character, tenquyen character)
+  RETURNS bigint AS
+$BODY$INSERT INTO quyen(
+            mota, tenquyen)
+    VALUES ($1,$2) returning id_quyen;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION themquyen(character, character) OWNER TO postgres;
+
+
+
+-- Function:suaquyen(character, character, bigint)
+
+-- DROP FUNCTION suaquyen(character, character, bigint);
+
+
+CREATE OR REPLACE FUNCTION suaquyen(motain character, tenquyenin character, id_quyenin bigint)
+  RETURNS boolean AS
+$BODY$
+BEGIN
+	LOOP
+	UPDATE quyen SET mota=motain, tenquyen=tenquyenin WHERE id_quyen=id_quyenin;
+	IF found THEN
+            RETURN true;
+        END IF;
+        RETURN false;
+        END LOOP;
+END;
+$BODY$
+  LANGUAGE 'plpgsql' VOLATILE
+  COST 100;
+ALTER FUNCTION suaquyen(character, character, bigint) OWNER TO postgres;
+
+
+-- Function: xoaquyen(bigint)
+
+-- DROP FUNCTION xoaquyen(bigint);
+
+CREATE OR REPLACE FUNCTION xoaquyen(id_quyenin bigint)
+  RETURNS boolean AS
+$BODY$
+BEGIN
+	LOOP
+	DELETE FROM quyen WHERE id_quyen=id_quyenin;
+	IF found THEN
+            RETURN true;
+        END IF;
+        RETURN false;
+        END LOOP;
+END;
+$BODY$
+  LANGUAGE 'plpgsql' VOLATILE
+  COST 100;
+ALTER FUNCTION xoaquyen(bigint) OWNER TO postgres;
