@@ -9,7 +9,7 @@
              xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
              targetNamespace="QLHeThongComApp"
-             xmlns:tns="QLHeThongComApp" xmlns:ns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/XoaNhom" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/XoaNguoiDung_Nhom" xmlns:ns2="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/UyQuyen" xmlns:ns3="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/ThemNhom" xmlns:ns4="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/ThemNguoiDung_Nhom" xmlns:ns5="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/SuaNhom" xmlns:ns6="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/SuaNguoiDung_Nhom" xmlns:ns7="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/PhanQuyenNhom" xmlns:ns8="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/PhanQuyenNguoiDung" xmlns:ns9="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DoiMatKhau" xmlns:ns10="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DangNhap">
+             xmlns:tns="QLHeThongComApp" xmlns:ns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/XoaNhom" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/XoaNguoiDung_Nhom" xmlns:ns2="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/UyQuyen" xmlns:ns3="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/ThemNhom" xmlns:ns4="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/ThemNguoiDung_Nhom" xmlns:ns5="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/SuaNhom" xmlns:ns6="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/SuaNguoiDung_Nhom" xmlns:ns7="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/PhanQuyenNhom" xmlns:ns8="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/PhanQuyenNguoiDung" xmlns:ns9="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DoiMatKhau" xmlns:ns10="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DangNhap" xmlns:ns11="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/ThemQuyen" xmlns:ns12="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/SuaQuyen" xmlns:ns13="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/XoaQuyen">
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/XoaNhom" location="../jbiServiceUnits/QuanLyHeThong/interface_WSDL/quanlynhom/XoaNhom.wsdl"/>
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/XoaNguoiDung_Nhom" location="../jbiServiceUnits/QuanLyHeThong/interface_WSDL/quanlynguoidung/XoaNguoiDung_Nhom.wsdl"/>
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/UyQuyen" location="../jbiServiceUnits/QuanLyHeThong/interface_WSDL/UyQuyen.wsdl"/>
@@ -21,6 +21,9 @@
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/PhanQuyenNguoiDung" location="../jbiServiceUnits/QuanLyHeThong/interface_WSDL/PhanQuyenNguoiDung.wsdl"/>
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DoiMatKhau" location="../jbiServiceUnits/QuanLyHeThong/interface_WSDL/DoiMatKhau.wsdl"/>
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DangNhap" location="../jbiServiceUnits/QuanLyHeThong/interface_WSDL/DangNhap.wsdl"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/ThemQuyen" location="../jbiServiceUnits/QuanLyHeThong/interface_WSDL/quanlyquyen/ThemQuyen.wsdl"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/SuaQuyen" location="../jbiServiceUnits/QuanLyHeThong/interface_WSDL/quanlyquyen/SuaQuyen.wsdl"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/XoaQuyen" location="../jbiServiceUnits/QuanLyHeThong/interface_WSDL/quanlyquyen/XoaQuyen.wsdl"/>
     <portType name="dummyCasaPortType"/>
     <binding name="casaBinding1" type="ns:XoaNhomPortType">
         <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
@@ -154,6 +157,42 @@
             </output>
         </operation>
     </binding>
+    <binding name="casaBinding12" type="ns11:ThemQuyenPortType">
+        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="ThemQuyenOperation">
+            <soap:operation/>
+            <input name="input1">
+                <soap:body use="literal" namespace="QLHeThongComApp"/>
+            </input>
+            <output name="output1">
+                <soap:body use="literal" namespace="QLHeThongComApp"/>
+            </output>
+        </operation>
+    </binding>
+    <binding name="casaBinding13" type="ns12:SuaQuyenPortType">
+        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="SuaQuyenOperation">
+            <soap:operation/>
+            <input name="input1">
+                <soap:body use="literal" namespace="QLHeThongComApp"/>
+            </input>
+            <output name="output1">
+                <soap:body use="literal" namespace="QLHeThongComApp"/>
+            </output>
+        </operation>
+    </binding>
+    <binding name="casaBinding14" type="ns13:XoaQuyenPortType">
+        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="XoaQuyenOperation">
+            <soap:operation/>
+            <input name="input1">
+                <soap:body use="literal" namespace="QLHeThongComApp"/>
+            </input>
+            <output name="output1">
+                <soap:body use="literal" namespace="QLHeThongComApp"/>
+            </output>
+        </operation>
+    </binding>
     <service name="QLHeThongComAppService1">
         <port name="XoaNhom" binding="tns:casaBinding1">
             <soap:address location="http://localhost:18001/QLHeThongComApp/XoaNhom"/>
@@ -209,5 +248,21 @@
             <soap:address location="http://localhost:18001/QLHeThongComApp/DangNhap"/>
         </port>
     </service>
+    <service name="QLHeThongComAppService12">
+        <port name="ThemQuyen" binding="tns:casaBinding12">
+            <soap:address location="http://localhost:18001/QLHeThongComApp/ThemQuyen"/>
+        </port>
+    </service>
+    <service name="QLHeThongComAppService13">
+        <port name="SuaQuyen" binding="tns:casaBinding13">
+            <soap:address location="http://localhost:18001/QLHeThongComApp/SuaQuyen"/>
+        </port>
+    </service>
+    <service name="QLHeThongComAppService14">
+        <port name="XoaQuyen" binding="tns:casaBinding14">
+            <soap:address location="http://localhost:18001/QLHeThongComApp/XoaQuyen"/>
+        </port>
+    </service>
 </definitions>
+
 
