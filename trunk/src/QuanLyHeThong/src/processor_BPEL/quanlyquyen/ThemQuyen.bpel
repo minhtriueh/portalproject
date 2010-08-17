@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process
+    name="ThemQuyen"
+    targetNamespace="http://enterprise.netbeans.org/bpel/QuanLyHeThong/ThemQuyen"
+    xmlns:tns="http://enterprise.netbeans.org/bpel/QuanLyHeThong/ThemQuyen"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
+    xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor"
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2" xmlns:ns0="http://j2ee.netbeans.org/xsd/tableSchema">
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/ThemQuyen" location="../../interface_WSDL/quanlyquyen/ThemQuyen.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_ThemQuyen" location="../../DB_WSDL/quanlyquyen/DB_ThemQuyen.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <partnerLinks>
+        <partnerLink name="PL_DB_ThemQuyen" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_ThemQuyen" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="PL_ThemQuyen" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/ThemQuyen" partnerLinkType="tns:ThemQuyen" myRole="ThemQuyenPortTypeRole"/>
+    </partnerLinks>
+    <variables>
+        <variable name="ThemQuyenOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_ThemQuyen" messageType="tns:outputMsg"/>
+        <variable name="ThemQuyenIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_ThemQuyen" messageType="tns:inputMsg"/>
+        <variable name="ThemQuyenOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/ThemQuyen" messageType="tns:ThemQuyenOperationResponse"/>
+        <variable name="ThemQuyenOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/ThemQuyen" messageType="tns:ThemQuyenOperationRequest"/>
+    </variables>
+    <sequence>
+        <receive name="Receive1" createInstance="yes" partnerLink="PL_ThemQuyen" operation="ThemQuyenOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/ThemQuyen" portType="tns:ThemQuyenPortType" variable="ThemQuyenOperationIn"/>
+        <assign name="Assign1">
+            <copy>
+                <from variable="ThemQuyenOperationIn" part="mota"/>
+                <to>$ThemQuyenIn.part/ns0:mota</to>
+            </copy>
+            <copy>
+                <from variable="ThemQuyenOperationIn" part="tenquyen"/>
+                <to>$ThemQuyenIn.part/ns0:tenquyen</to>
+            </copy>
+        </assign>
+        <invoke name="Invoke1" partnerLink="PL_DB_ThemQuyen" operation="execute" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_ThemQuyen" portType="tns:jdbcPortType" inputVariable="ThemQuyenIn" outputVariable="ThemQuyenOut"/>
+        <assign name="Assign2">
+            <copy>
+                <from>$ThemQuyenOut.part/ns0:returnValue</from>
+                <to variable="ThemQuyenOperationOut" part="id_quyen"/>
+            </copy>
+        </assign>
+        <reply name="Reply1" partnerLink="PL_ThemQuyen" operation="ThemQuyenOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/ThemQuyen" portType="tns:ThemQuyenPortType" variable="ThemQuyenOperationOut"/>
+    </sequence>
+</process>
+
