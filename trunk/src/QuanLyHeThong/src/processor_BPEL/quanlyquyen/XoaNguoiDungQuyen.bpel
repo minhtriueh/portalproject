@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process
+    name="XoaNguoiDungQuyen"
+    targetNamespace="http://enterprise.netbeans.org/bpel/QuanLyHeThong/XoaNguoiDungQuyen"
+    xmlns:tns="http://enterprise.netbeans.org/bpel/QuanLyHeThong/XoaNguoiDungQuyen"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
+    xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor"
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2" xmlns:ns0="http://j2ee.netbeans.org/xsd/tableSchema">
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/XoaNguoiDungQuyen" location="../../interface_WSDL/quanlyquyen/XoaNguoiDungQuyen.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_XoaNguoiDungQuyen" location="../../DB_WSDL/quanlyquyen/DB_XoaNguoiDungQuyen.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <partnerLinks>
+        <partnerLink name="PL_DB_XoaNguoiDungQuyen" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_XoaNguoiDungQuyen" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="PL_XoaNguoiDungQuyen" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/XoaNguoiDungQuyen" partnerLinkType="tns:XoaNguoiDungQuyen" myRole="XoaNguoiDungQuyenPortTypeRole"/>
+    </partnerLinks>
+    <variables>
+        <variable name="XoaNguoiDungQuyenOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_XoaNguoiDungQuyen" messageType="tns:outputMsg"/>
+        <variable name="XoaNguoiDungQuyenIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_XoaNguoiDungQuyen" messageType="tns:inputMsg"/>
+        <variable name="XoaNguoiDungQuyenOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/XoaNguoiDungQuyen" messageType="tns:XoaNguoiDungQuyenOperationResponse"/>
+        <variable name="XoaNguoiDungQuyenOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/XoaNguoiDungQuyen" messageType="tns:XoaNguoiDungQuyenOperationRequest"/>
+    </variables>
+    <sequence>
+        <receive name="Receive1" createInstance="yes" partnerLink="PL_XoaNguoiDungQuyen" operation="XoaNguoiDungQuyenOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/XoaNguoiDungQuyen" portType="tns:XoaNguoiDungQuyenPortType" variable="XoaNguoiDungQuyenOperationIn"/>
+        <assign name="Assign1">
+            <copy>
+                <from variable="XoaNguoiDungQuyenOperationIn" part="id_nguoidung"/>
+                <to>$XoaNguoiDungQuyenIn.part/ns0:nguoidungs_id_nguoidung</to>
+            </copy>
+        </assign>
+        <invoke name="Invoke1" partnerLink="PL_DB_XoaNguoiDungQuyen" operation="execute" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_XoaNguoiDungQuyen" portType="tns:jdbcPortType" inputVariable="XoaNguoiDungQuyenIn" outputVariable="XoaNguoiDungQuyenOut"/>
+        <assign name="Assign2">
+            <copy>
+                <from>$XoaNguoiDungQuyenOut.part/ns0:returnValue</from>
+                <to variable="XoaNguoiDungQuyenOperationOut" part="id_nguoidung"/>
+            </copy>
+        </assign>
+        <reply name="Reply1" partnerLink="PL_XoaNguoiDungQuyen" operation="XoaNguoiDungQuyenOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/XoaNguoiDungQuyen" portType="tns:XoaNguoiDungQuyenPortType" variable="XoaNguoiDungQuyenOperationOut"/>
+    </sequence>
+</process>
+
