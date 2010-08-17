@@ -41,10 +41,11 @@
         <assign name="Assign2">
             <copy>
                 <from>$SuaNhomOut.part/ns0:returnValue</from>
-                <to variable="SuaNhomOperationOut"/>
+                <to variable="SuaNhomOperationOut" part="suanhomBoolean"/>
             </copy>
         </assign>
         <reply name="Reply1" partnerLink="PL_SuaNhom" operation="SuaNhomOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/SuaNhom" portType="tns:SuaNhomPortType" variable="SuaNhomOperationOut"/>
     </sequence>
 </process>
+
 
