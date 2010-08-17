@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="1" hostname="nguyentanmo-PC" name="org.netbeans.modules.compapp.catd.ConfiguredTest" tests="1" time="0.225" timestamp="2010-08-17T05:46:32">
+<testsuite errors="0" failures="1" hostname="nguyentanmo-PC" name="org.netbeans.modules.compapp.catd.ConfiguredTest" tests="1" time="0.203" timestamp="2010-08-17T12:11:56">
   <properties>
     <property name="libs.struts2lib-2-0-11-basic.maven-pom" value="" />
     <property name="netbeans.autoupdate.country" value="VN" />
@@ -358,8 +358,8 @@
     <property name="file.encoding" value="Cp1258" />
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
   </properties>
-  <testcase classname="org.netbeans.modules.compapp.catd.ConfiguredTest" name="TestXoaQuyen" time="0.206">
-    <failure message="[17-08-2010 12:46:32] The response is not identical to the expected output." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: [17-08-2010 12:46:32] The response is not identical to the expected output.
+  <testcase classname="org.netbeans.modules.compapp.catd.ConfiguredTest" name="TestXoaNhomQuyen" time="0.187">
+    <failure message="[17-08-2010 19:11:56] The response is not identical to the expected output." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: [17-08-2010 19:11:56] The response is not identical to the expected output.
 	at org.netbeans.modules.compapp.catd.ConfiguredTest.checkExpectedOutput(ConfiguredTest.java:2348)
 	at org.netbeans.modules.compapp.catd.ConfiguredTest.checkExpectedOutput(ConfiguredTest.java:2218)
 	at org.netbeans.modules.compapp.catd.ConfiguredTest.testConcurrentSOAPRequest(ConfiguredTest.java:862)
@@ -422,7 +422,7 @@ user.language=vi
 user.name=nguyentanmo
 user.timezone=Asia/Bangkok
 user.variant=
-Test TestXoaQuyen\Concurrent.properties Failed. (Destination: http://localhost:18001/QLHeThongComApp/XoaQuyen)
+Test TestXoaNhomQuyen\Concurrent.properties Failed. (Destination: http://localhost:18001/QLHeThongComApp/XoaNhomQuyen)
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

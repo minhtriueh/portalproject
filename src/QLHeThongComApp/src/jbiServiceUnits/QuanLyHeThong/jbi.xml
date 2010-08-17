@@ -1,165 +1,225 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<jbi xmlns="http://java.sun.com/xml/ns/jbi" xmlns:ns0="http://enterprise.netbeans.org/bpel/QuanLyHeThong/DangNhap" xmlns:ns1="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_DangNhap" xmlns:ns10="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_PhanQuyenNhom" xmlns:ns11="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/PhanQuyenNhom" xmlns:ns12="http://enterprise.netbeans.org/bpel/QuanLyHeThong/SuaNguoiDung_Nhom" xmlns:ns13="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_SuaNguoiDung_Nhom" xmlns:ns14="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/SuaNguoiDung_Nhom" xmlns:ns15="http://enterprise.netbeans.org/bpel/QuanLyHeThong/ThemNguoiDung_Nhom" xmlns:ns16="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_ThemNguoiDung" xmlns:ns17="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_TimIdNhomTuTenNhom" xmlns:ns18="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_ThemNguoiDung_Nhom" xmlns:ns19="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/ThemNguoiDung_Nhom" xmlns:ns2="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DangNhap" xmlns:ns20="http://enterprise.netbeans.org/bpel/QuanLyHeThong/XoaNguoiDung_Nhom" xmlns:ns21="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_XoaNguoiDung_Nhom" xmlns:ns22="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_XoaNguoiDung" xmlns:ns23="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/XoaNguoiDung_Nhom" xmlns:ns24="http://enterprise.netbeans.org/bpel/QuanLyHeThong/SuaNhom" xmlns:ns25="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_SuaNhom" xmlns:ns26="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/SuaNhom" xmlns:ns27="http://enterprise.netbeans.org/bpel/QuanLyHeThong/ThemNhom" xmlns:ns28="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_ThemNhom" xmlns:ns29="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/ThemNhom" xmlns:ns3="http://enterprise.netbeans.org/bpel/QuanLyHeThong/DoiMatKhau" xmlns:ns30="http://enterprise.netbeans.org/bpel/QuanLyHeThong/XoaNhom" xmlns:ns31="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_XoaNhom" xmlns:ns32="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/XoaNhom" xmlns:ns33="http://enterprise.netbeans.org/bpel/QuanLyHeThong/SuaQuyen" xmlns:ns34="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_SuaQuyen" xmlns:ns35="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/SuaQuyen" xmlns:ns36="http://enterprise.netbeans.org/bpel/QuanLyHeThong/ThemQuyen" xmlns:ns37="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_ThemQuyen" xmlns:ns38="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/ThemQuyen" xmlns:ns39="http://enterprise.netbeans.org/bpel/QuanLyHeThong/XoaQuyen" xmlns:ns4="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_DoiMatKhau" xmlns:ns40="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_XoaQuyen" xmlns:ns41="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/XoaQuyen" xmlns:ns42="http://enterprise.netbeans.org/bpel/QuanLyHeThong/UyQuyen" xmlns:ns43="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_DanhSachQuyenTuIdNguoiDung" xmlns:ns44="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_UyQuyen" xmlns:ns45="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/UyQuyen" xmlns:ns46="http://www.sun.com/jbi/descriptor/service-unit" xmlns:ns5="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DoiMatKhau" xmlns:ns6="http://enterprise.netbeans.org/bpel/QuanLyHeThong/PhanQuyenNguoiDung" xmlns:ns7="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_PhanQuyenNguoiDung" xmlns:ns8="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/PhanQuyenNguoiDung" xmlns:ns9="http://enterprise.netbeans.org/bpel/QuanLyHeThong/PhanQuyenNhom" version="1.0">
+<jbi xmlns="http://java.sun.com/xml/ns/jbi" xmlns:ns0="http://enterprise.netbeans.org/bpel/QuanLyHeThong/DangNhap" xmlns:ns1="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_DangNhap" xmlns:ns10="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_PhanQuyenNhom" xmlns:ns11="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/PhanQuyenNhom" xmlns:ns12="http://enterprise.netbeans.org/bpel/QuanLyHeThong/SuaNguoiDung_Nhom" xmlns:ns13="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_SuaNguoiDung_Nhom" xmlns:ns14="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/SuaNguoiDung_Nhom" xmlns:ns15="http://enterprise.netbeans.org/bpel/QuanLyHeThong/ThemNguoiDung_Nhom" xmlns:ns16="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_ThemNguoiDung" xmlns:ns17="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_TimIdNhomTuTenNhom" xmlns:ns18="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_ThemNguoiDung_Nhom" xmlns:ns19="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/ThemNguoiDung_Nhom" xmlns:ns2="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DangNhap" xmlns:ns20="http://enterprise.netbeans.org/bpel/QuanLyHeThong/XoaNguoiDung_Nhom" xmlns:ns21="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_XoaNguoiDung_Nhom" xmlns:ns22="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_XoaNguoiDung" xmlns:ns23="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/XoaNguoiDung_Nhom" xmlns:ns24="http://enterprise.netbeans.org/bpel/QuanLyHeThong/SuaNhom" xmlns:ns25="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_SuaNhom" xmlns:ns26="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/SuaNhom" xmlns:ns27="http://enterprise.netbeans.org/bpel/QuanLyHeThong/SuaNhomQuyen" xmlns:ns28="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_SuaNhomQuyen" xmlns:ns29="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/SuaNhomQuyen" xmlns:ns3="http://enterprise.netbeans.org/bpel/QuanLyHeThong/DoiMatKhau" xmlns:ns30="http://enterprise.netbeans.org/bpel/QuanLyHeThong/ThemNhom" xmlns:ns31="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_ThemNhom" xmlns:ns32="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/ThemNhom" xmlns:ns33="http://enterprise.netbeans.org/bpel/QuanLyHeThong/ThemNhomQuyen" xmlns:ns34="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_ThemNhomQuyen" xmlns:ns35="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/ThemNhomQuyen" xmlns:ns36="http://enterprise.netbeans.org/bpel/QuanLyHeThong/XoaNhom" xmlns:ns37="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_XoaNhom" xmlns:ns38="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/XoaNhom" xmlns:ns39="http://enterprise.netbeans.org/bpel/QuanLyHeThong/XoaNhomQuyen" xmlns:ns4="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_DoiMatKhau" xmlns:ns40="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_XoaNhomQuyen" xmlns:ns41="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/XoaNhomQuyen" xmlns:ns42="http://enterprise.netbeans.org/bpel/QuanLyHeThong/SuaNguoiDungQuyen" xmlns:ns43="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_SuaNguoiDungQuyen" xmlns:ns44="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/SuaNguoiDungQuyen" xmlns:ns45="http://enterprise.netbeans.org/bpel/QuanLyHeThong/SuaQuyen" xmlns:ns46="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_SuaQuyen" xmlns:ns47="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/SuaQuyen" xmlns:ns48="http://enterprise.netbeans.org/bpel/QuanLyHeThong/ThemNguoiDungQuyen" xmlns:ns49="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_ThemNguoiDungQuyen" xmlns:ns5="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DoiMatKhau" xmlns:ns50="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/ThemNguoiDungQuyen" xmlns:ns51="http://enterprise.netbeans.org/bpel/QuanLyHeThong/ThemQuyen" xmlns:ns52="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_ThemQuyen" xmlns:ns53="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/ThemQuyen" xmlns:ns54="http://enterprise.netbeans.org/bpel/QuanLyHeThong/XoaNguoiDungQuyen" xmlns:ns55="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_XoaNguoiDungQuyen" xmlns:ns56="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/XoaNguoiDungQuyen" xmlns:ns57="http://enterprise.netbeans.org/bpel/QuanLyHeThong/XoaQuyen" xmlns:ns58="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_XoaQuyen" xmlns:ns59="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/XoaQuyen" xmlns:ns6="http://enterprise.netbeans.org/bpel/QuanLyHeThong/PhanQuyenNguoiDung" xmlns:ns60="http://enterprise.netbeans.org/bpel/QuanLyHeThong/UyQuyen" xmlns:ns61="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_DanhSachQuyenTuIdNguoiDung" xmlns:ns62="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_UyQuyen" xmlns:ns63="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/UyQuyen" xmlns:ns64="http://www.sun.com/jbi/descriptor/service-unit" xmlns:ns7="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_PhanQuyenNguoiDung" xmlns:ns8="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/PhanQuyenNguoiDung" xmlns:ns9="http://enterprise.netbeans.org/bpel/QuanLyHeThong/PhanQuyenNhom" version="1.0">
     <services binding-component="false">
         <provides endpoint-name="DangNhapPortTypeRole_myRole" interface-name="ns2:DangNhapPortType" service-name="ns0:PL_DangNhap">
-            <ns46:display-name>PL_DangNhap</ns46:display-name>
-            <ns46:process-name>DangNhap</ns46:process-name>
-            <ns46:file-path>processor_BPEL\DangNhap.bpel</ns46:file-path>
+            <ns64:display-name>PL_DangNhap</ns64:display-name>
+            <ns64:process-name>DangNhap</ns64:process-name>
+            <ns64:file-path>processor_BPEL\DangNhap.bpel</ns64:file-path>
         </provides>
         <provides endpoint-name="DoiMatKhauPortTypeRole_myRole" interface-name="ns5:DoiMatKhauPortType" service-name="ns3:PL_DoiMatKhau">
-            <ns46:display-name>PL_DoiMatKhau</ns46:display-name>
-            <ns46:process-name>DoiMatKhau</ns46:process-name>
-            <ns46:file-path>processor_BPEL\DoiMatKhau.bpel</ns46:file-path>
+            <ns64:display-name>PL_DoiMatKhau</ns64:display-name>
+            <ns64:process-name>DoiMatKhau</ns64:process-name>
+            <ns64:file-path>processor_BPEL\DoiMatKhau.bpel</ns64:file-path>
         </provides>
         <provides endpoint-name="PhanQuyenNguoiDungPortTypeRole_myRole" interface-name="ns8:PhanQuyenNguoiDungPortType" service-name="ns6:PL_PhanQuyenNguoiDung">
-            <ns46:display-name>PL_PhanQuyenNguoiDung</ns46:display-name>
-            <ns46:process-name>PhanQuyenNguoiDung</ns46:process-name>
-            <ns46:file-path>processor_BPEL\PhanQuyenNguoiDung.bpel</ns46:file-path>
+            <ns64:display-name>PL_PhanQuyenNguoiDung</ns64:display-name>
+            <ns64:process-name>PhanQuyenNguoiDung</ns64:process-name>
+            <ns64:file-path>processor_BPEL\PhanQuyenNguoiDung.bpel</ns64:file-path>
         </provides>
         <provides endpoint-name="PhanQuyenNhomPortTypeRole_myRole" interface-name="ns11:PhanQuyenNhomPortType" service-name="ns9:PartnerLink1">
-            <ns46:display-name>PartnerLink1</ns46:display-name>
-            <ns46:process-name>PhanQuyenNhom</ns46:process-name>
-            <ns46:file-path>processor_BPEL\PhanQuyenNhom.bpel</ns46:file-path>
+            <ns64:display-name>PartnerLink1</ns64:display-name>
+            <ns64:process-name>PhanQuyenNhom</ns64:process-name>
+            <ns64:file-path>processor_BPEL\PhanQuyenNhom.bpel</ns64:file-path>
         </provides>
         <provides endpoint-name="SuaNguoiDung_NhomPortTypeRole_myRole" interface-name="ns14:SuaNguoiDung_NhomPortType" service-name="ns12:PL_SuaNguoiDung_Nhom">
-            <ns46:display-name>PL_SuaNguoiDung_Nhom</ns46:display-name>
-            <ns46:process-name>SuaNguoiDung_Nhom</ns46:process-name>
-            <ns46:file-path>processor_BPEL\quanlynguoidung\SuaNguoiDung_Nhom.bpel</ns46:file-path>
+            <ns64:display-name>PL_SuaNguoiDung_Nhom</ns64:display-name>
+            <ns64:process-name>SuaNguoiDung_Nhom</ns64:process-name>
+            <ns64:file-path>processor_BPEL\quanlynguoidung\SuaNguoiDung_Nhom.bpel</ns64:file-path>
         </provides>
         <provides endpoint-name="ThemNguoiDung_NhomPortTypeRole_myRole" interface-name="ns19:ThemNguoiDung_NhomPortType" service-name="ns15:PL_ThemNguoiDung_Nhom">
-            <ns46:display-name>PL_ThemNguoiDung_Nhom</ns46:display-name>
-            <ns46:process-name>ThemNguoiDung_Nhom</ns46:process-name>
-            <ns46:file-path>processor_BPEL\quanlynguoidung\ThemNguoiDung_Nhom.bpel</ns46:file-path>
+            <ns64:display-name>PL_ThemNguoiDung_Nhom</ns64:display-name>
+            <ns64:process-name>ThemNguoiDung_Nhom</ns64:process-name>
+            <ns64:file-path>processor_BPEL\quanlynguoidung\ThemNguoiDung_Nhom.bpel</ns64:file-path>
         </provides>
         <provides endpoint-name="XoaNguoiDung_NhomPortTypeRole_myRole" interface-name="ns23:XoaNguoiDung_NhomPortType" service-name="ns20:PL_XoaNguoiDung_Nhom">
-            <ns46:display-name>PL_XoaNguoiDung_Nhom</ns46:display-name>
-            <ns46:process-name>XoaNguoiDung_Nhom</ns46:process-name>
-            <ns46:file-path>processor_BPEL\quanlynguoidung\XoaNguoiDung_Nhom.bpel</ns46:file-path>
+            <ns64:display-name>PL_XoaNguoiDung_Nhom</ns64:display-name>
+            <ns64:process-name>XoaNguoiDung_Nhom</ns64:process-name>
+            <ns64:file-path>processor_BPEL\quanlynguoidung\XoaNguoiDung_Nhom.bpel</ns64:file-path>
         </provides>
         <provides endpoint-name="SuaNhomPortTypeRole_myRole" interface-name="ns26:SuaNhomPortType" service-name="ns24:PL_SuaNhom">
-            <ns46:display-name>PL_SuaNhom</ns46:display-name>
-            <ns46:process-name>SuaNhom</ns46:process-name>
-            <ns46:file-path>processor_BPEL\quanlynhom\SuaNhom.bpel</ns46:file-path>
+            <ns64:display-name>PL_SuaNhom</ns64:display-name>
+            <ns64:process-name>SuaNhom</ns64:process-name>
+            <ns64:file-path>processor_BPEL\quanlynhom\SuaNhom.bpel</ns64:file-path>
         </provides>
-        <provides endpoint-name="ThemNhomPortTypeRole_myRole" interface-name="ns29:ThemNhomPortType" service-name="ns27:PL_ThemNhom">
-            <ns46:display-name>PL_ThemNhom</ns46:display-name>
-            <ns46:process-name>ThemNhom</ns46:process-name>
-            <ns46:file-path>processor_BPEL\quanlynhom\ThemNhom.bpel</ns46:file-path>
+        <provides endpoint-name="SuaNhomQuyenPortTypeRole_myRole" interface-name="ns29:SuaNhomQuyenPortType" service-name="ns27:PL_SuaNhomQuyen">
+            <ns64:display-name>PL_SuaNhomQuyen</ns64:display-name>
+            <ns64:process-name>SuaNhomQuyen</ns64:process-name>
+            <ns64:file-path>processor_BPEL\quanlynhom\SuaNhomQuyen.bpel</ns64:file-path>
         </provides>
-        <provides endpoint-name="XoaNhomPortTypeRole_myRole" interface-name="ns32:XoaNhomPortType" service-name="ns30:PL_XoaNhom">
-            <ns46:display-name>PL_XoaNhom</ns46:display-name>
-            <ns46:process-name>XoaNhom</ns46:process-name>
-            <ns46:file-path>processor_BPEL\quanlynhom\XoaNhom.bpel</ns46:file-path>
+        <provides endpoint-name="ThemNhomPortTypeRole_myRole" interface-name="ns32:ThemNhomPortType" service-name="ns30:PL_ThemNhom">
+            <ns64:display-name>PL_ThemNhom</ns64:display-name>
+            <ns64:process-name>ThemNhom</ns64:process-name>
+            <ns64:file-path>processor_BPEL\quanlynhom\ThemNhom.bpel</ns64:file-path>
         </provides>
-        <provides endpoint-name="SuaQuyenPortTypeRole_myRole" interface-name="ns35:SuaQuyenPortType" service-name="ns33:PL_SuaQuyen">
-            <ns46:display-name>PL_SuaQuyen</ns46:display-name>
-            <ns46:process-name>SuaQuyen</ns46:process-name>
-            <ns46:file-path>processor_BPEL\quanlyquyen\SuaQuyen.bpel</ns46:file-path>
+        <provides endpoint-name="ThemNhomQuyenPortTypeRole_myRole" interface-name="ns35:ThemNhomQuyenPortType" service-name="ns33:PL_ThemNhomQuyen">
+            <ns64:display-name>PL_ThemNhomQuyen</ns64:display-name>
+            <ns64:process-name>ThemNhomQuyen</ns64:process-name>
+            <ns64:file-path>processor_BPEL\quanlynhom\ThemNhomQuyen.bpel</ns64:file-path>
         </provides>
-        <provides endpoint-name="ThemQuyenPortTypeRole_myRole" interface-name="ns38:ThemQuyenPortType" service-name="ns36:PL_ThemQuyen">
-            <ns46:display-name>PL_ThemQuyen</ns46:display-name>
-            <ns46:process-name>ThemQuyen</ns46:process-name>
-            <ns46:file-path>processor_BPEL\quanlyquyen\ThemQuyen.bpel</ns46:file-path>
+        <provides endpoint-name="XoaNhomPortTypeRole_myRole" interface-name="ns38:XoaNhomPortType" service-name="ns36:PL_XoaNhom">
+            <ns64:display-name>PL_XoaNhom</ns64:display-name>
+            <ns64:process-name>XoaNhom</ns64:process-name>
+            <ns64:file-path>processor_BPEL\quanlynhom\XoaNhom.bpel</ns64:file-path>
         </provides>
-        <provides endpoint-name="XoaQuyenPortTypeRole_myRole" interface-name="ns41:XoaQuyenPortType" service-name="ns39:PL_XoaQuyen">
-            <ns46:display-name>PL_XoaQuyen</ns46:display-name>
-            <ns46:process-name>XoaQuyen</ns46:process-name>
-            <ns46:file-path>processor_BPEL\quanlyquyen\XoaQuyen.bpel</ns46:file-path>
+        <provides endpoint-name="XoaNhomQuyenPortTypeRole_myRole" interface-name="ns41:XoaNhomQuyenPortType" service-name="ns39:PL_XoaNhomQuyen">
+            <ns64:display-name>PL_XoaNhomQuyen</ns64:display-name>
+            <ns64:process-name>XoaNhomQuyen</ns64:process-name>
+            <ns64:file-path>processor_BPEL\quanlynhom\XoaNhomQuyen.bpel</ns64:file-path>
         </provides>
-        <provides endpoint-name="UyQuyenPortTypeRole_myRole" interface-name="ns45:UyQuyenPortType" service-name="ns42:PL_UyQuyen">
-            <ns46:display-name>PL_UyQuyen</ns46:display-name>
-            <ns46:process-name>UyQuyen</ns46:process-name>
-            <ns46:file-path>processor_BPEL\UyQuyen.bpel</ns46:file-path>
+        <provides endpoint-name="SuaNguoiDungQuyenPortTypeRole_myRole" interface-name="ns44:SuaNguoiDungQuyenPortType" service-name="ns42:PL_SuaNguoiDungQuyen">
+            <ns64:display-name>PL_SuaNguoiDungQuyen</ns64:display-name>
+            <ns64:process-name>SuaNguoiDungQuyen</ns64:process-name>
+            <ns64:file-path>processor_BPEL\quanlyquyen\SuaNguoiDungQuyen.bpel</ns64:file-path>
+        </provides>
+        <provides endpoint-name="SuaQuyenPortTypeRole_myRole" interface-name="ns47:SuaQuyenPortType" service-name="ns45:PL_SuaQuyen">
+            <ns64:display-name>PL_SuaQuyen</ns64:display-name>
+            <ns64:process-name>SuaQuyen</ns64:process-name>
+            <ns64:file-path>processor_BPEL\quanlyquyen\SuaQuyen.bpel</ns64:file-path>
+        </provides>
+        <provides endpoint-name="ThemNguoiDungQuyenPortTypeRole_myRole" interface-name="ns50:ThemNguoiDungQuyenPortType" service-name="ns48:PL_ThemNguoiDungQuyen">
+            <ns64:display-name>PL_ThemNguoiDungQuyen</ns64:display-name>
+            <ns64:process-name>ThemNguoiDungQuyen</ns64:process-name>
+            <ns64:file-path>processor_BPEL\quanlyquyen\ThemNguoiDungQuyen.bpel</ns64:file-path>
+        </provides>
+        <provides endpoint-name="ThemQuyenPortTypeRole_myRole" interface-name="ns53:ThemQuyenPortType" service-name="ns51:PL_ThemQuyen">
+            <ns64:display-name>PL_ThemQuyen</ns64:display-name>
+            <ns64:process-name>ThemQuyen</ns64:process-name>
+            <ns64:file-path>processor_BPEL\quanlyquyen\ThemQuyen.bpel</ns64:file-path>
+        </provides>
+        <provides endpoint-name="XoaNguoiDungQuyenPortTypeRole_myRole" interface-name="ns56:XoaNguoiDungQuyenPortType" service-name="ns54:PL_XoaNguoiDungQuyen">
+            <ns64:display-name>PL_XoaNguoiDungQuyen</ns64:display-name>
+            <ns64:process-name>XoaNguoiDungQuyen</ns64:process-name>
+            <ns64:file-path>processor_BPEL\quanlyquyen\XoaNguoiDungQuyen.bpel</ns64:file-path>
+        </provides>
+        <provides endpoint-name="XoaQuyenPortTypeRole_myRole" interface-name="ns59:XoaQuyenPortType" service-name="ns57:PL_XoaQuyen">
+            <ns64:display-name>PL_XoaQuyen</ns64:display-name>
+            <ns64:process-name>XoaQuyen</ns64:process-name>
+            <ns64:file-path>processor_BPEL\quanlyquyen\XoaQuyen.bpel</ns64:file-path>
+        </provides>
+        <provides endpoint-name="UyQuyenPortTypeRole_myRole" interface-name="ns63:UyQuyenPortType" service-name="ns60:PL_UyQuyen">
+            <ns64:display-name>PL_UyQuyen</ns64:display-name>
+            <ns64:process-name>UyQuyen</ns64:process-name>
+            <ns64:file-path>processor_BPEL\UyQuyen.bpel</ns64:file-path>
         </provides>
         <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns1:jdbcPortType" service-name="ns0:PL_DB_DangNhap">
-            <ns46:display-name>PL_DB_DangNhap</ns46:display-name>
-            <ns46:process-name>DangNhap</ns46:process-name>
-            <ns46:file-path>processor_BPEL\DangNhap.bpel</ns46:file-path>
+            <ns64:display-name>PL_DB_DangNhap</ns64:display-name>
+            <ns64:process-name>DangNhap</ns64:process-name>
+            <ns64:file-path>processor_BPEL\DangNhap.bpel</ns64:file-path>
         </consumes>
         <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns4:jdbcPortType" service-name="ns3:PL_DB_DoiMatKhau">
-            <ns46:display-name>PL_DB_DoiMatKhau</ns46:display-name>
-            <ns46:process-name>DoiMatKhau</ns46:process-name>
-            <ns46:file-path>processor_BPEL\DoiMatKhau.bpel</ns46:file-path>
+            <ns64:display-name>PL_DB_DoiMatKhau</ns64:display-name>
+            <ns64:process-name>DoiMatKhau</ns64:process-name>
+            <ns64:file-path>processor_BPEL\DoiMatKhau.bpel</ns64:file-path>
         </consumes>
         <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns7:jdbcPortType" service-name="ns6:PL_DB_PhanQuyenNguoiDung">
-            <ns46:display-name>PL_DB_PhanQuyenNguoiDung</ns46:display-name>
-            <ns46:process-name>PhanQuyenNguoiDung</ns46:process-name>
-            <ns46:file-path>processor_BPEL\PhanQuyenNguoiDung.bpel</ns46:file-path>
+            <ns64:display-name>PL_DB_PhanQuyenNguoiDung</ns64:display-name>
+            <ns64:process-name>PhanQuyenNguoiDung</ns64:process-name>
+            <ns64:file-path>processor_BPEL\PhanQuyenNguoiDung.bpel</ns64:file-path>
         </consumes>
         <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns10:jdbcPortType" service-name="ns9:PartnerLink2">
-            <ns46:display-name>PartnerLink2</ns46:display-name>
-            <ns46:process-name>PhanQuyenNhom</ns46:process-name>
-            <ns46:file-path>processor_BPEL\PhanQuyenNhom.bpel</ns46:file-path>
+            <ns64:display-name>PartnerLink2</ns64:display-name>
+            <ns64:process-name>PhanQuyenNhom</ns64:process-name>
+            <ns64:file-path>processor_BPEL\PhanQuyenNhom.bpel</ns64:file-path>
         </consumes>
         <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns13:jdbcPortType" service-name="ns12:PL_DB_SuaNguoiDung_Nhom">
-            <ns46:display-name>PL_DB_SuaNguoiDung_Nhom</ns46:display-name>
-            <ns46:process-name>SuaNguoiDung_Nhom</ns46:process-name>
-            <ns46:file-path>processor_BPEL\quanlynguoidung\SuaNguoiDung_Nhom.bpel</ns46:file-path>
+            <ns64:display-name>PL_DB_SuaNguoiDung_Nhom</ns64:display-name>
+            <ns64:process-name>SuaNguoiDung_Nhom</ns64:process-name>
+            <ns64:file-path>processor_BPEL\quanlynguoidung\SuaNguoiDung_Nhom.bpel</ns64:file-path>
         </consumes>
         <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns16:jdbcPortType" service-name="ns15:PL_DB_ThemNguoiDung">
-            <ns46:display-name>PL_DB_ThemNguoiDung</ns46:display-name>
-            <ns46:process-name>ThemNguoiDung_Nhom</ns46:process-name>
-            <ns46:file-path>processor_BPEL\quanlynguoidung\ThemNguoiDung_Nhom.bpel</ns46:file-path>
+            <ns64:display-name>PL_DB_ThemNguoiDung</ns64:display-name>
+            <ns64:process-name>ThemNguoiDung_Nhom</ns64:process-name>
+            <ns64:file-path>processor_BPEL\quanlynguoidung\ThemNguoiDung_Nhom.bpel</ns64:file-path>
         </consumes>
         <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns17:jdbcPortType" service-name="ns15:PL_DB_TimIdNhomTuTenNhom">
-            <ns46:display-name>PL_DB_TimIdNhomTuTenNhom</ns46:display-name>
-            <ns46:process-name>ThemNguoiDung_Nhom</ns46:process-name>
-            <ns46:file-path>processor_BPEL\quanlynguoidung\ThemNguoiDung_Nhom.bpel</ns46:file-path>
+            <ns64:display-name>PL_DB_TimIdNhomTuTenNhom</ns64:display-name>
+            <ns64:process-name>ThemNguoiDung_Nhom</ns64:process-name>
+            <ns64:file-path>processor_BPEL\quanlynguoidung\ThemNguoiDung_Nhom.bpel</ns64:file-path>
         </consumes>
         <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns18:jdbcPortType" service-name="ns15:PL_DB_ThemNguoiDung_Nhom">
-            <ns46:display-name>PL_DB_ThemNguoiDung_Nhom</ns46:display-name>
-            <ns46:process-name>ThemNguoiDung_Nhom</ns46:process-name>
-            <ns46:file-path>processor_BPEL\quanlynguoidung\ThemNguoiDung_Nhom.bpel</ns46:file-path>
+            <ns64:display-name>PL_DB_ThemNguoiDung_Nhom</ns64:display-name>
+            <ns64:process-name>ThemNguoiDung_Nhom</ns64:process-name>
+            <ns64:file-path>processor_BPEL\quanlynguoidung\ThemNguoiDung_Nhom.bpel</ns64:file-path>
         </consumes>
         <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns21:jdbcPortType" service-name="ns20:PL_DB_XoaNguoiDung_Nhom">
-            <ns46:display-name>PL_DB_XoaNguoiDung_Nhom</ns46:display-name>
-            <ns46:process-name>XoaNguoiDung_Nhom</ns46:process-name>
-            <ns46:file-path>processor_BPEL\quanlynguoidung\XoaNguoiDung_Nhom.bpel</ns46:file-path>
+            <ns64:display-name>PL_DB_XoaNguoiDung_Nhom</ns64:display-name>
+            <ns64:process-name>XoaNguoiDung_Nhom</ns64:process-name>
+            <ns64:file-path>processor_BPEL\quanlynguoidung\XoaNguoiDung_Nhom.bpel</ns64:file-path>
         </consumes>
         <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns22:jdbcPortType" service-name="ns20:PL_DB_XoaNguoiDung">
-            <ns46:display-name>PL_DB_XoaNguoiDung</ns46:display-name>
-            <ns46:process-name>XoaNguoiDung_Nhom</ns46:process-name>
-            <ns46:file-path>processor_BPEL\quanlynguoidung\XoaNguoiDung_Nhom.bpel</ns46:file-path>
+            <ns64:display-name>PL_DB_XoaNguoiDung</ns64:display-name>
+            <ns64:process-name>XoaNguoiDung_Nhom</ns64:process-name>
+            <ns64:file-path>processor_BPEL\quanlynguoidung\XoaNguoiDung_Nhom.bpel</ns64:file-path>
         </consumes>
         <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns25:jdbcPortType" service-name="ns24:PL_DB_SuaNhom">
-            <ns46:display-name>PL_DB_SuaNhom</ns46:display-name>
-            <ns46:process-name>SuaNhom</ns46:process-name>
-            <ns46:file-path>processor_BPEL\quanlynhom\SuaNhom.bpel</ns46:file-path>
+            <ns64:display-name>PL_DB_SuaNhom</ns64:display-name>
+            <ns64:process-name>SuaNhom</ns64:process-name>
+            <ns64:file-path>processor_BPEL\quanlynhom\SuaNhom.bpel</ns64:file-path>
         </consumes>
-        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns28:jdbcPortType" service-name="ns27:PL_DB_ThemNhom">
-            <ns46:display-name>PL_DB_ThemNhom</ns46:display-name>
-            <ns46:process-name>ThemNhom</ns46:process-name>
-            <ns46:file-path>processor_BPEL\quanlynhom\ThemNhom.bpel</ns46:file-path>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns28:jdbcPortType" service-name="ns27:PL_DB_SuaNhomQuyen">
+            <ns64:display-name>PL_DB_SuaNhomQuyen</ns64:display-name>
+            <ns64:process-name>SuaNhomQuyen</ns64:process-name>
+            <ns64:file-path>processor_BPEL\quanlynhom\SuaNhomQuyen.bpel</ns64:file-path>
         </consumes>
-        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns31:jdbcPortType" service-name="ns30:PL_DB_XoaNhom">
-            <ns46:display-name>PL_DB_XoaNhom</ns46:display-name>
-            <ns46:process-name>XoaNhom</ns46:process-name>
-            <ns46:file-path>processor_BPEL\quanlynhom\XoaNhom.bpel</ns46:file-path>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns31:jdbcPortType" service-name="ns30:PL_DB_ThemNhom">
+            <ns64:display-name>PL_DB_ThemNhom</ns64:display-name>
+            <ns64:process-name>ThemNhom</ns64:process-name>
+            <ns64:file-path>processor_BPEL\quanlynhom\ThemNhom.bpel</ns64:file-path>
         </consumes>
-        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns34:jdbcPortType" service-name="ns33:PL_DB_SuaQuyen">
-            <ns46:display-name>PL_DB_SuaQuyen</ns46:display-name>
-            <ns46:process-name>SuaQuyen</ns46:process-name>
-            <ns46:file-path>processor_BPEL\quanlyquyen\SuaQuyen.bpel</ns46:file-path>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns34:jdbcPortType" service-name="ns33:PL_DB_ThemNhomQuyen">
+            <ns64:display-name>PL_DB_ThemNhomQuyen</ns64:display-name>
+            <ns64:process-name>ThemNhomQuyen</ns64:process-name>
+            <ns64:file-path>processor_BPEL\quanlynhom\ThemNhomQuyen.bpel</ns64:file-path>
         </consumes>
-        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns37:jdbcPortType" service-name="ns36:PL_DB_ThemQuyen">
-            <ns46:display-name>PL_DB_ThemQuyen</ns46:display-name>
-            <ns46:process-name>ThemQuyen</ns46:process-name>
-            <ns46:file-path>processor_BPEL\quanlyquyen\ThemQuyen.bpel</ns46:file-path>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns37:jdbcPortType" service-name="ns36:PL_DB_XoaNhom">
+            <ns64:display-name>PL_DB_XoaNhom</ns64:display-name>
+            <ns64:process-name>XoaNhom</ns64:process-name>
+            <ns64:file-path>processor_BPEL\quanlynhom\XoaNhom.bpel</ns64:file-path>
         </consumes>
-        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns40:jdbcPortType" service-name="ns39:PL_DB_XoaQuyen">
-            <ns46:display-name>PL_DB_XoaQuyen</ns46:display-name>
-            <ns46:process-name>XoaQuyen</ns46:process-name>
-            <ns46:file-path>processor_BPEL\quanlyquyen\XoaQuyen.bpel</ns46:file-path>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns40:jdbcPortType" service-name="ns39:PL_DB_XoaNhomQuyen">
+            <ns64:display-name>PL_DB_XoaNhomQuyen</ns64:display-name>
+            <ns64:process-name>XoaNhomQuyen</ns64:process-name>
+            <ns64:file-path>processor_BPEL\quanlynhom\XoaNhomQuyen.bpel</ns64:file-path>
         </consumes>
-        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns43:jdbcPortType" service-name="ns42:PL_DB_DanhSachQuyenTuIdNguoiDung">
-            <ns46:display-name>PL_DB_DanhSachQuyenTuIdNguoiDung</ns46:display-name>
-            <ns46:process-name>UyQuyen</ns46:process-name>
-            <ns46:file-path>processor_BPEL\UyQuyen.bpel</ns46:file-path>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns43:jdbcPortType" service-name="ns42:PL_DB_SuaNguoiDungQuyen">
+            <ns64:display-name>PL_DB_SuaNguoiDungQuyen</ns64:display-name>
+            <ns64:process-name>SuaNguoiDungQuyen</ns64:process-name>
+            <ns64:file-path>processor_BPEL\quanlyquyen\SuaNguoiDungQuyen.bpel</ns64:file-path>
         </consumes>
-        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns44:jdbcPortType" service-name="ns42:PL_DB_UyQuyen">
-            <ns46:display-name>PL_DB_UyQuyen</ns46:display-name>
-            <ns46:process-name>UyQuyen</ns46:process-name>
-            <ns46:file-path>processor_BPEL\UyQuyen.bpel</ns46:file-path>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns46:jdbcPortType" service-name="ns45:PL_DB_SuaQuyen">
+            <ns64:display-name>PL_DB_SuaQuyen</ns64:display-name>
+            <ns64:process-name>SuaQuyen</ns64:process-name>
+            <ns64:file-path>processor_BPEL\quanlyquyen\SuaQuyen.bpel</ns64:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns49:jdbcPortType" service-name="ns48:PL_DB_ThemNguoiDungQuyen">
+            <ns64:display-name>PL_DB_ThemNguoiDungQuyen</ns64:display-name>
+            <ns64:process-name>ThemNguoiDungQuyen</ns64:process-name>
+            <ns64:file-path>processor_BPEL\quanlyquyen\ThemNguoiDungQuyen.bpel</ns64:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns52:jdbcPortType" service-name="ns51:PL_DB_ThemQuyen">
+            <ns64:display-name>PL_DB_ThemQuyen</ns64:display-name>
+            <ns64:process-name>ThemQuyen</ns64:process-name>
+            <ns64:file-path>processor_BPEL\quanlyquyen\ThemQuyen.bpel</ns64:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns55:jdbcPortType" service-name="ns54:PL_DB_XoaNguoiDungQuyen">
+            <ns64:display-name>PL_DB_XoaNguoiDungQuyen</ns64:display-name>
+            <ns64:process-name>XoaNguoiDungQuyen</ns64:process-name>
+            <ns64:file-path>processor_BPEL\quanlyquyen\XoaNguoiDungQuyen.bpel</ns64:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns58:jdbcPortType" service-name="ns57:PL_DB_XoaQuyen">
+            <ns64:display-name>PL_DB_XoaQuyen</ns64:display-name>
+            <ns64:process-name>XoaQuyen</ns64:process-name>
+            <ns64:file-path>processor_BPEL\quanlyquyen\XoaQuyen.bpel</ns64:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns61:jdbcPortType" service-name="ns60:PL_DB_DanhSachQuyenTuIdNguoiDung">
+            <ns64:display-name>PL_DB_DanhSachQuyenTuIdNguoiDung</ns64:display-name>
+            <ns64:process-name>UyQuyen</ns64:process-name>
+            <ns64:file-path>processor_BPEL\UyQuyen.bpel</ns64:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns62:jdbcPortType" service-name="ns60:PL_DB_UyQuyen">
+            <ns64:display-name>PL_DB_UyQuyen</ns64:display-name>
+            <ns64:process-name>UyQuyen</ns64:process-name>
+            <ns64:file-path>processor_BPEL\UyQuyen.bpel</ns64:file-path>
         </consumes>
     </services>
 </jbi>
