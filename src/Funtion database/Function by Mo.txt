@@ -604,3 +604,32 @@ $BODY$
 ALTER FUNCTION xoaquyen(bigint) OWNER TO postgres;
 
 
+
+-- Function: danhsachloaidiem(bigint, integer)
+
+-- DROP FUNCTION danhsachloaidiem(bigint, integer);
+
+CREATE OR REPLACE FUNCTION danhsachloaidiem(id_loaidiem bigint, lan integer)
+  RETURNS void AS
+$BODY$INSERT INTO danhsachloaidiem(
+            id_loaidiem, lan)
+    VALUES ($1,$2);
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION danhsachloaidiem(bigint, integer) OWNER TO postgres;
+
+
+-- Function: themdanhsachloaidiem(bigint, integer)
+
+-- DROP FUNCTION themdanhsachloaidiem(bigint, integer);
+
+CREATE OR REPLACE FUNCTION themdanhsachloaidiem(id_loaidiem bigint, lan integer)
+  RETURNS bigint AS
+$BODY$INSERT INTO danhsachloaidiem(
+            id_loaidiem, lan)
+    VALUES ($1,$2) returning id_danhsachloaidiem;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION themdanhsachloaidiem(bigint, integer) OWNER TO postgres;
