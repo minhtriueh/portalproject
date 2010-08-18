@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jbi xmlns="http://java.sun.com/xml/ns/jbi" xmlns:ns1="QLDiemComApp" xmlns:ns10="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_DanhSachDiemTrungBinh" xmlns:ns11="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TaoLoaiDiem" xmlns:ns12="http://enterprise.netbeans.org/bpel/QuanLyDiem/LuuDiemHocBa" xmlns:ns13="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LuuDiemHocBa" xmlns:ns14="http://enterprise.netbeans.org/bpel/QuanLyDiem/TaoSoDiem" xmlns:ns15="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TaoChiTietSoDiem" xmlns:ns16="http://enterprise.netbeans.org/bpel/QuanLyDiem/ThemDanhSachLoaiDiem" xmlns:ns17="http://enterprise.netbeans.org/bpel/QuanLyDiem/XemDiem" xmlns:ns18="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachDiemCuaHocSinh" xmlns:ns19="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TaoDiem" xmlns:ns2="http://enterprise.netbeans.org/bpel/QuanLyDiem/TinhDiemTrungBinh" xmlns:ns20="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachLoaiDiem" xmlns:ns21="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachHocSinhTuIdLop" xmlns:ns22="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_ThemDanhSachLoaiDiem" xmlns:ns23="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TaoSoDiem" xmlns:ns3="http://enterprise.netbeans.org/bpel/QuanLyDiem/TaoLoaiDiem" xmlns:ns4="http://enterprise.netbeans.org/bpel/QuanLyDiem/TongKetDiem" xmlns:ns5="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_SuaDiemTrungBinh" xmlns:ns6="http://enterprise.netbeans.org/bpel/QuanLyDiem/NhapDiem" xmlns:ns7="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_SuaDiem" xmlns:ns8="http://enterprise.netbeans.org/bpel/QuanLyThiDuaLenLop/XetLenLop" xmlns:ns9="http://j2ee.netbeans.org/wsdl/QuanLyThiDuaLenLop/DB_XetLenLop" version="1.0">
+    <services binding-component="true">
+        <provides endpoint-name="port" interface-name="ns5:jdbcPortType" service-name="ns5:service"/>
+        <provides endpoint-name="port" interface-name="ns7:jdbcPortType" service-name="ns7:service"/>
+        <provides endpoint-name="port" interface-name="ns9:jdbcPortType" service-name="ns9:service"/>
+        <provides endpoint-name="port" interface-name="ns10:jdbcPortType" service-name="ns10:service"/>
+        <provides endpoint-name="port" interface-name="ns11:jdbcPortType" service-name="ns11:service"/>
+        <provides endpoint-name="port" interface-name="ns13:jdbcPortType" service-name="ns13:service"/>
+        <provides endpoint-name="port" interface-name="ns15:jdbcPortType" service-name="ns15:service"/>
+        <provides endpoint-name="port" interface-name="ns18:jdbcPortType" service-name="ns18:service"/>
+        <provides endpoint-name="port" interface-name="ns19:jdbcPortType" service-name="ns19:service"/>
+        <provides endpoint-name="port" interface-name="ns20:jdbcPortType" service-name="ns20:service"/>
+        <provides endpoint-name="port" interface-name="ns21:jdbcPortType" service-name="ns21:service"/>
+        <provides endpoint-name="port" interface-name="ns22:jdbcPortType" service-name="ns22:service"/>
+        <provides endpoint-name="port" interface-name="ns23:jdbcPortType" service-name="ns23:service"/>
+    </services>
+</jbi>
