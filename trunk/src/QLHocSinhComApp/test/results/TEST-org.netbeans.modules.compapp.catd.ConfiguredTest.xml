@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="1" hostname="sanchikaro" name="org.netbeans.modules.compapp.catd.ConfiguredTest" tests="1" time="1.251" timestamp="2010-08-09T04:07:24">
+<testsuite errors="0" failures="1" hostname="sanchikaro" name="org.netbeans.modules.compapp.catd.ConfiguredTest" tests="1" time="8.086" timestamp="2010-08-19T08:16:48">
   <properties>
     <property name="libs.struts2lib-2-0-11-basic.maven-pom" value="" />
     <property name="netbeans.autoupdate.country" value="VN" />
@@ -357,8 +357,8 @@
     <property name="file.encoding" value="Cp1258" />
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
   </properties>
-  <testcase classname="org.netbeans.modules.compapp.catd.ConfiguredTest" name="TestTimHocSinhByIdHocSinh" time="1.23">
-    <failure message="[09-08-2010 11:07:26] The response is not identical to the expected output." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: [09-08-2010 11:07:26] The response is not identical to the expected output.
+  <testcase classname="org.netbeans.modules.compapp.catd.ConfiguredTest" name="TestTimHocSinhByIdHocSinh" time="8.021">
+    <failure message="[19-08-2010 15:16:56] The response is not identical to the expected output." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: [19-08-2010 15:16:56] The response is not identical to the expected output.
 	at org.netbeans.modules.compapp.catd.ConfiguredTest.checkExpectedOutput(ConfiguredTest.java:2348)
 	at org.netbeans.modules.compapp.catd.ConfiguredTest.checkExpectedOutput(ConfiguredTest.java:2218)
 	at org.netbeans.modules.compapp.catd.ConfiguredTest.testConcurrentSOAPRequest(ConfiguredTest.java:862)
@@ -426,7 +426,7 @@ Test TestTimHocSinhByIdHocSinh\Concurrent.properties
   * Difference (Add): m:TimHocSinhByIdHocSinhOperationResponse
  Failed. (Destination: http://localhost:${HttpDefaultPort}/QLHocSinhComAppService4/TImHocSinhByIDHocSinh)
 ]]></system-out>
-  <system-err><![CDATA[09-08-2010 11:07:25 org.netbeans.modules.csl.core.LanguageRegistry readSfs
+  <system-err><![CDATA[19-08-2010 15:16:56 org.netbeans.modules.csl.core.LanguageRegistry readSfs
 INFO: No CslPlugins folder
 ]]></system-err>
 </testsuite>
