@@ -47,7 +47,7 @@
                 	<div class="r"></div>
                 	<ul class="art-menu">
                 		<li>
-                			<a href="#" class="active"><span class="l"></span><span class="r"></span><span class="t">Trang chủ</span></a>
+                			<a href="index.jsp" class="active"><span class="l"></span><span class="r"></span><span class="t">Trang chủ</span></a>
                 		</li>
                                 <li>
                 			<a href="#" ><span class="l"></span><span class="r"></span><span class="t">Tra cứu điểm</span></a>
@@ -60,7 +60,7 @@
                 			<ul>
                 				<li><a href="#">Học sinh</a>
                 					<ul>
-                						<li><a href="#">Thêm học sinh</a></li>
+                						<li><a href="index.jsp?module=quanlyhocsinh&page=taohocsinh&r=no&l=no">Thêm học sinh</a></li>
                 						<li><a href="#">Tìm kiếm học sinh</a></li>
                 					</ul>
                 				</li>
