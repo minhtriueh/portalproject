@@ -16,6 +16,9 @@
     <!--css form -->
     <link rel="stylesheet" href="Demo/form/cssform.css" type="text/css" media="screen" />
     <script type="text/javascript" src="Demo/form/cssform.js"></script>
+
+    <!--css table -->
+    <link rel="stylesheet" href="table.css" type="text/css" media="screen" />
 </head>
 <body>
 <div id="art-page-background-glare">
