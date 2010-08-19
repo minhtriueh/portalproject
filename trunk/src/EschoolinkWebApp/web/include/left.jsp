@@ -32,7 +32,7 @@
                                                             	<li class="active">
                                                             		<a href="index.jsp?i1"><span class="l"></span><span class="r"></span><span class="t">Giới thiệu</span></a>
                                                                         <ul>
-                                                                            <li><a href="index.jsp?i1s1">Giới thiệu trường</a></li>
+                                                                            <li><a href="index.jsp?i1s1&module=tintuc&page=gioithieutruong">Giới thiệu trường</a></li>
                                                                             <li><a href="index.jsp?i1s2">Chuyện về Hai Bà</a></li>
                                                                             <li><a href="index.jsp?i1s3">Lịch sử phát triển</a></li>
                                                                             <li><a href="index.jsp?i1s4">Chức năng nhiệm vụ</a></li>

@@ -1,6 +1,6 @@
 /* begin Page */
 
-/* Generated with Artisteer version 2.4.0.24559, file checksum is 0974A0A0. */
+/* Generated with Artisteer version 2.4.0.24559, file checksum is D1CA0B8A. */
 
 body
 {
@@ -9,7 +9,7 @@ body
   background-color: #96C8DE;
   background-image: url('images/page_t.jpg');
   background-repeat: repeat;
-  background-attachment: scroll;
+  background-attachment: fixed;
   background-position: top left;
   font-family: Arial, Helvetica, Sans-Serif;
   font-style: normal;
@@ -1916,14 +1916,14 @@ blockquote,
 /* begin LayoutCell, sidebar1 */
 .art-content-layout .art-sidebar1
 {
-  width: 25%;
+  width: 220px;
 }
 /* end LayoutCell, sidebar1 */
 
 /* begin LayoutCell, content */
 .art-content-layout .art-content
 {
-  width: 50%;
+  width: 100%;
 }
 .art-content-layout .art-content .art-block
 {
@@ -1946,7 +1946,7 @@ blockquote,
 /* begin LayoutCell, sidebar2 */
 .art-content-layout .art-sidebar2
 {
-  width: 25%;
+  width: 200px;
 }
 /* end LayoutCell, sidebar2 */
 
@@ -1986,4 +1986,48 @@ img.image
     margin:0;
     padding:0;
     border:none;
+}
+
+img.myimage
+{
+    float:left;
+    margin-right:8px;
+    margin-top:2px;
+    margin-bottom:5px;
+    margin-left:0px;
+    padding:0;
+    border:none;
+}
+
+/*my css*/
+#endbantin{
+    float:right;
+    text-align:right;
+    width:auto;
+    height:auto;
+    margin-top:10px;
+}
+#endbantin span.date{
+    font-weight:bold;
+}
+
+#endbantin p.line{
+   width:200px;
+   height:2px;
+   border-bottom:1px dotted black;
+}
+#endbantin span.previous{
+    background-image:url('images/previous.gif') ;
+    background-repeat: no-repeat;
+    background-position: 2px ;
+    padding-left:15px;
+    
+}
+#endbantin .print{
+    background-image:url('images/print.gif') ;
+    background-repeat: no-repeat;
+    
+    padding-left:18px;
+    margin-left:4px;
+    
 }

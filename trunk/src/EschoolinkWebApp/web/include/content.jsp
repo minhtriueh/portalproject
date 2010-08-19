@@ -36,7 +36,7 @@
                                                 	<span class="art-button-wrapper">
                                                 		<span class="l"> </span>
                                                 		<span class="r"> </span>
-                                                		<a class="art-button" href="javascript:void(0)">Xem ...</a>
+                                                		<a class="art-button" href="index.jsp?module=tintuc&page=gioithieutruong">Xem ...</a>
                                                 	</span>
                                                 </p>
                                                 <div class="cleared"></div>
