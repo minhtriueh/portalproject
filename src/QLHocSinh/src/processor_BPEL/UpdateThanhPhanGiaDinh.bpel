@@ -9,51 +9,50 @@
     xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
     xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor"
     xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2" xmlns:ns0="http://j2ee.netbeans.org/xsd/tableSchema">
-    <import namespace="http://j2ee.netbeans.org/wsdl/QLHocSinh/UpdateQuanHeGiaDinh" location="../interface_WSDL/UpdateThanhPhanGiaDinh.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
-    <import namespace="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_UpdateQuanHeGiaDinh" location="../DB_WSDL/update/DB_UpdateThanhPhanGiaDinh.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QLHocSinh/UpdateThanhPhanGiaDinh" location="../interface_WSDL/UpdateThanhPhanGiaDinh.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QLHocSinh/UpdateThanhPhanGiaDinh" location="../DB_WSDL/update/UpdateThanhPhanGiaDinh.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
     <partnerLinks>
-        <partnerLink name="PartnerLink2" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_UpdateQuanHeGiaDinh" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
-        <partnerLink name="PartnerLink1" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/UpdateQuanHeGiaDinh" partnerLinkType="tns:UpdateQuanHeGiaDinh" myRole="UpdateQuanHeGiaDinhPortTypeRole"/>
+        <partnerLink name="PartnerLink2" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/UpdateThanhPhanGiaDinh" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="PartnerLink1" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/UpdateThanhPhanGiaDinh" partnerLinkType="tns:UpdateThanhPhanGiaDinh" myRole="UpdateThanhPhanGiaDinhPortTypeRole"/>
     </partnerLinks>
     <variables>
-        <variable name="ExecuteOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_UpdateQuanHeGiaDinh" messageType="tns:outputMsg"/>
-        <variable name="ExecuteIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_UpdateQuanHeGiaDinh" messageType="tns:inputMsg"/>
-        <variable name="UpdateQuanHeGiaDinhOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/UpdateQuanHeGiaDinh" messageType="tns:UpdateQuanHeGiaDinhOperationResponse"/>
-        <variable name="UpdateQuanHeGiaDinhOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/UpdateQuanHeGiaDinh" messageType="tns:UpdateQuanHeGiaDinhOperationRequest"/>
+        <variable name="ExecuteOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/UpdateThanhPhanGiaDinh" messageType="tns:outputMsg"/>
+        <variable name="ExecuteIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/UpdateThanhPhanGiaDinh" messageType="tns:inputMsg"/>
+        <variable name="UpdateThanhPhanGiaDinhOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/UpdateThanhPhanGiaDinh" messageType="tns:UpdateThanhPhanGiaDinhOperationResponse"/>
+        <variable name="UpdateThanhPhanGiaDinhOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/UpdateThanhPhanGiaDinh" messageType="tns:UpdateThanhPhanGiaDinhOperationRequest"/>
     </variables>
     <sequence>
-        <receive name="Receive1" createInstance="yes" partnerLink="PartnerLink1" operation="UpdateQuanHeGiaDinhOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/UpdateQuanHeGiaDinh" portType="tns:UpdateQuanHeGiaDinhPortType" variable="UpdateQuanHeGiaDinhOperationIn"/>
+        <receive name="Receive1" createInstance="yes" partnerLink="PartnerLink1" operation="UpdateThanhPhanGiaDinhOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/UpdateThanhPhanGiaDinh" portType="tns:UpdateThanhPhanGiaDinhPortType" variable="UpdateThanhPhanGiaDinhOperationIn"/>
         <assign name="Assign1">
             <copy>
-                <from variable="UpdateQuanHeGiaDinhOperationIn" part="id_thanhphangiadinh_"/>
+                <from variable="UpdateThanhPhanGiaDinhOperationIn" part="id_thanhphangiadinh_"/>
                 <to>$ExecuteIn.part/ns0:id_thanhphangiadinh_</to>
             </copy>
             <copy>
-                <from variable="UpdateQuanHeGiaDinhOperationIn" part="hoten_"/>
+                <from variable="UpdateThanhPhanGiaDinhOperationIn" part="hoten_"/>
                 <to>$ExecuteIn.part/ns0:hoten_</to>
             </copy>
             <copy>
-                <from variable="UpdateQuanHeGiaDinhOperationIn" part="ngaysinh_"/>
+                <from variable="UpdateThanhPhanGiaDinhOperationIn" part="ngaysinh_"/>
                 <to>$ExecuteIn.part/ns0:ngaysinh_</to>
             </copy>
             <copy>
-                <from variable="UpdateQuanHeGiaDinhOperationIn" part="nghenghiep_"/>
+                <from variable="UpdateThanhPhanGiaDinhOperationIn" part="nghenghiep_"/>
                 <to>$ExecuteIn.part/ns0:nghenghiep_</to>
             </copy>
             <copy>
-                <from variable="UpdateQuanHeGiaDinhOperationIn" part="tenquanhe_"/>
+                <from variable="UpdateThanhPhanGiaDinhOperationIn" part="tenquanhe_"/>
                 <to>$ExecuteIn.part/ns0:tenquanhe_</to>
             </copy>
         </assign>
-        <invoke name="Invoke1" partnerLink="PartnerLink2" operation="execute" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_UpdateQuanHeGiaDinh" portType="tns:jdbcPortType" inputVariable="ExecuteIn" outputVariable="ExecuteOut"/>
+        <invoke name="Invoke1" partnerLink="PartnerLink2" operation="execute" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/UpdateThanhPhanGiaDinh" portType="tns:jdbcPortType" inputVariable="ExecuteIn" outputVariable="ExecuteOut"/>
         <assign name="Assign2">
             <copy>
                 <from>$ExecuteOut.part/ns0:returnValue</from>
-                <to variable="UpdateQuanHeGiaDinhOperationOut" part="result"/>
+                <to variable="UpdateThanhPhanGiaDinhOperationOut" part="result"/>
             </copy>
         </assign>
-        <reply name="Reply1" partnerLink="PartnerLink1" operation="UpdateQuanHeGiaDinhOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/UpdateQuanHeGiaDinh" portType="tns:UpdateQuanHeGiaDinhPortType" variable="UpdateQuanHeGiaDinhOperationOut"/>
+        <reply name="Reply1" partnerLink="PartnerLink1" operation="UpdateThanhPhanGiaDinhOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/UpdateThanhPhanGiaDinh" portType="tns:UpdateThanhPhanGiaDinhPortType" variable="UpdateThanhPhanGiaDinhOperationOut"/>
     </sequence>
 </process>
-
 
