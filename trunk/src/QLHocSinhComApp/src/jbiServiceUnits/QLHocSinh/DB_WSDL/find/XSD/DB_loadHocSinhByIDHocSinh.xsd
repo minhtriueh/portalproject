@@ -3,7 +3,7 @@
     <xsd:element name="DB_loadHocSinhByIdHocSinh_Request">
       <xsd:complexType>
         <xsd:sequence>
-          <xsd:element name="id_hocsinh">
+          <xsd:element name="param1">
             <xsd:complexType>
               <xsd:simpleContent>
                 <xsd:extension base="xsd:long">
@@ -36,6 +36,26 @@
               </xsd:simpleContent>
             </xsd:complexType>
           </xsd:element>
+          <xsd:element name="ten">
+            <xsd:complexType>
+              <xsd:simpleContent>
+                <xsd:extension base="xsd:string">
+                  <xsd:attribute name="isNull" type="xsd:boolean"></xsd:attribute>
+                  <xsd:attribute name="isDefaultColumn" type="xsd:boolean"></xsd:attribute>
+                </xsd:extension>
+              </xsd:simpleContent>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="masohocsinh">
+            <xsd:complexType>
+              <xsd:simpleContent>
+                <xsd:extension base="xsd:string">
+                  <xsd:attribute name="isNull" type="xsd:boolean"></xsd:attribute>
+                  <xsd:attribute name="isDefaultColumn" type="xsd:boolean"></xsd:attribute>
+                </xsd:extension>
+              </xsd:simpleContent>
+            </xsd:complexType>
+          </xsd:element>
           <xsd:element name="gioitinh">
             <xsd:complexType>
               <xsd:simpleContent>
@@ -56,26 +76,6 @@
               </xsd:simpleContent>
             </xsd:complexType>
           </xsd:element>
-          <xsd:element name="sonha">
-            <xsd:complexType>
-              <xsd:simpleContent>
-                <xsd:extension base="xsd:string">
-                  <xsd:attribute name="isNull" type="xsd:boolean"></xsd:attribute>
-                  <xsd:attribute name="isDefaultColumn" type="xsd:boolean"></xsd:attribute>
-                </xsd:extension>
-              </xsd:simpleContent>
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="tongiao">
-            <xsd:complexType>
-              <xsd:simpleContent>
-                <xsd:extension base="xsd:string">
-                  <xsd:attribute name="isNull" type="xsd:boolean"></xsd:attribute>
-                  <xsd:attribute name="isDefaultColumn" type="xsd:boolean"></xsd:attribute>
-                </xsd:extension>
-              </xsd:simpleContent>
-            </xsd:complexType>
-          </xsd:element>
           <xsd:element name="hinhanh">
             <xsd:complexType>
               <xsd:simpleContent>
@@ -86,7 +86,17 @@
               </xsd:simpleContent>
             </xsd:complexType>
           </xsd:element>
-          <xsd:element name="ghichuhocsinh">
+          <xsd:element name="diachi">
+            <xsd:complexType>
+              <xsd:simpleContent>
+                <xsd:extension base="xsd:string">
+                  <xsd:attribute name="isNull" type="xsd:boolean"></xsd:attribute>
+                  <xsd:attribute name="isDefaultColumn" type="xsd:boolean"></xsd:attribute>
+                </xsd:extension>
+              </xsd:simpleContent>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="ghichu">
             <xsd:complexType>
               <xsd:simpleContent>
                 <xsd:extension base="xsd:string">
@@ -136,7 +146,7 @@
               </xsd:simpleContent>
             </xsd:complexType>
           </xsd:element>
-          <xsd:element name="tentinh">
+          <xsd:element name="tongiao">
             <xsd:complexType>
               <xsd:simpleContent>
                 <xsd:extension base="xsd:string">
@@ -146,40 +156,20 @@
               </xsd:simpleContent>
             </xsd:complexType>
           </xsd:element>
-          <xsd:element name="tenquanhuyenthanhpho">
+          <xsd:element name="id_quequan">
             <xsd:complexType>
               <xsd:simpleContent>
-                <xsd:extension base="xsd:string">
+                <xsd:extension base="xsd:long">
                   <xsd:attribute name="isNull" type="xsd:boolean"></xsd:attribute>
                   <xsd:attribute name="isDefaultColumn" type="xsd:boolean"></xsd:attribute>
                 </xsd:extension>
               </xsd:simpleContent>
             </xsd:complexType>
           </xsd:element>
-          <xsd:element name="tenxaphuongthitran">
+          <xsd:element name="id_loaihocsinh">
             <xsd:complexType>
               <xsd:simpleContent>
-                <xsd:extension base="xsd:string">
-                  <xsd:attribute name="isNull" type="xsd:boolean"></xsd:attribute>
-                  <xsd:attribute name="isDefaultColumn" type="xsd:boolean"></xsd:attribute>
-                </xsd:extension>
-              </xsd:simpleContent>
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="tenthonxom">
-            <xsd:complexType>
-              <xsd:simpleContent>
-                <xsd:extension base="xsd:string">
-                  <xsd:attribute name="isNull" type="xsd:boolean"></xsd:attribute>
-                  <xsd:attribute name="isDefaultColumn" type="xsd:boolean"></xsd:attribute>
-                </xsd:extension>
-              </xsd:simpleContent>
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="motaloaihocsinh">
-            <xsd:complexType>
-              <xsd:simpleContent>
-                <xsd:extension base="xsd:string">
+                <xsd:extension base="xsd:long">
                   <xsd:attribute name="isNull" type="xsd:boolean"></xsd:attribute>
                   <xsd:attribute name="isDefaultColumn" type="xsd:boolean"></xsd:attribute>
                 </xsd:extension>
@@ -196,27 +186,7 @@
               </xsd:simpleContent>
             </xsd:complexType>
           </xsd:element>
-          <xsd:element name="chuthichchedouutien">
-            <xsd:complexType>
-              <xsd:simpleContent>
-                <xsd:extension base="xsd:string">
-                  <xsd:attribute name="isNull" type="xsd:boolean"></xsd:attribute>
-                  <xsd:attribute name="isDefaultColumn" type="xsd:boolean"></xsd:attribute>
-                </xsd:extension>
-              </xsd:simpleContent>
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="phantramduocgiam">
-            <xsd:complexType>
-              <xsd:simpleContent>
-                <xsd:extension base="xsd:double">
-                  <xsd:attribute name="isNull" type="xsd:boolean"></xsd:attribute>
-                  <xsd:attribute name="isDefaultColumn" type="xsd:boolean"></xsd:attribute>
-                </xsd:extension>
-              </xsd:simpleContent>
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="tenchedouutien">
+          <xsd:element name="motaloaihocsinh">
             <xsd:complexType>
               <xsd:simpleContent>
                 <xsd:extension base="xsd:string">
@@ -256,10 +226,10 @@
               </xsd:simpleContent>
             </xsd:complexType>
           </xsd:element>
-          <xsd:element name="motakhuvuc">
+          <xsd:element name="id_khuvuc">
             <xsd:complexType>
               <xsd:simpleContent>
-                <xsd:extension base="xsd:string">
+                <xsd:extension base="xsd:long">
                   <xsd:attribute name="isNull" type="xsd:boolean"></xsd:attribute>
                   <xsd:attribute name="isDefaultColumn" type="xsd:boolean"></xsd:attribute>
                 </xsd:extension>
@@ -270,6 +240,96 @@
             <xsd:complexType>
               <xsd:simpleContent>
                 <xsd:extension base="xsd:string">
+                  <xsd:attribute name="isNull" type="xsd:boolean"></xsd:attribute>
+                  <xsd:attribute name="isDefaultColumn" type="xsd:boolean"></xsd:attribute>
+                </xsd:extension>
+              </xsd:simpleContent>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="motakhuvuc">
+            <xsd:complexType>
+              <xsd:simpleContent>
+                <xsd:extension base="xsd:string">
+                  <xsd:attribute name="isNull" type="xsd:boolean"></xsd:attribute>
+                  <xsd:attribute name="isDefaultColumn" type="xsd:boolean"></xsd:attribute>
+                </xsd:extension>
+              </xsd:simpleContent>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="id_tinh">
+            <xsd:complexType>
+              <xsd:simpleContent>
+                <xsd:extension base="xsd:long">
+                  <xsd:attribute name="isNull" type="xsd:boolean"></xsd:attribute>
+                  <xsd:attribute name="isDefaultColumn" type="xsd:boolean"></xsd:attribute>
+                </xsd:extension>
+              </xsd:simpleContent>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="tentinh">
+            <xsd:complexType>
+              <xsd:simpleContent>
+                <xsd:extension base="xsd:string">
+                  <xsd:attribute name="isNull" type="xsd:boolean"></xsd:attribute>
+                  <xsd:attribute name="isDefaultColumn" type="xsd:boolean"></xsd:attribute>
+                </xsd:extension>
+              </xsd:simpleContent>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="id_quanhuyenthanhpho">
+            <xsd:complexType>
+              <xsd:simpleContent>
+                <xsd:extension base="xsd:long">
+                  <xsd:attribute name="isNull" type="xsd:boolean"></xsd:attribute>
+                  <xsd:attribute name="isDefaultColumn" type="xsd:boolean"></xsd:attribute>
+                </xsd:extension>
+              </xsd:simpleContent>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="tenquanhuyenthanhpho">
+            <xsd:complexType>
+              <xsd:simpleContent>
+                <xsd:extension base="xsd:string">
+                  <xsd:attribute name="isNull" type="xsd:boolean"></xsd:attribute>
+                  <xsd:attribute name="isDefaultColumn" type="xsd:boolean"></xsd:attribute>
+                </xsd:extension>
+              </xsd:simpleContent>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="id_chedouutien">
+            <xsd:complexType>
+              <xsd:simpleContent>
+                <xsd:extension base="xsd:long">
+                  <xsd:attribute name="isNull" type="xsd:boolean"></xsd:attribute>
+                  <xsd:attribute name="isDefaultColumn" type="xsd:boolean"></xsd:attribute>
+                </xsd:extension>
+              </xsd:simpleContent>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="tenchedouutien">
+            <xsd:complexType>
+              <xsd:simpleContent>
+                <xsd:extension base="xsd:string">
+                  <xsd:attribute name="isNull" type="xsd:boolean"></xsd:attribute>
+                  <xsd:attribute name="isDefaultColumn" type="xsd:boolean"></xsd:attribute>
+                </xsd:extension>
+              </xsd:simpleContent>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="phantramduocgiam">
+            <xsd:complexType>
+              <xsd:simpleContent>
+                <xsd:extension base="xsd:double">
+                  <xsd:attribute name="isNull" type="xsd:boolean"></xsd:attribute>
+                  <xsd:attribute name="isDefaultColumn" type="xsd:boolean"></xsd:attribute>
+                </xsd:extension>
+              </xsd:simpleContent>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="id_dantoc">
+            <xsd:complexType>
+              <xsd:simpleContent>
+                <xsd:extension base="xsd:long">
                   <xsd:attribute name="isNull" type="xsd:boolean"></xsd:attribute>
                   <xsd:attribute name="isDefaultColumn" type="xsd:boolean"></xsd:attribute>
                 </xsd:extension>
@@ -290,36 +350,6 @@
             <xsd:complexType>
               <xsd:simpleContent>
                 <xsd:extension base="xsd:string">
-                  <xsd:attribute name="isNull" type="xsd:boolean"></xsd:attribute>
-                  <xsd:attribute name="isDefaultColumn" type="xsd:boolean"></xsd:attribute>
-                </xsd:extension>
-              </xsd:simpleContent>
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="tenlop">
-            <xsd:complexType>
-              <xsd:simpleContent>
-                <xsd:extension base="xsd:string">
-                  <xsd:attribute name="isNull" type="xsd:boolean"></xsd:attribute>
-                  <xsd:attribute name="isDefaultColumn" type="xsd:boolean"></xsd:attribute>
-                </xsd:extension>
-              </xsd:simpleContent>
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="sisolop">
-            <xsd:complexType>
-              <xsd:simpleContent>
-                <xsd:extension base="xsd:int">
-                  <xsd:attribute name="isNull" type="xsd:boolean"></xsd:attribute>
-                  <xsd:attribute name="isDefaultColumn" type="xsd:boolean"></xsd:attribute>
-                </xsd:extension>
-              </xsd:simpleContent>
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="id_quequan">
-            <xsd:complexType>
-              <xsd:simpleContent>
-                <xsd:extension base="xsd:long">
                   <xsd:attribute name="isNull" type="xsd:boolean"></xsd:attribute>
                   <xsd:attribute name="isDefaultColumn" type="xsd:boolean"></xsd:attribute>
                 </xsd:extension>

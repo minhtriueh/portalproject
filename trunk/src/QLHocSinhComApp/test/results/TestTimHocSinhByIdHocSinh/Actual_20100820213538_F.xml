@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP-ENV:Body>
+    <m:TimHocSinhByIdHocSinhOperationResponse xmlns:m="QLHocSinhComApp" xmlns:msgns="http://j2ee.netbeans.org/wsdl/QLHocSinh/TimHocSinhByIdHocSinh">
+      <result>
+        <ns1:id xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">25</ns1:id>
+        <ns1:hoVaTenLot xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject" isNull="false">Nguyễn Duy</ns1:hoVaTenLot>
+        <ns1:ten xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject" isNull="false">Chinh5</ns1:ten>
+        <ns1:maSo xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject" isNull="false">20100005</ns1:maSo>
+        <ns1:ngaySinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject" isNull="false">1988-09-23</ns1:ngaySinh>
+        <ns1:gioiTinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject" isNull="false">Nam</ns1:gioiTinh>
+        <ns1:soNha xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject" isNull="false">443-khu pho 3</ns1:soNha>
+        <ns1:tonGiao xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject" isNull="false">Không</ns1:tonGiao>
+        <ns1:hinhAnh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject" isNull="false"/>
+        <ns1:ketNapDoi xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject" isNull="false">t</ns1:ketNapDoi>
+        <ns1:ngayVaoDoi xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject" isNull="false">2008-08-03</ns1:ngayVaoDoi>
+        <ns1:ketNapDoan xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject" isNull="false">t</ns1:ketNapDoan>
+        <ns1:ngayVaoDoan xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject" isNull="false">2006-08-03</ns1:ngayVaoDoan>
+        <ns1:ghiChu xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject" isNull="false"/>
+        <ns1:diaChiHienTai xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:QuanHuyenThanhPho>
+            <ns1:id isNull="false">133</ns1:id>
+            <ns1:tenQuanHuyenThanhPho isNull="false">Bến Cầu</ns1:tenQuanHuyenThanhPho>
+          </ns1:QuanHuyenThanhPho>
+          <ns1:Tinh>
+            <ns1:id isNull="false">249</ns1:id>
+            <ns1:tenTinh isNull="false">Tay Ninh</ns1:tenTinh>
+          </ns1:Tinh>
+        </ns1:diaChiHienTai>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">214</ns1:id>
+          <ns1:tenDanToc isNull="false">Kinh</ns1:tenDanToc>
+          <ns1:danTocThieuSo isNull="false">f</ns1:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:LoaiHocSinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">17</ns1:id>
+          <ns1:tenLoaiHocSinh isNull="false">Hoc sinh bình thường</ns1:tenLoaiHocSinh>
+          <ns1:moTa isNull="false"/>
+        </ns1:LoaiHocSinh>
+        <ns1:CheDoUuTien xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">33</ns1:id>
+          <ns1:tenCheDoUuTien isNull="false">Con thương binh</ns1:tenCheDoUuTien>
+          <ns1:phanTramDuocGiam isNull="false">20</ns1:phanTramDuocGiam>
+        </ns1:CheDoUuTien>
+        <ns1:QueQuan xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">25</ns1:id>
+          <ns1:queQuan isNull="false">HoaThanhTayNinh</ns1:queQuan>
+          <ns1:QuanHuyenThanhPho>
+            <ns1:tenQuanHuyenThanhPho isNull="false">Bến Cầu</ns1:tenQuanHuyenThanhPho>
+          </ns1:QuanHuyenThanhPho>
+          <ns1:Tinh>
+            <ns1:tenTinh isNull="false">Tay Ninh</ns1:tenTinh>
+          </ns1:Tinh>
+        </ns1:QueQuan>
+        <ns1:NguoiDung xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:username isNull="false">20100005</ns1:username>
+          <ns1:password isNull="false">20100005</ns1:password>
+          <ns1:ngayTao isNull="false">2010-08-20</ns1:ngayTao>
+        </ns1:NguoiDung>
+        <ns1:KhuVuc xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">17</ns1:id>
+          <ns1:tenKhuVuc isNull="false">KV1</ns1:tenKhuVuc>
+          <ns1:moTa isNull="false"/>
+        </ns1:KhuVuc>
+      </result>
+    </m:TimHocSinhByIdHocSinhOperationResponse>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

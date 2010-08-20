@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="DB_TimHocSinhTheoLop" targetNamespace="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_TimHocSinhTheoLop" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:ns="http://j2ee.netbeans.org/xsd/tableSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_TimHocSinhTheoLop" xmlns:plink="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/">
+  <types>
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/">
+            <xsd:import namespace="http://j2ee.netbeans.org/xsd/tableSchema" schemaLocation="../../DB_WSDL/find/XSD/DB_TimHocSinhTheoLop.xsd"/>
+	</xsd:schema>
+  </types>
+  <message name="inputMsg">
+    <part name="part" element="ns:DB_TimHocSinhTheoLop_Request"/>
+  </message>
+  <message name="outputMsg">
+    <part name="part" element="ns:DB_TimHocSinhTheoLop_Response"/>
+  </message>
+  <portType name="jdbcPortType">
+    <operation name="newuntitled_Operation">
+      <input name="input" message="tns:inputMsg"/>
+      <output name="output" message="tns:outputMsg"/>
+    </operation>
+  </portType>
+  <binding name="binding" type="tns:jdbcPortType">
+    <jdbc:binding xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/"/>
+    <operation name="newuntitled_Operation">
+    <jdbc:operation xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/"/>
+      <input name="input">
+    <jdbc:input xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" MarkColumnName="" MarkColumnValue="" MoveRowToTableName="" PKName="" PollMilliSeconds="5000" PollingPostProcessing="MoveRow" TableName="DB_TimHocSinhTheoLop" Transaction="NOTransaction" numberOfRecords="" operationType="DB_TimHocSinhTheoLop_Operation" paramOrder="id_lop" sql="SELECT
+  lop.tenlop,
+  lop.sisolop,
+  hocsinh.id_hocsinh,
+  hocsinh.tenhocsinh,
+  hocsinh.ten,
+  hocsinh.masohocsinh,
+  hocsinh.gioitinh,
+  hocsinh.ngaysinh,
+  hocsinh.tongiao,
+  hocsinh.sonha,
+  hocsinh.ghichu,
+  hocsinh.hinhanh
+FROM
+  public.danhsachlop,
+  public.lop,
+  public.hocsinh
+WHERE
+  danhsachlop.id_lop = lop.id_lop AND
+  danhsachlop.id_hocsinh = hocsinh.id_hocsinh AND
+  hocsinh.bixoahaychua = false AND
+  danhsachlop.id_lop = ?
+ORDER BY hocsinh.ten ASC"/>
+      </input>
+      <output name="output">
+    <jdbc:output xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" returnPartName="part"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="service">
+    <port name="port" binding="tns:binding">
+    <jdbc:address xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" jndiName="jdbc/eschoolinkdb"/>
+    </port>
+  </service>
+    <plink:partnerLinkType xmlns:plink="http://docs.oasis-open.org/wsbpel/2.0/plnktype" name="jdbcpartner">
+        <plink:role name="jdbcPortTypeRole" portType="tns:jdbcPortType"/>
+    </plink:partnerLinkType>
+</definitions>
+

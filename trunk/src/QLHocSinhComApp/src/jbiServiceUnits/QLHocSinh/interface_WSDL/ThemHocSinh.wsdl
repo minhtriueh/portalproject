@@ -11,7 +11,9 @@
     <message name="ThemHocSinhOperationRequest">
         <part name="username" type="xsd:string"/>
         <part name="password" type="xsd:string"/>
-        <part name="tenHocSinh" type="xsd:string"/>
+        <part name="hoVaTenLot" type="xsd:string"/>
+        <part name="ten" type="xsd:string"/>
+        <part name="maso" type="xsd:string"/>
         <part name="ngaySinh" type="xsd:date"/>
         <part name="gioiTinh" type="xsd:string"/>
         <part name="diaChiNhaO" type="xsd:string"/>
