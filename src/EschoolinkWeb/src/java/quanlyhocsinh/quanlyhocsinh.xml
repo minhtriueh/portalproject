@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "struts-2.0.dtd">
+<struts>
+	<package name="karaoke.control.client.banThu"
+		extends="struts-default">
+		<action name="index"
+			class="quanlyhocsinh.IndexWellCome">
+			<result name="success">/index.jsp</result>
+		</action>
+                <action name=""
+			class="quanlyhocsinh.IndexWellCome">
+			<result name="success">/index.jsp</result>
+		</action>
+	</package>
+
+</struts>
