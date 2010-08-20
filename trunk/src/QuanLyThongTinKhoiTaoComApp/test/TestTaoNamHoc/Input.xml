@@ -1,0 +1,9 @@
+<soapenv:Envelope xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:quan="QuanLyThongTinKhoiTaoComApp">
+  <soapenv:Body>
+    <quan:TaoNamHocOperation>
+      <hocky>?100?</hocky>
+      <namsau>2010</namsau>
+      <namtruoc>2009</namtruoc>
+    </quan:TaoNamHocOperation>
+  </soapenv:Body>
+</soapenv:Envelope>

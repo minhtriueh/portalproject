@@ -9,10 +9,11 @@
              xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
              targetNamespace="QuanLyTruongLopComApp"
-             xmlns:tns="QuanLyTruongLopComApp" xmlns:ns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoCoSo" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoKhoiLop" xmlns:ns2="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoTruong">
+             xmlns:tns="QuanLyTruongLopComApp" xmlns:ns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoCoSo" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoKhoiLop" xmlns:ns2="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoTruong" xmlns:ns3="http://j2ee.netbeans.org/wsdl/QuanLyTruongLop/TaoLop">
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoCoSo" location="../jbiServiceUnits/QuanLyTruongLop/interface_WSDL/TaoTruongLop/TaoCoSo.wsdl"/>
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoKhoiLop" location="../jbiServiceUnits/QuanLyTruongLop/interface_WSDL/TaoTruongLop/TaoKhoiLop.wsdl"/>
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoTruong" location="../jbiServiceUnits/QuanLyTruongLop/interface_WSDL/TaoTruongLop/TaoTruong.wsdl"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyTruongLop/TaoLop" location="../jbiServiceUnits/QuanLyTruongLop/interface_WSDL/TaoLop.wsdl"/>
     <portType name="dummyCasaPortType"/>
     <binding name="casaBinding3" type="ns:TaoCoSoPortType">
         <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
@@ -50,6 +51,18 @@
             </output>
         </operation>
     </binding>
+    <binding name="casaBinding4" type="ns3:TaoLopPortType">
+        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="TaoLopOperation">
+            <soap:operation/>
+            <input name="input1">
+                <soap:body use="literal" namespace="QuanLyTruongLopComApp"/>
+            </input>
+            <output name="output1">
+                <soap:body use="literal" namespace="QuanLyTruongLopComApp"/>
+            </output>
+        </operation>
+    </binding>
     <service name="QuanLyTruongLopComAppService1">
         <port name="TaoTruong" binding="tns:casaBinding1">
             <soap:address location="http://localhost:${HttpDefaultPort}/QuanLyTruongLopComAppService1/TaoTruong"/>
@@ -65,5 +78,11 @@
             <soap:address location="http://localhost:${HttpDefaultPort}/QuanLyTruongLopComAppService3/TaoCoSo"/>
         </port>
     </service>
+    <service name="QuanLyTruongLopComAppService4">
+        <port name="TaoLop" binding="tns:casaBinding4">
+            <soap:address location="http://localhost:${HttpDefaultPort}/QuanLyTruongLopComAppService4/TaoLop"/>
+        </port>
+    </service>
 </definitions>
+
 
