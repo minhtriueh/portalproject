@@ -280,18 +280,7 @@
                             </sxed2:editor>
                         </to>
                     </copy>
-                    <copy>
-                        <from>$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]/ns0:tenthonxom
-                            <sxed2:editor>
-                                <sxed2:predicate path="$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]" source="from"/>
-                            </sxed2:editor>
-                        </from>
-                        <to>$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]/ns1:diaChiHienTai/ns1:ThonXom/ns1:tenThonXom
-                            <sxed2:editor>
-                                <sxed2:predicate path="$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]" source="to"/>
-                            </sxed2:editor>
-                        </to>
-                    </copy>
+                    
                     <copy>
                         <from>$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]/ns0:tentinh
                             <sxed2:editor>
@@ -304,18 +293,7 @@
                             </sxed2:editor>
                         </to>
                     </copy>
-                    <copy>
-                        <from>$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]/ns0:tenxaphuongthitran
-                            <sxed2:editor>
-                                <sxed2:predicate path="$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]" source="from"/>
-                            </sxed2:editor>
-                        </from>
-                        <to>$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]/ns1:diaChiHienTai/ns1:QuanHuyenThanhPho/ns1:XaPhuongThiTran/ns1:tenXaPhuongThiTran
-                            <sxed2:editor>
-                                <sxed2:predicate path="$TimHocSinhTheoKhoiLopOperationOut.result/ns1:HocSinh[$ForEach1Counter]" source="to"/>
-                            </sxed2:editor>
-                        </to>
-                    </copy>
+                    
                     <copy>
                         <from>$load_OperationOut.part/ns0:DB_TimHocSinhTheoKhoiLop_Record[$ForEach1Counter]/ns0:tenchedouutien
                             <sxed2:editor>

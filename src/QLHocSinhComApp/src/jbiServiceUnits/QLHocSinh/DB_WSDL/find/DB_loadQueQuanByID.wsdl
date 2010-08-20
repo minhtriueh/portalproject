@@ -22,22 +22,16 @@
     <operation name="newuntitled_Operation">
     <jdbc:operation xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/"/>
       <input name="input">
-    <jdbc:input xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" MarkColumnName="" MarkColumnValue="" MoveRowToTableName="" PKName="" PollMilliSeconds="5000" PollingPostProcessing="MoveRow" TableName="DB_loadQueQuanByID" Transaction="NOTransaction" numberOfRecords="" operationType="DB_loadQueQuanByID_Operation" paramOrder="idquequan" sql="SELECT
+    <jdbc:input xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" MarkColumnName="" MarkColumnValue="" MoveRowToTableName="" PKName="" PollMilliSeconds="5000" PollingPostProcessing="MoveRow" TableName="DB_loadQueQuanByID" Transaction="NOTransaction" numberOfRecords="" operationType="DB_loadQueQuanByID_Operation" paramOrder="id_quequan" sql="SELECT
   quequan.quequan,
   tinh.tentinh,
-  thonxom.tenthonxom,
-  xaphuongthitran.tenxaphuongthitran,
   quanhuyenthanhpho.tenquanhuyenthanhpho
 FROM
   public.quequan,
-  public.thonxom,
   public.tinh,
-  public.xaphuongthitran,
   public.quanhuyenthanhpho
 WHERE
   quequan.id_tinh = tinh.id_tinh AND
-  quequan.id_thonxom = thonxom.id_thonxom AND
-  quequan.id_xaphuongthitran = xaphuongthitran.id_xaphuongthitran AND
   quequan.id_quanhuyenthanhpho = quanhuyenthanhpho.id_quanhuyenthanhpho AND
   quequan.id_quequan = ?"/>
       </input>
@@ -55,6 +49,4 @@ WHERE
         <plink:role name="jdbcPortTypeRole" portType="tns:jdbcPortType"/>
     </plink:partnerLinkType>
 </definitions>
-
-
 

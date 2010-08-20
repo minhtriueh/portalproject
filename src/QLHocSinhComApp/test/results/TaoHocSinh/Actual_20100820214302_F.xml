@@ -4,7 +4,7 @@
     xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/">
   <SOAP-ENV:Body>
     <m:ThemHocSinhOperationResponse xmlns:m="QLHocSinhComApp" xmlns:msgns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/ThemHocSinh">
-      <result xmlns:msgns="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_ThemHocSinh" xmlns:ns0="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/ThemHocSinh" isNull="false">4</result>
+      <result xmlns:msgns="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_ThemHocSinh" xmlns:ns0="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/ThemHocSinh" isNull="false">81</result>
     </m:ThemHocSinhOperationResponse>
   </SOAP-ENV:Body>
 </SOAP-ENV:Envelope>

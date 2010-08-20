@@ -1,55 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
   <xsd:schema elementFormDefault="qualified" targetNamespace="http://j2ee.netbeans.org/xsd/tableSchema" xmlns="http://j2ee.netbeans.org/xsd/tableSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <xsd:element name="DB_loadQueQuanByID_Request">
+    <xsd:element name="DB_TimHocSinhTheoTen_count_Request">
       <xsd:complexType>
         <xsd:sequence>
-          <xsd:element name="id_quequan">
+          <xsd:element name="tenhocsinh">
+            <xsd:complexType>
+              <xsd:simpleContent>
+                <xsd:extension base="xsd:string">
+                  <xsd:attribute name="isNull" type="xsd:boolean"></xsd:attribute>
+                  <xsd:attribute name="isDefaultColumn" type="xsd:boolean"></xsd:attribute>
+                </xsd:extension>
+              </xsd:simpleContent>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="ten">
+            <xsd:complexType>
+              <xsd:simpleContent>
+                <xsd:extension base="xsd:string">
+                  <xsd:attribute name="isNull" type="xsd:boolean"></xsd:attribute>
+                  <xsd:attribute name="isDefaultColumn" type="xsd:boolean"></xsd:attribute>
+                </xsd:extension>
+              </xsd:simpleContent>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="DB_TimHocSinhTheoTen_count_Response">
+      <xsd:complexType>
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" ref="DB_TimHocSinhTheoTen_count_Record"></xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="DB_TimHocSinhTheoTen_count_Record">
+      <xsd:complexType>
+        <xsd:sequence>
+          <xsd:element name="count">
             <xsd:complexType>
               <xsd:simpleContent>
                 <xsd:extension base="xsd:long">
-                  <xsd:attribute name="isNull" type="xsd:boolean"></xsd:attribute>
-                  <xsd:attribute name="isDefaultColumn" type="xsd:boolean"></xsd:attribute>
-                </xsd:extension>
-              </xsd:simpleContent>
-            </xsd:complexType>
-          </xsd:element>
-        </xsd:sequence>
-      </xsd:complexType>
-    </xsd:element>
-    <xsd:element name="DB_loadQueQuanByID_Response">
-      <xsd:complexType>
-        <xsd:sequence>
-          <xsd:element maxOccurs="unbounded" ref="DB_loadQueQuanByID_Record"></xsd:element>
-        </xsd:sequence>
-      </xsd:complexType>
-    </xsd:element>
-    <xsd:element name="DB_loadQueQuanByID_Record">
-      <xsd:complexType>
-        <xsd:sequence>
-          <xsd:element name="quequan">
-            <xsd:complexType>
-              <xsd:simpleContent>
-                <xsd:extension base="xsd:string">
-                  <xsd:attribute name="isNull" type="xsd:boolean"></xsd:attribute>
-                  <xsd:attribute name="isDefaultColumn" type="xsd:boolean"></xsd:attribute>
-                </xsd:extension>
-              </xsd:simpleContent>
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="tentinh">
-            <xsd:complexType>
-              <xsd:simpleContent>
-                <xsd:extension base="xsd:string">
-                  <xsd:attribute name="isNull" type="xsd:boolean"></xsd:attribute>
-                  <xsd:attribute name="isDefaultColumn" type="xsd:boolean"></xsd:attribute>
-                </xsd:extension>
-              </xsd:simpleContent>
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="tenquanhuyenthanhpho">
-            <xsd:complexType>
-              <xsd:simpleContent>
-                <xsd:extension base="xsd:string">
                   <xsd:attribute name="isNull" type="xsd:boolean"></xsd:attribute>
                   <xsd:attribute name="isDefaultColumn" type="xsd:boolean"></xsd:attribute>
                 </xsd:extension>

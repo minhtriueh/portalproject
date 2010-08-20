@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions name="DB_TaoThanhPhanGiaDinh" targetNamespace="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_TaoThanhPhanGiaDinh" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:ns="http://j2ee.netbeans.org/xsd/tableSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_TaoThanhPhanGiaDinh" xmlns:plink="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/">
+<definitions name="DB_ChuyenLop" targetNamespace="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_ChuyenLop" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:ns="http://j2ee.netbeans.org/xsd/tableSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_ChuyenLop" xmlns:plink="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/">
   <types>
     <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/">
-            <xsd:import namespace="http://j2ee.netbeans.org/xsd/tableSchema" schemaLocation="../../DB_WSDL/insert/XSD/DB_TaoThanhPhanGiaDinh.xsd"/>
+            <xsd:import namespace="http://j2ee.netbeans.org/xsd/tableSchema" schemaLocation="../../DB_WSDL/update/XSD/DB_ChuyenLop.xsd"/>
 	</xsd:schema>
   </types>
-  <message name="outputMsg">
-    <part name="part" element="ns:create_thanhphangiadinh_Response"/>
-  </message>
   <message name="inputMsg">
-    <part name="part" element="ns:create_thanhphangiadinh_Request"/>
+    <part name="part" element="ns:chuyenlop_Request"/>
+  </message>
+  <message name="outputMsg">
+    <part name="part" element="ns:chuyenlop_Response"/>
   </message>
   <portType name="jdbcPortType">
     <operation name="execute">
@@ -22,7 +22,7 @@
     <operation name="execute">
     <jdbc:operation xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/"/>
       <input name="inputExecute">
-    <jdbc:spinput xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" ExecutionString="{ ? = call create_thanhphangiadinh(?,?,?,?,?) }" ProcedureName="create_thanhphangiadinh" Transaction="NOTransaction"/>
+    <jdbc:spinput xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" ExecutionString="{ ? = call chuyenlop(?,?,?) }" ProcedureName="chuyenlop" Transaction="NOTransaction"/>
       </input>
       <output name="outputExecute">
     <jdbc:spoutput xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" returnPartName="part"/>
@@ -38,4 +38,5 @@
         <plink:role name="jdbcPortTypeRole" portType="tns:jdbcPortType"/>
     </plink:partnerLinkType>
 </definitions>
+
 
