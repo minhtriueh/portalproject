@@ -633,3 +633,19 @@ $BODY$
   LANGUAGE 'sql' VOLATILE
   COST 100;
 ALTER FUNCTION themdanhsachloaidiem(bigint, integer) OWNER TO postgres;
+
+
+-- Function: taonamhocmoi(bigint)
+
+-- DROP FUNCTION taonamhocmoi(bigint);
+
+CREATE OR REPLACE FUNCTION taonamhocmoi(id_namhoc bigint)
+  RETURNS bigint AS
+$BODY$DELETE FROM namhocmoi;
+
+INSERT INTO namhocmoi(id_namhoc) 
+VALUES ($1) returning id_namhocmoi;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION taonamhocmoi(bigint) OWNER TO postgres;
