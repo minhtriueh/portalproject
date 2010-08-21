@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP-ENV:Body>
+    <m:LoadSoDiemOperationResponse xmlns:m="QLDiemComApp" xmlns:msgns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LoadSoDiem">
+      <listChiTietSoDiem>
+        <ns1:ChiTietSoDiem xmlns:ns1="http://xml.netbeans.org/schema/LoaiDiem">
+          <ns1:id_chitietsodiem isNull="false">2</ns1:id_chitietsodiem>
+          <ns1:diemtrungbinh isNull="false">7.5</ns1:diemtrungbinh>
+          <ns1:id_lop isNull="false">1</ns1:id_lop>
+          <ns1:id_hocsinh isNull="false">1</ns1:id_hocsinh>
+          <ns1:id_sodiem isNull="false">1</ns1:id_sodiem>
+        </ns1:ChiTietSoDiem>
+        <ns1:ChiTietSoDiem xmlns:ns1="http://xml.netbeans.org/schema/LoaiDiem">
+          <ns1:id_chitietsodiem isNull="false">3</ns1:id_chitietsodiem>
+          <ns1:diemtrungbinh isNull="false">0</ns1:diemtrungbinh>
+          <ns1:id_lop isNull="false">1</ns1:id_lop>
+          <ns1:id_hocsinh isNull="false">2</ns1:id_hocsinh>
+          <ns1:id_sodiem isNull="false">1</ns1:id_sodiem>
+        </ns1:ChiTietSoDiem>
+        <ns1:ChiTietSoDiem xmlns:ns1="http://xml.netbeans.org/schema/LoaiDiem">
+          <ns1:id_chitietsodiem isNull="false">4</ns1:id_chitietsodiem>
+          <ns1:diemtrungbinh isNull="false">0</ns1:diemtrungbinh>
+          <ns1:id_lop isNull="false">1</ns1:id_lop>
+          <ns1:id_hocsinh isNull="false">3</ns1:id_hocsinh>
+          <ns1:id_sodiem isNull="false">1</ns1:id_sodiem>
+        </ns1:ChiTietSoDiem>
+        <ns1:ChiTietSoDiem xmlns:ns1="http://xml.netbeans.org/schema/LoaiDiem">
+          <ns1:id_chitietsodiem isNull="false">5</ns1:id_chitietsodiem>
+          <ns1:diemtrungbinh isNull="false">0</ns1:diemtrungbinh>
+          <ns1:id_lop isNull="false">1</ns1:id_lop>
+          <ns1:id_hocsinh isNull="false">4</ns1:id_hocsinh>
+          <ns1:id_sodiem isNull="false">1</ns1:id_sodiem>
+        </ns1:ChiTietSoDiem>
+        <ns1:ChiTietSoDiem xmlns:ns1="http://xml.netbeans.org/schema/LoaiDiem">
+          <ns1:id_chitietsodiem isNull="false">6</ns1:id_chitietsodiem>
+          <ns1:diemtrungbinh isNull="false">0</ns1:diemtrungbinh>
+          <ns1:id_lop isNull="false">1</ns1:id_lop>
+          <ns1:id_hocsinh isNull="false">5</ns1:id_hocsinh>
+          <ns1:id_sodiem isNull="false">1</ns1:id_sodiem>
+        </ns1:ChiTietSoDiem>
+      </listChiTietSoDiem>
+    </m:LoadSoDiemOperationResponse>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
