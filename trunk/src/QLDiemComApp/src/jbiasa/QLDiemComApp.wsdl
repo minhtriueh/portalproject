@@ -9,7 +9,7 @@
              xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
              targetNamespace="QLDiemComApp"
-             xmlns:tns="QLDiemComApp" xmlns:ns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/ThemDanhSachLoaiDiem" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoSoDiem" xmlns:ns2="http://j2ee.netbeans.org/wsdl/QuanLyDiem/NhapDiem" xmlns:ns3="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LuuDiemHocBa" xmlns:ns4="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoLoaiDiem" xmlns:ns5="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TinhDiemTrungBinh" xmlns:ns6="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TongKetDiem" xmlns:ns7="http://j2ee.netbeans.org/wsdl/QuanLyDiem/XemDiem" xmlns:ns8="http://j2ee.netbeans.org/wsdl/QuanLyThiDuaLenLop/XetLenLop" xmlns:ns9="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoNamHocMoi">
+             xmlns:tns="QLDiemComApp" xmlns:ns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/ThemDanhSachLoaiDiem" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoSoDiem" xmlns:ns2="http://j2ee.netbeans.org/wsdl/QuanLyDiem/NhapDiem" xmlns:ns3="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LuuDiemHocBa" xmlns:ns4="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoLoaiDiem" xmlns:ns5="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TinhDiemTrungBinh" xmlns:ns6="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TongKetDiem" xmlns:ns7="http://j2ee.netbeans.org/wsdl/QuanLyDiem/XemDiem" xmlns:ns8="http://j2ee.netbeans.org/wsdl/QuanLyThiDuaLenLop/XetLenLop" xmlns:ns9="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoNamHocMoi" xmlns:ns10="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayIdNamHocMoiNhat">
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/ThemDanhSachLoaiDiem" location="../jbiServiceUnits/QuanLyDiem/interface_WSDL/ThemDanhSachLoaiDiem.wsdl"/>
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoSoDiem" location="../jbiServiceUnits/QuanLyDiem/interface_WSDL/TaoSoDiem.wsdl"/>
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/NhapDiem" location="../jbiServiceUnits/QuanLyDiem/interface_WSDL/NhapDiem.wsdl"/>
@@ -20,6 +20,7 @@
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/XemDiem" location="../jbiServiceUnits/QuanLyDiem/interface_WSDL/XemDiem.wsdl"/>
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyThiDuaLenLop/XetLenLop" location="../jbiServiceUnits/QuanLyDiem/interface_WSDL/XetLenLop.wsdl"/>
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoNamHocMoi" location="../jbiServiceUnits/QuanLyDiem/interface_WSDL/TaoNamHocMoi.wsdl"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayIdNamHocMoiNhat" location="../jbiServiceUnits/QuanLyDiem/interface_WSDL/LayIdNamHocMoiNhat.wsdl"/>
     <portType name="dummyCasaPortType"/>
     <binding name="casaBinding1" type="tns:dummyCasaPortType"/>
     <binding name="casaBinding2" type="tns:dummyCasaPortType"/>
@@ -151,6 +152,18 @@
             </output>
         </operation>
     </binding>
+    <binding name="casaBinding21" type="ns10:LayIdNamHocMoiNhatPortType">
+        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="LayIdNamHocMoiNhatOperation">
+            <soap:operation/>
+            <input name="input1">
+                <soap:body use="literal" namespace="QLDiemComApp"/>
+            </input>
+            <output name="output1">
+                <soap:body use="literal" namespace="QLDiemComApp"/>
+            </output>
+        </operation>
+    </binding>
     <service name="QLDiemComAppService1">
         <port name="casaPort1" binding="tns:casaBinding1"/>
     </service>
@@ -231,7 +244,13 @@
             <soap:address location="http://localhost:18001/QLDiemComApp/TaoNamHocMoi"/>
         </port>
     </service>
+    <service name="QLDiemComAppService21">
+        <port name="LayIdNamHocMoiNhat" binding="tns:casaBinding21">
+            <soap:address location="http://localhost:18001/QLDiemComApp/LayIdNamHocMoiNhat"/>
+        </port>
+    </service>
 </definitions>
+
 
 
 
