@@ -8,7 +8,9 @@
   <message name="outputMsg">
     <part name="part" element="ns:DB_LayIdNamHocMoiNhat_Response"/>
   </message>
-  <message name="inputMsg"></message>
+  <message name="inputMsg">
+    <part name="part" element="ns:DB_LayIdNamHocMoiNhat_Request"/>
+  </message>
   <portType name="jdbcPortType">
     <operation name="newuntitled_Operation">
       <input name="input" message="tns:inputMsg"/>
@@ -36,4 +38,3 @@
         <plink:role name="jdbcPortTypeRole" portType="tns:jdbcPortType"/>
     </plink:partnerLinkType>
 </definitions>
-
