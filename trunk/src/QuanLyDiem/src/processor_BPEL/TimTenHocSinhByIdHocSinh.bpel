@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process
+    name="TimTenHocSinhByIdHocSinh"
+    targetNamespace="http://enterprise.netbeans.org/bpel/QuanLyDiem/TimTenHocSinhByIdHocSinh"
+    xmlns:tns="http://enterprise.netbeans.org/bpel/QuanLyDiem/TimTenHocSinhByIdHocSinh"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
+    xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor"
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2" xmlns:ns0="http://j2ee.netbeans.org/xsd/tableSchema">
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TimTenHocSinhByIdHocSinh" location="../interface_WSDL/TimTenHocSinhByIdHocSinh.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TimTenHocSinhByIdHocSinh" location="../DB_WSDL/DB_TimTenHocSinhByIdHocSinh.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <partnerLinks>
+        <partnerLink name="PL_DB_TimTenHocSinhByIdHocSinh" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TimTenHocSinhByIdHocSinh" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="PL_TimTenHocSinhByIdHocSinh" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TimTenHocSinhByIdHocSinh" partnerLinkType="tns:TimTenHocSinhByIdHocSinh" myRole="TimTenHocSinhByIdHocSinhPortTypeRole"/>
+    </partnerLinks>
+    <variables>
+        <variable name="TimTenHocSinhByIdHocSinhOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TimTenHocSinhByIdHocSinh" messageType="tns:outputMsg"/>
+        <variable name="TimTenHocSinhByIdHocSinhIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TimTenHocSinhByIdHocSinh" messageType="tns:inputMsg"/>
+        <variable name="TimTenHocSinhByIdHocSinhOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TimTenHocSinhByIdHocSinh" messageType="tns:TimTenHocSinhByIdHocSinhOperationResponse"/>
+        <variable name="TimTenHocSinhByIdHocSinhOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TimTenHocSinhByIdHocSinh" messageType="tns:TimTenHocSinhByIdHocSinhOperationRequest"/>
+    </variables>
+    <sequence>
+        <receive name="Receive1" createInstance="yes" partnerLink="PL_TimTenHocSinhByIdHocSinh" operation="TimTenHocSinhByIdHocSinhOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TimTenHocSinhByIdHocSinh" portType="tns:TimTenHocSinhByIdHocSinhPortType" variable="TimTenHocSinhByIdHocSinhOperationIn"/>
+        <assign name="Assign1">
+            <copy>
+                <from variable="TimTenHocSinhByIdHocSinhOperationIn" part="id_hocsinh"/>
+                <to>$TimTenHocSinhByIdHocSinhIn.part/ns0:id_hocsinh</to>
+            </copy>
+        </assign>
+        <invoke name="Invoke1" partnerLink="PL_DB_TimTenHocSinhByIdHocSinh" operation="newuntitled_Operation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TimTenHocSinhByIdHocSinh" portType="tns:jdbcPortType" inputVariable="TimTenHocSinhByIdHocSinhIn" outputVariable="TimTenHocSinhByIdHocSinhOut"/>
+        <assign name="Assign2">
+            <copy>
+                <from>$TimTenHocSinhByIdHocSinhOut.part/ns0:DB_TimTenHocSinhByIdHocSinh_Record/ns0:tenhocsinh</from>
+                <to variable="TimTenHocSinhByIdHocSinhOperationOut" part="tenhocsinh"/>
+            </copy>
+        </assign>
+        <reply name="Reply1" partnerLink="PL_TimTenHocSinhByIdHocSinh" operation="TimTenHocSinhByIdHocSinhOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TimTenHocSinhByIdHocSinh" portType="tns:TimTenHocSinhByIdHocSinhPortType" variable="TimTenHocSinhByIdHocSinhOperationOut"/>
+    </sequence>
+</process>
+
