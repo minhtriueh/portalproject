@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process
+    name="LayDanhSachCotDiem"
+    targetNamespace="http://enterprise.netbeans.org/bpel/QuanLyDiem/LayDanhSachCotDiem"
+    xmlns:tns="http://enterprise.netbeans.org/bpel/QuanLyDiem/LayDanhSachCotDiem"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
+    xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor"
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2" xmlns:ns0="http://j2ee.netbeans.org/xsd/tableSchema" xmlns:ns1="http://xml.netbeans.org/schema/LoaiDiem">
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachCotDiem" location="../interface_WSDL/LayDanhSachCotDiem.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachCotDiem" location="../DB_WSDL/DB_LayDanhSachCotDiem.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <partnerLinks>
+        <partnerLink name="PL_DB_LayDanhSachCotDiem" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachCotDiem" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="PL_LayDanhSachCotDiem" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachCotDiem" partnerLinkType="tns:LayDanhSachCotDiem" myRole="LayDanhSachCotDiemPortTypeRole"/>
+    </partnerLinks>
+    <variables>
+        <variable name="LayDanhSachCotDiemOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachCotDiem" messageType="tns:outputMsg">
+            <sxed2:editor>
+                <sxed2:predicate path="$LayDanhSachCotDiemOut.part/ns0:DB_LayDanhSachCotDiem_Record[$ForEach1Counter]" source="from"/>
+            </sxed2:editor>
+        </variable>
+        <variable name="LayDanhSachCotDiemIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachCotDiem" messageType="tns:inputMsg"/>
+        <variable name="LayDanhSachCotDiemOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachCotDiem" messageType="tns:LayDanhSachCotDiemOperationResponse">
+            <sxed2:editor>
+                <sxed2:predicate path="$LayDanhSachCotDiemOperationOut.listCotDiem/ns1:CotDiem[$ForEach1Counter]" source="to"/>
+            </sxed2:editor>
+        </variable>
+        <variable name="LayDanhSachCotDiemOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachCotDiem" messageType="tns:LayDanhSachCotDiemOperationRequest"/>
+    </variables>
+    <sequence>
+        <receive name="Receive1" createInstance="yes" partnerLink="PL_LayDanhSachCotDiem" operation="LayDanhSachCotDiemOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachCotDiem" portType="tns:LayDanhSachCotDiemPortType" variable="LayDanhSachCotDiemOperationIn"/>
+        <invoke name="Invoke1" partnerLink="PL_DB_LayDanhSachCotDiem" operation="newuntitled_Operation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachCotDiem" portType="tns:jdbcPortType" inputVariable="LayDanhSachCotDiemIn" outputVariable="LayDanhSachCotDiemOut"/>
+        <forEach name="ForEach1" parallel="no" counterName="ForEach1Counter">
+            <startCounterValue>1</startCounterValue>
+            <finalCounterValue>count($LayDanhSachCotDiemOut.part/ns0:DB_LayDanhSachCotDiem_Record)</finalCounterValue>
+            <scope name="Scope1">
+                <assign name="Assign1">
+                    <copy>
+                        <from>$LayDanhSachCotDiemOut.part/ns0:DB_LayDanhSachCotDiem_Record[$ForEach1Counter]/ns0:kyhieu
+                            <sxed2:editor>
+                                <sxed2:predicate path="$LayDanhSachCotDiemOut.part/ns0:DB_LayDanhSachCotDiem_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$LayDanhSachCotDiemOperationOut.listCotDiem/ns1:CotDiem[$ForEach1Counter]/ns1:kyhieu
+                            <sxed2:editor>
+                                <sxed2:predicate path="$LayDanhSachCotDiemOperationOut.listCotDiem/ns1:CotDiem[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$LayDanhSachCotDiemOut.part/ns0:DB_LayDanhSachCotDiem_Record[$ForEach1Counter]/ns0:lan
+                            <sxed2:editor>
+                                <sxed2:predicate path="$LayDanhSachCotDiemOut.part/ns0:DB_LayDanhSachCotDiem_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$LayDanhSachCotDiemOperationOut.listCotDiem/ns1:CotDiem[$ForEach1Counter]/ns1:lan
+                            <sxed2:editor>
+                                <sxed2:predicate path="$LayDanhSachCotDiemOperationOut.listCotDiem/ns1:CotDiem[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                </assign>
+            </scope>
+        </forEach>
+        <reply name="Reply1" partnerLink="PL_LayDanhSachCotDiem" operation="LayDanhSachCotDiemOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachCotDiem" portType="tns:LayDanhSachCotDiemPortType" variable="LayDanhSachCotDiemOperationOut"/>
+    </sequence>
+</process>
+
+
