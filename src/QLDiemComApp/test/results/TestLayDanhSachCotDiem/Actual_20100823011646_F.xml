@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP-ENV:Body>
+    <m:LayDanhSachCotDiemOperationResponse xmlns:m="QLDiemComApp" xmlns:msgns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachCotDiem">
+      <listCotDiem>
+        <ns1:CotDiem xmlns:ns1="http://xml.netbeans.org/schema/LoaiDiem">
+          <ns1:kyhieu isNull="false">M</ns1:kyhieu>
+          <ns1:lan isNull="false">1</ns1:lan>
+        </ns1:CotDiem>
+        <ns1:CotDiem xmlns:ns1="http://xml.netbeans.org/schema/LoaiDiem">
+          <ns1:kyhieu isNull="false">M</ns1:kyhieu>
+          <ns1:lan isNull="false">2</ns1:lan>
+        </ns1:CotDiem>
+        <ns1:CotDiem xmlns:ns1="http://xml.netbeans.org/schema/LoaiDiem">
+          <ns1:kyhieu isNull="false">M</ns1:kyhieu>
+          <ns1:lan isNull="false">3</ns1:lan>
+        </ns1:CotDiem>
+        <ns1:CotDiem xmlns:ns1="http://xml.netbeans.org/schema/LoaiDiem">
+          <ns1:kyhieu isNull="false">M</ns1:kyhieu>
+          <ns1:lan isNull="false">4</ns1:lan>
+        </ns1:CotDiem>
+        <ns1:CotDiem xmlns:ns1="http://xml.netbeans.org/schema/LoaiDiem">
+          <ns1:kyhieu isNull="false">15P</ns1:kyhieu>
+          <ns1:lan isNull="false">1</ns1:lan>
+        </ns1:CotDiem>
+        <ns1:CotDiem xmlns:ns1="http://xml.netbeans.org/schema/LoaiDiem">
+          <ns1:kyhieu isNull="false">15P</ns1:kyhieu>
+          <ns1:lan isNull="false">2</ns1:lan>
+        </ns1:CotDiem>
+        <ns1:CotDiem xmlns:ns1="http://xml.netbeans.org/schema/LoaiDiem">
+          <ns1:kyhieu isNull="false">15P</ns1:kyhieu>
+          <ns1:lan isNull="false">3</ns1:lan>
+        </ns1:CotDiem>
+        <ns1:CotDiem xmlns:ns1="http://xml.netbeans.org/schema/LoaiDiem">
+          <ns1:kyhieu isNull="false">1T</ns1:kyhieu>
+          <ns1:lan isNull="false">1</ns1:lan>
+        </ns1:CotDiem>
+        <ns1:CotDiem xmlns:ns1="http://xml.netbeans.org/schema/LoaiDiem">
+          <ns1:kyhieu isNull="false">1T</ns1:kyhieu>
+          <ns1:lan isNull="false">2</ns1:lan>
+        </ns1:CotDiem>
+        <ns1:CotDiem xmlns:ns1="http://xml.netbeans.org/schema/LoaiDiem">
+          <ns1:kyhieu isNull="false">1T</ns1:kyhieu>
+          <ns1:lan isNull="false">3</ns1:lan>
+        </ns1:CotDiem>
+        <ns1:CotDiem xmlns:ns1="http://xml.netbeans.org/schema/LoaiDiem">
+          <ns1:kyhieu isNull="false">1T</ns1:kyhieu>
+          <ns1:lan isNull="false">4</ns1:lan>
+        </ns1:CotDiem>
+        <ns1:CotDiem xmlns:ns1="http://xml.netbeans.org/schema/LoaiDiem">
+          <ns1:kyhieu isNull="false">1T</ns1:kyhieu>
+          <ns1:lan isNull="false">5</ns1:lan>
+        </ns1:CotDiem>
+        <ns1:CotDiem xmlns:ns1="http://xml.netbeans.org/schema/LoaiDiem">
+          <ns1:kyhieu isNull="false">T</ns1:kyhieu>
+          <ns1:lan isNull="false">1</ns1:lan>
+        </ns1:CotDiem>
+      </listCotDiem>
+    </m:LayDanhSachCotDiemOperationResponse>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
