@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="1" hostname="nguyentanmo-PC" name="org.netbeans.modules.compapp.catd.ConfiguredTest" tests="1" time="1.542" timestamp="2010-08-22T18:16:45">
+<testsuite errors="0" failures="1" hostname="nguyentanmo-PC" name="org.netbeans.modules.compapp.catd.ConfiguredTest" tests="1" time="0.542" timestamp="2010-08-22T20:07:26">
   <properties>
     <property name="libs.struts2lib-2-0-11-basic.maven-pom" value="" />
     <property name="netbeans.autoupdate.country" value="VN" />
@@ -358,8 +358,8 @@
     <property name="file.encoding" value="Cp1258" />
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
   </properties>
-  <testcase classname="org.netbeans.modules.compapp.catd.ConfiguredTest" name="TestLayDanhSachCotDiem" time="1.521">
-    <failure message="[23-08-2010 01:16:46] The response is not identical to the expected output." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: [23-08-2010 01:16:46] The response is not identical to the expected output.
+  <testcase classname="org.netbeans.modules.compapp.catd.ConfiguredTest" name="TestLayDanhSachDiemCuaChiTietSoDiem" time="0.511">
+    <failure message="[23-08-2010 03:07:27] The response is not identical to the expected output." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: [23-08-2010 03:07:27] The response is not identical to the expected output.
 	at org.netbeans.modules.compapp.catd.ConfiguredTest.checkExpectedOutput(ConfiguredTest.java:2348)
 	at org.netbeans.modules.compapp.catd.ConfiguredTest.checkExpectedOutput(ConfiguredTest.java:2218)
 	at org.netbeans.modules.compapp.catd.ConfiguredTest.testConcurrentSOAPRequest(ConfiguredTest.java:862)
@@ -422,12 +422,7 @@ user.language=vi
 user.name=nguyentanmo
 user.timezone=Asia/Bangkok
 user.variant=
-Test TestLayDanhSachCotDiem\Concurrent.properties
-  * Difference (Delete): SOAP-ENV:Fault
-  * Difference (Add): m:LayDanhSachCotDiemOperationResponse
- Failed. (Destination: http://localhost:18001/QLDiemComApp/LayDanhSachCotDiem)
+Test TestLayDanhSachDiemCuaChiTietSoDiem\Concurrent.properties Failed. (Destination: http://localhost:18001/QLDiemComApp/LayDanhSachDiemCuaChiTietSoDiem)
 ]]></system-out>
-  <system-err><![CDATA[23-08-2010 01:16:46 org.netbeans.modules.csl.core.LanguageRegistry readSfs
-INFO: No CslPlugins folder
-]]></system-err>
+  <system-err><![CDATA[]]></system-err>
 </testsuite>

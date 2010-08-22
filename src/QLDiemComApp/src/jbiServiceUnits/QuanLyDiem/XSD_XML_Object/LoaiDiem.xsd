@@ -18,6 +18,8 @@
     <xsd:element name="ListChiTietSoDiem" type="tns:ListChiTietSoDiem"/>
     <xsd:element name="CotDiem" type="tns:CotDiem"/>
     <xsd:element name="ListCotDiem" type="tns:ListCotDiem"/>
+    <xsd:element name="ChiTietDiem" type="tns:ChiTietDiem"/>
+    <xsd:element name="ListChiTietDiem" type="tns:ListChiTietDiem"/>
     
     <xsd:complexType name="Diem">
         <xsd:sequence>
@@ -99,6 +101,20 @@
      <xsd:complexType name="ListCotDiem">
         <xsd:sequence>
             <xsd:element ref="tns:CotDiem" maxOccurs="unbounded" minOccurs="0"></xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="ChiTietDiem">
+        <xsd:sequence>
+            <xsd:element name="id_chitietsodiem" type="xsd:string"></xsd:element>
+            <xsd:element name="sothutu" type="xsd:integer"></xsd:element>
+            <xsd:element name="hovaten" type="xsd:string"></xsd:element>
+            <xsd:element name="diemtrungbinh" type="xsd:double"></xsd:element>
+            <xsd:element ref="tns:Diem" maxOccurs="unbounded" minOccurs="0"></xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="ListChiTietDiem">
+        <xsd:sequence>
+            <xsd:element ref="tns:ChiTietDiem" maxOccurs="unbounded" minOccurs="0"></xsd:element>
         </xsd:sequence>
     </xsd:complexType>
 </xsd:schema>
