@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<casa xmlns="http://java.sun.com/xml/ns/casa" xmlns:ns1="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_SuaDiemTrungBinh" xmlns:ns10="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachLoaiDiem" xmlns:ns11="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachHocSinhTuIdLop" xmlns:ns12="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_ThemDanhSachLoaiDiem" xmlns:ns13="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TaoSoDiem" xmlns:ns14="QLDiemComApp" xmlns:ns15="http://j2ee.netbeans.org/wsdl/QuanLyDiem/ThemDanhSachLoaiDiem" xmlns:ns16="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoSoDiem" xmlns:ns17="http://j2ee.netbeans.org/wsdl/QuanLyDiem/NhapDiem" xmlns:ns18="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LuuDiemHocBa" xmlns:ns19="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoLoaiDiem" xmlns:ns2="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_SuaDiem" xmlns:ns20="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TinhDiemTrungBinh" xmlns:ns21="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TongKetDiem" xmlns:ns22="http://j2ee.netbeans.org/wsdl/QuanLyDiem/XemDiem" xmlns:ns23="http://j2ee.netbeans.org/wsdl/QuanLyThiDuaLenLop/XetLenLop" xmlns:ns24="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DBTaoNamHocMoi" xmlns:ns25="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoNamHocMoi" xmlns:ns26="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayIdNamHocMoiNhat" xmlns:ns27="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayIdNamHocMoiNhat" xmlns:ns28="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachMonHocCuaGiaoVien" xmlns:ns29="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachMonHocCuaGiaoVien" xmlns:ns3="http://j2ee.netbeans.org/wsdl/QuanLyThiDuaLenLop/DB_XetLenLop" xmlns:ns30="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachLopGiaoVienDay" xmlns:ns31="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachLopGiaoVienDay" xmlns:ns32="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LoadSoDiem" xmlns:ns33="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LoadSoDiem" xmlns:ns34="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TimIdMonHocByTenMonHoc" xmlns:ns35="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TimIdMonHocByTenMonHoc" xmlns:ns36="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TimIdLopByTenLop" xmlns:ns37="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TimIdLopByTenLop" xmlns:ns38="http://enterprise.netbeans.org/bpel/QuanLyDiem/LayDanhSachLopGiaoVienDay" xmlns:ns39="http://enterprise.netbeans.org/bpel/QuanLyDiem/LayDanhSachMonHocCuaGiaoVien" xmlns:ns4="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_DanhSachDiemTrungBinh" xmlns:ns40="http://enterprise.netbeans.org/bpel/QuanLyDiem/LayIdNamHocMoiNhat" xmlns:ns41="http://enterprise.netbeans.org/bpel/QuanLyDiem/LoadSoDiem" xmlns:ns42="http://enterprise.netbeans.org/bpel/QuanLyDiem/LuuDiemHocBa" xmlns:ns43="http://enterprise.netbeans.org/bpel/QuanLyDiem/NhapDiem" xmlns:ns44="http://enterprise.netbeans.org/bpel/QuanLyDiem/TaoLoaiDiem" xmlns:ns45="http://enterprise.netbeans.org/bpel/QuanLyDiem/TaoNamHocMoi" xmlns:ns46="http://enterprise.netbeans.org/bpel/QuanLyDiem/TaoSoDiem" xmlns:ns47="http://enterprise.netbeans.org/bpel/QuanLyDiem/ThemDanhSachLoaiDiem" xmlns:ns48="http://enterprise.netbeans.org/bpel/QuanLyDiem/TimIdLopByTenLop" xmlns:ns49="http://enterprise.netbeans.org/bpel/QuanLyDiem/TimIdMonHocByTenMonHoc" xmlns:ns5="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TaoLoaiDiem" xmlns:ns50="http://enterprise.netbeans.org/bpel/QuanLyDiem/TinhDiemTrungBinh" xmlns:ns51="http://enterprise.netbeans.org/bpel/QuanLyDiem/TongKetDiem" xmlns:ns52="http://enterprise.netbeans.org/bpel/QuanLyDiem/XemDiem" xmlns:ns53="http://enterprise.netbeans.org/bpel/QuanLyThiDuaLenLop/XetLenLop" xmlns:ns6="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LuuDiemHocBa" xmlns:ns7="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TaoChiTietSoDiem" xmlns:ns8="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachDiemCuaHocSinh" xmlns:ns9="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TaoDiem" xmlns:xlink="http://www.w3.org/2000/xlink">
+<casa xmlns="http://java.sun.com/xml/ns/casa" xmlns:ns1="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_SuaDiemTrungBinh" xmlns:ns10="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachLoaiDiem" xmlns:ns11="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachHocSinhTuIdLop" xmlns:ns12="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_ThemDanhSachLoaiDiem" xmlns:ns13="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TaoSoDiem" xmlns:ns14="QLDiemComApp" xmlns:ns15="http://j2ee.netbeans.org/wsdl/QuanLyDiem/ThemDanhSachLoaiDiem" xmlns:ns16="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoSoDiem" xmlns:ns17="http://j2ee.netbeans.org/wsdl/QuanLyDiem/NhapDiem" xmlns:ns18="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LuuDiemHocBa" xmlns:ns19="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoLoaiDiem" xmlns:ns2="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_SuaDiem" xmlns:ns20="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TinhDiemTrungBinh" xmlns:ns21="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TongKetDiem" xmlns:ns22="http://j2ee.netbeans.org/wsdl/QuanLyDiem/XemDiem" xmlns:ns23="http://j2ee.netbeans.org/wsdl/QuanLyThiDuaLenLop/XetLenLop" xmlns:ns24="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DBTaoNamHocMoi" xmlns:ns25="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoNamHocMoi" xmlns:ns26="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayIdNamHocMoiNhat" xmlns:ns27="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayIdNamHocMoiNhat" xmlns:ns28="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachMonHocCuaGiaoVien" xmlns:ns29="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachMonHocCuaGiaoVien" xmlns:ns3="http://j2ee.netbeans.org/wsdl/QuanLyThiDuaLenLop/DB_XetLenLop" xmlns:ns30="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachLopGiaoVienDay" xmlns:ns31="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachLopGiaoVienDay" xmlns:ns32="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LoadSoDiem" xmlns:ns33="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LoadSoDiem" xmlns:ns34="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TimIdMonHocByTenMonHoc" xmlns:ns35="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TimIdMonHocByTenMonHoc" xmlns:ns36="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TimIdLopByTenLop" xmlns:ns37="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TimIdLopByTenLop" xmlns:ns38="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachCotDiem" xmlns:ns39="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachCotDiem" xmlns:ns4="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_DanhSachDiemTrungBinh" xmlns:ns40="http://enterprise.netbeans.org/bpel/QuanLyDiem/LayDanhSachCotDiem" xmlns:ns41="http://enterprise.netbeans.org/bpel/QuanLyDiem/LayDanhSachLopGiaoVienDay" xmlns:ns42="http://enterprise.netbeans.org/bpel/QuanLyDiem/LayDanhSachMonHocCuaGiaoVien" xmlns:ns43="http://enterprise.netbeans.org/bpel/QuanLyDiem/LayIdNamHocMoiNhat" xmlns:ns44="http://enterprise.netbeans.org/bpel/QuanLyDiem/LoadSoDiem" xmlns:ns45="http://enterprise.netbeans.org/bpel/QuanLyDiem/LuuDiemHocBa" xmlns:ns46="http://enterprise.netbeans.org/bpel/QuanLyDiem/NhapDiem" xmlns:ns47="http://enterprise.netbeans.org/bpel/QuanLyDiem/TaoLoaiDiem" xmlns:ns48="http://enterprise.netbeans.org/bpel/QuanLyDiem/TaoNamHocMoi" xmlns:ns49="http://enterprise.netbeans.org/bpel/QuanLyDiem/TaoSoDiem" xmlns:ns5="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TaoLoaiDiem" xmlns:ns50="http://enterprise.netbeans.org/bpel/QuanLyDiem/ThemDanhSachLoaiDiem" xmlns:ns51="http://enterprise.netbeans.org/bpel/QuanLyDiem/TimIdLopByTenLop" xmlns:ns52="http://enterprise.netbeans.org/bpel/QuanLyDiem/TimIdMonHocByTenMonHoc" xmlns:ns53="http://enterprise.netbeans.org/bpel/QuanLyDiem/TinhDiemTrungBinh" xmlns:ns54="http://enterprise.netbeans.org/bpel/QuanLyDiem/TongKetDiem" xmlns:ns55="http://enterprise.netbeans.org/bpel/QuanLyDiem/XemDiem" xmlns:ns56="http://enterprise.netbeans.org/bpel/QuanLyThiDuaLenLop/XetLenLop" xmlns:ns6="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LuuDiemHocBa" xmlns:ns7="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TaoChiTietSoDiem" xmlns:ns8="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachDiemCuaHocSinh" xmlns:ns9="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TaoDiem" xmlns:xlink="http://www.w3.org/2000/xlink">
     <endpoints>
         <endpoint endpoint-name="port" interface-name="ns1:jdbcPortType" name="endpoint1" service-name="ns1:service"/>
         <endpoint endpoint-name="port" interface-name="ns2:jdbcPortType" name="endpoint2" service-name="ns2:service"/>
@@ -14,7 +14,7 @@
         <endpoint endpoint-name="port" interface-name="ns11:jdbcPortType" name="endpoint11" service-name="ns11:service"/>
         <endpoint endpoint-name="port" interface-name="ns12:jdbcPortType" name="endpoint12" service-name="ns12:service"/>
         <endpoint endpoint-name="port" interface-name="ns13:jdbcPortType" name="endpoint13" service-name="ns13:service"/>
-        <endpoint endpoint-name="casaPort11" interface-name="ns15:ThemDanhSachLoaiDiemPortType" name="endpoint14" service-name="ns14:QLDiemComAppService11"/>
+        <endpoint endpoint-name="ThemDanhSachLoaiDiem" interface-name="ns15:ThemDanhSachLoaiDiemPortType" name="endpoint14" service-name="ns14:QLDiemComAppService11"/>
         <endpoint endpoint-name="TaoSoDiem" interface-name="ns16:TaoSoDiemPortType" name="endpoint15" service-name="ns14:QLDiemComAppService12"/>
         <endpoint endpoint-name="NhapDiem" interface-name="ns17:NhapDiemPortType" name="endpoint16" service-name="ns14:QLDiemComAppService13"/>
         <endpoint endpoint-name="LuuDiemHocBa" interface-name="ns18:LuuDiemHocBaPortType" name="endpoint17" service-name="ns14:QLDiemComAppService14"/>
@@ -37,47 +37,49 @@
         <endpoint endpoint-name="TimIdMonHocByTenMonHoc" interface-name="ns35:TimIdMonHocByTenMonHocPortType" name="endpoint34" service-name="ns14:QLDiemComAppService37"/>
         <endpoint endpoint-name="port" interface-name="ns36:jdbcPortType" name="endpoint35" service-name="ns36:service"/>
         <endpoint endpoint-name="TimIdLopByTenLop" interface-name="ns37:TimIdLopByTenLopPortType" name="endpoint36" service-name="ns14:QLDiemComAppService38"/>
-        <endpoint display-name="PL_LayDanhSachLopGiaoVienDay" endpoint-name="LayDanhSachLopGiaoVienDayPortTypeRole_myRole" file-path="processor_BPEL\LayDanhSachLopGiaoVienDay.bpel" interface-name="ns31:LayDanhSachLopGiaoVienDayPortType" name="endpoint37" process-name="LayDanhSachLopGiaoVienDay" service-name="ns38:PL_LayDanhSachLopGiaoVienDay"/>
-        <endpoint display-name="PL_LayDanhSachMonHocCuaGiaoVien" endpoint-name="LayDanhSachMonHocCuaGiaoVienPortTypeRole_myRole" file-path="processor_BPEL\LayDanhSachMonHocCuaGiaoVien.bpel" interface-name="ns29:LayDanhSachMonHocCuaGiaoVienPortType" name="endpoint38" process-name="LayDanhSachMonHocCuaGiaoVien" service-name="ns39:PL_LayDanhSachMonHocCuaGiaoVien"/>
-        <endpoint display-name="PL_LayIdNamHocMoiNhat" endpoint-name="LayIdNamHocMoiNhatPortTypeRole_myRole" file-path="processor_BPEL\LayIdNamHocMoiNhat.bpel" interface-name="ns27:LayIdNamHocMoiNhatPortType" name="endpoint39" process-name="LayIdNamHocMoiNhat" service-name="ns40:PL_LayIdNamHocMoiNhat"/>
-        <endpoint display-name="PL_LoadSoDiem" endpoint-name="LoadSoDiemPortTypeRole_myRole" file-path="processor_BPEL\LoadSoDiem.bpel" interface-name="ns33:LoadSoDiemPortType" name="endpoint40" process-name="LoadSoDiem" service-name="ns41:PL_LoadSoDiem"/>
-        <endpoint display-name="PL_LuuDiemHocBa" endpoint-name="LuuDiemHocBaPortTypeRole_myRole" file-path="processor_BPEL\LuuDiemHocBa.bpel" interface-name="ns18:LuuDiemHocBaPortType" name="endpoint41" process-name="LuuDiemHocBa" service-name="ns42:PL_LuuDiemHocBa"/>
-        <endpoint display-name="PL_NhapDiem" endpoint-name="NhapDiemPortTypeRole_myRole" file-path="processor_BPEL\NhapDiem.bpel" interface-name="ns17:NhapDiemPortType" name="endpoint42" process-name="NhapDiem" service-name="ns43:PL_NhapDiem"/>
-        <endpoint display-name="PL_TaoLoaiDiem" endpoint-name="TaoLoaiDiemPortTypeRole_myRole" file-path="processor_BPEL\TaoLoaiDiem.bpel" interface-name="ns19:TaoLoaiDiemPortType" name="endpoint43" process-name="TaoLoaiDiem" service-name="ns44:PL_TaoLoaiDiem"/>
-        <endpoint display-name="PL_TaoNamHocMoi" endpoint-name="TaoNamHocMoiPortTypeRole_myRole" file-path="processor_BPEL\TaoNamHocMoi.bpel" interface-name="ns25:TaoNamHocMoiPortType" name="endpoint44" process-name="TaoNamHocMoi" service-name="ns45:PL_TaoNamHocMoi"/>
-        <endpoint display-name="PL_TaoSoDiem" endpoint-name="TaoSoDiemPortTypeRole_myRole" file-path="processor_BPEL\TaoSoDiem.bpel" interface-name="ns16:TaoSoDiemPortType" name="endpoint45" process-name="TaoSoDiem" service-name="ns46:PL_TaoSoDiem"/>
-        <endpoint display-name="PL_ThemDanhSachLoaiDiem" endpoint-name="ThemDanhSachLoaiDiemPortTypeRole_myRole" file-path="processor_BPEL\ThemDanhSachLoaiDiem.bpel" interface-name="ns15:ThemDanhSachLoaiDiemPortType" name="endpoint46" process-name="ThemDanhSachLoaiDiem" service-name="ns47:PL_ThemDanhSachLoaiDiem"/>
-        <endpoint display-name="PL_TimIdLopByTenLop" endpoint-name="TimIdLopByTenLopPortTypeRole_myRole" file-path="processor_BPEL\TimIdLopByTenLop.bpel" interface-name="ns37:TimIdLopByTenLopPortType" name="endpoint47" process-name="TimIdLopByTenLop" service-name="ns48:PL_TimIdLopByTenLop"/>
-        <endpoint display-name="PL_TimIdMonHocByTenMonHoc" endpoint-name="TimIdMonHocByTenMonHocPortTypeRole_myRole" file-path="processor_BPEL\TimIdMonHocByTenMonHoc.bpel" interface-name="ns35:TimIdMonHocByTenMonHocPortType" name="endpoint48" process-name="TimIdMonHocByTenMonHoc" service-name="ns49:PL_TimIdMonHocByTenMonHoc"/>
-        <endpoint display-name="PL_TinhDiemTrungBinh" endpoint-name="TinhDiemTrungBinhPortTypeRole_myRole" file-path="processor_BPEL\TinhDiemTrungBinh.bpel" interface-name="ns20:TinhDiemTrungBinhPortType" name="endpoint49" process-name="TinhDiemTrungBinh" service-name="ns50:PL_TinhDiemTrungBinh"/>
-        <endpoint display-name="PL_TongKetDiem" endpoint-name="TongKetDiemPortTypeRole_myRole" file-path="processor_BPEL\TongKetDiem.bpel" interface-name="ns21:TongKetDiemPortType" name="endpoint50" process-name="TongKetDiem" service-name="ns51:PL_TongKetDiem"/>
-        <endpoint display-name="PL_XemDiem" endpoint-name="XemDiemPortTypeRole_myRole" file-path="processor_BPEL\XemDiem.bpel" interface-name="ns22:XemDiemPortType" name="endpoint51" process-name="XemDiem" service-name="ns52:PL_XemDiem"/>
-        <endpoint display-name="PartnerLink1" endpoint-name="XetLenLopPortTypeRole_myRole" file-path="processor_BPEL\XetLenLop.bpel" interface-name="ns23:XetLenLopPortType" name="endpoint52" process-name="XetLenLop" service-name="ns53:PartnerLink1"/>
-        <endpoint display-name="PL_DB_LayDanhSachLopGiaoVienDay" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\LayDanhSachLopGiaoVienDay.bpel" interface-name="ns30:jdbcPortType" name="endpoint53" process-name="LayDanhSachLopGiaoVienDay" service-name="ns38:PL_DB_LayDanhSachLopGiaoVienDay"/>
-        <endpoint display-name="PL_DB_LayDanhSachMonHocCuaGiaoVien" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\LayDanhSachMonHocCuaGiaoVien.bpel" interface-name="ns28:jdbcPortType" name="endpoint54" process-name="LayDanhSachMonHocCuaGiaoVien" service-name="ns39:PL_DB_LayDanhSachMonHocCuaGiaoVien"/>
-        <endpoint display-name="PL_DB_LayIdNamHocMoiNhat" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\LayIdNamHocMoiNhat.bpel" interface-name="ns26:jdbcPortType" name="endpoint55" process-name="LayIdNamHocMoiNhat" service-name="ns40:PL_DB_LayIdNamHocMoiNhat"/>
-        <endpoint display-name="PL_DB_LoadSoDiem" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\LoadSoDiem.bpel" interface-name="ns32:jdbcPortType" name="endpoint56" process-name="LoadSoDiem" service-name="ns41:PL_DB_LoadSoDiem"/>
-        <endpoint display-name="PL_DB_LuuDiemHocBa" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\LuuDiemHocBa.bpel" interface-name="ns6:jdbcPortType" name="endpoint57" process-name="LuuDiemHocBa" service-name="ns42:PL_DB_LuuDiemHocBa"/>
-        <endpoint display-name="PL_DB_SuaDiem" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\NhapDiem.bpel" interface-name="ns2:jdbcPortType" name="endpoint58" process-name="NhapDiem" service-name="ns43:PL_DB_SuaDiem"/>
-        <endpoint display-name="PL_DB_TaoLoaiDiem" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\TaoLoaiDiem.bpel" interface-name="ns5:jdbcPortType" name="endpoint59" process-name="TaoLoaiDiem" service-name="ns44:PL_DB_TaoLoaiDiem"/>
-        <endpoint display-name="PL_DBTaoNamHocMoi" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\TaoNamHocMoi.bpel" interface-name="ns24:jdbcPortType" name="endpoint60" process-name="TaoNamHocMoi" service-name="ns45:PL_DBTaoNamHocMoi"/>
-        <endpoint display-name="PL_DB_TaoSoDiem" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\TaoSoDiem.bpel" interface-name="ns13:jdbcPortType" name="endpoint61" process-name="TaoSoDiem" service-name="ns46:PL_DB_TaoSoDiem"/>
-        <endpoint display-name="PL_DB_LayDanhSachHocSinhTuIdLop" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\TaoSoDiem.bpel" interface-name="ns11:jdbcPortType" name="endpoint62" process-name="TaoSoDiem" service-name="ns46:PL_DB_LayDanhSachHocSinhTuIdLop"/>
-        <endpoint display-name="PL_DB_LayDanhSachLoaiDiem" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\TaoSoDiem.bpel" interface-name="ns10:jdbcPortType" name="endpoint63" process-name="TaoSoDiem" service-name="ns46:PL_DB_LayDanhSachLoaiDiem"/>
-        <endpoint display-name="PL_DB_TaoChiTietSoDiem" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\TaoSoDiem.bpel" interface-name="ns7:jdbcPortType" name="endpoint64" process-name="TaoSoDiem" service-name="ns46:PL_DB_TaoChiTietSoDiem"/>
-        <endpoint display-name="PL_DB_TaoDiem" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\TaoSoDiem.bpel" interface-name="ns9:jdbcPortType" name="endpoint65" process-name="TaoSoDiem" service-name="ns46:PL_DB_TaoDiem"/>
-        <endpoint display-name="PL_DB_ThemDanhSachLoaiDiem" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\ThemDanhSachLoaiDiem.bpel" interface-name="ns12:jdbcPortType" name="endpoint66" process-name="ThemDanhSachLoaiDiem" service-name="ns47:PL_DB_ThemDanhSachLoaiDiem"/>
-        <endpoint display-name="PL_DB_TimIdLopByTenLop" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\TimIdLopByTenLop.bpel" interface-name="ns36:jdbcPortType" name="endpoint67" process-name="TimIdLopByTenLop" service-name="ns48:PL_DB_TimIdLopByTenLop"/>
-        <endpoint display-name="PL_DB_TimIdMonHocByTenMonHoc" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\TimIdMonHocByTenMonHoc.bpel" interface-name="ns34:jdbcPortType" name="endpoint68" process-name="TimIdMonHocByTenMonHoc" service-name="ns49:PL_DB_TimIdMonHocByTenMonHoc"/>
-        <endpoint display-name="PL_DB_SuaDiemTrungBinh" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\TinhDiemTrungBinh.bpel" interface-name="ns1:jdbcPortType" name="endpoint69" process-name="TinhDiemTrungBinh" service-name="ns50:PL_DB_SuaDiemTrungBinh"/>
-        <endpoint display-name="PL_DB_DanhSachDiemTrungBinh" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\TongKetDiem.bpel" interface-name="ns4:jdbcPortType" name="endpoint70" process-name="TongKetDiem" service-name="ns51:PL_DB_DanhSachDiemTrungBinh"/>
-        <endpoint display-name="PL_DB_LayDanhSachDiemCuaHocSinh" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\XemDiem.bpel" interface-name="ns8:jdbcPortType" name="endpoint71" process-name="XemDiem" service-name="ns52:PL_DB_LayDanhSachDiemCuaHocSinh"/>
-        <endpoint display-name="PartnerLink2" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\XetLenLop.bpel" interface-name="ns3:jdbcPortType" name="endpoint72" process-name="XetLenLop" service-name="ns53:PartnerLink2"/>
+        <endpoint endpoint-name="port" interface-name="ns38:jdbcPortType" name="endpoint37" service-name="ns38:service"/>
+        <endpoint endpoint-name="LayDanhSachCotDiem" interface-name="ns39:LayDanhSachCotDiemPortType" name="endpoint38" service-name="ns14:QLDiemComAppService39"/>
+        <endpoint display-name="PL_LayDanhSachCotDiem" endpoint-name="LayDanhSachCotDiemPortTypeRole_myRole" file-path="processor_BPEL\LayDanhSachCotDiem.bpel" interface-name="ns39:LayDanhSachCotDiemPortType" name="endpoint39" process-name="LayDanhSachCotDiem" service-name="ns40:PL_LayDanhSachCotDiem"/>
+        <endpoint display-name="PL_LayDanhSachLopGiaoVienDay" endpoint-name="LayDanhSachLopGiaoVienDayPortTypeRole_myRole" file-path="processor_BPEL\LayDanhSachLopGiaoVienDay.bpel" interface-name="ns31:LayDanhSachLopGiaoVienDayPortType" name="endpoint40" process-name="LayDanhSachLopGiaoVienDay" service-name="ns41:PL_LayDanhSachLopGiaoVienDay"/>
+        <endpoint display-name="PL_LayDanhSachMonHocCuaGiaoVien" endpoint-name="LayDanhSachMonHocCuaGiaoVienPortTypeRole_myRole" file-path="processor_BPEL\LayDanhSachMonHocCuaGiaoVien.bpel" interface-name="ns29:LayDanhSachMonHocCuaGiaoVienPortType" name="endpoint41" process-name="LayDanhSachMonHocCuaGiaoVien" service-name="ns42:PL_LayDanhSachMonHocCuaGiaoVien"/>
+        <endpoint display-name="PL_LayIdNamHocMoiNhat" endpoint-name="LayIdNamHocMoiNhatPortTypeRole_myRole" file-path="processor_BPEL\LayIdNamHocMoiNhat.bpel" interface-name="ns27:LayIdNamHocMoiNhatPortType" name="endpoint42" process-name="LayIdNamHocMoiNhat" service-name="ns43:PL_LayIdNamHocMoiNhat"/>
+        <endpoint display-name="PL_LoadSoDiem" endpoint-name="LoadSoDiemPortTypeRole_myRole" file-path="processor_BPEL\LoadSoDiem.bpel" interface-name="ns33:LoadSoDiemPortType" name="endpoint43" process-name="LoadSoDiem" service-name="ns44:PL_LoadSoDiem"/>
+        <endpoint display-name="PL_LuuDiemHocBa" endpoint-name="LuuDiemHocBaPortTypeRole_myRole" file-path="processor_BPEL\LuuDiemHocBa.bpel" interface-name="ns18:LuuDiemHocBaPortType" name="endpoint44" process-name="LuuDiemHocBa" service-name="ns45:PL_LuuDiemHocBa"/>
+        <endpoint display-name="PL_NhapDiem" endpoint-name="NhapDiemPortTypeRole_myRole" file-path="processor_BPEL\NhapDiem.bpel" interface-name="ns17:NhapDiemPortType" name="endpoint45" process-name="NhapDiem" service-name="ns46:PL_NhapDiem"/>
+        <endpoint display-name="PL_TaoLoaiDiem" endpoint-name="TaoLoaiDiemPortTypeRole_myRole" file-path="processor_BPEL\TaoLoaiDiem.bpel" interface-name="ns19:TaoLoaiDiemPortType" name="endpoint46" process-name="TaoLoaiDiem" service-name="ns47:PL_TaoLoaiDiem"/>
+        <endpoint display-name="PL_TaoNamHocMoi" endpoint-name="TaoNamHocMoiPortTypeRole_myRole" file-path="processor_BPEL\TaoNamHocMoi.bpel" interface-name="ns25:TaoNamHocMoiPortType" name="endpoint47" process-name="TaoNamHocMoi" service-name="ns48:PL_TaoNamHocMoi"/>
+        <endpoint display-name="PL_TaoSoDiem" endpoint-name="TaoSoDiemPortTypeRole_myRole" file-path="processor_BPEL\TaoSoDiem.bpel" interface-name="ns16:TaoSoDiemPortType" name="endpoint48" process-name="TaoSoDiem" service-name="ns49:PL_TaoSoDiem"/>
+        <endpoint display-name="PL_ThemDanhSachLoaiDiem" endpoint-name="ThemDanhSachLoaiDiemPortTypeRole_myRole" file-path="processor_BPEL\ThemDanhSachLoaiDiem.bpel" interface-name="ns15:ThemDanhSachLoaiDiemPortType" name="endpoint49" process-name="ThemDanhSachLoaiDiem" service-name="ns50:PL_ThemDanhSachLoaiDiem"/>
+        <endpoint display-name="PL_TimIdLopByTenLop" endpoint-name="TimIdLopByTenLopPortTypeRole_myRole" file-path="processor_BPEL\TimIdLopByTenLop.bpel" interface-name="ns37:TimIdLopByTenLopPortType" name="endpoint50" process-name="TimIdLopByTenLop" service-name="ns51:PL_TimIdLopByTenLop"/>
+        <endpoint display-name="PL_TimIdMonHocByTenMonHoc" endpoint-name="TimIdMonHocByTenMonHocPortTypeRole_myRole" file-path="processor_BPEL\TimIdMonHocByTenMonHoc.bpel" interface-name="ns35:TimIdMonHocByTenMonHocPortType" name="endpoint51" process-name="TimIdMonHocByTenMonHoc" service-name="ns52:PL_TimIdMonHocByTenMonHoc"/>
+        <endpoint display-name="PL_TinhDiemTrungBinh" endpoint-name="TinhDiemTrungBinhPortTypeRole_myRole" file-path="processor_BPEL\TinhDiemTrungBinh.bpel" interface-name="ns20:TinhDiemTrungBinhPortType" name="endpoint52" process-name="TinhDiemTrungBinh" service-name="ns53:PL_TinhDiemTrungBinh"/>
+        <endpoint display-name="PL_TongKetDiem" endpoint-name="TongKetDiemPortTypeRole_myRole" file-path="processor_BPEL\TongKetDiem.bpel" interface-name="ns21:TongKetDiemPortType" name="endpoint53" process-name="TongKetDiem" service-name="ns54:PL_TongKetDiem"/>
+        <endpoint display-name="PL_XemDiem" endpoint-name="XemDiemPortTypeRole_myRole" file-path="processor_BPEL\XemDiem.bpel" interface-name="ns22:XemDiemPortType" name="endpoint54" process-name="XemDiem" service-name="ns55:PL_XemDiem"/>
+        <endpoint display-name="PartnerLink1" endpoint-name="XetLenLopPortTypeRole_myRole" file-path="processor_BPEL\XetLenLop.bpel" interface-name="ns23:XetLenLopPortType" name="endpoint55" process-name="XetLenLop" service-name="ns56:PartnerLink1"/>
+        <endpoint display-name="PL_DB_LayDanhSachCotDiem" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\LayDanhSachCotDiem.bpel" interface-name="ns38:jdbcPortType" name="endpoint56" process-name="LayDanhSachCotDiem" service-name="ns40:PL_DB_LayDanhSachCotDiem"/>
+        <endpoint display-name="PL_DB_LayDanhSachLopGiaoVienDay" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\LayDanhSachLopGiaoVienDay.bpel" interface-name="ns30:jdbcPortType" name="endpoint57" process-name="LayDanhSachLopGiaoVienDay" service-name="ns41:PL_DB_LayDanhSachLopGiaoVienDay"/>
+        <endpoint display-name="PL_DB_LayDanhSachMonHocCuaGiaoVien" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\LayDanhSachMonHocCuaGiaoVien.bpel" interface-name="ns28:jdbcPortType" name="endpoint58" process-name="LayDanhSachMonHocCuaGiaoVien" service-name="ns42:PL_DB_LayDanhSachMonHocCuaGiaoVien"/>
+        <endpoint display-name="PL_DB_LayIdNamHocMoiNhat" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\LayIdNamHocMoiNhat.bpel" interface-name="ns26:jdbcPortType" name="endpoint59" process-name="LayIdNamHocMoiNhat" service-name="ns43:PL_DB_LayIdNamHocMoiNhat"/>
+        <endpoint display-name="PL_DB_LoadSoDiem" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\LoadSoDiem.bpel" interface-name="ns32:jdbcPortType" name="endpoint60" process-name="LoadSoDiem" service-name="ns44:PL_DB_LoadSoDiem"/>
+        <endpoint display-name="PL_DB_LuuDiemHocBa" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\LuuDiemHocBa.bpel" interface-name="ns6:jdbcPortType" name="endpoint61" process-name="LuuDiemHocBa" service-name="ns45:PL_DB_LuuDiemHocBa"/>
+        <endpoint display-name="PL_DB_SuaDiem" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\NhapDiem.bpel" interface-name="ns2:jdbcPortType" name="endpoint62" process-name="NhapDiem" service-name="ns46:PL_DB_SuaDiem"/>
+        <endpoint display-name="PL_DB_TaoLoaiDiem" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\TaoLoaiDiem.bpel" interface-name="ns5:jdbcPortType" name="endpoint63" process-name="TaoLoaiDiem" service-name="ns47:PL_DB_TaoLoaiDiem"/>
+        <endpoint display-name="PL_DBTaoNamHocMoi" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\TaoNamHocMoi.bpel" interface-name="ns24:jdbcPortType" name="endpoint64" process-name="TaoNamHocMoi" service-name="ns48:PL_DBTaoNamHocMoi"/>
+        <endpoint display-name="PL_DB_TaoSoDiem" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\TaoSoDiem.bpel" interface-name="ns13:jdbcPortType" name="endpoint65" process-name="TaoSoDiem" service-name="ns49:PL_DB_TaoSoDiem"/>
+        <endpoint display-name="PL_DB_LayDanhSachHocSinhTuIdLop" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\TaoSoDiem.bpel" interface-name="ns11:jdbcPortType" name="endpoint66" process-name="TaoSoDiem" service-name="ns49:PL_DB_LayDanhSachHocSinhTuIdLop"/>
+        <endpoint display-name="PL_DB_LayDanhSachLoaiDiem" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\TaoSoDiem.bpel" interface-name="ns10:jdbcPortType" name="endpoint67" process-name="TaoSoDiem" service-name="ns49:PL_DB_LayDanhSachLoaiDiem"/>
+        <endpoint display-name="PL_DB_TaoChiTietSoDiem" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\TaoSoDiem.bpel" interface-name="ns7:jdbcPortType" name="endpoint68" process-name="TaoSoDiem" service-name="ns49:PL_DB_TaoChiTietSoDiem"/>
+        <endpoint display-name="PL_DB_TaoDiem" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\TaoSoDiem.bpel" interface-name="ns9:jdbcPortType" name="endpoint69" process-name="TaoSoDiem" service-name="ns49:PL_DB_TaoDiem"/>
+        <endpoint display-name="PL_DB_ThemDanhSachLoaiDiem" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\ThemDanhSachLoaiDiem.bpel" interface-name="ns12:jdbcPortType" name="endpoint70" process-name="ThemDanhSachLoaiDiem" service-name="ns50:PL_DB_ThemDanhSachLoaiDiem"/>
+        <endpoint display-name="PL_DB_TimIdLopByTenLop" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\TimIdLopByTenLop.bpel" interface-name="ns36:jdbcPortType" name="endpoint71" process-name="TimIdLopByTenLop" service-name="ns51:PL_DB_TimIdLopByTenLop"/>
+        <endpoint display-name="PL_DB_TimIdMonHocByTenMonHoc" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\TimIdMonHocByTenMonHoc.bpel" interface-name="ns34:jdbcPortType" name="endpoint72" process-name="TimIdMonHocByTenMonHoc" service-name="ns52:PL_DB_TimIdMonHocByTenMonHoc"/>
+        <endpoint display-name="PL_DB_SuaDiemTrungBinh" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\TinhDiemTrungBinh.bpel" interface-name="ns1:jdbcPortType" name="endpoint73" process-name="TinhDiemTrungBinh" service-name="ns53:PL_DB_SuaDiemTrungBinh"/>
+        <endpoint display-name="PL_DB_DanhSachDiemTrungBinh" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\TongKetDiem.bpel" interface-name="ns4:jdbcPortType" name="endpoint74" process-name="TongKetDiem" service-name="ns54:PL_DB_DanhSachDiemTrungBinh"/>
+        <endpoint display-name="PL_DB_LayDanhSachDiemCuaHocSinh" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\XemDiem.bpel" interface-name="ns8:jdbcPortType" name="endpoint75" process-name="XemDiem" service-name="ns55:PL_DB_LayDanhSachDiemCuaHocSinh"/>
+        <endpoint display-name="PartnerLink2" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\XetLenLop.bpel" interface-name="ns3:jdbcPortType" name="endpoint76" process-name="XetLenLop" service-name="ns56:PartnerLink2"/>
     </endpoints>
     <service-units>
         <service-engine-service-unit artifacts-zip="QuanLyDiem.jar" component-name="sun-bpel-engine" defined="true" description="Represents this Service Unit" internal="true" name="QLDiemComApp-QuanLyDiem" unit-name="QuanLyDiem" unknown="false" x="99" y="99">
-            <provides endpoint="endpoint37"/>
-            <provides endpoint="endpoint38"/>
             <provides endpoint="endpoint39"/>
             <provides endpoint="endpoint40"/>
             <provides endpoint="endpoint41"/>
@@ -92,9 +94,9 @@
             <provides endpoint="endpoint50"/>
             <provides endpoint="endpoint51"/>
             <provides endpoint="endpoint52"/>
-            <consumes endpoint="endpoint53"/>
-            <consumes endpoint="endpoint54"/>
-            <consumes endpoint="endpoint55"/>
+            <provides endpoint="endpoint53"/>
+            <provides endpoint="endpoint54"/>
+            <provides endpoint="endpoint55"/>
             <consumes endpoint="endpoint56"/>
             <consumes endpoint="endpoint57"/>
             <consumes endpoint="endpoint58"/>
@@ -112,105 +114,114 @@
             <consumes endpoint="endpoint70"/>
             <consumes endpoint="endpoint71"/>
             <consumes endpoint="endpoint72"/>
+            <consumes endpoint="endpoint73"/>
+            <consumes endpoint="endpoint74"/>
+            <consumes endpoint="endpoint75"/>
+            <consumes endpoint="endpoint76"/>
         </service-engine-service-unit>
         <binding-component-service-unit artifacts-zip="sun-database-binding.jar" component-name="sun-database-binding" description="Represents this Service Unit" name="QLDiemComApp-sun-database-binding" unit-name="sun-database-binding">
             <ports>
-                <port x="67" y="1228">
+                <port x="67" y="1413">
                     <link xlink:href="../jbiServiceUnits/QuanLyDiem/DB_WSDL/DBTaoNamHocMoi.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint23"/>
                     <provides endpoint="endpoint23"/>
                 </port>
-                <port x="67" y="3317">
+                <port x="67" y="3502">
                     <link xlink:href="../jbiServiceUnits/QuanLyDiem/DB_WSDL/DB_DanhSachDiemTrungBinh.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint4"/>
                     <provides endpoint="endpoint4"/>
                 </port>
-                <port x="67" y="3211">
+                <port x="67" y="118">
+                    <link xlink:href="../jbiServiceUnits/QuanLyDiem/DB_WSDL/DB_LayDanhSachCotDiem.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint37"/>
+                    <provides endpoint="endpoint37"/>
+                </port>
+                <port x="67" y="3396">
                     <link xlink:href="../jbiServiceUnits/QuanLyDiem/DB_WSDL/DB_LayDanhSachDiemCuaHocSinh.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint8"/>
                     <provides endpoint="endpoint8"/>
                 </port>
-                <port x="67" y="3105">
+                <port x="67" y="3290">
                     <link xlink:href="../jbiServiceUnits/QuanLyDiem/DB_WSDL/DB_LayDanhSachHocSinhTuIdLop.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint11"/>
                     <provides endpoint="endpoint11"/>
                 </port>
-                <port x="67" y="2999">
+                <port x="67" y="3184">
                     <link xlink:href="../jbiServiceUnits/QuanLyDiem/DB_WSDL/DB_LayDanhSachLoaiDiem.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint10"/>
                     <provides endpoint="endpoint10"/>
                 </port>
-                <port x="67" y="673">
+                <port x="67" y="858">
                     <link xlink:href="../jbiServiceUnits/QuanLyDiem/DB_WSDL/DB_LayDanhSachLopGiaoVienDay.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint29"/>
                     <provides endpoint="endpoint29"/>
                 </port>
-                <port x="67" y="858">
+                <port x="67" y="1043">
                     <link xlink:href="../jbiServiceUnits/QuanLyDiem/DB_WSDL/DB_LayDanhSachMonHocCuaGiaoVien.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint27"/>
                     <provides endpoint="endpoint27"/>
                 </port>
-                <port x="67" y="1043">
+                <port x="67" y="1228">
                     <link xlink:href="../jbiServiceUnits/QuanLyDiem/DB_WSDL/DB_LayIdNamHocMoiNhat.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint25"/>
                     <provides endpoint="endpoint25"/>
                 </port>
-                <port x="67" y="488">
+                <port x="67" y="673">
                     <link xlink:href="../jbiServiceUnits/QuanLyDiem/DB_WSDL/DB_LoadSoDiem.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint31"/>
                     <provides endpoint="endpoint31"/>
                 </port>
-                <port x="67" y="2893">
+                <port x="67" y="3078">
                     <link xlink:href="../jbiServiceUnits/QuanLyDiem/DB_WSDL/DB_LuuDiemHocBa.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint6"/>
                     <provides endpoint="endpoint6"/>
                 </port>
-                <port x="67" y="2787">
+                <port x="67" y="2972">
                     <link xlink:href="../jbiServiceUnits/QuanLyDiem/DB_WSDL/DB_SuaDiem.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint2"/>
                     <provides endpoint="endpoint2"/>
                 </port>
-                <port x="67" y="2681">
+                <port x="67" y="2866">
                     <link xlink:href="../jbiServiceUnits/QuanLyDiem/DB_WSDL/DB_SuaDiemTrungBinh.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint1"/>
                     <provides endpoint="endpoint1"/>
                 </port>
-                <port x="67" y="2575">
+                <port x="67" y="2760">
                     <link xlink:href="../jbiServiceUnits/QuanLyDiem/DB_WSDL/DB_TaoChiTietSoDiem.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint7"/>
                     <provides endpoint="endpoint7"/>
                 </port>
-                <port x="67" y="2469">
+                <port x="67" y="2654">
                     <link xlink:href="../jbiServiceUnits/QuanLyDiem/DB_WSDL/DB_TaoDiem.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint9"/>
                     <provides endpoint="endpoint9"/>
                 </port>
-                <port x="67" y="2363">
+                <port x="67" y="2548">
                     <link xlink:href="../jbiServiceUnits/QuanLyDiem/DB_WSDL/DB_TaoLoaiDiem.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint5"/>
                     <provides endpoint="endpoint5"/>
                 </port>
-                <port x="67" y="2257">
+                <port x="67" y="2442">
                     <link xlink:href="../jbiServiceUnits/QuanLyDiem/DB_WSDL/DB_TaoSoDiem.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint13"/>
                     <provides endpoint="endpoint13"/>
                 </port>
-                <port x="67" y="2151">
+                <port x="67" y="2336">
                     <link xlink:href="../jbiServiceUnits/QuanLyDiem/DB_WSDL/DB_ThemDanhSachLoaiDiem.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint12"/>
                     <provides endpoint="endpoint12"/>
                 </port>
-                <port x="67" y="197">
+                <port x="67" y="382">
                     <link xlink:href="../jbiServiceUnits/QuanLyDiem/DB_WSDL/DB_TimIdLopByTenLop.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint35"/>
                     <provides endpoint="endpoint35"/>
                 </port>
-                <port x="67" y="303">
+                <port x="67" y="488">
                     <link xlink:href="../jbiServiceUnits/QuanLyDiem/DB_WSDL/DB_TimIdMonHocByTenMonHoc.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint33"/>
                     <provides endpoint="endpoint33"/>
                 </port>
-                <port x="67" y="2045">
+                <port x="67" y="2230">
                     <link xlink:href="../jbiServiceUnits/QuanLyDiem/DB_WSDL/DB_XetLenLop.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint3"/>
                     <provides endpoint="endpoint3"/>
@@ -219,132 +230,140 @@
         </binding-component-service-unit>
         <binding-component-service-unit artifacts-zip="sun-http-binding.jar" component-name="sun-http-binding" description="Represents this Service Unit" name="QLDiemComApp-sun-http-binding" unit-name="sun-http-binding">
             <ports>
-                <port bindingType="soap" x="67" y="1966">
-                    <link xlink:href="../jbiasa/QLDiemComApp.wsdl#xpointer(/definitions/service[@name='QLDiemComAppService11']/port[@name='casaPort11'])" xlink:type="simple"/>
+                <port bindingType="soap" x="67" y="2151">
+                    <link xlink:href="../jbiasa/QLDiemComApp.wsdl#xpointer(/definitions/service[@name='QLDiemComAppService11']/port[@name='ThemDanhSachLoaiDiem'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint14"/>
                     <provides endpoint="endpoint14"/>
                 </port>
-                <port bindingType="soap" x="67" y="1887">
+                <port bindingType="soap" x="67" y="2072">
                     <link xlink:href="../jbiasa/QLDiemComApp.wsdl#xpointer(/definitions/service[@name='QLDiemComAppService12']/port[@name='TaoSoDiem'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint15"/>
                     <provides endpoint="endpoint15"/>
                 </port>
-                <port bindingType="soap" x="67" y="1808">
+                <port bindingType="soap" x="67" y="1993">
                     <link xlink:href="../jbiasa/QLDiemComApp.wsdl#xpointer(/definitions/service[@name='QLDiemComAppService13']/port[@name='NhapDiem'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint16"/>
                     <provides endpoint="endpoint16"/>
                 </port>
-                <port bindingType="soap" x="67" y="1729">
+                <port bindingType="soap" x="67" y="1914">
                     <link xlink:href="../jbiasa/QLDiemComApp.wsdl#xpointer(/definitions/service[@name='QLDiemComAppService14']/port[@name='LuuDiemHocBa'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint17"/>
                     <provides endpoint="endpoint17"/>
                 </port>
-                <port bindingType="soap" x="67" y="1650">
+                <port bindingType="soap" x="67" y="1835">
                     <link xlink:href="../jbiasa/QLDiemComApp.wsdl#xpointer(/definitions/service[@name='QLDiemComAppService15']/port[@name='TaoLoaiDiem'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint18"/>
                     <provides endpoint="endpoint18"/>
                 </port>
-                <port bindingType="soap" x="67" y="1571">
+                <port bindingType="soap" x="67" y="1756">
                     <link xlink:href="../jbiasa/QLDiemComApp.wsdl#xpointer(/definitions/service[@name='QLDiemComAppService16']/port[@name='TinhDiemTrungBinh'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint19"/>
                     <provides endpoint="endpoint19"/>
                 </port>
-                <port bindingType="soap" x="67" y="1492">
+                <port bindingType="soap" x="67" y="1677">
                     <link xlink:href="../jbiasa/QLDiemComApp.wsdl#xpointer(/definitions/service[@name='QLDiemComAppService17']/port[@name='TongKetDiem'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint20"/>
                     <provides endpoint="endpoint20"/>
                 </port>
-                <port bindingType="soap" x="67" y="1413">
+                <port bindingType="soap" x="67" y="1598">
                     <link xlink:href="../jbiasa/QLDiemComApp.wsdl#xpointer(/definitions/service[@name='QLDiemComAppService18']/port[@name='XemDiem'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint21"/>
                     <provides endpoint="endpoint21"/>
                 </port>
-                <port bindingType="soap" x="67" y="1334">
+                <port bindingType="soap" x="67" y="1519">
                     <link xlink:href="../jbiasa/QLDiemComApp.wsdl#xpointer(/definitions/service[@name='QLDiemComAppService19']/port[@name='XetLenLop'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint22"/>
                     <provides endpoint="endpoint22"/>
                 </port>
-                <port bindingType="soap" x="67" y="1149">
+                <port bindingType="soap" x="67" y="1334">
                     <link xlink:href="../jbiasa/QLDiemComApp.wsdl#xpointer(/definitions/service[@name='QLDiemComAppService20']/port[@name='TaoNamHocMoi'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint24"/>
                     <provides endpoint="endpoint24"/>
                 </port>
-                <port bindingType="soap" x="67" y="964">
+                <port bindingType="soap" x="67" y="1149">
                     <link xlink:href="../jbiasa/QLDiemComApp.wsdl#xpointer(/definitions/service[@name='QLDiemComAppService21']/port[@name='LayIdNamHocMoiNhat'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint26"/>
                     <provides endpoint="endpoint26"/>
                 </port>
-                <port bindingType="soap" x="67" y="779">
+                <port bindingType="soap" x="67" y="964">
                     <link xlink:href="../jbiasa/QLDiemComApp.wsdl#xpointer(/definitions/service[@name='QLDiemComAppService22']/port[@name='LayDanhSachMonHocCuaGiaoVien'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint28"/>
                     <provides endpoint="endpoint28"/>
                 </port>
-                <port bindingType="soap" x="67" y="594">
+                <port bindingType="soap" x="67" y="779">
                     <link xlink:href="../jbiasa/QLDiemComApp.wsdl#xpointer(/definitions/service[@name='QLDiemComAppService35']/port[@name='LayDanhSachLopGiaoVienDay'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint30"/>
                     <provides endpoint="endpoint30"/>
                 </port>
-                <port bindingType="soap" x="67" y="409">
+                <port bindingType="soap" x="67" y="594">
                     <link xlink:href="../jbiasa/QLDiemComApp.wsdl#xpointer(/definitions/service[@name='QLDiemComAppService36']/port[@name='LoadSoDiem'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint32"/>
                     <provides endpoint="endpoint32"/>
                 </port>
-                <port bindingType="soap" x="67" y="118">
+                <port bindingType="soap" x="67" y="303">
                     <link xlink:href="../jbiasa/QLDiemComApp.wsdl#xpointer(/definitions/service[@name='QLDiemComAppService37']/port[@name='TimIdMonHocByTenMonHoc'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint34"/>
                     <provides endpoint="endpoint34"/>
                 </port>
-                <port bindingType="soap" x="67" y="0">
+                <port bindingType="soap" x="67" y="224">
                     <link xlink:href="../jbiasa/QLDiemComApp.wsdl#xpointer(/definitions/service[@name='QLDiemComAppService38']/port[@name='TimIdLopByTenLop'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint36"/>
                     <provides endpoint="endpoint36"/>
+                </port>
+                <port bindingType="soap" x="67" y="39">
+                    <link xlink:href="../jbiasa/QLDiemComApp.wsdl#xpointer(/definitions/service[@name='QLDiemComAppService39']/port[@name='LayDanhSachCotDiem'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint38"/>
+                    <provides endpoint="endpoint38"/>
                 </port>
             </ports>
         </binding-component-service-unit>
     </service-units>
     <connections>
-        <connection consumer="endpoint18" provider="endpoint43" state="new"/>
-        <connection consumer="endpoint54" provider="endpoint27" state="unchanged"/>
-        <connection consumer="endpoint20" provider="endpoint50" state="new"/>
-        <connection consumer="endpoint67" provider="endpoint35" state="unchanged"/>
-        <connection consumer="endpoint69" provider="endpoint1" state="unchanged"/>
-        <connection consumer="endpoint32" provider="endpoint40" state="new"/>
-        <connection consumer="endpoint58" provider="endpoint2" state="unchanged"/>
-        <connection consumer="endpoint26" provider="endpoint39" state="new"/>
-        <connection consumer="endpoint16" provider="endpoint42" state="new"/>
-        <connection consumer="endpoint70" provider="endpoint4" state="unchanged"/>
-        <connection consumer="endpoint68" provider="endpoint33" state="unchanged"/>
-        <connection consumer="endpoint57" provider="endpoint6" state="unchanged"/>
-        <connection consumer="endpoint64" provider="endpoint7" state="unchanged"/>
-        <connection consumer="endpoint24" provider="endpoint44" state="new"/>
-        <connection consumer="endpoint56" provider="endpoint31" state="unchanged"/>
-        <connection consumer="endpoint14" provider="endpoint46" state="new"/>
-        <connection consumer="endpoint55" provider="endpoint25" state="unchanged"/>
-        <connection consumer="endpoint71" provider="endpoint8" state="unchanged"/>
-        <connection consumer="endpoint15" provider="endpoint45" state="new"/>
-        <connection consumer="endpoint65" provider="endpoint9" state="unchanged"/>
-        <connection consumer="endpoint62" provider="endpoint11" state="unchanged"/>
-        <connection consumer="endpoint17" provider="endpoint41" state="new"/>
-        <connection consumer="endpoint34" provider="endpoint48" state="new"/>
-        <connection consumer="endpoint21" provider="endpoint51" state="new"/>
-        <connection consumer="endpoint61" provider="endpoint13" state="unchanged"/>
-        <connection consumer="endpoint19" provider="endpoint49" state="new"/>
-        <connection consumer="endpoint36" provider="endpoint47" state="new"/>
-        <connection consumer="endpoint30" provider="endpoint37" state="new"/>
-        <connection consumer="endpoint28" provider="endpoint38" state="new"/>
-        <connection consumer="endpoint59" provider="endpoint5" state="unchanged"/>
-        <connection consumer="endpoint72" provider="endpoint3" state="unchanged"/>
-        <connection consumer="endpoint53" provider="endpoint29" state="unchanged"/>
-        <connection consumer="endpoint63" provider="endpoint10" state="unchanged"/>
-        <connection consumer="endpoint22" provider="endpoint52" state="new"/>
-        <connection consumer="endpoint60" provider="endpoint23" state="unchanged"/>
-        <connection consumer="endpoint66" provider="endpoint12" state="unchanged"/>
+        <connection consumer="endpoint18" provider="endpoint46" state="new"/>
+        <connection consumer="endpoint58" provider="endpoint27" state="unchanged"/>
+        <connection consumer="endpoint20" provider="endpoint53" state="new"/>
+        <connection consumer="endpoint71" provider="endpoint35" state="unchanged"/>
+        <connection consumer="endpoint73" provider="endpoint1" state="unchanged"/>
+        <connection consumer="endpoint32" provider="endpoint43" state="new"/>
+        <connection consumer="endpoint26" provider="endpoint42" state="new"/>
+        <connection consumer="endpoint62" provider="endpoint2" state="unchanged"/>
+        <connection consumer="endpoint16" provider="endpoint45" state="new"/>
+        <connection consumer="endpoint74" provider="endpoint4" state="unchanged"/>
+        <connection consumer="endpoint72" provider="endpoint33" state="unchanged"/>
+        <connection consumer="endpoint61" provider="endpoint6" state="unchanged"/>
+        <connection consumer="endpoint68" provider="endpoint7" state="unchanged"/>
+        <connection consumer="endpoint24" provider="endpoint47" state="new"/>
+        <connection consumer="endpoint60" provider="endpoint31" state="unchanged"/>
+        <connection consumer="endpoint14" provider="endpoint49" state="new"/>
+        <connection consumer="endpoint59" provider="endpoint25" state="unchanged"/>
+        <connection consumer="endpoint75" provider="endpoint8" state="unchanged"/>
+        <connection consumer="endpoint15" provider="endpoint48" state="new"/>
+        <connection consumer="endpoint69" provider="endpoint9" state="unchanged"/>
+        <connection consumer="endpoint66" provider="endpoint11" state="unchanged"/>
+        <connection consumer="endpoint17" provider="endpoint44" state="new"/>
+        <connection consumer="endpoint56" provider="endpoint37" state="unchanged"/>
+        <connection consumer="endpoint34" provider="endpoint51" state="new"/>
+        <connection consumer="endpoint21" provider="endpoint54" state="new"/>
+        <connection consumer="endpoint65" provider="endpoint13" state="unchanged"/>
+        <connection consumer="endpoint19" provider="endpoint52" state="new"/>
+        <connection consumer="endpoint36" provider="endpoint50" state="new"/>
+        <connection consumer="endpoint38" provider="endpoint39" state="new"/>
+        <connection consumer="endpoint30" provider="endpoint40" state="new"/>
+        <connection consumer="endpoint28" provider="endpoint41" state="new"/>
+        <connection consumer="endpoint63" provider="endpoint5" state="unchanged"/>
+        <connection consumer="endpoint76" provider="endpoint3" state="unchanged"/>
+        <connection consumer="endpoint57" provider="endpoint29" state="unchanged"/>
+        <connection consumer="endpoint67" provider="endpoint10" state="unchanged"/>
+        <connection consumer="endpoint22" provider="endpoint55" state="new"/>
+        <connection consumer="endpoint64" provider="endpoint23" state="unchanged"/>
+        <connection consumer="endpoint70" provider="endpoint12" state="unchanged"/>
     </connections>
     <porttypes>
         <link xlink:href="../jbiasa/QLDiemComApp.wsdl#xpointer(/definitions/portType[@name='dummyCasaPortType'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/QLDiemComApp.wsdl#xpointer(/definitions/portType[@name='dummyCasaPortType'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/QuanLyDiem/DB_WSDL/DBTaoNamHocMoi.wsdl#xpointer(/definitions/portType[@name='jdbcPortType'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/QuanLyDiem/DB_WSDL/DB_DanhSachDiemTrungBinh.wsdl#xpointer(/definitions/portType[@name='jdbcPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyDiem/DB_WSDL/DB_LayDanhSachCotDiem.wsdl#xpointer(/definitions/portType[@name='jdbcPortType'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/QuanLyDiem/DB_WSDL/DB_LayDanhSachDiemCuaHocSinh.wsdl#xpointer(/definitions/portType[@name='jdbcPortType'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/QuanLyDiem/DB_WSDL/DB_LayDanhSachHocSinhTuIdLop.wsdl#xpointer(/definitions/portType[@name='jdbcPortType'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/QuanLyDiem/DB_WSDL/DB_LayDanhSachLoaiDiem.wsdl#xpointer(/definitions/portType[@name='jdbcPortType'])" xlink:type="simple"/>
@@ -364,6 +383,7 @@
         <link xlink:href="../jbiServiceUnits/QuanLyDiem/DB_WSDL/DB_TimIdLopByTenLop.wsdl#xpointer(/definitions/portType[@name='jdbcPortType'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/QuanLyDiem/DB_WSDL/DB_TimIdMonHocByTenMonHoc.wsdl#xpointer(/definitions/portType[@name='jdbcPortType'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/QuanLyDiem/DB_WSDL/DB_XetLenLop.wsdl#xpointer(/definitions/portType[@name='jdbcPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyDiem/interface_WSDL/LayDanhSachCotDiem.wsdl#xpointer(/definitions/portType[@name='LayDanhSachCotDiemPortType'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/QuanLyDiem/interface_WSDL/LayDanhSachLopGiaoVienDay.wsdl#xpointer(/definitions/portType[@name='LayDanhSachLopGiaoVienDayPortType'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/QuanLyDiem/interface_WSDL/LayDanhSachMonHocCuaGiaoVien.wsdl#xpointer(/definitions/portType[@name='LayDanhSachMonHocCuaGiaoVienPortType'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/QuanLyDiem/interface_WSDL/LayIdNamHocMoiNhat.wsdl#xpointer(/definitions/portType[@name='LayIdNamHocMoiNhatPortType'])" xlink:type="simple"/>
@@ -420,6 +440,7 @@
         <link xlink:href="../jbiasa/QLDiemComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding36'])" xlink:type="simple"/>
         <link xlink:href="../jbiasa/QLDiemComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding37'])" xlink:type="simple"/>
         <link xlink:href="../jbiasa/QLDiemComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding38'])" xlink:type="simple"/>
+        <link xlink:href="../jbiasa/QLDiemComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding39'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/QLDiemComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding1'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/QLDiemComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding2'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/QLDiemComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding3'])" xlink:type="simple"/>
@@ -458,8 +479,10 @@
         <link xlink:href="../jbiServiceUnits/QLDiemComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding36'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/QLDiemComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding37'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/QLDiemComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding38'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QLDiemComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding39'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/QuanLyDiem/DB_WSDL/DBTaoNamHocMoi.wsdl#xpointer(/definitions/binding[@name='binding'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/QuanLyDiem/DB_WSDL/DB_DanhSachDiemTrungBinh.wsdl#xpointer(/definitions/binding[@name='binding'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyDiem/DB_WSDL/DB_LayDanhSachCotDiem.wsdl#xpointer(/definitions/binding[@name='binding'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/QuanLyDiem/DB_WSDL/DB_LayDanhSachDiemCuaHocSinh.wsdl#xpointer(/definitions/binding[@name='binding'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/QuanLyDiem/DB_WSDL/DB_LayDanhSachHocSinhTuIdLop.wsdl#xpointer(/definitions/binding[@name='binding'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/QuanLyDiem/DB_WSDL/DB_LayDanhSachLoaiDiem.wsdl#xpointer(/definitions/binding[@name='binding'])" xlink:type="simple"/>
@@ -519,6 +542,7 @@
         <link xlink:href="../jbiasa/QLDiemComApp.wsdl#xpointer(/definitions/service[@name='QLDiemComAppService36'])" xlink:type="simple"/>
         <link xlink:href="../jbiasa/QLDiemComApp.wsdl#xpointer(/definitions/service[@name='QLDiemComAppService37'])" xlink:type="simple"/>
         <link xlink:href="../jbiasa/QLDiemComApp.wsdl#xpointer(/definitions/service[@name='QLDiemComAppService38'])" xlink:type="simple"/>
+        <link xlink:href="../jbiasa/QLDiemComApp.wsdl#xpointer(/definitions/service[@name='QLDiemComAppService39'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/QLDiemComApp.wsdl#xpointer(/definitions/service[@name='QLDiemComAppService1'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/QLDiemComApp.wsdl#xpointer(/definitions/service[@name='QLDiemComAppService2'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/QLDiemComApp.wsdl#xpointer(/definitions/service[@name='QLDiemComAppService3'])" xlink:type="simple"/>
@@ -557,8 +581,10 @@
         <link xlink:href="../jbiServiceUnits/QLDiemComApp.wsdl#xpointer(/definitions/service[@name='QLDiemComAppService36'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/QLDiemComApp.wsdl#xpointer(/definitions/service[@name='QLDiemComAppService37'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/QLDiemComApp.wsdl#xpointer(/definitions/service[@name='QLDiemComAppService38'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QLDiemComApp.wsdl#xpointer(/definitions/service[@name='QLDiemComAppService39'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/QuanLyDiem/DB_WSDL/DBTaoNamHocMoi.wsdl#xpointer(/definitions/service[@name='service'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/QuanLyDiem/DB_WSDL/DB_DanhSachDiemTrungBinh.wsdl#xpointer(/definitions/service[@name='service'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QuanLyDiem/DB_WSDL/DB_LayDanhSachCotDiem.wsdl#xpointer(/definitions/service[@name='service'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/QuanLyDiem/DB_WSDL/DB_LayDanhSachDiemCuaHocSinh.wsdl#xpointer(/definitions/service[@name='service'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/QuanLyDiem/DB_WSDL/DB_LayDanhSachHocSinhTuIdLop.wsdl#xpointer(/definitions/service[@name='service'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/QuanLyDiem/DB_WSDL/DB_LayDanhSachLoaiDiem.wsdl#xpointer(/definitions/service[@name='service'])" xlink:type="simple"/>
@@ -585,3 +611,4 @@
         <region name="External Modules" width="200"/>
     </regions>
 </casa>
+

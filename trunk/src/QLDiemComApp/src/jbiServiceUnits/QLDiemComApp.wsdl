@@ -9,7 +9,7 @@
              xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
              targetNamespace="QLDiemComApp"
-             xmlns:tns="QLDiemComApp" xmlns:ns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/ThemDanhSachLoaiDiem" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoSoDiem" xmlns:ns2="http://j2ee.netbeans.org/wsdl/QuanLyDiem/NhapDiem" xmlns:ns3="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LuuDiemHocBa" xmlns:ns4="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoLoaiDiem" xmlns:ns5="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TinhDiemTrungBinh" xmlns:ns6="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TongKetDiem" xmlns:ns7="http://j2ee.netbeans.org/wsdl/QuanLyDiem/XemDiem" xmlns:ns8="http://j2ee.netbeans.org/wsdl/QuanLyThiDuaLenLop/XetLenLop" xmlns:ns9="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoNamHocMoi" xmlns:ns10="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayIdNamHocMoiNhat" xmlns:ns11="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachMonHocCuaGiaoVien" xmlns:ns12="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachLopGiaoVienDay" xmlns:ns13="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LoadSoDiem" xmlns:ns14="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TimIdMonHocByTenMonHoc" xmlns:ns15="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TimIdLopByTenLop">
+             xmlns:tns="QLDiemComApp" xmlns:ns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/ThemDanhSachLoaiDiem" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoSoDiem" xmlns:ns2="http://j2ee.netbeans.org/wsdl/QuanLyDiem/NhapDiem" xmlns:ns3="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LuuDiemHocBa" xmlns:ns4="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoLoaiDiem" xmlns:ns5="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TinhDiemTrungBinh" xmlns:ns6="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TongKetDiem" xmlns:ns7="http://j2ee.netbeans.org/wsdl/QuanLyDiem/XemDiem" xmlns:ns8="http://j2ee.netbeans.org/wsdl/QuanLyThiDuaLenLop/XetLenLop" xmlns:ns9="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoNamHocMoi" xmlns:ns10="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayIdNamHocMoiNhat" xmlns:ns11="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachMonHocCuaGiaoVien" xmlns:ns12="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachLopGiaoVienDay" xmlns:ns13="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LoadSoDiem" xmlns:ns14="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TimIdMonHocByTenMonHoc" xmlns:ns15="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TimIdLopByTenLop" xmlns:ns16="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachCotDiem">
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/ThemDanhSachLoaiDiem" location="../jbiServiceUnits/QuanLyDiem/interface_WSDL/ThemDanhSachLoaiDiem.wsdl"/>
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoSoDiem" location="../jbiServiceUnits/QuanLyDiem/interface_WSDL/TaoSoDiem.wsdl"/>
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/NhapDiem" location="../jbiServiceUnits/QuanLyDiem/interface_WSDL/NhapDiem.wsdl"/>
@@ -26,6 +26,7 @@
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LoadSoDiem" location="../jbiServiceUnits/QuanLyDiem/interface_WSDL/LoadSoDiem.wsdl"/>
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TimIdMonHocByTenMonHoc" location="../jbiServiceUnits/QuanLyDiem/interface_WSDL/TimIdMonHocByTenMonHoc.wsdl"/>
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TimIdLopByTenLop" location="../jbiServiceUnits/QuanLyDiem/interface_WSDL/TimIdLopByTenLop.wsdl"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachCotDiem" location="../jbiServiceUnits/QuanLyDiem/interface_WSDL/LayDanhSachCotDiem.wsdl"/>
     <portType name="dummyCasaPortType"/>
     <binding name="casaBinding1" type="tns:dummyCasaPortType"/>
     <binding name="casaBinding2" type="tns:dummyCasaPortType"/>
@@ -241,6 +242,18 @@
             </output>
         </operation>
     </binding>
+    <binding name="casaBinding39" type="ns16:LayDanhSachCotDiemPortType">
+        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="LayDanhSachCotDiemOperation">
+            <soap:operation/>
+            <input name="input1">
+                <soap:body use="literal" namespace="QLDiemComApp"/>
+            </input>
+            <output name="output1">
+                <soap:body use="literal" namespace="QLDiemComApp"/>
+            </output>
+        </operation>
+    </binding>
     <service name="QLDiemComAppService1">
         <port name="casaPort1" binding="tns:casaBinding1"/>
     </service>
@@ -272,8 +285,8 @@
         <port name="casaPort10" binding="tns:casaBinding10"/>
     </service>
     <service name="QLDiemComAppService11">
-        <port name="casaPort11" binding="tns:casaBinding11">
-            <soap:address location="http://localhost:${HttpDefaultPort}/QLDiemComAppService11/casaPort11"/>
+        <port name="ThemDanhSachLoaiDiem" binding="tns:casaBinding11">
+            <soap:address location="http://localhost:18001/QLDiemComApp/ThemDanhSachLoaiDiem"/>
         </port>
     </service>
     <service name="QLDiemComAppService12">
@@ -387,7 +400,14 @@
             <soap:address location="http://localhost:18001/QLDiemComApp/TimIdLopByTenLop"/>
         </port>
     </service>
+    <service name="QLDiemComAppService39">
+        <port name="LayDanhSachCotDiem" binding="tns:casaBinding39">
+            <soap:address location="http://localhost:18001/QLDiemComApp/LayDanhSachCotDiem"/>
+        </port>
+    </service>
 </definitions>
+
+
 
 
 

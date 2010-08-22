@@ -16,6 +16,8 @@
     <xsd:element name="ListLop" type="tns:ListLop"/>
     <xsd:element name="ChiTietSoDiem" type="tns:ChiTietSoDiem"/>
     <xsd:element name="ListChiTietSoDiem" type="tns:ListChiTietSoDiem"/>
+    <xsd:element name="CotDiem" type="tns:CotDiem"/>
+    <xsd:element name="ListCotDiem" type="tns:ListCotDiem"/>
     
     <xsd:complexType name="Diem">
         <xsd:sequence>
@@ -86,6 +88,17 @@
     <xsd:complexType name="ListChiTietSoDiem">
         <xsd:sequence>
             <xsd:element ref="tns:ChiTietSoDiem" maxOccurs="unbounded" minOccurs="0"></xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="CotDiem">
+        <xsd:sequence>
+            <xsd:element name="kyhieu" type="xsd:string"></xsd:element>
+            <xsd:element name="lan" type="xsd:integer"></xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+     <xsd:complexType name="ListCotDiem">
+        <xsd:sequence>
+            <xsd:element ref="tns:CotDiem" maxOccurs="unbounded" minOccurs="0"></xsd:element>
         </xsd:sequence>
     </xsd:complexType>
 </xsd:schema>
