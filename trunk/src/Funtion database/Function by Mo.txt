@@ -649,3 +649,25 @@ $BODY$
   LANGUAGE 'sql' VOLATILE
   COST 100;
 ALTER FUNCTION taonamhocmoi(bigint) OWNER TO postgres;
+
+
+-- Function: luudiem(bigint, double precision)
+
+-- DROP FUNCTION luudiem(bigint, double precision);
+
+CREATE OR REPLACE FUNCTION luudiem(id_diemin bigint, diemin double precision)
+  RETURNS boolean AS
+$BODY$
+BEGIN
+	LOOP
+	UPDATE diem SET diem=diemIn WHERE id_diem = id_diemIn;
+	IF found THEN
+            RETURN true;
+        END IF;
+        RETURN false;
+        END LOOP;
+END;
+$BODY$
+  LANGUAGE 'plpgsql' VOLATILE
+  COST 100;
+ALTER FUNCTION luudiem(bigint, double precision) OWNER TO postgres;
