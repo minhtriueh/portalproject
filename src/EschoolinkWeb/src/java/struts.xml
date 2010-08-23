@@ -11,5 +11,5 @@
 
 	</package>
 	<include file="/quanlyhocsinh/quanlyhocsinh.xml"></include>
-
+        <include file="/Demo/demo.xml"></include>
 </struts>

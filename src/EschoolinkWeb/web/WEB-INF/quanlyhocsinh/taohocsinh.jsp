@@ -24,178 +24,154 @@
                                             <div class="art-postmetadataheader">
                                                 <h2 class="art-postheader">
                                                     <img src="images/postheadericon.png" width="26" height="26" alt="postheadericon" />
-                                                    Tao hoc sinh
+                                                    Khởi tạo học sinh
                                                 </h2>
                                             </div>
                                             <div class="art-postcontent">
                                                 <!-- article-content -->
                                                  <form id="fm-form" method="post" action="" >
                                                     <fieldset>
-                                                    <legend>Personal information</legend>
+                                                    <legend>Thông tin học sinh</legend>
                                                     <div class="fm-req">
-                                                      <label for="fm-firstname">First name:</label>
-                                                      <input name="fm-firstname" id="fm-firstname" type="text" />
+                                                      <label>Họ và tên lót:</label>
+                                                      <input name="hoVaTenLot" type="text" />
+                                                    </div>
+                                                    <div class="fm-req">
+                                                      <label >Tên:</label>
+                                                      <input name="ten" type="text" />
+                                                    </div>
+                                                    <div class="fm-req">
+                                                      <label>Ngày sinh:</label>
+                                                      <input name="ngaySinh" type="text" />
+                                                    </div>
+                                                    <div class="fm-req">
+                                                      <label>Giới tính:</label>
+                                                      <select name="gioiTinh">
+                                                      	<option value="Nam">Nam</option>
+                                                      	<option value="Nữ">Nữ</option>
+                                                      </select>                                                      
+                                                    </div>
+                                                    <div class="fm-req">
+                                                      <label>Tôn giáo:</label>
+                                                      <input name="tonGiao" type="text" />
                                                     </div>
                                                     <div class="fm-opt">
-
-                                                      <label for="fm-middlename">Middle name:</label>
-                                                      <input id="fm-middlename" name="fm-middlename" type="text" />
+                                                      <label>Hình ảnh:</label>
+                                                      <input name="hinhAnh" type="file" />
                                                     </div>
                                                     <div class="fm-req">
-                                                      <label for="fm-lastname">Last name:</label>
-                                                      <input name="fm-lastname" id="fm-lastname" type="text" />
+                                                      <label>Loại học sinh:</label>
+                                                      <select name="id_loaiHocSinh">
+                                                      	<option value="">---</option>                                                      	
+                                                      </select> 
+                                                    </div>
+                                                    <div class="fm-req">
+                                                      <label>Chế độ ưu tiên:</label>
+                                                      <select name="id_cheDoUuTien">
+                                                      	<option value="">---</option>                                                      	
+                                                      </select> 
+                                                    </div>
+                                                    <div class="fm-opt">
+                                                      <label>Ghi chú:</label>
+                                                      <textarea rows="5" cols="10" name="giChu"></textarea>
                                                     </div>
                                                     </fieldset>
-
+                                                    
                                                     <fieldset>
-                                                    <legend>Address </legend>
-                                                    <div class="fm-opt">
-                                                      <label for="fm-addr">Address:</label>
-                                                      <input id="fm-addr" name="fm-addr" type="text" />
-                                                    </div>
-                                                    <div class="fm-opt">
-                                                      <label for="fm-city">City or Town:</label>
-
-                                                      <input id="fm-city" name="fm-city" type="text" />
-                                                    </div>
-                                                    <div class="fm-opt">
-                                                      <label for="fm-state">State:</label>
-                                                      <select id="fm-state" name="fm-state">
-                                                        <option value="" selected="selected">Choose a State</option>
-                                                        <option value="UNK">Outside US / Canada</option>
-
-                                                        <option value="AL">Alabama</option>
-                                                        <option value="AK">Alaska</option>
-                                                        <option value="AB">Alberta</option>
-                                                        <option value="AS">American Samoa</option>
-                                                        <option value="AZ">Arizona</option>
-                                                        <option value="AR">Arkansas</option>
-
-                                                        <option value="AA">Armed Forces Americas</option>
-                                                        <option value="AE">Armed Forces Europe</option>
-                                                        <option value="AP">Armed Forces Pacific</option>
-                                                        <option value="BC">British Columbia</option>
-                                                        <option value="CA">California</option>
-                                                        <option value="CO">Colorado</option>
-
-                                                        <option value="CT">Connecticut</option>
-                                                        <option value="DE">Delaware</option>
-                                                        <option value="DC">District Of Columbia</option>
-                                                        <option value="FL">Florida</option>
-                                                        <option value="GA">Georgia</option>
-                                                        <option value="GU">Guam</option>
-
-                                                        <option value="HI">Hawaii</option>
-                                                        <option value="ID">Idaho</option>
-                                                        <option value="IL">Illinois</option>
-                                                        <option value="IN">Indiana</option>
-                                                        <option value="IA">Iowa</option>
-                                                        <option value="KS">Kansas</option>
-
-                                                        <option value="KY">Kentucky</option>
-                                                        <option value="LA">Louisiana</option>
-                                                        <option value="ME">Maine</option>
-                                                        <option value="MB">Manitoba</option>
-                                                        <option value="MD">Maryland</option>
-                                                        <option value="MA">Massachusetts</option>
-
-                                                        <option value="MI">Michigan</option>
-                                                        <option value="MN">Minnesota</option>
-                                                        <option value="MS">Mississippi</option>
-                                                        <option value="MO">Missouri</option>
-                                                        <option value="MT">Montana</option>
-                                                        <option value="NE">Nebraska</option>
-
-                                                        <option value="NV">Nevada</option>
-                                                        <option value="NB">New Brunswick</option>
-                                                        <option value="NH">New Hampshire</option>
-                                                        <option value="NJ">New Jersey</option>
-                                                        <option value="NM">New Mexico</option>
-                                                        <option value="NY">New York</option>
-
-                                                        <option value="NF">Newfoundland</option>
-                                                        <option value="NC">North Carolina</option>
-                                                        <option value="ND">North Dakota</option>
-                                                        <option value="MP">Northern Mariana Is</option>
-                                                        <option value="NT">Northwest Territories</option>
-                                                        <option value="NS">Nova Scotia</option>
-
-                                                        <option value="OH">Ohio</option>
-                                                        <option value="OK">Oklahoma</option>
-                                                        <option value="ON">Ontario</option>
-                                                        <option value="OR">Oregon</option>
-                                                        <option value="PW">Palau</option>
-                                                        <option value="PA">Pennsylvania</option>
-
-                                                        <option value="PE">Prince Edward Island</option>
-                                                        <option value="PQ">Province du Quebec</option>
-                                                        <option value="PR">Puerto Rico</option>
-                                                        <option value="RI">Rhode Island</option>
-                                                        <option value="SK">Saskatchewan</option>
-                                                        <option value="SC">South Carolina</option>
-
-                                                        <option value="SD">South Dakota</option>
-                                                        <option value="TN">Tennessee</option>
-                                                        <option value="TX">Texas</option>
-                                                        <option value="UT">Utah</option>
-                                                        <option value="VT">Vermont</option>
-                                                        <option value="VI">Virgin Islands</option>
-
-                                                        <option value="VA">Virginia</option>
-                                                        <option value="WA">Washington</option>
-                                                        <option value="WV">West Virginia</option>
-                                                        <option value="WI">Wisconsin</option>
-                                                        <option value="WY">Wyoming</option>
-                                                        <option value="YT">Yukon Territory</option>
-
-                                                      </select>
-                                                    </div>
-                                                    <div class="fm-req">
-                                                      <label for="fm-zipcode">Zip code:</label>
-                                                      <input id="fm-zipcode" name="fm-zipcode" type="text" />
-                                                    </div>
+                                                    	<legend>Thông tin nơi ở</legend>
+                                                    	<div class="fm-req">
+	                                                      <label>Nơi ở hiện tại:</label>
+	                                                      <input name="diachi" type="text"/>                                                   
+	                                                    </div>
+	                                                    <div class="fm-req">
+	                                                      <label>Quận/Huyện:</label>
+	                                                      <select name="id_quanhuyenthanhpho">
+	                                                      	<option value="">----</option>                                                      	
+	                                                      </select>                                                      
+	                                                    </div>
+	                                                    <div class="fm-req">
+	                                                      <label>Tỉnh/Thành phố:</label>
+	                                                      <select name="id_tinh">
+	                                                      	<option value="">----</option>                                                      	
+	                                                      </select>                                                      
+	                                                    </div>
                                                     </fieldset>
+                                                    
                                                     <fieldset>
-
-                                                    <legend>Contact information</legend>
-                                                    <div class="fm-req">
-                                                      <label for="fm-telephone">Telephone:</label>
-                                                      <input id="fm-telephone" name="fm-telephone" type="text" title="Enter Phone Number in xxx-xxx-xxxx format" />
-                                                    </div>
-                                                    <div class="fm-opt">
-                                                      <label for="fm-fax">Fax:</label>
-
-                                                      <input id="fm-fax" name="fm-fax" type="text" title="Enter Fax Number in xxx-xxx-xxxx format" />
-                                                    </div>
-                                                    <div class="fm-opt">
-                                                      <label for="fm-mobile">Mobile:</label>
-                                                      <input id="fm-mobile" name="fm-mobile" type="text" />
-                                                    </div>
-                                                    <div class="fm-req">
-                                                      <label for="fm-email">Email:</label>
-
-                                                      <input id="fm-email" name="fm-email" type="text" tabindex="" />
-                                                    </div>
-                                                    <div class="fm-opt">
-                                                      <label for="fm-url">Web site address:</label>
-                                                      <input id="fm-url" name="fm-url" type="text" />
-                                                    </div>
-                                                    <div class="fm-opt">
-                                                      <label for="fm-comments">Comments:</label>
-
-                                                      <textarea name="fm-comments" cols="10" rows="5" id="fm-comments"></textarea>
-                                                    </div>
-                                                    <div class="fm-multi">
-                                                      <div class="fm-opt"> <p>Would you like to be notified of future updates?</p>
-                                                        <label for="fm-newsopt-yes">
-                                                        <input name="fm-newsopt" type="radio" id="fm-newsopt-yes" value="yes" checked="checked" />
-                                                        Yes</label>
-
-                                                        <label for="fm-newsopt-no">
-                                                        <input id="fm-newsopt-no" name="fm-newsopt" type="radio" value="no" />
-                                                        No</label>
-                                                      </div>
-                                                    </div>
+                                                    	<legend>Thông tin quê quán</legend>
+                                                    	<div class="fm-req">
+	                                                      <label>Quê quán:</label>
+	                                                      <input name="diachi" type="text"/>                                                   
+	                                                    </div>
+	                                                    <div class="fm-req">
+	                                                      <label>Quận/Huyện:</label>
+	                                                      <select name="id_quanhuyenthanhpho_qq">
+	                                                      	<option value="">----</option>                                                      	
+	                                                      </select>                                                      
+	                                                    </div>
+	                                                    <div class="fm-req">
+	                                                      <label>Tỉnh/Thành phố:</label>
+	                                                      <select name="id_tinh_qq">
+	                                                      	<option value="">----</option>                                                      	
+	                                                      </select>                                                      
+	                                                    </div>
+                                                    </fieldset>
+	
+                                                    <fieldset>
+                                                    	<legend>Thông tin Đoàn/Đội</legend>
+                                                    	<div class="fm-req">
+	                                                      <label>Có vào Đội:</label>
+	                                                       <select name="vaoDoi">
+	                                                      	<option value="true">Có</option> 
+	                                                      	<option value="false">Không</option>                                                      	
+	                                                      </select>                                                 
+	                                                    </div>
+	                                                    <div class="fm-opt">
+	                                                      <label>Ngày vào Đội:</label>
+	                                                       <input name="ngayVaoDoi" type="text">	                                                      	                                               
+	                                                    </div>
+	                                                    <div class="fm-req">
+	                                                      <label>Có vào Đoàn:</label>
+	                                                       <select name="vaoDoan">
+	                                                      	<option value="true">Có</option> 
+	                                                      	<option value="false">Không</option>                                                      	
+	                                                      </select>                                                 
+	                                                    </div>
+	                                                    <div class="fm-opt">
+	                                                      <label>Ngày vào Đoàn:</label>
+	                                                       <input name="ngayVaoDoan" type="text">	                                                      	                                               
+	                                                    </div>
+                                                    </fieldset>
+                                                    
+                                                    <fieldset>
+                                                    	<legend>Thông tin thành phần gia đình </legend>
+                                                    	<div class="fm-req">
+	                                                      <label>Họ và tên Cha:</label>
+	                                                      <input name="ten_tpgd" type="text"/>                                                 
+	                                                    </div>
+	                                                    	<input name="quanHe" value="cha con" style="display: none;"/>
+	                                                    <div class="fm-opt">
+	                                                      <label>Ngày Sinh:</label>
+	                                                      <input name="ngaySinh_tpgd" type="text"/>                                                 
+	                                                    </div>
+	                                                    <div class="fm-opt">
+	                                                      <label>Nghề nghiệp:</label>
+	                                                      <input name="ngheNghiep_tpgd" type="text"/>                                                 
+	                                                    </div>
+	                                                    
+	                                                    <div class="fm-req">
+	                                                      <label>Họ và tên Mẹ:</label>
+	                                                      <input name="ten_tpgd" type="text"/>                                                 
+	                                                    </div>
+	                                                    	<input name="quanHe" value="cha con" style="display: none;"/>
+	                                                    <div class="fm-opt">
+	                                                      <label>Ngày Sinh:</label>
+	                                                      <input name="ngaySinh_tpgd" type="text"/>                                                 
+	                                                    </div>
+	                                                    <div class="fm-opt">
+	                                                      <label>Nghề nghiệp:</label>
+	                                                      <input name="ngheNghiep_tpgd" type="text"/>                                                 
+	                                                    </div>
                                                     </fieldset>
                                                     <div id="fm-submit" class="fm-req">
                                                       <input name="Submit" value="Submit" type="submit" />

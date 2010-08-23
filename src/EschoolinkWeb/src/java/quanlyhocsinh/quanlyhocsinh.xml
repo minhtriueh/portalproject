@@ -13,6 +13,10 @@
 			class="quanlyhocsinh.IndexWellCome">
 			<result name="success">/index.jsp</result>
 		</action>
+                <action name="TaoHocSinh"
+			class="quanlyhocsinh.TaoHocSinh">
+			<result name="success">/index.jsp?module=quanlyhocsinh&amp;page=taohocsinh</result>
+		</action>
 	</package>
 
 </struts>

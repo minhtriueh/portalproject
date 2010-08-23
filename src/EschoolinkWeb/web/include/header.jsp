@@ -39,7 +39,7 @@
                     <script type="text/javascript">swfobject.switchOffAutoHideShow();swfobject.registerObject("art-flash-object", "9.0.0", "expressInstall.swf");</script>
                     <div class="art-logo">
                         <h1 id="name-text" class="art-logo-name"><a href="#">ESchoolink</a></h1>
-                        <div id="slogan-text" class="art-logo-text">${tentruong} </div>
+                        <div id="slogan-text" class="art-logo-text">Cổng Thông Tin Trường THPT Hai Bà Trưng ^^</div>
                     </div>
                 </div>
                 <div class="art-nav">
@@ -60,7 +60,7 @@
                 			<ul>
                 				<li><a href="#">Học sinh</a>
                 					<ul>
-                						<li><a href="index.jsp?module=quanlyhocsinh&page=taohocsinh&r=no&l=no">Thêm học sinh</a></li>
+                						<li><a href="TaoHocSinh">Thêm học sinh</a></li>
                 						<li><a href="#">Tìm kiếm học sinh</a></li>
                 					</ul>
                 				</li>
