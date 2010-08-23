@@ -1,7 +1,8 @@
 <soapenv:Envelope xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:qld="QLDiemComApp">
   <soapenv:Body>
-    <qld:LayDanhSachDiemCuaChiTietSoDiemOperation>
-      <id_chitietsodiem>3</id_chitietsodiem>
-    </qld:LayDanhSachDiemCuaChiTietSoDiemOperation>
+    <qld:LuuDiemOperation>
+      <id_diem>65</id_diem>
+      <diem>10</diem>
+    </qld:LuuDiemOperation>
   </soapenv:Body>
 </soapenv:Envelope>
