@@ -110,6 +110,7 @@
             <xsd:element name="hovaten" type="xsd:string"></xsd:element>
             <xsd:element name="diemtrungbinh" type="xsd:double"></xsd:element>
             <xsd:element name="diem" type="xsd:double" maxOccurs="unbounded" minOccurs="0"></xsd:element>
+            <xsd:element name="id_diem" type="xsd:long" maxOccurs="unbounded" minOccurs="0"></xsd:element>
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="ListChiTietDiem">
