@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions targetNamespace="QLHocSinhComApp" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:ns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/ThemHocSinh" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns9="http://j2ee.netbeans.org/wsdl/QLHocSinh/TimHocSinhTheoKhoiLop" xmlns:ns5="http://j2ee.netbeans.org/wsdl/QLHocSinh/TimHocSinhTheoTen" xmlns:ns6="http://j2ee.netbeans.org/wsdl/QLHocSinh/UpdateThongTinHocSinh" xmlns:ns10="http://j2ee.netbeans.org/wsdl/QLHocSinh/XepLop" xmlns:ns7="http://j2ee.netbeans.org/wsdl/QLHocSinh/ChuyenLop" xmlns:ns11="http://j2ee.netbeans.org/wsdl/QLHocSinh/UpdateThanhPhanGiaDinh" xmlns:ns8="http://j2ee.netbeans.org/wsdl/QLHocSinh/TimHocSinhTheoLop" xmlns:ns2="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/XoaHocSinh" xmlns:ns1="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoHocBa" xmlns:ns4="http://j2ee.netbeans.org/wsdl/QLHocSinh/TimHocSinhByIdHocSinh" xmlns:ns3="http://j2ee.netbeans.org/wsdl/QLHocSinh/TimHocSinhByIDHocSinh" xmlns:tns="QLHocSinhComApp" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <import namespace="http://j2ee.netbeans.org/wsdl/QLHocSinh/UpdateThanhPhanGiaDinh" location="http://sanchikaro:9080/QLHocSinhComApp-sun-http-binding/QLHocSinh/interface_WSDL/UpdateThanhPhanGiaDinh.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QLHocSinh/XepLop" location="http://sanchikaro:9080/QLHocSinhComApp-sun-http-binding/QLHocSinh/interface_WSDL/XepLop.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QLHocSinh/UpdateThongTinHocSinh" location="http://sanchikaro:9080/QLHocSinhComApp-sun-http-binding/QLHocSinh/interface_WSDL/UpdateThongTinHocSinh.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QLHocSinh/TimHocSinhTheoTen" location="http://sanchikaro:9080/QLHocSinhComApp-sun-http-binding/QLHocSinh/interface_WSDL/TimHocSinhTheoTen.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QLHocSinh/TimHocSinhByIdHocSinh" location="http://sanchikaro:9080/QLHocSinhComApp-sun-http-binding/QLHocSinh/interface_WSDL/TimHocSinhByIdHocSinh.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QLHocSinh/TimHocSinhTheoKhoiLop" location="http://sanchikaro:9080/QLHocSinhComApp-sun-http-binding/QLHocSinh/interface_WSDL/TimHocSinhTheoKhoiLop.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QLHocSinh/ChuyenLop" location="http://sanchikaro:9080/QLHocSinhComApp-sun-http-binding/QLHocSinh/interface_WSDL/ChuyenLop.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoHocBa" location="http://sanchikaro:9080/QLHocSinhComApp-sun-http-binding/QLHocSinh/interface_WSDL/TaoHocBa.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/XoaHocSinh" location="http://sanchikaro:9080/QLHocSinhComApp-sun-http-binding/QLHocSinh/interface_WSDL/XoaHocSinh.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/ThemHocSinh" location="http://sanchikaro:9080/QLHocSinhComApp-sun-http-binding/QLHocSinh/interface_WSDL/ThemHocSinh.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QLHocSinh/TimHocSinhTheoLop" location="http://sanchikaro:9080/QLHocSinhComApp-sun-http-binding/QLHocSinh/interface_WSDL/TimHocSinhTheoLop.wsdl">
+    </import>
+  <portType name="dummyCasaPortType">
+  </portType>
+  <binding name="casaBinding12" type="ns11:UpdateThanhPhanGiaDinhPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="UpdateThanhPhanGiaDinhOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLHocSinhComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLHocSinhComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding7" type="ns6:UpdateThongTinHocSinhPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="UpdateThongTinHocSinhOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLHocSinhComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLHocSinhComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding8" type="ns7:ChuyenLopPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="ChuyenLopOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLHocSinhComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLHocSinhComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding10" type="ns8:TimHocSinhTheoLopPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="TimHocSinhTheoLopOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLHocSinhComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLHocSinhComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding5" type="ns5:TimHocSinhTheoTenPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="TimHocSinhTheoTenOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLHocSinhComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLHocSinhComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding11" type="ns10:XepLopPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="XepLopOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLHocSinhComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLHocSinhComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding6" type="tns:dummyCasaPortType">
+  </binding>
+  <binding name="casaBinding3" type="ns2:XoaHocSinhPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="XoaHocSinhOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLHocSinhComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLHocSinhComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding4" type="ns4:TimHocSinhByIdHocSinhPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="TimHocSinhByIdHocSinhOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLHocSinhComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLHocSinhComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding1" type="ns:ThemHocSinhPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="ThemHocSinhOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLHocSinhComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLHocSinhComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding2" type="ns1:TaoHocBaPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="TaoHocBaOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLHocSinhComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLHocSinhComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding9" type="ns9:TimHocSinhTheoKhoiLopPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="TimHocSinhTheoKhoiLopOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLHocSinhComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLHocSinhComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="QLHocSinhComAppService3">
+    <port name="XoaHocSinh" binding="tns:casaBinding3">
+      <soap:address location="http://sanchikaro:9080/QLHocSinhComAppService3/XoaHocSinh"/>
+    </port>
+  </service>
+  <service name="QLHocSinhComAppService2">
+    <port name="TaoHocBa" binding="tns:casaBinding2">
+      <soap:address location="http://sanchikaro:9080/QLHocSinhComAppService2/TaoHocBa"/>
+    </port>
+  </service>
+  <service name="QLHocSinhComAppService1">
+    <port name="ToHocSinh" binding="tns:casaBinding1">
+      <soap:address location="http://sanchikaro:9080/QLHocSinhComAppService1/ToHocSinh"/>
+    </port>
+  </service>
+  <service name="QLHocSinhComAppService10">
+    <port name="TimHocSinhTheoLop" binding="tns:casaBinding10">
+      <soap:address location="http://sanchikaro:9080/QLHocSinhComAppService10/TimHocSinhTheoLop"/>
+    </port>
+  </service>
+  <service name="QLHocSinhComAppService11">
+    <port name="XepLop" binding="tns:casaBinding11">
+      <soap:address location="http://sanchikaro:9080/QLHocSinhComAppService11/XepLop"/>
+    </port>
+  </service>
+  <service name="QLHocSinhComAppService12">
+    <port name="UpdateThanhPhanGiaDinh" binding="tns:casaBinding12">
+      <soap:address location="http://sanchikaro:9080/QLHocSinhComAppService12/UpdateThanhPhanGiaDinh"/>
+    </port>
+  </service>
+  <service name="QLHocSinhComAppService8">
+    <port name="ChuyenLop" binding="tns:casaBinding8">
+      <soap:address location="http://sanchikaro:9080/QLHocSinhComAppService8/ChuyenLop"/>
+    </port>
+  </service>
+  <service name="QLHocSinhComAppService9">
+    <port name="TimHocSinhTheoKhoiLop" binding="tns:casaBinding9">
+      <soap:address location="http://sanchikaro:9080/QLHocSinhComAppService9/TimHocSinhTheoKhoiLop"/>
+    </port>
+  </service>
+  <service name="QLHocSinhComAppService6">
+    <port name="casaPort1" binding="tns:casaBinding6">
+    </port>
+  </service>
+  <service name="QLHocSinhComAppService7">
+    <port name="UpdateThongTinHocSinh" binding="tns:casaBinding7">
+      <soap:address location="http://sanchikaro:9080/QLHocSinhComAppService7/UpdateThongTinHocSinh"/>
+    </port>
+  </service>
+  <service name="QLHocSinhComAppService4">
+    <port name="TImHocSinhByIDHocSinh" binding="tns:casaBinding4">
+      <soap:address location="http://sanchikaro:9080/QLHocSinhComAppService4/TImHocSinhByIDHocSinh"/>
+    </port>
+  </service>
+  <service name="QLHocSinhComAppService5">
+    <port name="TimHocSinhTheoTen" binding="tns:casaBinding5">
+      <soap:address location="http://sanchikaro:9080/QLHocSinhComAppService5/TimHocSinhTheoTen"/>
+    </port>
+  </service>
+</definitions>
