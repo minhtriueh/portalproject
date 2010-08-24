@@ -29,7 +29,7 @@
                                             </div>
                                             <div class="art-postcontent">
                                                 <!-- article-content -->
-                                                 <form id="fm-form" method="post" action="" >
+                                                 <form id="fm-form" method="post" action="TaoHocSinh_result" enctype="multipart/form-data">
                                                     <fieldset>
                                                     <legend>Thông tin học sinh</legend>
                                                     <div class="fm-req">
@@ -57,23 +57,23 @@
                                                     </div>
                                                     <div class="fm-opt">
                                                       <label>Hình ảnh:</label>
-                                                      <input name="hinhAnh" type="file" />
+                                                      <input name="upload" type="file" />
                                                     </div>
                                                     <div class="fm-req">
                                                       <label>Loại học sinh:</label>
-                                                      <select name="id_loaiHocSinh">
+                                                      <select name="idLoaihocsinh">
                                                       	<option value="">---</option>                                                      	
                                                       </select> 
                                                     </div>
                                                     <div class="fm-req">
                                                       <label>Chế độ ưu tiên:</label>
-                                                      <select name="id_cheDoUuTien">
+                                                      <select name="idChedouutien">
                                                       	<option value="">---</option>                                                      	
                                                       </select> 
                                                     </div>
                                                     <div class="fm-opt">
                                                       <label>Ghi chú:</label>
-                                                      <textarea rows="5" cols="10" name="giChu"></textarea>
+                                                      <textarea rows="5" cols="10" name="ghiChu"></textarea>
                                                     </div>
                                                     </fieldset>
                                                     
@@ -81,17 +81,17 @@
                                                     	<legend>Thông tin nơi ở</legend>
                                                     	<div class="fm-req">
 	                                                      <label>Nơi ở hiện tại:</label>
-	                                                      <input name="diachi" type="text"/>                                                   
+	                                                      <input name="diaChiNhaO" type="text"/>
 	                                                    </div>
 	                                                    <div class="fm-req">
 	                                                      <label>Quận/Huyện:</label>
-	                                                      <select name="id_quanhuyenthanhpho">
+	                                                      <select name="idQuanhuyenthanhpho">
 	                                                      	<option value="">----</option>                                                      	
 	                                                      </select>                                                      
 	                                                    </div>
 	                                                    <div class="fm-req">
 	                                                      <label>Tỉnh/Thành phố:</label>
-	                                                      <select name="id_tinh">
+	                                                      <select name="idTinh">
 	                                                      	<option value="">----</option>                                                      	
 	                                                      </select>                                                      
 	                                                    </div>
@@ -101,17 +101,17 @@
                                                     	<legend>Thông tin quê quán</legend>
                                                     	<div class="fm-req">
 	                                                      <label>Quê quán:</label>
-	                                                      <input name="diachi" type="text"/>                                                   
+	                                                      <input name="quequan" type="text"/>
 	                                                    </div>
 	                                                    <div class="fm-req">
 	                                                      <label>Quận/Huyện:</label>
-	                                                      <select name="id_quanhuyenthanhpho_qq">
+	                                                      <select name="idQuanhuyenthanhphoQq">
 	                                                      	<option value="">----</option>                                                      	
 	                                                      </select>                                                      
 	                                                    </div>
 	                                                    <div class="fm-req">
 	                                                      <label>Tỉnh/Thành phố:</label>
-	                                                      <select name="id_tinh_qq">
+	                                                      <select name="idTinhQq">
 	                                                      	<option value="">----</option>                                                      	
 	                                                      </select>                                                      
 	                                                    </div>
@@ -121,25 +121,25 @@
                                                     	<legend>Thông tin Đoàn/Đội</legend>
                                                     	<div class="fm-req">
 	                                                      <label>Có vào Đội:</label>
-	                                                       <select name="vaoDoi">
+	                                                       <select name="ketNapDoi">
 	                                                      	<option value="true">Có</option> 
 	                                                      	<option value="false">Không</option>                                                      	
 	                                                      </select>                                                 
 	                                                    </div>
 	                                                    <div class="fm-opt">
 	                                                      <label>Ngày vào Đội:</label>
-	                                                       <input name="ngayVaoDoi" type="text">	                                                      	                                               
+	                                                       <input name="ngayVaoDoi" type="text">
 	                                                    </div>
 	                                                    <div class="fm-req">
 	                                                      <label>Có vào Đoàn:</label>
-	                                                       <select name="vaoDoan">
+	                                                       <select name="ketNapDoan">
 	                                                      	<option value="true">Có</option> 
 	                                                      	<option value="false">Không</option>                                                      	
 	                                                      </select>                                                 
 	                                                    </div>
 	                                                    <div class="fm-opt">
 	                                                      <label>Ngày vào Đoàn:</label>
-	                                                       <input name="ngayVaoDoan" type="text">	                                                      	                                               
+	                                                       <input name="ngayVaoDoan" type="text">
 	                                                    </div>
                                                     </fieldset>
                                                     

@@ -17,6 +17,10 @@
 			class="quanlyhocsinh.TaoHocSinh">
 			<result name="success">/index.jsp?module=quanlyhocsinh&amp;page=taohocsinh</result>
 		</action>
+                <action name="TaoHocSinh_result"
+			class="quanlyhocsinh.TaoHocSinh_result">
+			<result name="success">/index.jsp?module=quanlyhocsinh&amp;page=taohocsinh_result</result>
+		</action>
 	</package>
 
 </struts>
