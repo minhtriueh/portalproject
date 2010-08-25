@@ -11,6 +11,6 @@
 
 	</package>
 	<include file="/quanlyhocsinh/quanlyhocsinh.xml"></include>
-        <include file="/Demo/demo.xml"></include>
-		<include file="/quanlydiem/quanlydiem.xml"></include>
+    <include file="/Demo/demo.xml"></include>
+	<include file="/quanlydiem/quanlydiem.xml"></include>
 </struts>
