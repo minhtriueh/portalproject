@@ -29,7 +29,7 @@
                                             </div>
                                             <div class="art-postcontent">
                                                 <!-- article-content -->
-                                                <form action="#" method="post">
+                                                <form action="ajax_getHuyen" method="post">
                                                     <label>Tinh</label>
                                                     <select name="tinh" id="selecTinh">
                                                         <option value="1">Tay Ninh</option>
@@ -38,7 +38,7 @@
                                                     </select><br />
                                                      <label>Huyện</label>
                                                     <select name="tinh" id="selectHuyen">
-                                                        
+                                                        <option></option>
                                                     </select>
                                                 </form>
 

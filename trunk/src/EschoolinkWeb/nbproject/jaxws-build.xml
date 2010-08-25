@@ -14,21 +14,21 @@
             <isset property="conf.dir"/>
         </condition>
     </target>
-    <target name="wsimport-client-ToHocSinh" depends="wsimport-init">
-        <mkdir dir="${build.generated.dir}/jax-wsCache/ToHocSinh"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ToHocSinh" destdir="${build.generated.dir}/jax-wsCache/ToHocSinh" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/ToHocSinh/wsdl/localhost_9080/QLHocSinhComAppService1/ToHocSinh.wsdl" catalog="catalog.xml" extension="true" verbose="true" wsdlLocation="http://localhost:9080/QLHocSinhComAppService1/ToHocSinh?WSDL" xnocompile="true">
-            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/ToHocSinh/wsdl/localhost_9080/QLHocSinhComAppService1/ToHocSinh.wsdl"/>
-            <produces dir="${build.generated.dir}/jax-wsCache/ToHocSinh"/>
+    <target name="wsimport-client-LoadSoDiem" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/LoadSoDiem"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/LoadSoDiem" destdir="${build.generated.dir}/jax-wsCache/LoadSoDiem" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/LoadSoDiem/wsdl/localhost_18001/QLDiemComApp/LoadSoDiem.wsdl" catalog="catalog.xml" extension="true" verbose="true" wsdlLocation="http://localhost:18001/QLDiemComApp/LoadSoDiem?WSDL" xnocompile="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/LoadSoDiem/wsdl/localhost_18001/QLDiemComApp/LoadSoDiem.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/LoadSoDiem"/>
         </wsimport>
         <copy todir="${build.generated.sources.dir}/jax-ws">
-            <fileset dir="${build.generated.dir}/jax-wsCache/ToHocSinh">
+            <fileset dir="${build.generated.dir}/jax-wsCache/LoadSoDiem">
                 <include name="**/*.java"/>
             </fileset>
         </copy>
     </target>
-    <target name="wsimport-client-clean-ToHocSinh" depends="-init-project">
-        <delete dir="${build.generated.sources.dir}/jax-ws/qlhocsinhcomapp"/>
-        <delete dir="${build.generated.dir}/jax-wsCache/ToHocSinh"/>
+    <target name="wsimport-client-clean-LoadSoDiem" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/qldiemcomapp"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/LoadSoDiem"/>
     </target>
-    <target name="wsimport-client-generate" depends="wsimport-client-ToHocSinh"/>
+    <target name="wsimport-client-generate" depends="wsimport-client-LoadSoDiem"/>
 </project>

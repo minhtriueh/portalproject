@@ -35,41 +35,41 @@ public class TaoHocSinh_result {
     public String execute() throws Exception {
 
 
-        try { // Call Web Service Operation
-            qlhocsinhcomapp.QLHocSinhComAppService1 service = new qlhocsinhcomapp.QLHocSinhComAppService1();
-            qlhocsinhcomapp.ThemHocSinhPortType port = service.getToHocSinh();
-            // TODO initialize WS operation arguments here
-            java.lang.String username = "";
-            java.lang.String password = "";
-
-            java.lang.String maso = "";
-            
-            long idThonxom = Long.parseLong("0");
-            long idXaphuongthitran = Long.parseLong("0");
-
-
-            java.lang.String hinhAnh = "";
-                    
-
-            long idXaphuongthitranQq = Long.parseLong("0");
-            long idThonxomQq = Long.parseLong("0");
-
-            org.netbeans.xml.schema.eschoolinkobject.ThanhPhanGiaDinh thanhPhanGiaDinh = new org.netbeans.xml.schema.eschoolinkobject.ThanhPhanGiaDinh();
-            // TODO process result here
-            for(int i=0;i<ten_tpgd.length;i++){
-                if(!ten_tpgd[i].equals("")){
-                    ChiTietThanhPhanGiaDinh e=new ChiTietThanhPhanGiaDinh();
-                    e.setHoTen(ten_tpgd[i]);
-                    e.setNgheNghiep(ngheNghiep_tpgd[i]);
-                    e.setNgaySinh(new MyGregorianCalendar(ngaySinh_tpgd[i]).getMyXMLGregorianCalendar());
-                    e.setTenQuanHe(quanHe[i]);
-                }
-            }
-            long result = port.themHocSinhOperation(username, password, hoVaTenLot, ten, maso, ngaySinh, gioiTinh, diaChiNhaO, idThonxom, idXaphuongthitran, idQuanhuyenthanhpho, idDantoc, tonGiao, hinhAnh, ketNapDoi, ngayVaoDoi, ketNapDoan, ngayVaoDoan, ghiChu, idChedouutien, idLop, idLoaihocsinh, idKhuvuc, idTinh, quequan, idQuanhuyenthanhphoQq, idXaphuongthitranQq, idThonxomQq, idTinhQq, thanhPhanGiaDinh);
-
-        } catch (Exception ex) {
-            // TODO handle custom exceptions here
-        }
+//        try { // Call Web Service Operation
+//            qlhocsinhcomapp.QLHocSinhComAppService1 service = new qlhocsinhcomapp.QLHocSinhComAppService1();
+//            qlhocsinhcomapp.ThemHocSinhPortType port = service.getToHocSinh();
+//            // TODO initialize WS operation arguments here
+//            java.lang.String username = "";
+//            java.lang.String password = "";
+//
+//            java.lang.String maso = "";
+//
+//            long idThonxom = Long.parseLong("0");
+//            long idXaphuongthitran = Long.parseLong("0");
+//
+//
+//            java.lang.String hinhAnh = "";
+//
+//
+//            long idXaphuongthitranQq = Long.parseLong("0");
+//            long idThonxomQq = Long.parseLong("0");
+//
+//            org.netbeans.xml.schema.eschoolinkobject.ThanhPhanGiaDinh thanhPhanGiaDinh = new org.netbeans.xml.schema.eschoolinkobject.ThanhPhanGiaDinh();
+//            // TODO process result here
+//            for(int i=0;i<ten_tpgd.length;i++){
+//                if(!ten_tpgd[i].equals("")){
+//                    ChiTietThanhPhanGiaDinh e=new ChiTietThanhPhanGiaDinh();
+//                    e.setHoTen(ten_tpgd[i]);
+//                    e.setNgheNghiep(ngheNghiep_tpgd[i]);
+//                    e.setNgaySinh(new MyGregorianCalendar(ngaySinh_tpgd[i]).getMyXMLGregorianCalendar());
+//                    e.setTenQuanHe(quanHe[i]);
+//                }
+//            }
+//            long result = port.themHocSinhOperation(username, password, hoVaTenLot, ten, maso, ngaySinh, gioiTinh, diaChiNhaO, idThonxom, idXaphuongthitran, idQuanhuyenthanhpho, idDantoc, tonGiao, hinhAnh, ketNapDoi, ngayVaoDoi, ketNapDoan, ngayVaoDoan, ghiChu, idChedouutien, idLop, idLoaihocsinh, idKhuvuc, idTinh, quequan, idQuanhuyenthanhphoQq, idXaphuongthitranQq, idThonxomQq, idTinhQq, thanhPhanGiaDinh);
+//
+//        } catch (Exception ex) {
+//            // TODO handle custom exceptions here
+//        }
 
 
         return "success";

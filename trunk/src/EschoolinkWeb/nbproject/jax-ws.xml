@@ -2,10 +2,10 @@
 <jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
   <services/>
   <clients>
-    <client name="ToHocSinh">
-      <wsdl-url>http://localhost:9080/QLHocSinhComAppService1/ToHocSinh?WSDL</wsdl-url>
-      <local-wsdl-file>localhost_9080/QLHocSinhComAppService1/ToHocSinh.wsdl</local-wsdl-file>
-      <package-name>qlhocsinhcomapp</package-name>
+    <client name="LoadSoDiem">
+      <wsdl-url>http://localhost:18001/QLDiemComApp/LoadSoDiem?WSDL</wsdl-url>
+      <local-wsdl-file>localhost_18001/QLDiemComApp/LoadSoDiem.wsdl</local-wsdl-file>
+      <package-name>qldiemcomapp</package-name>
       <catalog-file>catalog.xml</catalog-file>
       <wsimport-options>
         <wsimport-option>
@@ -18,7 +18,7 @@
         </wsimport-option>
         <wsimport-option>
           <wsimport-option-name>wsdlLocation</wsimport-option-name>
-          <wsimport-option-value>http://localhost:9080/QLHocSinhComAppService1/ToHocSinh?WSDL</wsimport-option-value>
+          <wsimport-option-value>http://localhost:18001/QLDiemComApp/LoadSoDiem?WSDL</wsimport-option-value>
         </wsimport-option>
         <wsimport-option>
           <wsimport-option-name>xnocompile</wsimport-option-name>
