@@ -18,7 +18,7 @@
 
         <action name="LuuDiem" class="quanlydiem.LuuDiem">
             <result name="success">/index.jsp?module=quanlydiem&amp;page=luudiem&amp;r=no&amp;l=no</result>
-            <result name="error">/index.jsp</result>
+            <result name="error">/index.jsp?module=quanlydiem&amp;page=luudiem</result>
         </action>
 
     </package>

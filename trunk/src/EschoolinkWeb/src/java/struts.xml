@@ -4,17 +4,17 @@
     "struts-2.0.dtd">
 <struts>
 
-	<constant name="struts.enable.DynamicMethodInvocation"
+    <constant name="struts.enable.DynamicMethodInvocation"
 		value="false" />
-	<constant name="struts.devMode" value="false" />
-	<package name="default" extends="struts-default">
+    <constant name="struts.devMode" value="false" />
+    <package name="default" extends="struts-default">
 
-	</package>
+    </package>
        
-	<include file="/quanlyhocsinh/quanlyhocsinh.xml"></include>
+    <include file="/quanlyhocsinh/quanlyhocsinh.xml"></include>
     <include file="/Demo/demo.xml"></include>
-	<include file="/quanlydiem/quanlydiem.xml"></include>
-        <include file="/quanlyhocsinh/quanlyhocsinh.xml"></include>
-        <include file="/quanlydiachi/quanlydiachi.xml"></include>
+    <include file="/quanlydiem/quanlydiem.xml"></include>
+    <include file="/quanlyhocsinh/quanlyhocsinh.xml"></include>
+    <include file="/quanlydiachi/quanlydiachi.xml"></include>
         
 </struts>

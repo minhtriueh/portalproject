@@ -22,15 +22,15 @@ public class LayDanhSachHuyen {
     public String execute() throws Exception {
 
         try { // Call Web Service Operation
-            quanlydiachicomapp.QuanLyDiaChiComAppService10 service = new quanlydiachicomapp.QuanLyDiaChiComAppService10();
-            quanlydiachicomapp.LayDanhSachHuyenPortType port = service.getLayDanhSachHuyen();
-            // TODO initialize WS operation arguments here
-
-            // TODO process result here
-            org.netbeans.xml.schema.eschoolinkobject.ListHuyen result = port.layDanhSachHuyenOperation(idTinh);
-            for (int i = 0; i < result.getQuanHuyenThanhPho().size(); i++) {
-                listHuyen.add(result.getQuanHuyenThanhPho().get(i));
-            }
+//            quanlydiachicomapp.QuanLyDiaChiComAppService10 service = new quanlydiachicomapp.QuanLyDiaChiComAppService10();
+//            quanlydiachicomapp.LayDanhSachHuyenPortType port = service.getLayDanhSachHuyen();
+//            // TODO initialize WS operation arguments here
+//
+//            // TODO process result here
+//            org.netbeans.xml.schema.eschoolinkobject.ListHuyen result = port.layDanhSachHuyenOperation(idTinh);
+//            for (int i = 0; i < result.getQuanHuyenThanhPho().size(); i++) {
+//                listHuyen.add(result.getQuanHuyenThanhPho().get(i));
+//            }
         } catch (Exception ex) {
             // TODO handle custom exceptions here
         }
@@ -54,5 +54,5 @@ public class LayDanhSachHuyen {
         this.listHuyen = listHuyen;
     }
 
-   
+
 }

@@ -154,12 +154,18 @@ public class NhapDiem {
         this.monhoc = monhoc;
     }
 
-    public static void main(String[] s) {
-        try {
-            NhapDiem nd = new NhapDiem();
-            nd.execute();
-        } catch (Exception ex) {
-            System.err.println(ex.getMessage());
-        }
-    }
+//    public static void main(String[] s) {
+//        try {
+////            NhapDiem nd = new NhapDiem();
+////            nd.execute();
+//            List<Integer> list = new ArrayList<Integer>();
+//            for (int i = 0; i < 63; i++) {
+//                list.add(i);
+//                System.err.println(i);
+//            }
+//            System.err.println("size "+list.subList(0, 13).size());
+//        } catch (Exception ex) {
+//            System.err.println(ex.getMessage());
+//        }
+//    }
 }

@@ -19,8 +19,9 @@
         <h1>Nhập Điểm Thành Công</h1>
         <form action="BatDauNhapDiem" method="post">
             <div id="fm-submit" class="fm-req">
-                <input type="submit" value="Tiep Tuc Nhap Diem">
+                <input type="submit" value="Tiếp Tục Nhập Điểm">
             </div>
         </form>
+        <br>
     </body>
 </html>

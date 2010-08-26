@@ -8,6 +8,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
     "http://www.w3.org/TR/html4/loose.dtd">
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@taglib prefix="s" uri="/struts-tags" %>
 
 
@@ -80,15 +81,21 @@
                                             </td>
                                         </c:if>
                                     </c:forEach>
-                                    <td><c:out value="${chitietdiem.diemtrungbinh}"></c:out></td>
+                                    <td>
+                                        <fmt:formatNumber value="${chitietdiem.diemtrungbinh}" maxFractionDigits="2" minFractionDigits="1"></fmt:formatNumber>
+                                    </td>
                                 </tr>
                             </c:forEach>
                             <!-- ket thuc hien thi danh sach hoc sinh va danh sach diem cua hoc sinh -->
                         </table>
+                        <!-- luu tat ca cac bien iddiem -->
                         <c:forEach var="chitietdiem" items="${chitietdiems}">
                             <c:forEach var="chitietid" items="${chitietdiem.idDiem}">
                                 <input type="hidden" name="iddiemnhap" value="${chitietid}">
                             </c:forEach>
+                        </c:forEach>
+                        <c:forEach var="chitietdiem" items="${chitietdiems}">
+                            <input type="hidden" name="idchitietsodiem" value="${chitietdiem.idChitietsodiem}">
                         </c:forEach>
                     </div>
                     <!-- ket thuc bang -->
