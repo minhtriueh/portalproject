@@ -60,23 +60,7 @@
                     </div>
                 </form>
                 <!-- ket thuc thong tin -->
-
-                <%--<c:if test="${not empty nhapdiem}">
-                    <!-- bat dau bang -->
-                    <div>
-                        <table>
-                            <tr>
-                                <td>STT</td>
-                                <td>Ho Va Ten</td>
-                                <td>TBHK</td>
-                            </tr>
-                        </table>
-                    </div>
-                    <!-- ket thuc bang -->
-                    <c:out value="${lop}"></c:out>
-                    <c:out value="${chitietsodiems}"></c:out>
-                </c:if>--%>
-
+                
                 <div class="cleared"></div>
             </div>
             <div class="cleared"></div>

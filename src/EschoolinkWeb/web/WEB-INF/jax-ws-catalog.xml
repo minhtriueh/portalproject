@@ -30,6 +30,10 @@
     <system systemId="http://nguyentanmo-PC:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/LayDanhSachHeSoCotDiem.wsdl" uri="wsdl/nguyentanmo-PC_18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/LayDanhSachHeSoCotDiem.wsdl"/>
     <system systemId="http://nguyentanmo-PC:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/DB_WSDL/DB_LayDanhSachHeSoCotDiem.xsd" uri="wsdl/nguyentanmo-PC_18001/QLDiemComApp-sun-http-binding/QuanLyDiem/DB_WSDL/DB_LayDanhSachHeSoCotDiem.xsd"/>
     <system systemId="http://localhost:18001/QLDiemComApp/LayDanhSachHeSoCotDiem?WSDL" uri="wsdl/localhost_18001/QLDiemComApp/LayDanhSachHeSoCotDiem.wsdl"/>
+<<<<<<< .mine
+    <system systemId="http://localhost:18001/QLDiemComApp/NhapDiem?WSDL" uri="wsdl/localhost_18001/QLDiemComApp/NhapDiem.wsdl"/>
+    <system systemId="http://nguyentanmo-PC:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/LayDanhSachHeSo.wsdl" uri="wsdl/nguyentanmo-PC_18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/LayDanhSachHeSo.wsdl"/>
+=======
     <system systemId="http://localhost:9080/QLThoiKhoaBieuService1/TaoThoiKhoaBieu?WSDL" uri="wsdl/localhost_9080/QLThoiKhoaBieuService1/TaoThoiKhoaBieu.wsdl"/>
     <system systemId="http://sanchikaro:9080/QLThoiKhoaBieu-sun-http-binding/QuanLyThoiKhoaBieu/interface_WSDL/LayThoiKhoaBieuTheoLop.wsdl" uri="wsdl/sanchikaro_9080/QLThoiKhoaBieu-sun-http-binding/QuanLyThoiKhoaBieu/interface_WSDL/LayThoiKhoaBieuTheoLop.wsdl"/>
     <system systemId="http://sanchikaro:9080/QLThoiKhoaBieu-sun-http-binding/QuanLyThoiKhoaBieu/interface_WSDL/ThemThoiKhoaBieu.wsdl" uri="wsdl/sanchikaro_9080/QLThoiKhoaBieu-sun-http-binding/QuanLyThoiKhoaBieu/interface_WSDL/ThemThoiKhoaBieu.wsdl"/>
@@ -76,6 +80,7 @@
     <system systemId="http://sanchikaro:9080/QuanLyDiaChiComApp-sun-http-binding/QuanLyDiaChi/interface_WSDL/LayDanhSachKhuVuc.wsdl" uri="wsdl/sanchikaro_9080/QuanLyDiaChiComApp-sun-http-binding/QuanLyDiaChi/interface_WSDL/LayDanhSachKhuVuc.wsdl"/>
     <system systemId="http://sanchikaro:9080/QuanLyThongTinKhoiTaoComApp-sun-http-binding/QuanLyThongTinKhoiTaoHeThong/interface_WSDL/GetAllLop.wsdl" uri="wsdl/sanchikaro_9080/QuanLyThongTinKhoiTaoComApp-sun-http-binding/QuanLyThongTinKhoiTaoHeThong/interface_WSDL/GetAllLop.wsdl"/>
     <system systemId="http://sanchikaro:9080/QuanLyThongTinKhoiTaoComApp-sun-http-binding/QuanLyThongTinKhoiTaoHeThong/interface_WSDL/GetAllDanToc.wsdl" uri="wsdl/sanchikaro_9080/QuanLyThongTinKhoiTaoComApp-sun-http-binding/QuanLyThongTinKhoiTaoHeThong/interface_WSDL/GetAllDanToc.wsdl"/>
+>>>>>>> .r208
 </catalog>
 
 
@@ -85,4 +90,51 @@
 
 
 
+
+<<<<<<< .mine
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=======
+>>>>>>> .r208
 
