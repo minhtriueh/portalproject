@@ -35,7 +35,9 @@ WHERE
   chitietsodiem.id_sodiem = sodiem.id_sodiem AND
   sodiem.id_monhoc = ? AND
   sodiem.id_lop = ? AND
-  sodiem.hocky = ?;"/>
+  sodiem.hocky = ?
+ORDER BY
+chitietsodiem.id_chitietsodiem;"/>
       </input>
       <output name="output">
     <jdbc:output xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" returnPartName="part"/>
@@ -51,4 +53,5 @@ WHERE
         <plink:role name="jdbcPortTypeRole" portType="tns:jdbcPortType"/>
     </plink:partnerLinkType>
 </definitions>
+
 
