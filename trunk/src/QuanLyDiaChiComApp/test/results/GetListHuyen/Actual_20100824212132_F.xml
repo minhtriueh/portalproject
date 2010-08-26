@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP-ENV:Body>
+    <m:LayDanhSachHuyenOperationResponse xmlns:m="QuanLyDiaChiComApp" xmlns:msgns="http://j2ee.netbeans.org/wsdl/QuanLyDiaChi/LayDanhSachHuyen">
+      <part1>
+        <ns1:QuanHuyenThanhPho xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">133</ns1:id>
+          <ns1:tenQuanHuyenThanhPho isNull="false">Bến Cầu</ns1:tenQuanHuyenThanhPho>
+        </ns1:QuanHuyenThanhPho>
+        <ns1:QuanHuyenThanhPho xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">137</ns1:id>
+          <ns1:tenQuanHuyenThanhPho isNull="false">Châu Thành</ns1:tenQuanHuyenThanhPho>
+        </ns1:QuanHuyenThanhPho>
+        <ns1:QuanHuyenThanhPho xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">134</ns1:id>
+          <ns1:tenQuanHuyenThanhPho isNull="false">Dương Minh Châu</ns1:tenQuanHuyenThanhPho>
+        </ns1:QuanHuyenThanhPho>
+        <ns1:QuanHuyenThanhPho xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">138</ns1:id>
+          <ns1:tenQuanHuyenThanhPho isNull="false">Gò Dầu</ns1:tenQuanHuyenThanhPho>
+        </ns1:QuanHuyenThanhPho>
+        <ns1:QuanHuyenThanhPho xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">139</ns1:id>
+          <ns1:tenQuanHuyenThanhPho isNull="false">Hòa Thành</ns1:tenQuanHuyenThanhPho>
+        </ns1:QuanHuyenThanhPho>
+        <ns1:QuanHuyenThanhPho xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">135</ns1:id>
+          <ns1:tenQuanHuyenThanhPho isNull="false">Tân Biên</ns1:tenQuanHuyenThanhPho>
+        </ns1:QuanHuyenThanhPho>
+        <ns1:QuanHuyenThanhPho xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">136</ns1:id>
+          <ns1:tenQuanHuyenThanhPho isNull="false">Tân Châu</ns1:tenQuanHuyenThanhPho>
+        </ns1:QuanHuyenThanhPho>
+        <ns1:QuanHuyenThanhPho xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">140</ns1:id>
+          <ns1:tenQuanHuyenThanhPho isNull="false">Trảng Bàng</ns1:tenQuanHuyenThanhPho>
+        </ns1:QuanHuyenThanhPho>
+      </part1>
+    </m:LayDanhSachHuyenOperationResponse>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

@@ -14,7 +14,7 @@
         <part name="hoVaTenLot" type="xsd:string"/>
         <part name="ten" type="xsd:string"/>
         <part name="maso" type="xsd:string"/>
-        <part name="ngaySinh" type="xsd:date"/>
+        <part name="ngaySinh" type="xsd:string"/>
         <part name="gioiTinh" type="xsd:string"/>
         <part name="diaChiNhaO" type="xsd:string"/>
         <part name="id_thonxom" type="xsd:long"/>
@@ -24,9 +24,9 @@
         <part name="tonGiao" type="xsd:string"/>
         <part name="hinhAnh" type="xsd:string"/>
         <part name="ketNapDoi" type="xsd:boolean"/>
-        <part name="ngayVaoDoi" type="xsd:date"/>
+        <part name="ngayVaoDoi" type="xsd:string"/>
         <part name="ketNapDoan" type="xsd:boolean"/>
-        <part name="ngayVaoDoan" type="xsd:date"/>
+        <part name="ngayVaoDoan" type="xsd:string"/>
         <part name="ghiChu" type="xsd:string"/>
         <part name="id_chedouutien" type="xsd:long"/>
         <part name="id_lop" type="xsd:long"/>
@@ -56,6 +56,7 @@ A partner link type characterizes the conversational relationship between two se
         <plnk:role name="ThemHocSinhPortTypeRole" portType="tns:ThemHocSinhPortType"/>
     </plnk:partnerLinkType>
 </definitions>
+
 
 
 

@@ -28,12 +28,9 @@
                                                 </h2>
                                             </div>
                                             <div class="art-postcontent">
-                                                <!-- article-content -->
-                                                 ${filename} dsfsfdsf
-
-
-
-
+                                                <!-- article-content -->                                                 
+                                                 <img src="images/Upload/Icon/icon_${hinhAnh}" title="hinh icon"/>
+                                                 
                                                 <!-- /article-content -->
                                             </div>
                                             <div class="cleared"></div>

@@ -1,65 +1,110 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<jbi xmlns="http://java.sun.com/xml/ns/jbi" xmlns:ns0="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/TaoCheDoUuTien" xmlns:ns1="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_CheDoUuTienInsert" xmlns:ns10="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_TaoLop" xmlns:ns11="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoLop" xmlns:ns12="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/TaoNamHoc" xmlns:ns13="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_TaoNamHoc" xmlns:ns14="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoNamHoc" xmlns:ns15="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/UpdateDanToc" xmlns:ns16="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_DanToc_update" xmlns:ns17="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/UpdateDanToc" xmlns:ns18="http://www.sun.com/jbi/descriptor/service-unit" xmlns:ns2="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoCheDoUuTien" xmlns:ns3="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/TaoDanToc" xmlns:ns4="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_DanToc_insert" xmlns:ns5="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoDanToc" xmlns:ns6="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/TaoLoaiHocSinh" xmlns:ns7="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_LoaiHocSinh" xmlns:ns8="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoLoaiHocSinh" xmlns:ns9="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/TaoLop" version="1.0">
+<jbi xmlns="http://java.sun.com/xml/ns/jbi" xmlns:ns0="http://enterprise.netbeans.org/bpel/QuanLyThongTinKhoiTaoHeThong/LayDanhSachCheDoUuTien" xmlns:ns1="http://j2ee.netbeans.org/wsdl/QuanLyThongTinKhoiTaoHeThong/GetAllCheDoUuTien" xmlns:ns10="http://j2ee.netbeans.org/wsdl/QuanLyThongTinKhoiTaoHeThong/DB_LayNamHocHienTai" xmlns:ns11="http://j2ee.netbeans.org/wsdl/QuanLyThongTinKhoiTaoHeThong/DB_GetAllLop" xmlns:ns12="http://j2ee.netbeans.org/wsdl/QuanLyThongTinKhoiTaoHeThong/GetAllLop" xmlns:ns13="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/TaoCheDoUuTien" xmlns:ns14="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_CheDoUuTienInsert" xmlns:ns15="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoCheDoUuTien" xmlns:ns16="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/TaoDanToc" xmlns:ns17="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_DanToc_insert" xmlns:ns18="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoDanToc" xmlns:ns19="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/TaoLoaiHocSinh" xmlns:ns2="http://j2ee.netbeans.org/wsdl/QuanLyThongTinKhoiTaoHeThong/DB_GetAllCheDoUuTien" xmlns:ns20="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_LoaiHocSinh" xmlns:ns21="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoLoaiHocSinh" xmlns:ns22="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/TaoLop" xmlns:ns23="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_TaoLop" xmlns:ns24="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoLop" xmlns:ns25="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/TaoNamHoc" xmlns:ns26="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_TaoNamHoc" xmlns:ns27="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoNamHoc" xmlns:ns28="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/UpdateDanToc" xmlns:ns29="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_DanToc_update" xmlns:ns3="http://enterprise.netbeans.org/bpel/QuanLyThongTinKhoiTaoHeThong/LayDanhSachDanToc" xmlns:ns30="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/UpdateDanToc" xmlns:ns31="http://www.sun.com/jbi/descriptor/service-unit" xmlns:ns4="http://j2ee.netbeans.org/wsdl/QuanLyThongTinKhoiTaoHeThong/DB_GetAllDanToc" xmlns:ns5="http://j2ee.netbeans.org/wsdl/QuanLyThongTinKhoiTaoHeThong/GetAllDanToc" xmlns:ns6="http://enterprise.netbeans.org/bpel/QuanLyThongTinKhoiTaoHeThong/LayDanhSachLoaiHocSinh" xmlns:ns7="http://j2ee.netbeans.org/wsdl/QuanLyThongTinKhoiTaoHeThong/DB_GetAllLoaiHocSinh" xmlns:ns8="http://j2ee.netbeans.org/wsdl/QuanLyThongTinKhoiTaoHeThong/GetAllLoaiHocSinh" xmlns:ns9="http://enterprise.netbeans.org/bpel/QuanLyThongTinKhoiTaoHeThong/LayDanhSachLop" version="1.0">
     <services binding-component="false">
-        <provides endpoint-name="TaoCheDoUuTienPortTypeRole_myRole" interface-name="ns2:TaoCheDoUuTienPortType" service-name="ns0:plTaoCheDoUuTien">
-            <ns18:display-name>plTaoCheDoUuTien</ns18:display-name>
-            <ns18:process-name>TaoCheDoUuTien</ns18:process-name>
-            <ns18:file-path>processor_BPEL\TaoCheDoUuTien.bpel</ns18:file-path>
+        <provides endpoint-name="GetAllCheDoUuTienPortTypeRole_myRole" interface-name="ns1:GetAllCheDoUuTienPortType" service-name="ns0:PartnerLink2">
+            <ns31:display-name>PartnerLink2</ns31:display-name>
+            <ns31:process-name>LayDanhSachCheDoUuTien</ns31:process-name>
+            <ns31:file-path>processor_BPEL\LayDanhSachCheDoUuTien.bpel</ns31:file-path>
         </provides>
-        <provides endpoint-name="TaoDanTocPortTypeRole_myRole" interface-name="ns5:TaoDanTocPortType" service-name="ns3:PartnerLink1">
-            <ns18:display-name>PartnerLink1</ns18:display-name>
-            <ns18:process-name>TaoDanToc</ns18:process-name>
-            <ns18:file-path>processor_BPEL\TaoDanToc.bpel</ns18:file-path>
+        <provides endpoint-name="GetAllDanTocPortTypeRole_myRole" interface-name="ns5:GetAllDanTocPortType" service-name="ns3:PartnerLink1">
+            <ns31:display-name>PartnerLink1</ns31:display-name>
+            <ns31:process-name>LayDanhSachDanToc</ns31:process-name>
+            <ns31:file-path>processor_BPEL\LayDanhSachDanToc.bpel</ns31:file-path>
         </provides>
-        <provides endpoint-name="TaoLoaiHocSinhPortTypeRole_myRole" interface-name="ns8:TaoLoaiHocSinhPortType" service-name="ns6:PartnerLink1">
-            <ns18:display-name>PartnerLink1</ns18:display-name>
-            <ns18:process-name>TaoLoaiHocSinh</ns18:process-name>
-            <ns18:file-path>processor_BPEL\TaoLoaiHocSinh.bpel</ns18:file-path>
+        <provides endpoint-name="GetAllLoaiHocSinhPortTypeRole_myRole" interface-name="ns8:GetAllLoaiHocSinhPortType" service-name="ns6:PartnerLink1">
+            <ns31:display-name>PartnerLink1</ns31:display-name>
+            <ns31:process-name>LayDanhSachLoaiHocSinh</ns31:process-name>
+            <ns31:file-path>processor_BPEL\LayDanhSachLoaiHocSinh.bpel</ns31:file-path>
         </provides>
-        <provides endpoint-name="TaoLopPortTypeRole_myRole" interface-name="ns11:TaoLopPortType" service-name="ns9:PartnerLink1">
-            <ns18:display-name>PartnerLink1</ns18:display-name>
-            <ns18:process-name>TaoLop</ns18:process-name>
-            <ns18:file-path>processor_BPEL\TaoNamHocMoi\TaoLop.bpel</ns18:file-path>
+        <provides endpoint-name="GetAllLopPortTypeRole_myRole" interface-name="ns12:GetAllLopPortType" service-name="ns9:PartnerLink1">
+            <ns31:display-name>PartnerLink1</ns31:display-name>
+            <ns31:process-name>LayDanhSachLop</ns31:process-name>
+            <ns31:file-path>processor_BPEL\LayDanhSachLop.bpel</ns31:file-path>
         </provides>
-        <provides endpoint-name="TaoNamHocPortTypeRole_myRole" interface-name="ns14:TaoNamHocPortType" service-name="ns12:PartnerLink1">
-            <ns18:display-name>PartnerLink1</ns18:display-name>
-            <ns18:process-name>TaoNamHoc</ns18:process-name>
-            <ns18:file-path>processor_BPEL\TaoNamHocMoi\TaoNamHoc.bpel</ns18:file-path>
+        <provides endpoint-name="TaoCheDoUuTienPortTypeRole_myRole" interface-name="ns15:TaoCheDoUuTienPortType" service-name="ns13:plTaoCheDoUuTien">
+            <ns31:display-name>plTaoCheDoUuTien</ns31:display-name>
+            <ns31:process-name>TaoCheDoUuTien</ns31:process-name>
+            <ns31:file-path>processor_BPEL\TaoCheDoUuTien.bpel</ns31:file-path>
         </provides>
-        <provides endpoint-name="UpdateDanTocPortTypeRole_myRole" interface-name="ns17:UpdateDanTocPortType" service-name="ns15:plUpdateDanToc">
-            <ns18:display-name>plUpdateDanToc</ns18:display-name>
-            <ns18:process-name>UpdateDanToc</ns18:process-name>
-            <ns18:file-path>processor_BPEL\UpdateDanToc.bpel</ns18:file-path>
+        <provides endpoint-name="TaoDanTocPortTypeRole_myRole" interface-name="ns18:TaoDanTocPortType" service-name="ns16:PartnerLink1">
+            <ns31:display-name>PartnerLink1</ns31:display-name>
+            <ns31:process-name>TaoDanToc</ns31:process-name>
+            <ns31:file-path>processor_BPEL\TaoDanToc.bpel</ns31:file-path>
         </provides>
-        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns1:jdbcPortType" service-name="ns0:PartnerLink1">
-            <ns18:display-name>PartnerLink1</ns18:display-name>
-            <ns18:process-name>TaoCheDoUuTien</ns18:process-name>
-            <ns18:file-path>processor_BPEL\TaoCheDoUuTien.bpel</ns18:file-path>
+        <provides endpoint-name="TaoLoaiHocSinhPortTypeRole_myRole" interface-name="ns21:TaoLoaiHocSinhPortType" service-name="ns19:PartnerLink1">
+            <ns31:display-name>PartnerLink1</ns31:display-name>
+            <ns31:process-name>TaoLoaiHocSinh</ns31:process-name>
+            <ns31:file-path>processor_BPEL\TaoLoaiHocSinh.bpel</ns31:file-path>
+        </provides>
+        <provides endpoint-name="TaoLopPortTypeRole_myRole" interface-name="ns24:TaoLopPortType" service-name="ns22:PartnerLink1">
+            <ns31:display-name>PartnerLink1</ns31:display-name>
+            <ns31:process-name>TaoLop</ns31:process-name>
+            <ns31:file-path>processor_BPEL\TaoNamHocMoi\TaoLop.bpel</ns31:file-path>
+        </provides>
+        <provides endpoint-name="TaoNamHocPortTypeRole_myRole" interface-name="ns27:TaoNamHocPortType" service-name="ns25:PartnerLink1">
+            <ns31:display-name>PartnerLink1</ns31:display-name>
+            <ns31:process-name>TaoNamHoc</ns31:process-name>
+            <ns31:file-path>processor_BPEL\TaoNamHocMoi\TaoNamHoc.bpel</ns31:file-path>
+        </provides>
+        <provides endpoint-name="UpdateDanTocPortTypeRole_myRole" interface-name="ns30:UpdateDanTocPortType" service-name="ns28:plUpdateDanToc">
+            <ns31:display-name>plUpdateDanToc</ns31:display-name>
+            <ns31:process-name>UpdateDanToc</ns31:process-name>
+            <ns31:file-path>processor_BPEL\UpdateDanToc.bpel</ns31:file-path>
+        </provides>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns2:jdbcPortType" service-name="ns0:PartnerLink1">
+            <ns31:display-name>PartnerLink1</ns31:display-name>
+            <ns31:process-name>LayDanhSachCheDoUuTien</ns31:process-name>
+            <ns31:file-path>processor_BPEL\LayDanhSachCheDoUuTien.bpel</ns31:file-path>
         </consumes>
         <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns4:jdbcPortType" service-name="ns3:PartnerLink2">
-            <ns18:display-name>PartnerLink2</ns18:display-name>
-            <ns18:process-name>TaoDanToc</ns18:process-name>
-            <ns18:file-path>processor_BPEL\TaoDanToc.bpel</ns18:file-path>
+            <ns31:display-name>PartnerLink2</ns31:display-name>
+            <ns31:process-name>LayDanhSachDanToc</ns31:process-name>
+            <ns31:file-path>processor_BPEL\LayDanhSachDanToc.bpel</ns31:file-path>
         </consumes>
         <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns7:jdbcPortType" service-name="ns6:PartnerLink2">
-            <ns18:display-name>PartnerLink2</ns18:display-name>
-            <ns18:process-name>TaoLoaiHocSinh</ns18:process-name>
-            <ns18:file-path>processor_BPEL\TaoLoaiHocSinh.bpel</ns18:file-path>
+            <ns31:display-name>PartnerLink2</ns31:display-name>
+            <ns31:process-name>LayDanhSachLoaiHocSinh</ns31:process-name>
+            <ns31:file-path>processor_BPEL\LayDanhSachLoaiHocSinh.bpel</ns31:file-path>
         </consumes>
-        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns10:jdbcPortType" service-name="ns9:PartnerLink2">
-            <ns18:display-name>PartnerLink2</ns18:display-name>
-            <ns18:process-name>TaoLop</ns18:process-name>
-            <ns18:file-path>processor_BPEL\TaoNamHocMoi\TaoLop.bpel</ns18:file-path>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns10:jdbcPortType" service-name="ns9:layNamHoc">
+            <ns31:display-name>layNamHoc</ns31:display-name>
+            <ns31:process-name>LayDanhSachLop</ns31:process-name>
+            <ns31:file-path>processor_BPEL\LayDanhSachLop.bpel</ns31:file-path>
         </consumes>
-        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns13:jdbcPortType" service-name="ns12:PartnerLink2">
-            <ns18:display-name>PartnerLink2</ns18:display-name>
-            <ns18:process-name>TaoNamHoc</ns18:process-name>
-            <ns18:file-path>processor_BPEL\TaoNamHocMoi\TaoNamHoc.bpel</ns18:file-path>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns11:jdbcPortType" service-name="ns9:PartnerLink3">
+            <ns31:display-name>PartnerLink3</ns31:display-name>
+            <ns31:process-name>LayDanhSachLop</ns31:process-name>
+            <ns31:file-path>processor_BPEL\LayDanhSachLop.bpel</ns31:file-path>
         </consumes>
-        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns16:jdbcPortType" service-name="ns15:plDb">
-            <ns18:display-name>plDb</ns18:display-name>
-            <ns18:process-name>UpdateDanToc</ns18:process-name>
-            <ns18:file-path>processor_BPEL\UpdateDanToc.bpel</ns18:file-path>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns14:jdbcPortType" service-name="ns13:PartnerLink1">
+            <ns31:display-name>PartnerLink1</ns31:display-name>
+            <ns31:process-name>TaoCheDoUuTien</ns31:process-name>
+            <ns31:file-path>processor_BPEL\TaoCheDoUuTien.bpel</ns31:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns17:jdbcPortType" service-name="ns16:PartnerLink2">
+            <ns31:display-name>PartnerLink2</ns31:display-name>
+            <ns31:process-name>TaoDanToc</ns31:process-name>
+            <ns31:file-path>processor_BPEL\TaoDanToc.bpel</ns31:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns20:jdbcPortType" service-name="ns19:PartnerLink2">
+            <ns31:display-name>PartnerLink2</ns31:display-name>
+            <ns31:process-name>TaoLoaiHocSinh</ns31:process-name>
+            <ns31:file-path>processor_BPEL\TaoLoaiHocSinh.bpel</ns31:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns23:jdbcPortType" service-name="ns22:PartnerLink2">
+            <ns31:display-name>PartnerLink2</ns31:display-name>
+            <ns31:process-name>TaoLop</ns31:process-name>
+            <ns31:file-path>processor_BPEL\TaoNamHocMoi\TaoLop.bpel</ns31:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns26:jdbcPortType" service-name="ns25:PartnerLink2">
+            <ns31:display-name>PartnerLink2</ns31:display-name>
+            <ns31:process-name>TaoNamHoc</ns31:process-name>
+            <ns31:file-path>processor_BPEL\TaoNamHocMoi\TaoNamHoc.bpel</ns31:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns29:jdbcPortType" service-name="ns28:plDb">
+            <ns31:display-name>plDb</ns31:display-name>
+            <ns31:process-name>UpdateDanToc</ns31:process-name>
+            <ns31:file-path>processor_BPEL\UpdateDanToc.bpel</ns31:file-path>
         </consumes>
     </services>
 </jbi>

@@ -34,7 +34,7 @@
                 <c:set value="${monhocs}" var="monhocs" scope="session"></c:set>
                 <c:set value="${tenlops}" var="tenlops" scope="session"></c:set>
                 <c:set value="${chitietdiems}" var="chitietdiems" scope="session"></c:set>
-
+                
                 <!-- bat dau thong tin -->
                 <form action="LuuDiem" method="post">
                     <div class="art-postcontent">

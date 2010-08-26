@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="1" hostname="sanchikaro" name="org.netbeans.modules.compapp.catd.ConfiguredTest" tests="1" time="1.003" timestamp="2010-08-20T14:43:01">
+<testsuite errors="0" failures="1" hostname="sanchikaro" name="org.netbeans.modules.compapp.catd.ConfiguredTest" tests="1" time="5.555" timestamp="2010-08-26T03:47:22">
   <properties>
     <property name="libs.struts2lib-2-0-11-basic.maven-pom" value="" />
     <property name="netbeans.autoupdate.country" value="VN" />
@@ -361,8 +361,8 @@
     <property name="file.encoding" value="Cp1258" />
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
   </properties>
-  <testcase classname="org.netbeans.modules.compapp.catd.ConfiguredTest" name="TaoHocSinh" time="0.979">
-    <failure message="[20-08-2010 21:43:02] The response is not identical to the expected output." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: [20-08-2010 21:43:02] The response is not identical to the expected output.
+  <testcase classname="org.netbeans.modules.compapp.catd.ConfiguredTest" name="TestTimHocSinhByIdHocSinh" time="5.429">
+    <failure message="[26-08-2010 10:47:28] The response is not identical to the expected output." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: [26-08-2010 10:47:28] The response is not identical to the expected output.
 	at org.netbeans.modules.compapp.catd.ConfiguredTest.checkExpectedOutput(ConfiguredTest.java:2348)
 	at org.netbeans.modules.compapp.catd.ConfiguredTest.checkExpectedOutput(ConfiguredTest.java:2218)
 	at org.netbeans.modules.compapp.catd.ConfiguredTest.testConcurrentSOAPRequest(ConfiguredTest.java:862)
@@ -425,7 +425,12 @@ user.language=vi
 user.name=sanchikaro
 user.timezone=Asia/Bangkok
 user.variant=
-Test TaoHocSinh\Concurrent.properties Failed. (Destination: http://localhost:${HttpDefaultPort}/QLHocSinhComAppService1/ToHocSinh)
+Test TestTimHocSinhByIdHocSinh\Concurrent.properties
+  * Difference (Delete): SOAP-ENV:Fault
+  * Difference (Add): m:TimHocSinhByIdHocSinhOperationResponse
+ Failed. (Destination: http://localhost:${HttpDefaultPort}/QLHocSinhComAppService4/TImHocSinhByIDHocSinh)
 ]]></system-out>
-  <system-err><![CDATA[]]></system-err>
+  <system-err><![CDATA[26-08-2010 10:47:26 org.netbeans.modules.csl.core.LanguageRegistry readSfs
+INFO: No CslPlugins folder
+]]></system-err>
 </testsuite>

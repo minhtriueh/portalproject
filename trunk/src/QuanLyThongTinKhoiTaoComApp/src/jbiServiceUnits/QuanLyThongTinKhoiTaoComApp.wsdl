@@ -9,13 +9,17 @@
              xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
              targetNamespace="QuanLyThongTinKhoiTaoComApp"
-             xmlns:tns="QuanLyThongTinKhoiTaoComApp" xmlns:ns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/UpdateDanToc" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoNamHoc" xmlns:ns2="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoLop" xmlns:ns3="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoLoaiHocSinh" xmlns:ns4="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoDanToc" xmlns:ns5="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoCheDoUuTien">
+             xmlns:tns="QuanLyThongTinKhoiTaoComApp" xmlns:ns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/UpdateDanToc" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoNamHoc" xmlns:ns2="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoLop" xmlns:ns3="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoLoaiHocSinh" xmlns:ns4="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoDanToc" xmlns:ns5="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoCheDoUuTien" xmlns:ns6="http://j2ee.netbeans.org/wsdl/QuanLyThongTinKhoiTaoHeThong/GetAllLoaiHocSinh" xmlns:ns7="http://j2ee.netbeans.org/wsdl/QuanLyThongTinKhoiTaoHeThong/GetAllCheDoUuTien" xmlns:ns8="http://j2ee.netbeans.org/wsdl/QuanLyThongTinKhoiTaoHeThong/GetAllDanToc" xmlns:ns9="http://j2ee.netbeans.org/wsdl/QuanLyThongTinKhoiTaoHeThong/GetAllLop">
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/UpdateDanToc" location="../jbiServiceUnits/QuanLyThongTinKhoiTaoHeThong/interface_WSDL/UpdateDanToc.wsdl"/>
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoNamHoc" location="../jbiServiceUnits/QuanLyThongTinKhoiTaoHeThong/interface_WSDL/TaoNamHocMoi/TaoNamHoc.wsdl"/>
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoLop" location="../jbiServiceUnits/QuanLyThongTinKhoiTaoHeThong/interface_WSDL/TaoNamHocMoi/TaoLop.wsdl"/>
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoLoaiHocSinh" location="../jbiServiceUnits/QuanLyThongTinKhoiTaoHeThong/interface_WSDL/HocSinh/TaoLoaiHocSinh.wsdl"/>
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoDanToc" location="../jbiServiceUnits/QuanLyThongTinKhoiTaoHeThong/interface_WSDL/TaoDanToc.wsdl"/>
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoCheDoUuTien" location="../jbiServiceUnits/QuanLyThongTinKhoiTaoHeThong/interface_WSDL/TaoCheDoUuTien.wsdl"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyThongTinKhoiTaoHeThong/GetAllLoaiHocSinh" location="../jbiServiceUnits/QuanLyThongTinKhoiTaoHeThong/interface_WSDL/GetAllLoaiHocSinh.wsdl"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyThongTinKhoiTaoHeThong/GetAllCheDoUuTien" location="../jbiServiceUnits/QuanLyThongTinKhoiTaoHeThong/interface_WSDL/GetAllCheDoUuTien.wsdl"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyThongTinKhoiTaoHeThong/GetAllDanToc" location="../jbiServiceUnits/QuanLyThongTinKhoiTaoHeThong/interface_WSDL/GetAllDanToc.wsdl"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyThongTinKhoiTaoHeThong/GetAllLop" location="../jbiServiceUnits/QuanLyThongTinKhoiTaoHeThong/interface_WSDL/GetAllLop.wsdl"/>
     <portType name="dummyCasaPortType"/>
     <binding name="casaBinding1" type="ns:UpdateDanTocPortType">
         <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
@@ -89,6 +93,54 @@
             </output>
         </operation>
     </binding>
+    <binding name="casaBinding7" type="ns6:GetAllLoaiHocSinhPortType">
+        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="GetAllLoaiHocSinhOperation">
+            <soap:operation/>
+            <input name="input1">
+                <soap:body use="literal" namespace="QuanLyThongTinKhoiTaoComApp"/>
+            </input>
+            <output name="output1">
+                <soap:body use="literal" namespace="QuanLyThongTinKhoiTaoComApp"/>
+            </output>
+        </operation>
+    </binding>
+    <binding name="casaBinding8" type="ns7:GetAllCheDoUuTienPortType">
+        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="GetAllCheDoUuTienOperation">
+            <soap:operation/>
+            <input name="input1">
+                <soap:body use="literal" namespace="QuanLyThongTinKhoiTaoComApp"/>
+            </input>
+            <output name="output1">
+                <soap:body use="literal" namespace="QuanLyThongTinKhoiTaoComApp"/>
+            </output>
+        </operation>
+    </binding>
+    <binding name="casaBinding9" type="ns8:GetAllDanTocPortType">
+        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="GetAllDanTocOperation">
+            <soap:operation/>
+            <input name="input1">
+                <soap:body use="literal" namespace="QuanLyThongTinKhoiTaoComApp"/>
+            </input>
+            <output name="output1">
+                <soap:body use="literal" namespace="QuanLyThongTinKhoiTaoComApp"/>
+            </output>
+        </operation>
+    </binding>
+    <binding name="casaBinding10" type="ns9:GetAllLopPortType">
+        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="GetAllLopOperation">
+            <soap:operation/>
+            <input name="input1">
+                <soap:body use="literal" namespace="QuanLyThongTinKhoiTaoComApp"/>
+            </input>
+            <output name="output1">
+                <soap:body use="literal" namespace="QuanLyThongTinKhoiTaoComApp"/>
+            </output>
+        </operation>
+    </binding>
     <service name="QuanLyThongTinKhoiTaoComAppService1">
         <port name="UpdateDanToc" binding="tns:casaBinding1">
             <soap:address location="http://localhost:${HttpDefaultPort}/QuanLyThongTinKhoiTaoComAppService1/UpdateDanToc"/>
@@ -119,5 +171,29 @@
             <soap:address location="http://localhost:${HttpDefaultPort}/QuanLyThongTinKhoiTaoComAppService6/TaoCheDoUuTien"/>
         </port>
     </service>
+    <service name="QuanLyThongTinKhoiTaoComAppService7">
+        <port name="LayDanhSachLoaiHocSinh" binding="tns:casaBinding7">
+            <soap:address location="http://localhost:${HttpDefaultPort}/QuanLyThongTinKhoiTaoComAppService7/LayDanhSachLoaiHocSinh"/>
+        </port>
+    </service>
+    <service name="QuanLyThongTinKhoiTaoComAppService8">
+        <port name="LayDanhSachCheDoUuTien" binding="tns:casaBinding8">
+            <soap:address location="http://localhost:${HttpDefaultPort}/QuanLyThongTinKhoiTaoComAppService8/LayDanhSachCheDoUuTien"/>
+        </port>
+    </service>
+    <service name="QuanLyThongTinKhoiTaoComAppService9">
+        <port name="LayDanhSachDanToc" binding="tns:casaBinding9">
+            <soap:address location="http://localhost:${HttpDefaultPort}/QuanLyThongTinKhoiTaoComAppService9/LayDanhSachDanToc"/>
+        </port>
+    </service>
+    <service name="QuanLyThongTinKhoiTaoComAppService10">
+        <port name="LayDanhSachLop" binding="tns:casaBinding10">
+            <soap:address location="http://localhost:${HttpDefaultPort}/QuanLyThongTinKhoiTaoComAppService10/LayDanhSachLop"/>
+        </port>
+    </service>
 </definitions>
+
+
+
+
 

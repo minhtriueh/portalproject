@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jbi xmlns="http://java.sun.com/xml/ns/jbi" xmlns:ns0="http://enterprise.netbeans.org/bpel/QuanLyDiaChi/LayDanhSachHuyen" xmlns:ns1="http://j2ee.netbeans.org/wsdl/QuanLyDiaChi/LayDanhSachHuyen" xmlns:ns10="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_TaoKhuVuc" xmlns:ns11="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoKhuVuc" xmlns:ns12="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/TaoQuanHuyenThanhPho" xmlns:ns13="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_quanhuyenthanhpho_insert" xmlns:ns14="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoQuanHuyenThanhPho" xmlns:ns15="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/TaoQueQuan" xmlns:ns16="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_TaoQueQuan" xmlns:ns17="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoQueQuan" xmlns:ns18="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/TaoThonXom" xmlns:ns19="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_TaoThonXom" xmlns:ns2="http://j2ee.netbeans.org/wsdl/QuanLyDiaChi/DB_LayDanhSachHuyen" xmlns:ns20="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoThonXom" xmlns:ns21="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/TaoTinh" xmlns:ns22="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoTinh" xmlns:ns23="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/TaoXaPhuongThiTran" xmlns:ns24="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_TaoXaPhuongThiTran" xmlns:ns25="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoXaPhuongThiTran" xmlns:ns26="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/UpdateQuanHuyenThanhPho" xmlns:ns27="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_quanhuyenthanhpho_update" xmlns:ns28="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/UpdateQuanHuyenThanhPho" xmlns:ns29="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/UpdateTinh" xmlns:ns3="http://enterprise.netbeans.org/bpel/QuanLyDiaChi/LayDanhSachKhuVuc" xmlns:ns30="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/DB_Tinh_update" xmlns:ns31="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/UpdateTinh" xmlns:ns32="http://www.sun.com/jbi/descriptor/service-unit" xmlns:ns4="http://j2ee.netbeans.org/wsdl/QuanLyDiaChi/DB_LayDanhSachKhuVuc" xmlns:ns5="http://j2ee.netbeans.org/wsdl/QuanLyDiaChi/LayDanhSachKhuVuc" xmlns:ns6="http://enterprise.netbeans.org/bpel/QuanLyDiaChi/LayDanhSachTinh" xmlns:ns7="http://j2ee.netbeans.org/wsdl/QuanLyDiaChi/DB_LAyDanhSachTinh" xmlns:ns8="http://j2ee.netbeans.org/wsdl/QuanLyDiaChi/LayDanhSachTinh" xmlns:ns9="http://enterprise.netbeans.org/bpel/QuanLyHocSinh/TaoKhuVuc" version="1.0">
+    <services binding-component="false">
+        <provides endpoint-name="LayDanhSachHuyenPortTypeRole_myRole" interface-name="ns1:LayDanhSachHuyenPortType" service-name="ns0:PartnerLink2">
+            <ns32:display-name>PartnerLink2</ns32:display-name>
+            <ns32:process-name>LayDanhSachHuyen</ns32:process-name>
+            <ns32:file-path>processor_BPEL\LayDanhSachHuyen.bpel</ns32:file-path>
+        </provides>
+        <provides endpoint-name="LayDanhSachKhuVucPortTypeRole_myRole" interface-name="ns5:LayDanhSachKhuVucPortType" service-name="ns3:PartnerLink1">
+            <ns32:display-name>PartnerLink1</ns32:display-name>
+            <ns32:process-name>LayDanhSachKhuVuc</ns32:process-name>
+            <ns32:file-path>processor_BPEL\LayDanhSachKhuVuc.bpel</ns32:file-path>
+        </provides>
+        <provides endpoint-name="LayDanhSachTinhPortTypeRole_myRole" interface-name="ns8:LayDanhSachTinhPortType" service-name="ns6:PartnerLink1">
+            <ns32:display-name>PartnerLink1</ns32:display-name>
+            <ns32:process-name>LayDanhSachTinh</ns32:process-name>
+            <ns32:file-path>processor_BPEL\LayDanhSachTinh.bpel</ns32:file-path>
+        </provides>
+        <provides endpoint-name="TaoKhuVucPortTypeRole_myRole" interface-name="ns11:TaoKhuVucPortType" service-name="ns9:plTaoKhuVuc">
+            <ns32:display-name>plTaoKhuVuc</ns32:display-name>
+            <ns32:process-name>TaoKhuVuc</ns32:process-name>
+            <ns32:file-path>processor_BPEL\TaoDiaChi\TaoKhuVuc.bpel</ns32:file-path>
+        </provides>
+        <provides endpoint-name="TaoQuanHuyenThanhPhoPortTypeRole_myRole" interface-name="ns14:TaoQuanHuyenThanhPhoPortType" service-name="ns12:PartnerLink1">
+            <ns32:display-name>PartnerLink1</ns32:display-name>
+            <ns32:process-name>TaoQuanHuyenThanhPho</ns32:process-name>
+            <ns32:file-path>processor_BPEL\TaoDiaChi\TaoQuanHuyenThanhPho.bpel</ns32:file-path>
+        </provides>
+        <provides endpoint-name="TaoQueQuanPortTypeRole_myRole" interface-name="ns17:TaoQueQuanPortType" service-name="ns15:plTaoQueQuan">
+            <ns32:display-name>plTaoQueQuan</ns32:display-name>
+            <ns32:process-name>TaoQueQuan</ns32:process-name>
+            <ns32:file-path>processor_BPEL\TaoDiaChi\TaoQueQuan.bpel</ns32:file-path>
+        </provides>
+        <provides endpoint-name="TaoThonXomPortTypeRole_myRole" interface-name="ns20:TaoThonXomPortType" service-name="ns18:plTaoThonXom">
+            <ns32:display-name>plTaoThonXom</ns32:display-name>
+            <ns32:process-name>TaoThonXom</ns32:process-name>
+            <ns32:file-path>processor_BPEL\TaoDiaChi\TaoThonXom.bpel</ns32:file-path>
+        </provides>
+        <provides endpoint-name="TaoTinhPortTypeRole_myRole" interface-name="ns22:TaoTinhPortType" service-name="ns21:PartnerLink1">
+            <ns32:display-name>PartnerLink1</ns32:display-name>
+            <ns32:process-name>TaoTinh</ns32:process-name>
+            <ns32:file-path>processor_BPEL\TaoDiaChi\TaoTinh.bpel</ns32:file-path>
+        </provides>
+        <provides endpoint-name="TaoXaPhuongThiTranPortTypeRole_myRole" interface-name="ns25:TaoXaPhuongThiTranPortType" service-name="ns23:plTaoXPTT">
+            <ns32:display-name>plTaoXPTT</ns32:display-name>
+            <ns32:process-name>TaoXaPhuongThiTran</ns32:process-name>
+            <ns32:file-path>processor_BPEL\TaoDiaChi\TaoXaPhuongThiTran.bpel</ns32:file-path>
+        </provides>
+        <provides endpoint-name="UpdateQuanHuyenThanhPhoPortTypeRole_myRole" interface-name="ns28:UpdateQuanHuyenThanhPhoPortType" service-name="ns26:PartnerLink1">
+            <ns32:display-name>PartnerLink1</ns32:display-name>
+            <ns32:process-name>UpdateQuanHuyenThanhPho</ns32:process-name>
+            <ns32:file-path>processor_BPEL\TaoDiaChi\UpdateQuanHuyenThanhPho.bpel</ns32:file-path>
+        </provides>
+        <provides endpoint-name="UpdateTinhPortTypeRole_myRole" interface-name="ns31:UpdateTinhPortType" service-name="ns29:PartnerLink1">
+            <ns32:display-name>PartnerLink1</ns32:display-name>
+            <ns32:process-name>UpdateTinh</ns32:process-name>
+            <ns32:file-path>processor_BPEL\TaoDiaChi\UpdateTinh.bpel</ns32:file-path>
+        </provides>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns2:jdbcPortType" service-name="ns0:PartnerLink1">
+            <ns32:display-name>PartnerLink1</ns32:display-name>
+            <ns32:process-name>LayDanhSachHuyen</ns32:process-name>
+            <ns32:file-path>processor_BPEL\LayDanhSachHuyen.bpel</ns32:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns4:jdbcPortType" service-name="ns3:PartnerLink2">
+            <ns32:display-name>PartnerLink2</ns32:display-name>
+            <ns32:process-name>LayDanhSachKhuVuc</ns32:process-name>
+            <ns32:file-path>processor_BPEL\LayDanhSachKhuVuc.bpel</ns32:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns7:jdbcPortType" service-name="ns6:PartnerLink2">
+            <ns32:display-name>PartnerLink2</ns32:display-name>
+            <ns32:process-name>LayDanhSachTinh</ns32:process-name>
+            <ns32:file-path>processor_BPEL\LayDanhSachTinh.bpel</ns32:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns10:jdbcPortType" service-name="ns9:plDB">
+            <ns32:display-name>plDB</ns32:display-name>
+            <ns32:process-name>TaoKhuVuc</ns32:process-name>
+            <ns32:file-path>processor_BPEL\TaoDiaChi\TaoKhuVuc.bpel</ns32:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns13:jdbcPortType" service-name="ns12:PartnerLink2">
+            <ns32:display-name>PartnerLink2</ns32:display-name>
+            <ns32:process-name>TaoQuanHuyenThanhPho</ns32:process-name>
+            <ns32:file-path>processor_BPEL\TaoDiaChi\TaoQuanHuyenThanhPho.bpel</ns32:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns16:jdbcPortType" service-name="ns15:plDB">
+            <ns32:display-name>plDB</ns32:display-name>
+            <ns32:process-name>TaoQueQuan</ns32:process-name>
+            <ns32:file-path>processor_BPEL\TaoDiaChi\TaoQueQuan.bpel</ns32:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns19:jdbcPortType" service-name="ns18:plDBTaoThonXom">
+            <ns32:display-name>plDBTaoThonXom</ns32:display-name>
+            <ns32:process-name>TaoThonXom</ns32:process-name>
+            <ns32:file-path>processor_BPEL\TaoDiaChi\TaoThonXom.bpel</ns32:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns22:jdbcPortType" service-name="ns21:PartnerLink2">
+            <ns32:display-name>PartnerLink2</ns32:display-name>
+            <ns32:process-name>TaoTinh</ns32:process-name>
+            <ns32:file-path>processor_BPEL\TaoDiaChi\TaoTinh.bpel</ns32:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns24:jdbcPortType" service-name="ns23:plDBTaoXPTT">
+            <ns32:display-name>plDBTaoXPTT</ns32:display-name>
+            <ns32:process-name>TaoXaPhuongThiTran</ns32:process-name>
+            <ns32:file-path>processor_BPEL\TaoDiaChi\TaoXaPhuongThiTran.bpel</ns32:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns27:jdbcPortType" service-name="ns26:PartnerLink2">
+            <ns32:display-name>PartnerLink2</ns32:display-name>
+            <ns32:process-name>UpdateQuanHuyenThanhPho</ns32:process-name>
+            <ns32:file-path>processor_BPEL\TaoDiaChi\UpdateQuanHuyenThanhPho.bpel</ns32:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns30:jdbcPortType" service-name="ns29:PartnerLink2">
+            <ns32:display-name>PartnerLink2</ns32:display-name>
+            <ns32:process-name>UpdateTinh</ns32:process-name>
+            <ns32:file-path>processor_BPEL\TaoDiaChi\UpdateTinh.bpel</ns32:file-path>
+        </consumes>
+    </services>
+</jbi>

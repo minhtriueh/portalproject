@@ -9,7 +9,7 @@
              xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
              targetNamespace="QLHocSinhComApp"
-             xmlns:tns="QLHocSinhComApp" xmlns:ns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/ThemHocSinh" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoHocBa" xmlns:ns2="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/XoaHocSinh" xmlns:ns3="http://j2ee.netbeans.org/wsdl/QLHocSinh/TimHocSinhByIDHocSinh" xmlns:ns4="http://j2ee.netbeans.org/wsdl/QLHocSinh/TimHocSinhByIdHocSinh" xmlns:ns5="http://j2ee.netbeans.org/wsdl/QLHocSinh/TimHocSinhTheoTen" xmlns:ns6="http://j2ee.netbeans.org/wsdl/QLHocSinh/UpdateThongTinHocSinh" xmlns:ns7="http://j2ee.netbeans.org/wsdl/QLHocSinh/ChuyenLop" xmlns:ns8="http://j2ee.netbeans.org/wsdl/QLHocSinh/TimHocSinhTheoLop" xmlns:ns9="http://j2ee.netbeans.org/wsdl/QLHocSinh/TimHocSinhTheoKhoiLop" xmlns:ns10="http://j2ee.netbeans.org/wsdl/QLHocSinh/XepLop" xmlns:ns11="http://j2ee.netbeans.org/wsdl/QLHocSinh/UpdateThanhPhanGiaDinh">
+             xmlns:tns="QLHocSinhComApp" xmlns:ns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/ThemHocSinh" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoHocBa" xmlns:ns2="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/XoaHocSinh" xmlns:ns3="http://j2ee.netbeans.org/wsdl/QLHocSinh/TimHocSinhByIDHocSinh" xmlns:ns4="http://j2ee.netbeans.org/wsdl/QLHocSinh/TimHocSinhByIdHocSinh" xmlns:ns5="http://j2ee.netbeans.org/wsdl/QLHocSinh/TimHocSinhTheoTen" xmlns:ns6="http://j2ee.netbeans.org/wsdl/QLHocSinh/UpdateThongTinHocSinh" xmlns:ns7="http://j2ee.netbeans.org/wsdl/QLHocSinh/ChuyenLop" xmlns:ns8="http://j2ee.netbeans.org/wsdl/QLHocSinh/TimHocSinhTheoLop" xmlns:ns9="http://j2ee.netbeans.org/wsdl/QLHocSinh/TimHocSinhTheoKhoiLop" xmlns:ns10="http://j2ee.netbeans.org/wsdl/QLHocSinh/XepLop" xmlns:ns11="http://j2ee.netbeans.org/wsdl/QLHocSinh/UpdateThanhPhanGiaDinh" xmlns:ns12="http://j2ee.netbeans.org/wsdl/QLHocSinh/LayMaHocSinh">
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/ThemHocSinh" location="../jbiServiceUnits/QLHocSinh/interface_WSDL/ThemHocSinh.wsdl"/>
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoHocBa" location="../jbiServiceUnits/QLHocSinh/interface_WSDL/TaoHocBa.wsdl"/>
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/XoaHocSinh" location="../jbiServiceUnits/QLHocSinh/interface_WSDL/XoaHocSinh.wsdl"/>
@@ -21,6 +21,7 @@
     <import namespace="http://j2ee.netbeans.org/wsdl/QLHocSinh/TimHocSinhTheoKhoiLop" location="../jbiServiceUnits/QLHocSinh/interface_WSDL/TimHocSinhTheoKhoiLop.wsdl"/>
     <import namespace="http://j2ee.netbeans.org/wsdl/QLHocSinh/XepLop" location="../jbiServiceUnits/QLHocSinh/interface_WSDL/XepLop.wsdl"/>
     <import namespace="http://j2ee.netbeans.org/wsdl/QLHocSinh/UpdateThanhPhanGiaDinh" location="../jbiServiceUnits/QLHocSinh/interface_WSDL/UpdateThanhPhanGiaDinh.wsdl"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QLHocSinh/LayMaHocSinh" location="../jbiServiceUnits/QLHocSinh/interface_WSDL/LayMaHocSinh.wsdl"/>
     <portType name="dummyCasaPortType"/>
     <binding name="casaBinding1" type="ns:ThemHocSinhPortType">
         <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
@@ -155,6 +156,18 @@
             </output>
         </operation>
     </binding>
+    <binding name="casaBinding13" type="ns12:LayMaHocSinhPortType">
+        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="LayMaHocSinhOperation">
+            <soap:operation/>
+            <input name="input1">
+                <soap:body use="literal" namespace="QLHocSinhComApp"/>
+            </input>
+            <output name="output1">
+                <soap:body use="literal" namespace="QLHocSinhComApp"/>
+            </output>
+        </operation>
+    </binding>
     <service name="QLHocSinhComAppService1">
         <port name="ToHocSinh" binding="tns:casaBinding1">
             <soap:address location="http://localhost:${HttpDefaultPort}/QLHocSinhComAppService1/ToHocSinh"/>
@@ -213,7 +226,13 @@
             <soap:address location="http://localhost:${HttpDefaultPort}/QLHocSinhComAppService12/UpdateThanhPhanGiaDinh"/>
         </port>
     </service>
+    <service name="QLHocSinhComAppService13">
+        <port name="LayMaHocSinh" binding="tns:casaBinding13">
+            <soap:address location="http://localhost:${HttpDefaultPort}/QLHocSinhComAppService13/LayMaHocSinh"/>
+        </port>
+    </service>
 </definitions>
+
 
 
 

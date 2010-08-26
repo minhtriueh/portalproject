@@ -40,3 +40,17 @@ input:focus,textarea:focus{background:#efefef;color:#000;}
 fieldset div.fm-req{font-weight:bold;}
 fieldset div.fm-req label:before{content:"* ";}
 
+.space{
+    width:100%;
+    max-height:23px;
+    padding:2px;
+    
+}
+.space .buton{
+    width:25px;
+}
+.lock{
+    width:100%;
+    min-height:20px;
+    
+}

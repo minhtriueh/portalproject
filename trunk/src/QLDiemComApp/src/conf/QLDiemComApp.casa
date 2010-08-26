@@ -374,7 +374,7 @@
                     <consumes endpoint="endpoint44"/>
                     <provides endpoint="endpoint44"/>
                 </port>
-                <port bindingType="soap" x="67" y="0">
+                <port bindingType="soap" x="67" y="39">
                     <link xlink:href="../jbiasa/QLDiemComApp.wsdl#xpointer(/definitions/service[@name='QLDiemComAppService43']/port[@name='LayDanhSachHeSoCotDiem'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint46"/>
                     <provides endpoint="endpoint46"/>
@@ -715,3 +715,4 @@
         <region name="External Modules" width="200"/>
     </regions>
 </casa>
+

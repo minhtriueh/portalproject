@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP-ENV:Body>
+    <m:GetAllCheDoUuTienOperationResponse xmlns:m="QuanLyThongTinKhoiTaoComApp" xmlns:msgns="http://j2ee.netbeans.org/wsdl/QuanLyThongTinKhoiTaoHeThong/GetAllCheDoUuTien">
+      <list>
+        <ns1:CheDoUuTien xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">33</ns1:id>
+          <ns1:tenCheDoUuTien isNull="false">Con thương binh</ns1:tenCheDoUuTien>
+          <ns1:phanTramDuocGiam isNull="false">20</ns1:phanTramDuocGiam>
+          <ns1:chuThich isNull="false"/>
+        </ns1:CheDoUuTien>
+        <ns1:CheDoUuTien xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">35</ns1:id>
+          <ns1:tenCheDoUuTien isNull="false">Gia đình chính sách</ns1:tenCheDoUuTien>
+          <ns1:phanTramDuocGiam isNull="false">30</ns1:phanTramDuocGiam>
+          <ns1:chuThich isNull="false"/>
+        </ns1:CheDoUuTien>
+        <ns1:CheDoUuTien xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">34</ns1:id>
+          <ns1:tenCheDoUuTien isNull="false">Con bệnh binh</ns1:tenCheDoUuTien>
+          <ns1:phanTramDuocGiam isNull="false">40</ns1:phanTramDuocGiam>
+          <ns1:chuThich isNull="false"/>
+        </ns1:CheDoUuTien>
+        <ns1:CheDoUuTien xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">36</ns1:id>
+          <ns1:tenCheDoUuTien isNull="false">Học sinh nghèo</ns1:tenCheDoUuTien>
+          <ns1:phanTramDuocGiam isNull="false">100</ns1:phanTramDuocGiam>
+          <ns1:chuThich isNull="false"/>
+        </ns1:CheDoUuTien>
+      </list>
+    </m:GetAllCheDoUuTienOperationResponse>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

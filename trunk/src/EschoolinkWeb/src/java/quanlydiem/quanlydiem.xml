@@ -8,7 +8,7 @@
 
         <action name="BatDauNhapDiem" class="quanlydiem.BatDauNhapDiem">
             <result name="success">/index.jsp?module=quanlydiem&amp;page=batdaunhapdiem&amp;r=no&amp;l=no</result>
-            <result name="error">/index.jsp</result>
+            <result name="error">/index.jsp?module=quanlydiem&amp;page=batdaunhapdiem</result>
         </action>
 
         <action name="NhapDiem" class="quanlydiem.NhapDiem">

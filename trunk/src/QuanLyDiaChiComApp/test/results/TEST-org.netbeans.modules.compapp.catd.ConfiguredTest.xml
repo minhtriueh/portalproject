@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="1" hostname="sanchikaro" name="org.netbeans.modules.compapp.catd.ConfiguredTest" tests="1" time="2.015" timestamp="2010-08-07T08:28:16">
+<testsuite errors="0" failures="1" hostname="sanchikaro" name="org.netbeans.modules.compapp.catd.ConfiguredTest" tests="1" time="0.481" timestamp="2010-08-24T14:21:32">
   <properties>
     <property name="libs.struts2lib-2-0-11-basic.maven-pom" value="" />
     <property name="netbeans.autoupdate.country" value="VN" />
@@ -20,6 +20,7 @@
     <property name="libs.hibernate-persistence.javadoc" value="" />
     <property name="libs.JMUnit4CLDC10.javadoc" value="C:\GlassFishESBv22\netbeans\mobility8\modules\docs\jmunit-1.2.1-api.zip" />
     <property name="java.vm.version" value="17.0-b16" />
+    <property name="libs.MyLibrary.src" value="" />
     <property name="libs.DataBindingME.classpath" value="C:\GlassFishESBv22\netbeans\mobility8\modules\ext\netbeans_databindingme.jar" />
     <property name="libs.jstl11.maven-pom" value="" />
     <property name="libs.nsicom-ant-utils.classpath" value="C:\GlassFishESBv22\netbeans\mobility8\ant\nblib\org-netbeans-modules-j2me-cdc-project-nsicom.jar" />
@@ -162,6 +163,7 @@
     <property name="libs.ant-contrib.javadoc" value="" />
     <property name="netbeans.importclass" value="org.netbeans.upgrade.AutoUpgrade" />
     <property name="org.openide.TopManager" value="org.netbeans.core.NonGui" />
+    <property name="libs.MyLibrary.classpath" value="E:\Project Eschoolink src\EschoolinkWebApp\web\WEB-INF\lib" />
     <property name="libs.savaje-ant-utils.classpath" value="C:\GlassFishESBv22\netbeans\mobility8\modules\ext\org-netbeans-modules-j2me-cdc-project-savaje.jar" />
     <property name="libs.toplink.maven-pom" value="" />
     <property name="libs.DataBindingME.maven-pom" value="" />
@@ -213,8 +215,9 @@
     <property name="java.io.tmpdir" value="C:\Users\SANCHI~1\AppData\Local\Temp\" />
     <property name="java.vendor.url" value="http://java.sun.com/" />
     <property name="jspc.classpath" value="C:\GlassFishESBv22\netbeans\java2\ant\lib\ant.jar:C:\GlassFishESBv22\netbeans\enterprise5\modules\ext\servlet2.5-jsp2.1-api.jar:${j2ee.platform.classpath}:C:\GlassFishESBv22\netbeans\enterprise5\modules\ext\glassfish-jspparser-2.0.jar:C:\GlassFishESBv22\netbeans\enterprise5\modules\ext\glassfish-logging-2.0.jar:C:\GlassFishESBv22\netbeans\ide11\modules\ext\commons-logging-1.1.jar:C:\GlassFishESBv22\netbeans\java2\ant\lib\ant-launcher.jar" />
-    <property name="libs.struts2lib-2-0-11-basic.classpath" value="C:\GlassFishESBv22\.netbeans\glassfishesb\modules\ext\struts2-2.0.11\commons-logging-1.0.4.jar;C:\GlassFishESBv22\.netbeans\glassfishesb\modules\ext\struts2-2.0.11\freemarker-2.3.8.jar;C:\GlassFishESBv22\.netbeans\glassfishesb\modules\ext\struts2-2.0.11\ognl-2.6.11.jar;C:\GlassFishESBv22\.netbeans\glassfishesb\modules\ext\struts2-2.0.11\struts2-core-2.0.11.jar;C:\GlassFishESBv22\.netbeans\glassfishesb\modules\ext\struts2-2.0.11\xwork-2.0.4.jar" />
+    <property name="libs.struts2lib-2-0-11-basic.classpath" value="C:\GlassFishESBv22\.netbeans\glassfishesb\modules\ext\struts2-2.0.11\commons-logging-1.0.4.jar;C:\GlassFishESBv22\.netbeans\glassfishesb\modules\ext\struts2-2.0.11\freemarker-2.3.8.jar;C:\GlassFishESBv22\.netbeans\glassfishesb\modules\ext\struts2-2.0.11\ognl-2.6.11.jar;C:\GlassFishESBv22\.netbeans\glassfishesb\modules\ext\struts2-2.0.11\xwork-2.0.4.jar;E:\Project Eschoolink src\EschoolinkWebApp\web\WEB-INF\lib\struts2-core-2.1.6.jar" />
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.6.0\jre\bin" />
+    <property name="libs.MyLibrary.javadoc" value="" />
     <property name="src.build.dir" value="src/jbiServiceUnits" />
     <property name="libs.DataBindingME-SVG.src" value="" />
     <property name="dist.jar" value="dist/QuanLyDiaChiComApp.zip" />
@@ -298,8 +301,8 @@
     <property name="libs.JMUnit4CLDC10.classpath" value="C:\GlassFishESBv22\netbeans\mobility8\modules\ext\jmunit4cldc10-1.2.1.jar" />
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob" />
     <property name="default.javac.source" value="1.6" />
-    <property name="sun.jnu.encoding" value="Cp1258" />
     <property name="libs.MySQLDriver.src" value="" />
+    <property name="sun.jnu.encoding" value="Cp1258" />
     <property name="jbi.service-assembly.id" value="QuanLyDiaChiComApp" />
     <property name="libs.ant-contrib.maven-pom" value="" />
     <property name="libs.struts2lib-2-0-11-basic.javadoc" value="" />
@@ -316,6 +319,7 @@
     <property name="libs.ant-contrib.src" value="" />
     <property name="netbeans.dirs" value="C:\GlassFishESBv22\netbeans\nb6.7;C:\GlassFishESBv22\netbeans\ide11;C:\GlassFishESBv22\netbeans\java2;C:\GlassFishESBv22\netbeans\xml2;C:\GlassFishESBv22\netbeans\apisupport1;C:\GlassFishESBv22\netbeans\webcommon1;C:\GlassFishESBv22\netbeans\websvccommon1;C:\GlassFishESBv22\netbeans\enterprise5;C:\GlassFishESBv22\netbeans\mobility8;C:\GlassFishESBv22\netbeans\profiler3;C:\GlassFishESBv22\netbeans\ruby2;C:\GlassFishESBv22\netbeans\python1;C:\GlassFishESBv22\netbeans\php1;C:\GlassFishESBv22\netbeans\visualweb2;C:\GlassFishESBv22\netbeans\soa2;C:\GlassFishESBv22\netbeans\identity2;C:\GlassFishESBv22\netbeans\uml6;C:\GlassFishESBv22\netbeans\harness;C:\GlassFishESBv22\netbeans\cnd2;C:\GlassFishESBv22\netbeans\dlight1;C:\GlassFishESBv22\netbeans\groovy1;C:\GlassFishESBv22\netbeans\extra;C:\GlassFishESBv22\netbeans\javafx2;C:\GlassFishESBv22\netbeans\{platform-cluster};C:\GlassFishESBv22\netbeans\{ide-cluster};C:\GlassFishESBv22\netbeans\{xml-cluster}" />
     <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.6.0\jre\lib\ext;C:\Windows\Sun\Java\lib\ext" />
+    <property name="libs.MyLibrary.maven-pom" value="" />
     <property name="libs.metro.src" value="" />
     <property name="libs.savaje-ant-utils.maven-pom" value="" />
     <property name="libs.semc-ant-utils.src" value="" />
@@ -338,8 +342,8 @@
     <property name="libs.ricoh-ant-utils.javadoc" value="" />
     <property name="libs.NetBeans MIDP Components PDA.maven-pom" value="" />
     <property name="libs.restlib.javadoc" value="C:\GlassFishESBv22\netbeans\enterprise5\docs\jersey-api-doc.zip" />
-    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment" />
     <property name="libs.beans-binding.javadoc" value="C:\GlassFishESBv22\netbeans\java2\docs\beansbinding-1.2.1-doc.zip" />
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment" />
     <property name="java.vm.vendor" value="Sun Microsystems Inc." />
     <property name="libs.CopyLibs.classpath" value="C:\GlassFishESBv22\netbeans\java2\ant\extra\org-netbeans-modules-java-j2seproject-copylibstask.jar" />
     <property name="libs.spring-webmvc.maven-pom" value="" />
@@ -357,8 +361,8 @@
     <property name="file.encoding" value="Cp1258" />
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
   </properties>
-  <testcase classname="org.netbeans.modules.compapp.catd.ConfiguredTest" name="TestTaoKhuVuc" time="1.993">
-    <failure message="[07-08-2010 15:28:18] The response is not identical to the expected output." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: [07-08-2010 15:28:18] The response is not identical to the expected output.
+  <testcase classname="org.netbeans.modules.compapp.catd.ConfiguredTest" name="GetListHuyen" time="0.45">
+    <failure message="[24-08-2010 21:21:32] The response is not identical to the expected output." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: [24-08-2010 21:21:32] The response is not identical to the expected output.
 	at org.netbeans.modules.compapp.catd.ConfiguredTest.checkExpectedOutput(ConfiguredTest.java:2348)
 	at org.netbeans.modules.compapp.catd.ConfiguredTest.checkExpectedOutput(ConfiguredTest.java:2218)
 	at org.netbeans.modules.compapp.catd.ConfiguredTest.testConcurrentSOAPRequest(ConfiguredTest.java:862)
@@ -421,7 +425,7 @@ user.language=vi
 user.name=sanchikaro
 user.timezone=Asia/Bangkok
 user.variant=
-Test TestTaoKhuVuc\Concurrent.properties Failed. (Destination: http://localhost:${HttpDefaultPort}/QuanLyDiaChiComAppService1/TaoKhuVuc)
+Test GetListHuyen\Concurrent.properties Failed. (Destination: http://localhost:${HttpDefaultPort}/QuanLyDiaChiComAppService10/LayDanhSachHuyen)
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

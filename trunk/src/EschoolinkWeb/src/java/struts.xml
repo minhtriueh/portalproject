@@ -10,7 +10,11 @@
 	<package name="default" extends="struts-default">
 
 	</package>
+       
 	<include file="/quanlyhocsinh/quanlyhocsinh.xml"></include>
     <include file="/Demo/demo.xml"></include>
 	<include file="/quanlydiem/quanlydiem.xml"></include>
+        <include file="/quanlyhocsinh/quanlyhocsinh.xml"></include>
+        <include file="/quanlydiachi/quanlydiachi.xml"></include>
+        
 </struts>
