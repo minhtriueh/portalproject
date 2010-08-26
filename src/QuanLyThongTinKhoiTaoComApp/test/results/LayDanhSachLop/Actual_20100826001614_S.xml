@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP-ENV:Body>
+    <m:GetAllLopOperationResponse xmlns:m="QuanLyThongTinKhoiTaoComApp" xmlns:msgns="http://j2ee.netbeans.org/wsdl/QuanLyThongTinKhoiTaoHeThong/GetAllLop">
+      <list>
+        <ns1:Lop xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">105</ns1:id>
+          <ns1:tenLop isNull="false">10a1</ns1:tenLop>
+          <ns1:siSoLop isNull="false">0</ns1:siSoLop>
+        </ns1:Lop>
+        <ns1:Lop xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">106</ns1:id>
+          <ns1:tenLop isNull="false">10a2</ns1:tenLop>
+          <ns1:siSoLop isNull="false">0</ns1:siSoLop>
+        </ns1:Lop>
+        <ns1:Lop xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">107</ns1:id>
+          <ns1:tenLop isNull="false">10a3</ns1:tenLop>
+          <ns1:siSoLop isNull="false">0</ns1:siSoLop>
+        </ns1:Lop>
+        <ns1:Lop xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">108</ns1:id>
+          <ns1:tenLop isNull="false">10a4</ns1:tenLop>
+          <ns1:siSoLop isNull="false">0</ns1:siSoLop>
+        </ns1:Lop>
+        <ns1:Lop xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">109</ns1:id>
+          <ns1:tenLop isNull="false">11a1</ns1:tenLop>
+          <ns1:siSoLop isNull="false">0</ns1:siSoLop>
+        </ns1:Lop>
+        <ns1:Lop xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">110</ns1:id>
+          <ns1:tenLop isNull="false">11a2</ns1:tenLop>
+          <ns1:siSoLop isNull="false">0</ns1:siSoLop>
+        </ns1:Lop>
+        <ns1:Lop xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">111</ns1:id>
+          <ns1:tenLop isNull="false">11a3</ns1:tenLop>
+          <ns1:siSoLop isNull="false">0</ns1:siSoLop>
+        </ns1:Lop>
+        <ns1:Lop xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">112</ns1:id>
+          <ns1:tenLop isNull="false">11a4</ns1:tenLop>
+          <ns1:siSoLop isNull="false">0</ns1:siSoLop>
+        </ns1:Lop>
+        <ns1:Lop xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">113</ns1:id>
+          <ns1:tenLop isNull="false">11a5</ns1:tenLop>
+          <ns1:siSoLop isNull="false">0</ns1:siSoLop>
+        </ns1:Lop>
+        <ns1:Lop xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">114</ns1:id>
+          <ns1:tenLop isNull="false">12a1</ns1:tenLop>
+          <ns1:siSoLop isNull="false">0</ns1:siSoLop>
+        </ns1:Lop>
+        <ns1:Lop xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">115</ns1:id>
+          <ns1:tenLop isNull="false">12a2</ns1:tenLop>
+          <ns1:siSoLop isNull="false">0</ns1:siSoLop>
+        </ns1:Lop>
+        <ns1:Lop xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">116</ns1:id>
+          <ns1:tenLop isNull="false">12a3</ns1:tenLop>
+          <ns1:siSoLop isNull="false">0</ns1:siSoLop>
+        </ns1:Lop>
+        <ns1:Lop xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">117</ns1:id>
+          <ns1:tenLop isNull="false">12a4</ns1:tenLop>
+          <ns1:siSoLop isNull="false">0</ns1:siSoLop>
+        </ns1:Lop>
+      </list>
+    </m:GetAllLopOperationResponse>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

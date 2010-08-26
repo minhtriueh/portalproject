@@ -4,7 +4,6 @@
     <system systemId="http://localhost:18001/QLDiemComApp/LayDanhSachMonHocCuaGiaoVien?WSDL" uri="src/conf/xml-resources/web-service-references/LayDanhSachMonHocCuaGiaoVien/wsdl/localhost_18001/QLDiemComApp/LayDanhSachMonHocCuaGiaoVien.wsdl"/>
     <system systemId="http://localhost:18001/QLDiemComApp/LayDanhSachLopGiaoVienDay?WSDL" uri="src/conf/xml-resources/web-service-references/LayDanhSachLopGiaoVienDay/wsdl/localhost_18001/QLDiemComApp/LayDanhSachLopGiaoVienDay.wsdl"/>
     <system systemId="http://localhost:18001/QLDiemComApp/TimIdLopByTenLop?WSDL" uri="src/conf/xml-resources/web-service-references/TimIdLopByTenLop/wsdl/localhost_18001/QLDiemComApp/TimIdLopByTenLop.wsdl"/>
-    <system systemId="http://localhost:18001/QLDiemComApp/LayDanhSachHeSoCotDiem?WSDL" uri="src/conf/xml-resources/web-service-references/LayDanhSachHeSoCotDiem/wsdl/localhost_18001/QLDiemComApp/LayDanhSachHeSoCotDiem.wsdl"/>
     <system systemId="http://localhost:18001/QLDiemComApp/LoadSoDiem?WSDL" uri="src/conf/xml-resources/web-service-references/LoadSoDiem/wsdl/localhost_18001/QLDiemComApp/LoadSoDiem.wsdl"/>
     <system systemId="http://nguyentanmo-PC:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/TaoLoaiDiem.wsdl" uri="src/conf/xml-resources/web-service-references/LoadSoDiem/wsdl/nguyentanmo-PC_18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/TaoLoaiDiem.wsdl"/>
     <system systemId="http://nguyentanmo-PC:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/LuuDiem.wsdl" uri="src/conf/xml-resources/web-service-references/LoadSoDiem/wsdl/nguyentanmo-PC_18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/LuuDiem.wsdl"/>
@@ -30,44 +29,78 @@
     <system systemId="http://nguyentanmo-PC:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/XSD_XML_Object/LoaiDiem.xsd" uri="src/conf/xml-resources/web-service-references/LoadSoDiem/wsdl/nguyentanmo-PC_18001/QLDiemComApp-sun-http-binding/QuanLyDiem/XSD_XML_Object/LoaiDiem.xsd"/>
     <system systemId="http://nguyentanmo-PC:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/DB_WSDL/DB_LayDanhSachHeSoCotDiem.xsd" uri="src/conf/xml-resources/web-service-references/LoadSoDiem/wsdl/nguyentanmo-PC_18001/QLDiemComApp-sun-http-binding/QuanLyDiem/DB_WSDL/DB_LayDanhSachHeSoCotDiem.xsd"/>
     <system systemId="http://nguyentanmo-PC:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/XSD_XML_Object/EschoolinkObject.xsd" uri="src/conf/xml-resources/web-service-references/LoadSoDiem/wsdl/nguyentanmo-PC_18001/QLDiemComApp-sun-http-binding/QuanLyDiem/XSD_XML_Object/EschoolinkObject.xsd"/>
+    <system systemId="http://localhost:9080/QLThoiKhoaBieuService1/TaoThoiKhoaBieu?WSDL" uri="src/conf/xml-resources/web-service-references/TaoThoiKhoaBieu/wsdl/localhost_9080/QLThoiKhoaBieuService1/TaoThoiKhoaBieu.wsdl"/>
+    <system systemId="http://sanchikaro:9080/QLThoiKhoaBieu-sun-http-binding/QuanLyThoiKhoaBieu/interface_WSDL/LayThoiKhoaBieuTheoLop.wsdl" uri="src/conf/xml-resources/web-service-references/TaoThoiKhoaBieu/wsdl/sanchikaro_9080/QLThoiKhoaBieu-sun-http-binding/QuanLyThoiKhoaBieu/interface_WSDL/LayThoiKhoaBieuTheoLop.wsdl"/>
+    <system systemId="http://sanchikaro:9080/QLThoiKhoaBieu-sun-http-binding/QuanLyThoiKhoaBieu/interface_WSDL/ThemThoiKhoaBieu.wsdl" uri="src/conf/xml-resources/web-service-references/TaoThoiKhoaBieu/wsdl/sanchikaro_9080/QLThoiKhoaBieu-sun-http-binding/QuanLyThoiKhoaBieu/interface_WSDL/ThemThoiKhoaBieu.wsdl"/>
+    <system systemId="http://sanchikaro:9080/QLThoiKhoaBieu-sun-http-binding/QuanLyThoiKhoaBieu/XSD_XML_Object/EschoolinkObject.xsd" uri="src/conf/xml-resources/web-service-references/TaoThoiKhoaBieu/wsdl/sanchikaro_9080/QLThoiKhoaBieu-sun-http-binding/QuanLyThoiKhoaBieu/XSD_XML_Object/EschoolinkObject.xsd"/>
+    <system systemId="http://localhost:18001/QLDiemComApp/LayDanhSachHeSoCotDiem?WSDL" uri="src/conf/xml-resources/web-service-references/LayDanhSachHeSoCotDiem/wsdl/localhost_18001/QLDiemComApp/LayDanhSachHeSoCotDiem.wsdl"/>
+    <system systemId="http://sanchikaro:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/TaoLoaiDiem.wsdl" uri="src/conf/xml-resources/web-service-references/LayDanhSachHeSoCotDiem/wsdl/sanchikaro_18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/TaoLoaiDiem.wsdl"/>
+    <system systemId="http://sanchikaro:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/LuuDiem.wsdl" uri="src/conf/xml-resources/web-service-references/LayDanhSachHeSoCotDiem/wsdl/sanchikaro_18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/LuuDiem.wsdl"/>
+    <system systemId="http://sanchikaro:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/LayDanhSachDiemCuaChiTietSoDiem.wsdl" uri="src/conf/xml-resources/web-service-references/LayDanhSachHeSoCotDiem/wsdl/sanchikaro_18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/LayDanhSachDiemCuaChiTietSoDiem.wsdl"/>
+    <system systemId="http://sanchikaro:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/LayDanhSachLopGiaoVienDay.wsdl" uri="src/conf/xml-resources/web-service-references/LayDanhSachHeSoCotDiem/wsdl/sanchikaro_18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/LayDanhSachLopGiaoVienDay.wsdl"/>
+    <system systemId="http://sanchikaro:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/ThemDanhSachLoaiDiem.wsdl" uri="src/conf/xml-resources/web-service-references/LayDanhSachHeSoCotDiem/wsdl/sanchikaro_18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/ThemDanhSachLoaiDiem.wsdl"/>
+    <system systemId="http://sanchikaro:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/TaoSoDiem.wsdl" uri="src/conf/xml-resources/web-service-references/LayDanhSachHeSoCotDiem/wsdl/sanchikaro_18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/TaoSoDiem.wsdl"/>
+    <system systemId="http://sanchikaro:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/XetLenLop.wsdl" uri="src/conf/xml-resources/web-service-references/LayDanhSachHeSoCotDiem/wsdl/sanchikaro_18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/XetLenLop.wsdl"/>
+    <system systemId="http://sanchikaro:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/LuuDiemHocBa.wsdl" uri="src/conf/xml-resources/web-service-references/LayDanhSachHeSoCotDiem/wsdl/sanchikaro_18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/LuuDiemHocBa.wsdl"/>
+    <system systemId="http://sanchikaro:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/XemDiem.wsdl" uri="src/conf/xml-resources/web-service-references/LayDanhSachHeSoCotDiem/wsdl/sanchikaro_18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/XemDiem.wsdl"/>
+    <system systemId="http://sanchikaro:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/LayIdNamHocMoiNhat.wsdl" uri="src/conf/xml-resources/web-service-references/LayDanhSachHeSoCotDiem/wsdl/sanchikaro_18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/LayIdNamHocMoiNhat.wsdl"/>
+    <system systemId="http://sanchikaro:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/TimTenHocSinhByIdHocSinh.wsdl" uri="src/conf/xml-resources/web-service-references/LayDanhSachHeSoCotDiem/wsdl/sanchikaro_18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/TimTenHocSinhByIdHocSinh.wsdl"/>
+    <system systemId="http://sanchikaro:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/TimIdMonHocByTenMonHoc.wsdl" uri="src/conf/xml-resources/web-service-references/LayDanhSachHeSoCotDiem/wsdl/sanchikaro_18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/TimIdMonHocByTenMonHoc.wsdl"/>
+    <system systemId="http://sanchikaro:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/TaoNamHocMoi.wsdl" uri="src/conf/xml-resources/web-service-references/LayDanhSachHeSoCotDiem/wsdl/sanchikaro_18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/TaoNamHocMoi.wsdl"/>
+    <system systemId="http://sanchikaro:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/TimIdLopByTenLop.wsdl" uri="src/conf/xml-resources/web-service-references/LayDanhSachHeSoCotDiem/wsdl/sanchikaro_18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/TimIdLopByTenLop.wsdl"/>
+    <system systemId="http://sanchikaro:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/TongKetDiem.wsdl" uri="src/conf/xml-resources/web-service-references/LayDanhSachHeSoCotDiem/wsdl/sanchikaro_18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/TongKetDiem.wsdl"/>
+    <system systemId="http://sanchikaro:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/LayDanhSachHeSoCotDiem.wsdl" uri="src/conf/xml-resources/web-service-references/LayDanhSachHeSoCotDiem/wsdl/sanchikaro_18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/LayDanhSachHeSoCotDiem.wsdl"/>
+    <system systemId="http://sanchikaro:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/LayDanhSachCotDiem.wsdl" uri="src/conf/xml-resources/web-service-references/LayDanhSachHeSoCotDiem/wsdl/sanchikaro_18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/LayDanhSachCotDiem.wsdl"/>
+    <system systemId="http://sanchikaro:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/TinhDiemTrungBinh.wsdl" uri="src/conf/xml-resources/web-service-references/LayDanhSachHeSoCotDiem/wsdl/sanchikaro_18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/TinhDiemTrungBinh.wsdl"/>
+    <system systemId="http://sanchikaro:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/LayDanhSachMonHocCuaGiaoVien.wsdl" uri="src/conf/xml-resources/web-service-references/LayDanhSachHeSoCotDiem/wsdl/sanchikaro_18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/LayDanhSachMonHocCuaGiaoVien.wsdl"/>
+    <system systemId="http://sanchikaro:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/LoadSoDiem.wsdl" uri="src/conf/xml-resources/web-service-references/LayDanhSachHeSoCotDiem/wsdl/sanchikaro_18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/LoadSoDiem.wsdl"/>
+    <system systemId="http://sanchikaro:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/NhapDiem.wsdl" uri="src/conf/xml-resources/web-service-references/LayDanhSachHeSoCotDiem/wsdl/sanchikaro_18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/NhapDiem.wsdl"/>
+    <system systemId="http://sanchikaro:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/XSD_XML_Object/LoaiDiem.xsd" uri="src/conf/xml-resources/web-service-references/LayDanhSachHeSoCotDiem/wsdl/sanchikaro_18001/QLDiemComApp-sun-http-binding/QuanLyDiem/XSD_XML_Object/LoaiDiem.xsd"/>
+    <system systemId="http://sanchikaro:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/DB_WSDL/DB_LayDanhSachHeSoCotDiem.xsd" uri="src/conf/xml-resources/web-service-references/LayDanhSachHeSoCotDiem/wsdl/sanchikaro_18001/QLDiemComApp-sun-http-binding/QuanLyDiem/DB_WSDL/DB_LayDanhSachHeSoCotDiem.xsd"/>
+    <system systemId="http://sanchikaro:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/XSD_XML_Object/EschoolinkObject.xsd" uri="src/conf/xml-resources/web-service-references/LayDanhSachHeSoCotDiem/wsdl/sanchikaro_18001/QLDiemComApp-sun-http-binding/QuanLyDiem/XSD_XML_Object/EschoolinkObject.xsd"/>
+    <system systemId="http://localhost:9080/QLHocSinhComAppService1/ToHocSinh?WSDL" uri="src/conf/xml-resources/web-service-references/ToHocSinh/wsdl/localhost_9080/QLHocSinhComAppService1/ToHocSinh.wsdl"/>
+    <system systemId="http://sanchikaro:9080/QLHocSinhComApp-sun-http-binding/QLHocSinh/interface_WSDL/UpdateThanhPhanGiaDinh.wsdl" uri="src/conf/xml-resources/web-service-references/ToHocSinh/wsdl/sanchikaro_9080/QLHocSinhComApp-sun-http-binding/QLHocSinh/interface_WSDL/UpdateThanhPhanGiaDinh.wsdl"/>
+    <system systemId="http://sanchikaro:9080/QLHocSinhComApp-sun-http-binding/QLHocSinh/interface_WSDL/XepLop.wsdl" uri="src/conf/xml-resources/web-service-references/ToHocSinh/wsdl/sanchikaro_9080/QLHocSinhComApp-sun-http-binding/QLHocSinh/interface_WSDL/XepLop.wsdl"/>
+    <system systemId="http://sanchikaro:9080/QLHocSinhComApp-sun-http-binding/QLHocSinh/interface_WSDL/UpdateThongTinHocSinh.wsdl" uri="src/conf/xml-resources/web-service-references/ToHocSinh/wsdl/sanchikaro_9080/QLHocSinhComApp-sun-http-binding/QLHocSinh/interface_WSDL/UpdateThongTinHocSinh.wsdl"/>
+    <system systemId="http://sanchikaro:9080/QLHocSinhComApp-sun-http-binding/QLHocSinh/interface_WSDL/TimHocSinhTheoTen.wsdl" uri="src/conf/xml-resources/web-service-references/ToHocSinh/wsdl/sanchikaro_9080/QLHocSinhComApp-sun-http-binding/QLHocSinh/interface_WSDL/TimHocSinhTheoTen.wsdl"/>
+    <system systemId="http://sanchikaro:9080/QLHocSinhComApp-sun-http-binding/QLHocSinh/interface_WSDL/TimHocSinhByIdHocSinh.wsdl" uri="src/conf/xml-resources/web-service-references/ToHocSinh/wsdl/sanchikaro_9080/QLHocSinhComApp-sun-http-binding/QLHocSinh/interface_WSDL/TimHocSinhByIdHocSinh.wsdl"/>
+    <system systemId="http://sanchikaro:9080/QLHocSinhComApp-sun-http-binding/QLHocSinh/interface_WSDL/TimHocSinhTheoKhoiLop.wsdl" uri="src/conf/xml-resources/web-service-references/ToHocSinh/wsdl/sanchikaro_9080/QLHocSinhComApp-sun-http-binding/QLHocSinh/interface_WSDL/TimHocSinhTheoKhoiLop.wsdl"/>
+    <system systemId="http://sanchikaro:9080/QLHocSinhComApp-sun-http-binding/QLHocSinh/interface_WSDL/ChuyenLop.wsdl" uri="src/conf/xml-resources/web-service-references/ToHocSinh/wsdl/sanchikaro_9080/QLHocSinhComApp-sun-http-binding/QLHocSinh/interface_WSDL/ChuyenLop.wsdl"/>
+    <system systemId="http://sanchikaro:9080/QLHocSinhComApp-sun-http-binding/QLHocSinh/interface_WSDL/TaoHocBa.wsdl" uri="src/conf/xml-resources/web-service-references/ToHocSinh/wsdl/sanchikaro_9080/QLHocSinhComApp-sun-http-binding/QLHocSinh/interface_WSDL/TaoHocBa.wsdl"/>
+    <system systemId="http://sanchikaro:9080/QLHocSinhComApp-sun-http-binding/QLHocSinh/interface_WSDL/LayMaHocSinh.wsdl" uri="src/conf/xml-resources/web-service-references/ToHocSinh/wsdl/sanchikaro_9080/QLHocSinhComApp-sun-http-binding/QLHocSinh/interface_WSDL/LayMaHocSinh.wsdl"/>
+    <system systemId="http://sanchikaro:9080/QLHocSinhComApp-sun-http-binding/QLHocSinh/interface_WSDL/XoaHocSinh.wsdl" uri="src/conf/xml-resources/web-service-references/ToHocSinh/wsdl/sanchikaro_9080/QLHocSinhComApp-sun-http-binding/QLHocSinh/interface_WSDL/XoaHocSinh.wsdl"/>
+    <system systemId="http://sanchikaro:9080/QLHocSinhComApp-sun-http-binding/QLHocSinh/interface_WSDL/ThemHocSinh.wsdl" uri="src/conf/xml-resources/web-service-references/ToHocSinh/wsdl/sanchikaro_9080/QLHocSinhComApp-sun-http-binding/QLHocSinh/interface_WSDL/ThemHocSinh.wsdl"/>
+    <system systemId="http://sanchikaro:9080/QLHocSinhComApp-sun-http-binding/QLHocSinh/interface_WSDL/TimHocSinhTheoLop.wsdl" uri="src/conf/xml-resources/web-service-references/ToHocSinh/wsdl/sanchikaro_9080/QLHocSinhComApp-sun-http-binding/QLHocSinh/interface_WSDL/TimHocSinhTheoLop.wsdl"/>
+    <system systemId="http://sanchikaro:9080/QLHocSinhComApp-sun-http-binding/QLHocSinh/XSD_XML_Object/ListObject.xsd" uri="src/conf/xml-resources/web-service-references/ToHocSinh/wsdl/sanchikaro_9080/QLHocSinhComApp-sun-http-binding/QLHocSinh/XSD_XML_Object/ListObject.xsd"/>
+    <system systemId="http://sanchikaro:9080/QLHocSinhComApp-sun-http-binding/QLHocSinh/DB_WSDL/find/XSD/DB_loadHocSinhByIDHocSinh.xsd" uri="src/conf/xml-resources/web-service-references/ToHocSinh/wsdl/sanchikaro_9080/QLHocSinhComApp-sun-http-binding/QLHocSinh/DB_WSDL/find/XSD/DB_loadHocSinhByIDHocSinh.xsd"/>
+    <system systemId="http://sanchikaro:9080/QLHocSinhComApp-sun-http-binding/QLHocSinh/XSD_XML_Object/EschoolinkObject.xsd" uri="src/conf/xml-resources/web-service-references/ToHocSinh/wsdl/sanchikaro_9080/QLHocSinhComApp-sun-http-binding/QLHocSinh/XSD_XML_Object/EschoolinkObject.xsd"/>
+    <system systemId="http://localhost:9080/QuanLyDiaChiComAppService9/LayDanhSachTinh?WSDL" uri="src/conf/xml-resources/web-service-references/LayDanhSachTinh/wsdl/localhost_9080/QuanLyDiaChiComAppService9/LayDanhSachTinh.wsdl"/>
+    <system systemId="http://sanchikaro:9080/QuanLyDiaChiComApp-sun-http-binding/QuanLyDiaChi/interface_WSDL/LayDanhSachHuyen.wsdl" uri="src/conf/xml-resources/web-service-references/LayDanhSachTinh/wsdl/sanchikaro_9080/QuanLyDiaChiComApp-sun-http-binding/QuanLyDiaChi/interface_WSDL/LayDanhSachHuyen.wsdl"/>
+    <system systemId="http://sanchikaro:9080/QuanLyDiaChiComApp-sun-http-binding/QuanLyDiaChi/interface_WSDL/TaoDiaChi/UpdateQuanHuyenThanhPho.wsdl" uri="src/conf/xml-resources/web-service-references/LayDanhSachTinh/wsdl/sanchikaro_9080/QuanLyDiaChiComApp-sun-http-binding/QuanLyDiaChi/interface_WSDL/TaoDiaChi/UpdateQuanHuyenThanhPho.wsdl"/>
+    <system systemId="http://sanchikaro:9080/QuanLyDiaChiComApp-sun-http-binding/QuanLyDiaChi/interface_WSDL/TaoDiaChi/TaoXaPhuongThiTran.wsdl" uri="src/conf/xml-resources/web-service-references/LayDanhSachTinh/wsdl/sanchikaro_9080/QuanLyDiaChiComApp-sun-http-binding/QuanLyDiaChi/interface_WSDL/TaoDiaChi/TaoXaPhuongThiTran.wsdl"/>
+    <system systemId="http://sanchikaro:9080/QuanLyDiaChiComApp-sun-http-binding/QuanLyDiaChi/interface_WSDL/TaoDiaChi/TaoThonXom.wsdl" uri="src/conf/xml-resources/web-service-references/LayDanhSachTinh/wsdl/sanchikaro_9080/QuanLyDiaChiComApp-sun-http-binding/QuanLyDiaChi/interface_WSDL/TaoDiaChi/TaoThonXom.wsdl"/>
+    <system systemId="http://sanchikaro:9080/QuanLyDiaChiComApp-sun-http-binding/QuanLyDiaChi/interface_WSDL/TaoDiaChi/TaoQueQuan.wsdl" uri="src/conf/xml-resources/web-service-references/LayDanhSachTinh/wsdl/sanchikaro_9080/QuanLyDiaChiComApp-sun-http-binding/QuanLyDiaChi/interface_WSDL/TaoDiaChi/TaoQueQuan.wsdl"/>
+    <system systemId="http://sanchikaro:9080/QuanLyDiaChiComApp-sun-http-binding/QuanLyDiaChi/interface_WSDL/TaoDiaChi/TaoQuanHuyenThanhPho.wsdl" uri="src/conf/xml-resources/web-service-references/LayDanhSachTinh/wsdl/sanchikaro_9080/QuanLyDiaChiComApp-sun-http-binding/QuanLyDiaChi/interface_WSDL/TaoDiaChi/TaoQuanHuyenThanhPho.wsdl"/>
+    <system systemId="http://sanchikaro:9080/QuanLyDiaChiComApp-sun-http-binding/QuanLyDiaChi/interface_WSDL/TaoDiaChi/UpdateTinh.wsdl" uri="src/conf/xml-resources/web-service-references/LayDanhSachTinh/wsdl/sanchikaro_9080/QuanLyDiaChiComApp-sun-http-binding/QuanLyDiaChi/interface_WSDL/TaoDiaChi/UpdateTinh.wsdl"/>
+    <system systemId="http://sanchikaro:9080/QuanLyDiaChiComApp-sun-http-binding/QuanLyDiaChi/interface_WSDL/TaoDiaChi/TaoTinh.wsdl" uri="src/conf/xml-resources/web-service-references/LayDanhSachTinh/wsdl/sanchikaro_9080/QuanLyDiaChiComApp-sun-http-binding/QuanLyDiaChi/interface_WSDL/TaoDiaChi/TaoTinh.wsdl"/>
+    <system systemId="http://sanchikaro:9080/QuanLyDiaChiComApp-sun-http-binding/QuanLyDiaChi/interface_WSDL/LayDanhSachTinh.wsdl" uri="src/conf/xml-resources/web-service-references/LayDanhSachTinh/wsdl/sanchikaro_9080/QuanLyDiaChiComApp-sun-http-binding/QuanLyDiaChi/interface_WSDL/LayDanhSachTinh.wsdl"/>
+    <system systemId="http://sanchikaro:9080/QuanLyDiaChiComApp-sun-http-binding/QuanLyDiaChi/interface_WSDL/LayDanhSachKhuVuc.wsdl" uri="src/conf/xml-resources/web-service-references/LayDanhSachTinh/wsdl/sanchikaro_9080/QuanLyDiaChiComApp-sun-http-binding/QuanLyDiaChi/interface_WSDL/LayDanhSachKhuVuc.wsdl"/>
+    <system systemId="http://sanchikaro:9080/QuanLyDiaChiComApp-sun-http-binding/QuanLyDiaChi/interface_WSDL/TaoDiaChi/TaoKhuVuc.wsdl" uri="src/conf/xml-resources/web-service-references/LayDanhSachTinh/wsdl/sanchikaro_9080/QuanLyDiaChiComApp-sun-http-binding/QuanLyDiaChi/interface_WSDL/TaoDiaChi/TaoKhuVuc.wsdl"/>
+    <system systemId="http://sanchikaro:9080/QuanLyDiaChiComApp-sun-http-binding/QuanLyDiaChi/XSD_XML_Object/EschoolinkObject.xsd" uri="src/conf/xml-resources/web-service-references/LayDanhSachTinh/wsdl/sanchikaro_9080/QuanLyDiaChiComApp-sun-http-binding/QuanLyDiaChi/XSD_XML_Object/EschoolinkObject.xsd"/>
+    <system systemId="http://localhost:9080/QuanLyThongTinKhoiTaoComAppService7/LayDanhSachLoaiHocSinh?WSDL" uri="src/conf/xml-resources/web-service-references/LayDanhSachLoaiHocSinh/wsdl/localhost_9080/QuanLyThongTinKhoiTaoComAppService7/LayDanhSachLoaiHocSinh.wsdl"/>
+    <system systemId="http://sanchikaro:9080/QuanLyThongTinKhoiTaoComApp-sun-http-binding/QuanLyThongTinKhoiTaoHeThong/interface_WSDL/GetAllLoaiHocSinh.wsdl" uri="src/conf/xml-resources/web-service-references/LayDanhSachLoaiHocSinh/wsdl/sanchikaro_9080/QuanLyThongTinKhoiTaoComApp-sun-http-binding/QuanLyThongTinKhoiTaoHeThong/interface_WSDL/GetAllLoaiHocSinh.wsdl"/>
+    <system systemId="http://sanchikaro:9080/QuanLyThongTinKhoiTaoComApp-sun-http-binding/QuanLyThongTinKhoiTaoHeThong/interface_WSDL/GetAllCheDoUuTien.wsdl" uri="src/conf/xml-resources/web-service-references/LayDanhSachLoaiHocSinh/wsdl/sanchikaro_9080/QuanLyThongTinKhoiTaoComApp-sun-http-binding/QuanLyThongTinKhoiTaoHeThong/interface_WSDL/GetAllCheDoUuTien.wsdl"/>
+    <system systemId="http://sanchikaro:9080/QuanLyThongTinKhoiTaoComApp-sun-http-binding/QuanLyThongTinKhoiTaoHeThong/interface_WSDL/TaoDanToc.wsdl" uri="src/conf/xml-resources/web-service-references/LayDanhSachLoaiHocSinh/wsdl/sanchikaro_9080/QuanLyThongTinKhoiTaoComApp-sun-http-binding/QuanLyThongTinKhoiTaoHeThong/interface_WSDL/TaoDanToc.wsdl"/>
+    <system systemId="http://sanchikaro:9080/QuanLyThongTinKhoiTaoComApp-sun-http-binding/QuanLyThongTinKhoiTaoHeThong/interface_WSDL/GetAllLop.wsdl" uri="src/conf/xml-resources/web-service-references/LayDanhSachLoaiHocSinh/wsdl/sanchikaro_9080/QuanLyThongTinKhoiTaoComApp-sun-http-binding/QuanLyThongTinKhoiTaoHeThong/interface_WSDL/GetAllLop.wsdl"/>
+    <system systemId="http://sanchikaro:9080/QuanLyThongTinKhoiTaoComApp-sun-http-binding/QuanLyThongTinKhoiTaoHeThong/interface_WSDL/TaoCheDoUuTien.wsdl" uri="src/conf/xml-resources/web-service-references/LayDanhSachLoaiHocSinh/wsdl/sanchikaro_9080/QuanLyThongTinKhoiTaoComApp-sun-http-binding/QuanLyThongTinKhoiTaoHeThong/interface_WSDL/TaoCheDoUuTien.wsdl"/>
+    <system systemId="http://sanchikaro:9080/QuanLyThongTinKhoiTaoComApp-sun-http-binding/QuanLyThongTinKhoiTaoHeThong/interface_WSDL/TaoNamHocMoi/TaoLop.wsdl" uri="src/conf/xml-resources/web-service-references/LayDanhSachLoaiHocSinh/wsdl/sanchikaro_9080/QuanLyThongTinKhoiTaoComApp-sun-http-binding/QuanLyThongTinKhoiTaoHeThong/interface_WSDL/TaoNamHocMoi/TaoLop.wsdl"/>
+    <system systemId="http://sanchikaro:9080/QuanLyThongTinKhoiTaoComApp-sun-http-binding/QuanLyThongTinKhoiTaoHeThong/interface_WSDL/GetAllDanToc.wsdl" uri="src/conf/xml-resources/web-service-references/LayDanhSachLoaiHocSinh/wsdl/sanchikaro_9080/QuanLyThongTinKhoiTaoComApp-sun-http-binding/QuanLyThongTinKhoiTaoHeThong/interface_WSDL/GetAllDanToc.wsdl"/>
+    <system systemId="http://sanchikaro:9080/QuanLyThongTinKhoiTaoComApp-sun-http-binding/QuanLyThongTinKhoiTaoHeThong/interface_WSDL/HocSinh/TaoLoaiHocSinh.wsdl" uri="src/conf/xml-resources/web-service-references/LayDanhSachLoaiHocSinh/wsdl/sanchikaro_9080/QuanLyThongTinKhoiTaoComApp-sun-http-binding/QuanLyThongTinKhoiTaoHeThong/interface_WSDL/HocSinh/TaoLoaiHocSinh.wsdl"/>
+    <system systemId="http://sanchikaro:9080/QuanLyThongTinKhoiTaoComApp-sun-http-binding/QuanLyThongTinKhoiTaoHeThong/interface_WSDL/UpdateDanToc.wsdl" uri="src/conf/xml-resources/web-service-references/LayDanhSachLoaiHocSinh/wsdl/sanchikaro_9080/QuanLyThongTinKhoiTaoComApp-sun-http-binding/QuanLyThongTinKhoiTaoHeThong/interface_WSDL/UpdateDanToc.wsdl"/>
+    <system systemId="http://sanchikaro:9080/QuanLyThongTinKhoiTaoComApp-sun-http-binding/QuanLyThongTinKhoiTaoHeThong/interface_WSDL/TaoNamHocMoi/TaoNamHoc.wsdl" uri="src/conf/xml-resources/web-service-references/LayDanhSachLoaiHocSinh/wsdl/sanchikaro_9080/QuanLyThongTinKhoiTaoComApp-sun-http-binding/QuanLyThongTinKhoiTaoHeThong/interface_WSDL/TaoNamHocMoi/TaoNamHoc.wsdl"/>
+    <system systemId="http://sanchikaro:9080/QuanLyThongTinKhoiTaoComApp-sun-http-binding/QuanLyThongTinKhoiTaoHeThong/XSD_XML_Object/ListObject.xsd" uri="src/conf/xml-resources/web-service-references/LayDanhSachLoaiHocSinh/wsdl/sanchikaro_9080/QuanLyThongTinKhoiTaoComApp-sun-http-binding/QuanLyThongTinKhoiTaoHeThong/XSD_XML_Object/ListObject.xsd"/>
+    <system systemId="http://sanchikaro:9080/QuanLyThongTinKhoiTaoComApp-sun-http-binding/QuanLyThongTinKhoiTaoHeThong/XSD_XML_Object/EschoolinkObject.xsd" uri="src/conf/xml-resources/web-service-references/LayDanhSachLoaiHocSinh/wsdl/sanchikaro_9080/QuanLyThongTinKhoiTaoComApp-sun-http-binding/QuanLyThongTinKhoiTaoHeThong/XSD_XML_Object/EschoolinkObject.xsd"/>
 </catalog>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

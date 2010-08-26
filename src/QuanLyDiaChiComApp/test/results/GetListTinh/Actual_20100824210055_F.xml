@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP-ENV:Body>
+    <m:LayDanhSachTinhOperationResponse xmlns:m="QuanLyDiaChiComApp" xmlns:msgns="http://j2ee.netbeans.org/wsdl/QuanLyDiaChi/LayDanhSachTinh">
+      <listDSTinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">252</ns1:id>
+          <ns1:tenTinh isNull="false">An Giang</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">260</ns1:id>
+          <ns1:tenTinh isNull="false">Bà Rịa-Vũng Tàu</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">256</ns1:id>
+          <ns1:tenTinh isNull="false">Bạc Liêu</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">253</ns1:id>
+          <ns1:tenTinh isNull="false">Bắc Giang</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">255</ns1:id>
+          <ns1:tenTinh isNull="false">Bắc Kạn</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">254</ns1:id>
+          <ns1:tenTinh isNull="false">Bắc Ninh</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">257</ns1:id>
+          <ns1:tenTinh isNull="false">Bến Tre</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">250</ns1:id>
+          <ns1:tenTinh isNull="false">Binh duong</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">258</ns1:id>
+          <ns1:tenTinh isNull="false">Bình Định</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">259</ns1:id>
+          <ns1:tenTinh isNull="false">Bình Phước</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">261</ns1:id>
+          <ns1:tenTinh isNull="false">Bình Thuận</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">263</ns1:id>
+          <ns1:tenTinh isNull="false">Cà Mau</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">264</ns1:id>
+          <ns1:tenTinh isNull="false">Cao Bằng</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">262</ns1:id>
+          <ns1:tenTinh isNull="false">Cần Thơ</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">265</ns1:id>
+          <ns1:tenTinh isNull="false">Đắk Lắk</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">268</ns1:id>
+          <ns1:tenTinh isNull="false">Đắk Nông</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">267</ns1:id>
+          <ns1:tenTinh isNull="false">Đồng Nai</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">266</ns1:id>
+          <ns1:tenTinh isNull="false">Đồng Tháp</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">269</ns1:id>
+          <ns1:tenTinh isNull="false">Gia Lai</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">278</ns1:id>
+          <ns1:tenTinh isNull="false">Hà Giang</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">273</ns1:id>
+          <ns1:tenTinh isNull="false">Hà Nam</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">270</ns1:id>
+          <ns1:tenTinh isNull="false">Hà Nội</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">275</ns1:id>
+          <ns1:tenTinh isNull="false">Hà Tĩnh</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">274</ns1:id>
+          <ns1:tenTinh isNull="false">Hải Dương</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">272</ns1:id>
+          <ns1:tenTinh isNull="false">Hải Phòng</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">276</ns1:id>
+          <ns1:tenTinh isNull="false">Hậu Giang</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">277</ns1:id>
+          <ns1:tenTinh isNull="false">Hòa Bình</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">271</ns1:id>
+          <ns1:tenTinh isNull="false">Hưng Yên</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">279</ns1:id>
+          <ns1:tenTinh isNull="false">Kiên Giang</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">280</ns1:id>
+          <ns1:tenTinh isNull="false">Kon Tum</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">281</ns1:id>
+          <ns1:tenTinh isNull="false">Khánh Hòa</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">283</ns1:id>
+          <ns1:tenTinh isNull="false">Lai Châu</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">286</ns1:id>
+          <ns1:tenTinh isNull="false">Lạng Sơn</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">282</ns1:id>
+          <ns1:tenTinh isNull="false">Lào Cai</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">285</ns1:id>
+          <ns1:tenTinh isNull="false">Lâm Đồng</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">284</ns1:id>
+          <ns1:tenTinh isNull="false">Long An</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">287</ns1:id>
+          <ns1:tenTinh isNull="false">Nam Định</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">290</ns1:id>
+          <ns1:tenTinh isNull="false">Ninh Bình</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">289</ns1:id>
+          <ns1:tenTinh isNull="false">Ninh Thuận</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">288</ns1:id>
+          <ns1:tenTinh isNull="false">Nghệ An</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">292</ns1:id>
+          <ns1:tenTinh isNull="false">Phú Thọ</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">291</ns1:id>
+          <ns1:tenTinh isNull="false">Phú Yên</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">296</ns1:id>
+          <ns1:tenTinh isNull="false">Quảng Bình</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">293</ns1:id>
+          <ns1:tenTinh isNull="false">Quảng Nam</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">297</ns1:id>
+          <ns1:tenTinh isNull="false">Quảng Ninh</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">294</ns1:id>
+          <ns1:tenTinh isNull="false">Quảng Ngãi</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">295</ns1:id>
+          <ns1:tenTinh isNull="false">Quảng Trị</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">299</ns1:id>
+          <ns1:tenTinh isNull="false">Sóc Trăng</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">298</ns1:id>
+          <ns1:tenTinh isNull="false">Sơn La</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">249</ns1:id>
+          <ns1:tenTinh isNull="false">Tay Ninh</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">307</ns1:id>
+          <ns1:tenTinh isNull="false">Tây Ninh</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">305</ns1:id>
+          <ns1:tenTinh isNull="false">Tiền Giang</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">303</ns1:id>
+          <ns1:tenTinh isNull="false">Tuyên Quang</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">300</ns1:id>
+          <ns1:tenTinh isNull="false">Thái Bình</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">306</ns1:id>
+          <ns1:tenTinh isNull="false">Thái Nguyên</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">302</ns1:id>
+          <ns1:tenTinh isNull="false">Thanh Hóa</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">251</ns1:id>
+          <ns1:tenTinh isNull="false">Thành phố Hồ Chí Minh</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">301</ns1:id>
+          <ns1:tenTinh isNull="false">Thừa Thiên-Huế</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">304</ns1:id>
+          <ns1:tenTinh isNull="false">Trà Vinh</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">309</ns1:id>
+          <ns1:tenTinh isNull="false">Vĩnh Long</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">308</ns1:id>
+          <ns1:tenTinh isNull="false">Vĩnh Phúc</ns1:tenTinh>
+        </ns1:Tinh>
+        <ns1:Tinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">310</ns1:id>
+          <ns1:tenTinh isNull="false">Yên Bái</ns1:tenTinh>
+        </ns1:Tinh>
+      </listDSTinh>
+    </m:LayDanhSachTinhOperationResponse>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

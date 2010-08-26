@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<casa xmlns="http://java.sun.com/xml/ns/casa" xmlns:ns1="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_ThemHocSinh" xmlns:ns10="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_loadQueQuanByID" xmlns:ns11="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_loadHocSinhByIdHocSinh" xmlns:ns12="http://j2ee.netbeans.org/wsdl/QLHocSinh/TimHocSinhByIdHocSinh" xmlns:ns13="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_TimHocSinhTheoTen_count" xmlns:ns14="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_TimHocSinhTheoKhoiLop" xmlns:ns15="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_TimHocSinhTheoKhoiLop_count" xmlns:ns16="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_XepLop" xmlns:ns17="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_TimHocSinhTheoLop" xmlns:ns18="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_ChuyenLop" xmlns:ns19="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_UpdateThongTinHocSinh" xmlns:ns2="QLHocSinhComApp" xmlns:ns20="http://j2ee.netbeans.org/wsdl/QLHocSinh/TimHocSinhTheoTen" xmlns:ns21="http://j2ee.netbeans.org/wsdl/QLHocSinh/UpdateThongTinHocSinh" xmlns:ns22="http://j2ee.netbeans.org/wsdl/QLHocSinh/ChuyenLop" xmlns:ns23="http://j2ee.netbeans.org/wsdl/QLHocSinh/TimHocSinhTheoKhoiLop" xmlns:ns24="http://j2ee.netbeans.org/wsdl/QLHocSinh/TimHocSinhTheoLop" xmlns:ns25="http://j2ee.netbeans.org/wsdl/QLHocSinh/XepLop" xmlns:ns26="http://j2ee.netbeans.org/wsdl/QLHocSinh/UpdateThanhPhanGiaDinh" xmlns:ns27="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_TimHocSinhTheoTen" xmlns:ns28="http://enterprise.netbeans.org/bpel/QLHocSinh/ChuyenLop" xmlns:ns29="http://enterprise.netbeans.org/bpel/QLHocSinh/TaoHocBa" xmlns:ns3="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/ThemHocSinh" xmlns:ns30="http://enterprise.netbeans.org/bpel/QLHocSinh/TimHocSinhByIdHocSinh" xmlns:ns31="http://enterprise.netbeans.org/bpel/QLHocSinh/TimHocSinhTheoKhoiLop" xmlns:ns32="http://enterprise.netbeans.org/bpel/QLHocSinh/TimHocSinhTheoLop" xmlns:ns33="http://enterprise.netbeans.org/bpel/QLHocSinh/TimHocSinhTheoTen" xmlns:ns34="http://enterprise.netbeans.org/bpel/QLHocSinh/ToHocSinh" xmlns:ns35="http://enterprise.netbeans.org/bpel/QLHocSinh/UpdateThanhPhanGiaDinh" xmlns:ns36="http://enterprise.netbeans.org/bpel/QLHocSinh/UpdateThongTinHocSinh" xmlns:ns37="http://enterprise.netbeans.org/bpel/QLHocSinh/XepLop" xmlns:ns38="http://enterprise.netbeans.org/bpel/QLHocSinh/XoaHocSinh" xmlns:ns4="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_TaoHocBa" xmlns:ns5="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoHocBa" xmlns:ns6="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_XoaHocSinh" xmlns:ns7="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/XoaHocSinh" xmlns:ns8="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_TaoThanhPhanGiaDinh" xmlns:ns9="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_loadThanhPhanGiaDinhByIDHocSinh" xmlns:xlink="http://www.w3.org/2000/xlink">
+<casa xmlns="http://java.sun.com/xml/ns/casa" xmlns:ns1="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_ThemHocSinh" xmlns:ns10="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_loadQueQuanByID" xmlns:ns11="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_loadHocSinhByIdHocSinh" xmlns:ns12="http://j2ee.netbeans.org/wsdl/QLHocSinh/TimHocSinhByIdHocSinh" xmlns:ns13="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_TimHocSinhTheoTen_count" xmlns:ns14="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_TimHocSinhTheoKhoiLop" xmlns:ns15="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_TimHocSinhTheoKhoiLop_count" xmlns:ns16="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_XepLop" xmlns:ns17="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_TimHocSinhTheoLop" xmlns:ns18="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_ChuyenLop" xmlns:ns19="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_UpdateThongTinHocSinh" xmlns:ns2="QLHocSinhComApp" xmlns:ns20="http://j2ee.netbeans.org/wsdl/QLHocSinh/TimHocSinhTheoTen" xmlns:ns21="http://j2ee.netbeans.org/wsdl/QLHocSinh/UpdateThongTinHocSinh" xmlns:ns22="http://j2ee.netbeans.org/wsdl/QLHocSinh/ChuyenLop" xmlns:ns23="http://j2ee.netbeans.org/wsdl/QLHocSinh/TimHocSinhTheoKhoiLop" xmlns:ns24="http://j2ee.netbeans.org/wsdl/QLHocSinh/TimHocSinhTheoLop" xmlns:ns25="http://j2ee.netbeans.org/wsdl/QLHocSinh/XepLop" xmlns:ns26="http://j2ee.netbeans.org/wsdl/QLHocSinh/UpdateThanhPhanGiaDinh" xmlns:ns27="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_TimHocSinhTheoTen" xmlns:ns28="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_LayMaHocSinh" xmlns:ns29="http://j2ee.netbeans.org/wsdl/QLHocSinh/LayMaHocSinh" xmlns:ns3="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/ThemHocSinh" xmlns:ns30="http://enterprise.netbeans.org/bpel/QLHocSinh/ChuyenLop" xmlns:ns31="http://enterprise.netbeans.org/bpel/QLHocSinh/LayMaHocSinh" xmlns:ns32="http://enterprise.netbeans.org/bpel/QLHocSinh/TaoHocBa" xmlns:ns33="http://enterprise.netbeans.org/bpel/QLHocSinh/TimHocSinhByIdHocSinh" xmlns:ns34="http://enterprise.netbeans.org/bpel/QLHocSinh/TimHocSinhTheoKhoiLop" xmlns:ns35="http://enterprise.netbeans.org/bpel/QLHocSinh/TimHocSinhTheoLop" xmlns:ns36="http://enterprise.netbeans.org/bpel/QLHocSinh/TimHocSinhTheoTen" xmlns:ns37="http://enterprise.netbeans.org/bpel/QLHocSinh/ToHocSinh" xmlns:ns38="http://enterprise.netbeans.org/bpel/QLHocSinh/UpdateThanhPhanGiaDinh" xmlns:ns39="http://enterprise.netbeans.org/bpel/QLHocSinh/UpdateThongTinHocSinh" xmlns:ns4="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_TaoHocBa" xmlns:ns40="http://enterprise.netbeans.org/bpel/QLHocSinh/XepLop" xmlns:ns41="http://enterprise.netbeans.org/bpel/QLHocSinh/XoaHocSinh" xmlns:ns5="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoHocBa" xmlns:ns6="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_XoaHocSinh" xmlns:ns7="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/XoaHocSinh" xmlns:ns8="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_TaoThanhPhanGiaDinh" xmlns:ns9="http://j2ee.netbeans.org/wsdl/QLHocSinh/DB_loadThanhPhanGiaDinhByIDHocSinh" xmlns:xlink="http://www.w3.org/2000/xlink">
     <endpoints>
         <endpoint endpoint-name="port" interface-name="ns1:jdbcPortType" name="endpoint1" service-name="ns1:service"/>
         <endpoint endpoint-name="ToHocSinh" interface-name="ns3:ThemHocSinhPortType" name="endpoint2" service-name="ns2:QLHocSinhComAppService1"/>
@@ -28,39 +28,41 @@
         <endpoint endpoint-name="port" interface-name="ns26:jdbcPortType" name="endpoint25" service-name="ns26:service"/>
         <endpoint endpoint-name="UpdateThanhPhanGiaDinh" interface-name="ns26:UpdateThanhPhanGiaDinhPortType" name="endpoint26" service-name="ns2:QLHocSinhComAppService12"/>
         <endpoint endpoint-name="port" interface-name="ns27:jdbcPortType" name="endpoint27" service-name="ns27:service"/>
-        <endpoint display-name="PartnerLink1" endpoint-name="ChuyenLopPortTypeRole_myRole" file-path="processor_BPEL\ChuyenLop.bpel" interface-name="ns22:ChuyenLopPortType" name="endpoint28" process-name="ChuyenLop" service-name="ns28:PartnerLink1"/>
-        <endpoint display-name="PartnerLink2" endpoint-name="TaoHocBaPortTypeRole_myRole" file-path="processor_BPEL\TaoHocBa.bpel" interface-name="ns5:TaoHocBaPortType" name="endpoint29" process-name="TaoHocBa" service-name="ns29:PartnerLink2"/>
-        <endpoint display-name="PartnerLink1" endpoint-name="TimHocSinhByIdHocSinhPortTypeRole_myRole" file-path="processor_BPEL\TimHocSinhByIdHocSinh.bpel" interface-name="ns12:TimHocSinhByIdHocSinhPortType" name="endpoint30" process-name="TimHocSinhByIdHocSinh" service-name="ns30:PartnerLink1"/>
-        <endpoint display-name="PartnerLink1" endpoint-name="TimHocSinhTheoKhoiLopPortTypeRole_myRole" file-path="processor_BPEL\TimHocSinhTheoKhoiLop.bpel" interface-name="ns23:TimHocSinhTheoKhoiLopPortType" name="endpoint31" process-name="TimHocSinhTheoKhoiLop" service-name="ns31:PartnerLink1"/>
-        <endpoint display-name="PartnerLink1" endpoint-name="TimHocSinhTheoLopPortTypeRole_myRole" file-path="processor_BPEL\TimHocSinhTheoLop.bpel" interface-name="ns24:TimHocSinhTheoLopPortType" name="endpoint32" process-name="TimHocSinhTheoLop" service-name="ns32:PartnerLink1"/>
-        <endpoint display-name="PartnerLink1" endpoint-name="TimHocSinhTheoTenPortTypeRole_myRole" file-path="processor_BPEL\TimHocSinhTheoTen.bpel" interface-name="ns20:TimHocSinhTheoTenPortType" name="endpoint33" process-name="TimHocSinhTheoTen" service-name="ns33:PartnerLink1"/>
-        <endpoint display-name="PartnerLink1" endpoint-name="ThemHocSinhPortTypeRole_myRole" file-path="processor_BPEL\ToHocSinh.bpel" interface-name="ns3:ThemHocSinhPortType" name="endpoint34" process-name="ToHocSinh" service-name="ns34:PartnerLink1"/>
-        <endpoint display-name="PartnerLink1" endpoint-name="UpdateThanhPhanGiaDinhPortTypeRole_myRole" file-path="processor_BPEL\UpdateThanhPhanGiaDinh.bpel" interface-name="ns26:UpdateThanhPhanGiaDinhPortType" name="endpoint35" process-name="UpdateThanhPhanGiaDinh" service-name="ns35:PartnerLink1"/>
-        <endpoint display-name="PartnerLink1" endpoint-name="UpdateThongTinHocSinhPortTypeRole_myRole" file-path="processor_BPEL\UpdateThongTinHocSinh.bpel" interface-name="ns21:UpdateThongTinHocSinhPortType" name="endpoint36" process-name="UpdateThongTinHocSinh" service-name="ns36:PartnerLink1"/>
-        <endpoint display-name="PartnerLink1" endpoint-name="XepLopPortTypeRole_myRole" file-path="processor_BPEL\XepLop.bpel" interface-name="ns25:XepLopPortType" name="endpoint37" process-name="XepLop" service-name="ns37:PartnerLink1"/>
-        <endpoint display-name="PartnerLink1" endpoint-name="XoaHocSinhPortTypeRole_myRole" file-path="processor_BPEL\XoaHocSinh.bpel" interface-name="ns7:XoaHocSinhPortType" name="endpoint38" process-name="XoaHocSinh" service-name="ns38:PartnerLink1"/>
-        <endpoint display-name="PartnerLink2" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\ChuyenLop.bpel" interface-name="ns18:jdbcPortType" name="endpoint39" process-name="ChuyenLop" service-name="ns28:PartnerLink2"/>
-        <endpoint display-name="PartnerLink1" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\TaoHocBa.bpel" interface-name="ns4:jdbcPortType" name="endpoint40" process-name="TaoHocBa" service-name="ns29:PartnerLink1"/>
-        <endpoint display-name="PartnerLink2" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\TimHocSinhByIdHocSinh.bpel" interface-name="ns11:jdbcPortType" name="endpoint41" process-name="TimHocSinhByIdHocSinh" service-name="ns30:PartnerLink2"/>
-        <endpoint display-name="loadquequan" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\TimHocSinhByIdHocSinh.bpel" interface-name="ns10:jdbcPortType" name="endpoint42" process-name="TimHocSinhByIdHocSinh" service-name="ns30:loadquequan"/>
-        <endpoint display-name="loadTPGD" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\TimHocSinhByIdHocSinh.bpel" interface-name="ns9:jdbcPortType" name="endpoint43" process-name="TimHocSinhByIdHocSinh" service-name="ns30:loadTPGD"/>
-        <endpoint display-name="PartnerLink2" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\TimHocSinhTheoKhoiLop.bpel" interface-name="ns14:jdbcPortType" name="endpoint44" process-name="TimHocSinhTheoKhoiLop" service-name="ns31:PartnerLink2"/>
-        <endpoint display-name="PartnerLink3" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\TimHocSinhTheoKhoiLop.bpel" interface-name="ns15:jdbcPortType" name="endpoint45" process-name="TimHocSinhTheoKhoiLop" service-name="ns31:PartnerLink3"/>
-        <endpoint display-name="PartnerLink2" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\TimHocSinhTheoLop.bpel" interface-name="ns17:jdbcPortType" name="endpoint46" process-name="TimHocSinhTheoLop" service-name="ns32:PartnerLink2"/>
-        <endpoint display-name="PartnerLink2" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\TimHocSinhTheoTen.bpel" interface-name="ns27:jdbcPortType" name="endpoint47" process-name="TimHocSinhTheoTen" service-name="ns33:PartnerLink2"/>
-        <endpoint display-name="PartnerLink3" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\TimHocSinhTheoTen.bpel" interface-name="ns13:jdbcPortType" name="endpoint48" process-name="TimHocSinhTheoTen" service-name="ns33:PartnerLink3"/>
-        <endpoint display-name="PartnerLink2" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\ToHocSinh.bpel" interface-name="ns1:jdbcPortType" name="endpoint49" process-name="ToHocSinh" service-name="ns34:PartnerLink2"/>
-        <endpoint display-name="PartnerLink3" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\ToHocSinh.bpel" interface-name="ns8:jdbcPortType" name="endpoint50" process-name="ToHocSinh" service-name="ns34:PartnerLink3"/>
-        <endpoint display-name="PartnerLink4" endpoint-name="XepLopPortTypeRole_partnerRole" file-path="processor_BPEL\ToHocSinh.bpel" interface-name="ns25:XepLopPortType" name="endpoint51" process-name="ToHocSinh" service-name="ns34:PartnerLink4"/>
-        <endpoint display-name="PartnerLink2" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\UpdateThanhPhanGiaDinh.bpel" interface-name="ns26:jdbcPortType" name="endpoint52" process-name="UpdateThanhPhanGiaDinh" service-name="ns35:PartnerLink2"/>
-        <endpoint display-name="PartnerLink2" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\UpdateThongTinHocSinh.bpel" interface-name="ns19:jdbcPortType" name="endpoint53" process-name="UpdateThongTinHocSinh" service-name="ns36:PartnerLink2"/>
-        <endpoint display-name="PartnerLink2" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\XepLop.bpel" interface-name="ns16:jdbcPortType" name="endpoint54" process-name="XepLop" service-name="ns37:PartnerLink2"/>
-        <endpoint display-name="PartnerLink2" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\XoaHocSinh.bpel" interface-name="ns6:jdbcPortType" name="endpoint55" process-name="XoaHocSinh" service-name="ns38:PartnerLink2"/>
+        <endpoint endpoint-name="port" interface-name="ns28:jdbcPortType" name="endpoint28" service-name="ns28:service"/>
+        <endpoint endpoint-name="LayMaHocSinh" interface-name="ns29:LayMaHocSinhPortType" name="endpoint29" service-name="ns2:QLHocSinhComAppService13"/>
+        <endpoint display-name="PartnerLink1" endpoint-name="ChuyenLopPortTypeRole_myRole" file-path="processor_BPEL\ChuyenLop.bpel" interface-name="ns22:ChuyenLopPortType" name="endpoint30" process-name="ChuyenLop" service-name="ns30:PartnerLink1"/>
+        <endpoint display-name="PartnerLink1" endpoint-name="LayMaHocSinhPortTypeRole_myRole" file-path="processor_BPEL\LayMaHocSinh.bpel" interface-name="ns29:LayMaHocSinhPortType" name="endpoint31" process-name="LayMaHocSinh" service-name="ns31:PartnerLink1"/>
+        <endpoint display-name="PartnerLink2" endpoint-name="TaoHocBaPortTypeRole_myRole" file-path="processor_BPEL\TaoHocBa.bpel" interface-name="ns5:TaoHocBaPortType" name="endpoint32" process-name="TaoHocBa" service-name="ns32:PartnerLink2"/>
+        <endpoint display-name="PartnerLink1" endpoint-name="TimHocSinhByIdHocSinhPortTypeRole_myRole" file-path="processor_BPEL\TimHocSinhByIdHocSinh.bpel" interface-name="ns12:TimHocSinhByIdHocSinhPortType" name="endpoint33" process-name="TimHocSinhByIdHocSinh" service-name="ns33:PartnerLink1"/>
+        <endpoint display-name="PartnerLink1" endpoint-name="TimHocSinhTheoKhoiLopPortTypeRole_myRole" file-path="processor_BPEL\TimHocSinhTheoKhoiLop.bpel" interface-name="ns23:TimHocSinhTheoKhoiLopPortType" name="endpoint34" process-name="TimHocSinhTheoKhoiLop" service-name="ns34:PartnerLink1"/>
+        <endpoint display-name="PartnerLink1" endpoint-name="TimHocSinhTheoLopPortTypeRole_myRole" file-path="processor_BPEL\TimHocSinhTheoLop.bpel" interface-name="ns24:TimHocSinhTheoLopPortType" name="endpoint35" process-name="TimHocSinhTheoLop" service-name="ns35:PartnerLink1"/>
+        <endpoint display-name="PartnerLink1" endpoint-name="TimHocSinhTheoTenPortTypeRole_myRole" file-path="processor_BPEL\TimHocSinhTheoTen.bpel" interface-name="ns20:TimHocSinhTheoTenPortType" name="endpoint36" process-name="TimHocSinhTheoTen" service-name="ns36:PartnerLink1"/>
+        <endpoint display-name="PartnerLink1" endpoint-name="ThemHocSinhPortTypeRole_myRole" file-path="processor_BPEL\ToHocSinh.bpel" interface-name="ns3:ThemHocSinhPortType" name="endpoint37" process-name="ToHocSinh" service-name="ns37:PartnerLink1"/>
+        <endpoint display-name="PartnerLink1" endpoint-name="UpdateThanhPhanGiaDinhPortTypeRole_myRole" file-path="processor_BPEL\UpdateThanhPhanGiaDinh.bpel" interface-name="ns26:UpdateThanhPhanGiaDinhPortType" name="endpoint38" process-name="UpdateThanhPhanGiaDinh" service-name="ns38:PartnerLink1"/>
+        <endpoint display-name="PartnerLink1" endpoint-name="UpdateThongTinHocSinhPortTypeRole_myRole" file-path="processor_BPEL\UpdateThongTinHocSinh.bpel" interface-name="ns21:UpdateThongTinHocSinhPortType" name="endpoint39" process-name="UpdateThongTinHocSinh" service-name="ns39:PartnerLink1"/>
+        <endpoint display-name="PartnerLink1" endpoint-name="XepLopPortTypeRole_myRole" file-path="processor_BPEL\XepLop.bpel" interface-name="ns25:XepLopPortType" name="endpoint40" process-name="XepLop" service-name="ns40:PartnerLink1"/>
+        <endpoint display-name="PartnerLink1" endpoint-name="XoaHocSinhPortTypeRole_myRole" file-path="processor_BPEL\XoaHocSinh.bpel" interface-name="ns7:XoaHocSinhPortType" name="endpoint41" process-name="XoaHocSinh" service-name="ns41:PartnerLink1"/>
+        <endpoint display-name="PartnerLink2" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\ChuyenLop.bpel" interface-name="ns18:jdbcPortType" name="endpoint42" process-name="ChuyenLop" service-name="ns30:PartnerLink2"/>
+        <endpoint display-name="PartnerLink2" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\LayMaHocSinh.bpel" interface-name="ns28:jdbcPortType" name="endpoint43" process-name="LayMaHocSinh" service-name="ns31:PartnerLink2"/>
+        <endpoint display-name="PartnerLink1" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\TaoHocBa.bpel" interface-name="ns4:jdbcPortType" name="endpoint44" process-name="TaoHocBa" service-name="ns32:PartnerLink1"/>
+        <endpoint display-name="PartnerLink2" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\TimHocSinhByIdHocSinh.bpel" interface-name="ns11:jdbcPortType" name="endpoint45" process-name="TimHocSinhByIdHocSinh" service-name="ns33:PartnerLink2"/>
+        <endpoint display-name="loadquequan" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\TimHocSinhByIdHocSinh.bpel" interface-name="ns10:jdbcPortType" name="endpoint46" process-name="TimHocSinhByIdHocSinh" service-name="ns33:loadquequan"/>
+        <endpoint display-name="loadTPGD" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\TimHocSinhByIdHocSinh.bpel" interface-name="ns9:jdbcPortType" name="endpoint47" process-name="TimHocSinhByIdHocSinh" service-name="ns33:loadTPGD"/>
+        <endpoint display-name="PartnerLink2" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\TimHocSinhTheoKhoiLop.bpel" interface-name="ns14:jdbcPortType" name="endpoint48" process-name="TimHocSinhTheoKhoiLop" service-name="ns34:PartnerLink2"/>
+        <endpoint display-name="PartnerLink3" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\TimHocSinhTheoKhoiLop.bpel" interface-name="ns15:jdbcPortType" name="endpoint49" process-name="TimHocSinhTheoKhoiLop" service-name="ns34:PartnerLink3"/>
+        <endpoint display-name="PartnerLink2" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\TimHocSinhTheoLop.bpel" interface-name="ns17:jdbcPortType" name="endpoint50" process-name="TimHocSinhTheoLop" service-name="ns35:PartnerLink2"/>
+        <endpoint display-name="PartnerLink2" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\TimHocSinhTheoTen.bpel" interface-name="ns27:jdbcPortType" name="endpoint51" process-name="TimHocSinhTheoTen" service-name="ns36:PartnerLink2"/>
+        <endpoint display-name="PartnerLink3" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\TimHocSinhTheoTen.bpel" interface-name="ns13:jdbcPortType" name="endpoint52" process-name="TimHocSinhTheoTen" service-name="ns36:PartnerLink3"/>
+        <endpoint display-name="PartnerLink2" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\ToHocSinh.bpel" interface-name="ns1:jdbcPortType" name="endpoint53" process-name="ToHocSinh" service-name="ns37:PartnerLink2"/>
+        <endpoint display-name="PartnerLink3" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\ToHocSinh.bpel" interface-name="ns8:jdbcPortType" name="endpoint54" process-name="ToHocSinh" service-name="ns37:PartnerLink3"/>
+        <endpoint display-name="PartnerLink4" endpoint-name="XepLopPortTypeRole_partnerRole" file-path="processor_BPEL\ToHocSinh.bpel" interface-name="ns25:XepLopPortType" name="endpoint55" process-name="ToHocSinh" service-name="ns37:PartnerLink4"/>
+        <endpoint display-name="PartnerLink2" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\UpdateThanhPhanGiaDinh.bpel" interface-name="ns26:jdbcPortType" name="endpoint56" process-name="UpdateThanhPhanGiaDinh" service-name="ns38:PartnerLink2"/>
+        <endpoint display-name="PartnerLink2" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\UpdateThongTinHocSinh.bpel" interface-name="ns19:jdbcPortType" name="endpoint57" process-name="UpdateThongTinHocSinh" service-name="ns39:PartnerLink2"/>
+        <endpoint display-name="PartnerLink2" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\XepLop.bpel" interface-name="ns16:jdbcPortType" name="endpoint58" process-name="XepLop" service-name="ns40:PartnerLink2"/>
+        <endpoint display-name="PartnerLink2" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\XoaHocSinh.bpel" interface-name="ns6:jdbcPortType" name="endpoint59" process-name="XoaHocSinh" service-name="ns41:PartnerLink2"/>
     </endpoints>
     <service-units>
         <service-engine-service-unit artifacts-zip="QLHocSinh.jar" component-name="sun-bpel-engine" defined="true" description="Represents this Service Unit" internal="true" name="QLHocSinhComApp-QLHocSinh" unit-name="QLHocSinh" unknown="false" x="141" y="99">
-            <provides endpoint="endpoint28"/>
-            <provides endpoint="endpoint29"/>
             <provides endpoint="endpoint30"/>
             <provides endpoint="endpoint31"/>
             <provides endpoint="endpoint32"/>
@@ -70,9 +72,9 @@
             <provides endpoint="endpoint36"/>
             <provides endpoint="endpoint37"/>
             <provides endpoint="endpoint38"/>
-            <consumes endpoint="endpoint39"/>
-            <consumes endpoint="endpoint40"/>
-            <consumes endpoint="endpoint41"/>
+            <provides endpoint="endpoint39"/>
+            <provides endpoint="endpoint40"/>
+            <provides endpoint="endpoint41"/>
             <consumes endpoint="endpoint42"/>
             <consumes endpoint="endpoint43"/>
             <consumes endpoint="endpoint44"/>
@@ -87,85 +89,94 @@
             <consumes endpoint="endpoint53"/>
             <consumes endpoint="endpoint54"/>
             <consumes endpoint="endpoint55"/>
+            <consumes endpoint="endpoint56"/>
+            <consumes endpoint="endpoint57"/>
+            <consumes endpoint="endpoint58"/>
+            <consumes endpoint="endpoint59"/>
         </service-engine-service-unit>
         <binding-component-service-unit artifacts-zip="sun-database-binding.jar" component-name="sun-database-binding" description="Represents this Service Unit" name="QLHocSinhComApp-sun-database-binding" unit-name="sun-database-binding">
             <ports>
-                <port x="67" y="2128">
+                <port x="67" y="2313">
                     <link xlink:href="../jbiServiceUnits/QLHocSinh/DB_WSDL/del/DB_XoaHocSinh.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint5"/>
                     <provides endpoint="endpoint5"/>
                 </port>
-                <port x="67" y="1625">
+                <port x="67" y="39">
+                    <link xlink:href="../jbiServiceUnits/QLHocSinh/DB_WSDL/find/DB_LayMaHocSinh.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint28"/>
+                    <provides endpoint="endpoint28"/>
+                </port>
+                <port x="67" y="1810">
                     <link xlink:href="../jbiServiceUnits/QLHocSinh/DB_WSDL/find/DB_loadHocSinhByIdHocSinh.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint10"/>
                     <provides endpoint="endpoint10"/>
                 </port>
-                <port x="67" y="1943">
+                <port x="67" y="2128">
                     <link xlink:href="../jbiServiceUnits/QLHocSinh/DB_WSDL/find/DB_loadQueQuanByID.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint9"/>
                     <provides endpoint="endpoint9"/>
                 </port>
-                <port x="67" y="1837">
+                <port x="67" y="2022">
                     <link xlink:href="../jbiServiceUnits/QLHocSinh/DB_WSDL/find/DB_loadThanhPhanGiaDinhByIDHocSinh.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint8"/>
                     <provides endpoint="endpoint8"/>
                 </port>
-                <port x="67" y="1440">
+                <port x="67" y="1625">
                     <link xlink:href="../jbiServiceUnits/QLHocSinh/DB_WSDL/find/DB_TimHocSinhTheoKhoiLop.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint13"/>
                     <provides endpoint="endpoint13"/>
                 </port>
-                <port x="67" y="1334">
+                <port x="67" y="1519">
                     <link xlink:href="../jbiServiceUnits/QLHocSinh/DB_WSDL/find/DB_TimHocSinhTheoKhoiLop_count.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint14"/>
                     <provides endpoint="endpoint14"/>
                 </port>
-                <port x="67" y="1149">
+                <port x="67" y="1334">
                     <link xlink:href="../jbiServiceUnits/QLHocSinh/DB_WSDL/find/DB_TimHocSinhTheoLop.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint16"/>
                     <provides endpoint="endpoint16"/>
                 </port>
-                <port x="67" y="885">
+                <port x="67" y="1070">
                     <link xlink:href="../jbiServiceUnits/QLHocSinh/DB_WSDL/find/DB_TimHocSinhTheoTen.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint27"/>
                     <provides endpoint="endpoint27"/>
                 </port>
-                <port x="67" y="700">
+                <port x="67" y="885">
                     <link xlink:href="../jbiServiceUnits/QLHocSinh/DB_WSDL/find/DB_TimHocSinhTheoTen_count.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint12"/>
                     <provides endpoint="endpoint12"/>
                 </port>
-                <port x="67" y="2313">
+                <port x="67" y="2498">
                     <link xlink:href="../jbiServiceUnits/QLHocSinh/DB_WSDL/insert/DB_TaoHocBa.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint3"/>
                     <provides endpoint="endpoint3"/>
                 </port>
-                <port x="67" y="1731">
+                <port x="67" y="1916">
                     <link xlink:href="../jbiServiceUnits/QLHocSinh/DB_WSDL/insert/DB_TaoThanhPhanGiaDinh.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint7"/>
                     <provides endpoint="endpoint7"/>
                 </port>
-                <port x="67" y="2498">
+                <port x="67" y="2683">
                     <link xlink:href="../jbiServiceUnits/QLHocSinh/DB_WSDL/insert/DB_ThemHocSinh.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint1"/>
                     <provides endpoint="endpoint1"/>
                 </port>
-                <port x="67" y="436">
+                <port x="67" y="621">
                     <link xlink:href="../jbiServiceUnits/QLHocSinh/DB_WSDL/insert/DB_XepLop.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint15"/>
                     <provides endpoint="endpoint15"/>
                 </port>
-                <port x="67" y="330">
+                <port x="67" y="515">
                     <link xlink:href="../jbiServiceUnits/QLHocSinh/DB_WSDL/update/DB_ChuyenLop.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint17"/>
                     <provides endpoint="endpoint17"/>
                 </port>
-                <port x="67" y="145">
+                <port x="67" y="330">
                     <link xlink:href="../jbiServiceUnits/QLHocSinh/DB_WSDL/update/DB_UpdateThongTinHocSinh.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint18"/>
                     <provides endpoint="endpoint18"/>
                 </port>
-                <port x="67" y="39">
+                <port x="67" y="145">
                     <link xlink:href="../jbiServiceUnits/QLHocSinh/DB_WSDL/update/UpdateThanhPhanGiaDinh.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint25"/>
                     <provides endpoint="endpoint25"/>
@@ -174,97 +185,105 @@
         </binding-component-service-unit>
         <binding-component-service-unit artifacts-zip="sun-http-binding.jar" component-name="sun-http-binding" description="Represents this Service Unit" name="QLHocSinhComApp-sun-http-binding" unit-name="sun-http-binding">
             <ports>
-                <port bindingType="soap" x="67" y="2419">
+                <port bindingType="soap" x="67" y="2604">
                     <link xlink:href="../jbiasa/QLHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QLHocSinhComAppService1']/port[@name='ToHocSinh'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint2"/>
                     <provides endpoint="endpoint2"/>
                 </port>
-                <port bindingType="soap" x="67" y="2234">
+                <port bindingType="soap" x="67" y="2419">
                     <link xlink:href="../jbiasa/QLHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QLHocSinhComAppService2']/port[@name='TaoHocBa'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint4"/>
                     <provides endpoint="endpoint4"/>
                 </port>
-                <port bindingType="soap" x="67" y="2049">
+                <port bindingType="soap" x="67" y="2234">
                     <link xlink:href="../jbiasa/QLHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QLHocSinhComAppService3']/port[@name='XoaHocSinh'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint6"/>
                     <provides endpoint="endpoint6"/>
                 </port>
-                <port bindingType="soap" x="67" y="1546">
+                <port bindingType="soap" x="67" y="1731">
                     <link xlink:href="../jbiasa/QLHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QLHocSinhComAppService4']/port[@name='TImHocSinhByIDHocSinh'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint11"/>
                     <provides endpoint="endpoint11"/>
                 </port>
-                <port bindingType="soap" x="67" y="1070">
+                <port bindingType="soap" x="67" y="1255">
                     <link xlink:href="../jbiasa/QLHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QLHocSinhComAppService5']/port[@name='TimHocSinhTheoTen'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint19"/>
                     <provides endpoint="endpoint19"/>
                 </port>
-                <port bindingType="soap" x="67" y="1255">
+                <port bindingType="soap" x="67" y="1440">
                     <link xlink:href="../jbiasa/QLHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QLHocSinhComAppService7']/port[@name='UpdateThongTinHocSinh'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint20"/>
                     <provides endpoint="endpoint20"/>
                 </port>
-                <port bindingType="soap" x="67" y="251">
+                <port bindingType="soap" x="67" y="436">
                     <link xlink:href="../jbiasa/QLHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QLHocSinhComAppService8']/port[@name='ChuyenLop'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint21"/>
                     <provides endpoint="endpoint21"/>
                 </port>
-                <port bindingType="soap" x="67" y="621">
+                <port bindingType="soap" x="67" y="806">
                     <link xlink:href="../jbiasa/QLHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QLHocSinhComAppService9']/port[@name='TimHocSinhTheoKhoiLop'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint22"/>
                     <provides endpoint="endpoint22"/>
                 </port>
-                <port bindingType="soap" x="67" y="542">
+                <port bindingType="soap" x="67" y="727">
                     <link xlink:href="../jbiasa/QLHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QLHocSinhComAppService10']/port[@name='TimHocSinhTheoLop'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint23"/>
                     <provides endpoint="endpoint23"/>
                 </port>
-                <port bindingType="soap" x="67" y="991">
+                <port bindingType="soap" x="67" y="1176">
                     <link xlink:href="../jbiasa/QLHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QLHocSinhComAppService11']/port[@name='XepLop'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint24"/>
                     <provides endpoint="endpoint24"/>
                 </port>
-                <port bindingType="soap" x="67" y="806">
+                <port bindingType="soap" x="67" y="991">
                     <link xlink:href="../jbiasa/QLHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QLHocSinhComAppService12']/port[@name='UpdateThanhPhanGiaDinh'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint26"/>
                     <provides endpoint="endpoint26"/>
+                </port>
+                <port bindingType="soap" x="67" y="251">
+                    <link xlink:href="../jbiasa/QLHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QLHocSinhComAppService13']/port[@name='LayMaHocSinh'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint29"/>
+                    <provides endpoint="endpoint29"/>
                 </port>
             </ports>
         </binding-component-service-unit>
     </service-units>
     <connections>
-        <connection consumer="endpoint19" provider="endpoint33" state="new"/>
-        <connection consumer="endpoint55" provider="endpoint5" state="unchanged"/>
-        <connection consumer="endpoint48" provider="endpoint12" state="unchanged"/>
-        <connection consumer="endpoint44" provider="endpoint13" state="unchanged"/>
-        <connection consumer="endpoint20" provider="endpoint36" state="new"/>
-        <connection consumer="endpoint47" provider="endpoint27" state="unchanged"/>
-        <connection consumer="endpoint45" provider="endpoint14" state="unchanged"/>
-        <connection consumer="endpoint21" provider="endpoint28" state="new"/>
-        <connection consumer="endpoint54" provider="endpoint15" state="unchanged"/>
-        <connection consumer="endpoint46" provider="endpoint16" state="unchanged"/>
-        <connection consumer="endpoint39" provider="endpoint17" state="unchanged"/>
-        <connection consumer="endpoint11" provider="endpoint30" state="new"/>
-        <connection consumer="endpoint40" provider="endpoint3" state="unchanged"/>
-        <connection consumer="endpoint22" provider="endpoint31" state="new"/>
-        <connection consumer="endpoint50" provider="endpoint7" state="unchanged"/>
-        <connection consumer="endpoint43" provider="endpoint8" state="unchanged"/>
-        <connection consumer="endpoint49" provider="endpoint1" state="unchanged"/>
-        <connection consumer="endpoint4" provider="endpoint29" state="new"/>
-        <connection consumer="endpoint41" provider="endpoint10" state="unchanged"/>
-        <connection consumer="endpoint23" provider="endpoint32" state="new"/>
-        <connection consumer="endpoint6" provider="endpoint38" state="new"/>
-        <connection consumer="endpoint2" provider="endpoint34" state="new"/>
-        <connection consumer="endpoint26" provider="endpoint35" state="new"/>
-        <connection consumer="endpoint24" provider="endpoint37" state="new"/>
-        <connection consumer="endpoint51" provider="endpoint37" state="unchanged"/>
-        <connection consumer="endpoint53" provider="endpoint18" state="unchanged"/>
-        <connection consumer="endpoint52" provider="endpoint25" state="unchanged"/>
-        <connection consumer="endpoint42" provider="endpoint9" state="unchanged"/>
+        <connection consumer="endpoint19" provider="endpoint36" state="new"/>
+        <connection consumer="endpoint59" provider="endpoint5" state="unchanged"/>
+        <connection consumer="endpoint52" provider="endpoint12" state="unchanged"/>
+        <connection consumer="endpoint48" provider="endpoint13" state="unchanged"/>
+        <connection consumer="endpoint20" provider="endpoint39" state="new"/>
+        <connection consumer="endpoint51" provider="endpoint27" state="unchanged"/>
+        <connection consumer="endpoint49" provider="endpoint14" state="unchanged"/>
+        <connection consumer="endpoint21" provider="endpoint30" state="new"/>
+        <connection consumer="endpoint58" provider="endpoint15" state="unchanged"/>
+        <connection consumer="endpoint29" provider="endpoint31" state="new"/>
+        <connection consumer="endpoint50" provider="endpoint16" state="unchanged"/>
+        <connection consumer="endpoint42" provider="endpoint17" state="unchanged"/>
+        <connection consumer="endpoint11" provider="endpoint33" state="new"/>
+        <connection consumer="endpoint43" provider="endpoint28" state="unchanged"/>
+        <connection consumer="endpoint44" provider="endpoint3" state="unchanged"/>
+        <connection consumer="endpoint22" provider="endpoint34" state="new"/>
+        <connection consumer="endpoint54" provider="endpoint7" state="unchanged"/>
+        <connection consumer="endpoint47" provider="endpoint8" state="unchanged"/>
+        <connection consumer="endpoint53" provider="endpoint1" state="unchanged"/>
+        <connection consumer="endpoint4" provider="endpoint32" state="new"/>
+        <connection consumer="endpoint45" provider="endpoint10" state="unchanged"/>
+        <connection consumer="endpoint23" provider="endpoint35" state="new"/>
+        <connection consumer="endpoint6" provider="endpoint41" state="new"/>
+        <connection consumer="endpoint2" provider="endpoint37" state="new"/>
+        <connection consumer="endpoint26" provider="endpoint38" state="new"/>
+        <connection consumer="endpoint24" provider="endpoint40" state="new"/>
+        <connection consumer="endpoint55" provider="endpoint40" state="unchanged"/>
+        <connection consumer="endpoint57" provider="endpoint18" state="unchanged"/>
+        <connection consumer="endpoint56" provider="endpoint25" state="unchanged"/>
+        <connection consumer="endpoint46" provider="endpoint9" state="unchanged"/>
     </connections>
     <porttypes>
         <link xlink:href="../jbiasa/QLHocSinhComApp.wsdl#xpointer(/definitions/portType[@name='dummyCasaPortType'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/QLHocSinh/DB_WSDL/del/DB_XoaHocSinh.wsdl#xpointer(/definitions/portType[@name='jdbcPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QLHocSinh/DB_WSDL/find/DB_LayMaHocSinh.wsdl#xpointer(/definitions/portType[@name='jdbcPortType'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/QLHocSinh/DB_WSDL/find/DB_loadHocSinhByIdHocSinh.wsdl#xpointer(/definitions/portType[@name='jdbcPortType'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/QLHocSinh/DB_WSDL/find/DB_loadQueQuanByID.wsdl#xpointer(/definitions/portType[@name='jdbcPortType'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/QLHocSinh/DB_WSDL/find/DB_loadThanhPhanGiaDinhByIDHocSinh.wsdl#xpointer(/definitions/portType[@name='jdbcPortType'])" xlink:type="simple"/>
@@ -281,6 +300,7 @@
         <link xlink:href="../jbiServiceUnits/QLHocSinh/DB_WSDL/update/DB_UpdateThongTinHocSinh.wsdl#xpointer(/definitions/portType[@name='jdbcPortType'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/QLHocSinh/DB_WSDL/update/UpdateThanhPhanGiaDinh.wsdl#xpointer(/definitions/portType[@name='jdbcPortType'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/QLHocSinh/interface_WSDL/ChuyenLop.wsdl#xpointer(/definitions/portType[@name='ChuyenLopPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QLHocSinh/interface_WSDL/LayMaHocSinh.wsdl#xpointer(/definitions/portType[@name='LayMaHocSinhPortType'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/QLHocSinh/interface_WSDL/TaoHocBa.wsdl#xpointer(/definitions/portType[@name='TaoHocBaPortType'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/QLHocSinh/interface_WSDL/ThemHocSinh.wsdl#xpointer(/definitions/portType[@name='ThemHocSinhPortType'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/QLHocSinh/interface_WSDL/TimHocSinhByIdHocSinh.wsdl#xpointer(/definitions/portType[@name='TimHocSinhByIdHocSinhPortType'])" xlink:type="simple"/>
@@ -306,7 +326,9 @@
         <link xlink:href="../jbiasa/QLHocSinhComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding10'])" xlink:type="simple"/>
         <link xlink:href="../jbiasa/QLHocSinhComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding11'])" xlink:type="simple"/>
         <link xlink:href="../jbiasa/QLHocSinhComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding12'])" xlink:type="simple"/>
+        <link xlink:href="../jbiasa/QLHocSinhComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding13'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/QLHocSinh/DB_WSDL/del/DB_XoaHocSinh.wsdl#xpointer(/definitions/binding[@name='binding'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QLHocSinh/DB_WSDL/find/DB_LayMaHocSinh.wsdl#xpointer(/definitions/binding[@name='binding'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/QLHocSinh/DB_WSDL/find/DB_loadHocSinhByIdHocSinh.wsdl#xpointer(/definitions/binding[@name='binding'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/QLHocSinh/DB_WSDL/find/DB_loadQueQuanByID.wsdl#xpointer(/definitions/binding[@name='binding'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/QLHocSinh/DB_WSDL/find/DB_loadThanhPhanGiaDinhByIDHocSinh.wsdl#xpointer(/definitions/binding[@name='binding'])" xlink:type="simple"/>
@@ -334,6 +356,7 @@
         <link xlink:href="../jbiServiceUnits/QLHocSinhComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding10'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/QLHocSinhComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding11'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/QLHocSinhComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding12'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QLHocSinhComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding13'])" xlink:type="simple"/>
     </bindings>
     <services>
         <link xlink:href="../jbiasa/QLHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QLHocSinhComAppService1'])" xlink:type="simple"/>
@@ -348,7 +371,9 @@
         <link xlink:href="../jbiasa/QLHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QLHocSinhComAppService10'])" xlink:type="simple"/>
         <link xlink:href="../jbiasa/QLHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QLHocSinhComAppService11'])" xlink:type="simple"/>
         <link xlink:href="../jbiasa/QLHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QLHocSinhComAppService12'])" xlink:type="simple"/>
+        <link xlink:href="../jbiasa/QLHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QLHocSinhComAppService13'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/QLHocSinh/DB_WSDL/del/DB_XoaHocSinh.wsdl#xpointer(/definitions/service[@name='service'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QLHocSinh/DB_WSDL/find/DB_LayMaHocSinh.wsdl#xpointer(/definitions/service[@name='service'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/QLHocSinh/DB_WSDL/find/DB_loadHocSinhByIdHocSinh.wsdl#xpointer(/definitions/service[@name='service'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/QLHocSinh/DB_WSDL/find/DB_loadQueQuanByID.wsdl#xpointer(/definitions/service[@name='service'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/QLHocSinh/DB_WSDL/find/DB_loadThanhPhanGiaDinhByIDHocSinh.wsdl#xpointer(/definitions/service[@name='service'])" xlink:type="simple"/>
@@ -376,6 +401,7 @@
         <link xlink:href="../jbiServiceUnits/QLHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QLHocSinhComAppService10'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/QLHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QLHocSinhComAppService11'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/QLHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QLHocSinhComAppService12'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/QLHocSinhComApp.wsdl#xpointer(/definitions/service[@name='QLHocSinhComAppService13'])" xlink:type="simple"/>
     </services>
     <regions>
         <region name="WSDL Endpoints" width="150"/>

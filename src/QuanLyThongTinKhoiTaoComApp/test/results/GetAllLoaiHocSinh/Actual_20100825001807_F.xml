@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP-ENV:Body>
+    <m:GetAllLoaiHocSinhOperationResponse xmlns:m="QuanLyThongTinKhoiTaoComApp" xmlns:msgns="http://j2ee.netbeans.org/wsdl/QuanLyThongTinKhoiTaoHeThong/GetAllLoaiHocSinh">
+      <list>
+        <ns1:LoaiHocSinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">17</ns1:id>
+          <ns1:tenLoaiHocSinh isNull="false">Hoc sinh bình thường</ns1:tenLoaiHocSinh>
+          <ns1:moTa isNull="false"/>
+        </ns1:LoaiHocSinh>
+        <ns1:LoaiHocSinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">18</ns1:id>
+          <ns1:tenLoaiHocSinh isNull="false">Học sinh cá biệt</ns1:tenLoaiHocSinh>
+          <ns1:moTa isNull="false"/>
+        </ns1:LoaiHocSinh>
+      </list>
+    </m:GetAllLoaiHocSinhOperationResponse>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

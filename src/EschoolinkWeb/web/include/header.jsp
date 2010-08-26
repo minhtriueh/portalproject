@@ -60,7 +60,7 @@
             <ul>
                 <li><a href="#">Học sinh</a>
                     <ul>
-                        <li><a href="index.jsp?module=quanlyhocsinh&page=taohocsinh&r=no&l=no">Thêm học sinh</a></li>
+                        <li><a href="TaoHocSinh">Thêm học sinh</a></li>
                         <li><a href="#">Tìm kiếm học sinh</a></li>
                     </ul>
                 </li>

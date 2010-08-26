@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP-ENV:Body>
+    <m:GetAllDanTocOperationResponse xmlns:m="QuanLyThongTinKhoiTaoComApp" xmlns:msgns="http://j2ee.netbeans.org/wsdl/QuanLyThongTinKhoiTaoHeThong/GetAllDanToc">
+      <part1>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">236</ns1:id>
+          <ns1:tenDanToc isNull="false">Ba na</ns1:tenDanToc>
+          <ns1:danTocThieuSo isNull="false">t</ns1:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">231</ns1:id>
+          <ns1:tenDanToc isNull="false">Bố Y</ns1:tenDanToc>
+          <ns1:danTocThieuSo isNull="false">t</ns1:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">227</ns1:id>
+          <ns1:tenDanToc isNull="false">Brâu</ns1:tenDanToc>
+          <ns1:danTocThieuSo isNull="false">t</ns1:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">237</ns1:id>
+          <ns1:tenDanToc isNull="false">Bru-Vân kiều</ns1:tenDanToc>
+          <ns1:danTocThieuSo isNull="false">t</ns1:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">239</ns1:id>
+          <ns1:tenDanToc isNull="false">Co</ns1:tenDanToc>
+          <ns1:danTocThieuSo isNull="false">t</ns1:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">240</ns1:id>
+          <ns1:tenDanToc isNull="false">Cơ-ho</ns1:tenDanToc>
+          <ns1:danTocThieuSo isNull="false">t</ns1:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">241</ns1:id>
+          <ns1:tenDanToc isNull="false">Cơ-tu</ns1:tenDanToc>
+          <ns1:danTocThieuSo isNull="false">t</ns1:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">225</ns1:id>
+          <ns1:tenDanToc isNull="false">Chăm</ns1:tenDanToc>
+          <ns1:danTocThieuSo isNull="false">t</ns1:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">238</ns1:id>
+          <ns1:tenDanToc isNull="false">Chơ-ro</ns1:tenDanToc>
+          <ns1:danTocThieuSo isNull="false">t</ns1:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">230</ns1:id>
+          <ns1:tenDanToc isNull="false">Chứt</ns1:tenDanToc>
+          <ns1:danTocThieuSo isNull="false">t</ns1:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">222</ns1:id>
+          <ns1:tenDanToc isNull="false">Dao</ns1:tenDanToc>
+          <ns1:danTocThieuSo isNull="false">t</ns1:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">224</ns1:id>
+          <ns1:tenDanToc isNull="false">Êđê</ns1:tenDanToc>
+          <ns1:danTocThieuSo isNull="false">t</ns1:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">223</ns1:id>
+          <ns1:tenDanToc isNull="false">Giarai</ns1:tenDanToc>
+          <ns1:danTocThieuSo isNull="false">t</ns1:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">232</ns1:id>
+          <ns1:tenDanToc isNull="false">Giáy</ns1:tenDanToc>
+          <ns1:danTocThieuSo isNull="false">t</ns1:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">242</ns1:id>
+          <ns1:tenDanToc isNull="false">Gié-triêng</ns1:tenDanToc>
+          <ns1:danTocThieuSo isNull="false">t</ns1:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">221</ns1:id>
+          <ns1:tenDanToc isNull="false">Hmông</ns1:tenDanToc>
+          <ns1:danTocThieuSo isNull="false">t</ns1:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">219</ns1:id>
+          <ns1:tenDanToc isNull="false">Hoa</ns1:tenDanToc>
+          <ns1:danTocThieuSo isNull="false">t</ns1:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">243</ns1:id>
+          <ns1:tenDanToc isNull="false">Hrê</ns1:tenDanToc>
+          <ns1:danTocThieuSo isNull="false">t</ns1:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">214</ns1:id>
+          <ns1:tenDanToc isNull="false">Kinh</ns1:tenDanToc>
+          <ns1:danTocThieuSo isNull="false">f</ns1:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">244</ns1:id>
+          <ns1:tenDanToc isNull="false">Kháng</ns1:tenDanToc>
+          <ns1:danTocThieuSo isNull="false">t</ns1:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">218</ns1:id>
+          <ns1:tenDanToc isNull="false">Khmer</ns1:tenDanToc>
+          <ns1:danTocThieuSo isNull="false">t</ns1:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">245</ns1:id>
+          <ns1:tenDanToc isNull="false">Khơ mú</ns1:tenDanToc>
+          <ns1:danTocThieuSo isNull="false">t</ns1:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">233</ns1:id>
+          <ns1:tenDanToc isNull="false">Lào</ns1:tenDanToc>
+          <ns1:danTocThieuSo isNull="false">t</ns1:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">234</ns1:id>
+          <ns1:tenDanToc isNull="false">Lự</ns1:tenDanToc>
+          <ns1:danTocThieuSo isNull="false">t</ns1:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">246</ns1:id>
+          <ns1:tenDanToc isNull="false">Mạ</ns1:tenDanToc>
+          <ns1:danTocThieuSo isNull="false">t</ns1:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">217</ns1:id>
+          <ns1:tenDanToc isNull="false">Mường</ns1:tenDanToc>
+          <ns1:danTocThieuSo isNull="false">t</ns1:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">220</ns1:id>
+          <ns1:tenDanToc isNull="false">Nùng</ns1:tenDanToc>
+          <ns1:danTocThieuSo isNull="false">t</ns1:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">228</ns1:id>
+          <ns1:tenDanToc isNull="false">Ơ đu</ns1:tenDanToc>
+          <ns1:danTocThieuSo isNull="false">t</ns1:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">229</ns1:id>
+          <ns1:tenDanToc isNull="false">Rơ Măm</ns1:tenDanToc>
+          <ns1:danTocThieuSo isNull="false">t</ns1:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">235</ns1:id>
+          <ns1:tenDanToc isNull="false">Sán Chay</ns1:tenDanToc>
+          <ns1:danTocThieuSo isNull="false">t</ns1:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">226</ns1:id>
+          <ns1:tenDanToc isNull="false">Sán Dìu</ns1:tenDanToc>
+          <ns1:danTocThieuSo isNull="false">t</ns1:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">215</ns1:id>
+          <ns1:tenDanToc isNull="false">Tày</ns1:tenDanToc>
+          <ns1:danTocThieuSo isNull="false">t</ns1:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">216</ns1:id>
+          <ns1:tenDanToc isNull="false">Thái</ns1:tenDanToc>
+          <ns1:danTocThieuSo isNull="false">t</ns1:danTocThieuSo>
+        </ns1:DanToc>
+      </part1>
+    </m:GetAllDanTocOperationResponse>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

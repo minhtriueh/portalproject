@@ -6,10 +6,13 @@
 package quanlyhocsinh;
 
 import java.io.File;
-import javax.xml.datatype.XMLGregorianCalendar;
-import org.apache.taglibs.standard.tag.common.core.ForEachSupport;
+import java.util.GregorianCalendar;
+import java.util.StringTokenizer;
+import javax.servlet.http.HttpServletRequest;
+import org.apache.struts2.interceptor.ServletRequestAware;
 import org.netbeans.xml.schema.eschoolinkobject.ChiTietThanhPhanGiaDinh;
 import utils.MyGregorianCalendar;
+import utils.MyImage;
 
 
 /**
@@ -17,9 +20,9 @@ import utils.MyGregorianCalendar;
  * @author sanchikaro
  */
 
-public class TaoHocSinh_result {
-
-    private String hoVaTenLot,ten,gioiTinh,diaChiNhaO,tonGiao,ghiChu,quequan,ngaySinh,ngayVaoDoi,ngayVaoDoan;
+public class TaoHocSinh_result implements ServletRequestAware {
+    private String error;
+    private String hoVaTenLot,ten,gioiTinh,diaChiNhaO,tonGiao,ghiChu,quequan,ngaySinh,ngayVaoDoi,ngayVaoDoan,hinhAnh;
     private long idQuanhuyenthanhpho,idDantoc,idChedouutien,idLop,idLoaihocsinh,idKhuvuc,idTinh,idQuanhuyenthanhphoQq
             ,idTinhQq;
     private boolean ketNapDoi,ketNapDoan;
@@ -30,46 +33,83 @@ public class TaoHocSinh_result {
     private String[] quanHe;
     private String[] ngaySinh_tpgd;
     private String[] ngheNghiep_tpgd;
+    private HttpServletRequest request;
 
-
+    public TaoHocSinh_result() {
+       
+    }
     public String execute() throws Exception {
+        //lay ma hoc sinh
+        int ma=0;
+        //xu ly date khi khong ket nap don hay doi
+        if(ketNapDoan==false){
+            ngayVaoDoan="01-01-2000";
+        }
+        if(ketNapDoi==false){
+            ngayVaoDoi="01-01-2000";
+        }
+        xuly();
 
 
-//        try { // Call Web Service Operation
-//            qlhocsinhcomapp.QLHocSinhComAppService1 service = new qlhocsinhcomapp.QLHocSinhComAppService1();
-//            qlhocsinhcomapp.ThemHocSinhPortType port = service.getToHocSinh();
-//            // TODO initialize WS operation arguments here
-//            java.lang.String username = "";
-//            java.lang.String password = "";
-//
-//            java.lang.String maso = "";
-//
-//            long idThonxom = Long.parseLong("0");
-//            long idXaphuongthitran = Long.parseLong("0");
-//
-//
-//            java.lang.String hinhAnh = "";
-//
-//
-//            long idXaphuongthitranQq = Long.parseLong("0");
-//            long idThonxomQq = Long.parseLong("0");
-//
-//            org.netbeans.xml.schema.eschoolinkobject.ThanhPhanGiaDinh thanhPhanGiaDinh = new org.netbeans.xml.schema.eschoolinkobject.ThanhPhanGiaDinh();
-//            // TODO process result here
-//            for(int i=0;i<ten_tpgd.length;i++){
-//                if(!ten_tpgd[i].equals("")){
-//                    ChiTietThanhPhanGiaDinh e=new ChiTietThanhPhanGiaDinh();
-//                    e.setHoTen(ten_tpgd[i]);
-//                    e.setNgheNghiep(ngheNghiep_tpgd[i]);
-//                    e.setNgaySinh(new MyGregorianCalendar(ngaySinh_tpgd[i]).getMyXMLGregorianCalendar());
-//                    e.setTenQuanHe(quanHe[i]);
-//                }
-//            }
-//            long result = port.themHocSinhOperation(username, password, hoVaTenLot, ten, maso, ngaySinh, gioiTinh, diaChiNhaO, idThonxom, idXaphuongthitran, idQuanhuyenthanhpho, idDantoc, tonGiao, hinhAnh, ketNapDoi, ngayVaoDoi, ketNapDoan, ngayVaoDoan, ghiChu, idChedouutien, idLop, idLoaihocsinh, idKhuvuc, idTinh, quequan, idQuanhuyenthanhphoQq, idXaphuongthitranQq, idThonxomQq, idTinhQq, thanhPhanGiaDinh);
-//
-//        } catch (Exception ex) {
-//            // TODO handle custom exceptions here
-//        }
+        try { // Call Web Service Operation
+            qlhocsinhcomapp.QLHocSinhComAppService13 service = new qlhocsinhcomapp.QLHocSinhComAppService13();
+            qlhocsinhcomapp.LayMaHocSinhPortType port = service.getLayMaHocSinh();
+            // TODO process result here
+            java.lang.String result = port.layMaHocSinhOperation();
+            String so=result;
+            String yearFromSo=so.substring(0, 4);
+
+            int year=Integer.parseInt(yearFromSo);
+            GregorianCalendar g=new GregorianCalendar();
+            int nowYear=g.get(GregorianCalendar.YEAR);            
+            if(year<nowYear){
+                ma=nowYear*10000+1;
+            }else{
+                ma=Integer.parseInt(so)+1;
+            }
+
+        } catch (Exception ex) {
+            // TODO handle custom exceptions here
+        }
+
+        
+        try { // Call Web Service Operation
+            qlhocsinhcomapp.QLHocSinhComAppService1 service = new qlhocsinhcomapp.QLHocSinhComAppService1();
+            qlhocsinhcomapp.ThemHocSinhPortType port = service.getToHocSinh();
+            // TODO initialize WS operation arguments here
+            java.lang.String username = ""+ma;
+            java.lang.String password = ""+ma;
+            java.lang.String maso = ""+ma;
+            long idThonxom = Long.parseLong("0");
+            long idXaphuongthitran = Long.parseLong("0");
+            String localDir=getRequest().getRealPath("")+"\\images\\Upload";
+            hinhAnh = MyImage.saveImage(file, filename, contentType, localDir, 200); 
+            long idXaphuongthitranQq = Long.parseLong("0");
+            long idThonxomQq = Long.parseLong("0");
+
+            org.netbeans.xml.schema.eschoolinkobject.ThanhPhanGiaDinh thanhPhanGiaDinh = new org.netbeans.xml.schema.eschoolinkobject.ThanhPhanGiaDinh();
+            // TODO process result here
+            
+            for(int i=0;i<ten_tpgd.length;i++){
+                
+                if(!ten_tpgd[i].equals("")){
+                    ChiTietThanhPhanGiaDinh e=new ChiTietThanhPhanGiaDinh();
+                    e.setHoTen(ten_tpgd[i]);
+                    
+                    e.setNgheNghiep(ngheNghiep_tpgd[i]);
+                    e.setNgaySinh(new MyGregorianCalendar(ngaySinh_tpgd[i]).getMyXMLGregorianCalendar());
+                    e.setTenQuanHe(quanHe[i]);
+                    thanhPhanGiaDinh.getChiTietThanhPhanGiaDinh().add(e);
+                }
+            }
+           
+            long result = port.themHocSinhOperation(username, password, hoVaTenLot, ten, maso, ngaySinh, gioiTinh, diaChiNhaO, idThonxom, idXaphuongthitran, idQuanhuyenthanhpho, idDantoc, tonGiao, hinhAnh, ketNapDoi, ngayVaoDoi, ketNapDoan, ngayVaoDoan, ghiChu, idChedouutien, idLop, idLoaihocsinh, idKhuvuc, idTinh, quequan, idQuanhuyenthanhphoQq, idXaphuongthitranQq, idThonxomQq, idTinhQq, thanhPhanGiaDinh);
+            
+        } catch (Exception ex) {
+            // TODO handle custom exceptions here
+            error=ex.getMessage();
+            return "error";
+        }
 
 
         return "success";
@@ -86,8 +126,7 @@ public void setUpload(File file) {
          this.filename = filename;
       }
 
-    public TaoHocSinh_result() {
-    }
+    
 
     public String getDiaChiNhaO() {
         return diaChiNhaO;
@@ -313,4 +352,55 @@ public void setUpload(File file) {
         this.ten_tpgd = ten_tpgd;
     }
 
+    public String getError() {
+        return error;
+    }
+
+    public void setError(String error) {
+        this.error = error;
+    }
+
+    public HttpServletRequest getRequest() {
+        return request;
+    }
+
+    public void setRequest(HttpServletRequest request) {
+        this.request = request;
+    }
+
+    public String getHinhAnh() {
+        return hinhAnh;
+    }
+
+    public void setHinhAnh(String hinhAnh) {
+        this.hinhAnh = hinhAnh;
+    }
+
+    @Override
+    public void setServletRequest(HttpServletRequest arg0) {
+        this.request=arg0;
+    }
+    private void xuly(){
+         // xu ly ngaysinh, ngay vao doan, ngay vao doi
+        StringTokenizer ngaySinhToken=new StringTokenizer(ngaySinh,"-");
+        ngaySinh="";
+        while (ngaySinhToken.hasMoreElements()) {
+            ngaySinh = "-"+ngaySinhToken.nextToken()+ngaySinh;
+        }
+        ngaySinh=ngaySinh.substring(1);
+
+        StringTokenizer ngayVaoDoanToken=new StringTokenizer(ngayVaoDoan,"-");
+        ngayVaoDoan="";
+        while (ngayVaoDoanToken.hasMoreElements()) {
+            ngayVaoDoan = "-"+ngayVaoDoanToken.nextToken()+ngayVaoDoan;
+        }
+        ngayVaoDoan=ngayVaoDoan.substring(1);
+
+        StringTokenizer ngayVaoDoiToken=new StringTokenizer(ngayVaoDoi,"-");
+        ngayVaoDoi="";
+        while (ngayVaoDoiToken.hasMoreElements()) {
+            ngayVaoDoi = "-"+ngayVaoDoiToken.nextToken()+ngayVaoDoi;
+        }
+        ngayVaoDoi=ngayVaoDoi.substring(1);
+    }
 }
