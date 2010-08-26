@@ -25,11 +25,11 @@
         <receive name="Receive1" createInstance="yes" partnerLink="PL_TinhDiemTrungBinh" operation="TinhDiemTrungBinhOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TinhDiemTrungBinh" portType="tns:TinhDiemTrungBinhPortType" variable="TinhDiemTrungBinhOperationIn"/>
         <assign name="Assign1">
             <copy>
-                <from>$TinhDiemTrungBinhOperationIn.chiTietSoDiem/ns0:id_chitietsodiem</from>
+                <from variable="TinhDiemTrungBinhOperationIn" part="idChiTietSoDiem"/>
                 <to>$SuaDiemTrungBinhIn.part/ns1:id_chitietsodiemin</to>
             </copy>
             <copy>
-                <from>$TinhDiemTrungBinhOperationIn.chiTietSoDiem/ns0:diemtrungbinh</from>
+                <from variable="TinhDiemTrungBinhOperationIn" part="diemTrungBinh"/>
                 <to>$SuaDiemTrungBinhIn.part/ns1:diemtrungbinhin</to>
             </copy>
         </assign>
@@ -43,4 +43,5 @@
         <reply name="Reply1" partnerLink="PL_TinhDiemTrungBinh" operation="TinhDiemTrungBinhOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TinhDiemTrungBinh" portType="tns:TinhDiemTrungBinhPortType" variable="TinhDiemTrungBinhOperationOut"/>
     </sequence>
 </process>
+
 
