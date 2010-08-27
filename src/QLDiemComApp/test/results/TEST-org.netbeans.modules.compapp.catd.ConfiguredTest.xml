@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="1" hostname="nguyentanmo-PC" name="org.netbeans.modules.compapp.catd.ConfiguredTest" tests="1" time="0.381" timestamp="2010-08-27T10:22:39">
+<testsuite errors="0" failures="1" hostname="nguyentanmo-PC" name="org.netbeans.modules.compapp.catd.ConfiguredTest" tests="1" time="3.059" timestamp="2010-08-27T10:27:46">
   <properties>
     <property name="libs.struts2lib-2-0-11-basic.maven-pom" value="" />
     <property name="netbeans.autoupdate.country" value="VN" />
@@ -364,8 +364,8 @@
     <property name="https.proxyHost" value="127.0.0.1" />
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
   </properties>
-  <testcase classname="org.netbeans.modules.compapp.catd.ConfiguredTest" name="TestLayDanhSachMonHocCuaLop" time="0.354">
-    <failure message="[27-08-2010 17:22:40] The response is not identical to the expected output." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: [27-08-2010 17:22:40] The response is not identical to the expected output.
+  <testcase classname="org.netbeans.modules.compapp.catd.ConfiguredTest" name="TestLayDanhSachMonHocCuaLop" time="3.029">
+    <failure message="[27-08-2010 17:27:49] The response is not identical to the expected output." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: [27-08-2010 17:27:49] The response is not identical to the expected output.
 	at org.netbeans.modules.compapp.catd.ConfiguredTest.checkExpectedOutput(ConfiguredTest.java:2348)
 	at org.netbeans.modules.compapp.catd.ConfiguredTest.checkExpectedOutput(ConfiguredTest.java:2218)
 	at org.netbeans.modules.compapp.catd.ConfiguredTest.testConcurrentSOAPRequest(ConfiguredTest.java:862)
@@ -428,7 +428,12 @@ user.language=vi
 user.name=nguyentanmo
 user.timezone=Asia/Bangkok
 user.variant=
-Test TestLayDanhSachMonHocCuaLop\Concurrent.properties Failed. (Destination: http://localhost:18001/QLDiemComApp/LayDanhSachMonHocCuaLop)
+Test TestLayDanhSachMonHocCuaLop\Concurrent.properties
+  * Difference (Delete): SOAP-ENV:Fault
+  * Difference (Add): m:LayDanhSachMonHocCuaLopOperationResponse
+ Failed. (Destination: http://localhost:18001/QLDiemComApp/LayDanhSachMonHocCuaLop)
 ]]></system-out>
-  <system-err><![CDATA[]]></system-err>
+  <system-err><![CDATA[27-08-2010 17:27:49 org.netbeans.modules.csl.core.LanguageRegistry readSfs
+INFO: No CslPlugins folder
+]]></system-err>
 </testsuite>
