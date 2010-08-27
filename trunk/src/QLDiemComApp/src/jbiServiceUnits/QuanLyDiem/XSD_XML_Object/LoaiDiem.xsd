@@ -21,6 +21,7 @@
     <xsd:element name="ChiTietDiem" type="tns:ChiTietDiem"/>
     <xsd:element name="ListChiTietDiem" type="tns:ListChiTietDiem"/>
     <xsd:element name="ListDanhSachHeSo" type="tns:ListDanhSachHeSo"/>
+    <xsd:element name="ListIdMonHoc" type="tns:ListIdMonHoc"/>
     
     <xsd:complexType name="Diem">
         <xsd:sequence>
@@ -122,6 +123,11 @@
     <xsd:complexType name="ListDanhSachHeSo">
         <xsd:sequence>
             <xsd:element name="heso" type="xsd:integer" maxOccurs="unbounded" minOccurs="0"></xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="ListIdMonHoc">
+        <xsd:sequence>
+            <xsd:element name="id_monhoc" type="xsd:long" maxOccurs="unbounded" minOccurs="0"></xsd:element>
         </xsd:sequence>
     </xsd:complexType>
 </xsd:schema>
