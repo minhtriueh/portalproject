@@ -1,6 +1,6 @@
 <%-- 
-    Document   : xemdiem
-    Created on : 27-08-2010, 14:08:11
+    Document   : xacnhanmshs
+    Created on : 27-08-2010, 14:37:46
     Author     : nguyentanmo
 --%>
 
@@ -28,16 +28,23 @@
                 <div class="art-postmetadataheader">
                     <h2 class="art-postheader">
                         <img src="images/postheadericon.png" width="26" height="26" alt="postheadericon" />
-                        Nhập mã số học sinh
+                        Nhập thông tin xem điểm
                     </h2>
                 </div>
 
                 <!-- bat dau thong tin -->
-                <form action="XacNhanMSHS" method="post">
+                <form action="XemDiemResult" method="post">
                     <div class="art-postcontent">
-                        <div style="margin-left:180px;margin-top:10px"><input type="text" name="masohocsinh" size="20"></div>
+                        <select name="monhoc">
+                            <option value="" selected></option>
+                            <c:forEach var="monhoc" items="${monhocs}">
+                                <option value="${monhoc.tenmonhoc}"><c:out value="${monhoc.tenmonhoc}"></c:out></option>
+                            </c:forEach>
+                        </select>
+                        <input type="radio" name="hocky" value="1"> Học Kỳ 1
+                        <input type="radio" name="hocky" value="2"> Học Kỳ 2
                         <div id="fm-submit" class="fm-req" style="margin-left:60px">
-                            <input type="submit" value="Xác Nhận">
+                            <input type="submit" value="Xem Điểm">
                         </div>
                     </div>
                 </form>
