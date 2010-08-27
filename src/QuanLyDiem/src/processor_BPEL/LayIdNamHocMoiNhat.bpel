@@ -11,35 +11,45 @@
     xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:ns0="http://j2ee.netbeans.org/xsd/tableSchema" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2">
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayIdNamHocMoiNhat" location="../interface_WSDL/LayIdNamHocMoiNhat.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayIdNamHocMoiNhat" location="../DB_WSDL/DB_LayIdNamHocMoiNhat.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayIdNamHocMoi" location="../interface_WSDL/LayIdNamHocMoi.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayIdNamHocMoi" location="../DB_WSDL/DB_LayIdNamHocMoi.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
     <partnerLinks>
-        <partnerLink name="PL_DB_LayIdNamHocMoiNhat" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayIdNamHocMoiNhat" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
-        <partnerLink name="PL_LayIdNamHocMoiNhat" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayIdNamHocMoiNhat" partnerLinkType="tns:LayIdNamHocMoiNhat" myRole="LayIdNamHocMoiNhatPortTypeRole"/>
+        <partnerLink name="PL_DB_LayIdNamHocMoi" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayIdNamHocMoi" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="PL_LayIdNamHocMoi" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayIdNamHocMoi" partnerLinkType="tns:LayIdNamHocMoi" myRole="LayIdNamHocMoiPortTypeRole"/>
     </partnerLinks>
     <variables>
-        <variable name="LayIdNamHocMoiNhatOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayIdNamHocMoiNhat" messageType="tns:outputMsg">
+        <variable name="LayIdNamHocMoiOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayIdNamHocMoi" messageType="tns:outputMsg">
             <sxed2:editor>
-                <sxed2:predicate path="$LayIdNamHocMoiNhatOut.part/ns0:DB_LayIdNamHocMoiNhat_Record[.]" source="from"/>
+                <sxed2:predicate path="$LayIdNamHocMoiOut.part/ns0:DB_LayIdNamHocMoi_Record[$ForEach1Counter]" source="from"/>
             </sxed2:editor>
         </variable>
-        <variable name="LayIdNamHocMoiNhatIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayIdNamHocMoiNhat" messageType="tns:inputMsg"/>
-        <variable name="LayIdNamHocMoiNhatOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayIdNamHocMoiNhat" messageType="tns:LayIdNamHocMoiNhatOperationResponse"/>
-        <variable name="LayIdNamHocMoiNhatOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayIdNamHocMoiNhat" messageType="tns:LayIdNamHocMoiNhatOperationRequest"/>
+        <variable name="LayIdNamHocMoiIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayIdNamHocMoi" messageType="tns:inputMsg"/>
+        <variable name="LayIdNamHocMoiOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayIdNamHocMoi" messageType="tns:LayIdNamHocMoiOperationResponse"/>
+        <variable name="LayIdNamHocMoiOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayIdNamHocMoi" messageType="tns:LayIdNamHocMoiOperationRequest"/>
     </variables>
     <sequence>
-        <receive name="Receive1" createInstance="yes" partnerLink="PL_LayIdNamHocMoiNhat" operation="LayIdNamHocMoiNhatOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayIdNamHocMoiNhat" portType="tns:LayIdNamHocMoiNhatPortType" variable="LayIdNamHocMoiNhatOperationIn"/>
-        <invoke name="Invoke1" partnerLink="PL_DB_LayIdNamHocMoiNhat" operation="newuntitled_Operation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayIdNamHocMoiNhat" portType="tns:jdbcPortType" inputVariable="LayIdNamHocMoiNhatIn" outputVariable="LayIdNamHocMoiNhatOut"/>
-        <assign name="Assign2">
-            <copy>
-                <from>$LayIdNamHocMoiNhatOut.part/ns0:DB_LayIdNamHocMoiNhat_Record[.]/ns0:id_namhoc
-                    <sxed2:editor>
-                        <sxed2:predicate path="$LayIdNamHocMoiNhatOut.part/ns0:DB_LayIdNamHocMoiNhat_Record[.]" source="from"/>
-                    </sxed2:editor>
-                </from>
-                <to variable="LayIdNamHocMoiNhatOperationOut" part="id_namhocmoi"/>
-            </copy>
-        </assign>
-        <reply name="Reply1" partnerLink="PL_LayIdNamHocMoiNhat" operation="LayIdNamHocMoiNhatOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayIdNamHocMoiNhat" portType="tns:LayIdNamHocMoiNhatPortType" variable="LayIdNamHocMoiNhatOperationOut"/>
+        <receive name="Receive1" createInstance="yes" partnerLink="PL_LayIdNamHocMoi" operation="LayIdNamHocMoiOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayIdNamHocMoi" portType="tns:LayIdNamHocMoiPortType" variable="LayIdNamHocMoiOperationIn"/>
+        <invoke name="Invoke1" partnerLink="PL_DB_LayIdNamHocMoi" operation="newuntitled_Operation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayIdNamHocMoi" portType="tns:jdbcPortType" inputVariable="LayIdNamHocMoiIn" outputVariable="LayIdNamHocMoiOut"/>
+        <forEach name="ForEach1" parallel="no" counterName="ForEach1Counter">
+            <startCounterValue>1</startCounterValue>
+            <finalCounterValue>count($LayIdNamHocMoiOut.part/ns0:DB_LayIdNamHocMoi_Record)</finalCounterValue>
+            <scope name="Scope1">
+                <assign name="Assign1">
+                    <copy>
+                        <from>$LayIdNamHocMoiOut.part/ns0:DB_LayIdNamHocMoi_Record[$ForEach1Counter]/ns0:id_namhoc
+                            <sxed2:editor>
+                                <sxed2:predicate path="$LayIdNamHocMoiOut.part/ns0:DB_LayIdNamHocMoi_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to variable="LayIdNamHocMoiOperationOut" part="idnamhoc"/>
+                    </copy>
+                </assign>
+            </scope>
+        </forEach>
+        <reply name="Reply1" partnerLink="PL_LayIdNamHocMoi" operation="LayIdNamHocMoiOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayIdNamHocMoi" portType="tns:LayIdNamHocMoiPortType" variable="LayIdNamHocMoiOperationOut"/>
     </sequence>
 </process>
+
+
 
 

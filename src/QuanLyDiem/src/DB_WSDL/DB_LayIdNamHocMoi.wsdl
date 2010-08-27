@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions name="DB_LayIdNamHocMoiNhat" targetNamespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayIdNamHocMoiNhat" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:ns="http://j2ee.netbeans.org/xsd/tableSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayIdNamHocMoiNhat" xmlns:plink="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/">
+<definitions name="DB_LayIdNamHocMoi" targetNamespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayIdNamHocMoi" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:ns="http://j2ee.netbeans.org/xsd/tableSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayIdNamHocMoi" xmlns:plink="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/">
   <types>
     <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/">
-            <xsd:import namespace="http://j2ee.netbeans.org/xsd/tableSchema" schemaLocation="DB_LayIdNamHocMoiNhat.xsd"/>
+            <xsd:import namespace="http://j2ee.netbeans.org/xsd/tableSchema" schemaLocation="DB_LayIdNamHocMoi.xsd"/>
 	</xsd:schema>
   </types>
+  <message name="inputMsg"></message>
   <message name="outputMsg">
-    <part name="part" element="ns:DB_LayIdNamHocMoiNhat_Response"/>
-  </message>
-  <message name="inputMsg">
-    <part name="part" element="ns:DB_LayIdNamHocMoiNhat_Request"/>
+    <part name="part" element="ns:DB_LayIdNamHocMoi_Response"/>
   </message>
   <portType name="jdbcPortType">
     <operation name="newuntitled_Operation">
@@ -22,7 +20,12 @@
     <operation name="newuntitled_Operation">
     <jdbc:operation xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/"/>
       <input name="input">
-    <jdbc:input xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" MarkColumnName="" MarkColumnValue="" MoveRowToTableName="" PKName="" PollMilliSeconds="5000" PollingPostProcessing="MoveRow" TableName="DB_LayIdNamHocMoiNhat" Transaction="NOTransaction" numberOfRecords="" operationType="DB_LayIdNamHocMoiNhat_Operation" paramOrder="" sql="select id_namhoc from namhocmoi"/>
+    <jdbc:input xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" MarkColumnName="" MarkColumnValue="" MoveRowToTableName="" PKName="" PollMilliSeconds="5000" PollingPostProcessing="MoveRow" TableName="DB_LayIdNamHocMoi" Transaction="NOTransaction" numberOfRecords="" operationType="DB_LayIdNamHocMoi_Operation" paramOrder="" sql="SELECT
+  namhocmoi.id_namhoc
+FROM
+  public.namhocmoi
+ORDER BY
+  namhocmoi.id_namhocmoi limit 1;"/>
       </input>
       <output name="output">
     <jdbc:output xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" returnPartName="part"/>
