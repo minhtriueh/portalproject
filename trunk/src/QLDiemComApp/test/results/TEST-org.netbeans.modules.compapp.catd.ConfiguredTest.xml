@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="1" hostname="nguyentanmo-PC" name="org.netbeans.modules.compapp.catd.ConfiguredTest" tests="1" time="2.922" timestamp="2010-08-27T13:34:08">
+<testsuite errors="0" failures="1" hostname="nguyentanmo-PC" name="org.netbeans.modules.compapp.catd.ConfiguredTest" tests="1" time="0.33" timestamp="2010-08-27T16:25:00">
   <properties>
     <property name="libs.struts2lib-2-0-11-basic.maven-pom" value="" />
     <property name="netbeans.autoupdate.country" value="VN" />
@@ -113,7 +113,7 @@
     <property name="libs.ricoh-ant-utils.maven-pom" value="" />
     <property name="libs.absolutelayout.maven-pom" value="" />
     <property name="ant.java.version" value="1.6" />
-    <property name="java.library.path" value="D:\Program Files\Java\jdk1.6.0_21\jre\bin;.;D:\Windows\Sun\Java\bin;D:\Windows\system32;D:\Windows;D:\xampp\apache\conf\;D:\Windows\system32;D:\Windows;D:\Windows\System32\Wbem;D:\Windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\Rational\common;D:\Program Files\TortoiseSVN\bin" />
+    <property name="java.library.path" value="D:\Program Files\Java\jdk1.6.0_21\jre\bin;.;D:\Windows\Sun\Java\bin;D:\Windows\system32;D:\Windows;D:\xampp\apache\conf\;D:\Windows\system32;D:\Windows;D:\Windows\System32\Wbem;D:\Windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\Rational\common;D:\Program Files\TortoiseSVN\bin;D:\Program Files\Common Files\Autodesk Shared\" />
     <property name="libs.metro.maven-pom" value="" />
     <property name="libs.IdentityAntTasks.classpath" value="D:\GlassFishESBv22\netbeans\identity2\ant\nblib\org-netbeans-modules-identity-ant.jar;D:\GlassFishESBv22\netbeans\identity2\modules\org-netbeans-modules-identity-profile-api.jar" />
     <property name="java.util.logging.config.class" value="org.netbeans.core.startup.TopLogging" />
@@ -364,8 +364,8 @@
     <property name="https.proxyHost" value="127.0.0.1" />
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
   </properties>
-  <testcase classname="org.netbeans.modules.compapp.catd.ConfiguredTest" name="TestLayDanhSachDiemCuaHocSinhByMonHoc" time="2.902">
-    <failure message="[27-08-2010 20:34:10] The response is not identical to the expected output." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: [27-08-2010 20:34:10] The response is not identical to the expected output.
+  <testcase classname="org.netbeans.modules.compapp.catd.ConfiguredTest" name="TestLayIdNamHocMoi" time="0.308">
+    <failure message="[27-08-2010 23:25:00] The response is not identical to the expected output." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: [27-08-2010 23:25:00] The response is not identical to the expected output.
 	at org.netbeans.modules.compapp.catd.ConfiguredTest.checkExpectedOutput(ConfiguredTest.java:2348)
 	at org.netbeans.modules.compapp.catd.ConfiguredTest.checkExpectedOutput(ConfiguredTest.java:2218)
 	at org.netbeans.modules.compapp.catd.ConfiguredTest.testConcurrentSOAPRequest(ConfiguredTest.java:862)
@@ -386,7 +386,7 @@ java.endorsed.dirs=D:\Program Files\Java\jdk1.6.0_21\jre\lib\endorsed
 java.ext.dirs=D:\Program Files\Java\jdk1.6.0_21\jre\lib\ext;D:\Windows\Sun\Java\lib\ext
 java.home=D:\Program Files\Java\jdk1.6.0_21\jre
 java.io.tmpdir=D:\Users\NGUYEN~1\AppData\Local\Temp\
-java.library.path=D:\Program Files\Java\jdk1.6.0_21\jre\bin;.;D:\Windows\Sun\Java\bin;D:\Windows\system32;D:\Windows;D:\xampp\apache\conf\;D:\Windows\system32;D:\Windows;D:\Windows\System32\Wbem;D:\Windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\Rational\common;D:\Program Files\TortoiseSVN\bin
+java.library.path=D:\Program Files\Java\jdk1.6.0_21\jre\bin;.;D:\Windows\Sun\Java\bin;D:\Windows\system32;D:\Windows;D:\xampp\apache\conf\;D:\Windows\system32;D:\Windows;D:\Windows\System32\Wbem;D:\Windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\Rational\common;D:\Program Files\TortoiseSVN\bin;D:\Program Files\Common Files\Autodesk Shared\
 java.runtime.name=Java(TM) SE Runtime Environment
 java.runtime.version=1.6.0_21-b06
 java.specification.name=Java Platform API Specification
@@ -428,7 +428,7 @@ user.language=vi
 user.name=nguyentanmo
 user.timezone=Asia/Bangkok
 user.variant=
-Test TestLayDanhSachDiemCuaHocSinhByMonHoc\Concurrent.properties Failed. (Destination: http://localhost:18001/QLDiemComApp/LayDanhSachDiemCuaHocSinhByMonHoc)
+Test TestLayIdNamHocMoi\Concurrent.properties Failed. (Destination: http://localhost:18001/QLDiemComApp/LayIdNamHocMoi)
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
