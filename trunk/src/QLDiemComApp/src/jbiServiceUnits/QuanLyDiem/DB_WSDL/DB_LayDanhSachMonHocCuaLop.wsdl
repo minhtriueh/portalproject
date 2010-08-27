@@ -23,10 +23,13 @@
     <jdbc:operation xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/"/>
       <input name="input">
     <jdbc:input xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" MarkColumnName="" MarkColumnValue="" MoveRowToTableName="" PKName="" PollMilliSeconds="5000" PollingPostProcessing="MoveRow" TableName="DB_LayDanhSachMonHocCuaLop" Transaction="NOTransaction" numberOfRecords="" operationType="DB_LayDanhSachMonHocCuaLop_Operation" paramOrder="id_lop" sql="SELECT
-  lop_monhoc.monhocs_id_monhoc
+  monhoc.tenmonhoc,
+  monhoc.id_monhoc
 FROM
-  public.lop_monhoc
+  public.lop_monhoc,
+  public.monhoc
 WHERE
+  monhoc.id_monhoc = lop_monhoc.monhocs_id_monhoc AND
   lop_monhoc.lops_id_lop = ?;"/>
       </input>
       <output name="output">
