@@ -21,5 +21,20 @@
             <result name="error">/index.jsp?module=quanlydiem&amp;page=luudiem</result>
         </action>
 
+        <action name="XemDiem" class="quanlydiem.XemDiem">
+            <result name="success">/index.jsp?module=quanlydiem&amp;page=xemdiem</result>
+            <result name="error">/index.jsp</result>
+        </action>
+
+        <action name="XacNhanMSHS" class="quanlydiem.XacNhanMSHS">
+            <result name="success">/index.jsp?module=quanlydiem&amp;page=xacnhanmshs</result>
+            <result name="error">/index.jsp</result>
+        </action>
+
+        <action name="XemDiemResult" class="quanlydiem.XemDiemResult">
+            <result name="success">/index.jsp?module=quanlydiem&amp;page=xemdiemresult</result>
+            <result name="error">/index.jsp</result>
+        </action>
+
     </package>
 </struts>

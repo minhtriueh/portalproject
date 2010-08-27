@@ -106,6 +106,9 @@
     <system systemId="http://sanchikaro:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/XSD_XML_Object/LoaiDiem.xsd" uri="wsdl/sanchikaro_18001/QLDiemComApp-sun-http-binding/QuanLyDiem/XSD_XML_Object/LoaiDiem.xsd"/>
     <system systemId="http://sanchikaro:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/DB_WSDL/DB_LayDanhSachHeSoCotDiem.xsd" uri="wsdl/sanchikaro_18001/QLDiemComApp-sun-http-binding/QuanLyDiem/DB_WSDL/DB_LayDanhSachHeSoCotDiem.xsd"/>
     <system systemId="http://sanchikaro:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/XSD_XML_Object/EschoolinkObject.xsd" uri="wsdl/sanchikaro_18001/QLDiemComApp-sun-http-binding/QuanLyDiem/XSD_XML_Object/EschoolinkObject.xsd"/>
+    <system systemId="http://nguyentanmo-PC:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/TimIdLopByMshs.wsdl" uri="wsdl/nguyentanmo-PC_18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/TimIdLopByMshs.wsdl"/>
+    <system systemId="http://nguyentanmo-PC:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/LayDanhSachMonHocCuaLop.wsdl" uri="wsdl/nguyentanmo-PC_18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/LayDanhSachMonHocCuaLop.wsdl"/>
+    <system systemId="http://nguyentanmo-PC:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/DB_WSDL/DB_LayDanhSachMonHocCuaLop.xsd" uri="wsdl/nguyentanmo-PC_18001/QLDiemComApp-sun-http-binding/QuanLyDiem/DB_WSDL/DB_LayDanhSachMonHocCuaLop.xsd"/>
 </catalog>
 
 
@@ -162,5 +165,8 @@
 
 =======
 >>>>>>> .r208
+
+
+
 
 
