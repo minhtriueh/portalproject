@@ -1,12 +1,7 @@
 <soapenv:Envelope xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:qld="QLDiemComApp">
   <soapenv:Body>
-    <qld:TaoSoDiemOperation>
-      <hocky>1</hocky>
-      <tensodiem>so diem toan</tensodiem>
-      <idmonhoc>1</idmonhoc>
-      <idgiaovien>1</idgiaovien>
-      <idlop>2</idlop>
-      <idnamhoc>1</idnamhoc>
-    </qld:TaoSoDiemOperation>
+    <qld:TimIdLopByMshsOperation>
+      <masohocsinh>hs1</masohocsinh>
+    </qld:TimIdLopByMshsOperation>
   </soapenv:Body>
 </soapenv:Envelope>
