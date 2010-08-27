@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process
+    name="TimIdLopByMshs"
+    targetNamespace="http://enterprise.netbeans.org/bpel/QuanLyDiem/TimIdLopByMshs"
+    xmlns:tns="http://enterprise.netbeans.org/bpel/QuanLyDiem/TimIdLopByMshs"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
+    xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor"
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2" xmlns:ns0="http://j2ee.netbeans.org/xsd/tableSchema">
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TimIdLopByMshs" location="../interface_WSDL/TimIdLopByMshs.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TimIdLopByMshs" location="../DB_WSDL/DB_TimIdLopByMshs.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <partnerLinks>
+        <partnerLink name="PL_DB_TimIdLopByMshs" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TimIdLopByMshs" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="PL_TimIdLopByMshs" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TimIdLopByMshs" partnerLinkType="tns:TimIdLopByMshs" myRole="TimIdLopByMshsPortTypeRole"/>
+    </partnerLinks>
+    <variables>
+        <variable name="TimIdLopByMshsOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TimIdLopByMshs" messageType="tns:outputMsg"/>
+        <variable name="TimIdLopByMshsIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TimIdLopByMshs" messageType="tns:inputMsg"/>
+        <variable name="TimIdLopByMshsOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TimIdLopByMshs" messageType="tns:TimIdLopByMshsOperationResponse"/>
+        <variable name="TimIdLopByMshsOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TimIdLopByMshs" messageType="tns:TimIdLopByMshsOperationRequest"/>
+    </variables>
+    <sequence>
+        <receive name="Receive1" createInstance="yes" partnerLink="PL_TimIdLopByMshs" operation="TimIdLopByMshsOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TimIdLopByMshs" portType="tns:TimIdLopByMshsPortType" variable="TimIdLopByMshsOperationIn"/>
+        <assign name="Assign1">
+            <copy>
+                <from variable="TimIdLopByMshsOperationIn" part="masohocsinh"/>
+                <to>$TimIdLopByMshsIn.part/ns0:masohocsinh</to>
+            </copy>
+        </assign>
+        <invoke name="Invoke1" partnerLink="PL_DB_TimIdLopByMshs" operation="newuntitled_Operation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TimIdLopByMshs" portType="tns:jdbcPortType" inputVariable="TimIdLopByMshsIn" outputVariable="TimIdLopByMshsOut"/>
+        <assign name="Assign2">
+            <copy>
+                <from>$TimIdLopByMshsOut.part/ns0:DB_TimIdLopByMshs_Record/ns0:id_lop</from>
+                <to variable="TimIdLopByMshsOperationOut" part="id_lop"/>
+            </copy>
+        </assign>
+        <reply name="Reply1" partnerLink="PL_TimIdLopByMshs" operation="TimIdLopByMshsOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TimIdLopByMshs" portType="tns:TimIdLopByMshsPortType" variable="TimIdLopByMshsOperationOut"/>
+    </sequence>
+</process>
+
