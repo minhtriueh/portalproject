@@ -13,7 +13,7 @@
         <part name="id_lop" type="xsd:long"/>
     </message>
     <message name="LayDanhSachMonHocCuaLopOperationResponse">
-        <part name="listIdMonHoc" type="ns0:ListIdMonHoc"/>
+        <part name="listMonHoc" type="ns0:ListMonHoc"/>
     </message>
     <portType name="LayDanhSachMonHocCuaLopPortType">
         <operation name="LayDanhSachMonHocCuaLopOperation">
@@ -28,5 +28,7 @@ A partner link type characterizes the conversational relationship between two se
         <plnk:role name="LayDanhSachMonHocCuaLopPortTypeRole" portType="tns:LayDanhSachMonHocCuaLopPortType"/>
     </plnk:partnerLinkType>
 </definitions>
+
+
 
 

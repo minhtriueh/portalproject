@@ -26,7 +26,17 @@
     <xsd:element name="DB_LayDanhSachMonHocCuaLop_Record">
       <xsd:complexType>
         <xsd:sequence>
-          <xsd:element name="monhocs_id_monhoc">
+          <xsd:element name="tenmonhoc">
+            <xsd:complexType>
+              <xsd:simpleContent>
+                <xsd:extension base="xsd:string">
+                  <xsd:attribute name="isNull" type="xsd:boolean"></xsd:attribute>
+                  <xsd:attribute name="isDefaultColumn" type="xsd:boolean"></xsd:attribute>
+                </xsd:extension>
+              </xsd:simpleContent>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="id_monhoc">
             <xsd:complexType>
               <xsd:simpleContent>
                 <xsd:extension base="xsd:long">
