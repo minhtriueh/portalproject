@@ -51,6 +51,9 @@
         </li>
         <li>
             <a href="#" ><span class="l"></span><span class="r"></span><span class="t">Tra cứu điểm</span></a>
+            <ul>
+                <li><a href="XemDiem">Xem Điểm</a></li>
+            </ul>
         </li>
         <li>
             <a href="#" ><span class="l"></span><span class="r"></span><span class="t">Xem thời khóa biểu</span></a>

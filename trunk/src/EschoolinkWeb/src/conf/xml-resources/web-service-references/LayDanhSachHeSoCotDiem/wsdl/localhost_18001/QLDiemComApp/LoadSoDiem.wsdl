@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions targetNamespace="QLDiemComApp" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:ns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/ThemDanhSachLoaiDiem" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns21="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachHeSo" xmlns:ns20="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachHeSoCotDiem" xmlns:ns16="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachCotDiem" xmlns:ns17="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TimTenHocSinhByIdHocSinh" xmlns:ns14="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TimIdMonHocByTenMonHoc" xmlns:ns15="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TimIdLopByTenLop" xmlns:ns18="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachDiemCuaChiTietSoDiem" xmlns:ns19="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LuuDiem" xmlns:ns9="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoNamHocMoi" xmlns:ns12="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachLopGiaoVienDay" xmlns:ns5="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TinhDiemTrungBinh" xmlns:ns13="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LoadSoDiem" xmlns:ns6="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TongKetDiem" xmlns:ns10="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayIdNamHocMoiNhat" xmlns:ns7="http://j2ee.netbeans.org/wsdl/QuanLyDiem/XemDiem" xmlns:ns11="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachMonHocCuaGiaoVien" xmlns:ns8="http://j2ee.netbeans.org/wsdl/QuanLyThiDuaLenLop/XetLenLop" xmlns:ns2="http://j2ee.netbeans.org/wsdl/QuanLyDiem/NhapDiem" xmlns:ns1="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoSoDiem" xmlns:ns4="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoLoaiDiem" xmlns:ns3="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LuuDiemHocBa" xmlns:tns="QLDiemComApp" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+<definitions targetNamespace="QLDiemComApp" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:ns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/ThemDanhSachLoaiDiem" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns20="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachHeSoCotDiem" xmlns:ns16="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachCotDiem" xmlns:ns17="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TimTenHocSinhByIdHocSinh" xmlns:ns14="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TimIdMonHocByTenMonHoc" xmlns:ns15="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TimIdLopByTenLop" xmlns:ns18="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachDiemCuaChiTietSoDiem" xmlns:ns19="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LuuDiem" xmlns:ns9="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoNamHocMoi" xmlns:ns12="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachLopGiaoVienDay" xmlns:ns5="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TinhDiemTrungBinh" xmlns:ns13="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LoadSoDiem" xmlns:ns6="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TongKetDiem" xmlns:ns10="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayIdNamHocMoiNhat" xmlns:ns7="http://j2ee.netbeans.org/wsdl/QuanLyDiem/XemDiem" xmlns:ns11="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachMonHocCuaGiaoVien" xmlns:ns8="http://j2ee.netbeans.org/wsdl/QuanLyThiDuaLenLop/XetLenLop" xmlns:ns2="http://j2ee.netbeans.org/wsdl/QuanLyDiem/NhapDiem" xmlns:ns1="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoSoDiem" xmlns:ns4="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoLoaiDiem" xmlns:ns3="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LuuDiemHocBa" xmlns:tns="QLDiemComApp" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
   <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoLoaiDiem" location="http://nguyentanmo-PC:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/TaoLoaiDiem.wsdl">
     </import>
   <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LuuDiem" location="http://nguyentanmo-PC:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/LuuDiem.wsdl">
@@ -35,8 +35,6 @@
   <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachCotDiem" location="http://nguyentanmo-PC:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/LayDanhSachCotDiem.wsdl">
     </import>
   <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TinhDiemTrungBinh" location="http://nguyentanmo-PC:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/TinhDiemTrungBinh.wsdl">
-    </import>
-  <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachHeSo" location="http://nguyentanmo-PC:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/LayDanhSachHeSo.wsdl">
     </import>
   <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachMonHocCuaGiaoVien" location="http://nguyentanmo-PC:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/LayDanhSachMonHocCuaGiaoVien.wsdl">
     </import>
@@ -241,18 +239,6 @@
   <binding name="casaBinding5" type="tns:dummyCasaPortType">
   </binding>
   <binding name="casaBinding23" type="tns:dummyCasaPortType">
-  </binding>
-  <binding name="casaBinding44" type="ns21:LayDanhSachHeSoPortType">
-    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
-    <operation name="LayDanhSachHeSoOperation">
-      <soap:operation/>
-      <input name="input1">
-        <soap:body use="literal" namespace="QLDiemComApp"/>
-      </input>
-      <output name="output1">
-        <soap:body use="literal" namespace="QLDiemComApp"/>
-      </output>
-    </operation>
   </binding>
   <binding name="casaBinding26" type="tns:dummyCasaPortType">
   </binding>
@@ -505,11 +491,6 @@
   <service name="QLDiemComAppService22">
     <port name="LayDanhSachMonHocCuaGiaoVien" binding="tns:casaBinding22">
       <soap:address location="http://nguyentanmo-PC:18001/QLDiemComApp/LayDanhSachMonHocCuaGiaoVien"/>
-    </port>
-  </service>
-  <service name="QLDiemComAppService44">
-    <port name="LayDanhSachHeSo" binding="tns:casaBinding44">
-      <soap:address location="http://nguyentanmo-PC:18001/QLDiemComApp/LayDanhSachHeSo"/>
     </port>
   </service>
   <service name="QLDiemComAppService28">
