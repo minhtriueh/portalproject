@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process
+    name="LayDanhSachDiemCuaHocSinhByMonHoc"
+    targetNamespace="http://enterprise.netbeans.org/bpel/QuanLyDiem/LayDanhSachDiemCuaHocSinhByMonHoc"
+    xmlns:tns="http://enterprise.netbeans.org/bpel/QuanLyDiem/LayDanhSachDiemCuaHocSinhByMonHoc"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
+    xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor"
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2" xmlns:ns0="http://j2ee.netbeans.org/xsd/tableSchema" xmlns:ns1="http://xml.netbeans.org/schema/LoaiDiem">
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachDiemCuaHocSinhByMonHoc" location="../interface_WSDL/LayDanhSachDiemCuaHocSinhByMonHoc.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachDiemCuaHocSinhByMonHoc" location="../DB_WSDL/DB_LayDanhSachDiemCuaHocSinhByMonHoc.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <partnerLinks>
+        <partnerLink name="PL_DB_LayDanhSachDiemCuaHocSinhByMonHoc" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachDiemCuaHocSinhByMonHoc" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="PL_LayDanhSachDiemCuaHocSinhByMonHoc" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachDiemCuaHocSinhByMonHoc" partnerLinkType="tns:LayDanhSachDiemCuaHocSinhByMonHoc" myRole="LayDanhSachDiemCuaHocSinhByMonHocPortTypeRole"/>
+    </partnerLinks>
+    <variables>
+        <variable name="LayDanhSachDiemCuaHocSinhByMonHocOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachDiemCuaHocSinhByMonHoc" messageType="tns:outputMsg">
+            <sxed2:editor>
+                <sxed2:predicate path="$LayDanhSachDiemCuaHocSinhByMonHocOut.part/ns0:DB_LayDanhSachDiemCuaHocSinhByMonHoc_Record[$ForEach1Counter]" source="from"/>
+            </sxed2:editor>
+        </variable>
+        <variable name="LayDanhSachDiemCuaHocSinhByMonHocIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachDiemCuaHocSinhByMonHoc" messageType="tns:inputMsg"/>
+        <variable name="LayDanhSachDiemCuaHocSinhByMonHocOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachDiemCuaHocSinhByMonHoc" messageType="tns:LayDanhSachDiemCuaHocSinhByMonHocOperationResponse">
+            <sxed2:editor>
+                <sxed2:predicate path="$LayDanhSachDiemCuaHocSinhByMonHocOperationOut.listdiem/ns1:Diem[$ForEach1Counter]" source="to"/>
+            </sxed2:editor>
+        </variable>
+        <variable name="LayDanhSachDiemCuaHocSinhByMonHocOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachDiemCuaHocSinhByMonHoc" messageType="tns:LayDanhSachDiemCuaHocSinhByMonHocOperationRequest"/>
+    </variables>
+    <sequence>
+        <receive name="Receive1" createInstance="yes" partnerLink="PL_LayDanhSachDiemCuaHocSinhByMonHoc" operation="LayDanhSachDiemCuaHocSinhByMonHocOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachDiemCuaHocSinhByMonHoc" portType="tns:LayDanhSachDiemCuaHocSinhByMonHocPortType" variable="LayDanhSachDiemCuaHocSinhByMonHocOperationIn"/>
+        <assign name="Assign1">
+            <copy>
+                <from variable="LayDanhSachDiemCuaHocSinhByMonHocOperationIn" part="id_hocsinh"/>
+                <to>$LayDanhSachDiemCuaHocSinhByMonHocIn.part/ns0:id_hocsinh</to>
+            </copy>
+            <copy>
+                <from variable="LayDanhSachDiemCuaHocSinhByMonHocOperationIn" part="id_lop"/>
+                <to>$LayDanhSachDiemCuaHocSinhByMonHocIn.part/ns0:id_lop</to>
+            </copy>
+            <copy>
+                <from variable="LayDanhSachDiemCuaHocSinhByMonHocOperationIn" part="id_monhoc"/>
+                <to>$LayDanhSachDiemCuaHocSinhByMonHocIn.part/ns0:id_monhoc</to>
+            </copy>
+            <copy>
+                <from variable="LayDanhSachDiemCuaHocSinhByMonHocOperationIn" part="id_namhoc"/>
+                <to>$LayDanhSachDiemCuaHocSinhByMonHocIn.part/ns0:id_namhoc</to>
+            </copy>
+            <copy>
+                <from variable="LayDanhSachDiemCuaHocSinhByMonHocOperationIn" part="hocky"/>
+                <to>$LayDanhSachDiemCuaHocSinhByMonHocIn.part/ns0:hocky</to>
+            </copy>
+        </assign>
+        <invoke name="Invoke1" partnerLink="PL_DB_LayDanhSachDiemCuaHocSinhByMonHoc" operation="newuntitled_Operation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachDiemCuaHocSinhByMonHoc" portType="tns:jdbcPortType" inputVariable="LayDanhSachDiemCuaHocSinhByMonHocIn" outputVariable="LayDanhSachDiemCuaHocSinhByMonHocOut"/>
+        <forEach name="ForEach1" parallel="no" counterName="ForEach1Counter">
+            <startCounterValue>1</startCounterValue>
+            <finalCounterValue>count($LayDanhSachDiemCuaHocSinhByMonHocOut.part/ns0:DB_LayDanhSachDiemCuaHocSinhByMonHoc_Record)</finalCounterValue>
+            <scope name="Scope1">
+                <assign name="Assign2">
+                    <copy>
+                        <from>$LayDanhSachDiemCuaHocSinhByMonHocOut.part/ns0:DB_LayDanhSachDiemCuaHocSinhByMonHoc_Record[$ForEach1Counter]/ns0:diem
+                            <sxed2:editor>
+                                <sxed2:predicate path="$LayDanhSachDiemCuaHocSinhByMonHocOut.part/ns0:DB_LayDanhSachDiemCuaHocSinhByMonHoc_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$LayDanhSachDiemCuaHocSinhByMonHocOperationOut.listdiem/ns1:Diem[$ForEach1Counter]/ns1:diem
+                            <sxed2:editor>
+                                <sxed2:predicate path="$LayDanhSachDiemCuaHocSinhByMonHocOperationOut.listdiem/ns1:Diem[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                </assign>
+            </scope>
+        </forEach>
+        <reply name="Reply1" partnerLink="PL_LayDanhSachDiemCuaHocSinhByMonHoc" operation="LayDanhSachDiemCuaHocSinhByMonHocOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachDiemCuaHocSinhByMonHoc" portType="tns:LayDanhSachDiemCuaHocSinhByMonHocPortType" variable="LayDanhSachDiemCuaHocSinhByMonHocOperationOut"/>
+    </sequence>
+</process>
+
