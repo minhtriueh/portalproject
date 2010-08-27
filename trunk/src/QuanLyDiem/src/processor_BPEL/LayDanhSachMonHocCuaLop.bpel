@@ -24,7 +24,7 @@
         <variable name="LayDanhSachMonHocCuaLopIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachMonHocCuaLop" messageType="tns:inputMsg"/>
         <variable name="LayDanhSachMonHocCuaLopOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachMonHocCuaLop" messageType="tns:LayDanhSachMonHocCuaLopOperationResponse">
             <sxed2:editor>
-                <sxed2:predicate path="$LayDanhSachMonHocCuaLopOperationOut.listIdMonHoc/ns0:DB_LayDanhSachMonHocCuaLop_Record[$ForEach1Counter]" source="to"/>
+                <sxed2:predicate path="$LayDanhSachMonHocCuaLopOperationOut.listMonHoc/ns1:MonHoc[$ForEach1Counter]" source="to"/>
             </sxed2:editor>
         </variable>
         <variable name="LayDanhSachMonHocCuaLopOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachMonHocCuaLop" messageType="tns:LayDanhSachMonHocCuaLopOperationRequest"/>
@@ -44,14 +44,26 @@
             <scope name="Scope1">
                 <assign name="Assign2">
                     <copy>
-                        <from>$LayDanhSachMonHocCuaLopOut.part/ns0:DB_LayDanhSachMonHocCuaLop_Record[$ForEach1Counter]/ns0:monhocs_id_monhoc
+                        <from>$LayDanhSachMonHocCuaLopOut.part/ns0:DB_LayDanhSachMonHocCuaLop_Record[$ForEach1Counter]/ns0:tenmonhoc
                             <sxed2:editor>
                                 <sxed2:predicate path="$LayDanhSachMonHocCuaLopOut.part/ns0:DB_LayDanhSachMonHocCuaLop_Record[$ForEach1Counter]" source="from"/>
                             </sxed2:editor>
                         </from>
-                        <to>$LayDanhSachMonHocCuaLopOperationOut.listIdMonHoc/ns1:id_monhoc[$ForEach1Counter]
+                        <to>$LayDanhSachMonHocCuaLopOperationOut.listMonHoc/ns1:MonHoc[$ForEach1Counter]/ns1:tenmonhoc
                             <sxed2:editor>
-                                <sxed2:predicate path="$LayDanhSachMonHocCuaLopOperationOut.listIdMonHoc/ns1:id_monhoc[$ForEach1Counter]" source="to"/>
+                                <sxed2:predicate path="$LayDanhSachMonHocCuaLopOperationOut.listMonHoc/ns1:MonHoc[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$LayDanhSachMonHocCuaLopOut.part/ns0:DB_LayDanhSachMonHocCuaLop_Record[$ForEach1Counter]/ns0:id_monhoc
+                            <sxed2:editor>
+                                <sxed2:predicate path="$LayDanhSachMonHocCuaLopOut.part/ns0:DB_LayDanhSachMonHocCuaLop_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$LayDanhSachMonHocCuaLopOperationOut.listMonHoc/ns1:MonHoc[$ForEach1Counter]/ns1:id_monhoc
+                            <sxed2:editor>
+                                <sxed2:predicate path="$LayDanhSachMonHocCuaLopOperationOut.listMonHoc/ns1:MonHoc[$ForEach1Counter]" source="to"/>
                             </sxed2:editor>
                         </to>
                     </copy>
