@@ -109,6 +109,10 @@
     <system systemId="http://nguyentanmo-PC:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/TimIdLopByMshs.wsdl" uri="wsdl/nguyentanmo-PC_18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/TimIdLopByMshs.wsdl"/>
     <system systemId="http://nguyentanmo-PC:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/LayDanhSachMonHocCuaLop.wsdl" uri="wsdl/nguyentanmo-PC_18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/LayDanhSachMonHocCuaLop.wsdl"/>
     <system systemId="http://nguyentanmo-PC:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/DB_WSDL/DB_LayDanhSachMonHocCuaLop.xsd" uri="wsdl/nguyentanmo-PC_18001/QLDiemComApp-sun-http-binding/QuanLyDiem/DB_WSDL/DB_LayDanhSachMonHocCuaLop.xsd"/>
+    <system systemId="http://nguyentanmo-PC:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/LayDanhSachDiemCuaHocSinhByMonHoc.wsdl" uri="wsdl/nguyentanmo-PC_18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/LayDanhSachDiemCuaHocSinhByMonHoc.wsdl"/>
+    <system systemId="http://nguyentanmo-PC:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/TimIdHocSinhByMshs.wsdl" uri="wsdl/nguyentanmo-PC_18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/TimIdHocSinhByMshs.wsdl"/>
+    <system systemId="http://nguyentanmo-PC:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/LayIdNamHocMoi.wsdl" uri="wsdl/nguyentanmo-PC_18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/LayIdNamHocMoi.wsdl"/>
+    <system systemId="http://nguyentanmo-PC:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/LayDiemTrungBinhCuaHocSinh.wsdl" uri="wsdl/nguyentanmo-PC_18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/LayDiemTrungBinhCuaHocSinh.wsdl"/>
 </catalog>
 
 
@@ -165,6 +169,16 @@
 
 =======
 >>>>>>> .r208
+
+
+
+
+
+
+
+
+
+
 
 
 

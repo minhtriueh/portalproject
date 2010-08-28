@@ -10,7 +10,7 @@
 
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="s" uri="/struts-tags" %>
-
+<c:set var="monhocs" value="${monhocs}" scope="session"></c:set>
 
 <div class="art-layout-cell art-content">
     <div class="art-post">
@@ -35,12 +35,23 @@
                 <!-- bat dau thong tin -->
                 <form action="XemDiemResult" method="post">
                     <div class="art-postcontent">
+                        <input type="hidden" name="lop" value="${lop}">
+                        <input type="hidden" name="idhocsinh" value="${idhocsinh}">
+                        Môn Học 
                         <select name="monhoc">
-                            <option value="" selected></option>
-                            <c:forEach var="monhoc" items="${monhocs}">
-                                <option value="${monhoc.tenmonhoc}"><c:out value="${monhoc.tenmonhoc}"></c:out></option>
+                            <option value="tatcacacmon" selected>Tất cả các môn</option>
+                            <c:forEach var="mh" items="${monhocs}">
+                                <option value="${mh.tenmonhoc}">
+                                    <c:out value="${mh.tenmonhoc}"></c:out>
+                                </option>
                             </c:forEach>
                         </select>
+                        <c:forEach var="mh" items="${monhocs}">
+                            <input type="hidden" name="mons" value="${mh.idMonhoc}">
+                        </c:forEach>
+                        <c:forEach var="mh" items="${monhocs}">
+                            <input type="hidden" name="tenmonhocs" value="${mh.tenmonhoc}">
+                        </c:forEach>
                         <input type="radio" name="hocky" value="1"> Học Kỳ 1
                         <input type="radio" name="hocky" value="2"> Học Kỳ 2
                         <div id="fm-submit" class="fm-req" style="margin-left:60px">
