@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP-ENV:Body>
+    <m:LayDiemTrungBinhCuaHocSinhOperationResponse xmlns:m="QLDiemComApp" xmlns:msgns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDiemTrungBinhCuaHocSinh">
+      <diemtrungbinh xmlns:msgns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDiemTrungBinhCuaHocSinh" xmlns:ns0="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDiemTrungBinhCuaHocSinh" isNull="false">7.901960784313725</diemtrungbinh>
+    </m:LayDiemTrungBinhCuaHocSinhOperationResponse>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="1" hostname="nguyentanmo-PC" name="org.netbeans.modules.compapp.catd.ConfiguredTest" tests="1" time="0.33" timestamp="2010-08-27T16:25:00">
+<testsuite errors="0" failures="1" hostname="nguyentanmo-PC" name="org.netbeans.modules.compapp.catd.ConfiguredTest" tests="1" time="4.032" timestamp="2010-08-28T17:13:25">
   <properties>
-    <property name="libs.struts2lib-2-0-11-basic.maven-pom" value="" />
     <property name="netbeans.autoupdate.country" value="VN" />
     <property name="com.sun.jbi.sa.internal.routing" value="true" />
     <property name="libs.DataBindingME.src" value="" />
@@ -73,7 +72,6 @@
     <property name="libs.jstl11.javadoc" value="D:\GlassFishESBv22\netbeans\enterprise5\docs\javaee5-doc-api.zip" />
     <property name="libs.JMUnit4CLDC11.src" value="" />
     <property name="meta.inf" value="src/conf" />
-    <property name="netbeans.system_http_non_proxy_hosts" value="local" />
     <property name="netbeans.home" value="D:\GlassFishESBv22\netbeans\platform10" />
     <property name="build.compiler.emacs" value="true" />
     <property name="libs.ejb3-persistence.src" value="" />
@@ -117,7 +115,6 @@
     <property name="libs.metro.maven-pom" value="" />
     <property name="libs.IdentityAntTasks.classpath" value="D:\GlassFishESBv22\netbeans\identity2\ant\nblib\org-netbeans-modules-identity-ant.jar;D:\GlassFishESBv22\netbeans\identity2\modules\org-netbeans-modules-identity-profile-api.jar" />
     <property name="java.util.logging.config.class" value="org.netbeans.core.startup.TopLogging" />
-    <property name="https.proxyPort" value="9666" />
     <property name="libs.PostgreSQLDriver.src" value="" />
     <property name="sun.arch.data.model" value="32" />
     <property name="basedir" value="F:\HOC KY 8\Luan Van\portal\trunk\src\QLDiemComApp" />
@@ -143,14 +140,13 @@
     <property name="libs.ejb3-persistence.maven-pom" value="" />
     <property name="libs.proguard.classpath" value="D:\GlassFishESBv22\netbeans\mobility8\external\proguard\proguard4.2.jar" />
     <property name="libs.DataBindingME-SVG.classpath" value="D:\GlassFishESBv22\netbeans\mobility8\modules\ext\netbeans_databindingme_svg.jar" />
-    <property name="https.nonProxyHosts" value="local*|localhost|127.0.0.1|nguyentanmo-PC" />
+    <property name="https.nonProxyHosts" value="localhost|127.0.0.1|nguyentanmo-PC" />
     <property name="libs.PostgreSQLDriver.maven-pom" value="" />
     <property name="java.class.version" value="50.0" />
     <property name="libs.cdc-ant-utils.classpath" value="D:\GlassFishESBv22\netbeans\mobility8\modules\ext\org-netbeans-modules-j2me-cdc-project.jar" />
-    <property name="netbeans.system_http_proxy" value="127.0.0.1:9666" />
+    <property name="netbeans.system_http_proxy" value="DIRECT" />
     <property name="libs.NetBeans MIDP Components WMA.maven-pom" value="" />
     <property name="user.properties.file" value="D:\GlassFishESBv22\.netbeans\glassfishesb\build.properties" />
-    <property name="libs.struts2lib-2-0-11-basic.src" value="" />
     <property name="libs.spring-framework.src" value="" />
     <property name="libs.javac-api.maven-pom" value="" />
     <property name="file.encoding.pkg" value="sun.io" />
@@ -175,7 +171,7 @@
     <property name="libs.nsicom-ant-utils.maven-pom" value="" />
     <property name="libs.MySQLDriver.maven-pom" value="" />
     <property name="libs.savaje-ant-utils.src" value="" />
-    <property name="http.nonProxyHosts" value="local*|localhost|127.0.0.1|nguyentanmo-PC" />
+    <property name="http.nonProxyHosts" value="localhost|127.0.0.1|nguyentanmo-PC" />
     <property name="libs.junit_4.javadoc" value="D:\GlassFishESBv22\netbeans\java2\docs\junit-4.5-api.zip" />
     <property name="libs.spring-webmvc.javadoc" value="" />
     <property name="libs.toplink.src" value="" />
@@ -184,7 +180,6 @@
     <property name="libs.cdc-agui-swing-layout.src" value="D:\GlassFishESBv22\netbeans\mobility8\sources\cdc-agui-swing-layout-src.zip" />
     <property name="libs.hibernate-support.src" value="" />
     <property name="libs.JMUnit4CLDC11.classpath" value="D:\GlassFishESBv22\netbeans\mobility8\modules\ext\jmunit4cldc11-1.2.1.jar" />
-    <property name="http.proxyHost" value="127.0.0.1" />
     <property name="libs.nb_svg_midp_components.classpath" value="D:\GlassFishESBv22\netbeans\mobility8\modules\ext\nb_svg_midp_components.jar" />
     <property name="libs.PojoSELib.classpath" value="D:\GlassFishESBv22\netbeans\soa2\modules\ext\jbi\sun-pojo-engine-api.jar;D:\GlassFishESBv22\netbeans\soa2\modules\ext\jbi\jbi.jar" />
     <property name="libs.NetBeans MIDP Components PDA.classpath" value="D:\GlassFishESBv22\netbeans\mobility8\modules\ext\netbeans_midp_components_pda.jar" />
@@ -217,7 +212,6 @@
     <property name="java.io.tmpdir" value="D:\Users\NGUYEN~1\AppData\Local\Temp\" />
     <property name="java.vendor.url" value="http://java.sun.com/" />
     <property name="jspc.classpath" value="D:\GlassFishESBv22\netbeans\java2\ant\lib\ant.jar:D:\GlassFishESBv22\netbeans\enterprise5\modules\ext\servlet2.5-jsp2.1-api.jar:${j2ee.platform.classpath}:D:\GlassFishESBv22\netbeans\enterprise5\modules\ext\glassfish-jspparser-2.0.jar:D:\GlassFishESBv22\netbeans\enterprise5\modules\ext\glassfish-logging-2.0.jar:D:\GlassFishESBv22\netbeans\ide11\modules\ext\commons-logging-1.1.jar:D:\GlassFishESBv22\netbeans\java2\ant\lib\ant-launcher.jar" />
-    <property name="libs.struts2lib-2-0-11-basic.classpath" value="D:\GlassFishESBv22\.netbeans\glassfishesb\modules\ext\struts2-2.0.11\commons-logging-1.0.4.jar;D:\GlassFishESBv22\.netbeans\glassfishesb\modules\ext\struts2-2.0.11\freemarker-2.3.8.jar;D:\GlassFishESBv22\.netbeans\glassfishesb\modules\ext\struts2-2.0.11\ognl-2.6.11.jar;D:\GlassFishESBv22\.netbeans\glassfishesb\modules\ext\struts2-2.0.11\struts2-core-2.0.11.jar;D:\GlassFishESBv22\.netbeans\glassfishesb\modules\ext\struts2-2.0.11\xwork-2.0.4.jar" />
     <property name="sun.boot.library.path" value="D:\Program Files\Java\jdk1.6.0_21\jre\bin" />
     <property name="src.build.dir" value="src/jbiServiceUnits" />
     <property name="libs.DataBindingME-SVG.src" value="" />
@@ -225,7 +219,7 @@
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
     <property name="ant.project.name" value="" />
     <property name="libs.PojoSELib.javadoc" value="D:\GlassFishESBv22\netbeans\soa2\modules\ext\jbi\sun-pojo-engine-api-javadoc.jar" />
-    <property name="netbeans.hash.code" value="unique=NB_GLASSFISH_SOA053f5ecc2-688f-4662-a586-3087c746a5c3_545af10e-0235-46a8-bf05-6db1ded6b5ce" />
+    <property name="netbeans.hash.code" value="unique=NB_GLASSFISH_SOA0acf5f729-37b6-4c00-afd8-8f693edf5d5d_545af10e-0235-46a8-bf05-6db1ded6b5ce" />
     <property name="libs.j2me_ant_ext.maven-pom" value="" />
     <property name="sun.cpu.isalist" value="pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86" />
     <property name="libs.CopyLibs.javadoc" value="" />
@@ -296,10 +290,9 @@
     <property name="libs.cdc-ant-utils.maven-pom" value="" />
     <property name="libs.cdc-agui-swing-layout.classpath" value="D:\GlassFishESBv22\netbeans\mobility8\modules\ext\cdc-agui-swing-layout.jar" />
     <property name="dist.dir" value="dist" />
-    <property name="http.proxyPort" value="9666" />
     <property name="inDebug" value="${inDebug}" />
-    <property name="libs.sjmc-ant-utils.classpath" value="D:\GlassFishESBv22\netbeans\mobility8\modules\ext\org-netbeans-modules-j2me-cdc-project-sjmc.jar" />
     <property name="org.netbeans.modules.compapp.catd.context" value="" />
+    <property name="libs.sjmc-ant-utils.classpath" value="D:\GlassFishESBv22\netbeans\mobility8\modules\ext\org-netbeans-modules-j2me-cdc-project-sjmc.jar" />
     <property name="libs.JMUnit4CLDC10.classpath" value="D:\GlassFishESBv22\netbeans\mobility8\modules\ext\jmunit4cldc10-1.2.1.jar" />
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob" />
     <property name="default.javac.source" value="1.6" />
@@ -307,7 +300,6 @@
     <property name="libs.MySQLDriver.src" value="" />
     <property name="jbi.service-assembly.id" value="QLDiemComApp" />
     <property name="libs.ant-contrib.maven-pom" value="" />
-    <property name="libs.struts2lib-2-0-11-basic.javadoc" value="" />
     <property name="libs.nokiadeployment.javadoc" value="" />
     <property name="java.runtime.version" value="1.6.0_21-b06" />
     <property name="libs.ejb3-persistence.javadoc" value="" />
@@ -357,15 +349,14 @@
     <property name="soa.module.install.dir" value="D:\GlassFishESBv22\netbeans\soa2\modules" />
     <property name="libs.Encoder-Custom.src" value="" />
     <property name="libs.junit.src" value="" />
-    <property name="build.dir" value="build" />
     <property name="libs.CopyLibs.src" value="" />
+    <property name="build.dir" value="build" />
     <property name="ant.version" value="Apache Ant version 1.7.1 compiled on June 27 2008" />
     <property name="file.encoding" value="Cp1258" />
-    <property name="https.proxyHost" value="127.0.0.1" />
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
   </properties>
-  <testcase classname="org.netbeans.modules.compapp.catd.ConfiguredTest" name="TestLayIdNamHocMoi" time="0.308">
-    <failure message="[27-08-2010 23:25:00] The response is not identical to the expected output." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: [27-08-2010 23:25:00] The response is not identical to the expected output.
+  <testcase classname="org.netbeans.modules.compapp.catd.ConfiguredTest" name="TestLayDiemTrungBinhCuaHocSinh" time="4.009">
+    <failure message="[29-08-2010 00:13:29] The response is not identical to the expected output." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: [29-08-2010 00:13:29] The response is not identical to the expected output.
 	at org.netbeans.modules.compapp.catd.ConfiguredTest.checkExpectedOutput(ConfiguredTest.java:2348)
 	at org.netbeans.modules.compapp.catd.ConfiguredTest.checkExpectedOutput(ConfiguredTest.java:2218)
 	at org.netbeans.modules.compapp.catd.ConfiguredTest.testConcurrentSOAPRequest(ConfiguredTest.java:862)
@@ -428,7 +419,12 @@ user.language=vi
 user.name=nguyentanmo
 user.timezone=Asia/Bangkok
 user.variant=
-Test TestLayIdNamHocMoi\Concurrent.properties Failed. (Destination: http://localhost:18001/QLDiemComApp/LayIdNamHocMoi)
+Test TestLayDiemTrungBinhCuaHocSinh\Concurrent.properties
+  * Difference (Delete): SOAP-ENV:Fault
+  * Difference (Add): m:LayDiemTrungBinhCuaHocSinhOperationResponse
+ Failed. (Destination: http://localhost:18001/QLDiemComApp/LayDiemTrungBinhCuaHocSinh)
 ]]></system-out>
-  <system-err><![CDATA[]]></system-err>
+  <system-err><![CDATA[29-08-2010 00:13:28 org.netbeans.modules.csl.core.LanguageRegistry readSfs
+INFO: No CslPlugins folder
+]]></system-err>
 </testsuite>
