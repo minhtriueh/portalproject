@@ -27,7 +27,6 @@ public class BatDauNhapDiem {
     public String execute() throws Exception {
 
 //call service lay danh sach mon hoc cua giao vien
-         System.err.println("loi1 gfdgfd");
         long idGiaovien = 1;
         org.netbeans.xml.schema.loaidiem.ListMonHoc monhocs = null;
         try { // Call Web Service Operation
@@ -71,7 +70,6 @@ public class BatDauNhapDiem {
 //                        System.err.println("ket qua "+iterator.next().getKey()+" "+iterator.next().getValue());
 //                    }
                 }
-                 System.err.println("loi1 jhjjjjjjjj");
                 getRequest().setAttribute("tenlops", tenlops);
                 getRequest().setAttribute("setmonhoclop", setmonhoclop);
                 return "success";
@@ -100,7 +98,7 @@ public class BatDauNhapDiem {
 //            System.err.println("loi3 " + ex.getMessage());
 //
 //        }
-         long idGiaovien = 1;
+        long idGiaovien = 1;
         org.netbeans.xml.schema.loaidiem.ListMonHoc monhocs = null;
         try { // Call Web Service Operation
             qldiemcomapp.QLDiemComAppService22 service = new qldiemcomapp.QLDiemComAppService22();
