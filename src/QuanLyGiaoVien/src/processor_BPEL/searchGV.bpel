@@ -18,7 +18,7 @@
         <partnerLink name="PartnerLink1" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/searchGV" partnerLinkType="tns:searchGV" myRole="searchGVPortTypeRole"/>
     </partnerLinks>
     <variables>
-        <variable name="ExeptionFaultVar" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/searchGV" messageType="tns:faultException"/>
+       
         <variable name="SearchGVOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/searchGV" messageType="tns:searchGVOperationRequest"/>
         <variable name="FindOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/newWSDL" messageType="tns:outputMsg">
             <sxed2:editor>
@@ -101,20 +101,11 @@
                     <reply name="Reply2" partnerLink="PartnerLink1" operation="searchGVOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/searchGV" portType="tns:searchGVPortType" variable="SearchGVOperationOut1"/>
                 </sequence>
             </scope>
-            <else>
-                <sequence name="Sequence3">
-                    <assign name="Assign5">
-                        <copy>
-                                <from>''</from>
-                                    <to variable="ExeptionFaultVar" part="exeption"/>
-                            </copy>
-                    </assign>
-                    <reply name="Reply1" partnerLink="PartnerLink1" operation="searchGVOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/searchGV" portType="tns:searchGVPortType" faultName="tns:exeption" variable="ExeptionFaultVar"/>
-                </sequence>
-            </else>
+           
         </if>
     </sequence>
 </process>
+
 
 
 

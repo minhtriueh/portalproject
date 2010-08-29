@@ -23,9 +23,7 @@
     </variables>
     <sequence>
         <scope name="Scope1">
-            <variables>
-                <variable name="FaultVar" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/SuaGV" messageType="tns:newWSDLOperationFault"/>
-            </variables>
+           
             <sequence name="Sequence1" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/SuaGV">
                 <receive name="Receive1" createInstance="yes" partnerLink="pl_SuaGV" operation="SuaGVOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/SuaGV" portType="tns:SuaGVPortType" variable="SuaGVOperationIn"/>
                     <assign name="Assign1">
