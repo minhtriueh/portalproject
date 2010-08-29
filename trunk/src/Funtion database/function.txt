@@ -352,7 +352,55 @@ $BODY$
   LANGUAGE 'plpgsql' VOLATILE
   COST 100;
 ALTER FUNCTION fortest(bigint, bigint, bigint) OWNER TO postgres;
+----------------------------------------------------------------------------------------
+-- Function: insertgiaovien(character, character, character, character, character, character, boolean, boolean, date, date, date, date, date, character, character, character, character, character, character, character, character, bigint, bigint, bigint)
 
+-- DROP FUNCTION insertgiaovien(character, character, character, character, character, character, boolean, boolean, date, date, date, date, date, character, character, character, character, character, character, character, character, bigint, bigint, bigint);
+create or replace function them_giaovienvaohethong(
+choohientai character, chucvu character, cmnd character, email character,
+ gioitinh character, hinhanh character, 
+ ketnapdang boolean, ketnapdoan boolean,
+  ngaycap date, ngaysinh date, ngayvaodang date,
+   ngayvaodoan date, ngayvaotruong date, 
+   noicap character, quequan character,
+    sodienthoai character, tengiaovien character,
+     tinhtrangsuckhoe character, tongiao character, 
+     trinhdodaotao character, trinhdovanhoa character,
+     id_dantoc bigint, id_tobomon bigint,ngaytao date,username character,passwd character) returns bigint as $$
+declare 
+ id_nguoidung bigint;
+ id_giaovien bigint;
+begin
+	id_nguoidung=inserttk($24,$25,$26);
+	
+	id_giaovien=insertgiaovien($1, $2, $3, $4, $5, $6, 
+            $7, $8, $9, $10, $11, $12, 
+            $13, $14, $15, $16, $17, $18, 
+            $19, $20, $21,id_nguoidung , $22, 
+            $23) ;
+            return id_giaovien;
+end;
+$$language plpgsql;
+
+------------------------------------------
+insert_giaovienchunhiem(_idgiaovien bigint,_idlop bigint) returns boolean AS $$
+declare
+insert1_result boolean :=false;
+begin
+	INSERT INTO giaovien_lop(
+            giaoviens_id_giaovien, lops_id_lop)
+	VALUES ($1, $2);
+	if found=true 
+	then INSERT INTO giaovienchunhiem(
+		id_giaovienchunhiem)
+			VALUES ($1);
+	if found=true then insert1_result=true;
+	end if;
+	
+	end if;
+		return insert1_result;
+end;
+$$language plpgSQL;
 
 
 
