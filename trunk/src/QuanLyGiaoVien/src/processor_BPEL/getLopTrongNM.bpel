@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process
+    name="getLopTrongNM"
+    targetNamespace="http://enterprise.netbeans.org/bpel/QuanLyGiaoVien/getLopTrongNM"
+    xmlns:tns="http://enterprise.netbeans.org/bpel/QuanLyGiaoVien/getLopTrongNM"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
+    xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor"
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2" xmlns:ns0="http://j2ee.netbeans.org/xsd/tableSchema" xmlns:ns1="http://xml.netbeans.org/schema/mineXSD" xmlns:ns2="http://xml.netbeans.org/schema/EschoolinkObject">
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/getLopTrongNM" location="../interface_WSDL/getLopTrongNM.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/DB_getLop" location="../DB_WSDL/WSDL/DB_getLop.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <partnerLinks>
+        <partnerLink name="PartnerLink2" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/DB_getLop" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="PartnerLink1" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/getLopTrongNM" partnerLinkType="tns:getLopTrongNM" myRole="getLopTrongNMPortTypeRole"/>
+    </partnerLinks>
+    <variables>
+        <variable name="GetLop_OperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/DB_getLop" messageType="tns:outputMsg">
+            <sxed2:editor>
+                <sxed2:predicate path="$GetLop_OperationOut.part/ns0:DB_getLop_Record[$ForEach1Counter]" source="from"/>
+            </sxed2:editor>
+        </variable>
+        <variable name="GetLop_OperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/DB_getLop" messageType="tns:inputMsg"/>
+        <variable name="GetLopTrongNMOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/getLopTrongNM" messageType="tns:getLopTrongNMOperationResponse">
+            <sxed2:editor>
+                <sxed2:predicate path="$GetLopTrongNMOperationOut.danhsachlophoc/ns1:Lop[$ForEach1Counter]" source="from"/>
+                <sxed2:predicate path="$GetLopTrongNMOperationOut.danhsachlophoc/ns1:Lop[$ForEach1Counter]" source="to"/>
+            </sxed2:editor>
+        </variable>
+        <variable name="GetLopTrongNMOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/getLopTrongNM" messageType="tns:getLopTrongNMOperationRequest"/>
+    </variables>
+    <sequence>
+        <receive name="Receive1" createInstance="yes" partnerLink="PartnerLink1" operation="getLopTrongNMOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/getLopTrongNM" portType="tns:getLopTrongNMPortType" variable="GetLopTrongNMOperationIn"/>
+        <assign name="Assign1">
+            <copy>
+                <from variable="GetLopTrongNMOperationIn" part="namsau"/>
+                <to>$GetLop_OperationIn.part/ns0:namsau</to>
+            </copy>
+            <copy>
+                <from variable="GetLopTrongNMOperationIn" part="namtruoc"/>
+                <to>$GetLop_OperationIn.part/ns0:namtruoc</to>
+            </copy>
+        </assign>
+        <invoke name="Invoke1" partnerLink="PartnerLink2" operation="getLop_Operation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/DB_getLop" portType="tns:jdbcPortType" inputVariable="GetLop_OperationIn" outputVariable="GetLop_OperationOut"/>
+        <forEach name="ForEach1" parallel="no" counterName="ForEach1Counter">
+            <startCounterValue>1</startCounterValue>
+            <finalCounterValue>count($GetLop_OperationOut.part/ns0:DB_getLop_Record)</finalCounterValue>
+            <scope name="Scope1">
+                <assign name="Assign2">
+                    <copy>
+                        <from>$GetLop_OperationOut.part/ns0:DB_getLop_Record[$ForEach1Counter]/ns0:id_lop
+                            <sxed2:editor>
+                                <sxed2:predicate path="$GetLop_OperationOut.part/ns0:DB_getLop_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$GetLopTrongNMOperationOut.danhsachlophoc/ns1:Lop[$ForEach1Counter]/ns2:id
+                            <sxed2:editor>
+                                <sxed2:predicate path="$GetLopTrongNMOperationOut.danhsachlophoc/ns1:Lop[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$GetLop_OperationOut.part/ns0:DB_getLop_Record[$ForEach1Counter]/ns0:sisolop
+                            <sxed2:editor>
+                                <sxed2:predicate path="$GetLop_OperationOut.part/ns0:DB_getLop_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$GetLopTrongNMOperationOut.danhsachlophoc/ns1:Lop[$ForEach1Counter]/ns2:siSoLop
+                            <sxed2:editor>
+                                <sxed2:predicate path="$GetLopTrongNMOperationOut.danhsachlophoc/ns1:Lop[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$GetLop_OperationOut.part/ns0:DB_getLop_Record[$ForEach1Counter]/ns0:tenlop
+                            <sxed2:editor>
+                                <sxed2:predicate path="$GetLop_OperationOut.part/ns0:DB_getLop_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$GetLopTrongNMOperationOut.danhsachlophoc/ns1:Lop[$ForEach1Counter]/ns2:tenLop
+                            <sxed2:editor>
+                                <sxed2:predicate path="$GetLopTrongNMOperationOut.danhsachlophoc/ns1:Lop[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                </assign>
+            </scope>
+        </forEach>
+        <reply name="Reply1" partnerLink="PartnerLink1" operation="getLopTrongNMOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/getLopTrongNM" portType="tns:getLopTrongNMPortType" variable="GetLopTrongNMOperationOut"/>
+    </sequence>
+</process>
+
