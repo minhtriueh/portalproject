@@ -9,11 +9,14 @@
              xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
              targetNamespace="QLGiaoVienComApp"
-             xmlns:tns="QLGiaoVienComApp" xmlns:ns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/SuaGV" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/themGV" xmlns:ns2="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/searchGV" xmlns:ns3="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/tracuuGV">
+             xmlns:tns="QLGiaoVienComApp" xmlns:ns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/SuaGV" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/themGV" xmlns:ns2="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/searchGV" xmlns:ns3="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/tracuuGV" xmlns:ns4="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/getLopTrongNM" xmlns:ns5="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/phanLopChuNhiem" xmlns:ns6="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/getLopbyTheoKhoi">
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/SuaGV" location="../jbiServiceUnits/QuanLyGiaoVien/interface_WSDL/SuaGV.wsdl"/>
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/themGV" location="../jbiServiceUnits/QuanLyGiaoVien/interface_WSDL/themGV.wsdl"/>
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/searchGV" location="../jbiServiceUnits/QuanLyGiaoVien/interface_WSDL/searchGV.wsdl"/>
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/tracuuGV" location="../jbiServiceUnits/QuanLyGiaoVien/interface_WSDL/tracuuGV.wsdl"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/getLopTrongNM" location="../jbiServiceUnits/QuanLyGiaoVien/interface_WSDL/getLopTrongNM.wsdl"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/phanLopChuNhiem" location="../jbiServiceUnits/QuanLyGiaoVien/interface_WSDL/phanLopChuNhiem.wsdl"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/getLopbyTheoKhoi" location="../jbiServiceUnits/QuanLyGiaoVien/interface_WSDL/getLopbyTheoKhoi.wsdl"/>
     <portType name="dummyCasaPortType"/>
     <binding name="casaBinding4" type="ns:SuaGVPortType">
         <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
@@ -25,9 +28,6 @@
             <output name="output1">
                 <soap:body use="literal" namespace="QLGiaoVienComApp"/>
             </output>
-            <fault name="fault">
-                <soap:fault name="fault" use="literal" namespace="QLGiaoVienComApp"/>
-            </fault>
         </operation>
     </binding>
     <binding name="casaBinding3" type="ns1:themGVPortType">
@@ -52,9 +52,7 @@
             <output name="output1">
                 <soap:body use="literal" namespace="QLGiaoVienComApp"/>
             </output>
-            <fault name="exeption">
-                <soap:fault name="exeption" use="literal" namespace="QLGiaoVienComApp"/>
-            </fault>
+
         </operation>
     </binding>
     <binding name="casaBinding1" type="ns3:tracuuGVPortType">
@@ -67,9 +65,43 @@
             <output name="output1">
                 <soap:body use="literal" namespace="QLGiaoVienComApp"/>
             </output>
-            <fault name="fault">
-                <soap:fault name="fault" use="literal" namespace="QLGiaoVienComApp"/>
-            </fault>
+
+        </operation>
+    </binding>
+    <binding name="casaBinding5" type="ns4:getLopTrongNMPortType">
+        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="getLopTrongNMOperation">
+            <soap:operation/>
+            <input name="input1">
+                <soap:body use="literal" namespace="QLGiaoVienComApp"/>
+            </input>
+            <output name="output1">
+                <soap:body use="literal" namespace="QLGiaoVienComApp"/>
+            </output>
+        </operation>
+    </binding>
+    <binding name="casaBinding6" type="ns5:phanLopChuNhiemPortType">
+        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="phanLopChuNhiemOperation">
+            <soap:operation/>
+            <input name="input1">
+                <soap:body use="literal" namespace="QLGiaoVienComApp"/>
+            </input>
+            <output name="output1">
+                <soap:body use="literal" namespace="QLGiaoVienComApp"/>
+            </output>
+        </operation>
+    </binding>
+    <binding name="casaBinding7" type="ns6:getLopbyTheoKhoiPortType">
+        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="getLopbyTheoKhoiOperation">
+            <soap:operation/>
+            <input name="input1">
+                <soap:body use="literal" namespace="QLGiaoVienComApp"/>
+            </input>
+            <output name="output1">
+                <soap:body use="literal" namespace="QLGiaoVienComApp"/>
+            </output>
         </operation>
     </binding>
     <service name="QLGiaoVienComAppService1">
@@ -92,5 +124,24 @@
             <soap:address location="http://localhost:${HttpDefaultPort}/QLGiaoVienComAppService4/SuaGV"/>
         </port>
     </service>
+    <service name="QLGiaoVienComAppService5">
+        <port name="getLopTrongNM" binding="tns:casaBinding5">
+            <soap:address location="http://localhost:${HttpDefaultPort}/QLGiaoVienComAppService5/getLopTrongNM"/>
+        </port>
+    </service>
+    <service name="QLGiaoVienComAppService6">
+        <port name="PhanLopChuNhiem" binding="tns:casaBinding6">
+            <soap:address location="http://localhost:${HttpDefaultPort}/QLGiaoVienComAppService6/PhanLopChuNhiem"/>
+        </port>
+    </service>
+    <service name="QLGiaoVienComAppService7">
+        <port name="getLopTheoKhoi" binding="tns:casaBinding7">
+            <soap:address location="http://localhost:${HttpDefaultPort}/QLGiaoVienComAppService7/getLopTheoKhoi"/>
+        </port>
+    </service>
 </definitions>
+
+
+
+
 

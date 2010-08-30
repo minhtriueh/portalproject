@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP-ENV:Body>
+    <m:phanLopChuNhiemOperationResponse xmlns:m="QLGiaoVienComApp" xmlns:msgns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/phanLopChuNhiem">
+      <result xmlns:msgns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/insert_giaovienchunhiem" xmlns:ns0="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/phanLopChuNhiem" isNull="false">true</result>
+    </m:phanLopChuNhiemOperationResponse>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
