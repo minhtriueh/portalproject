@@ -1,0 +1,209 @@
+﻿-- Function: insert_khoilop(character, bigint)
+
+-- DROP FUNCTION insert_khoilop(character, bigint);
+
+CREATE OR REPLACE FUNCTION insert_khoilop(tenkhoi character, id_coso bigint)
+  RETURNS bigint AS
+$BODY$INSERT INTO khoilop(
+            tenkhoi, id_coso)
+    VALUES ($1,$2) RETURNING id_khoilop;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION insert_khoilop(character, bigint) OWNER TO postgres;
+
+-- Function: insert_lop(integer, character, bigint, bigint, bigint, bigint)
+
+-- DROP FUNCTION insert_lop(integer, character, bigint, bigint, bigint, bigint);
+
+CREATE OR REPLACE FUNCTION insert_lop(sisolop integer, tenlop character, id_thoikhoabieu bigint, id_giaovienchunhiem bigint, id_namhoc bigint, id_khoilop bigint)
+  RETURNS bigint AS
+$BODY$INSERT INTO lop(
+            sisolop, tenlop, id_thoikhoabieu, id_giaovienchunhiem, 
+            id_namhoc, id_khoilop)
+    VALUES ($1,$2,$3,$4,$5,$6) RETURNING id_lop;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION insert_lop(integer, character, bigint, bigint, bigint, bigint) OWNER TO postgres;
+
+
+-- Function: insert_monhoc(character, bigint)
+
+-- DROP FUNCTION insert_monhoc(character, bigint);
+
+CREATE OR REPLACE FUNCTION insert_monhoc(tenmonhoc character, id_tobomon bigint)
+  RETURNS bigint AS
+$BODY$INSERT INTO monhoc(
+            tenmonhoc, id_tobomon)
+    VALUES ($1,$2) RETURNING id_monhoc;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION insert_monhoc(character, bigint) OWNER TO postgres;
+
+
+-- Function: insert_sodiemdanh(character, boolean, character, date, bigint, bigint)
+
+-- DROP FUNCTION insert_sodiemdanh(character, boolean, character, date, bigint, bigint);
+
+CREATE OR REPLACE FUNCTION insert_sodiemdanh(buoinghi character, cophephaykhong boolean, lydonghi character, ngaynghi date, id_lop bigint, id_hocsinh bigint)
+  RETURNS bigint AS
+$BODY$INSERT INTO sodiemdanh(
+            buoinghi, cophephaykhong, lydonghi, ngaynghi, 
+            id_lop, id_hocsinh)
+    VALUES ($1,$2,$3,$4,$5,$6) RETURNING id_sodiemdanh;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION insert_sodiemdanh(character, boolean, character, date, bigint, bigint) OWNER TO postgres;
+
+
+-- Function: update_khoilop(bigint, character, bigint)
+
+-- DROP FUNCTION update_khoilop(bigint, character, bigint);
+
+CREATE OR REPLACE FUNCTION update_khoilop(id_khoilop bigint, tenkhoi character, id_coso bigint)
+  RETURNS boolean AS
+'UPDATE khoilop SET tenkhoi=$2,id_coso=$3 WHERE id_khoilop=$1 RETURNING true;'
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION update_khoilop(bigint, character, bigint) OWNER TO postgres;
+
+
+-- Function: update_lop(bigint, integer, character, bigint, bigint, bigint, bigint)
+
+-- DROP FUNCTION update_lop(bigint, integer, character, bigint, bigint, bigint, bigint);
+
+CREATE OR REPLACE FUNCTION update_lop(id_lop bigint, sisolop integer, tenlop character, id_thoikhoabieu bigint, id_giaovienchunhiem bigint, id_namhoc bigint, id_khoilop bigint)
+  RETURNS boolean AS
+$BODY$UPDATE lop
+   SET sisolop=$2, tenlop=$3, id_thoikhoabieu=$4, id_giaovienchunhiem=$5, 
+       id_namhoc=$6, id_khoilop=$7
+ WHERE id_lop=$1 RETURNING true;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION update_lop(bigint, integer, character, bigint, bigint, bigint, bigint) OWNER TO postgres;
+
+
+-- Function: update_monhoc(bigint, character, bigint)
+
+-- DROP FUNCTION update_monhoc(bigint, character, bigint);
+
+CREATE OR REPLACE FUNCTION update_monhoc(id_monhoc bigint, tenmonhoc character, id_tobomon bigint)
+  RETURNS boolean AS
+$BODY$UPDATE monhoc
+   SET tenmonhoc=$2, id_tobomon=$3
+ WHERE id_monhoc=$1 RETURNING true;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION update_monhoc(bigint, character, bigint) OWNER TO postgres;
+
+
+
+-- Function: update_sodiemdanh(bigint, character, boolean, character, date, bigint, bigint)
+
+-- DROP FUNCTION update_sodiemdanh(bigint, character, boolean, character, date, bigint, bigint);
+
+CREATE OR REPLACE FUNCTION update_sodiemdanh(id_sodiemdanh bigint, buoinghi character, cophephaykhong boolean, lydonghi character, ngaynghi date, id_lop bigint, id_hocsinh bigint)
+  RETURNS boolean AS
+$BODY$UPDATE sodiemdanh
+   SET  buoinghi=$2, cophephaykhong=$3, lydonghi=$4, ngaynghi=$5, 
+       id_lop=$6, id_hocsinh=$7
+ WHERE id_sodiemdanh=$1 RETURNING true;$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION update_sodiemdanh(bigint, character, boolean, character, date, bigint, bigint) OWNER TO postgres;
+
+
+
+-- Function: delete_khoilop(bigint)
+
+-- DROP FUNCTION delete_khoilop(bigint);
+
+CREATE OR REPLACE FUNCTION delete_khoilop(id_khoilop bigint)
+  RETURNS boolean AS
+$BODY$DELETE FROM khoilop
+ WHERE id_khoilop=$1 RETURNING true;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION delete_khoilop(bigint) OWNER TO postgres;
+
+
+-- Function: delete_lop(bigint)
+
+-- DROP FUNCTION delete_lop(bigint);
+
+CREATE OR REPLACE FUNCTION delete_lop(id_lop bigint)
+  RETURNS boolean AS
+$BODY$DELETE FROM lop
+ WHERE id_lop=$1 RETURNING true;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION delete_lop(bigint) OWNER TO postgres;
+
+
+
+
+-- Function: delete_monhoc(bigint)
+
+-- DROP FUNCTION delete_monhoc(bigint);
+
+CREATE OR REPLACE FUNCTION delete_monhoc(id_monhoc bigint)
+  RETURNS boolean AS
+$BODY$DELETE FROM monhoc
+ WHERE id_monhoc=$1 RETURNING true;$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION delete_monhoc(bigint) OWNER TO postgres;
+
+
+-- Function: delete_sodiemdanh(bigint)
+
+-- DROP FUNCTION delete_sodiemdanh(bigint);
+
+CREATE OR REPLACE FUNCTION delete_sodiemdanh(id_sodiemdanh bigint)
+  RETURNS boolean AS
+$BODY$DELETE FROM sodiemdanh
+ WHERE id_sodiemdanh=$1 RETURNING true;$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION delete_sodiemdanh(bigint) OWNER TO postgres;
+
+
+
+
+-- Function: insert_thoikhoabieu(integer, character, bigint)
+
+-- DROP FUNCTION insert_thoikhoabieu(integer, character, bigint);
+
+CREATE OR REPLACE FUNCTION insert_thoikhoabieu(hocky integer, tenlop character, id_namhoc bigint)
+  RETURNS bigint AS
+$BODY$INSERT INTO thoikhoabieu(
+            hocky, tenlop, id_namhoc)
+    VALUES ( $1,$2,$3) RETURNING id_thoikhoabieu;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION insert_thoikhoabieu(integer, character, bigint) OWNER TO postgres;
+
+
+
+-- Function: insert_chitietthoikhoabieu(character, character, integer, integer, integer, integer)
+
+-- DROP FUNCTION insert_chitietthoikhoabieu(character, character, integer, integer, integer, integer);
+
+CREATE OR REPLACE FUNCTION insert_chitietthoikhoabieu(giaoviengiangday character, monhoc character, sotiet integer, thu integer, tietthumay integer, id_thoikhoabieu integer)
+  RETURNS bigint AS
+$BODY$INSERT INTO chitietthoikhoabieu(
+            giaoviengiangday, monhoc, sotiet, thu, 
+            tietthumay, id_thoikhoabieu)
+    VALUES ($1,$2,$3,$4,$5,$6) RETURNING id_chitietthoikhoabieu;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION insert_chitietthoikhoabieu(character, character, integer, integer, integer, integer) OWNER TO postgres;
