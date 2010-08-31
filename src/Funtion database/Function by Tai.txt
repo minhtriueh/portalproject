@@ -177,33 +177,33 @@ ALTER FUNCTION delete_sodiemdanh(bigint) OWNER TO postgres;
 
 
 
--- Function: insert_thoikhoabieu(integer, character, bigint)
+-- Function: insert_thoikhoabieu(integer, bigint, bigint)
 
--- DROP FUNCTION insert_thoikhoabieu(integer, character, bigint);
+-- DROP FUNCTION insert_thoikhoabieu(integer, bigint, bigint);
 
-CREATE OR REPLACE FUNCTION insert_thoikhoabieu(hocky integer, tenlop character, id_namhoc bigint)
+CREATE OR REPLACE FUNCTION insert_thoikhoabieu(hocky integer, id_lop bigint, id_namhoc bigint)
   RETURNS bigint AS
 $BODY$INSERT INTO thoikhoabieu(
-            hocky, tenlop, id_namhoc)
+            hocky, id_lop, id_namhoc)
     VALUES ( $1,$2,$3) RETURNING id_thoikhoabieu;
 $BODY$
   LANGUAGE 'sql' VOLATILE
   COST 100;
-ALTER FUNCTION insert_thoikhoabieu(integer, character, bigint) OWNER TO postgres;
+ALTER FUNCTION insert_thoikhoabieu(integer, bigint, bigint) OWNER TO postgres;
 
 
 
--- Function: insert_chitietthoikhoabieu(character, character, integer, integer, integer, integer)
+-- Function: insert_chitietthoikhoabieu(bigint, bigint, integer, integer, integer, bigint)
 
--- DROP FUNCTION insert_chitietthoikhoabieu(character, character, integer, integer, integer, integer);
+-- DROP FUNCTION insert_chitietthoikhoabieu(bigint, bigint, integer, integer, integer, bigint);
 
-CREATE OR REPLACE FUNCTION insert_chitietthoikhoabieu(giaoviengiangday character, monhoc character, sotiet integer, thu integer, tietthumay integer, id_thoikhoabieu integer)
+CREATE OR REPLACE FUNCTION insert_chitietthoikhoabieu(id_giaovien bigint, id_monhoc bigint, sotiet integer, thu integer, tietthumay integer, id_thoikhoabieu bigint)
   RETURNS bigint AS
 $BODY$INSERT INTO chitietthoikhoabieu(
-            giaoviengiangday, monhoc, sotiet, thu, 
+            id_giaovien, id_monhoc, sotiet, thu, 
             tietthumay, id_thoikhoabieu)
     VALUES ($1,$2,$3,$4,$5,$6) RETURNING id_chitietthoikhoabieu;
 $BODY$
   LANGUAGE 'sql' VOLATILE
   COST 100;
-ALTER FUNCTION insert_chitietthoikhoabieu(character, character, integer, integer, integer, integer) OWNER TO postgres;
+ALTER FUNCTION insert_chitietthoikhoabieu(bigint, bigint, integer, integer, integer, bigint) OWNER TO postgres;
