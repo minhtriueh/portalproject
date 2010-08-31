@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jbi xmlns="http://java.sun.com/xml/ns/jbi" xmlns:ns0="http://enterprise.netbeans.org/bpel/QuanLyGiaoVien/getLoptheokhoi" xmlns:ns1="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/get_loptheokhoilop" xmlns:ns10="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/newWSDL" xmlns:ns11="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/tracuuGV" xmlns:ns12="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/searchGV" xmlns:ns13="http://enterprise.netbeans.org/bpel/QuanLyGiaoVien/SuaGV" xmlns:ns14="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/updateGV" xmlns:ns15="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/SuaGV" xmlns:ns16="http://enterprise.netbeans.org/bpel/QuanLyGiaoVien/ThemGV" xmlns:ns17="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/them_giaovien" xmlns:ns18="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/themGV" xmlns:ns19="http://enterprise.netbeans.org/bpel/QuanLyGiaoVien/tracuuGV" xmlns:ns2="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/getLopbyTheoKhoi" xmlns:ns20="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/tb_GV" xmlns:ns21="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/tb_TK" xmlns:ns22="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/tb_dantoc" xmlns:ns23="http://www.sun.com/jbi/descriptor/service-unit" xmlns:ns3="http://enterprise.netbeans.org/bpel/QuanLyGiaoVien/getLopTrongNM" xmlns:ns4="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/DB_getLop" xmlns:ns5="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/getLopTrongNM" xmlns:ns6="http://enterprise.netbeans.org/bpel/QuanLyGiaoVien/phanLopChuNhiem" xmlns:ns7="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/insert_giaovienchunhiem" xmlns:ns8="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/phanLopChuNhiem" xmlns:ns9="http://enterprise.netbeans.org/bpel/QuanLyGiaoVien/searchGV" version="1.0">
+    <services binding-component="false">
+        <provides endpoint-name="getLopbyTheoKhoiPortTypeRole_myRole" interface-name="ns2:getLopbyTheoKhoiPortType" service-name="ns0:PartnerLink1">
+            <ns23:display-name>PartnerLink1</ns23:display-name>
+            <ns23:process-name>getLoptheokhoi</ns23:process-name>
+            <ns23:file-path>processor_BPEL\getLoptheokhoi.bpel</ns23:file-path>
+        </provides>
+        <provides endpoint-name="getLopTrongNMPortTypeRole_myRole" interface-name="ns5:getLopTrongNMPortType" service-name="ns3:PartnerLink1">
+            <ns23:display-name>PartnerLink1</ns23:display-name>
+            <ns23:process-name>getLopTrongNM</ns23:process-name>
+            <ns23:file-path>processor_BPEL\getLopTrongNM.bpel</ns23:file-path>
+        </provides>
+        <provides endpoint-name="phanLopChuNhiemPortTypeRole_myRole" interface-name="ns8:phanLopChuNhiemPortType" service-name="ns6:phanlopchunhiem">
+            <ns23:display-name>phanlopchunhiem</ns23:display-name>
+            <ns23:process-name>phanLopChuNhiem</ns23:process-name>
+            <ns23:file-path>processor_BPEL\phanLopChuNhiem.bpel</ns23:file-path>
+        </provides>
+        <provides endpoint-name="searchGVPortTypeRole_myRole" interface-name="ns12:searchGVPortType" service-name="ns9:PartnerLink1">
+            <ns23:display-name>PartnerLink1</ns23:display-name>
+            <ns23:process-name>searchGV</ns23:process-name>
+            <ns23:file-path>processor_BPEL\searchGV.bpel</ns23:file-path>
+        </provides>
+        <provides endpoint-name="SuaGVPortTypeRole_myRole" interface-name="ns15:SuaGVPortType" service-name="ns13:pl_SuaGV">
+            <ns23:display-name>pl_SuaGV</ns23:display-name>
+            <ns23:process-name>SuaGV</ns23:process-name>
+            <ns23:file-path>processor_BPEL\SuaGV.bpel</ns23:file-path>
+        </provides>
+        <provides endpoint-name="themGVPortTypeRole_myRole" interface-name="ns18:themGVPortType" service-name="ns16:pl_themGV">
+            <ns23:display-name>pl_themGV</ns23:display-name>
+            <ns23:process-name>ThemGV</ns23:process-name>
+            <ns23:file-path>processor_BPEL\ThemGV.bpel</ns23:file-path>
+        </provides>
+        <provides endpoint-name="tracuuGVPortTypeRole_myRole" interface-name="ns11:tracuuGVPortType" service-name="ns19:pltracuuGV">
+            <ns23:display-name>pltracuuGV</ns23:display-name>
+            <ns23:process-name>tracuuGV</ns23:process-name>
+            <ns23:file-path>processor_BPEL\tracuuGV.bpel</ns23:file-path>
+        </provides>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns1:jdbcPortType" service-name="ns0:PartnerLink2">
+            <ns23:display-name>PartnerLink2</ns23:display-name>
+            <ns23:process-name>getLoptheokhoi</ns23:process-name>
+            <ns23:file-path>processor_BPEL\getLoptheokhoi.bpel</ns23:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns4:jdbcPortType" service-name="ns3:PartnerLink2">
+            <ns23:display-name>PartnerLink2</ns23:display-name>
+            <ns23:process-name>getLopTrongNM</ns23:process-name>
+            <ns23:file-path>processor_BPEL\getLopTrongNM.bpel</ns23:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns7:jdbcPortType" service-name="ns6:PartnerLink2">
+            <ns23:display-name>PartnerLink2</ns23:display-name>
+            <ns23:process-name>phanLopChuNhiem</ns23:process-name>
+            <ns23:file-path>processor_BPEL\phanLopChuNhiem.bpel</ns23:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns10:jdbcPortType" service-name="ns9:PartnerLink2">
+            <ns23:display-name>PartnerLink2</ns23:display-name>
+            <ns23:process-name>searchGV</ns23:process-name>
+            <ns23:file-path>processor_BPEL\searchGV.bpel</ns23:file-path>
+        </consumes>
+        <consumes endpoint-name="tracuuGVPortTypeRole_partnerRole" interface-name="ns11:tracuuGVPortType" service-name="ns9:PartnerLink3">
+            <ns23:display-name>PartnerLink3</ns23:display-name>
+            <ns23:process-name>searchGV</ns23:process-name>
+            <ns23:file-path>processor_BPEL\searchGV.bpel</ns23:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns14:jdbcPortType" service-name="ns13:plupdateGV">
+            <ns23:display-name>plupdateGV</ns23:display-name>
+            <ns23:process-name>SuaGV</ns23:process-name>
+            <ns23:file-path>processor_BPEL\SuaGV.bpel</ns23:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns17:jdbcPortType" service-name="ns16:pl_themgiaovien">
+            <ns23:display-name>pl_themgiaovien</ns23:display-name>
+            <ns23:process-name>ThemGV</ns23:process-name>
+            <ns23:file-path>processor_BPEL\ThemGV.bpel</ns23:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns20:jdbcPortType" service-name="ns19:plFindGV">
+            <ns23:display-name>plFindGV</ns23:display-name>
+            <ns23:process-name>tracuuGV</ns23:process-name>
+            <ns23:file-path>processor_BPEL\tracuuGV.bpel</ns23:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns21:jdbcPortType" service-name="ns19:pl_TK">
+            <ns23:display-name>pl_TK</ns23:display-name>
+            <ns23:process-name>tracuuGV</ns23:process-name>
+            <ns23:file-path>processor_BPEL\tracuuGV.bpel</ns23:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns22:jdbcPortType" service-name="ns19:pl_DT">
+            <ns23:display-name>pl_DT</ns23:display-name>
+            <ns23:process-name>tracuuGV</ns23:process-name>
+            <ns23:file-path>processor_BPEL\tracuuGV.bpel</ns23:file-path>
+        </consumes>
+    </services>
+</jbi>
