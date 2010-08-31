@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP-ENV:Body>
+    <m:searchGVOperationResponse xmlns:m="QLGiaoVienComApp" xmlns:msgns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/searchGV">
+      <part1>
+        <ns1:GiaoVien xmlns:msgns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/tracuuGV" xmlns:ns0="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/searchGV" xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">6</ns1:id>
+          <ns1:tenGiaoVien isNull="false">Van Teo</ns1:tenGiaoVien>
+          <ns1:ngaySinh isNull="false">2008-03-22</ns1:ngaySinh>
+          <ns1:gioiTinh isNull="false">Nu</ns1:gioiTinh>
+          <ns1:cmnd isNull="false">12345</ns1:cmnd>
+          <ns1:ngayCap isNull="false">2008-03-22</ns1:ngayCap>
+          <ns1:noiCap isNull="false">Cong An Tinh</ns1:noiCap>
+          <ns1:tonGiao isNull="false">asfdasfd</ns1:tonGiao>
+          <ns1:queQuan isNull="false">adfs</ns1:queQuan>
+          <ns1:choOHienTai isNull="false">asdfafsd</ns1:choOHienTai>
+          <ns1:email isNull="false">asfd</ns1:email>
+          <ns1:soDienThoai isNull="false">afsd</ns1:soDienThoai>
+          <ns1:hinhAnh isNull="false">Phan cong cong viec va thoi luong.xlsx</ns1:hinhAnh>
+          <ns1:chucVu isNull="false">asf</ns1:chucVu>
+          <ns1:trinhDoVanHoa isNull="false">DSfd</ns1:trinhDoVanHoa>
+          <ns1:tinhTrangSucKhoe isNull="false">Khoe</ns1:tinhTrangSucKhoe>
+          <ns1:ngayVaoTruong isNull="false">2008-03-22</ns1:ngayVaoTruong>
+          <ns1:ketNapDoan isNull="false">t</ns1:ketNapDoan>
+          <ns1:ngayVaoDoan isNull="false">2008-03-22</ns1:ngayVaoDoan>
+          <ns1:ketNapDang isNull="false">t</ns1:ketNapDang>
+          <ns1:ngayVaoDang isNull="false">2008-03-22</ns1:ngayVaoDang>
+          <ns1:DanToc>
+            <ns1:id isNull="false">1</ns1:id>
+            <ns1:tenDanToc isNull="false">Kinh</ns1:tenDanToc>
+            <ns1:danTocThieuSo isNull="false">f</ns1:danTocThieuSo>
+          </ns1:DanToc>
+          <ns1:NguoiDung>
+            <ns1:id isNull="false">72</ns1:id>
+            <ns1:username isNull="false">Van Teo</ns1:username>
+            <ns1:password isNull="false">asfd</ns1:password>
+            <ns1:ngayTao isNull="false">2008-03-23</ns1:ngayTao>
+          </ns1:NguoiDung>
+        </ns1:GiaoVien>
+        <ns1:GiaoVien xmlns:msgns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/tracuuGV" xmlns:ns0="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/searchGV" xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">7</ns1:id>
+          <ns1:tenGiaoVien isNull="false">dsafdsa</ns1:tenGiaoVien>
+          <ns1:ngaySinh isNull="false">2008-03-22</ns1:ngaySinh>
+          <ns1:gioiTinh isNull="false">Nam</ns1:gioiTinh>
+          <ns1:cmnd isNull="false">sdafas</ns1:cmnd>
+          <ns1:ngayCap isNull="false">2008-03-22</ns1:ngayCap>
+          <ns1:noiCap isNull="false">Cong An Tinh</ns1:noiCap>
+          <ns1:tonGiao isNull="false">asaffff</ns1:tonGiao>
+          <ns1:queQuan isNull="false">sdf</ns1:queQuan>
+          <ns1:choOHienTai isNull="false">sfd</ns1:choOHienTai>
+          <ns1:email isNull="false">fasdasdf</ns1:email>
+          <ns1:soDienThoai isNull="false">dsf</ns1:soDienThoai>
+          <ns1:hinhAnh isNull="false">Dac ta usecase_Mo.docx</ns1:hinhAnh>
+          <ns1:chucVu isNull="false">fadsaf</ns1:chucVu>
+          <ns1:trinhDoVanHoa isNull="false">dasfafdasf</ns1:trinhDoVanHoa>
+          <ns1:tinhTrangSucKhoe isNull="false">Khoe</ns1:tinhTrangSucKhoe>
+          <ns1:ngayVaoTruong isNull="false">2008-03-22</ns1:ngayVaoTruong>
+          <ns1:ketNapDoan isNull="false">t</ns1:ketNapDoan>
+          <ns1:ngayVaoDoan isNull="false">2008-03-22</ns1:ngayVaoDoan>
+          <ns1:ketNapDang isNull="false">t</ns1:ketNapDang>
+          <ns1:ngayVaoDang isNull="false">2008-03-22</ns1:ngayVaoDang>
+          <ns1:DanToc>
+            <ns1:id isNull="false">1</ns1:id>
+            <ns1:tenDanToc isNull="false">Kinh</ns1:tenDanToc>
+            <ns1:danTocThieuSo isNull="false">f</ns1:danTocThieuSo>
+          </ns1:DanToc>
+          <ns1:NguoiDung>
+            <ns1:id isNull="false">73</ns1:id>
+            <ns1:username isNull="false">dsafdsa</ns1:username>
+            <ns1:password isNull="false">fasdasdf</ns1:password>
+            <ns1:ngayTao isNull="false">2008-03-23</ns1:ngayTao>
+          </ns1:NguoiDung>
+        </ns1:GiaoVien>
+        <ns1:GiaoVien xmlns:msgns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/tracuuGV" xmlns:ns0="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/searchGV" xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">8</ns1:id>
+          <ns1:tenGiaoVien isNull="false">daflkfjadslfj</ns1:tenGiaoVien>
+          <ns1:ngaySinh isNull="false">2008-03-22</ns1:ngaySinh>
+          <ns1:gioiTinh isNull="false">Nam</ns1:gioiTinh>
+          <ns1:cmnd isNull="false">aasdklfjasd</ns1:cmnd>
+          <ns1:ngayCap isNull="false">2008-03-22</ns1:ngayCap>
+          <ns1:noiCap isNull="false">Cong An Tinh</ns1:noiCap>
+          <ns1:tonGiao isNull="false">asa</ns1:tonGiao>
+          <ns1:queQuan isNull="false">sdaf</ns1:queQuan>
+          <ns1:choOHienTai isNull="false">asdfdasf</ns1:choOHienTai>
+          <ns1:email isNull="false">sdfafd</ns1:email>
+          <ns1:soDienThoai isNull="false">dfsadsfa</ns1:soDienThoai>
+          <ns1:hinhAnh isNull="false">Dac ta usecase_Mo.docx</ns1:hinhAnh>
+          <ns1:chucVu isNull="false">sdaffdsa</ns1:chucVu>
+          <ns1:trinhDoVanHoa isNull="false">jfdslakfj</ns1:trinhDoVanHoa>
+          <ns1:tinhTrangSucKhoe isNull="false">Khoe</ns1:tinhTrangSucKhoe>
+          <ns1:ngayVaoTruong isNull="false">2008-03-22</ns1:ngayVaoTruong>
+          <ns1:ketNapDoan isNull="false">t</ns1:ketNapDoan>
+          <ns1:ngayVaoDoan isNull="false">2008-03-22</ns1:ngayVaoDoan>
+          <ns1:ketNapDang isNull="false">t</ns1:ketNapDang>
+          <ns1:ngayVaoDang isNull="false">2008-03-22</ns1:ngayVaoDang>
+          <ns1:DanToc>
+            <ns1:id isNull="false">1</ns1:id>
+            <ns1:tenDanToc isNull="false">Kinh</ns1:tenDanToc>
+            <ns1:danTocThieuSo isNull="false">f</ns1:danTocThieuSo>
+          </ns1:DanToc>
+          <ns1:NguoiDung>
+            <ns1:id isNull="false">74</ns1:id>
+            <ns1:username isNull="false">daflkfjadslfj</ns1:username>
+            <ns1:password isNull="false">sdfafd</ns1:password>
+            <ns1:ngayTao isNull="false">2008-03-23</ns1:ngayTao>
+          </ns1:NguoiDung>
+        </ns1:GiaoVien>
+        <ns1:GiaoVien xmlns:msgns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/tracuuGV" xmlns:ns0="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/searchGV" xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">2</ns1:id>
+          <ns1:tenGiaoVien isNull="false">Tran Thi hai Ba</ns1:tenGiaoVien>
+          <ns1:ngaySinh isNull="false">2014-06-09</ns1:ngaySinh>
+          <ns1:gioiTinh isNull="false">Nam</ns1:gioiTinh>
+          <ns1:cmnd isNull="false">126677</ns1:cmnd>
+          <ns1:ngayCap isNull="false">2013-11-23</ns1:ngayCap>
+          <ns1:noiCap isNull="false">Bencat</ns1:noiCap>
+          <ns1:tonGiao isNull="false">Khong co</ns1:tonGiao>
+          <ns1:queQuan isNull="false">CAtben california</ns1:queQuan>
+          <ns1:choOHienTai isNull="false">BinhDuong</ns1:choOHienTai>
+          <ns1:email isNull="false">nguyenta12@gmail</ns1:email>
+          <ns1:soDienThoai isNull="false">09494924</ns1:soDienThoai>
+          <ns1:hinhAnh isNull="false">ANHCUOI</ns1:hinhAnh>
+          <ns1:chucVu isNull="false">Khong bit</ns1:chucVu>
+          <ns1:trinhDoVanHoa isNull="false">HocDai</ns1:trinhDoVanHoa>
+          <ns1:tinhTrangSucKhoe isNull="false">Khoe</ns1:tinhTrangSucKhoe>
+          <ns1:ngayVaoTruong isNull="false">2014-06-09</ns1:ngayVaoTruong>
+          <ns1:ketNapDoan isNull="false">t</ns1:ketNapDoan>
+          <ns1:ngayVaoDoan isNull="false">2017-05-14</ns1:ngayVaoDoan>
+          <ns1:ketNapDang isNull="false">t</ns1:ketNapDang>
+          <ns1:ngayVaoDang isNull="false">2008-11-15</ns1:ngayVaoDang>
+          <ns1:DanToc>
+            <ns1:id isNull="false">1</ns1:id>
+            <ns1:tenDanToc isNull="false">Kinh</ns1:tenDanToc>
+            <ns1:danTocThieuSo isNull="false">f</ns1:danTocThieuSo>
+          </ns1:DanToc>
+          <ns1:NguoiDung>
+            <ns1:id isNull="false">68</ns1:id>
+            <ns1:username isNull="false">Tran Thi hai Ba</ns1:username>
+            <ns1:password isNull="false">nguyenta12@gmail</ns1:password>
+            <ns1:ngayTao isNull="false">2008-03-23</ns1:ngayTao>
+          </ns1:NguoiDung>
+        </ns1:GiaoVien>
+      </part1>
+    </m:searchGVOperationResponse>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
