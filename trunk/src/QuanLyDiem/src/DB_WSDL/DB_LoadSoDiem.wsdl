@@ -34,7 +34,7 @@ FROM
 WHERE
   chitietsodiem.id_sodiem = sodiem.id_sodiem AND
   sodiem.id_monhoc = ? AND
-  sodiem.id_lop = ? AND
+  chitietsodiem.id_lop = ? AND
   sodiem.hocky = ?
 ORDER BY
 chitietsodiem.id_chitietsodiem;"/>
@@ -53,5 +53,6 @@ chitietsodiem.id_chitietsodiem;"/>
         <plink:role name="jdbcPortTypeRole" portType="tns:jdbcPortType"/>
     </plink:partnerLinkType>
 </definitions>
+
 
 
