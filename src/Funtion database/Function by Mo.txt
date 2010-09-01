@@ -671,3 +671,170 @@ $BODY$
   LANGUAGE 'plpgsql' VOLATILE
   COST 100;
 ALTER FUNCTION luudiem(bigint, double precision) OWNER TO postgres;
+
+
+-- Function: insert_chitietsodiem(double precision, bigint, bigint, bigint)
+
+-- DROP FUNCTION insert_chitietsodiem(double precision, bigint, bigint, bigint);
+
+CREATE OR REPLACE FUNCTION insert_chitietsodiem(diemtrungbinh double precision, id_hocsinh bigint, id_lop bigint, id_sodiem bigint)
+  RETURNS bigint AS
+$BODY$INSERT INTO chitietsodiem(
+            diemtrungbinh, id_hocsinh, id_lop, id_sodiem)
+    VALUES ($1,$2,$3,$4) returning id_chitietsodiem;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION insert_chitietsodiem(double precision, bigint, bigint, bigint) OWNER TO postgres;
+
+
+-- Function: insert_danhsachloaidiem(bigint, integer)
+
+-- DROP FUNCTION insert_danhsachloaidiem(bigint, integer);
+
+CREATE OR REPLACE FUNCTION insert_danhsachloaidiem(id_loaidiem bigint, lan integer)
+  RETURNS bigint AS
+$BODY$INSERT INTO danhsachloaidiem(
+            id_loaidiem, lan)
+    VALUES ($1,$2) returning id_danhsachloaidiem;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION insert_danhsachloaidiem(bigint, integer) OWNER TO postgres;
+
+
+-- Function: insert_diem(double precision, bigint, bigint)
+
+-- DROP FUNCTION insert_diem(double precision, bigint, bigint);
+
+CREATE OR REPLACE FUNCTION insert_diem(diem double precision, id_loaidiem bigint, id_chitietsodiem bigint)
+  RETURNS bigint AS
+$BODY$INSERT INTO diem(
+            diem, id_loaidiem, id_chitietsodiem)
+    VALUES ($1,$2,$3) returning id_diem;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION insert_diem(double precision, bigint, bigint) OWNER TO postgres;
+
+
+-- Function: insert_giaovien_lop(bigint, bigint)
+
+-- DROP FUNCTION insert_giaovien_lop(bigint, bigint);
+
+CREATE OR REPLACE FUNCTION insert_giaovien_lop(giaoviens_id_giaovien bigint, lops_id_lop bigint)
+  RETURNS bigint AS
+$BODY$INSERT INTO giaovien_lop(
+            giaoviens_id_giaovien, lops_id_lop)
+    VALUES ($1,$2) returning giaoviens_id_giaovien;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION insert_giaovien_lop(bigint, bigint) OWNER TO postgres;
+
+
+-- Function: insert_giaovien_monhoc(bigint, bigint)
+
+-- DROP FUNCTION insert_giaovien_monhoc(bigint, bigint);
+
+CREATE OR REPLACE FUNCTION insert_giaovien_monhoc(giaoviens_id_giaovien bigint, monhocs_id_monhoc bigint)
+  RETURNS bigint AS
+$BODY$INSERT INTO giaovien_monhoc(
+            giaoviens_id_giaovien, monhocs_id_monhoc)
+    VALUES ($1,$2) returning giaoviens_id_giaovien;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION insert_giaovien_monhoc(bigint, bigint) OWNER TO postgres;
+
+
+-- Function: insert_giaovienchunhiem(bigint)
+
+-- DROP FUNCTION insert_giaovienchunhiem(bigint);
+
+CREATE OR REPLACE FUNCTION insert_giaovienchunhiem(id_giaovienchunhiem bigint)
+  RETURNS bigint AS
+$BODY$INSERT INTO giaovienchunhiem(
+            id_giaovienchunhiem)
+    VALUES ($1) returning id_giaovienchunhiem;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION insert_giaovienchunhiem(bigint) OWNER TO postgres;
+
+
+-- Function: insert_loaidiem(integer, character, character)
+
+-- DROP FUNCTION insert_loaidiem(integer, character, character);
+
+CREATE OR REPLACE FUNCTION insert_loaidiem(heso integer, kyhieu character, tenloaidiem character)
+  RETURNS bigint AS
+$BODY$INSERT INTO loaidiem(
+            heso, kyhieu, tenloaidiem)
+    VALUES ($1,$2,$3) returning id_loaidiem;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION insert_loaidiem(integer, character, character) OWNER TO postgres;
+
+
+-- Function: insert_lop_monhoc(bigint, bigint)
+
+-- DROP FUNCTION insert_lop_monhoc(bigint, bigint);
+
+CREATE OR REPLACE FUNCTION insert_lop_monhoc(lops_id_lop bigint, monhocs_id_monhoc bigint)
+  RETURNS bigint AS
+$BODY$INSERT INTO lop_monhoc(
+            lops_id_lop, monhocs_id_monhoc)
+    VALUES ($1,$2) returning lops_id_lop;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION insert_lop_monhoc(bigint, bigint) OWNER TO postgres;
+
+
+-- Function: insert_namhocmoi(bigint)
+
+-- DROP FUNCTION insert_namhocmoi(bigint);
+
+CREATE OR REPLACE FUNCTION insert_namhocmoi(id_namhoc bigint)
+  RETURNS bigint AS
+$BODY$INSERT INTO namhocmoi(
+            id_namhoc)
+    VALUES ($1) returning id_namhocmoi;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION insert_namhocmoi(bigint) OWNER TO postgres;
+
+
+-- Function: insert_sodiem(integer, character, bigint, bigint, bigint, bigint)
+
+-- DROP FUNCTION insert_sodiem(integer, character, bigint, bigint, bigint, bigint);
+
+CREATE OR REPLACE FUNCTION insert_sodiem(hocky integer, tensodiem character, id_giaovien bigint, id_namhoc bigint, id_monhoc bigint, id_lop bigint)
+  RETURNS bigint AS
+$BODY$INSERT INTO sodiem(
+            hocky, tensodiem, id_giaovien, id_namhoc, id_monhoc, 
+            id_lop)
+    VALUES ($1,$2,$3,$4,$5,$6) returning id_sodiem;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION insert_sodiem(integer, character, bigint, bigint, bigint, bigint) OWNER TO postgres;
+
+
+-- Function: insert_tobomon(character, bigint)
+
+-- DROP FUNCTION insert_tobomon(character, bigint);
+
+CREATE OR REPLACE FUNCTION insert_tobomon(tenbomon character, id_coso bigint)
+  RETURNS bigint AS
+$BODY$INSERT INTO tobomon(
+            tenbomon, id_coso)
+    VALUES ($1,$2) returning id_tobomon;
+$BODY$
+  LANGUAGE 'sql' VOLATILE
+  COST 100;
+ALTER FUNCTION insert_tobomon(character, bigint) OWNER TO postgres;
+
