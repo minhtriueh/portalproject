@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="1" hostname="nguyentanmo-PC" name="org.netbeans.modules.compapp.catd.ConfiguredTest" tests="1" time="4.432" timestamp="2010-08-28T18:09:32">
+<testsuite errors="0" failures="1" hostname="nguyentanmo-PC" name="org.netbeans.modules.compapp.catd.ConfiguredTest" tests="1" time="4.898" timestamp="2010-09-04T03:47:53">
   <properties>
     <property name="netbeans.autoupdate.country" value="VN" />
     <property name="com.sun.jbi.sa.internal.routing" value="true" />
@@ -259,7 +259,6 @@
     <property name="libs.jaxb.src" value="" />
     <property name="libs.cdc-ant-utils.src" value="" />
     <property name="libs.jaxb.classpath" value="D:\GlassFishESBv22\netbeans\ide11\modules\ext\jaxb\activation.jar;D:\GlassFishESBv22\netbeans\ide11\modules\ext\jaxb\api\jaxb-api.jar;D:\GlassFishESBv22\netbeans\ide11\modules\ext\jaxb\jaxb-impl.jar;D:\GlassFishESBv22\netbeans\ide11\modules\ext\jaxb\jaxb-xjc.jar;D:\GlassFishESBv22\netbeans\ide11\modules\ext\jaxb\api\jsr173_api.jar" />
-    <property name="org.apache.commons.logging.Log" value="org.apache.commons.logging.impl.NoOpLog" />
     <property name="libs.swing-layout.classpath" value="D:\GlassFishESBv22\netbeans\platform10\modules\ext\swing-layout-1.0.3.jar" />
     <property name="libs.restlib.src" value="" />
     <property name="build.generated.dir" value="build/generated" />
@@ -320,9 +319,9 @@
     <property name="libs.metro.classpath" value="D:\GlassFishESBv22\netbeans\ide11\modules\ext\jaxb\activation.jar;D:\GlassFishESBv22\netbeans\enterprise5\modules\ext\metro\webservices-api.jar;D:\GlassFishESBv22\netbeans\enterprise5\modules\ext\metro\webservices-extra-api.jar;D:\GlassFishESBv22\netbeans\enterprise5\modules\ext\metro\webservices-extra.jar;D:\GlassFishESBv22\netbeans\enterprise5\modules\ext\metro\webservices-rt.jar;D:\GlassFishESBv22\netbeans\enterprise5\modules\ext\metro\webservices-tools.jar" />
     <property name="libs.restlib.maven-pom" value="" />
     <property name="libs.DataBindingME.javadoc" value="D:\GlassFishESBv22\netbeans\mobility8\modules\docs\netbeans_databindingme-api.zip" />
-    <property name="apple.laf.useScreenMenuBar" value="true" />
     <property name="jbi.content.component" value="sun-bpel-engine" />
     <property name="java.class.path" value="D:\GlassFishESBv22\netbeans\soa2\modules\org-netbeans-modules-compapp-manager-jbi.jar;D:\GlassFishESBv22\netbeans\soa2\modules\org-netbeans-modules-compapp-projects-jbi.jar;D:\GlassFishESBv22\netbeans\soa2\modules\ext\jbi\jbi-admin-common.jar;D:\GlassFishESBv22\netbeans\soa2\modules\ext\jbi\catd.jar;D:\GlassFishESBv22\netbeans\java2\modules\ext\junit-3.8.2.jar;D:\GlassFishESBv22\netbeans\java2\modules\ext\jaxws21\api\saaj-api.jar;D:\GlassFishESBv22\netbeans\java2\modules\ext\jaxws21\saaj-impl.jar;D:\GlassFishESBv22\netbeans\java2\modules\ext\jaxws21\FastInfoset.jar;D:\GlassFishESBv22\netbeans\ide11\modules\org-netbeans-modules-editor-lib.jar;D:\GlassFishESBv22\netbeans\ide11\modules\org-netbeans-modules-editor.jar;D:\GlassFishESBv22\netbeans\ide11\modules\org-netbeans-modules-editor-util.jar;D:\GlassFishESBv22\netbeans\ide11\modules\org-netbeans-modules-editor-lib2.jar;D:\GlassFishESBv22\netbeans\ide11\modules\org-netbeans-modules-editor-indent.jar;D:\GlassFishESBv22\netbeans\ide11\modules\org-netbeans-modules-editor-plain.jar;D:\GlassFishESBv22\netbeans\ide11\modules\org-netbeans-modules-editor-plain-lib.jar;D:\GlassFishESBv22\netbeans\ide11\modules\org-netbeans-modules-editor-settings.jar;D:\GlassFishESBv22\netbeans\ide11\modules\org-netbeans-modules-editor-settings-storage.jar;D:\GlassFishESBv22\netbeans\ide11\modules\org-netbeans-modules-lexer.jar;D:\GlassFishESBv22\netbeans\ide11\modules\org-netbeans-modules-xml-core.jar;D:\GlassFishESBv22\netbeans\ide11\modules\org-netbeans-modules-xml-lexer.jar;D:\GlassFishESBv22\netbeans\ide11\modules\org-netbeans-modules-xml-text.jar;D:\GlassFishESBv22\netbeans\ide11\modules\org-netbeans-modules-xml-xdm.jar;D:\GlassFishESBv22\netbeans\ide11\modules\org-netbeans-modules-xml-xam.jar;D:\GlassFishESBv22\netbeans\ide11\modules\org-netbeans-modules-csl-api.jar;D:\GlassFishESBv22\netbeans\ide11\modules\ext\jaxb\activation.jar;D:\GlassFishESBv22\netbeans\platform10\lib\org-openide-modules.jar;D:\GlassFishESBv22\netbeans\platform10\lib\org-openide-util.jar;D:\GlassFishESBv22\netbeans\platform10\modules\org-openide-options.jar;D:\GlassFishESBv22\netbeans\platform10\modules\org-openide-text.jar;D:\GlassFishESBv22\netbeans\platform10\modules\org-openide-loaders.jar;D:\GlassFishESBv22\netbeans\platform10\modules\org-openide-nodes.jar;D:\GlassFishESBv22\netbeans\platform10\modules\org-netbeans-modules-editor-mimelookup.jar;D:\GlassFishESBv22\netbeans\platform10\modules\org-netbeans-modules-editor-mimelookup-impl.jar;D:\GlassFishESBv22\netbeans\platform10\core\org-openide-filesystems.jar;D:\GlassFishESBv22\netbeans\java2\ant\lib\ant-launcher.jar;D:\GlassFishESBv22\netbeans\java2\ant\lib\ant.jar;D:\GlassFishESBv22\netbeans\java2\ant\patches\72080.jar" />
+    <property name="apple.laf.useScreenMenuBar" value="true" />
     <property name="reference.QuanLyDiem.dist_se" value="../QuanLyDiem/build/SEDeployment.jar" />
     <property name="libs.absolutelayout.src" value="" />
     <property name="libs.cdc-pp-awt-layout.maven-pom" value="" />
@@ -355,8 +354,8 @@
     <property name="file.encoding" value="Cp1258" />
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
   </properties>
-  <testcase classname="org.netbeans.modules.compapp.catd.ConfiguredTest" name="TestLayDiemTrungBinhCuaHocSinh" time="4.373">
-    <failure message="[29-08-2010 01:09:36] The response is not identical to the expected output." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: [29-08-2010 01:09:36] The response is not identical to the expected output.
+  <testcase classname="org.netbeans.modules.compapp.catd.ConfiguredTest" name="TestLayDanhSachMonHocCuaGiaoVien" time="4.867">
+    <failure message="[04-09-2010 10:47:58] The response is not identical to the expected output." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: [04-09-2010 10:47:58] The response is not identical to the expected output.
 	at org.netbeans.modules.compapp.catd.ConfiguredTest.checkExpectedOutput(ConfiguredTest.java:2348)
 	at org.netbeans.modules.compapp.catd.ConfiguredTest.checkExpectedOutput(ConfiguredTest.java:2218)
 	at org.netbeans.modules.compapp.catd.ConfiguredTest.testConcurrentSOAPRequest(ConfiguredTest.java:862)
@@ -419,12 +418,12 @@ user.language=vi
 user.name=nguyentanmo
 user.timezone=Asia/Bangkok
 user.variant=
-Test TestLayDiemTrungBinhCuaHocSinh\Concurrent.properties
+Test TestLayDanhSachMonHocCuaGiaoVien\Concurrent.properties
   * Difference (Delete): SOAP-ENV:Fault
-  * Difference (Add): m:LayDiemTrungBinhCuaHocSinhOperationResponse
- Failed. (Destination: http://localhost:18001/QLDiemComApp/LayDiemTrungBinhCuaHocSinh)
+  * Difference (Add): m:LayDanhSachMonHocCuaGiaoVienOperationResponse
+ Failed. (Destination: http://localhost:18001/QLDiemComApp/LayDanhSachMonHocCuaGiaoVien)
 ]]></system-out>
-  <system-err><![CDATA[29-08-2010 01:09:35 org.netbeans.modules.csl.core.LanguageRegistry readSfs
+  <system-err><![CDATA[04-09-2010 10:47:57 org.netbeans.modules.csl.core.LanguageRegistry readSfs
 INFO: No CslPlugins folder
 ]]></system-err>
 </testsuite>
