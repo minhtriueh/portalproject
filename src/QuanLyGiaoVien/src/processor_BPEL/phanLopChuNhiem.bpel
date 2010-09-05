@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process
+    name="phanLopChuNhiem"
+    targetNamespace="http://enterprise.netbeans.org/bpel/QuanLyGiaoVien/phanLopChuNhiem"
+    xmlns:tns="http://enterprise.netbeans.org/bpel/QuanLyGiaoVien/phanLopChuNhiem"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
+    xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor"
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2" xmlns:ns0="http://j2ee.netbeans.org/xsd/tableSchema">
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/phanLopChuNhiem" location="../interface_WSDL/phanLopChuNhiem.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/insert_giaovienchunhiem" location="../DB_WSDL/WSDL/insert_giaovienchunhiem.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <partnerLinks>
+        <partnerLink name="PartnerLink2" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/insert_giaovienchunhiem" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="phanlopchunhiem" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/phanLopChuNhiem" partnerLinkType="tns:phanLopChuNhiem" myRole="phanLopChuNhiemPortTypeRole"/>
+    </partnerLinks>
+    <variables>
+        <variable name="PhanLopChuNhiemOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/phanLopChuNhiem" messageType="tns:phanLopChuNhiemOperationRequest"/>
+        <variable name="ExecuteOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/insert_giaovienchunhiem" messageType="tns:outputMsg"/>
+        <variable name="ExecuteIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/insert_giaovienchunhiem" messageType="tns:inputMsg"/>
+        <variable name="PhanLopChuNhiemOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/phanLopChuNhiem" messageType="tns:phanLopChuNhiemOperationResponse"/>
+    </variables>
+    <sequence>
+        <receive name="Receive1" createInstance="yes" partnerLink="phanlopchunhiem" operation="phanLopChuNhiemOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/phanLopChuNhiem" portType="tns:phanLopChuNhiemPortType" variable="PhanLopChuNhiemOperationIn"/>
+        <assign name="Assign1">
+            <copy>
+                <from variable="PhanLopChuNhiemOperationIn" part="id_giaovien"/>
+                <to>$ExecuteIn.part/ns0:_idgiaovien</to>
+            </copy>
+            <copy>
+                <from variable="PhanLopChuNhiemOperationIn" part="id_lop"/>
+                <to>$ExecuteIn.part/ns0:_idlop</to>
+            </copy>
+        </assign>
+        <invoke name="Invoke1" partnerLink="PartnerLink2" operation="execute" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/insert_giaovienchunhiem" portType="tns:jdbcPortType" inputVariable="ExecuteIn" outputVariable="ExecuteOut"/>
+        <assign name="Assign2">
+            <copy>
+                <from>$ExecuteOut.part/ns0:returnValue</from>
+                <to variable="PhanLopChuNhiemOperationOut" part="result"/>
+            </copy>
+        </assign>
+        <reply name="Reply1" partnerLink="phanlopchunhiem" operation="phanLopChuNhiemOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/phanLopChuNhiem" portType="tns:phanLopChuNhiemPortType" variable="PhanLopChuNhiemOperationOut"/>
+    </sequence>
+</process>
+
+

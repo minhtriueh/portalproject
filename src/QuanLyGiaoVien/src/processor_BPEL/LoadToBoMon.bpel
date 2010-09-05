@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process
+    name="LoadToBoMon"
+    targetNamespace="http://enterprise.netbeans.org/bpel/QuanLyGiaoVien/LoadToBoMon"
+    xmlns:tns="http://enterprise.netbeans.org/bpel/QuanLyGiaoVien/LoadToBoMon"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
+    xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor"
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2" xmlns:ns0="http://j2ee.netbeans.org/xsd/tableSchema" xmlns:ns1="http://xml.netbeans.org/schema/mineXSD" xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject">
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/LoadToBoMon" location="../interface_WSDL/LoadToBoMon.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/DB_getToBoMon" location="../DB_WSDL/WSDL/DB_getToBoMon.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <partnerLinks>
+        <partnerLink name="PartnerLink2" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/DB_getToBoMon" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="PartnerLink1" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/LoadToBoMon" partnerLinkType="tns:LoadToBoMon" myRole="LoadToBoMonPortTypeRole"/>
+    </partnerLinks>
+    <variables>
+        <variable name="LoadToBoMonOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/DB_getToBoMon" messageType="tns:outputMsg">
+            <sxed2:editor>
+                <sxed2:predicate path="$LoadToBoMonOut.part/ns0:DB_getToBoMon_Record[$ForEach1Counter]" source="from"/>
+            </sxed2:editor>
+        </variable>
+        <variable name="LoadToBoMonIN" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/DB_getToBoMon" messageType="tns:inputMsg"/>
+        <variable name="LoadToBoMonOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/LoadToBoMon" messageType="tns:LoadToBoMonOperationResponse">
+            <sxed2:editor>
+                <sxed2:predicate path="$LoadToBoMonOperationOut.danhsachtobomon/ns1:ToBoMon[$ForEach1Counter]" source="to"/>
+            </sxed2:editor>
+        </variable>
+        <variable name="LoadToBoMonOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/LoadToBoMon" messageType="tns:LoadToBoMonOperationRequest"/>
+    </variables>
+    <sequence>
+        <receive name="Receive1" createInstance="yes" partnerLink="PartnerLink1" operation="LoadToBoMonOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/LoadToBoMon" portType="tns:LoadToBoMonPortType" variable="LoadToBoMonOperationIn"/>
+        <assign name="Assign2">
+            <copy>
+                <from>0</from>
+                <to variable="LoadToBoMonIN" part="part"/>
+            </copy>
+        </assign>
+        <invoke name="Invoke1" partnerLink="PartnerLink2" operation="newuntitled_Operation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/DB_getToBoMon" portType="tns:jdbcPortType" inputVariable="LoadToBoMonIN" outputVariable="LoadToBoMonOut"/>
+        <forEach name="ForEach1" parallel="no" counterName="ForEach1Counter">
+            <startCounterValue>1</startCounterValue>
+            <finalCounterValue>count($LoadToBoMonOut.part/ns0:DB_getToBoMon_Record)</finalCounterValue>
+            <scope name="Scope1">
+                <assign name="Assign1">
+                    <copy>
+                        <from>$LoadToBoMonOut.part/ns0:DB_getToBoMon_Record[$ForEach1Counter]/ns0:id_tobomon
+                            <sxed2:editor>
+                                <sxed2:predicate path="$LoadToBoMonOut.part/ns0:DB_getToBoMon_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$LoadToBoMonOperationOut.danhsachtobomon/ns1:ToBoMon[$ForEach1Counter]/ns2:id
+                            <sxed2:editor>
+                                <sxed2:predicate path="$LoadToBoMonOperationOut.danhsachtobomon/ns1:ToBoMon[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$LoadToBoMonOut.part/ns0:DB_getToBoMon_Record[$ForEach1Counter]/ns0:tenbomon
+                            <sxed2:editor>
+                                <sxed2:predicate path="$LoadToBoMonOut.part/ns0:DB_getToBoMon_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$LoadToBoMonOperationOut.danhsachtobomon/ns1:ToBoMon[$ForEach1Counter]/ns2:tenBoMon
+                            <sxed2:editor>
+                                <sxed2:predicate path="$LoadToBoMonOperationOut.danhsachtobomon/ns1:ToBoMon[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                </assign>
+            </scope>
+        </forEach>
+        <reply name="Reply1" partnerLink="PartnerLink1" operation="LoadToBoMonOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/LoadToBoMon" portType="tns:LoadToBoMonPortType" variable="LoadToBoMonOperationOut"/>
+    </sequence>
+</process>
+
+
