@@ -78,5 +78,37 @@
         <delete dir="${build.generated.sources.dir}/jax-ws/qldiemcomapp"/>
         <delete dir="${build.generated.dir}/jax-wsCache/LayDanhSachHeSoCotDiem"/>
     </target>
-    <target name="wsimport-client-generate" depends="wsimport-client-ToHocSinh, wsimport-client-LayDanhSachTinh, wsimport-client-LayDanhSachLoaiHocSinh, wsimport-client-LayDanhSachHeSoCotDiem"/>
+    <target name="wsimport-client-PhanLopChuNhiem" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/PhanLopChuNhiem"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/PhanLopChuNhiem" destdir="${build.generated.dir}/jax-wsCache/PhanLopChuNhiem" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/PhanLopChuNhiem/wsdl/localhost_9080/QLGiaoVienComAppService6/PhanLopChuNhiem.wsdl" catalog="catalog.xml" extension="true" verbose="true" wsdlLocation="http://localhost:9080/QLGiaoVienComAppService6/PhanLopChuNhiem?WSDL" xnocompile="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/PhanLopChuNhiem/wsdl/localhost_9080/QLGiaoVienComAppService6/PhanLopChuNhiem.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/PhanLopChuNhiem"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/PhanLopChuNhiem">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-PhanLopChuNhiem" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/qlgiaoviencomapp"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/PhanLopChuNhiem"/>
+    </target>
+    <target name="wsimport-client-tracuuhocbatheoHK" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/tracuuhocbatheoHK"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/tracuuhocbatheoHK" destdir="${build.generated.dir}/jax-wsCache/tracuuhocbatheoHK" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/tracuuhocbatheoHK/wsdl/localhost_9080/QLHocBaComAppService8/tracuuhocbatheoHK.wsdl" catalog="catalog.xml" extension="true" verbose="true" wsdlLocation="http://localhost:9080/QLHocBaComAppService8/tracuuhocbatheoHK?WSDL" xnocompile="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/tracuuhocbatheoHK/wsdl/localhost_9080/QLHocBaComAppService8/tracuuhocbatheoHK.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/tracuuhocbatheoHK"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/tracuuhocbatheoHK">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-tracuuhocbatheoHK" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/qlhocbacomapp"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/tracuuhocbatheoHK"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-ToHocSinh, wsimport-client-LayDanhSachTinh, wsimport-client-LayDanhSachLoaiHocSinh, wsimport-client-LayDanhSachHeSoCotDiem, wsimport-client-PhanLopChuNhiem, wsimport-client-tracuuhocbatheoHK"/>
 </project>
