@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP-ENV:Body>
+    <m:loadHocLucOperationResponse xmlns:m="QLHocBaComApp" xmlns:msgns="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/loadHocLuc">
+      <dshocluc>
+        <ns1:HocLuc xmlns:ns1="http://xml.netbeans.org/schema/mine">
+          <ns2:id xmlns:ns2="http://xml.netbeans.org/schema/QLHB_EschoolinkObject" isNull="false">5</ns2:id>
+          <ns2:tenHocLuc xmlns:ns2="http://xml.netbeans.org/schema/QLHB_EschoolinkObject" isNull="false">Kem</ns2:tenHocLuc>
+          <ns2:ghiChu xmlns:ns2="http://xml.netbeans.org/schema/QLHB_EschoolinkObject" isNull="false">loai kem</ns2:ghiChu>
+          <ns2:diemCanTren xmlns:ns2="http://xml.netbeans.org/schema/QLHB_EschoolinkObject" isNull="false">3.5</ns2:diemCanTren>
+          <ns2:diemCanDuoi xmlns:ns2="http://xml.netbeans.org/schema/QLHB_EschoolinkObject" isNull="false">0</ns2:diemCanDuoi>
+          <ns2:khongCoMonDuoi xmlns:ns2="http://xml.netbeans.org/schema/QLHB_EschoolinkObject" isNull="false">0</ns2:khongCoMonDuoi>
+        </ns1:HocLuc>
+      </dshocluc>
+    </m:loadHocLucOperationResponse>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP-ENV:Body>
+    <m:loadHanhKiemOperationResponse xmlns:m="QLHocBaComApp" xmlns:msgns="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/loadHanhKiem">
+      <dshanhkiem>
+        <ns1:HanhKiem xmlns:ns1="http://xml.netbeans.org/schema/mine">
+          <ns2:id xmlns:ns2="http://xml.netbeans.org/schema/QLHB_EschoolinkObject" isNull="false">1</ns2:id>
+          <ns2:tenHanhKiem xmlns:ns2="http://xml.netbeans.org/schema/QLHB_EschoolinkObject" isNull="false">Tot</ns2:tenHanhKiem>
+          <ns2:ghiChu xmlns:ns2="http://xml.netbeans.org/schema/QLHB_EschoolinkObject" isNull="false">Cham ngoan</ns2:ghiChu>
+        </ns1:HanhKiem>
+        <ns1:HanhKiem xmlns:ns1="http://xml.netbeans.org/schema/mine">
+          <ns2:id xmlns:ns2="http://xml.netbeans.org/schema/QLHB_EschoolinkObject" isNull="false">2</ns2:id>
+          <ns2:tenHanhKiem xmlns:ns2="http://xml.netbeans.org/schema/QLHB_EschoolinkObject" isNull="false">Kha</ns2:tenHanhKiem>
+          <ns2:ghiChu xmlns:ns2="http://xml.netbeans.org/schema/QLHB_EschoolinkObject" isNull="false">Co Gang Hon</ns2:ghiChu>
+        </ns1:HanhKiem>
+        <ns1:HanhKiem xmlns:ns1="http://xml.netbeans.org/schema/mine">
+          <ns2:id xmlns:ns2="http://xml.netbeans.org/schema/QLHB_EschoolinkObject" isNull="false">3</ns2:id>
+          <ns2:tenHanhKiem xmlns:ns2="http://xml.netbeans.org/schema/QLHB_EschoolinkObject" isNull="false">TB</ns2:tenHanhKiem>
+          <ns2:ghiChu xmlns:ns2="http://xml.netbeans.org/schema/QLHB_EschoolinkObject" isNull="false">Chua Dat</ns2:ghiChu>
+        </ns1:HanhKiem>
+        <ns1:HanhKiem xmlns:ns1="http://xml.netbeans.org/schema/mine">
+          <ns2:id xmlns:ns2="http://xml.netbeans.org/schema/QLHB_EschoolinkObject" isNull="false">4</ns2:id>
+          <ns2:tenHanhKiem xmlns:ns2="http://xml.netbeans.org/schema/QLHB_EschoolinkObject" isNull="false">Yeu</ns2:tenHanhKiem>
+          <ns2:ghiChu xmlns:ns2="http://xml.netbeans.org/schema/QLHB_EschoolinkObject" isNull="false">Khong Duoc</ns2:ghiChu>
+        </ns1:HanhKiem>
+      </dshanhkiem>
+    </m:loadHanhKiemOperationResponse>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
