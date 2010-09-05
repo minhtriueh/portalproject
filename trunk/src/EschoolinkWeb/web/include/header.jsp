@@ -67,7 +67,18 @@
                         <li><a href="#">Tìm kiếm học sinh</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Giáo viên</a></li>
+                <li><a href="#">Giáo Viên</a>
+                    <ul>
+                        <li><a href="ThongTinBanDau">Thêm Giáo Viên</a></li>
+                        <li><a href="index.jsp?module=quanlygiaovien&page=searchgiaovien">Tra Cứu Giáo Viên</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Học Bạ</a>
+                    <ul>
+                        <li><a href="index.jsp?module=quanlyhocba&page=tracuuhocba">Đánh Giá Học Lực-Hạnh Kiểm</a></li>
+                    </ul>
+                </li>
+
                 <li><a href="#">Khởi tạo năm học mới</a></li>
                 <li><a href="#">Chủ nhiệm</a></li>
                 <li><a href="#">Sổ điểm môn học</a>
