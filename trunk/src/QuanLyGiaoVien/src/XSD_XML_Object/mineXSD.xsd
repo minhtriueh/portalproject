@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://xml.netbeans.org/schema/mineXSD"
+    xmlns:tns="http://xml.netbeans.org/schema/mineXSD"
+    elementFormDefault="qualified" xmlns:ns3="http://xml.netbeans.org/schema/QLGV_EschoolinkObject">
+    <xsd:import schemaLocation="../XSD_XML_Object/EschoolinkObject_Dang.xsd" namespace="http://xml.netbeans.org/schema/QLGV_EschoolinkObject"/>
+    <xsd:element name="DanhSachGiaoVien" type="tns:DanhSachGiaoVien"/>
+    <xsd:element name="DanhSachLopHoc" type="tns:DanhSachLopHoc"/>
+    <xsd:element name="DanhSachToBoMon" type="tns:DanhSachToBoMon"/>
+    <xsd:element name="DanhSachDanToc" type="tns:DanhSachDanToc"/>
+    <xsd:complexType name="DanhSachGiaoVien">
+        <xsd:sequence>
+            <xsd:element ref="ns3:GiaoVien" maxOccurs="unbounded" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="DanhSachLopHoc">
+        <xsd:sequence>
+            <xsd:element name="Lop" type="ns3:Lop" maxOccurs="unbounded" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="DanhSachDanToc">
+        <xsd:sequence>
+            <xsd:element name="DanToc" type="ns3:DanToc" maxOccurs="unbounded" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="DanhSachToBoMon">
+        <xsd:sequence>
+            <xsd:element name="ToBoMon" minOccurs="0" maxOccurs="unbounded" type="ns3:ToBoMon"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>
+
+
+
+
+
+
