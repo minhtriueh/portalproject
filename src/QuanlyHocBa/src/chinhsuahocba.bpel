@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process
+    name="chinhsuahocba"
+    targetNamespace="http://enterprise.netbeans.org/bpel/QuanlyHocBa/chinhsuahocba"
+    xmlns:tns="http://enterprise.netbeans.org/bpel/QuanlyHocBa/chinhsuahocba"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
+    xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor"
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2" xmlns:ns0="http://xml.netbeans.org/schema/QLHB_EschoolinkObject" xmlns:ns1="http://j2ee.netbeans.org/xsd/tableSchema">
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/chinhsuahocba" location="WSDL/chinhsuahocba.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/update_hocba" location="DB_Binding/capnhathocba/update_hocba.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <partnerLinks>
+        <partnerLink name="pl_updatehocba" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/update_hocba" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="pl_chinhsuahocba" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/chinhsuahocba" partnerLinkType="tns:chinhsuahocba" myRole="chinhsuahocbaPortTypeRole"/>
+    </partnerLinks>
+    <variables>
+        <variable name="updatehocba_Out" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/update_hocba" messageType="tns:outputMsg"/>
+        <variable name="updatehocba_In" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/update_hocba" messageType="tns:inputMsg"/>
+        <variable name="ChinhsuahocbaOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/chinhsuahocba" messageType="tns:chinhsuahocbaOperationResponse"/>
+        <variable name="ChinhsuahocbaOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/chinhsuahocba" messageType="tns:chinhsuahocbaOperationRequest"/>
+    </variables>
+    <sequence>
+        <receive name="Receive1" createInstance="yes" partnerLink="pl_chinhsuahocba" operation="chinhsuahocbaOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/chinhsuahocba" portType="tns:chinhsuahocbaPortType" variable="ChinhsuahocbaOperationIn"/>
+        <assign name="Assign1">
+            <copy>
+                <from variable="ChinhsuahocbaOperationIn" part="id_hocba"/>
+                <to>$updatehocba_In.part/ns1:_id_hocba</to>
+            </copy>
+            <copy>
+                <from variable="ChinhsuahocbaOperationIn" part="diemtrungbinh"/>
+                <to>$updatehocba_In.part/ns1:_diemtrungbinh</to>
+            </copy>
+            <copy>
+                <from variable="ChinhsuahocbaOperationIn" part="lenlophaykhong"/>
+                <to>$updatehocba_In.part/ns1:_lenlophaykhong</to>
+            </copy>
+            <copy>
+                <from variable="ChinhsuahocbaOperationIn" part="nhanxet"/>
+                <to>$updatehocba_In.part/ns1:_nhanxet</to>
+            </copy>
+            <copy>
+                <from variable="ChinhsuahocbaOperationIn" part="id_hocluc"/>
+                <to>$updatehocba_In.part/ns1:_id_hocluc</to>
+            </copy>
+            <copy>
+                <from variable="ChinhsuahocbaOperationIn" part="id_namhoc"/>
+                <to>$updatehocba_In.part/ns1:_id_namhoc</to>
+            </copy>
+            <copy>
+                <from variable="ChinhsuahocbaOperationIn" part="id_hanhkiem"/>
+                <to>$updatehocba_In.part/ns1:_id_hanhkiem</to>
+            </copy>
+            <copy>
+                <from variable="ChinhsuahocbaOperationIn" part="id_lop"/>
+                <to>$updatehocba_In.part/ns1:_id_lop</to>
+            </copy>
+        </assign>
+        <invoke name="Invoke1" partnerLink="pl_updatehocba" operation="execute" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/update_hocba" portType="tns:jdbcPortType" inputVariable="updatehocba_In" outputVariable="updatehocba_Out"/>
+        <assign name="Assign2">
+            <copy>
+                <from>$updatehocba_Out.part/ns1:returnValue</from>
+                <to variable="ChinhsuahocbaOperationOut" part="result"/>
+            </copy>
+        </assign>
+        <reply name="Reply1" partnerLink="pl_chinhsuahocba" operation="chinhsuahocbaOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/chinhsuahocba" portType="tns:chinhsuahocbaPortType" variable="ChinhsuahocbaOperationOut"/>
+    </sequence>
+</process>
+

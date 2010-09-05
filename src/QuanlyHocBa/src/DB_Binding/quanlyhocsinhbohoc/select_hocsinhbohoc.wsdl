@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="select_hocsinhbohoc" targetNamespace="http://j2ee.netbeans.org/wsdl/Quanlyhocsinh/select_hocsinhbohoc" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:ns="http://j2ee.netbeans.org/xsd/tableSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://j2ee.netbeans.org/wsdl/Quanlyhocsinh/select_hocsinhbohoc" xmlns:plink="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/">
+  <types>
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/">
+            <xsd:import namespace="http://j2ee.netbeans.org/xsd/tableSchema" schemaLocation="select_hocsinhbohoc.xsd"/>
+	</xsd:schema>
+  </types>
+  <message name="outputMsg">
+    <part name="part" element="ns:select_hocsinhbohoc_Response"/>
+  </message>
+  <message name="inputMsg">
+    <part name="part" element="ns:select_hocsinhbohoc_Request"/>
+  </message>
+  <portType name="jdbcPortType">
+    <operation name="select_hocsinhbohoc_Operation">
+      <input name="input" message="tns:inputMsg"/>
+      <output name="output" message="tns:outputMsg"/>
+    </operation>
+  </portType>
+  <binding name="binding" type="tns:jdbcPortType">
+    <jdbc:binding xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/"/>
+    <operation name="select_hocsinhbohoc_Operation">
+    <jdbc:operation xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/"/>
+      <input name="input">
+    <jdbc:input xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" MarkColumnName="" MarkColumnValue="" MoveRowToTableName="" PKName="" PollMilliSeconds="5000" PollingPostProcessing="MoveRow" TableName="select_hocsinhbohoc" Transaction="NOTransaction" numberOfRecords="" operationType="select_hocsinhbohoc_Operation" paramOrder="tenlop" sql="SELECT
+  lop.sisolop,
+  lop.tenlop,
+  namhoc.namsau,
+  namhoc.namtruoc,
+  namhoc.id_namhoc,
+  hocsinh.id_hocsinh,
+  hocsinh.bixoahaychua,
+  hocsinh.ghichu,
+  hocsinh.gioitinh,
+  hocsinh.hinhanh,
+  hocsinh.ketnapdoan,
+  hocsinh.ketnapdoi,
+  hocsinh.masohocsinh,
+  hocsinh.ngaysinh,
+  hocsinh.ngayvaodoan,
+  hocsinh.ngayvaodoi,
+  hocsinh.tenhocsinh,
+  hocsinh.sonha,
+  hocsinh.tongiao,
+  hocsinhbohoc.id_hocsinhbohoc,
+  hocsinhbohoc.hocky,
+  hocsinhbohoc.lydobohoc,
+  hocsinhbohoc.ngaybohoc
+FROM
+  public.danhsachlop,
+  public.lop,
+  public.hocsinh,
+  public.hocsinhbohoc,
+  public.namhoc
+WHERE
+  lop.id_namhoc = namhoc.id_namhoc AND
+  lop.id_lop = danhsachlop.id_lop AND
+  hocsinh.id_hocsinh = danhsachlop.id_hocsinh AND
+  hocsinhbohoc.id_hocsinh = hocsinh.id_hocsinh and
+  lop.tenlop =?
+  "/>
+      </input>
+      <output name="output">
+    <jdbc:output xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" returnPartName="part"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="service">
+    <port name="port" binding="tns:binding">
+    <jdbc:address xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" jndiName="jdbc/eschoolinkdb"/>
+    </port>
+  </service>
+    <plink:partnerLinkType xmlns:plink="http://docs.oasis-open.org/wsbpel/2.0/plnktype" name="jdbcpartner">
+        <plink:role name="jdbcPortTypeRole" portType="tns:jdbcPortType"/>
+    </plink:partnerLinkType>
+</definitions>
+
+
+
+
