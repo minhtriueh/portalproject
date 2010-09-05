@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "struts-2.0.dtd">
+<struts>
+    <package name="quanlyhocba"  extends="struts-default">
+        <action name="SearchHocSinhHB" class="quanlyhocba.SearchHocSinhHB">
+            <result name="success">/WEB-INF/quanlyhocba/dshs_result.jsp</result>
+        </action>
+
+        <action name="XemHocBa" class="quanlyhocba.XemHocBa">
+            <result name="success">/index.jsp?module=quanlyhocba&amp;page=xemhocba</result>
+        </action>
+
+         <action name="XemSoDiemCacMon" class="quanlyhocba.XemSoDiemCacMon">
+                   <result name="success">/WEB-INF/quanlyhocba/xemsodiemcacmon.jsp</result>
+         </action>
+
+         <action name="DanhGiaHanhKiemVaHocLuc" class="quanlyhocba.DanhGiaHanhKiemVaHocLuc">
+                   <result name="success">/WEB-INF/quanlyhocba/danhgiahocluchanhkiem.jsp</result>
+                   <result name="direct">/WEB-INF/quanlyhocba/danhgiahocluchanhkiem_result.jsp</result>
+         </action>
+
+    </package>
+</struts>
