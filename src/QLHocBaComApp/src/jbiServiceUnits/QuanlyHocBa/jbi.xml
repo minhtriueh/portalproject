@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jbi xmlns="http://java.sun.com/xml/ns/jbi" xmlns:ns0="http://enterprise.netbeans.org/bpel/Quanlyhocsinh/capnhathanhkiem" xmlns:ns1="http://j2ee.netbeans.org/wsdl/Quanlyhocsinh/update_hanhkiem" xmlns:ns10="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/DB_loadHK" xmlns:ns11="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/loadHanhKiem" xmlns:ns12="http://enterprise.netbeans.org/bpel/QuanlyHocBa/loadHocLuc" xmlns:ns13="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/loadHL" xmlns:ns14="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/loadHocLuc" xmlns:ns15="http://enterprise.netbeans.org/bpel/QuanlyHocBa/loadLopTheoKhoiLopVaNamHoc" xmlns:ns16="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/DB_loadLoptheoKhoivaNam" xmlns:ns17="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/loadLopTheoKhoiLopVaNamHoc" xmlns:ns18="http://enterprise.netbeans.org/bpel/QuanlyHocBa/loadNamHoc" xmlns:ns19="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/DB_loadnamhoc" xmlns:ns2="http://j2ee.netbeans.org/wsdl/Quanlyhocsinh/capnhathanhkiem" xmlns:ns20="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/loadNamHoc" xmlns:ns21="http://enterprise.netbeans.org/bpel/Quanlyhocsinh/themhocsinhbohoc" xmlns:ns22="http://j2ee.netbeans.org/wsdl/Quanlyhocsinh/insert_hocsinhbohoc" xmlns:ns23="http://j2ee.netbeans.org/wsdl/Quanlyhocsinh/themhocsinhbohoc" xmlns:ns24="http://enterprise.netbeans.org/bpel/Quanlyhocsinh/tracuuhbahsinhtheohky" xmlns:ns25="http://j2ee.netbeans.org/wsdl/Quanlyhocsinh/find_HBTHK" xmlns:ns26="http://j2ee.netbeans.org/wsdl/Quanlyhocsinh/tracuuhocbatheohocky" xmlns:ns27="http://enterprise.netbeans.org/bpel/QuanlyHocBa/tracuuhocbacanam" xmlns:ns28="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/laythongtinhschohba" xmlns:ns29="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/find_soluonghocba" xmlns:ns3="http://enterprise.netbeans.org/bpel/QuanlyHocBa/chinhsuahocba" xmlns:ns30="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/tracuuhocbacanam" xmlns:ns31="http://enterprise.netbeans.org/bpel/QuanlyHocBa/TraCuuHocBaHocTheoHK" xmlns:ns32="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/TraCuuHocBaHocTheoHK" xmlns:ns33="http://enterprise.netbeans.org/bpel/Quanlyhocsinh/xoahocsinhbohoc" xmlns:ns34="http://j2ee.netbeans.org/wsdl/Quanlyhocsinh/remove_hosinhbohoc" xmlns:ns35="http://j2ee.netbeans.org/wsdl/Quanlyhocsinh/xoahocsinhbohoc" xmlns:ns36="http://www.sun.com/jbi/descriptor/service-unit" xmlns:ns4="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/update_hocba" xmlns:ns5="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/chinhsuahocba" xmlns:ns6="http://enterprise.netbeans.org/bpel/Quanlyhocsinh/laydanhsachhocsinhbohoc" xmlns:ns7="http://j2ee.netbeans.org/wsdl/Quanlyhocsinh/select_hocsinhbohoc" xmlns:ns8="http://j2ee.netbeans.org/wsdl/Quanlyhocsinh/laydanhsachhocsinhbohoc" xmlns:ns9="http://enterprise.netbeans.org/bpel/QuanlyHocBa/loadHanhKiem" version="1.0">
+    <services binding-component="false">
+        <provides endpoint-name="capnhathanhkiemPortTypeRole_myRole" interface-name="ns2:capnhathanhkiemPortType" service-name="ns0:PartnerLink1">
+            <ns36:display-name>PartnerLink1</ns36:display-name>
+            <ns36:process-name>capnhathanhkiem</ns36:process-name>
+            <ns36:file-path>capnhathanhkiem.bpel</ns36:file-path>
+        </provides>
+        <provides endpoint-name="chinhsuahocbaPortTypeRole_myRole" interface-name="ns5:chinhsuahocbaPortType" service-name="ns3:pl_chinhsuahocba">
+            <ns36:display-name>pl_chinhsuahocba</ns36:display-name>
+            <ns36:process-name>chinhsuahocba</ns36:process-name>
+            <ns36:file-path>chinhsuahocba.bpel</ns36:file-path>
+        </provides>
+        <provides endpoint-name="laydanhsachhocsinhbohocPortTypeRole_myRole" interface-name="ns8:laydanhsachhocsinhbohocPortType" service-name="ns6:pldshsbohoc">
+            <ns36:display-name>pldshsbohoc</ns36:display-name>
+            <ns36:process-name>laydanhsachhocsinhbohoc</ns36:process-name>
+            <ns36:file-path>laydanhsachhocsinhbohoc.bpel</ns36:file-path>
+        </provides>
+        <provides endpoint-name="loadHanhKiemPortTypeRole_myRole" interface-name="ns11:loadHanhKiemPortType" service-name="ns9:PartnerLink1">
+            <ns36:display-name>PartnerLink1</ns36:display-name>
+            <ns36:process-name>loadHanhKiem</ns36:process-name>
+            <ns36:file-path>loadHanhKiem.bpel</ns36:file-path>
+        </provides>
+        <provides endpoint-name="loadHocLucPortTypeRole_myRole" interface-name="ns14:loadHocLucPortType" service-name="ns12:PartnerLink1">
+            <ns36:display-name>PartnerLink1</ns36:display-name>
+            <ns36:process-name>loadHocLuc</ns36:process-name>
+            <ns36:file-path>loadHocLuc.bpel</ns36:file-path>
+        </provides>
+        <provides endpoint-name="loadLopTheoKhoiLopVaNamHocPortTypeRole_myRole" interface-name="ns17:loadLopTheoKhoiLopVaNamHocPortType" service-name="ns15:PartnerLink1">
+            <ns36:display-name>PartnerLink1</ns36:display-name>
+            <ns36:process-name>loadLopTheoKhoiLopVaNamHoc</ns36:process-name>
+            <ns36:file-path>loadLopTheoKhoiLopVaNamHoc.bpel</ns36:file-path>
+        </provides>
+        <provides endpoint-name="loadNamHocPortTypeRole_myRole" interface-name="ns20:loadNamHocPortType" service-name="ns18:PartnerLink1">
+            <ns36:display-name>PartnerLink1</ns36:display-name>
+            <ns36:process-name>loadNamHoc</ns36:process-name>
+            <ns36:file-path>loadNamHoc.bpel</ns36:file-path>
+        </provides>
+        <provides endpoint-name="themhocsinhbohocPortTypeRole_myRole" interface-name="ns23:themhocsinhbohocPortType" service-name="ns21:plthemhocsinhbohoc">
+            <ns36:display-name>plthemhocsinhbohoc</ns36:display-name>
+            <ns36:process-name>themhocsinhbohoc</ns36:process-name>
+            <ns36:file-path>themhocsinhbohoc.bpel</ns36:file-path>
+        </provides>
+        <provides endpoint-name="tracuuhocbatheohockyPortTypeRole_myRole" interface-name="ns26:tracuuhocbatheohockyPortType" service-name="ns24:pltracuuhbatheohocky">
+            <ns36:display-name>pltracuuhbatheohocky</ns36:display-name>
+            <ns36:process-name>tracuuhbahsinhtheohky</ns36:process-name>
+            <ns36:file-path>tracuuhbahsinhtheohky.bpel</ns36:file-path>
+        </provides>
+        <provides endpoint-name="tracuuhocbacanamPortTypeRole_myRole" interface-name="ns30:tracuuhocbacanamPortType" service-name="ns27:pl_tracuuhocbacn">
+            <ns36:display-name>pl_tracuuhocbacn</ns36:display-name>
+            <ns36:process-name>tracuuhocbacanam</ns36:process-name>
+            <ns36:file-path>tracuuhocbacanam.bpel</ns36:file-path>
+        </provides>
+        <provides endpoint-name="TraCuuHocBaHocTheoHKPortTypeRole_myRole" interface-name="ns32:TraCuuHocBaHocTheoHKPortType" service-name="ns31:PL_tracuuhbahsinhtheohky">
+            <ns36:display-name>PL_tracuuhbahsinhtheohky</ns36:display-name>
+            <ns36:process-name>TraCuuHocBaHocTheoHK</ns36:process-name>
+            <ns36:file-path>TraCuuHocBaHocTheoHK.bpel</ns36:file-path>
+        </provides>
+        <provides endpoint-name="xoahocsinhbohocPortTypeRole_myRole" interface-name="ns35:xoahocsinhbohocPortType" service-name="ns33:plxoahocsinhbohoc">
+            <ns36:display-name>plxoahocsinhbohoc</ns36:display-name>
+            <ns36:process-name>xoahocsinhbohoc</ns36:process-name>
+            <ns36:file-path>xoahocsinhbohoc.bpel</ns36:file-path>
+        </provides>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns1:jdbcPortType" service-name="ns0:PartnerLink2">
+            <ns36:display-name>PartnerLink2</ns36:display-name>
+            <ns36:process-name>capnhathanhkiem</ns36:process-name>
+            <ns36:file-path>capnhathanhkiem.bpel</ns36:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns4:jdbcPortType" service-name="ns3:pl_updatehocba">
+            <ns36:display-name>pl_updatehocba</ns36:display-name>
+            <ns36:process-name>chinhsuahocba</ns36:process-name>
+            <ns36:file-path>chinhsuahocba.bpel</ns36:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns7:jdbcPortType" service-name="ns6:plselecthsbh">
+            <ns36:display-name>plselecthsbh</ns36:display-name>
+            <ns36:process-name>laydanhsachhocsinhbohoc</ns36:process-name>
+            <ns36:file-path>laydanhsachhocsinhbohoc.bpel</ns36:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns10:jdbcPortType" service-name="ns9:PartnerLink2">
+            <ns36:display-name>PartnerLink2</ns36:display-name>
+            <ns36:process-name>loadHanhKiem</ns36:process-name>
+            <ns36:file-path>loadHanhKiem.bpel</ns36:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns13:jdbcPortType" service-name="ns12:PartnerLink2">
+            <ns36:display-name>PartnerLink2</ns36:display-name>
+            <ns36:process-name>loadHocLuc</ns36:process-name>
+            <ns36:file-path>loadHocLuc.bpel</ns36:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns16:jdbcPortType" service-name="ns15:PartnerLink2">
+            <ns36:display-name>PartnerLink2</ns36:display-name>
+            <ns36:process-name>loadLopTheoKhoiLopVaNamHoc</ns36:process-name>
+            <ns36:file-path>loadLopTheoKhoiLopVaNamHoc.bpel</ns36:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns19:jdbcPortType" service-name="ns18:PartnerLink2">
+            <ns36:display-name>PartnerLink2</ns36:display-name>
+            <ns36:process-name>loadNamHoc</ns36:process-name>
+            <ns36:file-path>loadNamHoc.bpel</ns36:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns22:jdbcPortType" service-name="ns21:plinserthocsinhbohoc">
+            <ns36:display-name>plinserthocsinhbohoc</ns36:display-name>
+            <ns36:process-name>themhocsinhbohoc</ns36:process-name>
+            <ns36:file-path>themhocsinhbohoc.bpel</ns36:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns25:jdbcPortType" service-name="ns24:plfindHBTHK">
+            <ns36:display-name>plfindHBTHK</ns36:display-name>
+            <ns36:process-name>tracuuhbahsinhtheohky</ns36:process-name>
+            <ns36:file-path>tracuuhbahsinhtheohky.bpel</ns36:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns28:jdbcPortType" service-name="ns27:pl_laythongtinhs">
+            <ns36:display-name>pl_laythongtinhs</ns36:display-name>
+            <ns36:process-name>tracuuhocbacanam</ns36:process-name>
+            <ns36:file-path>tracuuhocbacanam.bpel</ns36:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns29:jdbcPortType" service-name="ns27:pl_findslhb">
+            <ns36:display-name>pl_findslhb</ns36:display-name>
+            <ns36:process-name>tracuuhocbacanam</ns36:process-name>
+            <ns36:file-path>tracuuhocbacanam.bpel</ns36:file-path>
+        </consumes>
+        <consumes endpoint-name="tracuuhocbatheohockyPortTypeRole_partnerRole" interface-name="ns26:tracuuhocbatheohockyPortType" service-name="ns27:pl_theoHky">
+            <ns36:display-name>pl_theoHky</ns36:display-name>
+            <ns36:process-name>tracuuhocbacanam</ns36:process-name>
+            <ns36:file-path>tracuuhocbacanam.bpel</ns36:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns28:jdbcPortType" service-name="ns31:PartnerLink1">
+            <ns36:display-name>PartnerLink1</ns36:display-name>
+            <ns36:process-name>TraCuuHocBaHocTheoHK</ns36:process-name>
+            <ns36:file-path>TraCuuHocBaHocTheoHK.bpel</ns36:file-path>
+        </consumes>
+        <consumes endpoint-name="tracuuhocbatheohockyPortTypeRole_partnerRole" interface-name="ns26:tracuuhocbatheohockyPortType" service-name="ns31:pl_tracuuhocbatheohocky">
+            <ns36:display-name>pl_tracuuhocbatheohocky</ns36:display-name>
+            <ns36:process-name>TraCuuHocBaHocTheoHK</ns36:process-name>
+            <ns36:file-path>TraCuuHocBaHocTheoHK.bpel</ns36:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns34:jdbcPortType" service-name="ns33:plremovehocsinhbohoc">
+            <ns36:display-name>plremovehocsinhbohoc</ns36:display-name>
+            <ns36:process-name>xoahocsinhbohoc</ns36:process-name>
+            <ns36:file-path>xoahocsinhbohoc.bpel</ns36:file-path>
+        </consumes>
+    </services>
+</jbi>
