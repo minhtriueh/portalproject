@@ -65,3 +65,39 @@ function requestAdv(urlIn,log,dataIn,successF){
 		}
 	}).send();
 }
+//Dang JAVASCRIPT
+
+function Back(index)
+{
+    history.go(0-index);
+}
+function Forward(index)
+{
+    history.go(+index);
+}
+
+function IsNumeric(strString)
+   //  check for valid numeric strings
+   {
+   var strValidChars = "0123456789";
+   var strChar;
+   var blnResult = true;
+
+   if (strString.length == 0) return false;
+
+   //  test strString consists of valid characters listed above
+   for (i = 0; i < strString.length && blnResult == true; i++)
+      {
+      strChar = strString.charAt(i);
+      if (strValidChars.indexOf(strChar) == -1)
+         {
+         blnResult = false;
+         }
+      }
+   return blnResult;
+   }
+
+function isNull(input)
+{
+    return(input=="");
+}
