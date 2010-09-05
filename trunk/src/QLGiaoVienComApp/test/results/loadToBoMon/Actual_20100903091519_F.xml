@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP-ENV:Body>
+    <m:LoadToBoMonOperationResponse xmlns:m="QLGiaoVienComApp" xmlns:msgns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/LoadToBoMon">
+      <danhsachtobomon>
+        <ns1:ToBoMon xmlns:ns1="http://xml.netbeans.org/schema/mineXSD">
+          <ns2:id xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">1</ns2:id>
+          <ns2:tenBoMon xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">bo mon toan</ns2:tenBoMon>
+        </ns1:ToBoMon>
+        <ns1:ToBoMon xmlns:ns1="http://xml.netbeans.org/schema/mineXSD">
+          <ns2:id xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">2</ns2:id>
+          <ns2:tenBoMon xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">bo mon ly</ns2:tenBoMon>
+        </ns1:ToBoMon>
+        <ns1:ToBoMon xmlns:ns1="http://xml.netbeans.org/schema/mineXSD">
+          <ns2:id xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">3</ns2:id>
+          <ns2:tenBoMon xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">bo mon toan</ns2:tenBoMon>
+        </ns1:ToBoMon>
+        <ns1:ToBoMon xmlns:ns1="http://xml.netbeans.org/schema/mineXSD">
+          <ns2:id xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">4</ns2:id>
+          <ns2:tenBoMon xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">bo mon van</ns2:tenBoMon>
+        </ns1:ToBoMon>
+        <ns1:ToBoMon xmlns:ns1="http://xml.netbeans.org/schema/mineXSD">
+          <ns2:id xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">5</ns2:id>
+          <ns2:tenBoMon xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">bo mon su</ns2:tenBoMon>
+        </ns1:ToBoMon>
+        <ns1:ToBoMon xmlns:ns1="http://xml.netbeans.org/schema/mineXSD">
+          <ns2:id xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">6</ns2:id>
+          <ns2:tenBoMon xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">bo mon dia</ns2:tenBoMon>
+        </ns1:ToBoMon>
+        <ns1:ToBoMon xmlns:ns1="http://xml.netbeans.org/schema/mineXSD">
+          <ns2:id xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">7</ns2:id>
+          <ns2:tenBoMon xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">bo mon sinh</ns2:tenBoMon>
+        </ns1:ToBoMon>
+        <ns1:ToBoMon xmlns:ns1="http://xml.netbeans.org/schema/mineXSD">
+          <ns2:id xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">8</ns2:id>
+          <ns2:tenBoMon xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">bo mon anh</ns2:tenBoMon>
+        </ns1:ToBoMon>
+      </danhsachtobomon>
+    </m:LoadToBoMonOperationResponse>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

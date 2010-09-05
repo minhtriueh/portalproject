@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP-ENV:Body>
+    <m:tracuuGVOperationResponse xmlns:m="QLGiaoVienComApp" xmlns:msgns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/tracuuGV">
+      <result>
+        <ns1:id xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject" isNull="false">2</ns1:id>
+        <ns1:tenGiaoVien xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject" isNull="false">Tran Thi hai Ba</ns1:tenGiaoVien>
+        <ns1:ngaySinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject" isNull="false">2014-06-09</ns1:ngaySinh>
+        <ns1:gioiTinh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject" isNull="false">Nam</ns1:gioiTinh>
+        <ns1:cmnd xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject" isNull="false">126677</ns1:cmnd>
+        <ns1:ngayCap xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject" isNull="false">2013-11-23</ns1:ngayCap>
+        <ns1:noiCap xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject" isNull="false">Bencat</ns1:noiCap>
+        <ns1:tonGiao xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject" isNull="false">Khong</ns1:tonGiao>
+        <ns1:queQuan xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject" isNull="false">CAtben california</ns1:queQuan>
+        <ns1:choOHienTai xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject" isNull="false">BinhDuong</ns1:choOHienTai>
+        <ns1:email xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject" isNull="false">nguyenta12@gmail</ns1:email>
+        <ns1:soDienThoai xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject" isNull="false">09494924</ns1:soDienThoai>
+        <ns1:hinhAnh xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject" isNull="false">ANHCUOI</ns1:hinhAnh>
+        <ns1:chucVu xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject" isNull="false">Khong bit</ns1:chucVu>
+        <ns1:trinhDoVanHoa xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject" isNull="false">HocDai</ns1:trinhDoVanHoa>
+        <ns1:tinhTrangSucKhoe xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject" isNull="false">Khoe</ns1:tinhTrangSucKhoe>
+        <ns1:ngayVaoTruong xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject" isNull="false">2013-12-21</ns1:ngayVaoTruong>
+        <ns1:ketNapDoan xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject" isNull="false">t</ns1:ketNapDoan>
+        <ns1:ngayVaoDoan xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject" isNull="false">2017-05-14</ns1:ngayVaoDoan>
+        <ns1:ketNapDang xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject" isNull="false">f</ns1:ketNapDang>
+        <ns1:ngayVaoDang xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject" isNull="false">2008-11-15</ns1:ngayVaoDang>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">1</ns1:id>
+          <ns1:tenDanToc isNull="false">Kinh</ns1:tenDanToc>
+          <ns1:danTocThieuSo isNull="false">f</ns1:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:NguoiDung xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:id isNull="false">68</ns1:id>
+          <ns1:username isNull="false">Tran Thi hai Ba</ns1:username>
+          <ns1:password isNull="false">nguyenta12@gmail</ns1:password>
+          <ns1:ngayTao isNull="false">2008-03-23</ns1:ngayTao>
+        </ns1:NguoiDung>
+      </result>
+    </m:tracuuGVOperationResponse>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

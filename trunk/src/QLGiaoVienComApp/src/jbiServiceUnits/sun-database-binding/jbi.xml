@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jbi xmlns="http://java.sun.com/xml/ns/jbi" xmlns:ns1="QLGiaoVienComApp" xmlns:ns10="http://enterprise.netbeans.org/bpel/QuanLyGiaoVien/getLoptheokhoi" xmlns:ns11="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/them_giaovien" xmlns:ns12="http://enterprise.netbeans.org/bpel/QuanLyGiaoVien/phanLopChuNhiem" xmlns:ns13="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/insert_giaovienchunhiem" xmlns:ns14="http://enterprise.netbeans.org/bpel/QuanLyGiaoVien/getLopTrongNM" xmlns:ns15="http://enterprise.netbeans.org/bpel/QuanLyGiaoVien/LoadToBoMon" xmlns:ns16="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/DB_getToBoMon" xmlns:ns17="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/newWSDL" xmlns:ns18="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/DB_LoadDanToc" xmlns:ns19="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/tb_TK" xmlns:ns2="http://enterprise.netbeans.org/bpel/QuanLyGiaoVien/LoadDanToc" xmlns:ns20="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/get_loptheokhoilop" xmlns:ns21="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/DB_getLop" xmlns:ns3="http://enterprise.netbeans.org/bpel/QuanLyGiaoVien/tracuuGV" xmlns:ns4="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/tb_dantoc" xmlns:ns5="http://enterprise.netbeans.org/bpel/QuanLyGiaoVien/searchGV" xmlns:ns6="http://enterprise.netbeans.org/bpel/QuanLyGiaoVien/SuaGV" xmlns:ns7="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/updateGV" xmlns:ns8="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/tb_GV" xmlns:ns9="http://enterprise.netbeans.org/bpel/QuanLyGiaoVien/ThemGV" version="1.0">
+    <services binding-component="true">
+        <provides endpoint-name="port" interface-name="ns4:jdbcPortType" service-name="ns4:service"/>
+        <provides endpoint-name="port" interface-name="ns7:jdbcPortType" service-name="ns7:service"/>
+        <provides endpoint-name="port" interface-name="ns8:jdbcPortType" service-name="ns8:service"/>
+        <provides endpoint-name="port" interface-name="ns11:jdbcPortType" service-name="ns11:service"/>
+        <provides endpoint-name="port" interface-name="ns13:jdbcPortType" service-name="ns13:service"/>
+        <provides endpoint-name="port" interface-name="ns16:jdbcPortType" service-name="ns16:service"/>
+        <provides endpoint-name="port" interface-name="ns17:jdbcPortType" service-name="ns17:service"/>
+        <provides endpoint-name="port" interface-name="ns18:jdbcPortType" service-name="ns18:service"/>
+        <provides endpoint-name="port" interface-name="ns19:jdbcPortType" service-name="ns19:service"/>
+        <provides endpoint-name="port" interface-name="ns20:jdbcPortType" service-name="ns20:service"/>
+        <provides endpoint-name="port" interface-name="ns21:jdbcPortType" service-name="ns21:service"/>
+    </services>
+</jbi>

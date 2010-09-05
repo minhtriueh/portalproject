@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP-ENV:Body>
+    <m:LoadDanTocOperationResponse xmlns:m="QLGiaoVienComApp" xmlns:msgns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/LoadDanToc">
+      <danhsachDanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/mineXSD">
+          <ns2:id xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">1</ns2:id>
+          <ns2:tenDanToc xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">Kinh</ns2:tenDanToc>
+          <ns2:danTocThieuSo xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">f</ns2:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/mineXSD">
+          <ns2:id xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">2</ns2:id>
+          <ns2:tenDanToc xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">Tày</ns2:tenDanToc>
+          <ns2:danTocThieuSo xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">t</ns2:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/mineXSD">
+          <ns2:id xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">3</ns2:id>
+          <ns2:tenDanToc xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">Thái</ns2:tenDanToc>
+          <ns2:danTocThieuSo xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">t</ns2:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/mineXSD">
+          <ns2:id xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">4</ns2:id>
+          <ns2:tenDanToc xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">Mường</ns2:tenDanToc>
+          <ns2:danTocThieuSo xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">t</ns2:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/mineXSD">
+          <ns2:id xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">5</ns2:id>
+          <ns2:tenDanToc xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">Khmer</ns2:tenDanToc>
+          <ns2:danTocThieuSo xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">t</ns2:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/mineXSD">
+          <ns2:id xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">6</ns2:id>
+          <ns2:tenDanToc xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">Hoa</ns2:tenDanToc>
+          <ns2:danTocThieuSo xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">t</ns2:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/mineXSD">
+          <ns2:id xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">7</ns2:id>
+          <ns2:tenDanToc xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">Nùng</ns2:tenDanToc>
+          <ns2:danTocThieuSo xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">t</ns2:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/mineXSD">
+          <ns2:id xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">8</ns2:id>
+          <ns2:tenDanToc xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">Hmông</ns2:tenDanToc>
+          <ns2:danTocThieuSo xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">t</ns2:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/mineXSD">
+          <ns2:id xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">9</ns2:id>
+          <ns2:tenDanToc xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">Dao</ns2:tenDanToc>
+          <ns2:danTocThieuSo xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">t</ns2:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/mineXSD">
+          <ns2:id xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">10</ns2:id>
+          <ns2:tenDanToc xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">Giarai</ns2:tenDanToc>
+          <ns2:danTocThieuSo xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">t</ns2:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/mineXSD">
+          <ns2:id xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">11</ns2:id>
+          <ns2:tenDanToc xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">Êđê</ns2:tenDanToc>
+          <ns2:danTocThieuSo xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">t</ns2:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/mineXSD">
+          <ns2:id xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">12</ns2:id>
+          <ns2:tenDanToc xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">Chăm</ns2:tenDanToc>
+          <ns2:danTocThieuSo xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">t</ns2:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/mineXSD">
+          <ns2:id xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">13</ns2:id>
+          <ns2:tenDanToc xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">Sán Dìu</ns2:tenDanToc>
+          <ns2:danTocThieuSo xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">t</ns2:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/mineXSD">
+          <ns2:id xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">14</ns2:id>
+          <ns2:tenDanToc xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">Brâu</ns2:tenDanToc>
+          <ns2:danTocThieuSo xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">t</ns2:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/mineXSD">
+          <ns2:id xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">15</ns2:id>
+          <ns2:tenDanToc xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">Ơ đu</ns2:tenDanToc>
+          <ns2:danTocThieuSo xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">t</ns2:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/mineXSD">
+          <ns2:id xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">16</ns2:id>
+          <ns2:tenDanToc xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">Rơ Măm</ns2:tenDanToc>
+          <ns2:danTocThieuSo xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">t</ns2:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/mineXSD">
+          <ns2:id xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">17</ns2:id>
+          <ns2:tenDanToc xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">Chứt</ns2:tenDanToc>
+          <ns2:danTocThieuSo xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">t</ns2:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/mineXSD">
+          <ns2:id xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">18</ns2:id>
+          <ns2:tenDanToc xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">Bố Y</ns2:tenDanToc>
+          <ns2:danTocThieuSo xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">t</ns2:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/mineXSD">
+          <ns2:id xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">19</ns2:id>
+          <ns2:tenDanToc xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">Giáy</ns2:tenDanToc>
+          <ns2:danTocThieuSo xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">t</ns2:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/mineXSD">
+          <ns2:id xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">20</ns2:id>
+          <ns2:tenDanToc xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">Lào</ns2:tenDanToc>
+          <ns2:danTocThieuSo xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">t</ns2:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/mineXSD">
+          <ns2:id xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">21</ns2:id>
+          <ns2:tenDanToc xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">Lự</ns2:tenDanToc>
+          <ns2:danTocThieuSo xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">t</ns2:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/mineXSD">
+          <ns2:id xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">22</ns2:id>
+          <ns2:tenDanToc xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">Sán Chay</ns2:tenDanToc>
+          <ns2:danTocThieuSo xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">t</ns2:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/mineXSD">
+          <ns2:id xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">23</ns2:id>
+          <ns2:tenDanToc xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">Ba na</ns2:tenDanToc>
+          <ns2:danTocThieuSo xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">t</ns2:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/mineXSD">
+          <ns2:id xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">24</ns2:id>
+          <ns2:tenDanToc xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">Bru-Vân kiều</ns2:tenDanToc>
+          <ns2:danTocThieuSo xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">t</ns2:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/mineXSD">
+          <ns2:id xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">25</ns2:id>
+          <ns2:tenDanToc xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">Chơ-ro</ns2:tenDanToc>
+          <ns2:danTocThieuSo xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">t</ns2:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/mineXSD">
+          <ns2:id xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">26</ns2:id>
+          <ns2:tenDanToc xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">Co</ns2:tenDanToc>
+          <ns2:danTocThieuSo xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">t</ns2:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/mineXSD">
+          <ns2:id xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">27</ns2:id>
+          <ns2:tenDanToc xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">Cơ-ho</ns2:tenDanToc>
+          <ns2:danTocThieuSo xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">t</ns2:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/mineXSD">
+          <ns2:id xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">28</ns2:id>
+          <ns2:tenDanToc xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">Cơ-tu</ns2:tenDanToc>
+          <ns2:danTocThieuSo xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">t</ns2:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/mineXSD">
+          <ns2:id xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">29</ns2:id>
+          <ns2:tenDanToc xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">Gié-triêng</ns2:tenDanToc>
+          <ns2:danTocThieuSo xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">t</ns2:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/mineXSD">
+          <ns2:id xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">30</ns2:id>
+          <ns2:tenDanToc xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">Hrê</ns2:tenDanToc>
+          <ns2:danTocThieuSo xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">t</ns2:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/mineXSD">
+          <ns2:id xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">31</ns2:id>
+          <ns2:tenDanToc xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">Kháng</ns2:tenDanToc>
+          <ns2:danTocThieuSo xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">t</ns2:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/mineXSD">
+          <ns2:id xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">32</ns2:id>
+          <ns2:tenDanToc xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">Khơ mú</ns2:tenDanToc>
+          <ns2:danTocThieuSo xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">t</ns2:danTocThieuSo>
+        </ns1:DanToc>
+        <ns1:DanToc xmlns:ns1="http://xml.netbeans.org/schema/mineXSD">
+          <ns2:id xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">33</ns2:id>
+          <ns2:tenDanToc xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">Mạ</ns2:tenDanToc>
+          <ns2:danTocThieuSo xmlns:ns2="http://xml.netbeans.org/schema/QLGV_EschoolinkObject" isNull="false">t</ns2:danTocThieuSo>
+        </ns1:DanToc>
+      </danhsachDanToc>
+    </m:LoadDanTocOperationResponse>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
