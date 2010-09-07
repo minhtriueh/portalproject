@@ -19,7 +19,7 @@
     <script type="text/javascript" src="Demo/form/cssform.js"></script> -->
 
     <!--css table -->
-    <link rel="stylesheet" href="table.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="StyleTable.css" type="text/css" media="screen" />
 
     <!--script thu vien mootools -->
     <script type="text/javascript" src="mootools.js"></script>
