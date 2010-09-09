@@ -173,6 +173,32 @@
     <system systemId="http://bon-3b5d94780e2.lan:9080/QLHocBaComApp-sun-http-binding/QuanlyHocBa/WSDL/capnhathanhkiem.wsdl" uri="wsdl/bon-3b5d94780e2.lan_9080/QLHocBaComApp-sun-http-binding/QuanlyHocBa/WSDL/capnhathanhkiem.wsdl"/>
     <system systemId="http://bon-3b5d94780e2.lan:9080/QLHocBaComApp-sun-http-binding/QuanlyHocBa/XSD/mine.xsd" uri="wsdl/bon-3b5d94780e2.lan_9080/QLHocBaComApp-sun-http-binding/QuanlyHocBa/XSD/mine.xsd"/>
     <system systemId="http://bon-3b5d94780e2.lan:9080/QLHocBaComApp-sun-http-binding/QuanlyHocBa/XSD/Dang_EschoolinkObject.xsd" uri="wsdl/bon-3b5d94780e2.lan_9080/QLHocBaComApp-sun-http-binding/QuanlyHocBa/XSD/Dang_EschoolinkObject.xsd"/>
+    <system systemId="http://nguyentanmo-PC:9080/QLHocBaComApp-sun-http-binding/QuanlyHocBa/WSDL/xoahocsinhbohoc.wsdl" uri="wsdl/nguyentanmo-PC_9080/QLHocBaComApp-sun-http-binding/QuanlyHocBa/WSDL/xoahocsinhbohoc.wsdl"/>
+    <system systemId="http://nguyentanmo-PC:9080/QLHocBaComApp-sun-http-binding/QuanlyHocBa/WSDL/themhocsinhbohoc.wsdl" uri="wsdl/nguyentanmo-PC_9080/QLHocBaComApp-sun-http-binding/QuanlyHocBa/WSDL/themhocsinhbohoc.wsdl"/>
+    <system systemId="http://nguyentanmo-PC:9080/QLHocBaComApp-sun-http-binding/QuanlyHocBa/WSDL/loadLopTheoKhoiLopVaNamHoc.wsdl" uri="wsdl/nguyentanmo-PC_9080/QLHocBaComApp-sun-http-binding/QuanlyHocBa/WSDL/loadLopTheoKhoiLopVaNamHoc.wsdl"/>
+    <system systemId="http://nguyentanmo-PC:9080/QLHocBaComApp-sun-http-binding/QuanlyHocBa/WSDL/loadNamHoc.wsdl" uri="wsdl/nguyentanmo-PC_9080/QLHocBaComApp-sun-http-binding/QuanlyHocBa/WSDL/loadNamHoc.wsdl"/>
+    <system systemId="http://nguyentanmo-PC:9080/QLHocBaComApp-sun-http-binding/QuanlyHocBa/WSDL/chinhsuahocba.wsdl" uri="wsdl/nguyentanmo-PC_9080/QLHocBaComApp-sun-http-binding/QuanlyHocBa/WSDL/chinhsuahocba.wsdl"/>
+    <system systemId="http://nguyentanmo-PC:9080/QLHocBaComApp-sun-http-binding/QuanlyHocBa/WSDL/laydanhsachhocsinhbohoc.wsdl" uri="wsdl/nguyentanmo-PC_9080/QLHocBaComApp-sun-http-binding/QuanlyHocBa/WSDL/laydanhsachhocsinhbohoc.wsdl"/>
+    <system systemId="http://nguyentanmo-PC:9080/QLHocBaComApp-sun-http-binding/QuanlyHocBa/WSDL/tracuuhocbatheohocky.wsdl" uri="wsdl/nguyentanmo-PC_9080/QLHocBaComApp-sun-http-binding/QuanlyHocBa/WSDL/tracuuhocbatheohocky.wsdl"/>
+    <system systemId="http://nguyentanmo-PC:9080/QLHocBaComApp-sun-http-binding/QuanlyHocBa/WSDL/TraCuuHocBaHocTheoHK.wsdl" uri="wsdl/nguyentanmo-PC_9080/QLHocBaComApp-sun-http-binding/QuanlyHocBa/WSDL/TraCuuHocBaHocTheoHK.wsdl"/>
+    <system systemId="http://nguyentanmo-PC:9080/QLHocBaComApp-sun-http-binding/QuanlyHocBa/WSDL/tracuuhocbacanam.wsdl" uri="wsdl/nguyentanmo-PC_9080/QLHocBaComApp-sun-http-binding/QuanlyHocBa/WSDL/tracuuhocbacanam.wsdl"/>
+    <system systemId="http://nguyentanmo-PC:9080/QLHocBaComApp-sun-http-binding/QuanlyHocBa/WSDL/loadHanhKiem.wsdl" uri="wsdl/nguyentanmo-PC_9080/QLHocBaComApp-sun-http-binding/QuanlyHocBa/WSDL/loadHanhKiem.wsdl"/>
+    <system systemId="http://nguyentanmo-PC:9080/QLHocBaComApp-sun-http-binding/QuanlyHocBa/WSDL/loadHocLuc.wsdl" uri="wsdl/nguyentanmo-PC_9080/QLHocBaComApp-sun-http-binding/QuanlyHocBa/WSDL/loadHocLuc.wsdl"/>
+    <system systemId="http://nguyentanmo-PC:9080/QLHocBaComApp-sun-http-binding/QuanlyHocBa/WSDL/capnhathanhkiem.wsdl" uri="wsdl/nguyentanmo-PC_9080/QLHocBaComApp-sun-http-binding/QuanlyHocBa/WSDL/capnhathanhkiem.wsdl"/>
+    <system systemId="http://nguyentanmo-PC:9080/QLHocBaComApp-sun-http-binding/QuanlyHocBa/XSD/mine.xsd" uri="wsdl/nguyentanmo-PC_9080/QLHocBaComApp-sun-http-binding/QuanlyHocBa/XSD/mine.xsd"/>
+    <system systemId="http://nguyentanmo-PC:9080/QLHocBaComApp-sun-http-binding/QuanlyHocBa/XSD/Dang_EschoolinkObject.xsd" uri="wsdl/nguyentanmo-PC_9080/QLHocBaComApp-sun-http-binding/QuanlyHocBa/XSD/Dang_EschoolinkObject.xsd"/>
+    <system systemId="http://nguyentanmo-PC:9080/QLGiaoVienComApp-sun-http-binding/QuanLyGiaoVien/interface_WSDL/tracuuGV.wsdl" uri="wsdl/nguyentanmo-PC_9080/QLGiaoVienComApp-sun-http-binding/QuanLyGiaoVien/interface_WSDL/tracuuGV.wsdl"/>
+    <system systemId="http://nguyentanmo-PC:9080/QLGiaoVienComApp-sun-http-binding/QuanLyGiaoVien/interface_WSDL/LoadDanToc.wsdl" uri="wsdl/nguyentanmo-PC_9080/QLGiaoVienComApp-sun-http-binding/QuanLyGiaoVien/interface_WSDL/LoadDanToc.wsdl"/>
+    <system systemId="http://nguyentanmo-PC:9080/QLGiaoVienComApp-sun-http-binding/QuanLyGiaoVien/interface_WSDL/themGV.wsdl" uri="wsdl/nguyentanmo-PC_9080/QLGiaoVienComApp-sun-http-binding/QuanLyGiaoVien/interface_WSDL/themGV.wsdl"/>
+    <system systemId="http://nguyentanmo-PC:9080/QLGiaoVienComApp-sun-http-binding/QuanLyGiaoVien/interface_WSDL/LoadToBoMon.wsdl" uri="wsdl/nguyentanmo-PC_9080/QLGiaoVienComApp-sun-http-binding/QuanLyGiaoVien/interface_WSDL/LoadToBoMon.wsdl"/>
+    <system systemId="http://nguyentanmo-PC:9080/QLGiaoVienComApp-sun-http-binding/QuanLyGiaoVien/interface_WSDL/phanLopChuNhiem.wsdl" uri="wsdl/nguyentanmo-PC_9080/QLGiaoVienComApp-sun-http-binding/QuanLyGiaoVien/interface_WSDL/phanLopChuNhiem.wsdl"/>
+    <system systemId="http://nguyentanmo-PC:9080/QLGiaoVienComApp-sun-http-binding/QuanLyGiaoVien/interface_WSDL/searchGV.wsdl" uri="wsdl/nguyentanmo-PC_9080/QLGiaoVienComApp-sun-http-binding/QuanLyGiaoVien/interface_WSDL/searchGV.wsdl"/>
+    <system systemId="http://nguyentanmo-PC:9080/QLGiaoVienComApp-sun-http-binding/QuanLyGiaoVien/interface_WSDL/getLopbyTheoKhoi.wsdl" uri="wsdl/nguyentanmo-PC_9080/QLGiaoVienComApp-sun-http-binding/QuanLyGiaoVien/interface_WSDL/getLopbyTheoKhoi.wsdl"/>
+    <system systemId="http://nguyentanmo-PC:9080/QLGiaoVienComApp-sun-http-binding/QuanLyGiaoVien/interface_WSDL/SuaGV.wsdl" uri="wsdl/nguyentanmo-PC_9080/QLGiaoVienComApp-sun-http-binding/QuanLyGiaoVien/interface_WSDL/SuaGV.wsdl"/>
+    <system systemId="http://nguyentanmo-PC:9080/QLGiaoVienComApp-sun-http-binding/QuanLyGiaoVien/interface_WSDL/getLopTrongNM.wsdl" uri="wsdl/nguyentanmo-PC_9080/QLGiaoVienComApp-sun-http-binding/QuanLyGiaoVien/interface_WSDL/getLopTrongNM.wsdl"/>
+    <system systemId="http://nguyentanmo-PC:9080/QLGiaoVienComApp-sun-http-binding/QuanLyGiaoVien/DB_WSDL/giaovien.xsd" uri="wsdl/nguyentanmo-PC_9080/QLGiaoVienComApp-sun-http-binding/QuanLyGiaoVien/DB_WSDL/giaovien.xsd"/>
+    <system systemId="http://nguyentanmo-PC:9080/QLGiaoVienComApp-sun-http-binding/QuanLyGiaoVien/XSD_XML_Object/EschoolinkObject_Dang.xsd" uri="wsdl/nguyentanmo-PC_9080/QLGiaoVienComApp-sun-http-binding/QuanLyGiaoVien/XSD_XML_Object/EschoolinkObject_Dang.xsd"/>
+    <system systemId="http://nguyentanmo-PC:9080/QLGiaoVienComApp-sun-http-binding/QuanLyGiaoVien/XSD_XML_Object/mineXSD.xsd" uri="wsdl/nguyentanmo-PC_9080/QLGiaoVienComApp-sun-http-binding/QuanLyGiaoVien/XSD_XML_Object/mineXSD.xsd"/>
 </catalog>
 
 
@@ -229,6 +255,12 @@
 
 =======
 >>>>>>> .r208
+
+
+
+
+
+
 
 
 
