@@ -84,6 +84,7 @@
                 <li><a href="#">Sổ điểm môn học</a>
                     <ul>
                         <li><a href="BatDauNhapDiem">Nhập Điểm</a></li>
+                        <li><a href="TongKetDiem">Tổng Kết Điểm</a></li>
                     </ul>
                 </li>
             </ul>
