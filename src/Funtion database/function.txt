@@ -383,12 +383,13 @@ end;
 $$language plpgsql;
 
 ------------------------------------------
-insert_giaovienchunhiem(_idgiaovien bigint,_idlop bigint) returns boolean AS $$
+create or replace function insert_giaovienchunhiem(_idgiaovien bigint,_idlop bigint) returns boolean AS $$
 declare
 insert1_result boolean :=false;
 begin
-	INSERT INTO giaovien_lop(
-            giaoviens_id_giaovien, lops_id_lop)
+	
+	INSERT INTO giaovienchunhiem_lop(
+            id_giaovienchunhiem, id_lop)
 	VALUES ($1, $2);
 	if found=true 
 	then INSERT INTO giaovienchunhiem(
@@ -402,5 +403,46 @@ begin
 end;
 $$language plpgSQL;
 
+----------------------------------------------------
+	create or replace function update_hocba(_id_hocba bigint,_diemtrungbinh double precision,_lenlophaykhong boolean,_nhanxet char,_id_hocluc bigint,_id_namhoc bigint,_id_hanhkiem bigint,_id_lop bigint) returns boolean AS $$
 
+	declare 
+	result boolean:=false;
+	begin
 
+	UPDATE hocba
+	   SET diemtrungbinh=$2,lenlophayko=$3, nhanxet=$4, 
+	       id_hocluc=$5, id_hanhkiem=$7, id_namhoc=$6,id_lop=$8
+	 WHERE id_hocba=$1;
+	    if found=true then result:=true;
+	    end if;
+		return result;
+	end;
+
+	$$language plpgSQL
+----------------------------------------------
+-- Function: them_giaovienvaohethong(character, character, character, character, character, character, boolean, boolean, date, date, date, date, date, character, character, character, character, character, character, character, character, bigint, bigint, date, character, character)
+
+-- DROP FUNCTION them_giaovienvaohethong(character, character, character, character, character, character, boolean, boolean, date, date, date, date, date, character, character, character, character, character, character, character, character, bigint, bigint, date, character, character);
+
+CREATE OR REPLACE FUNCTION them_giaovienvaohethong(choohientai character, chucvu character, cmnd character, email character, gioitinh character, hinhanh character, ketnapdang boolean, ketnapdoan boolean, ngaycap date, ngaysinh date, ngayvaodang date, ngayvaodoan date, ngayvaotruong date, noicap character, quequan character, sodienthoai character, tengiaovien character, tinhtrangsuckhoe character, tongiao character, trinhdodaotao character, trinhdovanhoa character, id_dantoc bigint, id_tobomon bigint, ngaytao date, username character, passwd character)
+  RETURNS bigint AS
+$BODY$
+declare 
+ id_nguoidung bigint;
+ id_giaovien bigint;
+begin
+	id_nguoidung=inserttk($24,$25,$26);
+	
+	id_giaovien=insertgiaovien($1, $2, $3, $4, $5, $6, 
+            $7, $8, $9, $10, $11, $12, 
+            $13, $14, $15, $16, $17, $18, 
+            $19, $20, $21,id_nguoidung , $22, 
+            $23) ;
+            return id_giaovien;
+end;
+$BODY$
+  LANGUAGE 'plpgsql' VOLATILE
+  COST 100;
+ALTER FUNCTION them_giaovienvaohethong(character, character, character, character, character, character, boolean, boolean, date, date, date, date, date, character, character, character, character, character, character, character, character, bigint, bigint, date, character, character) OWNER TO postgres;
+----------------------------------------------
