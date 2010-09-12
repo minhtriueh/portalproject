@@ -200,6 +200,7 @@
     <system systemId="http://nguyentanmo-PC:9080/QLGiaoVienComApp-sun-http-binding/QuanLyGiaoVien/XSD_XML_Object/EschoolinkObject_Dang.xsd" uri="wsdl/nguyentanmo-PC_9080/QLGiaoVienComApp-sun-http-binding/QuanLyGiaoVien/XSD_XML_Object/EschoolinkObject_Dang.xsd"/>
     <system systemId="http://nguyentanmo-PC:9080/QLGiaoVienComApp-sun-http-binding/QuanLyGiaoVien/XSD_XML_Object/mineXSD.xsd" uri="wsdl/nguyentanmo-PC_9080/QLGiaoVienComApp-sun-http-binding/QuanLyGiaoVien/XSD_XML_Object/mineXSD.xsd"/>
     <system systemId="http://nguyentanmo-PC:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/LayLopChoGiaoVienChuNhiem.wsdl" uri="wsdl/nguyentanmo-PC_18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/LayLopChoGiaoVienChuNhiem.wsdl"/>
+    <system systemId="http://nguyentanmo-PC:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/LayDanhSachHocSinhByIdLop.wsdl" uri="wsdl/nguyentanmo-PC_18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/LayDanhSachHocSinhByIdLop.wsdl"/>
 </catalog>
 
 
@@ -256,6 +257,9 @@
 
 =======
 >>>>>>> .r208
+
+
+
 
 
 
