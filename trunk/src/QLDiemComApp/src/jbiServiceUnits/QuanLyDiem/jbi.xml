@@ -1,295 +1,305 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<jbi xmlns="http://java.sun.com/xml/ns/jbi" xmlns:ns0="http://enterprise.netbeans.org/bpel/QuanLyDiem/LayDanhSachCotDiem" xmlns:ns1="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachCotDiem" xmlns:ns10="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachHeSo" xmlns:ns11="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachHeSo" xmlns:ns12="http://enterprise.netbeans.org/bpel/QuanLyDiem/LayDanhSachHeSoCotDiem" xmlns:ns13="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachHeSoCotDiem" xmlns:ns14="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachHeSoCotDiem" xmlns:ns15="http://enterprise.netbeans.org/bpel/QuanLyDiem/LayDanhSachLopGiaoVienDay" xmlns:ns16="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachLopGiaoVienDay" xmlns:ns17="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachLopGiaoVienDay" xmlns:ns18="http://enterprise.netbeans.org/bpel/QuanLyDiem/LayDanhSachMonHocCuaGiaoVien" xmlns:ns19="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachMonHocCuaGiaoVien" xmlns:ns2="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachCotDiem" xmlns:ns20="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachMonHocCuaGiaoVien" xmlns:ns21="http://enterprise.netbeans.org/bpel/QuanLyDiem/LayDanhSachMonHocCuaLop" xmlns:ns22="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachMonHocCuaLop" xmlns:ns23="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachMonHocCuaLop" xmlns:ns24="http://enterprise.netbeans.org/bpel/QuanLyDiem/LayDiemTrungBinhCuaHocSinh" xmlns:ns25="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDiemTrungBinhCuaHocSinh" xmlns:ns26="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDiemTrungBinhCuaHocSinh" xmlns:ns27="http://enterprise.netbeans.org/bpel/QuanLyDiem/LayIdNamHocMoiNhat" xmlns:ns28="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayIdNamHocMoi" xmlns:ns29="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayIdNamHocMoi" xmlns:ns3="http://enterprise.netbeans.org/bpel/QuanLyDiem/LayDanhSachDiemCuaChiTietSoDiem" xmlns:ns30="http://enterprise.netbeans.org/bpel/QuanLyDiem/LoadSoDiem" xmlns:ns31="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LoadSoDiem" xmlns:ns32="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LoadSoDiem" xmlns:ns33="http://enterprise.netbeans.org/bpel/QuanLyDiem/LuuDiem" xmlns:ns34="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LuuDiem" xmlns:ns35="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LuuDiem" xmlns:ns36="http://enterprise.netbeans.org/bpel/QuanLyDiem/LuuDiemHocBa" xmlns:ns37="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LuuDiemHocBa" xmlns:ns38="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LuuDiemHocBa" xmlns:ns39="http://enterprise.netbeans.org/bpel/QuanLyDiem/NhapDiem" xmlns:ns4="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachDiemCuaChiTietSoDiem" xmlns:ns40="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_SuaDiem" xmlns:ns41="http://j2ee.netbeans.org/wsdl/QuanLyDiem/NhapDiem" xmlns:ns42="http://enterprise.netbeans.org/bpel/QuanLyDiem/TaoLoaiDiem" xmlns:ns43="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TaoLoaiDiem" xmlns:ns44="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoLoaiDiem" xmlns:ns45="http://enterprise.netbeans.org/bpel/QuanLyDiem/TaoNamHocMoi" xmlns:ns46="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DBTaoNamHocMoi" xmlns:ns47="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoNamHocMoi" xmlns:ns48="http://enterprise.netbeans.org/bpel/QuanLyDiem/TaoSoDiem" xmlns:ns49="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TaoSoDiem" xmlns:ns5="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachDiemCuaChiTietSoDiem" xmlns:ns50="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachHocSinhTuIdLop" xmlns:ns51="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachLoaiDiem" xmlns:ns52="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TaoChiTietSoDiem" xmlns:ns53="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TaoDiem" xmlns:ns54="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoSoDiem" xmlns:ns55="http://enterprise.netbeans.org/bpel/QuanLyDiem/ThemDanhSachLoaiDiem" xmlns:ns56="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_ThemDanhSachLoaiDiem" xmlns:ns57="http://j2ee.netbeans.org/wsdl/QuanLyDiem/ThemDanhSachLoaiDiem" xmlns:ns58="http://enterprise.netbeans.org/bpel/QuanLyDiem/TimIdHocSinhByMshs" xmlns:ns59="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TimIdHocSinhByMshs" xmlns:ns6="http://enterprise.netbeans.org/bpel/QuanLyDiem/LayDanhSachDiemCuaHocSinhByMonHoc" xmlns:ns60="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TimIdHocSinhByMshs" xmlns:ns61="http://enterprise.netbeans.org/bpel/QuanLyDiem/TimIdLopByMshs" xmlns:ns62="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TimIdLopByMshs" xmlns:ns63="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TimIdLopByMshs" xmlns:ns64="http://enterprise.netbeans.org/bpel/QuanLyDiem/TimIdLopByTenLop" xmlns:ns65="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TimIdLopByTenLop" xmlns:ns66="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TimIdLopByTenLop" xmlns:ns67="http://enterprise.netbeans.org/bpel/QuanLyDiem/TimIdMonHocByTenMonHoc" xmlns:ns68="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TimIdMonHocByTenMonHoc" xmlns:ns69="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TimIdMonHocByTenMonHoc" xmlns:ns7="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachDiemCuaHocSinhByMonHoc" xmlns:ns70="http://enterprise.netbeans.org/bpel/QuanLyDiem/TimTenHocSinhByIdHocSinh" xmlns:ns71="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TimTenHocSinhByIdHocSinh" xmlns:ns72="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TimTenHocSinhByIdHocSinh" xmlns:ns73="http://enterprise.netbeans.org/bpel/QuanLyDiem/TinhDiemTrungBinh" xmlns:ns74="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_SuaDiemTrungBinh" xmlns:ns75="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TinhDiemTrungBinh" xmlns:ns76="http://enterprise.netbeans.org/bpel/QuanLyDiem/TongKetDiem" xmlns:ns77="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_DanhSachDiemTrungBinh" xmlns:ns78="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TongKetDiem" xmlns:ns79="http://enterprise.netbeans.org/bpel/QuanLyDiem/XemDiem" xmlns:ns8="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachDiemCuaHocSinhByMonHoc" xmlns:ns80="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachDiemCuaHocSinh" xmlns:ns81="http://j2ee.netbeans.org/wsdl/QuanLyDiem/XemDiem" xmlns:ns82="http://enterprise.netbeans.org/bpel/QuanLyThiDuaLenLop/XetLenLop" xmlns:ns83="http://j2ee.netbeans.org/wsdl/QuanLyThiDuaLenLop/DB_XetLenLop" xmlns:ns84="http://j2ee.netbeans.org/wsdl/QuanLyThiDuaLenLop/XetLenLop" xmlns:ns85="http://www.sun.com/jbi/descriptor/service-unit" xmlns:ns9="http://enterprise.netbeans.org/bpel/QuanLyDiem/LayDanhSachHeSo" version="1.0">
+<jbi xmlns="http://java.sun.com/xml/ns/jbi" xmlns:ns0="http://enterprise.netbeans.org/bpel/QuanLyDiem/LayDanhSachCotDiem" xmlns:ns1="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachCotDiem" xmlns:ns10="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachHeSo" xmlns:ns11="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachHeSo" xmlns:ns12="http://enterprise.netbeans.org/bpel/QuanLyDiem/LayDanhSachHeSoCotDiem" xmlns:ns13="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachHeSoCotDiem" xmlns:ns14="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachHeSoCotDiem" xmlns:ns15="http://enterprise.netbeans.org/bpel/QuanLyDiem/LayDanhSachLopGiaoVienDay" xmlns:ns16="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachLopGiaoVienDay" xmlns:ns17="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachLopGiaoVienDay" xmlns:ns18="http://enterprise.netbeans.org/bpel/QuanLyDiem/LayDanhSachMonHocCuaGiaoVien" xmlns:ns19="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachMonHocCuaGiaoVien" xmlns:ns2="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachCotDiem" xmlns:ns20="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachMonHocCuaGiaoVien" xmlns:ns21="http://enterprise.netbeans.org/bpel/QuanLyDiem/LayDanhSachMonHocCuaLop" xmlns:ns22="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachMonHocCuaLop" xmlns:ns23="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachMonHocCuaLop" xmlns:ns24="http://enterprise.netbeans.org/bpel/QuanLyDiem/LayDiemTrungBinhCuaHocSinh" xmlns:ns25="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDiemTrungBinhCuaHocSinh" xmlns:ns26="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDiemTrungBinhCuaHocSinh" xmlns:ns27="http://enterprise.netbeans.org/bpel/QuanLyDiem/LayIdNamHocMoiNhat" xmlns:ns28="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayIdNamHocMoi" xmlns:ns29="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayIdNamHocMoi" xmlns:ns3="http://enterprise.netbeans.org/bpel/QuanLyDiem/LayDanhSachDiemCuaChiTietSoDiem" xmlns:ns30="http://enterprise.netbeans.org/bpel/QuanLyDiem/LayLopChoGiaoVienChuNhiem" xmlns:ns31="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayIdLopByIdGiaoVienChuNhiem" xmlns:ns32="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayLopChoGiaoVienChuNhiem" xmlns:ns33="http://enterprise.netbeans.org/bpel/QuanLyDiem/LoadSoDiem" xmlns:ns34="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LoadSoDiem" xmlns:ns35="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LoadSoDiem" xmlns:ns36="http://enterprise.netbeans.org/bpel/QuanLyDiem/LuuDiem" xmlns:ns37="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LuuDiem" xmlns:ns38="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LuuDiem" xmlns:ns39="http://enterprise.netbeans.org/bpel/QuanLyDiem/LuuDiemHocBa" xmlns:ns4="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachDiemCuaChiTietSoDiem" xmlns:ns40="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LuuDiemHocBa" xmlns:ns41="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LuuDiemHocBa" xmlns:ns42="http://enterprise.netbeans.org/bpel/QuanLyDiem/NhapDiem" xmlns:ns43="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_SuaDiem" xmlns:ns44="http://j2ee.netbeans.org/wsdl/QuanLyDiem/NhapDiem" xmlns:ns45="http://enterprise.netbeans.org/bpel/QuanLyDiem/TaoLoaiDiem" xmlns:ns46="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TaoLoaiDiem" xmlns:ns47="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoLoaiDiem" xmlns:ns48="http://enterprise.netbeans.org/bpel/QuanLyDiem/TaoNamHocMoi" xmlns:ns49="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DBTaoNamHocMoi" xmlns:ns5="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachDiemCuaChiTietSoDiem" xmlns:ns50="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoNamHocMoi" xmlns:ns51="http://enterprise.netbeans.org/bpel/QuanLyDiem/TaoSoDiem" xmlns:ns52="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TaoSoDiem" xmlns:ns53="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachHocSinhTuIdLop" xmlns:ns54="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachLoaiDiem" xmlns:ns55="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TaoChiTietSoDiem" xmlns:ns56="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TaoDiem" xmlns:ns57="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoSoDiem" xmlns:ns58="http://enterprise.netbeans.org/bpel/QuanLyDiem/ThemDanhSachLoaiDiem" xmlns:ns59="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_ThemDanhSachLoaiDiem" xmlns:ns6="http://enterprise.netbeans.org/bpel/QuanLyDiem/LayDanhSachDiemCuaHocSinhByMonHoc" xmlns:ns60="http://j2ee.netbeans.org/wsdl/QuanLyDiem/ThemDanhSachLoaiDiem" xmlns:ns61="http://enterprise.netbeans.org/bpel/QuanLyDiem/TimIdHocSinhByMshs" xmlns:ns62="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TimIdHocSinhByMshs" xmlns:ns63="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TimIdHocSinhByMshs" xmlns:ns64="http://enterprise.netbeans.org/bpel/QuanLyDiem/TimIdLopByMshs" xmlns:ns65="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TimIdLopByMshs" xmlns:ns66="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TimIdLopByMshs" xmlns:ns67="http://enterprise.netbeans.org/bpel/QuanLyDiem/TimIdLopByTenLop" xmlns:ns68="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TimIdLopByTenLop" xmlns:ns69="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TimIdLopByTenLop" xmlns:ns7="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachDiemCuaHocSinhByMonHoc" xmlns:ns70="http://enterprise.netbeans.org/bpel/QuanLyDiem/TimIdMonHocByTenMonHoc" xmlns:ns71="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TimIdMonHocByTenMonHoc" xmlns:ns72="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TimIdMonHocByTenMonHoc" xmlns:ns73="http://enterprise.netbeans.org/bpel/QuanLyDiem/TimTenHocSinhByIdHocSinh" xmlns:ns74="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_TimTenHocSinhByIdHocSinh" xmlns:ns75="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TimTenHocSinhByIdHocSinh" xmlns:ns76="http://enterprise.netbeans.org/bpel/QuanLyDiem/TinhDiemTrungBinh" xmlns:ns77="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_SuaDiemTrungBinh" xmlns:ns78="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TinhDiemTrungBinh" xmlns:ns79="http://enterprise.netbeans.org/bpel/QuanLyDiem/TongKetDiem" xmlns:ns8="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachDiemCuaHocSinhByMonHoc" xmlns:ns80="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_DanhSachDiemTrungBinh" xmlns:ns81="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TongKetDiem" xmlns:ns82="http://enterprise.netbeans.org/bpel/QuanLyDiem/XemDiem" xmlns:ns83="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachDiemCuaHocSinh" xmlns:ns84="http://j2ee.netbeans.org/wsdl/QuanLyDiem/XemDiem" xmlns:ns85="http://enterprise.netbeans.org/bpel/QuanLyThiDuaLenLop/XetLenLop" xmlns:ns86="http://j2ee.netbeans.org/wsdl/QuanLyThiDuaLenLop/DB_XetLenLop" xmlns:ns87="http://j2ee.netbeans.org/wsdl/QuanLyThiDuaLenLop/XetLenLop" xmlns:ns88="http://www.sun.com/jbi/descriptor/service-unit" xmlns:ns9="http://enterprise.netbeans.org/bpel/QuanLyDiem/LayDanhSachHeSo" version="1.0">
     <services binding-component="false">
         <provides endpoint-name="LayDanhSachCotDiemPortTypeRole_myRole" interface-name="ns2:LayDanhSachCotDiemPortType" service-name="ns0:PL_LayDanhSachCotDiem">
-            <ns85:display-name>PL_LayDanhSachCotDiem</ns85:display-name>
-            <ns85:process-name>LayDanhSachCotDiem</ns85:process-name>
-            <ns85:file-path>processor_BPEL\LayDanhSachCotDiem.bpel</ns85:file-path>
+            <ns88:display-name>PL_LayDanhSachCotDiem</ns88:display-name>
+            <ns88:process-name>LayDanhSachCotDiem</ns88:process-name>
+            <ns88:file-path>processor_BPEL\LayDanhSachCotDiem.bpel</ns88:file-path>
         </provides>
         <provides endpoint-name="LayDanhSachDiemCuaChiTietSoDiemPortTypeRole_myRole" interface-name="ns5:LayDanhSachDiemCuaChiTietSoDiemPortType" service-name="ns3:PL_LayDanhSachDiemCuaChiTietSoDiem">
-            <ns85:display-name>PL_LayDanhSachDiemCuaChiTietSoDiem</ns85:display-name>
-            <ns85:process-name>LayDanhSachDiemCuaChiTietSoDiem</ns85:process-name>
-            <ns85:file-path>processor_BPEL\LayDanhSachDiemCuaChiTietSoDiem.bpel</ns85:file-path>
+            <ns88:display-name>PL_LayDanhSachDiemCuaChiTietSoDiem</ns88:display-name>
+            <ns88:process-name>LayDanhSachDiemCuaChiTietSoDiem</ns88:process-name>
+            <ns88:file-path>processor_BPEL\LayDanhSachDiemCuaChiTietSoDiem.bpel</ns88:file-path>
         </provides>
         <provides endpoint-name="LayDanhSachDiemCuaHocSinhByMonHocPortTypeRole_myRole" interface-name="ns8:LayDanhSachDiemCuaHocSinhByMonHocPortType" service-name="ns6:PL_LayDanhSachDiemCuaHocSinhByMonHoc">
-            <ns85:display-name>PL_LayDanhSachDiemCuaHocSinhByMonHoc</ns85:display-name>
-            <ns85:process-name>LayDanhSachDiemCuaHocSinhByMonHoc</ns85:process-name>
-            <ns85:file-path>processor_BPEL\LayDanhSachDiemCuaHocSinhByMonHoc.bpel</ns85:file-path>
+            <ns88:display-name>PL_LayDanhSachDiemCuaHocSinhByMonHoc</ns88:display-name>
+            <ns88:process-name>LayDanhSachDiemCuaHocSinhByMonHoc</ns88:process-name>
+            <ns88:file-path>processor_BPEL\LayDanhSachDiemCuaHocSinhByMonHoc.bpel</ns88:file-path>
         </provides>
         <provides endpoint-name="LayDanhSachHeSoPortTypeRole_myRole" interface-name="ns11:LayDanhSachHeSoPortType" service-name="ns9:PL_LayDanhSachHeSo">
-            <ns85:display-name>PL_LayDanhSachHeSo</ns85:display-name>
-            <ns85:process-name>LayDanhSachHeSo</ns85:process-name>
-            <ns85:file-path>processor_BPEL\LayDanhSachHeSo.bpel</ns85:file-path>
+            <ns88:display-name>PL_LayDanhSachHeSo</ns88:display-name>
+            <ns88:process-name>LayDanhSachHeSo</ns88:process-name>
+            <ns88:file-path>processor_BPEL\LayDanhSachHeSo.bpel</ns88:file-path>
         </provides>
         <provides endpoint-name="LayDanhSachHeSoCotDiemPortTypeRole_myRole" interface-name="ns14:LayDanhSachHeSoCotDiemPortType" service-name="ns12:PL_LayDanhSachHeSoCotDiem">
-            <ns85:display-name>PL_LayDanhSachHeSoCotDiem</ns85:display-name>
-            <ns85:process-name>LayDanhSachHeSoCotDiem</ns85:process-name>
-            <ns85:file-path>processor_BPEL\LayDanhSachHeSoCotDiem.bpel</ns85:file-path>
+            <ns88:display-name>PL_LayDanhSachHeSoCotDiem</ns88:display-name>
+            <ns88:process-name>LayDanhSachHeSoCotDiem</ns88:process-name>
+            <ns88:file-path>processor_BPEL\LayDanhSachHeSoCotDiem.bpel</ns88:file-path>
         </provides>
         <provides endpoint-name="LayDanhSachLopGiaoVienDayPortTypeRole_myRole" interface-name="ns17:LayDanhSachLopGiaoVienDayPortType" service-name="ns15:PL_LayDanhSachLopGiaoVienDay">
-            <ns85:display-name>PL_LayDanhSachLopGiaoVienDay</ns85:display-name>
-            <ns85:process-name>LayDanhSachLopGiaoVienDay</ns85:process-name>
-            <ns85:file-path>processor_BPEL\LayDanhSachLopGiaoVienDay.bpel</ns85:file-path>
+            <ns88:display-name>PL_LayDanhSachLopGiaoVienDay</ns88:display-name>
+            <ns88:process-name>LayDanhSachLopGiaoVienDay</ns88:process-name>
+            <ns88:file-path>processor_BPEL\LayDanhSachLopGiaoVienDay.bpel</ns88:file-path>
         </provides>
         <provides endpoint-name="LayDanhSachMonHocCuaGiaoVienPortTypeRole_myRole" interface-name="ns20:LayDanhSachMonHocCuaGiaoVienPortType" service-name="ns18:PL_LayDanhSachMonHocCuaGiaoVien">
-            <ns85:display-name>PL_LayDanhSachMonHocCuaGiaoVien</ns85:display-name>
-            <ns85:process-name>LayDanhSachMonHocCuaGiaoVien</ns85:process-name>
-            <ns85:file-path>processor_BPEL\LayDanhSachMonHocCuaGiaoVien.bpel</ns85:file-path>
+            <ns88:display-name>PL_LayDanhSachMonHocCuaGiaoVien</ns88:display-name>
+            <ns88:process-name>LayDanhSachMonHocCuaGiaoVien</ns88:process-name>
+            <ns88:file-path>processor_BPEL\LayDanhSachMonHocCuaGiaoVien.bpel</ns88:file-path>
         </provides>
         <provides endpoint-name="LayDanhSachMonHocCuaLopPortTypeRole_myRole" interface-name="ns23:LayDanhSachMonHocCuaLopPortType" service-name="ns21:PL_LayDanhSachMonHocCuaLop">
-            <ns85:display-name>PL_LayDanhSachMonHocCuaLop</ns85:display-name>
-            <ns85:process-name>LayDanhSachMonHocCuaLop</ns85:process-name>
-            <ns85:file-path>processor_BPEL\LayDanhSachMonHocCuaLop.bpel</ns85:file-path>
+            <ns88:display-name>PL_LayDanhSachMonHocCuaLop</ns88:display-name>
+            <ns88:process-name>LayDanhSachMonHocCuaLop</ns88:process-name>
+            <ns88:file-path>processor_BPEL\LayDanhSachMonHocCuaLop.bpel</ns88:file-path>
         </provides>
         <provides endpoint-name="LayDiemTrungBinhCuaHocSinhPortTypeRole_myRole" interface-name="ns26:LayDiemTrungBinhCuaHocSinhPortType" service-name="ns24:PL_LayDiemTrungBinhCuaHocSinh">
-            <ns85:display-name>PL_LayDiemTrungBinhCuaHocSinh</ns85:display-name>
-            <ns85:process-name>LayDiemTrungBinhCuaHocSinh</ns85:process-name>
-            <ns85:file-path>processor_BPEL\LayDiemTrungBinhCuaHocSinh.bpel</ns85:file-path>
+            <ns88:display-name>PL_LayDiemTrungBinhCuaHocSinh</ns88:display-name>
+            <ns88:process-name>LayDiemTrungBinhCuaHocSinh</ns88:process-name>
+            <ns88:file-path>processor_BPEL\LayDiemTrungBinhCuaHocSinh.bpel</ns88:file-path>
         </provides>
         <provides endpoint-name="LayIdNamHocMoiPortTypeRole_myRole" interface-name="ns29:LayIdNamHocMoiPortType" service-name="ns27:PL_LayIdNamHocMoi">
-            <ns85:display-name>PL_LayIdNamHocMoi</ns85:display-name>
-            <ns85:process-name>LayIdNamHocMoiNhat</ns85:process-name>
-            <ns85:file-path>processor_BPEL\LayIdNamHocMoiNhat.bpel</ns85:file-path>
+            <ns88:display-name>PL_LayIdNamHocMoi</ns88:display-name>
+            <ns88:process-name>LayIdNamHocMoiNhat</ns88:process-name>
+            <ns88:file-path>processor_BPEL\LayIdNamHocMoiNhat.bpel</ns88:file-path>
         </provides>
-        <provides endpoint-name="LoadSoDiemPortTypeRole_myRole" interface-name="ns32:LoadSoDiemPortType" service-name="ns30:PL_LoadSoDiem">
-            <ns85:display-name>PL_LoadSoDiem</ns85:display-name>
-            <ns85:process-name>LoadSoDiem</ns85:process-name>
-            <ns85:file-path>processor_BPEL\LoadSoDiem.bpel</ns85:file-path>
+        <provides endpoint-name="LayLopChoGiaoVienChuNhiemPortTypeRole_myRole" interface-name="ns32:LayLopChoGiaoVienChuNhiemPortType" service-name="ns30:PL_LayLopChoGiaoVienChuNhiem">
+            <ns88:display-name>PL_LayLopChoGiaoVienChuNhiem</ns88:display-name>
+            <ns88:process-name>LayLopChoGiaoVienChuNhiem</ns88:process-name>
+            <ns88:file-path>processor_BPEL\LayLopChoGiaoVienChuNhiem.bpel</ns88:file-path>
         </provides>
-        <provides endpoint-name="LuuDiemPortTypeRole_myRole" interface-name="ns35:LuuDiemPortType" service-name="ns33:PL_LuuDiem">
-            <ns85:display-name>PL_LuuDiem</ns85:display-name>
-            <ns85:process-name>LuuDiem</ns85:process-name>
-            <ns85:file-path>processor_BPEL\LuuDiem.bpel</ns85:file-path>
+        <provides endpoint-name="LoadSoDiemPortTypeRole_myRole" interface-name="ns35:LoadSoDiemPortType" service-name="ns33:PL_LoadSoDiem">
+            <ns88:display-name>PL_LoadSoDiem</ns88:display-name>
+            <ns88:process-name>LoadSoDiem</ns88:process-name>
+            <ns88:file-path>processor_BPEL\LoadSoDiem.bpel</ns88:file-path>
         </provides>
-        <provides endpoint-name="LuuDiemHocBaPortTypeRole_myRole" interface-name="ns38:LuuDiemHocBaPortType" service-name="ns36:PL_LuuDiemHocBa">
-            <ns85:display-name>PL_LuuDiemHocBa</ns85:display-name>
-            <ns85:process-name>LuuDiemHocBa</ns85:process-name>
-            <ns85:file-path>processor_BPEL\LuuDiemHocBa.bpel</ns85:file-path>
+        <provides endpoint-name="LuuDiemPortTypeRole_myRole" interface-name="ns38:LuuDiemPortType" service-name="ns36:PL_LuuDiem">
+            <ns88:display-name>PL_LuuDiem</ns88:display-name>
+            <ns88:process-name>LuuDiem</ns88:process-name>
+            <ns88:file-path>processor_BPEL\LuuDiem.bpel</ns88:file-path>
         </provides>
-        <provides endpoint-name="NhapDiemPortTypeRole_myRole" interface-name="ns41:NhapDiemPortType" service-name="ns39:PL_NhapDiem">
-            <ns85:display-name>PL_NhapDiem</ns85:display-name>
-            <ns85:process-name>NhapDiem</ns85:process-name>
-            <ns85:file-path>processor_BPEL\NhapDiem.bpel</ns85:file-path>
+        <provides endpoint-name="LuuDiemHocBaPortTypeRole_myRole" interface-name="ns41:LuuDiemHocBaPortType" service-name="ns39:PL_LuuDiemHocBa">
+            <ns88:display-name>PL_LuuDiemHocBa</ns88:display-name>
+            <ns88:process-name>LuuDiemHocBa</ns88:process-name>
+            <ns88:file-path>processor_BPEL\LuuDiemHocBa.bpel</ns88:file-path>
         </provides>
-        <provides endpoint-name="TaoLoaiDiemPortTypeRole_myRole" interface-name="ns44:TaoLoaiDiemPortType" service-name="ns42:PL_TaoLoaiDiem">
-            <ns85:display-name>PL_TaoLoaiDiem</ns85:display-name>
-            <ns85:process-name>TaoLoaiDiem</ns85:process-name>
-            <ns85:file-path>processor_BPEL\TaoLoaiDiem.bpel</ns85:file-path>
+        <provides endpoint-name="NhapDiemPortTypeRole_myRole" interface-name="ns44:NhapDiemPortType" service-name="ns42:PL_NhapDiem">
+            <ns88:display-name>PL_NhapDiem</ns88:display-name>
+            <ns88:process-name>NhapDiem</ns88:process-name>
+            <ns88:file-path>processor_BPEL\NhapDiem.bpel</ns88:file-path>
         </provides>
-        <provides endpoint-name="TaoNamHocMoiPortTypeRole_myRole" interface-name="ns47:TaoNamHocMoiPortType" service-name="ns45:PL_TaoNamHocMoi">
-            <ns85:display-name>PL_TaoNamHocMoi</ns85:display-name>
-            <ns85:process-name>TaoNamHocMoi</ns85:process-name>
-            <ns85:file-path>processor_BPEL\TaoNamHocMoi.bpel</ns85:file-path>
+        <provides endpoint-name="TaoLoaiDiemPortTypeRole_myRole" interface-name="ns47:TaoLoaiDiemPortType" service-name="ns45:PL_TaoLoaiDiem">
+            <ns88:display-name>PL_TaoLoaiDiem</ns88:display-name>
+            <ns88:process-name>TaoLoaiDiem</ns88:process-name>
+            <ns88:file-path>processor_BPEL\TaoLoaiDiem.bpel</ns88:file-path>
         </provides>
-        <provides endpoint-name="TaoSoDiemPortTypeRole_myRole" interface-name="ns54:TaoSoDiemPortType" service-name="ns48:PL_TaoSoDiem">
-            <ns85:display-name>PL_TaoSoDiem</ns85:display-name>
-            <ns85:process-name>TaoSoDiem</ns85:process-name>
-            <ns85:file-path>processor_BPEL\TaoSoDiem.bpel</ns85:file-path>
+        <provides endpoint-name="TaoNamHocMoiPortTypeRole_myRole" interface-name="ns50:TaoNamHocMoiPortType" service-name="ns48:PL_TaoNamHocMoi">
+            <ns88:display-name>PL_TaoNamHocMoi</ns88:display-name>
+            <ns88:process-name>TaoNamHocMoi</ns88:process-name>
+            <ns88:file-path>processor_BPEL\TaoNamHocMoi.bpel</ns88:file-path>
         </provides>
-        <provides endpoint-name="ThemDanhSachLoaiDiemPortTypeRole_myRole" interface-name="ns57:ThemDanhSachLoaiDiemPortType" service-name="ns55:PL_ThemDanhSachLoaiDiem">
-            <ns85:display-name>PL_ThemDanhSachLoaiDiem</ns85:display-name>
-            <ns85:process-name>ThemDanhSachLoaiDiem</ns85:process-name>
-            <ns85:file-path>processor_BPEL\ThemDanhSachLoaiDiem.bpel</ns85:file-path>
+        <provides endpoint-name="TaoSoDiemPortTypeRole_myRole" interface-name="ns57:TaoSoDiemPortType" service-name="ns51:PL_TaoSoDiem">
+            <ns88:display-name>PL_TaoSoDiem</ns88:display-name>
+            <ns88:process-name>TaoSoDiem</ns88:process-name>
+            <ns88:file-path>processor_BPEL\TaoSoDiem.bpel</ns88:file-path>
         </provides>
-        <provides endpoint-name="TimIdHocSinhByMshsPortTypeRole_myRole" interface-name="ns60:TimIdHocSinhByMshsPortType" service-name="ns58:PL_TimIdHocSinhByMshs">
-            <ns85:display-name>PL_TimIdHocSinhByMshs</ns85:display-name>
-            <ns85:process-name>TimIdHocSinhByMshs</ns85:process-name>
-            <ns85:file-path>processor_BPEL\TimIdHocSinhByMshs.bpel</ns85:file-path>
+        <provides endpoint-name="ThemDanhSachLoaiDiemPortTypeRole_myRole" interface-name="ns60:ThemDanhSachLoaiDiemPortType" service-name="ns58:PL_ThemDanhSachLoaiDiem">
+            <ns88:display-name>PL_ThemDanhSachLoaiDiem</ns88:display-name>
+            <ns88:process-name>ThemDanhSachLoaiDiem</ns88:process-name>
+            <ns88:file-path>processor_BPEL\ThemDanhSachLoaiDiem.bpel</ns88:file-path>
         </provides>
-        <provides endpoint-name="TimIdLopByMshsPortTypeRole_myRole" interface-name="ns63:TimIdLopByMshsPortType" service-name="ns61:PL_TimIdLopByMshs">
-            <ns85:display-name>PL_TimIdLopByMshs</ns85:display-name>
-            <ns85:process-name>TimIdLopByMshs</ns85:process-name>
-            <ns85:file-path>processor_BPEL\TimIdLopByMshs.bpel</ns85:file-path>
+        <provides endpoint-name="TimIdHocSinhByMshsPortTypeRole_myRole" interface-name="ns63:TimIdHocSinhByMshsPortType" service-name="ns61:PL_TimIdHocSinhByMshs">
+            <ns88:display-name>PL_TimIdHocSinhByMshs</ns88:display-name>
+            <ns88:process-name>TimIdHocSinhByMshs</ns88:process-name>
+            <ns88:file-path>processor_BPEL\TimIdHocSinhByMshs.bpel</ns88:file-path>
         </provides>
-        <provides endpoint-name="TimIdLopByTenLopPortTypeRole_myRole" interface-name="ns66:TimIdLopByTenLopPortType" service-name="ns64:PL_TimIdLopByTenLop">
-            <ns85:display-name>PL_TimIdLopByTenLop</ns85:display-name>
-            <ns85:process-name>TimIdLopByTenLop</ns85:process-name>
-            <ns85:file-path>processor_BPEL\TimIdLopByTenLop.bpel</ns85:file-path>
+        <provides endpoint-name="TimIdLopByMshsPortTypeRole_myRole" interface-name="ns66:TimIdLopByMshsPortType" service-name="ns64:PL_TimIdLopByMshs">
+            <ns88:display-name>PL_TimIdLopByMshs</ns88:display-name>
+            <ns88:process-name>TimIdLopByMshs</ns88:process-name>
+            <ns88:file-path>processor_BPEL\TimIdLopByMshs.bpel</ns88:file-path>
         </provides>
-        <provides endpoint-name="TimIdMonHocByTenMonHocPortTypeRole_myRole" interface-name="ns69:TimIdMonHocByTenMonHocPortType" service-name="ns67:PL_TimIdMonHocByTenMonHoc">
-            <ns85:display-name>PL_TimIdMonHocByTenMonHoc</ns85:display-name>
-            <ns85:process-name>TimIdMonHocByTenMonHoc</ns85:process-name>
-            <ns85:file-path>processor_BPEL\TimIdMonHocByTenMonHoc.bpel</ns85:file-path>
+        <provides endpoint-name="TimIdLopByTenLopPortTypeRole_myRole" interface-name="ns69:TimIdLopByTenLopPortType" service-name="ns67:PL_TimIdLopByTenLop">
+            <ns88:display-name>PL_TimIdLopByTenLop</ns88:display-name>
+            <ns88:process-name>TimIdLopByTenLop</ns88:process-name>
+            <ns88:file-path>processor_BPEL\TimIdLopByTenLop.bpel</ns88:file-path>
         </provides>
-        <provides endpoint-name="TimTenHocSinhByIdHocSinhPortTypeRole_myRole" interface-name="ns72:TimTenHocSinhByIdHocSinhPortType" service-name="ns70:PL_TimTenHocSinhByIdHocSinh">
-            <ns85:display-name>PL_TimTenHocSinhByIdHocSinh</ns85:display-name>
-            <ns85:process-name>TimTenHocSinhByIdHocSinh</ns85:process-name>
-            <ns85:file-path>processor_BPEL\TimTenHocSinhByIdHocSinh.bpel</ns85:file-path>
+        <provides endpoint-name="TimIdMonHocByTenMonHocPortTypeRole_myRole" interface-name="ns72:TimIdMonHocByTenMonHocPortType" service-name="ns70:PL_TimIdMonHocByTenMonHoc">
+            <ns88:display-name>PL_TimIdMonHocByTenMonHoc</ns88:display-name>
+            <ns88:process-name>TimIdMonHocByTenMonHoc</ns88:process-name>
+            <ns88:file-path>processor_BPEL\TimIdMonHocByTenMonHoc.bpel</ns88:file-path>
         </provides>
-        <provides endpoint-name="TinhDiemTrungBinhPortTypeRole_myRole" interface-name="ns75:TinhDiemTrungBinhPortType" service-name="ns73:PL_TinhDiemTrungBinh">
-            <ns85:display-name>PL_TinhDiemTrungBinh</ns85:display-name>
-            <ns85:process-name>TinhDiemTrungBinh</ns85:process-name>
-            <ns85:file-path>processor_BPEL\TinhDiemTrungBinh.bpel</ns85:file-path>
+        <provides endpoint-name="TimTenHocSinhByIdHocSinhPortTypeRole_myRole" interface-name="ns75:TimTenHocSinhByIdHocSinhPortType" service-name="ns73:PL_TimTenHocSinhByIdHocSinh">
+            <ns88:display-name>PL_TimTenHocSinhByIdHocSinh</ns88:display-name>
+            <ns88:process-name>TimTenHocSinhByIdHocSinh</ns88:process-name>
+            <ns88:file-path>processor_BPEL\TimTenHocSinhByIdHocSinh.bpel</ns88:file-path>
         </provides>
-        <provides endpoint-name="TongKetDiemPortTypeRole_myRole" interface-name="ns78:TongKetDiemPortType" service-name="ns76:PL_TongKetDiem">
-            <ns85:display-name>PL_TongKetDiem</ns85:display-name>
-            <ns85:process-name>TongKetDiem</ns85:process-name>
-            <ns85:file-path>processor_BPEL\TongKetDiem.bpel</ns85:file-path>
+        <provides endpoint-name="TinhDiemTrungBinhPortTypeRole_myRole" interface-name="ns78:TinhDiemTrungBinhPortType" service-name="ns76:PL_TinhDiemTrungBinh">
+            <ns88:display-name>PL_TinhDiemTrungBinh</ns88:display-name>
+            <ns88:process-name>TinhDiemTrungBinh</ns88:process-name>
+            <ns88:file-path>processor_BPEL\TinhDiemTrungBinh.bpel</ns88:file-path>
         </provides>
-        <provides endpoint-name="XemDiemPortTypeRole_myRole" interface-name="ns81:XemDiemPortType" service-name="ns79:PL_XemDiem">
-            <ns85:display-name>PL_XemDiem</ns85:display-name>
-            <ns85:process-name>XemDiem</ns85:process-name>
-            <ns85:file-path>processor_BPEL\XemDiem.bpel</ns85:file-path>
+        <provides endpoint-name="TongKetDiemPortTypeRole_myRole" interface-name="ns81:TongKetDiemPortType" service-name="ns79:PL_TongKetDiem">
+            <ns88:display-name>PL_TongKetDiem</ns88:display-name>
+            <ns88:process-name>TongKetDiem</ns88:process-name>
+            <ns88:file-path>processor_BPEL\TongKetDiem.bpel</ns88:file-path>
         </provides>
-        <provides endpoint-name="XetLenLopPortTypeRole_myRole" interface-name="ns84:XetLenLopPortType" service-name="ns82:PartnerLink1">
-            <ns85:display-name>PartnerLink1</ns85:display-name>
-            <ns85:process-name>XetLenLop</ns85:process-name>
-            <ns85:file-path>processor_BPEL\XetLenLop.bpel</ns85:file-path>
+        <provides endpoint-name="XemDiemPortTypeRole_myRole" interface-name="ns84:XemDiemPortType" service-name="ns82:PL_XemDiem">
+            <ns88:display-name>PL_XemDiem</ns88:display-name>
+            <ns88:process-name>XemDiem</ns88:process-name>
+            <ns88:file-path>processor_BPEL\XemDiem.bpel</ns88:file-path>
+        </provides>
+        <provides endpoint-name="XetLenLopPortTypeRole_myRole" interface-name="ns87:XetLenLopPortType" service-name="ns85:PartnerLink1">
+            <ns88:display-name>PartnerLink1</ns88:display-name>
+            <ns88:process-name>XetLenLop</ns88:process-name>
+            <ns88:file-path>processor_BPEL\XetLenLop.bpel</ns88:file-path>
         </provides>
         <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns1:jdbcPortType" service-name="ns0:PL_DB_LayDanhSachCotDiem">
-            <ns85:display-name>PL_DB_LayDanhSachCotDiem</ns85:display-name>
-            <ns85:process-name>LayDanhSachCotDiem</ns85:process-name>
-            <ns85:file-path>processor_BPEL\LayDanhSachCotDiem.bpel</ns85:file-path>
+            <ns88:display-name>PL_DB_LayDanhSachCotDiem</ns88:display-name>
+            <ns88:process-name>LayDanhSachCotDiem</ns88:process-name>
+            <ns88:file-path>processor_BPEL\LayDanhSachCotDiem.bpel</ns88:file-path>
         </consumes>
         <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns4:jdbcPortType" service-name="ns3:PL_DB_LayDanhSachDiemCuaChiTietSoDiem">
-            <ns85:display-name>PL_DB_LayDanhSachDiemCuaChiTietSoDiem</ns85:display-name>
-            <ns85:process-name>LayDanhSachDiemCuaChiTietSoDiem</ns85:process-name>
-            <ns85:file-path>processor_BPEL\LayDanhSachDiemCuaChiTietSoDiem.bpel</ns85:file-path>
+            <ns88:display-name>PL_DB_LayDanhSachDiemCuaChiTietSoDiem</ns88:display-name>
+            <ns88:process-name>LayDanhSachDiemCuaChiTietSoDiem</ns88:process-name>
+            <ns88:file-path>processor_BPEL\LayDanhSachDiemCuaChiTietSoDiem.bpel</ns88:file-path>
         </consumes>
         <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns7:jdbcPortType" service-name="ns6:PL_DB_LayDanhSachDiemCuaHocSinhByMonHoc">
-            <ns85:display-name>PL_DB_LayDanhSachDiemCuaHocSinhByMonHoc</ns85:display-name>
-            <ns85:process-name>LayDanhSachDiemCuaHocSinhByMonHoc</ns85:process-name>
-            <ns85:file-path>processor_BPEL\LayDanhSachDiemCuaHocSinhByMonHoc.bpel</ns85:file-path>
+            <ns88:display-name>PL_DB_LayDanhSachDiemCuaHocSinhByMonHoc</ns88:display-name>
+            <ns88:process-name>LayDanhSachDiemCuaHocSinhByMonHoc</ns88:process-name>
+            <ns88:file-path>processor_BPEL\LayDanhSachDiemCuaHocSinhByMonHoc.bpel</ns88:file-path>
         </consumes>
         <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns10:jdbcPortType" service-name="ns9:PL_DB_LayDanhSachHeSo">
-            <ns85:display-name>PL_DB_LayDanhSachHeSo</ns85:display-name>
-            <ns85:process-name>LayDanhSachHeSo</ns85:process-name>
-            <ns85:file-path>processor_BPEL\LayDanhSachHeSo.bpel</ns85:file-path>
+            <ns88:display-name>PL_DB_LayDanhSachHeSo</ns88:display-name>
+            <ns88:process-name>LayDanhSachHeSo</ns88:process-name>
+            <ns88:file-path>processor_BPEL\LayDanhSachHeSo.bpel</ns88:file-path>
         </consumes>
         <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns13:jdbcPortType" service-name="ns12:PL_DB_LayDanhSachHeSoCotDiem">
-            <ns85:display-name>PL_DB_LayDanhSachHeSoCotDiem</ns85:display-name>
-            <ns85:process-name>LayDanhSachHeSoCotDiem</ns85:process-name>
-            <ns85:file-path>processor_BPEL\LayDanhSachHeSoCotDiem.bpel</ns85:file-path>
+            <ns88:display-name>PL_DB_LayDanhSachHeSoCotDiem</ns88:display-name>
+            <ns88:process-name>LayDanhSachHeSoCotDiem</ns88:process-name>
+            <ns88:file-path>processor_BPEL\LayDanhSachHeSoCotDiem.bpel</ns88:file-path>
         </consumes>
         <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns16:jdbcPortType" service-name="ns15:PL_DB_LayDanhSachLopGiaoVienDay">
-            <ns85:display-name>PL_DB_LayDanhSachLopGiaoVienDay</ns85:display-name>
-            <ns85:process-name>LayDanhSachLopGiaoVienDay</ns85:process-name>
-            <ns85:file-path>processor_BPEL\LayDanhSachLopGiaoVienDay.bpel</ns85:file-path>
+            <ns88:display-name>PL_DB_LayDanhSachLopGiaoVienDay</ns88:display-name>
+            <ns88:process-name>LayDanhSachLopGiaoVienDay</ns88:process-name>
+            <ns88:file-path>processor_BPEL\LayDanhSachLopGiaoVienDay.bpel</ns88:file-path>
         </consumes>
         <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns19:jdbcPortType" service-name="ns18:PL_DB_LayDanhSachMonHocCuaGiaoVien">
-            <ns85:display-name>PL_DB_LayDanhSachMonHocCuaGiaoVien</ns85:display-name>
-            <ns85:process-name>LayDanhSachMonHocCuaGiaoVien</ns85:process-name>
-            <ns85:file-path>processor_BPEL\LayDanhSachMonHocCuaGiaoVien.bpel</ns85:file-path>
+            <ns88:display-name>PL_DB_LayDanhSachMonHocCuaGiaoVien</ns88:display-name>
+            <ns88:process-name>LayDanhSachMonHocCuaGiaoVien</ns88:process-name>
+            <ns88:file-path>processor_BPEL\LayDanhSachMonHocCuaGiaoVien.bpel</ns88:file-path>
         </consumes>
         <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns22:jdbcPortType" service-name="ns21:PL_DB_LayDanhSachMonHocCuaLop">
-            <ns85:display-name>PL_DB_LayDanhSachMonHocCuaLop</ns85:display-name>
-            <ns85:process-name>LayDanhSachMonHocCuaLop</ns85:process-name>
-            <ns85:file-path>processor_BPEL\LayDanhSachMonHocCuaLop.bpel</ns85:file-path>
+            <ns88:display-name>PL_DB_LayDanhSachMonHocCuaLop</ns88:display-name>
+            <ns88:process-name>LayDanhSachMonHocCuaLop</ns88:process-name>
+            <ns88:file-path>processor_BPEL\LayDanhSachMonHocCuaLop.bpel</ns88:file-path>
         </consumes>
         <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns25:jdbcPortType" service-name="ns24:PL_DB_LayDiemTrungBinhCuaHocSinh">
-            <ns85:display-name>PL_DB_LayDiemTrungBinhCuaHocSinh</ns85:display-name>
-            <ns85:process-name>LayDiemTrungBinhCuaHocSinh</ns85:process-name>
-            <ns85:file-path>processor_BPEL\LayDiemTrungBinhCuaHocSinh.bpel</ns85:file-path>
+            <ns88:display-name>PL_DB_LayDiemTrungBinhCuaHocSinh</ns88:display-name>
+            <ns88:process-name>LayDiemTrungBinhCuaHocSinh</ns88:process-name>
+            <ns88:file-path>processor_BPEL\LayDiemTrungBinhCuaHocSinh.bpel</ns88:file-path>
         </consumes>
         <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns28:jdbcPortType" service-name="ns27:PL_DB_LayIdNamHocMoi">
-            <ns85:display-name>PL_DB_LayIdNamHocMoi</ns85:display-name>
-            <ns85:process-name>LayIdNamHocMoiNhat</ns85:process-name>
-            <ns85:file-path>processor_BPEL\LayIdNamHocMoiNhat.bpel</ns85:file-path>
+            <ns88:display-name>PL_DB_LayIdNamHocMoi</ns88:display-name>
+            <ns88:process-name>LayIdNamHocMoiNhat</ns88:process-name>
+            <ns88:file-path>processor_BPEL\LayIdNamHocMoiNhat.bpel</ns88:file-path>
         </consumes>
-        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns31:jdbcPortType" service-name="ns30:PL_DB_LoadSoDiem">
-            <ns85:display-name>PL_DB_LoadSoDiem</ns85:display-name>
-            <ns85:process-name>LoadSoDiem</ns85:process-name>
-            <ns85:file-path>processor_BPEL\LoadSoDiem.bpel</ns85:file-path>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns31:jdbcPortType" service-name="ns30:PL_DB_LayIdLopByIdGiaoVienChuNhiem">
+            <ns88:display-name>PL_DB_LayIdLopByIdGiaoVienChuNhiem</ns88:display-name>
+            <ns88:process-name>LayLopChoGiaoVienChuNhiem</ns88:process-name>
+            <ns88:file-path>processor_BPEL\LayLopChoGiaoVienChuNhiem.bpel</ns88:file-path>
         </consumes>
-        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns34:jdbcPortType" service-name="ns33:PL_DB_LuuDiem">
-            <ns85:display-name>PL_DB_LuuDiem</ns85:display-name>
-            <ns85:process-name>LuuDiem</ns85:process-name>
-            <ns85:file-path>processor_BPEL\LuuDiem.bpel</ns85:file-path>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns34:jdbcPortType" service-name="ns33:PL_DB_LoadSoDiem">
+            <ns88:display-name>PL_DB_LoadSoDiem</ns88:display-name>
+            <ns88:process-name>LoadSoDiem</ns88:process-name>
+            <ns88:file-path>processor_BPEL\LoadSoDiem.bpel</ns88:file-path>
         </consumes>
-        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns37:jdbcPortType" service-name="ns36:PL_DB_LuuDiemHocBa">
-            <ns85:display-name>PL_DB_LuuDiemHocBa</ns85:display-name>
-            <ns85:process-name>LuuDiemHocBa</ns85:process-name>
-            <ns85:file-path>processor_BPEL\LuuDiemHocBa.bpel</ns85:file-path>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns37:jdbcPortType" service-name="ns36:PL_DB_LuuDiem">
+            <ns88:display-name>PL_DB_LuuDiem</ns88:display-name>
+            <ns88:process-name>LuuDiem</ns88:process-name>
+            <ns88:file-path>processor_BPEL\LuuDiem.bpel</ns88:file-path>
         </consumes>
-        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns40:jdbcPortType" service-name="ns39:PL_DB_SuaDiem">
-            <ns85:display-name>PL_DB_SuaDiem</ns85:display-name>
-            <ns85:process-name>NhapDiem</ns85:process-name>
-            <ns85:file-path>processor_BPEL\NhapDiem.bpel</ns85:file-path>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns40:jdbcPortType" service-name="ns39:PL_DB_LuuDiemHocBa">
+            <ns88:display-name>PL_DB_LuuDiemHocBa</ns88:display-name>
+            <ns88:process-name>LuuDiemHocBa</ns88:process-name>
+            <ns88:file-path>processor_BPEL\LuuDiemHocBa.bpel</ns88:file-path>
         </consumes>
-        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns43:jdbcPortType" service-name="ns42:PL_DB_TaoLoaiDiem">
-            <ns85:display-name>PL_DB_TaoLoaiDiem</ns85:display-name>
-            <ns85:process-name>TaoLoaiDiem</ns85:process-name>
-            <ns85:file-path>processor_BPEL\TaoLoaiDiem.bpel</ns85:file-path>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns43:jdbcPortType" service-name="ns42:PL_DB_SuaDiem">
+            <ns88:display-name>PL_DB_SuaDiem</ns88:display-name>
+            <ns88:process-name>NhapDiem</ns88:process-name>
+            <ns88:file-path>processor_BPEL\NhapDiem.bpel</ns88:file-path>
         </consumes>
-        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns46:jdbcPortType" service-name="ns45:PL_DBTaoNamHocMoi">
-            <ns85:display-name>PL_DBTaoNamHocMoi</ns85:display-name>
-            <ns85:process-name>TaoNamHocMoi</ns85:process-name>
-            <ns85:file-path>processor_BPEL\TaoNamHocMoi.bpel</ns85:file-path>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns46:jdbcPortType" service-name="ns45:PL_DB_TaoLoaiDiem">
+            <ns88:display-name>PL_DB_TaoLoaiDiem</ns88:display-name>
+            <ns88:process-name>TaoLoaiDiem</ns88:process-name>
+            <ns88:file-path>processor_BPEL\TaoLoaiDiem.bpel</ns88:file-path>
         </consumes>
-        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns49:jdbcPortType" service-name="ns48:PL_DB_TaoSoDiem">
-            <ns85:display-name>PL_DB_TaoSoDiem</ns85:display-name>
-            <ns85:process-name>TaoSoDiem</ns85:process-name>
-            <ns85:file-path>processor_BPEL\TaoSoDiem.bpel</ns85:file-path>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns49:jdbcPortType" service-name="ns48:PL_DBTaoNamHocMoi">
+            <ns88:display-name>PL_DBTaoNamHocMoi</ns88:display-name>
+            <ns88:process-name>TaoNamHocMoi</ns88:process-name>
+            <ns88:file-path>processor_BPEL\TaoNamHocMoi.bpel</ns88:file-path>
         </consumes>
-        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns50:jdbcPortType" service-name="ns48:PL_DB_LayDanhSachHocSinhTuIdLop">
-            <ns85:display-name>PL_DB_LayDanhSachHocSinhTuIdLop</ns85:display-name>
-            <ns85:process-name>TaoSoDiem</ns85:process-name>
-            <ns85:file-path>processor_BPEL\TaoSoDiem.bpel</ns85:file-path>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns52:jdbcPortType" service-name="ns51:PL_DB_TaoSoDiem">
+            <ns88:display-name>PL_DB_TaoSoDiem</ns88:display-name>
+            <ns88:process-name>TaoSoDiem</ns88:process-name>
+            <ns88:file-path>processor_BPEL\TaoSoDiem.bpel</ns88:file-path>
         </consumes>
-        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns51:jdbcPortType" service-name="ns48:PL_DB_LayDanhSachLoaiDiem">
-            <ns85:display-name>PL_DB_LayDanhSachLoaiDiem</ns85:display-name>
-            <ns85:process-name>TaoSoDiem</ns85:process-name>
-            <ns85:file-path>processor_BPEL\TaoSoDiem.bpel</ns85:file-path>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns53:jdbcPortType" service-name="ns51:PL_DB_LayDanhSachHocSinhTuIdLop">
+            <ns88:display-name>PL_DB_LayDanhSachHocSinhTuIdLop</ns88:display-name>
+            <ns88:process-name>TaoSoDiem</ns88:process-name>
+            <ns88:file-path>processor_BPEL\TaoSoDiem.bpel</ns88:file-path>
         </consumes>
-        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns52:jdbcPortType" service-name="ns48:PL_DB_TaoChiTietSoDiem">
-            <ns85:display-name>PL_DB_TaoChiTietSoDiem</ns85:display-name>
-            <ns85:process-name>TaoSoDiem</ns85:process-name>
-            <ns85:file-path>processor_BPEL\TaoSoDiem.bpel</ns85:file-path>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns54:jdbcPortType" service-name="ns51:PL_DB_LayDanhSachLoaiDiem">
+            <ns88:display-name>PL_DB_LayDanhSachLoaiDiem</ns88:display-name>
+            <ns88:process-name>TaoSoDiem</ns88:process-name>
+            <ns88:file-path>processor_BPEL\TaoSoDiem.bpel</ns88:file-path>
         </consumes>
-        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns53:jdbcPortType" service-name="ns48:PL_DB_TaoDiem">
-            <ns85:display-name>PL_DB_TaoDiem</ns85:display-name>
-            <ns85:process-name>TaoSoDiem</ns85:process-name>
-            <ns85:file-path>processor_BPEL\TaoSoDiem.bpel</ns85:file-path>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns55:jdbcPortType" service-name="ns51:PL_DB_TaoChiTietSoDiem">
+            <ns88:display-name>PL_DB_TaoChiTietSoDiem</ns88:display-name>
+            <ns88:process-name>TaoSoDiem</ns88:process-name>
+            <ns88:file-path>processor_BPEL\TaoSoDiem.bpel</ns88:file-path>
         </consumes>
-        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns56:jdbcPortType" service-name="ns55:PL_DB_ThemDanhSachLoaiDiem">
-            <ns85:display-name>PL_DB_ThemDanhSachLoaiDiem</ns85:display-name>
-            <ns85:process-name>ThemDanhSachLoaiDiem</ns85:process-name>
-            <ns85:file-path>processor_BPEL\ThemDanhSachLoaiDiem.bpel</ns85:file-path>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns56:jdbcPortType" service-name="ns51:PL_DB_TaoDiem">
+            <ns88:display-name>PL_DB_TaoDiem</ns88:display-name>
+            <ns88:process-name>TaoSoDiem</ns88:process-name>
+            <ns88:file-path>processor_BPEL\TaoSoDiem.bpel</ns88:file-path>
         </consumes>
-        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns59:jdbcPortType" service-name="ns58:PL_DB_TimIdHocSinhByMshs">
-            <ns85:display-name>PL_DB_TimIdHocSinhByMshs</ns85:display-name>
-            <ns85:process-name>TimIdHocSinhByMshs</ns85:process-name>
-            <ns85:file-path>processor_BPEL\TimIdHocSinhByMshs.bpel</ns85:file-path>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns59:jdbcPortType" service-name="ns58:PL_DB_ThemDanhSachLoaiDiem">
+            <ns88:display-name>PL_DB_ThemDanhSachLoaiDiem</ns88:display-name>
+            <ns88:process-name>ThemDanhSachLoaiDiem</ns88:process-name>
+            <ns88:file-path>processor_BPEL\ThemDanhSachLoaiDiem.bpel</ns88:file-path>
         </consumes>
-        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns62:jdbcPortType" service-name="ns61:PL_DB_TimIdLopByMshs">
-            <ns85:display-name>PL_DB_TimIdLopByMshs</ns85:display-name>
-            <ns85:process-name>TimIdLopByMshs</ns85:process-name>
-            <ns85:file-path>processor_BPEL\TimIdLopByMshs.bpel</ns85:file-path>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns62:jdbcPortType" service-name="ns61:PL_DB_TimIdHocSinhByMshs">
+            <ns88:display-name>PL_DB_TimIdHocSinhByMshs</ns88:display-name>
+            <ns88:process-name>TimIdHocSinhByMshs</ns88:process-name>
+            <ns88:file-path>processor_BPEL\TimIdHocSinhByMshs.bpel</ns88:file-path>
         </consumes>
-        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns65:jdbcPortType" service-name="ns64:PL_DB_TimIdLopByTenLop">
-            <ns85:display-name>PL_DB_TimIdLopByTenLop</ns85:display-name>
-            <ns85:process-name>TimIdLopByTenLop</ns85:process-name>
-            <ns85:file-path>processor_BPEL\TimIdLopByTenLop.bpel</ns85:file-path>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns65:jdbcPortType" service-name="ns64:PL_DB_TimIdLopByMshs">
+            <ns88:display-name>PL_DB_TimIdLopByMshs</ns88:display-name>
+            <ns88:process-name>TimIdLopByMshs</ns88:process-name>
+            <ns88:file-path>processor_BPEL\TimIdLopByMshs.bpel</ns88:file-path>
         </consumes>
-        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns68:jdbcPortType" service-name="ns67:PL_DB_TimIdMonHocByTenMonHoc">
-            <ns85:display-name>PL_DB_TimIdMonHocByTenMonHoc</ns85:display-name>
-            <ns85:process-name>TimIdMonHocByTenMonHoc</ns85:process-name>
-            <ns85:file-path>processor_BPEL\TimIdMonHocByTenMonHoc.bpel</ns85:file-path>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns68:jdbcPortType" service-name="ns67:PL_DB_TimIdLopByTenLop">
+            <ns88:display-name>PL_DB_TimIdLopByTenLop</ns88:display-name>
+            <ns88:process-name>TimIdLopByTenLop</ns88:process-name>
+            <ns88:file-path>processor_BPEL\TimIdLopByTenLop.bpel</ns88:file-path>
         </consumes>
-        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns71:jdbcPortType" service-name="ns70:PL_DB_TimTenHocSinhByIdHocSinh">
-            <ns85:display-name>PL_DB_TimTenHocSinhByIdHocSinh</ns85:display-name>
-            <ns85:process-name>TimTenHocSinhByIdHocSinh</ns85:process-name>
-            <ns85:file-path>processor_BPEL\TimTenHocSinhByIdHocSinh.bpel</ns85:file-path>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns71:jdbcPortType" service-name="ns70:PL_DB_TimIdMonHocByTenMonHoc">
+            <ns88:display-name>PL_DB_TimIdMonHocByTenMonHoc</ns88:display-name>
+            <ns88:process-name>TimIdMonHocByTenMonHoc</ns88:process-name>
+            <ns88:file-path>processor_BPEL\TimIdMonHocByTenMonHoc.bpel</ns88:file-path>
         </consumes>
-        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns74:jdbcPortType" service-name="ns73:PL_DB_SuaDiemTrungBinh">
-            <ns85:display-name>PL_DB_SuaDiemTrungBinh</ns85:display-name>
-            <ns85:process-name>TinhDiemTrungBinh</ns85:process-name>
-            <ns85:file-path>processor_BPEL\TinhDiemTrungBinh.bpel</ns85:file-path>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns74:jdbcPortType" service-name="ns73:PL_DB_TimTenHocSinhByIdHocSinh">
+            <ns88:display-name>PL_DB_TimTenHocSinhByIdHocSinh</ns88:display-name>
+            <ns88:process-name>TimTenHocSinhByIdHocSinh</ns88:process-name>
+            <ns88:file-path>processor_BPEL\TimTenHocSinhByIdHocSinh.bpel</ns88:file-path>
         </consumes>
-        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns77:jdbcPortType" service-name="ns76:PL_DB_DanhSachDiemTrungBinh">
-            <ns85:display-name>PL_DB_DanhSachDiemTrungBinh</ns85:display-name>
-            <ns85:process-name>TongKetDiem</ns85:process-name>
-            <ns85:file-path>processor_BPEL\TongKetDiem.bpel</ns85:file-path>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns77:jdbcPortType" service-name="ns76:PL_DB_SuaDiemTrungBinh">
+            <ns88:display-name>PL_DB_SuaDiemTrungBinh</ns88:display-name>
+            <ns88:process-name>TinhDiemTrungBinh</ns88:process-name>
+            <ns88:file-path>processor_BPEL\TinhDiemTrungBinh.bpel</ns88:file-path>
         </consumes>
-        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns80:jdbcPortType" service-name="ns79:PL_DB_LayDanhSachDiemCuaHocSinh">
-            <ns85:display-name>PL_DB_LayDanhSachDiemCuaHocSinh</ns85:display-name>
-            <ns85:process-name>XemDiem</ns85:process-name>
-            <ns85:file-path>processor_BPEL\XemDiem.bpel</ns85:file-path>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns80:jdbcPortType" service-name="ns79:PL_DB_DanhSachDiemTrungBinh">
+            <ns88:display-name>PL_DB_DanhSachDiemTrungBinh</ns88:display-name>
+            <ns88:process-name>TongKetDiem</ns88:process-name>
+            <ns88:file-path>processor_BPEL\TongKetDiem.bpel</ns88:file-path>
         </consumes>
-        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns83:jdbcPortType" service-name="ns82:PartnerLink2">
-            <ns85:display-name>PartnerLink2</ns85:display-name>
-            <ns85:process-name>XetLenLop</ns85:process-name>
-            <ns85:file-path>processor_BPEL\XetLenLop.bpel</ns85:file-path>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns83:jdbcPortType" service-name="ns82:PL_DB_LayDanhSachDiemCuaHocSinh">
+            <ns88:display-name>PL_DB_LayDanhSachDiemCuaHocSinh</ns88:display-name>
+            <ns88:process-name>XemDiem</ns88:process-name>
+            <ns88:file-path>processor_BPEL\XemDiem.bpel</ns88:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns86:jdbcPortType" service-name="ns85:PartnerLink2">
+            <ns88:display-name>PartnerLink2</ns88:display-name>
+            <ns88:process-name>XetLenLop</ns88:process-name>
+            <ns88:file-path>processor_BPEL\XetLenLop.bpel</ns88:file-path>
         </consumes>
     </services>
 </jbi>
