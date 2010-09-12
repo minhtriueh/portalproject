@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process
+    name="LayLopChoGiaoVienChuNhiem"
+    targetNamespace="http://enterprise.netbeans.org/bpel/QuanLyDiem/LayLopChoGiaoVienChuNhiem"
+    xmlns:tns="http://enterprise.netbeans.org/bpel/QuanLyDiem/LayLopChoGiaoVienChuNhiem"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
+    xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor"
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2" xmlns:ns0="http://j2ee.netbeans.org/xsd/tableSchema" xmlns:ns1="http://xml.netbeans.org/schema/LoaiDiem">
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayLopChoGiaoVienChuNhiem" location="../interface_WSDL/LayLopChoGiaoVienChuNhiem.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayIdLopByIdGiaoVienChuNhiem" location="../DB_WSDL/DB_LayIdLopByIdGiaoVienChuNhiem.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <partnerLinks>
+        <partnerLink name="PL_DB_LayIdLopByIdGiaoVienChuNhiem" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayIdLopByIdGiaoVienChuNhiem" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="PL_LayLopChoGiaoVienChuNhiem" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayLopChoGiaoVienChuNhiem" partnerLinkType="tns:LayLopChoGiaoVienChuNhiem" myRole="LayLopChoGiaoVienChuNhiemPortTypeRole"/>
+    </partnerLinks>
+    <variables>
+        <variable name="LayLopChoGiaoVienChuNhiemOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayIdLopByIdGiaoVienChuNhiem" messageType="tns:outputMsg"/>
+        <variable name="LayLopChoGiaoVienChuNhiemIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayIdLopByIdGiaoVienChuNhiem" messageType="tns:inputMsg"/>
+        <variable name="LayLopChoGiaoVienChuNhiemOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayLopChoGiaoVienChuNhiem" messageType="tns:LayLopChoGiaoVienChuNhiemOperationResponse"/>
+        <variable name="LayLopChoGiaoVienChuNhiemOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayLopChoGiaoVienChuNhiem" messageType="tns:LayLopChoGiaoVienChuNhiemOperationRequest"/>
+    </variables>
+    <sequence>
+        <receive name="Receive1" createInstance="yes" partnerLink="PL_LayLopChoGiaoVienChuNhiem" operation="LayLopChoGiaoVienChuNhiemOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayLopChoGiaoVienChuNhiem" portType="tns:LayLopChoGiaoVienChuNhiemPortType" variable="LayLopChoGiaoVienChuNhiemOperationIn"/>
+        <assign name="Assign1">
+            <copy>
+                <from variable="LayLopChoGiaoVienChuNhiemOperationIn" part="id_giaovienchunhiem"/>
+                <to>$LayLopChoGiaoVienChuNhiemIn.part/ns0:id_giaovienchunhiem</to>
+            </copy>
+        </assign>
+        <invoke name="Invoke1" partnerLink="PL_DB_LayIdLopByIdGiaoVienChuNhiem" operation="newuntitled_Operation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayIdLopByIdGiaoVienChuNhiem" portType="tns:jdbcPortType" inputVariable="LayLopChoGiaoVienChuNhiemIn" outputVariable="LayLopChoGiaoVienChuNhiemOut"/>
+        <assign name="Assign2">
+            <copy>
+                <from>$LayLopChoGiaoVienChuNhiemOut.part/ns0:DB_LayIdLopByIdGiaoVienChuNhiem_Record/ns0:id_lop</from>
+                <to>$LayLopChoGiaoVienChuNhiemOperationOut.lop/ns1:id_lop</to>
+            </copy>
+            <copy>
+                <from>$LayLopChoGiaoVienChuNhiemOut.part/ns0:DB_LayIdLopByIdGiaoVienChuNhiem_Record/ns0:tenlop</from>
+                <to>$LayLopChoGiaoVienChuNhiemOperationOut.lop/ns1:tenlop</to>
+            </copy>
+        </assign>
+        <reply name="Reply1" partnerLink="PL_LayLopChoGiaoVienChuNhiem" operation="LayLopChoGiaoVienChuNhiemOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayLopChoGiaoVienChuNhiem" portType="tns:LayLopChoGiaoVienChuNhiemPortType" variable="LayLopChoGiaoVienChuNhiemOperationOut"/>
+    </sequence>
+</process>
+
