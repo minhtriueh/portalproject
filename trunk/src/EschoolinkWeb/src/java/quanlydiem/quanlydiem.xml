@@ -37,7 +37,12 @@
         </action>
 
         <action name="TongKetDiem" class="quanlydiem.TongKetDiem">
-            <result name="success">/index.jsp?module=quanlydiem&amp;page=tongketdiem</result>
+            <result name="success">/index.jsp?module=quanlydiem&amp;page=tongketdiem&amp;r=no&amp;l=no</result>
+            <result name="error">/index.jsp</result>
+        </action>
+
+        <action name="TongKetDiemResult" class="quanlydiem.TongKetDiemResult">
+            <result name="success">/index.jsp?module=quanlydiem&amp;page=tongketdiemresult&amp;r=no&amp;l=no</result>
             <result name="error">/index.jsp</result>
         </action>
 
