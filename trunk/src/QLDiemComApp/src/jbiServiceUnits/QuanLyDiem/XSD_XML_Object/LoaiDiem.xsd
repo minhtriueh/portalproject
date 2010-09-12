@@ -24,6 +24,8 @@
     <xsd:element name="ListIdMonHoc" type="tns:ListIdMonHoc"/>
     <xsd:element name="ChiTietXemDiem" type="tns:ChiTietXemDiem"/>
     <xsd:element name="ListChiTietXemDiem" type="tns:ListChiTietXemDiem"/>
+    <xsd:element name="HocSinh" type="tns:HocSinh"/>
+    <xsd:element name="ListHocSinh" type="tns:ListHocSinh"/>
     
     <xsd:complexType name="Diem">
         <xsd:sequence>
@@ -148,7 +150,19 @@
             <xsd:element ref="tns:ChiTietXemDiem" maxOccurs="unbounded" minOccurs="0"></xsd:element>
         </xsd:sequence>
     </xsd:complexType>
+     <xsd:complexType name="HocSinh">
+        <xsd:sequence>
+            <xsd:element name="id_hocsinh" type="xsd:long"></xsd:element>
+            <xsd:element name="tenhocsinh" type="xsd:string"></xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="ListHocSinh">
+        <xsd:sequence>
+            <xsd:element ref="tns:HocSinh" maxOccurs="unbounded" minOccurs="0"></xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
 </xsd:schema>
+
 
 
 
