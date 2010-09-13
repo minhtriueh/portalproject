@@ -3,7 +3,7 @@
     Created on : Aug 24, 2010, 9:12:46 PM
     Author     : GIN
 --%>
-
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
    "http://www.w3.org/TR/html4/loose.dtd">
@@ -29,41 +29,67 @@
                                             </div>
                                             <div class="art-postcontent">
                                                 <!-- article-content -->
-                                                 <form id="fm-form" method="post" action="TaoThoiKhoaBieu_Result">
+                                                 <form id="fm-form" method="post" action="TaoTruong_Result">
                                                     <fieldset>
                                                     <legend>Tạo trường</legend>
 
                                                     <div class="fm-req">
-                                                      <label>Tên</label>
-                                                      <input name="tenLop" type="text" />
+                                                      <label>Tên trường</label>
+                                                      <input name="tenTruong" type="text" />
                                                     </div>
                                                     <div class="fm-req">
                                                       <label>Giới thiệu</label>
-                                                      <input name="hocKy" type="text" />
+                                                      <textarea name="gioiThieu" cols="8" rows="5" ></textarea>
+
                                                     </div>
                                                     <div class="fm-req">
                                                       <label>Địa chỉ</label>
-                                                      <input name="namHoc" type="text" />
+                                                      <input name="diaChi" type="text" />
                                                     </div>
                                                     <div class="fm-req">
                                                       <label>Điện thoại</label>
-                                                      <input name="namHoc" type="text" />
+                                                      <input name="dienThoai" type="text" />
                                                     </div>
                                                     <div class="fm-req">
                                                       <label>Loại hình</label>
-                                                      <input name="namHoc" type="text" />
+
+                                                       <select name="loaiHinh">
+                                    <option value="conglap">Công lập</option>
+                                    <option value="danlap">Dân lập</option>
+                                    <option value="bancong">Bán công</option>
+                                </select>
                                                     </div>
                                                     <div class="fm-req">
                                                       <label>Ngày thành lập</label>
-                                                      <input name="namHoc" type="text" />
+
+                                <strong>
+                                    <select name="ngaythanhlap">
+                                        <c:forEach var="i" begin="1" end="31">
+                                            <option value="<c:out value="${i}"></c:out>"><c:out value="${i}"></c:out></option>
+                                        </c:forEach>
+                                    </select>
+                                    <select name="thangthanhlap">
+                                        <c:forEach var="j" begin="1" end="12">
+                                            <option value="<c:out value="${j}"></c:out>"><c:out value="${j}"></c:out></option>
+                                        </c:forEach>
+                                    </select>
+                                    <select name="namthanhlap">
+                                        <c:forEach var="k" begin="1900" end="2010">
+                                            <option value="<c:out value="${k}"></c:out>"><c:out value="${k}"></c:out></option>
+                                        </c:forEach>
+                                    </select>
+
+                                </strong>
+
+
                                                     </div>
                                                     <div class="fm-req">
                                                       <label>Website</label>
-                                                      <input name="namHoc" type="text" />
+                                                      <input name="website" type="text" />
                                                     </div>
 
                                                     </fieldset>
-                                                    
+
                                                     <div id="fm-submit" class="fm-req">
                                                       <input name="Submit" value="Submit" type="submit" />
 
