@@ -18,7 +18,9 @@
     <include file="/quanlydiachi/quanlydiachi.xml"></include>
     <include file="/quanlygiaovien/quanlygiaovien.xml"></include>
     <include file="/quanlyhocba/quanlyhocba.xml"></include>
+    <include file="/thongtincanhan/thongtincanhan.xml"></include>
     <include file="/quanlythongtinkhoitao/quanlythongtinkhoitao.xml"></include>
     <include file="/quanlythoikhoabieu/quanlythoikhoabieu.xml"></include>
+	
 
 </struts>
