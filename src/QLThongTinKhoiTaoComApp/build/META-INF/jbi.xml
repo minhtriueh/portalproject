@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jbi xmlns="http://java.sun.com/xml/ns/jbi" xmlns:ns1="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoMonHoc" xmlns:ns10="http://enterprise.netbeans.org/bpel/QLThongTinKhoiTao/taoNamHoc" xmlns:ns11="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/DB_TaoLop" xmlns:ns12="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/DB_TaoKhoiLop" xmlns:ns13="http://enterprise.netbeans.org/bpel/QLThongTinKhoiTao/taoHanhKiem" xmlns:ns14="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/DB_TaoHanhKiem" xmlns:ns15="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoBoMon" xmlns:ns16="http://enterprise.netbeans.org/bpel/QLThongTinKhoiTao/taoBoMon" xmlns:ns17="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoHieuTruong" xmlns:ns18="http://enterprise.netbeans.org/bpel/QLThongTinKhoiTao/taoTruong" xmlns:ns19="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/DB_TaoTruong" xmlns:ns2="http://enterprise.netbeans.org/bpel/QLThongTinKhoiTao/taoMonHoc" xmlns:ns20="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoHanhKiem" xmlns:ns21="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/DB_TaoMonHoc" xmlns:ns22="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoQuyen" xmlns:ns23="http://enterprise.netbeans.org/bpel/QLThongTinKhoiTao/taoQuyen" xmlns:ns24="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoHocLuc" xmlns:ns25="http://enterprise.netbeans.org/bpel/QLThongTinKhoiTao/taoHocLuc" xmlns:ns26="http://enterprise.netbeans.org/bpel/QLThongTinKhoiTao/taoNhom" xmlns:ns27="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/DB_TaoNhom" xmlns:ns28="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/DB_TaoNamHoc" xmlns:ns29="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/DB_TaoHocLuc" xmlns:ns3="http://enterprise.netbeans.org/bpel/QLThongTinKhoiTao/taoHieuTruong" xmlns:ns30="http://enterprise.netbeans.org/bpel/QLThongTinKhoiTao/taoCoSo" xmlns:ns31="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/DB_TaoCoSo" xmlns:ns32="http://enterprise.netbeans.org/bpel/QLThongTinKhoiTao/taoDanToc" xmlns:ns33="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/DB_TaoDanToc" xmlns:ns34="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoTruong" xmlns:ns35="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/DB_TaoQuyen" xmlns:ns36="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoNhom" xmlns:ns37="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/DB_TaoBoMon" xmlns:ns38="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoCoSo" xmlns:ns39="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoDanToc" xmlns:ns4="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/DB_TaoHieuTruong" xmlns:ns5="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoKhoiLop" xmlns:ns6="http://enterprise.netbeans.org/bpel/QLThongTinKhoiTao/taoKhoiLop" xmlns:ns7="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoLop" xmlns:ns8="http://enterprise.netbeans.org/bpel/QLThongTinKhoiTao/taoLop" xmlns:ns9="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoNamHoc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/jbi ./jbi.xsd">
+    <service-assembly>
+        <identification>
+            <name>QLThongTinKhoiTaoComApp</name>
+            <description>Represents the Service Assembly of QLThongTinKhoiTaoComApp</description>
+        </identification>
+        <service-unit>
+            <identification>
+                <name>QLThongTinKhoiTaoComApp-QLThongTinKhoiTao</name>
+                <description>Represents this Service Unit</description>
+            </identification>
+            <target>
+                <artifacts-zip>QLThongTinKhoiTao.jar</artifacts-zip>
+                <component-name>sun-bpel-engine</component-name>
+            </target>
+        </service-unit>
+        <service-unit>
+            <identification>
+                <name>QLThongTinKhoiTaoComApp-sun-database-binding</name>
+                <description>Represents this Service Unit</description>
+            </identification>
+            <target>
+                <artifacts-zip>sun-database-binding.jar</artifacts-zip>
+                <component-name>sun-database-binding</component-name>
+            </target>
+        </service-unit>
+        <service-unit>
+            <identification>
+                <name>QLThongTinKhoiTaoComApp-sun-http-binding</name>
+                <description>Represents this Service Unit</description>
+            </identification>
+            <target>
+                <artifacts-zip>sun-http-binding.jar</artifacts-zip>
+                <component-name>sun-http-binding</component-name>
+            </target>
+        </service-unit>
+        <connections>
+            <connection>
+                <consumer endpoint-name="TaoMonHocPort" service-name="ns1:TaoMonHocService"/>
+                <provider endpoint-name="TaoMonHocPortTypeRole_myRole" service-name="ns2:PartnerLink2"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="jdbcPortTypeRole_partnerRole" service-name="ns3:PartnerLink1"/>
+                <provider endpoint-name="port" service-name="ns4:service"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="TaoKhoiLopPort" service-name="ns5:TaoKhoiLopService"/>
+                <provider endpoint-name="TaoKhoiLopPortTypeRole_myRole" service-name="ns6:PartnerLink2"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="TaoLopPort" service-name="ns7:TaoLopService"/>
+                <provider endpoint-name="TaoLopPortTypeRole_myRole" service-name="ns8:PartnerLink1"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="TaoNamHocPort" service-name="ns9:TaoNamHocService"/>
+                <provider endpoint-name="TaoNamHocPortTypeRole_myRole" service-name="ns10:PartnerLink2"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="jdbcPortTypeRole_partnerRole" service-name="ns8:PartnerLink2"/>
+                <provider endpoint-name="port" service-name="ns11:service"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="jdbcPortTypeRole_partnerRole" service-name="ns6:PartnerLink1"/>
+                <provider endpoint-name="port" service-name="ns12:service"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="jdbcPortTypeRole_partnerRole" service-name="ns13:PartnerLink1"/>
+                <provider endpoint-name="port" service-name="ns14:service"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="TaoBoMonPort" service-name="ns15:TaoBoMonService"/>
+                <provider endpoint-name="TaoBoMonPortTypeRole_myRole" service-name="ns16:PartnerLink1"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="TaoHieuTruongPort" service-name="ns17:TaoHieuTruongService"/>
+                <provider endpoint-name="TaoHieuTruongPortTypeRole_myRole" service-name="ns3:PartnerLink2"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="jdbcPortTypeRole_partnerRole" service-name="ns18:PartnerLink1"/>
+                <provider endpoint-name="port" service-name="ns19:service"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="TaoHanhKiemPort" service-name="ns20:TaoHanhKiemService"/>
+                <provider endpoint-name="TaoHanhKiemPortTypeRole_myRole" service-name="ns13:PartnerLink2"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="jdbcPortTypeRole_partnerRole" service-name="ns2:PartnerLink1"/>
+                <provider endpoint-name="port" service-name="ns21:service"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="TaoQuyenPort" service-name="ns22:TaoQuyenService"/>
+                <provider endpoint-name="TaoQuyenPortTypeRole_myRole" service-name="ns23:PartnerLink2"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="TaoHocLucPort" service-name="ns24:TaoHocLucService"/>
+                <provider endpoint-name="TaoHocLucPortTypeRole_myRole" service-name="ns25:PartnerLink2"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="jdbcPortTypeRole_partnerRole" service-name="ns26:PartnerLink1"/>
+                <provider endpoint-name="port" service-name="ns27:service"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="jdbcPortTypeRole_partnerRole" service-name="ns10:PartnerLink1"/>
+                <provider endpoint-name="port" service-name="ns28:service"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="jdbcPortTypeRole_partnerRole" service-name="ns25:PartnerLink1"/>
+                <provider endpoint-name="port" service-name="ns29:service"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="jdbcPortTypeRole_partnerRole" service-name="ns30:PartnerLink2"/>
+                <provider endpoint-name="port" service-name="ns31:service"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="jdbcPortTypeRole_partnerRole" service-name="ns32:PartnerLink1"/>
+                <provider endpoint-name="port" service-name="ns33:service"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="TaoTruongPort" service-name="ns34:TaoTruongService"/>
+                <provider endpoint-name="TaoTruongPortTypeRole_myRole" service-name="ns18:PartnerLink2"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="jdbcPortTypeRole_partnerRole" service-name="ns23:PartnerLink1"/>
+                <provider endpoint-name="port" service-name="ns35:service"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="TaoNhomPort" service-name="ns36:TaoNhomService"/>
+                <provider endpoint-name="TaoNhomPortTypeRole_myRole" service-name="ns26:PartnerLink2"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="jdbcPortTypeRole_partnerRole" service-name="ns16:PartnerLink2"/>
+                <provider endpoint-name="port" service-name="ns37:service"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="TaoCoSoPort" service-name="ns38:TaoCoSoService"/>
+                <provider endpoint-name="TaoCoSoPortTypeRole_myRole" service-name="ns30:PartnerLink1"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="TaoDanTocPort" service-name="ns39:TaoDanTocService"/>
+                <provider endpoint-name="TaoDanTocPortTypeRole_myRole" service-name="ns32:PartnerLink2"/>
+            </connection>
+        </connections>
+    </service-assembly>
+</jbi>

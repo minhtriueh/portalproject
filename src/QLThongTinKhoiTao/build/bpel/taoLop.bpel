@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process
+    name="taoLop"
+    targetNamespace="http://enterprise.netbeans.org/bpel/QLThongTinKhoiTao/taoLop"
+    xmlns:tns="http://enterprise.netbeans.org/bpel/QLThongTinKhoiTao/taoLop"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
+    xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor"
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2" xmlns:ns0="http://j2ee.netbeans.org/xsd/tableSchema">
+    <import namespace="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoLop" location="../interface_wsdl/TaoLop.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/DB_TaoLop" location="../db_wsdl/DB_TaoLop.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <partnerLinks>
+        <partnerLink name="PartnerLink2" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/DB_TaoLop" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="PartnerLink1" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoLop" partnerLinkType="tns:TaoLop" myRole="TaoLopPortTypeRole"/>
+    </partnerLinks>
+    <variables>
+        <variable name="ExecuteOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/DB_TaoLop" messageType="tns:outputMsg"/>
+        <variable name="ExecuteIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/DB_TaoLop" messageType="tns:inputMsg"/>
+        <variable name="TaoLopOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoLop" messageType="tns:TaoLopOperationResponse"/>
+        <variable name="TaoLopOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoLop" messageType="tns:TaoLopOperationRequest"/>
+    </variables>
+    <sequence>
+        <receive name="Receive1" createInstance="yes" partnerLink="PartnerLink1" operation="TaoLopOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoLop" portType="tns:TaoLopPortType" variable="TaoLopOperationIn"/>
+        <assign name="Assign1">
+            <copy>
+                <from variable="TaoLopOperationIn" part="sisolop"/>
+                <to>$ExecuteIn.part/ns0:sisolop</to>
+            </copy>
+            <copy>
+                <from variable="TaoLopOperationIn" part="tenlop"/>
+                <to>$ExecuteIn.part/ns0:tenlop</to>
+            </copy>
+            <copy>
+                <from variable="TaoLopOperationIn" part="id_namhoc"/>
+                <to>$ExecuteIn.part/ns0:id_namhoc</to>
+            </copy>
+            <copy>
+                <from variable="TaoLopOperationIn" part="id_thoikhoabieu"/>
+                <to>$ExecuteIn.part/ns0:id_thoikhoabieu</to>
+            </copy>
+            <copy>
+                <from variable="TaoLopOperationIn" part="id_giaovienchunhiem"/>
+                <to>$ExecuteIn.part/ns0:id_giaovienchunhiem</to>
+            </copy>
+            <copy>
+                <from variable="TaoLopOperationIn" part="id_khoilop"/>
+                <to>$ExecuteIn.part/ns0:id_khoilop</to>
+            </copy>
+        </assign>
+        <invoke name="Invoke1" partnerLink="PartnerLink2" operation="execute" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/DB_TaoLop" portType="tns:jdbcPortType" inputVariable="ExecuteIn" outputVariable="ExecuteOut"/>
+        <assign name="Assign2">
+            <copy>
+                <from>$ExecuteOut.part/ns0:returnValue</from>
+                <to variable="TaoLopOperationOut" part="id"/>
+            </copy>
+        </assign>
+        <reply name="Reply1" partnerLink="PartnerLink1" operation="TaoLopOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoLop" portType="tns:TaoLopPortType" variable="TaoLopOperationOut"/>
+    </sequence>
+</process>
+
