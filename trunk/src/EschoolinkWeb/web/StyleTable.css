@@ -1,0 +1,35 @@
+/*------------------------Mau Table------*/
+	.myTable{
+	width: auto;
+	border: 1px #9DDCF9 solid;
+	border-collapse: collapse;
+	margin-top: 10px;
+}
+.myTable thead {
+	background-image: url("images/bg_top_menu.gif");
+	background-repeat: repeat-x;
+
+	text-align: center;
+	font-weight: bold;
+	color: white;
+
+}
+.myTable thead tr td{
+	border: 1px solid #D4EFFC;
+	height: 18px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.myTable tbody tr td{
+	border: 0px;
+	border-bottom: 1px #9DDCF9 dotted;
+	color: #524A48;
+	padding: 5px;
+}
+.tr1{
+	background-color: #D4EFFC;
+}
+.td1{
+	font-weight: bold;
+}

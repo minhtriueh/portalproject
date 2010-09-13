@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "struts-2.0.dtd">
+<struts>
+    <package name="quanlydiem"
+		extends="struts-default">
+
+        <action name="BatDauNhapDiem" class="quanlydiem.BatDauNhapDiem">
+            <result name="success">/index.jsp?module=quanlydiem&amp;page=batdaunhapdiem&amp;r=no&amp;l=no</result>
+            <result name="error">/index.jsp?module=quanlydiem&amp;page=batdaunhapdiem</result>
+        </action>
+
+        <action name="NhapDiem" class="quanlydiem.NhapDiem">
+            <result name="success">/index.jsp?module=quanlydiem&amp;page=nhapdiem&amp;r=no&amp;l=no</result>
+            <result name="error">/index.jsp</result>
+        </action>
+
+        <action name="LuuDiem" class="quanlydiem.LuuDiem">
+            <result name="success">/index.jsp?module=quanlydiem&amp;page=luudiem&amp;r=no&amp;l=no</result>
+            <result name="error">/index.jsp?module=quanlydiem&amp;page=luudiem</result>
+        </action>
+
+        <action name="XemDiem" class="quanlydiem.XemDiem">
+            <result name="success">/index.jsp?module=quanlydiem&amp;page=xemdiem</result>
+            <result name="error">/index.jsp</result>
+        </action>
+
+        <action name="XacNhanMSHS" class="quanlydiem.XacNhanMSHS">
+            <result name="success">/index.jsp?module=quanlydiem&amp;page=xacnhanmshs</result>
+            <result name="error">/index.jsp</result>
+        </action>
+
+        <action name="XemDiemResult" class="quanlydiem.XemDiemResult">
+            <result name="success">/index.jsp?module=quanlydiem&amp;page=xemdiemresult</result>
+            <result name="error">/index.jsp</result>
+        </action>
+
+        <action name="TongKetDiem" class="quanlydiem.TongKetDiem">
+            <result name="success">/index.jsp?module=quanlydiem&amp;page=tongketdiem&amp;r=no&amp;l=no</result>
+            <result name="error">/index.jsp</result>
+        </action>
+
+        <action name="TongKetDiemResult" class="quanlydiem.TongKetDiemResult">
+            <result name="success">/index.jsp?module=quanlydiem&amp;page=tongketdiemresult&amp;r=no&amp;l=no</result>
+            <result name="error">/index.jsp</result>
+        </action>
+
+    </package>
+</struts>

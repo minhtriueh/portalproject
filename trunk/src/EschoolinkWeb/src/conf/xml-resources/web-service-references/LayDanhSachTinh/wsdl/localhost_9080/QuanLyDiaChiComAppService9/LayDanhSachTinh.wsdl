@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions targetNamespace="QuanLyDiaChiComApp" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:ns="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoKhuVuc" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns9="http://j2ee.netbeans.org/wsdl/QuanLyDiaChi/LayDanhSachHuyen" xmlns:ns5="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoXaPhuongThiTran" xmlns:ns6="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/UpdateQuanHuyenThanhPho" xmlns:ns10="http://j2ee.netbeans.org/wsdl/QuanLyDiaChi/LayDanhSachKhuVuc" xmlns:ns7="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/UpdateTinh" xmlns:ns8="http://j2ee.netbeans.org/wsdl/QuanLyDiaChi/LayDanhSachTinh" xmlns:ns2="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoQueQuan" xmlns:ns1="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoQuanHuyenThanhPho" xmlns:ns4="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoTinh" xmlns:ns3="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoThonXom" xmlns:tns="QuanLyDiaChiComApp" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiaChi/LayDanhSachHuyen" location="http://sanchikaro:9080/QuanLyDiaChiComApp-sun-http-binding/QuanLyDiaChi/interface_WSDL/LayDanhSachHuyen.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/UpdateQuanHuyenThanhPho" location="http://sanchikaro:9080/QuanLyDiaChiComApp-sun-http-binding/QuanLyDiaChi/interface_WSDL/TaoDiaChi/UpdateQuanHuyenThanhPho.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoXaPhuongThiTran" location="http://sanchikaro:9080/QuanLyDiaChiComApp-sun-http-binding/QuanLyDiaChi/interface_WSDL/TaoDiaChi/TaoXaPhuongThiTran.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoThonXom" location="http://sanchikaro:9080/QuanLyDiaChiComApp-sun-http-binding/QuanLyDiaChi/interface_WSDL/TaoDiaChi/TaoThonXom.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoQueQuan" location="http://sanchikaro:9080/QuanLyDiaChiComApp-sun-http-binding/QuanLyDiaChi/interface_WSDL/TaoDiaChi/TaoQueQuan.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoQuanHuyenThanhPho" location="http://sanchikaro:9080/QuanLyDiaChiComApp-sun-http-binding/QuanLyDiaChi/interface_WSDL/TaoDiaChi/TaoQuanHuyenThanhPho.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/UpdateTinh" location="http://sanchikaro:9080/QuanLyDiaChiComApp-sun-http-binding/QuanLyDiaChi/interface_WSDL/TaoDiaChi/UpdateTinh.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoTinh" location="http://sanchikaro:9080/QuanLyDiaChiComApp-sun-http-binding/QuanLyDiaChi/interface_WSDL/TaoDiaChi/TaoTinh.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiaChi/LayDanhSachTinh" location="http://sanchikaro:9080/QuanLyDiaChiComApp-sun-http-binding/QuanLyDiaChi/interface_WSDL/LayDanhSachTinh.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiaChi/LayDanhSachKhuVuc" location="http://sanchikaro:9080/QuanLyDiaChiComApp-sun-http-binding/QuanLyDiaChi/interface_WSDL/LayDanhSachKhuVuc.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHocSinh/TaoKhuVuc" location="http://sanchikaro:9080/QuanLyDiaChiComApp-sun-http-binding/QuanLyDiaChi/interface_WSDL/TaoDiaChi/TaoKhuVuc.wsdl">
+    </import>
+  <portType name="dummyCasaPortType">
+  </portType>
+  <binding name="casaBinding9" type="ns8:LayDanhSachTinhPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="LayDanhSachTinhOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QuanLyDiaChiComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QuanLyDiaChiComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding8" type="ns7:UpdateTinhPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="UpdateTinhOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QuanLyDiaChiComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QuanLyDiaChiComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding7" type="ns6:UpdateQuanHuyenThanhPhoPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="UpdateQuanHuyenThanhPhoOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QuanLyDiaChiComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QuanLyDiaChiComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding11" type="ns10:LayDanhSachKhuVucPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="LayDanhSachKhuVucOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QuanLyDiaChiComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QuanLyDiaChiComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding6" type="ns5:TaoXaPhuongThiTranPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="TaoXaPhuongThiTranOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QuanLyDiaChiComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QuanLyDiaChiComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding10" type="ns9:LayDanhSachHuyenPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="LayDanhSachHuyenOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QuanLyDiaChiComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QuanLyDiaChiComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding5" type="ns4:TaoTinhPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="TaoTinhOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QuanLyDiaChiComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QuanLyDiaChiComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding4" type="ns3:TaoThonXomPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="TaoThonXomOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QuanLyDiaChiComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QuanLyDiaChiComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding3" type="ns2:TaoQueQuanPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="TaoQueQuanOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QuanLyDiaChiComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QuanLyDiaChiComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding2" type="ns1:TaoQuanHuyenThanhPhoPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="TaoQuanHuyenThanhPhoOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QuanLyDiaChiComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QuanLyDiaChiComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding1" type="ns:TaoKhuVucPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="TaoKhuVucOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QuanLyDiaChiComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QuanLyDiaChiComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="QuanLyDiaChiComAppService8">
+    <port name="UpdateTinh" binding="tns:casaBinding8">
+      <soap:address location="http://sanchikaro:9080/QuanLyDiaChiComAppService8/UpdateTinh"/>
+    </port>
+  </service>
+  <service name="QuanLyDiaChiComAppService7">
+    <port name="UpdateQuanHuyenThanhPho" binding="tns:casaBinding7">
+      <soap:address location="http://sanchikaro:9080/QuanLyDiaChiComAppService7/UpdateQuanHuyenThanhPho"/>
+    </port>
+  </service>
+  <service name="QuanLyDiaChiComAppService11">
+    <port name="LayDanhSachKhuVuc" binding="tns:casaBinding11">
+      <soap:address location="http://sanchikaro:9080/QuanLyDiaChiComAppService11/LayDanhSachKhuVuc"/>
+    </port>
+  </service>
+  <service name="QuanLyDiaChiComAppService10">
+    <port name="LayDanhSachHuyen" binding="tns:casaBinding10">
+      <soap:address location="http://sanchikaro:9080/QuanLyDiaChiComAppService10/LayDanhSachHuyen"/>
+    </port>
+  </service>
+  <service name="QuanLyDiaChiComAppService9">
+    <port name="LayDanhSachTinh" binding="tns:casaBinding9">
+      <soap:address location="http://sanchikaro:9080/QuanLyDiaChiComAppService9/LayDanhSachTinh"/>
+    </port>
+  </service>
+  <service name="QuanLyDiaChiComAppService2">
+    <port name="TaoQuanHuyenThanhPho" binding="tns:casaBinding2">
+      <soap:address location="http://sanchikaro:9080/QuanLyDiaChiComAppService2/TaoQuanHuyenThanhPho"/>
+    </port>
+  </service>
+  <service name="QuanLyDiaChiComAppService1">
+    <port name="TaoKhuVuc" binding="tns:casaBinding1">
+      <soap:address location="http://sanchikaro:9080/QuanLyDiaChiComAppService1/TaoKhuVuc"/>
+    </port>
+  </service>
+  <service name="QuanLyDiaChiComAppService4">
+    <port name="TaoThonXom" binding="tns:casaBinding4">
+      <soap:address location="http://sanchikaro:9080/QuanLyDiaChiComAppService4/TaoThonXom"/>
+    </port>
+  </service>
+  <service name="QuanLyDiaChiComAppService3">
+    <port name="TaoQueQuan" binding="tns:casaBinding3">
+      <soap:address location="http://sanchikaro:9080/QuanLyDiaChiComAppService3/TaoQueQuan"/>
+    </port>
+  </service>
+  <service name="QuanLyDiaChiComAppService6">
+    <port name="TaoXaPhuongThiTran" binding="tns:casaBinding6">
+      <soap:address location="http://sanchikaro:9080/QuanLyDiaChiComAppService6/TaoXaPhuongThiTran"/>
+    </port>
+  </service>
+  <service name="QuanLyDiaChiComAppService5">
+    <port name="TaoTinh" binding="tns:casaBinding5">
+      <soap:address location="http://sanchikaro:9080/QuanLyDiaChiComAppService5/TaoTinh"/>
+    </port>
+  </service>
+</definitions>

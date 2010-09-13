@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions targetNamespace="QLGiaoVienComApp" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:ns="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/SuaGV" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns5="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/phanLopChuNhiem" xmlns:ns6="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/getLopbyTheoKhoi" xmlns:ns7="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/LoadToBoMon" xmlns:ns8="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/LoadDanToc" xmlns:ns2="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/searchGV" xmlns:ns1="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/themGV" xmlns:ns4="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/getLopTrongNM" xmlns:ns3="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/tracuuGV" xmlns:tns="QLGiaoVienComApp" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/tracuuGV" location="http://sanchikaro:9080/QLGiaoVienComApp-sun-http-binding/QuanLyGiaoVien/interface_WSDL/tracuuGV.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/LoadDanToc" location="http://sanchikaro:9080/QLGiaoVienComApp-sun-http-binding/QuanLyGiaoVien/interface_WSDL/LoadDanToc.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/themGV" location="http://sanchikaro:9080/QLGiaoVienComApp-sun-http-binding/QuanLyGiaoVien/interface_WSDL/themGV.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/LoadToBoMon" location="http://sanchikaro:9080/QLGiaoVienComApp-sun-http-binding/QuanLyGiaoVien/interface_WSDL/LoadToBoMon.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/phanLopChuNhiem" location="http://sanchikaro:9080/QLGiaoVienComApp-sun-http-binding/QuanLyGiaoVien/interface_WSDL/phanLopChuNhiem.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/searchGV" location="http://sanchikaro:9080/QLGiaoVienComApp-sun-http-binding/QuanLyGiaoVien/interface_WSDL/searchGV.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/getLopbyTheoKhoi" location="http://sanchikaro:9080/QLGiaoVienComApp-sun-http-binding/QuanLyGiaoVien/interface_WSDL/getLopbyTheoKhoi.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/SuaGV" location="http://sanchikaro:9080/QLGiaoVienComApp-sun-http-binding/QuanLyGiaoVien/interface_WSDL/SuaGV.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyGiaoVien/getLopTrongNM" location="http://sanchikaro:9080/QLGiaoVienComApp-sun-http-binding/QuanLyGiaoVien/interface_WSDL/getLopTrongNM.wsdl">
+    </import>
+  <portType name="dummyCasaPortType">
+  </portType>
+  <binding name="casaBinding1" type="ns3:tracuuGVPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="tracuuGVOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLGiaoVienComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLGiaoVienComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding2" type="ns2:searchGVPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="searchGVOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLGiaoVienComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLGiaoVienComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding3" type="ns1:themGVPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="themGVOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLGiaoVienComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLGiaoVienComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding4" type="ns:SuaGVPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="SuaGVOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLGiaoVienComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLGiaoVienComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding5" type="ns4:getLopTrongNMPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="getLopTrongNMOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLGiaoVienComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLGiaoVienComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding6" type="ns5:phanLopChuNhiemPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="phanLopChuNhiemOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLGiaoVienComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLGiaoVienComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding7" type="ns6:getLopbyTheoKhoiPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="getLopbyTheoKhoiOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLGiaoVienComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLGiaoVienComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding8" type="ns7:LoadToBoMonPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="LoadToBoMonOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLGiaoVienComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLGiaoVienComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding9" type="ns8:LoadDanTocPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="LoadDanTocOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLGiaoVienComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLGiaoVienComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="QLGiaoVienComAppService3">
+    <port name="ThemGV" binding="tns:casaBinding3">
+      <soap:address location="http://sanchikaro:9080/QLGiaoVienComAppService3/ThemGV"/>
+    </port>
+  </service>
+  <service name="QLGiaoVienComAppService2">
+    <port name="searchGV" binding="tns:casaBinding2">
+      <soap:address location="http://sanchikaro:9080/QLGiaoVienComAppService2/searchGV"/>
+    </port>
+  </service>
+  <service name="QLGiaoVienComAppService5">
+    <port name="getLopTrongNM" binding="tns:casaBinding5">
+      <soap:address location="http://sanchikaro:9080/QLGiaoVienComAppService5/getLopTrongNM"/>
+    </port>
+  </service>
+  <service name="QLGiaoVienComAppService4">
+    <port name="SuaGV" binding="tns:casaBinding4">
+      <soap:address location="http://sanchikaro:9080/QLGiaoVienComAppService4/SuaGV"/>
+    </port>
+  </service>
+  <service name="QLGiaoVienComAppService1">
+    <port name="tracuuGVbyID" binding="tns:casaBinding1">
+      <soap:address location="http://sanchikaro:9080/QLGiaoVienComAppService1/tracuuGVbyID"/>
+    </port>
+  </service>
+  <service name="QLGiaoVienComAppService7">
+    <port name="getLopTheoKhoi" binding="tns:casaBinding7">
+      <soap:address location="http://sanchikaro:9080/QLGiaoVienComAppService7/getLopTheoKhoi"/>
+    </port>
+  </service>
+  <service name="QLGiaoVienComAppService6">
+    <port name="PhanLopChuNhiem" binding="tns:casaBinding6">
+      <soap:address location="http://sanchikaro:9080/QLGiaoVienComAppService6/PhanLopChuNhiem"/>
+    </port>
+  </service>
+  <service name="QLGiaoVienComAppService9">
+    <port name="loadDanToc" binding="tns:casaBinding9">
+      <soap:address location="http://sanchikaro:9080/QLGiaoVienComAppService9/loadDanToc"/>
+    </port>
+  </service>
+  <service name="QLGiaoVienComAppService8">
+    <port name="loadToBoMon" binding="tns:casaBinding8">
+      <soap:address location="http://sanchikaro:9080/QLGiaoVienComAppService8/loadToBoMon"/>
+    </port>
+  </service>
+</definitions>

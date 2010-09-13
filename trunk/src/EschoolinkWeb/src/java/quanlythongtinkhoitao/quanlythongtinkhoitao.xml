@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "struts-2.0.dtd">
+<struts>
+	<package name="QLThongTinKhoiTao"
+		extends="struts-default">
+		
+                <!--<action name="TaoTruong"
+			class="quanlythongtinkhoitao.TaoTruong">
+			<result name="success">/index.jsp?module=quanlythongtinkhoitao&amp;page=taotruong</result>
+		</action>
+                <action name="TaoTruong_Result"
+			class="quanlythongtinkhoitao.TaoTruong_Result">
+			<result name="success">/index.jsp?module=quanlythongtinkhoitao&amp;page=result</result>
+                        <result name="error">/index.jsp?module=quanlythongtinkhoitao&amp;page=error</result>
+                </action>
+
+                <action name="TaoQuyen"
+			class="quanlythongtinkhoitao.TaoQuyen">
+			<result name="success">/index.jsp?module=quanlythongtinkhoitao&amp;page=taoquyen</result>
+		</action>
+                <action name="TaoQuyen_Result"
+			class="quanlythongtinkhoitao.TaoQuyen_Result">
+			<result name="success">/index.jsp?module=quanlythongtinkhoitao&amp;page=result</result>
+                        <result name="error">/index.jsp?module=quanlythongtinkhoitao&amp;page=error</result>
+                </action>
+
+                 <action name="TaoNhom"
+			class="quanlythongtinkhoitao.TaoNhom">
+			<result name="success">/index.jsp?module=quanlythongtinkhoitao&amp;page=taonhom</result>
+		</action>
+                <action name="TaoNhom_Result"
+			class="quanlythongtinkhoitao.TaoNhom_Result">
+			<result name="success">/index.jsp?module=quanlythongtinkhoitao&amp;page=result</result>
+                        <result name="error">/index.jsp?module=quanlythongtinkhoitao&amp;page=error</result>
+                </action>-->
+
+
+	</package>
+
+</struts>

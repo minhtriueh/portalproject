@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions targetNamespace="QLHocBaComApp" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:ns="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/tracuuhocbacanam" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns9="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/loadHanhKiem" xmlns:ns5="http://j2ee.netbeans.org/wsdl/Quanlyhocsinh/capnhathanhkiem" xmlns:ns6="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/TraCuuHocBaHocTheoHK" xmlns:ns10="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/loadNamHoc" xmlns:ns7="http://j2ee.netbeans.org/wsdl/Quanlyhocsinh/xoahocsinhbohoc" xmlns:ns11="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/loadLopTheoKhoiLopVaNamHoc" xmlns:ns8="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/loadHocLuc" xmlns:ns2="http://j2ee.netbeans.org/wsdl/Quanlyhocsinh/themhocsinhbohoc" xmlns:ns1="http://j2ee.netbeans.org/wsdl/Quanlyhocsinh/tracuuhocbatheohocky" xmlns:ns4="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/chinhsuahocba" xmlns:ns3="http://j2ee.netbeans.org/wsdl/Quanlyhocsinh/laydanhsachhocsinhbohoc" xmlns:tns="QLHocBaComApp" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <import namespace="http://j2ee.netbeans.org/wsdl/Quanlyhocsinh/xoahocsinhbohoc" location="http://sanchikaro:9080/QLHocBaComApp-sun-http-binding/QuanlyHocBa/WSDL/xoahocsinhbohoc.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/Quanlyhocsinh/themhocsinhbohoc" location="http://sanchikaro:9080/QLHocBaComApp-sun-http-binding/QuanlyHocBa/WSDL/themhocsinhbohoc.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/loadLopTheoKhoiLopVaNamHoc" location="http://sanchikaro:9080/QLHocBaComApp-sun-http-binding/QuanlyHocBa/WSDL/loadLopTheoKhoiLopVaNamHoc.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/loadNamHoc" location="http://sanchikaro:9080/QLHocBaComApp-sun-http-binding/QuanlyHocBa/WSDL/loadNamHoc.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/chinhsuahocba" location="http://sanchikaro:9080/QLHocBaComApp-sun-http-binding/QuanlyHocBa/WSDL/chinhsuahocba.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/Quanlyhocsinh/laydanhsachhocsinhbohoc" location="http://sanchikaro:9080/QLHocBaComApp-sun-http-binding/QuanlyHocBa/WSDL/laydanhsachhocsinhbohoc.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/Quanlyhocsinh/tracuuhocbatheohocky" location="http://sanchikaro:9080/QLHocBaComApp-sun-http-binding/QuanlyHocBa/WSDL/tracuuhocbatheohocky.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/TraCuuHocBaHocTheoHK" location="http://sanchikaro:9080/QLHocBaComApp-sun-http-binding/QuanlyHocBa/WSDL/TraCuuHocBaHocTheoHK.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/tracuuhocbacanam" location="http://sanchikaro:9080/QLHocBaComApp-sun-http-binding/QuanlyHocBa/WSDL/tracuuhocbacanam.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/loadHanhKiem" location="http://sanchikaro:9080/QLHocBaComApp-sun-http-binding/QuanlyHocBa/WSDL/loadHanhKiem.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QuanlyHocBa/loadHocLuc" location="http://sanchikaro:9080/QLHocBaComApp-sun-http-binding/QuanlyHocBa/WSDL/loadHocLuc.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/Quanlyhocsinh/capnhathanhkiem" location="http://sanchikaro:9080/QLHocBaComApp-sun-http-binding/QuanlyHocBa/WSDL/capnhathanhkiem.wsdl">
+    </import>
+  <portType name="dummyCasaPortType">
+  </portType>
+  <binding name="casaBinding9" type="ns7:xoahocsinhbohocPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="xoahocsinhbohocOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLHocBaComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLHocBaComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding1" type="ns:tracuuhocbacanamPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="tracuuhocbacanamOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLHocBaComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLHocBaComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding2" type="tns:dummyCasaPortType">
+  </binding>
+  <binding name="casaBinding3" type="ns1:tracuuhocbatheohockyPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="tracuuhocbatheohockyOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLHocBaComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLHocBaComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding4" type="ns2:themhocsinhbohocPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="themhocsinhbohocOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLHocBaComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLHocBaComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding5" type="ns3:laydanhsachhocsinhbohocPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="laydanhsachhocsinhbohocOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLHocBaComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLHocBaComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding10" type="ns8:loadHocLucPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="loadHocLucOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLHocBaComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLHocBaComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding6" type="ns4:chinhsuahocbaPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="chinhsuahocbaOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLHocBaComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLHocBaComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding11" type="ns9:loadHanhKiemPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="loadHanhKiemOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLHocBaComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLHocBaComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding7" type="ns5:capnhathanhkiemPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="capnhathanhkiemOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLHocBaComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLHocBaComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding12" type="ns10:loadNamHocPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="loadNamHocOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLHocBaComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLHocBaComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding8" type="ns6:TraCuuHocBaHocTheoHKPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="TraCuuHocBaHocTheoHKOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLHocBaComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLHocBaComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding13" type="ns11:loadLopTheoKhoiLopVaNamHocPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="loadLopTheoKhoiLopVaNamHocOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLHocBaComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLHocBaComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="QLHocBaComAppService4">
+    <port name="themhsinhbohoc" binding="tns:casaBinding4">
+      <soap:address location="http://sanchikaro:9080/QLHocBaComAppService4/themhsinhbohoc"/>
+    </port>
+  </service>
+  <service name="QLHocBaComAppService3">
+    <port name="tracuuhbatheohky" binding="tns:casaBinding3">
+      <soap:address location="http://sanchikaro:9080/QLHocBaComAppService3/tracuuhbatheohky"/>
+    </port>
+  </service>
+  <service name="QLHocBaComAppService2">
+    <port name="casaPort1" binding="tns:casaBinding2">
+    </port>
+  </service>
+  <service name="QLHocBaComAppService1">
+    <port name="tracuuhocbacanam" binding="tns:casaBinding1">
+      <soap:address location="http://sanchikaro:9080/QLHocBaComAppService1/tracuuhocbacanam"/>
+    </port>
+  </service>
+  <service name="QLHocBaComAppService10">
+    <port name="loadHocLuc" binding="tns:casaBinding10">
+      <soap:address location="http://sanchikaro:9080/QLHocBaComAppService10/loadHocLuc"/>
+    </port>
+  </service>
+  <service name="QLHocBaComAppService11">
+    <port name="loadHanhKiem" binding="tns:casaBinding11">
+      <soap:address location="http://sanchikaro:9080/QLHocBaComAppService11/loadHanhKiem"/>
+    </port>
+  </service>
+  <service name="QLHocBaComAppService12">
+    <port name="loadNamHoc" binding="tns:casaBinding12">
+      <soap:address location="http://sanchikaro:9080/QLHocBaComAppService12/loadNamHoc"/>
+    </port>
+  </service>
+  <service name="QLHocBaComAppService13">
+    <port name="loadLopTheoKhoivaNam" binding="tns:casaBinding13">
+      <soap:address location="http://sanchikaro:9080/QLHocBaComAppService13/loadLopTheoKhoivaNam"/>
+    </port>
+  </service>
+  <service name="QLHocBaComAppService6">
+    <port name="chinhsuahocba" binding="tns:casaBinding6">
+      <soap:address location="http://sanchikaro:9080/QLHocBaComAppService6/chinhsuahocba"/>
+    </port>
+  </service>
+  <service name="QLHocBaComAppService5">
+    <port name="laydshsinhbohoc" binding="tns:casaBinding5">
+      <soap:address location="http://sanchikaro:9080/QLHocBaComAppService5/laydshsinhbohoc"/>
+    </port>
+  </service>
+  <service name="QLHocBaComAppService8">
+    <port name="tracuuhocbatheoHK" binding="tns:casaBinding8">
+      <soap:address location="http://sanchikaro:9080/QLHocBaComAppService8/tracuuhocbatheoHK"/>
+    </port>
+  </service>
+  <service name="QLHocBaComAppService7">
+    <port name="capnhathanhkiem" binding="tns:casaBinding7">
+      <soap:address location="http://sanchikaro:9080/QLHocBaComAppService7/capnhathanhkiem"/>
+    </port>
+  </service>
+  <service name="QLHocBaComAppService9">
+    <port name="xoahsinhbohoc" binding="tns:casaBinding9">
+      <soap:address location="http://sanchikaro:9080/QLHocBaComAppService9/xoahsinhbohoc"/>
+    </port>
+  </service>
+</definitions>
