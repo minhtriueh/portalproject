@@ -29,17 +29,17 @@
                                             </div>
                                             <div class="art-postcontent">
                                                 <!-- article-content -->
-                                                 <form id="fm-form" method="post" action="TaoThoiKhoaBieu_Result">
+                                                 <form id="fm-form" method="post" action="TaoNamHoc_Result">
                                                     <fieldset>
                                                     <legend>Tạo năm học</legend>
 
                                                     <div class="fm-req">
                                                       <label>Năm trước</label>
-                                                      <input name="tenLop" type="text" />
+                                                      <input name="namTruoc" type="text" />
                                                     </div>
                                                     <div class="fm-req">
                                                       <label>Năm sau</label>
-                                                      <input name="hocKy" type="text" />
+                                                      <input name="namSau" type="text" />
                                                     </div>
 
                                                     </fieldset>

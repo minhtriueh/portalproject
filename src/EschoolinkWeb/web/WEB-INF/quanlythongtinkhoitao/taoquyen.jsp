@@ -29,17 +29,17 @@
                                             </div>
                                             <div class="art-postcontent">
                                                 <!-- article-content -->
-                                                 <form id="fm-form" method="post" action="TaoThoiKhoaBieu_Result">
+                                                 <form id="fm-form" method="post" action="TaoQuyen_Result">
                                                     <fieldset>
                                                     <legend>Tạo quyền</legend>
 
                                                     <div class="fm-req">
-                                                      <label>Tên</label>
-                                                      <input name="tenLop" type="text" />
+                                                      <label>Tên quyền</label>
+                                                      <input name="tenQuyen" type="text" />
                                                     </div>
                                                     <div class="fm-req">
                                                       <label>Mô tả</label>
-                                                      <input name="hocKy" type="text" />
+                                                      <textarea name="moTa" cols="8" rows="5"></textarea>
                                                     </div>
 
                                                     </fieldset>
