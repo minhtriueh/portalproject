@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process
+    name="taoCoSo"
+    targetNamespace="http://enterprise.netbeans.org/bpel/QLThongTinKhoiTao/taoCoSo"
+    xmlns:tns="http://enterprise.netbeans.org/bpel/QLThongTinKhoiTao/taoCoSo"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
+    xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor"
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2" xmlns:ns0="http://j2ee.netbeans.org/xsd/tableSchema">
+    <import namespace="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoCoSo" location="../interface_wsdl/TaoCoSo.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/DB_TaoCoSo" location="../db_wsdl/DB_TaoCoSo.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <partnerLinks>
+        <partnerLink name="PartnerLink2" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/DB_TaoCoSo" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="PartnerLink1" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoCoSo" partnerLinkType="tns:TaoCoSo" myRole="TaoCoSoPortTypeRole"/>
+    </partnerLinks>
+    <variables>
+        <variable name="ExecuteOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/DB_TaoCoSo" messageType="tns:outputMsg"/>
+        <variable name="ExecuteIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/DB_TaoCoSo" messageType="tns:inputMsg"/>
+        <variable name="TaoCoSoOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoCoSo" messageType="tns:TaoCoSoOperationResponse"/>
+        <variable name="TaoCoSoOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoCoSo" messageType="tns:TaoCoSoOperationRequest"/>
+    </variables>
+    <sequence>
+        <receive name="Receive1" createInstance="yes" partnerLink="PartnerLink1" operation="TaoCoSoOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoCoSo" portType="tns:TaoCoSoPortType" variable="TaoCoSoOperationIn"/>
+        <assign name="Assign1">
+            <copy>
+                <from variable="TaoCoSoOperationIn" part="diachicoso"/>
+                <to>$ExecuteIn.part/ns0:diachicoso</to>
+            </copy>
+            <copy>
+                <from variable="TaoCoSoOperationIn" part="dienthoaicoso"/>
+                <to>$ExecuteIn.part/ns0:dienthoaicoso</to>
+            </copy>
+            <copy>
+                <from variable="TaoCoSoOperationIn" part="gioithieucoso"/>
+                <to>$ExecuteIn.part/ns0:gioithieucoso</to>
+            </copy>
+            <copy>
+                <from variable="TaoCoSoOperationIn" part="ngaythanhlapcoso"/>
+                <to>$ExecuteIn.part/ns0:ngaythanhlapcoso</to>
+            </copy>
+            <copy>
+                <from variable="TaoCoSoOperationIn" part="tencoso"/>
+                <to>$ExecuteIn.part/ns0:tencoso</to>
+            </copy>
+            <copy>
+                <from variable="TaoCoSoOperationIn" part="websitecoso"/>
+                <to>$ExecuteIn.part/ns0:websitecoso</to>
+            </copy>
+            <copy>
+                <from variable="TaoCoSoOperationIn" part="id_truong"/>
+                <to>$ExecuteIn.part/ns0:id_truong</to>
+            </copy>
+        </assign>
+        <invoke name="Invoke1" partnerLink="PartnerLink2" operation="execute" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/DB_TaoCoSo" portType="tns:jdbcPortType" inputVariable="ExecuteIn" outputVariable="ExecuteOut"/>
+        <assign name="Assign2">
+            <copy>
+                <from>$ExecuteOut.part/ns0:returnValue</from>
+                <to variable="TaoCoSoOperationOut" part="id"/>
+            </copy>
+        </assign>
+        <reply name="Reply1" partnerLink="PartnerLink1" operation="TaoCoSoOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoCoSo" portType="tns:TaoCoSoPortType" variable="TaoCoSoOperationOut"/>
+    </sequence>
+</process>
+

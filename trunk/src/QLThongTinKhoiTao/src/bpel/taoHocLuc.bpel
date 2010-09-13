@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process
+    name="taoHocLuc"
+    targetNamespace="http://enterprise.netbeans.org/bpel/QLThongTinKhoiTao/taoHocLuc"
+    xmlns:tns="http://enterprise.netbeans.org/bpel/QLThongTinKhoiTao/taoHocLuc"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
+    xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor"
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2" xmlns:ns0="http://j2ee.netbeans.org/xsd/tableSchema">
+    <import namespace="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/DB_TaoHocLuc" location="../db_wsdl/DB_TaoHocLuc.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoHocLuc" location="../interface_wsdl/TaoHocLuc.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <partnerLinks>
+        <partnerLink name="PartnerLink2" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoHocLuc" partnerLinkType="tns:TaoHocLuc" myRole="TaoHocLucPortTypeRole"/>
+        <partnerLink name="PartnerLink1" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/DB_TaoHocLuc" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+    </partnerLinks>
+    <variables>
+        <variable name="ExecuteOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/DB_TaoHocLuc" messageType="tns:outputMsg"/>
+        <variable name="ExecuteIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/DB_TaoHocLuc" messageType="tns:inputMsg"/>
+        <variable name="TaoHocLucOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoHocLuc" messageType="tns:TaoHocLucOperationResponse"/>
+        <variable name="TaoHocLucOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoHocLuc" messageType="tns:TaoHocLucOperationRequest"/>
+    </variables>
+    <sequence>
+        <receive name="Receive1" createInstance="yes" partnerLink="PartnerLink2" operation="TaoHocLucOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoHocLuc" portType="tns:TaoHocLucPortType" variable="TaoHocLucOperationIn"/>
+        <assign name="Assign1">
+            <copy>
+                <from variable="TaoHocLucOperationIn" part="diemcanduoi"/>
+                <to>$ExecuteIn.part/ns0:_diemcanduoi</to>
+            </copy>
+            <copy>
+                <from variable="TaoHocLucOperationIn" part="diemcantren"/>
+                <to>$ExecuteIn.part/ns0:_diemcantren</to>
+            </copy>
+            <copy>
+                <from variable="TaoHocLucOperationIn" part="ghichu"/>
+                <to>$ExecuteIn.part/ns0:_ghichu</to>
+            </copy>
+            <copy>
+                <from variable="TaoHocLucOperationIn" part="khongcomonduoi"/>
+                <to>$ExecuteIn.part/ns0:_khongcomonduoi</to>
+            </copy>
+            <copy>
+                <from variable="TaoHocLucOperationIn" part="tenhocluc"/>
+                <to>$ExecuteIn.part/ns0:_tenhocluc</to>
+            </copy>
+        </assign>
+        <invoke name="Invoke1" partnerLink="PartnerLink1" operation="execute" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/DB_TaoHocLuc" portType="tns:jdbcPortType" inputVariable="ExecuteIn" outputVariable="ExecuteOut"/>
+        <assign name="Assign2">
+            <copy>
+                <from>$ExecuteOut.part/ns0:returnValue</from>
+                <to variable="TaoHocLucOperationOut" part="id"/>
+            </copy>
+        </assign>
+        <reply name="Reply1" partnerLink="PartnerLink2" operation="TaoHocLucOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoHocLuc" portType="tns:TaoHocLucPortType" variable="TaoHocLucOperationOut"/>
+    </sequence>
+</process>
+
