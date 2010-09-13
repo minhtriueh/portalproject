@@ -7,7 +7,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
     "http://www.w3.org/TR/html4/loose.dtd">
-<%@page import="org.netbeans.xml.schema.eschoolinkobject.HocSinh" %>
+
 <%@page import="java.util.Map"%>
 <%@page import="java.util.List"%>
 <%@page import="org.netbeans.xml.schema.eschoolinkobject.HocSinh" %>
@@ -16,11 +16,7 @@
 <%@page import="com.opensymphony.xwork2.ActionContext"%>
 
 
-<%Map sessions = ActionContext.getContext().getSession();
-        List<HocSinh> dshocsinh = (List<HocSinh>) sessions.get("lisths");
-        HocSinh hs = dshocsinh.get(1);
-        String ten = hs.getHoVaTenLot() + " " + hs.getTen();
-%>
+
 <div>
     <c:set var="danhsach" scope="session" value="${listhocsinh}"></c:set>
     <c:set var="i" value="<%=1%>"></c:set>

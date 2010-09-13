@@ -18,7 +18,6 @@
 <%@page import="org.netbeans.xml.schema.eschoolinkobject.SoDiem" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
-<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@page import="com.opensymphony.xwork2.ActionContext"%>
 
 
@@ -26,9 +25,9 @@
 <div class="art-postcontent">
     <div class="fm-opt" >
         <form action="UpdateHanhKiem">
-            <c:set var="shocba" value="${shocba}"></c:set>
-            <c:set var="hs" value="${shocba.hocSinh}"></c:set>
-            <c:set var="dshb" value="${shocba.hocBaTungHK}"></c:set>
+            <c:set var="shocba" value="${hocba}"></c:set>
+            <c:set var="hs" value="${hocba.hocSinh}"></c:set>
+            <c:set var="dshb" value="${hocba.hocBaTungHK}"></c:set>
 
             <c:forEach var="item" items="${dshb}">
                 <table border="1">
@@ -54,7 +53,5 @@
             </c:forEach>
         </form>
     </div>
-    <div id="fm-submit" class="fm-req">
-        <input type="button" value="Trở Lại" onclick="Back(1)">
-    </div>
+
 </div>

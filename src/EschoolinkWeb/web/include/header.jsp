@@ -50,6 +50,17 @@
             <a href="index.action" class="active"><span class="l"></span><span class="r"></span><span class="t">Trang chủ</span></a>
         </li>
         <li>
+            <a href="#"><span class="l"></span><span class="r"></span><span class="t">Thông Tin Cá Nhân</span></a>
+            <ul>
+                <li>
+                    <a href="ThongTinGiaoVien">Thông Tin Giáo Viên</a>
+                </li>
+                <li>
+                    <a href="ThongTinHocSinh">Thông Tin Học Sinh-Học Bạ</a>
+                </li>
+            </ul>
+        </li>
+        <li>
             <a href="#" ><span class="l"></span><span class="r"></span><span class="t">Tra cứu điểm</span></a>
             <ul>
                 <li><a href="XemDiem">Xem Điểm</a></li>
@@ -76,6 +87,7 @@
                 <li><a href="#">Học Bạ</a>
                     <ul>
                         <li><a href="index.jsp?module=quanlyhocba&page=tracuuhocba">Đánh Giá Học Lực-Hạnh Kiểm</a></li>
+                        <li><a href="KhoiTaoTrangChinhSuaHocBa">Tra cứu và Chỉnh Sửa</a></li>
                     </ul>
                 </li>
 

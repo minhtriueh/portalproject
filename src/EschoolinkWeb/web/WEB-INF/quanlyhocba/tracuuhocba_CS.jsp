@@ -9,12 +9,15 @@
 <script type="text/javascript">
     window.addEvent('domready',function(){
         var khoihoc= $('khoihoc')
+        var namhoc=$('_namhoc')
         khoihoc.addEvent('change',function(){
             var log=$('log');
-            var url=rootURL+'LayDanhSachLop';
-            var data={'tenkhoilop':khoihoc.value};
+            var url=rootURL+'LoadDanhSachLopHoc';
+            var data={'id_khoilop':khoihoc.value,
+                        'id_namhoc':namhoc.value
+                        };
             requestBasic(url,log,data);
-           
+
         });
         var button=$('lk');
         button.addEvent('click',function(){
@@ -27,7 +30,7 @@
 
         })
     })
-    
+
 </script>
 
 
@@ -55,10 +58,13 @@
                     <!-- article-content -->
                     <form id="fm-form" method="post" action="SearchHocSinhHB" >
                         <fieldset>
-                            <legend>Thông Tin Tìm Kiếm</legend>
+                            <legend>Thông Tin Tra Cứu</legend>
                             <div class="fm-opt">
                                 <table>
                                     <tr>
+                                        <td>
+                                            Niên Khóa
+                                        </td>
                                         <td>
                                             Khối Lớp
                                         </td>
@@ -68,13 +74,21 @@
                                     </tr>
                                     <tr>
                                         <td>
+                                            <select id="_namhoc" name="id_namhoc">
+                                                <option value="-----">Chọn Niên Khóa</option>
+                                           <c:forEach var="item" items="${dsnamhoc}">
+                                                <option value="${item.id}">${item.namTruoc}-${item.namSau}</option>
+                                            </c:forEach>
+                                             </select>
+                                        </td>
+                                        <td>
                                             <select id="khoihoc" name="khoilop"  style="width:100%">
                                                 <option value="-----">Chọn Khối Lớp</option>
-                                                <option value="10">Khối 10</option>
-                                                <option value="11">Khối 11</option>
-                                                <option value="12">Khối 12</option>
-                                            </select> 
-                                        </td>  
+                                                <option value="1">Khối 10</option>
+                                                <option value="2">Khối 11</option>
+                                                <option value="3">Khối 12</option>
+                                            </select>
+                                        </td>
                                         <td><span id="log">
                                                 <c:set var="list" value="${danhsachlop}"></c:set>
 
@@ -91,7 +105,7 @@
                         </fieldset>
                         <div id="fm-submit" class="fm-req">
                             <input name="submit" value="Liệt Kê" type="button" id="lk" />
-                            <input name="submit" value="Trở Lại" type="button" onclick="Back(1)"/>
+                            <input name="submit" value="Trở Lại" type="submit"/>
                         </div>
                     </form>
                 </div>

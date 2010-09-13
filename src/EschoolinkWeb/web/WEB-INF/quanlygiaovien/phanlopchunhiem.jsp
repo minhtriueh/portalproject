@@ -36,11 +36,9 @@
         
     };
     function sender(){
-        alert("SDFDSF"+rootURL);
         var id_lop=$('s-fm-form').id_lop.value;
         var id_giaovien=$('s-fm-form').id_giaovien.value;
         var url=rootURL+'PhanLopChuNhiem';
-       alert(url);
        new Request({
             method:'get',
             url:url,
@@ -104,7 +102,7 @@
                         <div id="fm-submit" class="fm-req">
                             <input name="submit" value="Phân Lớp" type="button" onclick="sender()"/>
                             <input type="hidden" value="<%=request.getParameter("id_giaovien")%>" name="id_giaovien">
-                            <input name="submit" value="Trở Lại" type="button" onclick="Back(1)"/>
+                          
                         </div>
                     </form>
                 </div>

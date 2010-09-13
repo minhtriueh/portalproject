@@ -1,4 +1,4 @@
-<%-- 
+<%--
     Document   : danhgiahocluchanhkiem
     Created on : Sep 2, 2010, 8:17:38 PM
     Author     : bon
@@ -27,7 +27,7 @@
         var id_hocluc=form.id_hocluc.value;
         var stt=form.stt.value;
         var dtb=form.diemtrungbinh.value;
-        var url=rootURL+'DanhGiaHanhKiemVaHocLuc'
+       var url=rootURL+'DanhGiaHanhKiemVaHocLuc'
         var data={
                     'nhanxet':nhanxet,
                     'id_hanhkiem':id_hanhkiem,
@@ -42,10 +42,10 @@
             onSuccess: function(responseText, responseXML) {
                 alert(responseText);
               }
-        }).send();           
-        
+        }).send();
+
     }
-    
+
 </script>
 
 
@@ -76,9 +76,7 @@
                     </tr>
                     <tr>
                         <td>Điểm Trung Bình</td>
-                        <td>${item.diemtrungbinhcanam}
-                            <input type="hidden" name="diemtrungbinh" value="${item.diemtrungbinhcanam}">
-                        </td>
+                        <td><input type="text" value="${item.diemtrungbinhcanam}" name="diemtrungbinh"></td>
                     </tr>
                     <tr>
                         <td>Hạnh Kiểm</td>
