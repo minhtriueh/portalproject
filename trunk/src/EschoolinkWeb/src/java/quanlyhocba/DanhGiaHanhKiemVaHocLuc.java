@@ -25,6 +25,24 @@ public class DanhGiaHanhKiemVaHocLuc {
         private boolean kq;
         private List<HanhKiem> listhk;
         private List<HocLuc> listhl;
+        private String chinhsuahocba;
+        private String diemtrungbinh;
+
+    public String getDiemtrungbinh() {
+        return diemtrungbinh;
+    }
+
+    public void setDiemtrungbinh(String diemtrungbinh) {
+        this.diemtrungbinh = diemtrungbinh;
+    }
+
+    public String getChinhsuahocba() {
+        return chinhsuahocba;
+    }
+
+    public void setChinhsuahocba(String chinhsuahocba) {
+        this.chinhsuahocba = chinhsuahocba;
+    }
 
     public List<HanhKiem> getListhk() {
         return listhk;
@@ -88,7 +106,9 @@ public class DanhGiaHanhKiemVaHocLuc {
         {
 
             callKhoiTaoHKvaHL();
-            return "success";
+           if(chinhsuahocba!=null)
+            return "direct2";
+           else return "success";
         }
         else{
             Map sessions = ActionContext.getContext().getSession();
@@ -97,13 +117,13 @@ public class DanhGiaHanhKiemVaHocLuc {
             List<HocBaTungHK> listhocbatunghk=hocba.getHocBaTungHK();
             HocBaTungHK hba=listhocbatunghk.get(new Integer(stt));
             long idHocba=hba.getId();
-            double diemtrungbinh=hba.getDiemtrungbinhcanam();
+            double dtb=new Double(diemtrungbinh);
             boolean lenlophaykhong=true;
             long idHocluc=new Long(id_hocluc);
             long idNamhoc=hba.getNamHoc().getId();
             long idHanhkiem=new Long(id_hanhkiem);
             long idLop=hba.getLop().getId();
-            kq=CallUpdateService(idHocba, diemtrungbinh, lenlophaykhong, nhanxet, idHocluc, idNamhoc, idHanhkiem, idLop);
+            kq=CallUpdateService(idHocba, dtb, lenlophaykhong, nhanxet, idHocluc, idNamhoc, idHanhkiem, idLop);
             return "direct";
         }
     }

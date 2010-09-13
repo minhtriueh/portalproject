@@ -51,13 +51,16 @@
                                 </thead>
                                 <tbody>
                                     <c:forEach var="chitietdiem" items="${listchitietdiems}">
-                                            <tr>
-                                                <td><c:out value="${chitietdiem.sothutu}"></c:out></td>
-                                                <td><c:out value="${chitietdiem.hovaten}"></c:out></td>
-                                                <c:forEach var="diem" items="${chitietdiem.diem}">
-                                                    <td><c:out value="${diem}"></c:out></td>
-                                                </c:forEach>
-                                            </tr>
+                                        <c:if test="${chitietdiem.sothutu%2==1}">
+                                            <c:out value="${chitietdiem.sothutu}"></c:out>
+                                        </c:if>
+                                        <tr>
+                                            <td><c:out value="${chitietdiem.sothutu}"></c:out></td>
+                                            <td><c:out value="${chitietdiem.hovaten}"></c:out></td>
+                                            <c:forEach var="diem" items="${chitietdiem.diem}">
+                                                <td><c:out value="${diem}"></c:out></td>
+                                            </c:forEach>
+                                        </tr>
                                     </c:forEach>
                                     <tr>
                                         <td>1</td>

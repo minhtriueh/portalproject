@@ -19,7 +19,15 @@
          <action name="DanhGiaHanhKiemVaHocLuc" class="quanlyhocba.DanhGiaHanhKiemVaHocLuc">
                    <result name="success">/WEB-INF/quanlyhocba/danhgiahocluchanhkiem.jsp</result>
                    <result name="direct">/WEB-INF/quanlyhocba/danhgiahocluchanhkiem_result.jsp</result>
+                    <result name="direct2">/WEB-INF/quanlyhocba/chinhsuahocba_hanhkiem.jsp</result>
+        </action>
+
+         <action name="KhoiTaoTrangChinhSuaHocBa" class="quanlyhocba.KhoiTaoTrangChinhSuaHocBa">
+                   <result name="success">/index.jsp?module=quanlyhocba&amp;page=tracuuhocba_CS</result>
          </action>
 
+         <action name="LoadDanhSachLopHoc" class="quanlyhocba.LoadDanhSachLopHoc">
+                   <result name="success">/WEB-INF/quanlyhocba/loadpageTCHB_result.jsp</result>
+         </action>
     </package>
 </struts>
