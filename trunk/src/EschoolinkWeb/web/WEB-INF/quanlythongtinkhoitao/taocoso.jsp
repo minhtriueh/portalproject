@@ -5,6 +5,9 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="org.netbeans.xml.schema.eschoolinkobject.*" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
     "http://www.w3.org/TR/html4/loose.dtd">
 
@@ -29,41 +32,61 @@
                 </div>
                 <div class="art-postcontent">
                     <!-- article-content -->
-                    <form id="fm-form" method="post" action="TaoThoiKhoaBieu_Result">
+                    <form id="fm-form" method="post" action="TaoCoSo_Result">
                         <fieldset>
                             <legend>Tạo cơ sở</legend>
 
                             <div class="fm-req">
                                 <label>Tên</label>
-                                <input name="tenLop" type="text" />
+                                <input name="tencoso" type="text" />
                             </div>
                             <div class="fm-req">
                                 <label>Giới thiệu</label>
-                                <input name="hocKy" type="text" />
+                                <input name="gioithieucoso" type="text" />
                             </div>
                             <div class="fm-req">
                                 <label>Địa chỉ</label>
-                                <input name="namHoc" type="text" />
+                                <input name="diachicoso" type="text" />
                             </div>
                             <div class="fm-req">
                                 <label>Điện thoại</label>
-                                <input name="namHoc" type="text" />
-                            </div>
-                            <div class="fm-req">
-                                <label>Loại hình</label>
-                                <input name="namHoc" type="text" />
+                                <input name="dienthoaicoso" type="text" />
                             </div>
                             <div class="fm-req">
                                 <label>Ngày thành lập</label>
-                                <input name="namHoc" type="text" />
+
+                                <strong>
+                                    <select name="ngaythanhlap">
+                                        <c:forEach var="i" begin="1" end="31">
+                                            <option value="<c:out value="${i}"></c:out>"><c:out value="${i}"></c:out></option>
+                                        </c:forEach>
+                                    </select>
+                                    <select name="thangthanhlap">
+                                        <c:forEach var="j" begin="1" end="12">
+                                            <option value="<c:out value="${j}"></c:out>"><c:out value="${j}"></c:out></option>
+                                        </c:forEach>
+                                    </select>
+                                    <select name="namthanhlap">
+                                        <c:forEach var="k" begin="1900" end="2010">
+                                            <option value="<c:out value="${k}"></c:out>"><c:out value="${k}"></c:out></option>
+                                        </c:forEach>
+                                    </select>
+
+                                </strong>
+
+
                             </div>
                             <div class="fm-req">
                                 <label>Website</label>
-                                <input name="namHoc" type="text" />
+                                <input name="websitecoso" type="text" />
                             </div>
                             <div class="fm-req">
                                 <label>Trường</label>
-                                <input name="namHoc" type="text" />
+                                <select name="id_truong">
+                                    <c:forEach var="item" items="${dstruong}">
+                                        <option value="${item.id}">${item.tenTruong}</option>
+                                    </c:forEach>
+                                </select>
                             </div>
                         </fieldset>
 

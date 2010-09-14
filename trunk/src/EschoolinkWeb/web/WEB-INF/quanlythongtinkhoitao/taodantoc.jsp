@@ -29,17 +29,21 @@
                                             </div>
                                             <div class="art-postcontent">
                                                 <!-- article-content -->
-                                                 <form id="fm-form" method="post" action="TaoThoiKhoaBieu_Result">
+                                                 <form id="fm-form" method="post" action="TaoDanToc_Result">
                                                     <fieldset>
                                                     <legend>Tạo dân tộc</legend>
 
                                                     <div class="fm-req">
-                                                      <label>Tên</label>
-                                                      <input name="tenLop" type="text" />
+                                                      <label>Tên dân tộc</label>
+                                                      <input name="tendantoc" type="text" />
                                                     </div>
                                                     <div class="fm-req">
                                                       <label>Dân tộc thiểu số</label>
-                                                      <input name="hocKy" type="text" />
+                                                      <select name="dantocthieuso">
+                                                          <option value="TRUE">Có</option>
+                                                          <option value="FALSE">Không</option>
+
+                                                      </select>
                                                     </div>
 
                                                     </fieldset>

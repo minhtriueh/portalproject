@@ -4,7 +4,11 @@
     Author     : GIN
 --%>
 
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="org.netbeans.xml.schema.eschoolinkobject.*" %>
+
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
     "http://www.w3.org/TR/html4/loose.dtd">
 
@@ -29,12 +33,12 @@
                 </div>
                 <div class="art-postcontent">
                     <!-- article-content -->
-                    <form id="fm-form" method="post" action="TaoThoiKhoaBieu_Result">
+                    <form id="fm-form" method="post" action="TaoKhoiLop_Result">
                         <fieldset>
                             <legend>Tạo khối lớp</legend>
 
                             <div class="fm-req">
-                                <label>Tên</label>
+                                <label>Tên khối lớp</label>
                                 <input name="tenkhoilop" type="text" />
                             </div>
                             <div class="fm-req">
