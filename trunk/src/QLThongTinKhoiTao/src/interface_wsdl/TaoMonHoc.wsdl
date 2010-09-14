@@ -2,7 +2,7 @@
 <definitions name="TaoMonHoc" targetNamespace="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoMonHoc"
     xmlns="http://schemas.xmlsoap.org/wsdl/"
     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoMonHoc" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoMonHoc" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype">
     <types/>
     <message name="TaoMonHocOperationRequest">
         <part name="tenmonhoc" type="xsd:string"/>
@@ -17,23 +17,6 @@
             <output name="output1" message="tns:TaoMonHocOperationResponse"/>
         </operation>
     </portType>
-    <binding name="TaoMonHocBinding" type="tns:TaoMonHocPortType">
-        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
-        <operation name="TaoMonHocOperation">
-            <soap:operation/>
-            <input name="input1">
-                <soap:body use="literal" namespace="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoMonHoc"/>
-            </input>
-            <output name="output1">
-                <soap:body use="literal" namespace="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoMonHoc"/>
-            </output>
-        </operation>
-    </binding>
-    <service name="TaoMonHocService">
-        <port name="TaoMonHocPort" binding="tns:TaoMonHocBinding">
-            <soap:address location="http://localhost:${HttpDefaultPort}/TaoMonHocService/TaoMonHocPort"/>
-        </port>
-    </service>
     <plnk:partnerLinkType name="TaoMonHoc">
         <!-- A partner link type is automatically generated when a new port type is added. Partner link types are used by BPEL processes. 
 In a BPEL process, a partner link represents the interaction between the BPEL process and a partner service. Each partner link is associated with a partner link type.

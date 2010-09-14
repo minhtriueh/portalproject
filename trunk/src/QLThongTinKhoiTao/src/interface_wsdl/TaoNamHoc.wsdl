@@ -2,11 +2,11 @@
 <definitions name="TaoNamHoc" targetNamespace="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoNamHoc"
     xmlns="http://schemas.xmlsoap.org/wsdl/"
     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoNamHoc" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoNamHoc" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype">
     <types/>
     <message name="TaoNamHocOperationRequest">
-        <part name="namsau" type="xsd:integer"/>
-        <part name="namtruoc" type="xsd:integer"/>
+        <part name="namtruoc" type="xsd:int"/>
+        <part name="namsau" type="xsd:int"/>
     </message>
     <message name="TaoNamHocOperationResponse">
         <part name="id" type="xsd:long"/>
@@ -17,23 +17,6 @@
             <output name="output1" message="tns:TaoNamHocOperationResponse"/>
         </operation>
     </portType>
-    <binding name="TaoNamHocBinding" type="tns:TaoNamHocPortType">
-        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
-        <operation name="TaoNamHocOperation">
-            <soap:operation/>
-            <input name="input1">
-                <soap:body use="literal" namespace="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoNamHoc"/>
-            </input>
-            <output name="output1">
-                <soap:body use="literal" namespace="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoNamHoc"/>
-            </output>
-        </operation>
-    </binding>
-    <service name="TaoNamHocService">
-        <port name="TaoNamHocPort" binding="tns:TaoNamHocBinding">
-            <soap:address location="http://localhost:${HttpDefaultPort}/TaoNamHocService/TaoNamHocPort"/>
-        </port>
-    </service>
     <plnk:partnerLinkType name="TaoNamHoc">
         <!-- A partner link type is automatically generated when a new port type is added. Partner link types are used by BPEL processes. 
 In a BPEL process, a partner link represents the interaction between the BPEL process and a partner service. Each partner link is associated with a partner link type.

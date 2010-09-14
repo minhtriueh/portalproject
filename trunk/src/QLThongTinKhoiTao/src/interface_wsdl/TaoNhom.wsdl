@@ -2,11 +2,11 @@
 <definitions name="TaoNhom" targetNamespace="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoNhom"
     xmlns="http://schemas.xmlsoap.org/wsdl/"
     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoNhom" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoNhom" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype">
     <types/>
     <message name="TaoNhomOperationRequest">
-        <part name="tennhom" type="xsd:string"/>
         <part name="mota" type="xsd:string"/>
+        <part name="tennhom" type="xsd:string"/>
     </message>
     <message name="TaoNhomOperationResponse">
         <part name="id" type="xsd:long"/>
@@ -17,23 +17,6 @@
             <output name="output1" message="tns:TaoNhomOperationResponse"/>
         </operation>
     </portType>
-    <binding name="TaoNhomBinding" type="tns:TaoNhomPortType">
-        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
-        <operation name="TaoNhomOperation">
-            <soap:operation/>
-            <input name="input1">
-                <soap:body use="literal" namespace="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoNhom"/>
-            </input>
-            <output name="output1">
-                <soap:body use="literal" namespace="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoNhom"/>
-            </output>
-        </operation>
-    </binding>
-    <service name="TaoNhomService">
-        <port name="TaoNhomPort" binding="tns:TaoNhomBinding">
-            <soap:address location="http://localhost:${HttpDefaultPort}/TaoNhomService/TaoNhomPort"/>
-        </port>
-    </service>
     <plnk:partnerLinkType name="TaoNhom">
         <!-- A partner link type is automatically generated when a new port type is added. Partner link types are used by BPEL processes. 
 In a BPEL process, a partner link represents the interaction between the BPEL process and a partner service. Each partner link is associated with a partner link type.
