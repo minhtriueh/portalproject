@@ -8,18 +8,9 @@
 <%@page import="org.netbeans.xml.schema.qlgv_eschoolinkobject.GiaoVien" %>
 <script type="text/javascript">
     window.addEvent('domready',function(){
-        var khoihoc= $('khoihoc')
+       
         var namhoc=$('_namhoc')
-      
-       khoihoc.addEvent('change',function(){
-            var log=$('log');
-            var url=rootURL+'LoadDanhSachLopHoc';
-            var data={'id_khoilop':khoihoc.value,
-                        'id_namhoc':namhoc.value
-                        };
-            requestBasic(url,log,data);
-
-        });
+       
         var button=$('lk');
         button.addEvent('click',function(){
             var url=rootURL+'XemHocBa_CN';
@@ -58,47 +49,40 @@
                             <legend>Thông Tin Cá Nhân</legend>
                             <div class="fm-opt">
 
-                                <table>
+                                <table class="myTable" border="1">
                                     <tr>
-                                        <td>Họ Tên Học Sinh</td>
-                                        <td>${hs.hoVaTenLot} ${hs.ten}</td>
+                                        <td class="td1">Họ Tên Học Sinh</td>
+                                        <td style="background-color:infobackground">${hs.hoVaTenLot} ${hs.ten}</td>
                                     </tr>
                                      <tr>
-                                        <td>Ngày Sinh</td>
-                                        <td>${hs.ngaySinh}</td>
+                                        <td class="td1">Ngày Sinh</td>
+                                        <td style="background-color:infobackground">${hs.ngaySinh}</td>
                                     </tr>
                                      <tr>
-                                        <td>Mã Học Sinh</td>
-                                        <td>${hs.maSo}</td>
+                                        <td class="td1">Mã Học Sinh</td>
+                                        <td style="background-color:infobackground">${hs.maSo}</td>
                                     </tr>
                                      <tr>
-                                        <td>Giới Tính</td>
-                                        <td>${hs.gioiTinh}</td>
+                                        <td class="td1">Giới Tính</td>
+                                        <td style="background-color:infobackground">${hs.gioiTinh}</td>
                                     </tr>
-                                     <tr>
-                                        <td>Địa chỉ hiện tại</td>
-                                        <td>${hs.diaChiHienTai}</td>
-                                    </tr>
+                                     
                                      <tr>
 
-                                        <td>Tôn Giáo</td>
-                                        <td>${hs.tonGiao}</td>
+                                        <td class="td1">Tôn Giáo</td>
+                                        <td style="background-color:infobackground">${hs.tonGiao}</td>
                                     </tr>
-                                     <tr>
-                                        <td>Quê Quán</td>
-                                        <td>${hs.queQuan}</td>
-                                    </tr>
-                                     <tr>
-                                        <td>Chỗ ở hiện tại</td>
-                                        <td>${hs.diaChiHienTai}</td>
+                                       <tr>
+                                        <td class="td1">Chỗ ở hiện tại</td>
+                                        <td style="background-color:infobackground">${hs.soNha}</td>
                                     </tr>
                                     <tr>
-                                        <td>Username</td>
-                                        <td>${hs.nguoiDung.username}</td>
+                                        <td class="td1">Username</td>
+                                        <td style="background-color:infobackground">${hs.nguoiDung.username}</td>
                                     </tr>
                                      <tr>
-                                        <td>Password</td>
-                                        <td>${hs.nguoiDung.password}</td>
+                                        <td class="td1">Password</td>
+                                        <td style="background-color:infobackground">${hs.nguoiDung.password}</td>
                                     </tr>
 
                                 </table>
@@ -112,18 +96,15 @@
                         <fieldset>
                             <legend>Tra Cứu Học Bạ Của Quá Trình Học</legend>
                             <div class="fm-opt">
-                                <table>
+                                <table class="myTable">
+                                    <thead>
                                     <tr>
                                         <td>
                                             Niên Khóa
                                         </td>
-                                        <td>
-                                            Khối Lớp
-                                        </td>
-                                        <td>
-                                            Lớp Học
-                                        </td>
+                                        
                                     </tr>
+                                    </thead>
                                     <tr>
                                         <td>
                                             <select id="_namhoc" name="id_namhoc">
@@ -137,25 +118,7 @@
                                             </c:forEach>
                                              </select>
                                         </td>
-                                        <td>
-                                            <select id="khoihoc" name="khoilop"  style="width:100%">
-                                                <option value="-----">Chọn Khối Lớp</option>
-                                                <option value="1">Khối 10</option>
-                                                <option value="2">Khối 11</option>
-                                                <option value="3">Khối 12</option>
-                                            </select>
-                                        </td>
-                                        <td><span id="log">
-                                                <c:set var="list" value="${danhsachlop}"></c:set>
-
-                                                <select name="id_lop" style="width:100%">
-                                                    <c:forEach var="item" items="${danhsachlop}">
-                                                        <option value="<c:out value="${item.id}"/>"><c:out value="${item.tenLop}"/></option>
-                                                    </c:forEach>
-                                                </select>
-                                            </span>
-                                        </td>
-                                    </tr>
+                                        </tr>
                                 </table>
                             </div>
                         </fieldset>

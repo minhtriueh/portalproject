@@ -39,36 +39,39 @@
                                 <c:set var="hocba" value="${hocba}"></c:set>
                                 <c:set var="hs" value="${hocba.hocSinh}"></c:set>
                                 <c:set var="dshb" value="${hocba.hocBaTungHK}"></c:set>
-                                <table border="1">
-                                   <tr><td colspan="2"></td></tr>
+                                <table border="1" class="myTable">
+                                   
                                     <c:forEach var="item" items="${dshb}">
+                                        <thead>
                                         <tr>
                                             <td colspan="2">HK ${item.namHoc.hocKy} Năm Học ${item.namHoc.namTruoc}-${item.namHoc.namSau} Lớp:${item.lop.tenLop}</td>
                                         </tr>
+                                        </thead>
+                                        <tbody>
                                         <tr>
-                                            <td>Nhận Xét</td>
-                                            <td>${item.nhanXet}</td>
+                                            <td class="td1">Nhận Xét</td>
+                                            <td style="background-color:infobackground">${item.nhanXet}</td>
                                         </tr>
                                         <tr>
-                                            <td>Điểm Trung Bình</td>
-                                            <td>${item.diemtrungbinhcanam}</td>
+                                            <td class="td1">Điểm Trung Bình</td>
+                                            <td style="background-color:infobackground">${item.diemtrungbinhcanam}</td>
                                         </tr>
                                         <tr>
-                                            <td>Hạnh Kiểm</td>
-                                            <td>${item.hanhKiem.tenHanhKiem}</td>
+                                            <td class="td1">Hạnh Kiểm</td>
+                                            <td style="background-color:infobackground">${item.hanhKiem.tenHanhKiem}</td>
                                         </tr>
                                         <tr>
-                                            <td>Học Lực</td>
-                                            <td>${item.hocLuc.tenHocLuc}</td>
+                                            <td class="td1">Học Lực</td>
+                                            <td style="background-color:infobackground">${item.hocLuc.tenHocLuc}</td>
                                         </tr>
-
+                                        </tbody>
                                     </c:forEach>
                                 </table>
                             </div>
-                         <div id="fm-submit" class="fm-req">
+                                <div class="fm-req" align="right">
 
                              <form action="XemSoDiem">
-                                 <input type="button" value="Xem Điểm" id="xd">
+                                 <input type="button" value="Xem Điểm" id="xd" style="background-color:buttonshadow">
                             </form>
                         </div>
                    </div>
