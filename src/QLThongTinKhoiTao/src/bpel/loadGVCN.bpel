@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process
+    name="loadGVCN"
+    targetNamespace="http://enterprise.netbeans.org/bpel/QLThongTinKhoiTao/loadGVCN"
+    xmlns:tns="http://enterprise.netbeans.org/bpel/QLThongTinKhoiTao/loadGVCN"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
+    xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor"
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2" xmlns:ns0="http://j2ee.netbeans.org/xsd/tableSchema" xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+    <import namespace="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/DB_LoadGVCN" location="../db_wsdl/DB_LoadGVCN.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/LoadGVCN" location="../interface_wsdl/LoadGVCN.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <partnerLinks>
+        <partnerLink name="PartnerLink2" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/LoadGVCN" partnerLinkType="tns:LoadGVCN" myRole="LoadGVCNPortTypeRole"/>
+        <partnerLink name="PartnerLink1" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/DB_LoadGVCN" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+    </partnerLinks>
+    <variables>
+        <variable name="LoadGVCNOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/DB_LoadGVCN" messageType="tns:outputMsg">
+            <sxed2:editor>
+                <sxed2:predicate path="$LoadGVCNOut.part/ns0:DB_LoadGVCN_Record[$ForEach1Counter]" source="from"/>
+            </sxed2:editor>
+        </variable>
+        <variable name="LoadGVCNIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/DB_LoadGVCN" messageType="tns:inputMsg"/>
+        <variable name="LoadGVCNOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/LoadGVCN" messageType="tns:LoadGVCNOperationResponse">
+            <sxed2:editor>
+                <sxed2:predicate path="$LoadGVCNOperationOut.dsgvcn/ns1:GiaoVienChuNhiem[$ForEach1Counter]" source="to"/>
+            </sxed2:editor>
+        </variable>
+        <variable name="LoadGVCNOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/LoadGVCN" messageType="tns:LoadGVCNOperationRequest"/>
+    </variables>
+    <sequence>
+        <receive name="Receive1" createInstance="yes" partnerLink="PartnerLink2" operation="LoadGVCNOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/LoadGVCN" portType="tns:LoadGVCNPortType" variable="LoadGVCNOperationIn"/>
+        <assign name="Assign1">
+            <copy>
+                <from>0</from>
+                <to variable="LoadGVCNIn" part="part"/>
+            </copy>
+        </assign>
+        <invoke name="Invoke1" partnerLink="PartnerLink1" operation="newuntitled_Operation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/DB_LoadGVCN" portType="tns:jdbcPortType" inputVariable="LoadGVCNIn" outputVariable="LoadGVCNOut"/>
+        <forEach name="ForEach1" parallel="no" counterName="ForEach1Counter">
+            <startCounterValue>0</startCounterValue>
+            <finalCounterValue>count($LoadGVCNOut.part/ns0:DB_LoadGVCN_Record)</finalCounterValue>
+            <scope name="Scope1">
+                <assign name="Assign2">
+                    <copy>
+                        <from>$LoadGVCNOut.part/ns0:DB_LoadGVCN_Record[$ForEach1Counter]/ns0:id_giaovienchunhiem
+                            <sxed2:editor>
+                                <sxed2:predicate path="$LoadGVCNOut.part/ns0:DB_LoadGVCN_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$LoadGVCNOperationOut.dsgvcn/ns1:GiaoVienChuNhiem[$ForEach1Counter]/ns1:id_gvcn
+                            <sxed2:editor>
+                                <sxed2:predicate path="$LoadGVCNOperationOut.dsgvcn/ns1:GiaoVienChuNhiem[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                </assign>
+            </scope>
+        </forEach>
+        <reply name="Reply1" partnerLink="PartnerLink2" operation="LoadGVCNOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/LoadGVCN" portType="tns:LoadGVCNPortType" variable="LoadGVCNOperationOut"/>
+    </sequence>
+</process>
+
+
