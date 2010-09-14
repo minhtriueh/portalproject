@@ -29,33 +29,34 @@
                                             </div>
                                             <div class="art-postcontent">
                                                 <!-- article-content -->
-                                                 <form id="fm-form" method="post" action="TaoThoiKhoaBieu_Result">
+                                                 <form id="fm-form" method="post" action="TaoHocLuc_Result">
                                                     <fieldset>
                                                     <legend>Tạo học lực</legend>
 
                                                     <div class="fm-req">
-                                                      <label>Tên</label>
-                                                      <input name="tenLop" type="text" />
+                                                      <label>Tên học lực</label>
+                                                      <input name="tenhocluc" type="text" />
                                                     </div>
 
                                                     <div class="fm-req">
                                                       <label>Điểm cận dưới</label>
-                                                      <input name="tenLop" type="text" />
+                                                      <input name="diemcanduoi" type="text" />
                                                     </div>
 
                                                     <div class="fm-req">
                                                       <label>Điểm cận trên</label>
-                                                      <input name="tenLop" type="text" />
+                                                      <input name="diemcantren" type="text" />
                                                     </div>
 
                                                     <div class="fm-req">
                                                       <label>Không có môn dưới</label>
-                                                      <input name="tenLop" type="text" />
+                                                      <input name="khongcomonduoi" type="text" size="6" />
                                                     </div>
 
+                                                    <br />
                                                     <div class="fm-req">
                                                       <label>Ghi chú</label>
-                                                      <input name="tenLop" type="text" />
+                                                      <input name="ghichu" type="text" />
                                                     </div>
 
                                                     </fieldset>
