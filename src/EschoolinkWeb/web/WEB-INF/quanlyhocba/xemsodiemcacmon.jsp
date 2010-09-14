@@ -31,21 +31,23 @@
             <c:set var="dshb" value="${shocba.hocBaTungHK}"></c:set>
 
             <c:forEach var="item" items="${dshb}">
-                <table border="1">
+                <table border="1" class="myTable">
+                    
                     <tr>
-                        <td rowspan="2" align="center">
-                            HocKy ${item.namHoc.hocKy}
+                        <td rowspan="2" valign="middle" style="background-color:aqua;font-weight:bold">
+                            Học Kỳ ${item.namHoc.hocKy}
                         </td>
                         <c:forEach var="sodiem" items="${item.diemTBMon}">
                             <td>${sodiem.tenSoDiem}</td>
                         </c:forEach>
                     </tr>
-                    <tr>
+                    
+                    <tr  style="background-color:infobackground">
 
                         <c:forEach var="sodiem2" items="${item.diemTBMon}">
                             <c:forEach var="chitiet" items="${sodiem2.chiTietSoDiem}">
                                 <%--<c:forEach var="diem" items="${chitiet.diem}">--%>
-                                <td><fmt:formatNumber value="${chitiet.diemtrungbinh}" maxFractionDigits="2" minFractionDigits="1"></fmt:formatNumber></td>
+                                <td style="background-color:infobackground"><fmt:formatNumber value="${chitiet.diemtrungbinh}" maxFractionDigits="2" minFractionDigits="1"></fmt:formatNumber></td>
                                 <%--</c:forEach>--%>
                             </c:forEach>
                         </c:forEach>
@@ -54,7 +56,7 @@
             </c:forEach>
         </form>
     </div>
-    <div id="fm-submit" class="fm-req">
-        <input type="button" value="Trở Lại" onclick="Back(1)">
+            <div class="fm-req" align="center">
+        <input type="button" value="Trở Lại" onclick="Back(1)" style="background-color:buttonface">
     </div>
 </div>

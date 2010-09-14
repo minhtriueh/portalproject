@@ -57,7 +57,8 @@
                         <fieldset>
                             <legend>Thông Tin Tìm Kiếm</legend>
                             <div class="fm-opt">
-                                <table>
+                                <table class="myTable">
+                                    <thead>
                                     <tr>
                                         <td>
                                             Khối Lớp
@@ -66,6 +67,8 @@
                                             Lớp Học
                                         </td>
                                     </tr>
+                                    </thead>
+                                    <tbody>
                                     <tr>
                                         <td>
                                             <select id="khoihoc" name="khoilop"  style="width:100%">
@@ -86,6 +89,7 @@
                                             </span>
                                         </td>
                                     </tr>
+                                    </tbody>
                                 </table>
                             </div>
                         </fieldset>

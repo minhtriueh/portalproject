@@ -64,24 +64,27 @@
 
         <c:forEach var="item" items="${dshb}">
             <form action="DanhGiaHanhKiemVaHocLuc">
-                <table>
+                <table class="myTable" border="1">
+                    <thead>
                     <tr>
                         <td colspan="2"> HK ${item.namHoc.hocKy} Năm Học ${item.namHoc.namTruoc}-${item.namHoc.namSau} Lớp:${item.lop.tenLop}</td>
                     </tr>
+                    </thead>
+                    <tbody>
                     <tr>
-                        <td>Nhận Xét</td>
+                        <td class="td1">Nhận Xét</td>
                         <td>
                             <input type="text" name="nhanxet" value=" ${item.nhanXet}">
                         </td>
                     </tr>
                     <tr>
-                        <td>Điểm Trung Bình</td>
+                        <td class="td1">Điểm Trung Bình</td>
                         <td>${item.diemtrungbinhcanam}
                             <input type="hidden" name="diemtrungbinh" value="${item.diemtrungbinhcanam}">
                         </td>
                     </tr>
                     <tr>
-                        <td>Hạnh Kiểm</td>
+                        <td class="td1">Hạnh Kiểm</td>
                         <td>
                             <select name="id_hanhkiem">
                                 <option value="${item.hanhKiem.id}">
@@ -98,7 +101,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>Học Lực</td>
+                        <td class="td1">Học Lực</td>
                         <td>
                             <select name="id_hocluc">
                                 <option value="${item.hocLuc.id}">
@@ -110,9 +113,10 @@
                             </select>
                         </td>
                     </tr>
+                    </tbody>
                 </table>
-                <div id="fm-submit" class="fm-req">
-                    <input type="button" value="Lưu Lại" onclick="capnhathanhkiem(this.form)">
+                                <div class="fm-req" align="center">
+                    <input type="button" value="Lưu Lại" onclick="capnhathanhkiem(this.form)" style="background-color:buttonface">
                     <input type="hidden" name="stt" value="${stt}">
                 </div>
             </form>
