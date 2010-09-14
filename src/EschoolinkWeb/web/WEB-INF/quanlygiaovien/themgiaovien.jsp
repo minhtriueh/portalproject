@@ -168,7 +168,7 @@
                             </div>
                             <div class="fm-opt">
                                 <label>Hình Ảnh</label>
-                                <input name="hinhanh" type="file" />
+                                <input name="upload" type="file" />
                             </div>
                             <div class="fm-opt">
                                 <label for="fm-state">Giới Tính</label>

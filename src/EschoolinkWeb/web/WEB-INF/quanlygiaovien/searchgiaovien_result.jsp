@@ -12,40 +12,43 @@
 <%@page import="org.netbeans.xml.schema.qlgv_eschoolinkobject.GiaoVien"%>
 <%@page import="org.netbeans.xml.schema.qlgv_eschoolinkobject.GiaoVien"%>
 <%@page import="java.util.List"%>
+<link rel="stylesheet" href="../../StyleTable.css" type="text/css" media="screen" />
+
 <script type="text/javascript">
-     function sendrequest(form){
-              var id_giaovien=form.id_giaovien.value;
-              var tengiaovien=form.tengiaovien.value;
-              var cmnd=form.cmnd.value;
-              var chucvu=form.cmnd.value;
-              var url=rootURL+'GoiTrangPhanLop';
-              var data={'id_giaovien':id_giaovien,
-                           'tengiaovien':tengiaovien,
-                            'cmnd':cmnd,
-                              'chucvu':chucvu
-                                };
-                 var log=$('sublog');
-                requestBasic(url, log, data)
-                 }
-    </script>
+    function sendrequest(form){
+        var id_giaovien=form.id_giaovien.value;
+        var tengiaovien=form.tengiaovien.value;
+        var cmnd=form.cmnd.value;
+        var chucvu=form.cmnd.value;
+        var url=rootURL+'GoiTrangPhanLop';
+        var data={'id_giaovien':id_giaovien,
+            'tengiaovien':tengiaovien,
+            'cmnd':cmnd,
+            'chucvu':chucvu
+        };
+        var log=$('sublog');
+        requestBasic(url, log, data)
+    }
+</script>
 
 
-        <div id="sublog">
-             <div class="fm-opt">
-            <%
-                    List<GiaoVien> ds = (List<GiaoVien>) request.getAttribute("danhsachgiaovien");
-                    if (ds != null)
-                        request.setAttribute("danhsachgiaovien", ds);
-                    else {
-            %>
-            Không Tìm Thấy (Sorry,Not found)
-            <%}%>
-            <c:set var="clistgiaovien" value="${listgiaovien}"></c:set>
+<div id="sublog">
+    <div class="fm-opt">
+        <%
+        List<GiaoVien> ds = (List<GiaoVien>) request.getAttribute("danhsachgiaovien");
+        if (ds != null)
+            request.setAttribute("danhsachgiaovien", ds);
+        else {
+        %>
+        Không Tìm Thấy (Sorry,Not found)
+        <%}%>
+        <c:set var="clistgiaovien" value="${listgiaovien}"></c:set>
 
-            <c:if test="${clistgiaovien!=null}">
+        <c:if test="${clistgiaovien!=null}">
 
 
-                <table border="1" class="art-article">
+            <table border="1" class="myTable">
+                <thead>
                     <tr>
                         <td>ID</td>
                         <td>Tên Giáo Viên</td>
@@ -54,39 +57,42 @@
                         <td>Xem Thông Tin</td>
                         <td>Xấp Lớp</td>
                     </tr>
-                    <c:forEach var="item" items="${listgiaovien}">
-                        <tr>
+                </thead>
+                <c:forEach var="item" items="${listgiaovien}">
+                    <tbody><tr>
 
                             <td>${item.id}</td>
                             <td>${item.tenGiaoVien}</td>
                             <td>${item.cmnd}</td>
                             <td>${item.chucVu}</td>
                             <td>
-                                <div id="fm-submit" class="fm-req">
-                                <form id="fm-form" method="post" action="TraCuuGiaoVien">
-                                    <input type="submit" value="Xem">
-                                    <input type="hidden" name="id_giaovien" value="${item.id}">
-                                </form>
+                                <div>
+                                    <form id="fm-form" method="post" action="TraCuuGiaoVien">
+                                        <input type="submit" value="Xem">
+                                        <input type="hidden" name="id_giaovien" value="${item.id}">
+                                    </form>
                                 </div>
                             </td>
                             <td>
-                                <div id="fm-submit" class="fm-req">
+                                <div class="fm-req">
                                     <form id="subform" action="index.jsp?module=quanlygiaovien&page=phanlopchunhiem" method="post">
                                         <input type="button" value="Chọn" onclick="sendrequest(this.form)" >
-                                    <input type="hidden" id="id_giaovien" name="id_giaovien" value="${item.id}">
-                                    <input type="hidden" name="tengiaovien" value="${item.tenGiaoVien}">
-                                    <input type="hidden" name="cmnd" value="${item.cmnd}">
-                                    <input type="hidden" name="chucvu" value="${item.chucVu}">
-                                </form>
-                                    </div>
+                                        <input type="hidden" id="id_giaovien" name="id_giaovien" value="${item.id}">
+                                        <input type="hidden" name="tengiaovien" value="${item.tenGiaoVien}">
+                                        <input type="hidden" name="cmnd" value="${item.cmnd}">
+                                        <input type="hidden" name="chucvu" value="${item.chucVu}">
+                                    </form>
+                                </div>
                             </td>
                         </tr>
-                    </c:forEach>
+                    </tbody>
 
-                </table>
+                </c:forEach>
 
-            </c:if>
+            </table>
 
-        </div>
-    
+        </c:if>
+
+    </div>
+
 </div>

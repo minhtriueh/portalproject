@@ -30,7 +30,7 @@
                 <div class="art-postcontent">
                     <!-- article-content -->
                     <font color="blue">Đã Thêm Thành Công Giáo Viên vào hệ thống</font>
-
+                    <img src="images/Upload/Icon/icon_${hinhanh}" title="hinh icon"/>
                     <!-- /article-content -->
                 </div>
                 <div class="cleared"></div>
