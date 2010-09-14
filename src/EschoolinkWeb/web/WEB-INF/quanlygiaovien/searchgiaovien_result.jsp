@@ -59,7 +59,8 @@
                     </tr>
                 </thead>
                 <c:forEach var="item" items="${listgiaovien}">
-                    <tbody><tr>
+                    <tbody>
+                        <tr class="tr1">
 
                             <td>${item.id}</td>
                             <td>${item.tenGiaoVien}</td>
@@ -68,7 +69,7 @@
                             <td>
                                 <div>
                                     <form id="fm-form" method="post" action="TraCuuGiaoVien">
-                                        <input type="submit" value="Xem">
+                                        <input type="submit" value="Xem" style="background-color:buttonshadow">
                                         <input type="hidden" name="id_giaovien" value="${item.id}">
                                     </form>
                                 </div>
@@ -76,7 +77,7 @@
                             <td>
                                 <div class="fm-req">
                                     <form id="subform" action="index.jsp?module=quanlygiaovien&page=phanlopchunhiem" method="post">
-                                        <input type="button" value="Chọn" onclick="sendrequest(this.form)" >
+                                        <input type="button" value="Chọn" onclick="sendrequest(this.form)"  style="background-color:buttonshadow" >
                                         <input type="hidden" id="id_giaovien" name="id_giaovien" value="${item.id}">
                                         <input type="hidden" name="tengiaovien" value="${item.tenGiaoVien}">
                                         <input type="hidden" name="cmnd" value="${item.cmnd}">

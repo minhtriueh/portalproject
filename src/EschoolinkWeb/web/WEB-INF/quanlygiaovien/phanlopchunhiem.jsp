@@ -60,7 +60,8 @@
      <div class="fm-opt">
                     <!-- article-content -->
                     <form id="s-fm-form" method="get" action="PhanLopChuNhiem" >
-                        <table border="1">
+                        <table border="1" class="myTable">
+                            <thead>
                             <tr>
                                 <td>ID</td>
                                 <td>Tên Giáo Viên</td>
@@ -69,6 +70,8 @@
                                 <td style="border-right-width:0px">Chọn Khối</td>
                                 <td style="border-right-width:0px">Chọn Lớp</td>
                             </tr>
+                            </thead>
+                            <tbody>
                             <tr>
                                 <td><%=request.getParameter("id_giaovien")%></td>
                                 <td><%=request.getParameter("tengiaovien")%></td>
@@ -97,6 +100,7 @@
                                 </td>
 
                             </tr>
+                            </tbody>
                         </table>
 
                         <div id="fm-submit" class="fm-req">
