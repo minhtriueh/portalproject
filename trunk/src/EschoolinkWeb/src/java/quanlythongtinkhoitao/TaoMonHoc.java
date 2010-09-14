@@ -6,7 +6,7 @@
 package quanlythongtinkhoitao;
 
 import java.util.List;
-import org.netbeans.xml.schema.qlgv_eschoolinkobject.ToBoMon;
+import org.netbeans.xml.schema.eschoolinkobject.ToBoMon;
 
 /**
  *
@@ -30,18 +30,20 @@ public class TaoMonHoc {
     }
 
 
-    
+
 
     private void loadToBoMon() {
-        try { // Call Web Service Operation
 
-            qlgiaoviencomapp.QLGiaoVienComAppService8 service = new qlgiaoviencomapp.QLGiaoVienComAppService8();
-            qlgiaoviencomapp.LoadToBoMonPortType port = service.getLoadToBoMon();
-            // TODO process result here
-            org.netbeans.xml.schema.minexsd.DanhSachToBoMon result = port.loadToBoMonOperation();
-            this.dstobomon = result.getToBoMon();
+        //load To bo mon
+        try { 
 
-            System.out.println("Result = " + result);
+            qlthongtinkhoitaocomapp.QLThongTinKhoiTaoComAppService15 serv = new qlthongtinkhoitaocomapp.QLThongTinKhoiTaoComAppService15();
+            qlthongtinkhoitaocomapp.LoadToBoMonPortType port = serv.getLoadToBoMon();
+            org.netbeans.xml.schema.eschoolinkobject.DanhSachToBoMon rs = port.loadToBoMonOperation();
+            this.dstobomon = rs.getToBoMon();
+
+            System.out.println(rs);
+
         } catch (Exception ex) {
             System.out.println(ex);
         }

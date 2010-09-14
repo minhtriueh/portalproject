@@ -10,5 +10,7 @@ package quanlythongtinkhoitao;
  * @author hunfan
  */
 public class TaoHocLuc {
-
+public String execute() throws Exception{
+        return "success";
+    }
 }

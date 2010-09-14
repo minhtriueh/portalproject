@@ -31,6 +31,7 @@ public class TaoMonHoc_Result {
 
             qlthongtinkhoitaocomapp.QLThongTinKhoiTaoComAppService5 serv = new qlthongtinkhoitaocomapp.QLThongTinKhoiTaoComAppService5();
             qlthongtinkhoitaocomapp.TaoMonHocPortType port = serv.getTaoMonHoc();
+         
 
             long result = port.taoMonHocOperation(tenmonhoc, idToBoMon);
             resultID = result;

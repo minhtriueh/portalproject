@@ -1,40 +1,50 @@
-///*
-// * To change this template, choose Tools | Templates
-// * and open the template in the editor.
-// */
-//
-//package quanlythongtinkhoitao;
-//
-//import java.util.List;
-//import org.netbeans.xml.schema.eschoolinkobject.KhoiLop;
-//
-///**
-// *
-// * @author hunfan
-// */
-//public class TaoKhoiLop {
-//    List<KhoiLop> dsKhoiLop;
-//
-//     public String execute() throws Exception {
-//        loadKhoiLop();
-//        return "success";
-//    }
-//
-//     private void loadKhoiLop() {
-//        try { // Call Web Service Operationa
-//
-//            qlgiaoviencomapp.QLGiaoVienComAppService8 service = new qlgiaoviencomapp.QLGiaoVienComAppService8();
-//            qlgiaoviencomapp.LoadKhoiLopPortType port = service.getLoadKhoiLop();
-//            // TODO process result here
-//
-//
-//            org.netbeans.xml.schema.minexsd.DanhSachKhoiLop result = port.loadKhoiLopOperation();
-//            this.dsKhoiLop = result.getKhoiLop();
-//
-//            System.out.println("Result = " + result);
-//        } catch (Exception ex) {
-//            System.out.println(ex);
-//        }
-//    }
-//
-//}
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package quanlythongtinkhoitao;
+
+import java.util.List;
+import org.netbeans.xml.schema.eschoolinkobject.*;
+
+/**
+ *
+ * @author hunfan
+ */
+public class TaoKhoiLop {
+
+    List<CoSo> dscoso;
+
+    public String execute() throws Exception {
+        load();
+        return "success";
+    }
+
+    
+    private void load() {
+
+        //load co so
+        try {
+
+            qlthongtinkhoitaocomapp.QLThongTinKhoiTaoComAppService16 serv = new qlthongtinkhoitaocomapp.QLThongTinKhoiTaoComAppService16();
+            qlthongtinkhoitaocomapp.LoadCoSoPortType port = serv.getLoadCoSo();
+            org.netbeans.xml.schema.eschoolinkobject.DanhSachCoSo rs = port.loadCoSoOperation();
+            this.dscoso = rs.getCoSo();
+
+            System.out.println(rs);
+
+        } catch (Exception ex) {
+            System.out.println(ex);
+        }
+
+
+    }
+
+    public List<CoSo> getDscoso() {
+        return dscoso;
+    }
+
+    public void setDscoso(List<CoSo> dscoso) {
+        this.dscoso = dscoso;
+    }
+}
