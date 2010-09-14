@@ -31,15 +31,18 @@
     </variables>
     <sequence>
         <receive name="Receive1" createInstance="yes" partnerLink="PartnerLink2" operation="LoadKhoiLopOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/LoadKhoiLop" portType="tns:LoadKhoiLopPortType" variable="LoadKhoiLopOperationIn"/>
+        <assign name="Assign1">
+            <copy>
+                <from>0</from>
+                <to variable="LoadKhoiLopIn" part="part"/>
+            </copy>
+        </assign>
         <invoke name="Invoke1" partnerLink="PartnerLink1" operation="newuntitled_Operation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/DB_LoadKhoiLop" portType="tns:jdbcPortType" inputVariable="LoadKhoiLopIn" outputVariable="LoadKhoiLopOut"/>
         <forEach name="ForEach1" parallel="no" counterName="ForEach1Counter">
             <startCounterValue>1</startCounterValue>
             <finalCounterValue>count($LoadKhoiLopOut.part/ns0:DB_LoadKhoiLop_Record)</finalCounterValue>
-            <completionCondition>
-                <branches/>
-            </completionCondition>
             <scope name="Scope1">
-                <assign name="Assign1">
+                <assign name="Assign2">
                     <copy>
                         <from>$LoadKhoiLopOut.part/ns0:DB_LoadKhoiLop_Record[$ForEach1Counter]/ns0:id_khoilop
                             <sxed2:editor>
