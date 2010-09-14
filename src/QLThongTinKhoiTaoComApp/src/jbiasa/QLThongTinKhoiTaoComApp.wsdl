@@ -9,7 +9,7 @@
              xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
              targetNamespace="QLThongTinKhoiTaoComApp"
-             xmlns:tns="QLThongTinKhoiTaoComApp" xmlns:ns="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoTruong" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoQuyen" xmlns:ns2="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoNhom" xmlns:ns3="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoNamHoc" xmlns:ns4="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoMonHoc" xmlns:ns5="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoLop" xmlns:ns6="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoKhoiLop" xmlns:ns7="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoHocLuc" xmlns:ns8="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoHieuTruong" xmlns:ns9="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoHanhKiem" xmlns:ns10="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoDanToc" xmlns:ns11="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoCoSo" xmlns:ns12="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoBoMon" xmlns:ns13="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/LoadKhoiLop">
+             xmlns:tns="QLThongTinKhoiTaoComApp" xmlns:ns="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoTruong" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoQuyen" xmlns:ns2="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoNhom" xmlns:ns3="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoNamHoc" xmlns:ns4="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoMonHoc" xmlns:ns5="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoLop" xmlns:ns6="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoKhoiLop" xmlns:ns7="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoHocLuc" xmlns:ns8="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoHieuTruong" xmlns:ns9="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoHanhKiem" xmlns:ns10="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoDanToc" xmlns:ns11="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoCoSo" xmlns:ns12="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoBoMon" xmlns:ns13="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/LoadKhoiLop" xmlns:ns14="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/LoadToBoMon" xmlns:ns15="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/LoadCoSo" xmlns:ns16="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/LoadGVCN" xmlns:ns17="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/LoadNamHoc" xmlns:ns18="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/LoadThoiKhoaBieu" xmlns:ns19="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/LoadTruong">
     <import namespace="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoTruong" location="../jbiServiceUnits/QLThongTinKhoiTao/interface_wsdl/TaoTruong.wsdl"/>
     <import namespace="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoQuyen" location="../jbiServiceUnits/QLThongTinKhoiTao/interface_wsdl/TaoQuyen.wsdl"/>
     <import namespace="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoNhom" location="../jbiServiceUnits/QLThongTinKhoiTao/interface_wsdl/TaoNhom.wsdl"/>
@@ -24,6 +24,12 @@
     <import namespace="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoCoSo" location="../jbiServiceUnits/QLThongTinKhoiTao/interface_wsdl/TaoCoSo.wsdl"/>
     <import namespace="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoBoMon" location="../jbiServiceUnits/QLThongTinKhoiTao/interface_wsdl/TaoBoMon.wsdl"/>
     <import namespace="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/LoadKhoiLop" location="../jbiServiceUnits/QLThongTinKhoiTao/interface_wsdl/LoadKhoiLop.wsdl"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/LoadToBoMon" location="../jbiServiceUnits/QLThongTinKhoiTao/interface_wsdl/LoadToBoMon.wsdl"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/LoadCoSo" location="../jbiServiceUnits/QLThongTinKhoiTao/interface_wsdl/LoadCoSo.wsdl"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/LoadGVCN" location="../jbiServiceUnits/QLThongTinKhoiTao/interface_wsdl/LoadGVCN.wsdl"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/LoadNamHoc" location="../jbiServiceUnits/QLThongTinKhoiTao/interface_wsdl/LoadNamHoc.wsdl"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/LoadThoiKhoaBieu" location="../jbiServiceUnits/QLThongTinKhoiTao/interface_wsdl/LoadThoiKhoaBieu.wsdl"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/LoadTruong" location="../jbiServiceUnits/QLThongTinKhoiTao/interface_wsdl/LoadTruong.wsdl"/>
     <portType name="dummyCasaPortType"/>
     <binding name="casaBinding1" type="ns:TaoTruongPortType">
         <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
@@ -193,6 +199,78 @@
             </output>
         </operation>
     </binding>
+    <binding name="casaBinding15" type="ns14:LoadToBoMonPortType">
+        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="LoadToBoMonOperation">
+            <soap:operation/>
+            <input name="input1">
+                <soap:body use="literal" namespace="QLThongTinKhoiTaoComApp"/>
+            </input>
+            <output name="output1">
+                <soap:body use="literal" namespace="QLThongTinKhoiTaoComApp"/>
+            </output>
+        </operation>
+    </binding>
+    <binding name="casaBinding16" type="ns15:LoadCoSoPortType">
+        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="LoadCoSoOperation">
+            <soap:operation/>
+            <input name="input1">
+                <soap:body use="literal" namespace="QLThongTinKhoiTaoComApp"/>
+            </input>
+            <output name="output1">
+                <soap:body use="literal" namespace="QLThongTinKhoiTaoComApp"/>
+            </output>
+        </operation>
+    </binding>
+    <binding name="casaBinding17" type="ns16:LoadGVCNPortType">
+        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="LoadGVCNOperation">
+            <soap:operation/>
+            <input name="input1">
+                <soap:body use="literal" namespace="QLThongTinKhoiTaoComApp"/>
+            </input>
+            <output name="output1">
+                <soap:body use="literal" namespace="QLThongTinKhoiTaoComApp"/>
+            </output>
+        </operation>
+    </binding>
+    <binding name="casaBinding18" type="ns17:LoadNamHocPortType">
+        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="LoadNamHocOperation">
+            <soap:operation/>
+            <input name="input1">
+                <soap:body use="literal" namespace="QLThongTinKhoiTaoComApp"/>
+            </input>
+            <output name="output1">
+                <soap:body use="literal" namespace="QLThongTinKhoiTaoComApp"/>
+            </output>
+        </operation>
+    </binding>
+    <binding name="casaBinding19" type="ns18:LoadThoiKhoaBieuPortType">
+        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="LoadThoiKhoaBieuOperation">
+            <soap:operation/>
+            <input name="input1">
+                <soap:body use="literal" namespace="QLThongTinKhoiTaoComApp"/>
+            </input>
+            <output name="output1">
+                <soap:body use="literal" namespace="QLThongTinKhoiTaoComApp"/>
+            </output>
+        </operation>
+    </binding>
+    <binding name="casaBinding20" type="ns19:LoadTruongPortType">
+        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="LoadTruongOperation">
+            <soap:operation/>
+            <input name="input1">
+                <soap:body use="literal" namespace="QLThongTinKhoiTaoComApp"/>
+            </input>
+            <output name="output1">
+                <soap:body use="literal" namespace="QLThongTinKhoiTaoComApp"/>
+            </output>
+        </operation>
+    </binding>
     <service name="QLThongTinKhoiTaoComAppService1">
         <port name="TaoTruong" binding="tns:casaBinding1">
             <soap:address location="http://localhost:${HttpDefaultPort}/QLThongTinKhoiTaoComAppService1/TaoTruong"/>
@@ -263,5 +341,37 @@
             <soap:address location="http://localhost:${HttpDefaultPort}/QLThongTinKhoiTaoComAppService14/LoadKhoiLop"/>
         </port>
     </service>
+    <service name="QLThongTinKhoiTaoComAppService15">
+        <port name="LoadToBoMon" binding="tns:casaBinding15">
+            <soap:address location="http://localhost:${HttpDefaultPort}/QLThongTinKhoiTaoComAppService15/LoadToBoMon"/>
+        </port>
+    </service>
+    <service name="QLThongTinKhoiTaoComAppService16">
+        <port name="LoadCoSo" binding="tns:casaBinding16">
+            <soap:address location="http://localhost:${HttpDefaultPort}/QLThongTinKhoiTaoComAppService16/LoadCoSo"/>
+        </port>
+    </service>
+    <service name="QLThongTinKhoiTaoComAppService17">
+        <port name="LoadGVCN" binding="tns:casaBinding17">
+            <soap:address location="http://localhost:${HttpDefaultPort}/QLThongTinKhoiTaoComAppService17/LoadGVCN"/>
+        </port>
+    </service>
+    <service name="QLThongTinKhoiTaoComAppService18">
+        <port name="LoadNamHoc" binding="tns:casaBinding18">
+            <soap:address location="http://localhost:${HttpDefaultPort}/QLThongTinKhoiTaoComAppService18/LoadNamHoc"/>
+        </port>
+    </service>
+    <service name="QLThongTinKhoiTaoComAppService19">
+        <port name="LoadThoiKhoaBieu" binding="tns:casaBinding19">
+            <soap:address location="http://localhost:${HttpDefaultPort}/QLThongTinKhoiTaoComAppService19/LoadThoiKhoaBieu"/>
+        </port>
+    </service>
+    <service name="QLThongTinKhoiTaoComAppService20">
+        <port name="LoadTruong" binding="tns:casaBinding20">
+            <soap:address location="http://localhost:${HttpDefaultPort}/QLThongTinKhoiTaoComAppService20/LoadTruong"/>
+        </port>
+    </service>
 </definitions>
+
+
 
