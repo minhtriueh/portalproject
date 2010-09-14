@@ -25,12 +25,12 @@
         <receive name="Receive1" createInstance="yes" partnerLink="PartnerLink2" operation="TaoDanTocOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoDanToc" portType="tns:TaoDanTocPortType" variable="TaoDanTocOperationIn"/>
         <assign name="Assign1">
             <copy>
-                <from variable="TaoDanTocOperationIn" part="dantocthieuso"/>
-                <to>$ExecuteIn.part/ns0:dantocthieuso</to>
-            </copy>
-            <copy>
                 <from variable="TaoDanTocOperationIn" part="tendantoc"/>
                 <to>$ExecuteIn.part/ns0:tendantoc</to>
+            </copy>
+            <copy>
+                <from variable="TaoDanTocOperationIn" part="dantocthieuso"/>
+                <to>$ExecuteIn.part/ns0:dantocthieuso</to>
             </copy>
         </assign>
         <invoke name="Invoke1" partnerLink="PartnerLink1" operation="execute" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/DB_TaoDanToc" portType="tns:jdbcPortType" inputVariable="ExecuteIn" outputVariable="ExecuteOut"/>

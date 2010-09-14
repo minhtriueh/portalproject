@@ -2,7 +2,7 @@
 <definitions name="TaoHieuTruong" targetNamespace="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoHieuTruong"
     xmlns="http://schemas.xmlsoap.org/wsdl/"
     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoHieuTruong" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoHieuTruong" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype">
     <types/>
     <message name="TaoHieuTruongOperationRequest">
         <part name="id_truong" type="xsd:long"/>
@@ -16,23 +16,6 @@
             <output name="output1" message="tns:TaoHieuTruongOperationResponse"/>
         </operation>
     </portType>
-    <binding name="TaoHieuTruongBinding" type="tns:TaoHieuTruongPortType">
-        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
-        <operation name="TaoHieuTruongOperation">
-            <soap:operation/>
-            <input name="input1">
-                <soap:body use="literal" namespace="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoHieuTruong"/>
-            </input>
-            <output name="output1">
-                <soap:body use="literal" namespace="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoHieuTruong"/>
-            </output>
-        </operation>
-    </binding>
-    <service name="TaoHieuTruongService">
-        <port name="TaoHieuTruongPort" binding="tns:TaoHieuTruongBinding">
-            <soap:address location="http://localhost:${HttpDefaultPort}/TaoHieuTruongService/TaoHieuTruongPort"/>
-        </port>
-    </service>
     <plnk:partnerLinkType name="TaoHieuTruong">
         <!-- A partner link type is automatically generated when a new port type is added. Partner link types are used by BPEL processes. 
 In a BPEL process, a partner link represents the interaction between the BPEL process and a partner service. Each partner link is associated with a partner link type.

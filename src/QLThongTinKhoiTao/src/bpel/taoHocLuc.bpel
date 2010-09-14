@@ -25,12 +25,12 @@
         <receive name="Receive1" createInstance="yes" partnerLink="PartnerLink2" operation="TaoHocLucOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoHocLuc" portType="tns:TaoHocLucPortType" variable="TaoHocLucOperationIn"/>
         <assign name="Assign1">
             <copy>
-                <from variable="TaoHocLucOperationIn" part="diemcanduoi"/>
-                <to>$ExecuteIn.part/ns0:_diemcanduoi</to>
-            </copy>
-            <copy>
                 <from variable="TaoHocLucOperationIn" part="diemcantren"/>
                 <to>$ExecuteIn.part/ns0:_diemcantren</to>
+            </copy>
+            <copy>
+                <from variable="TaoHocLucOperationIn" part="diemcanduoi"/>
+                <to>$ExecuteIn.part/ns0:_diemcanduoi</to>
             </copy>
             <copy>
                 <from variable="TaoHocLucOperationIn" part="ghichu"/>
