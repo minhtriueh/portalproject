@@ -50,6 +50,7 @@ public class XemHocBa_CN implements SessionAware{
         hocba=result;
         session.put("hocba", hocba);
         System.out.println("Result = "+result);
+
     } catch (Exception ex) {
         System.out.println(ex);
     }
