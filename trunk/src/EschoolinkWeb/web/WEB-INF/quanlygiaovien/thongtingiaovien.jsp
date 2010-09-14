@@ -53,47 +53,48 @@
             String chucvu = gv.getChucVu();
                                 %>
                                 <table>
+                                    <tbody>
                                     <tr>
-                                        <td>Họ Tên</td>
+                                        <td style="background-color:aqua">Họ Tên</td>
                                         <td><input type="text" name="hoten" value="<%=hoten%>" style="background-color:silver"></td>
                                     </tr>
                                     <tr>
-                                        <td>CMND</td>
+                                        <td style="background-color:aqua">CMND</td>
                                         <td><input type="text" name="cmnd" value="<%=cmnd%>" style="background-color:silver"></td>
                                     </tr>
                                     <tr>
-                                        <td>Địa Chỉ</td>
+                                        <td style="background-color:aqua">Địa Chỉ</td>
                                         <td><input type="text" name="diachi" value="<%=diachi%>" style="background-color:silver"></td>
                                     </tr>
                                     <tr>
-                                        <td>Quê Quán</td>
+                                        <td style="background-color:aqua">Quê Quán</td>
                                         <td><input type="text" name="quequan" value="<%=quequan%>" style="background-color:silver"></td>
                                     </tr>
                                     <tr>
-                                        <td>Ngày Sinh</td>
+                                        <td style="background-color:aqua">Ngày Sinh</td>
                                         <td><input type="text" name="ngaysinh" value="<%=ngaysinh%>" style="background-color:silver"></td>
                                     </tr>
                                     <tr>
-                                        <td>Số Điện Thoại</td>
+                                        <td style="background-color:aqua">Số Điện Thoại</td>
                                         <td><input type="text" name="sodienthoai" value="<%=sodienthoai%>" style="background-color:silver"></td>
                                     </tr>
                                     <tr>
-                                        <td>Email</td>
+                                        <td style="background-color:aqua">Email</td>
                                         <td><input type="text" name="email" value="<%=Email%>" style="background-color:silver"></td>
                                     </tr>
                                     <tr>
-                                        <td>Trình Độ Văn Hóa</td>
+                                        <td style="background-color:aqua">Trình Độ Văn Hóa</td>
                                         <td><input type="text" name="trinhdo" value="<%=trinhdo%>" style="background-color:silver"></td>
                                     </tr>
                                     <tr>
-                                        <td>Tôn Giáo</td>
+                                        <td style="background-color:aqua">Tôn Giáo</td>
                                         <td><input type="text" name="tongiao" value="<%=tongiao%>" style="background-color:silver"></td>
                                     </tr>
                                     <tr>
-                                        <td>Chức Vụ</td>
+                                        <td style="background-color:aqua">Chức Vụ</td>
                                         <td><input type="text" name="chucvu" value="<%=chucvu%>" style="background-color:silver"></td>
                                     </tr>
-
+                                    </tbody>
                                 </table>
                             </div>
                         </fieldset>
