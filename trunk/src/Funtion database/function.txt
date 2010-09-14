@@ -439,10 +439,12 @@ begin
             $13, $14, $15, $16, $17, $18, 
             $19, $20, $21,id_nguoidung , $22, 
             $23) ;
+           PERFORM themnguoidungnhom(id_nguoidung, 2);
             return id_giaovien;
 end;
 $BODY$
   LANGUAGE 'plpgsql' VOLATILE
   COST 100;
 ALTER FUNCTION them_giaovienvaohethong(character, character, character, character, character, character, boolean, boolean, date, date, date, date, date, character, character, character, character, character, character, character, character, bigint, bigint, date, character, character) OWNER TO postgres;
+
 ----------------------------------------------
