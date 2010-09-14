@@ -4,14 +4,17 @@
  */
 package quanlygiaovien;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.xml.datatype.XMLGregorianCalendar;
+import org.apache.struts2.interceptor.ServletRequestAware;
 import utils.MyGregorianCalendar;
-
+import utils.MyImage;
+import java.io.File;
 /**
  *
  * @author bon
  */
-public class TaoGiaoVien {
+public class TaoGiaoVien implements ServletRequestAware{
 
     private String choohientai;
     private String chucvu;
@@ -36,8 +39,10 @@ public class TaoGiaoVien {
     private String trinhdovanhoa;
     private String id_dantoc;
     private String id_tobomon;
-
+    private HttpServletRequest request;
     private String error;
+   private File file;
+    private String filename,contentType;
     public String execute() throws Exception {
                 Long idToBoMon=new Long(id_tobomon);
                 Long idDanToc=new Long(id_dantoc);
@@ -57,7 +62,9 @@ public class TaoGiaoVien {
 //                today.get(java.util.GregorianCalendar.MONTH) + 1,
 //                today.get(java.util.GregorianCalendar.DAY_OF_MONTH),
 //                0, 0, 0, 0, 0);
-
+                String localDir=getRequest().getRealPath("")+"\\images\\Upload";
+//                hinhanh = MyImage.saveImage(file, filename, contentType, localDir, 200);
+                hinhanh="...";
                 long id = callservice(choohientai, chucvu, cmnd, email, gioitinh, hinhanh, new Boolean(ketnapdang), new Boolean(ketnapdoan), datecap, datesinh, datevaodang, datevaodoan, datevaotruong, noicap, quequan, sodienthoai, tengiaovien, tinhtrangsuckhoe, tongiao, trinhdodaotao, trinhdovanhoa, idDanToc, idToBoMon);
                 System.out.print(id + "GIAOVIEN");
                 if (id != -1) {
@@ -109,6 +116,15 @@ public class TaoGiaoVien {
         this.choohientai = choohientai;
     }
 
+    public String getContentType() {
+        return contentType;
+    }
+
+    public void setContentType(String contentType) {
+        this.contentType = contentType;
+    }
+
+   
     public String getChucvu() {
         return chucvu;
     }
@@ -365,5 +381,42 @@ public class TaoGiaoVien {
         this.trinhdovanhoa = trinhdovanhoa;
     }
 
+    @Override
+    public void setServletRequest(HttpServletRequest arg0) {
+        this.request=arg0;
+    }
+
+    public HttpServletRequest getRequest() {
+        return request;
+    }
+
+   public void setUpload(File file) {
+         this.file = file;
+      }
+
+      public void setUploadContentType(String contentType) {
+         this.contentType = contentType;
+      }
+
+      public void setUploadFileName(String filename) {
+         this.filename = filename;
+      }
+    
+
+    public File getFile() {
+        return file;
+    }
+
+    public void setFile(File file) {
+        this.file = file;
+    }
+
+    public String getFilename() {
+        return filename;
+    }
+
+    public void setFilename(String filename) {
+        this.filename = filename;
+    }
 }
 
