@@ -35,28 +35,28 @@
 
                                                     <div class="fm-req">
                                                       <label>Tên trường</label>
-                                                      <input name="tenTruong" type="text" />
+                                                      <input name="tentruong" type="text" />
                                                     </div>
                                                     <div class="fm-req">
                                                       <label>Giới thiệu</label>
-                                                      <textarea name="gioiThieu" cols="8" rows="5" ></textarea>
+                                                      <textarea name="gioithieu" cols="8" rows="5" ></textarea>
 
                                                     </div>
                                                     <div class="fm-req">
                                                       <label>Địa chỉ</label>
-                                                      <input name="diaChi" type="text" />
+                                                      <input name="diachi" type="text" />
                                                     </div>
                                                     <div class="fm-req">
                                                       <label>Điện thoại</label>
-                                                      <input name="dienThoai" type="text" />
+                                                      <input name="dienthoai" type="text" />
                                                     </div>
                                                     <div class="fm-req">
                                                       <label>Loại hình</label>
 
-                                                       <select name="loaiHinh">
-                                    <option value="conglap">Công lập</option>
-                                    <option value="danlap">Dân lập</option>
-                                    <option value="bancong">Bán công</option>
+                                                       <select name="loaihinh">
+                                    <option value="Công lập">Công lập</option>
+                                    <option value="Dân lập">Dân lập</option>
+                                    <option value="Bán công">Bán công</option>
                                 </select>
                                                     </div>
                                                     <div class="fm-req">

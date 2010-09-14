@@ -6,13 +6,13 @@
 	<package name="QLThongTinKhoiTao"
 		extends="struts-default">
 		
-                <!--<action name="TaoTruong"
+                <action name="TaoTruong"
 			class="quanlythongtinkhoitao.TaoTruong">
 			<result name="success">/index.jsp?module=quanlythongtinkhoitao&amp;page=taotruong</result>
 		</action>
                 <action name="TaoTruong_Result"
 			class="quanlythongtinkhoitao.TaoTruong_Result">
-			<result name="success">/index.jsp?module=quanlythongtinkhoitao&amp;page=result</result>
+			<result name="success">/index.jsp?module=quanlythongtinkhoitao&amp;page=success</result>
                         <result name="error">/index.jsp?module=quanlythongtinkhoitao&amp;page=error</result>
                 </action>
 
@@ -22,7 +22,7 @@
 		</action>
                 <action name="TaoQuyen_Result"
 			class="quanlythongtinkhoitao.TaoQuyen_Result">
-			<result name="success">/index.jsp?module=quanlythongtinkhoitao&amp;page=result</result>
+			<result name="success">/index.jsp?module=quanlythongtinkhoitao&amp;page=success</result>
                         <result name="error">/index.jsp?module=quanlythongtinkhoitao&amp;page=error</result>
                 </action>
 
@@ -32,10 +32,110 @@
 		</action>
                 <action name="TaoNhom_Result"
 			class="quanlythongtinkhoitao.TaoNhom_Result">
-			<result name="success">/index.jsp?module=quanlythongtinkhoitao&amp;page=result</result>
+			<result name="success">/index.jsp?module=quanlythongtinkhoitao&amp;page=success</result>
                         <result name="error">/index.jsp?module=quanlythongtinkhoitao&amp;page=error</result>
-                </action>-->
+                </action>
 
+                 <action name="TaoNamHoc"
+			class="quanlythongtinkhoitao.TaoNamHoc">
+			<result name="success">/index.jsp?module=quanlythongtinkhoitao&amp;page=taonamhoc</result>
+		</action>
+                <action name="TaoNamHoc_Result"
+			class="quanlythongtinkhoitao.TaoNamHoc_Result">
+			<result name="success">/index.jsp?module=quanlythongtinkhoitao&amp;page=success</result>
+                        <result name="error">/index.jsp?module=quanlythongtinkhoitao&amp;page=error</result>
+                </action>
+
+
+                <action name="TaoMonHoc"
+			class="quanlythongtinkhoitao.TaoMonHoc">
+			<result name="success">/index.jsp?module=quanlythongtinkhoitao&amp;page=taomonhoc</result>
+		</action>
+                <action name="TaoMonHoc_Result"
+			class="quanlythongtinkhoitao.TaoMonHoc_Result">
+			<result name="success">/index.jsp?module=quanlythongtinkhoitao&amp;page=success</result>
+                        <result name="error">/index.jsp?module=quanlythongtinkhoitao&amp;page=error</result>
+                </action>
+
+                <action name="TaoKhoiLop"
+			class="quanlythongtinkhoitao.TaoKhoiLop">
+			<result name="success">/index.jsp?module=quanlythongtinkhoitao&amp;page=taokhoilop</result>
+		</action>
+                <action name="TaoKhoiLop_Result"
+			class="quanlythongtinkhoitao.TaoKhoiLop_Result">
+			<result name="success">/index.jsp?module=quanlythongtinkhoitao&amp;page=success</result>
+                        <result name="error">/index.jsp?module=quanlythongtinkhoitao&amp;page=error</result>
+                </action>
+
+                <action name="TaoLop"
+			class="quanlythongtinkhoitao.TaoLop">
+			<result name="success">/index.jsp?module=quanlythongtinkhoitao&amp;page=taolop</result>
+		</action>
+                <action name="TaoLop_Result"
+			class="quanlythongtinkhoitao.TaoLop_Result">
+			<result name="success">/index.jsp?module=quanlythongtinkhoitao&amp;page=success</result>
+                        <result name="error">/index.jsp?module=quanlythongtinkhoitao&amp;page=error</result>
+                </action>
+
+                <action name="TaoHocLuc"
+			class="quanlythongtinkhoitao.TaoHocLuc">
+			<result name="success">/index.jsp?module=quanlythongtinkhoitao&amp;page=taohocluc</result>
+		</action>
+                <action name="TaoHocLuc_Result"
+			class="quanlythongtinkhoitao.TaoHocLuc_Result">
+			<result name="success">/index.jsp?module=quanlythongtinkhoitao&amp;page=success</result>
+                        <result name="error">/index.jsp?module=quanlythongtinkhoitao&amp;page=error</result>
+                </action>
+
+                <action name="TaoHieuTruong"
+			class="quanlythongtinkhoitao.TaoHieuTruong">
+			<result name="success">/index.jsp?module=quanlythongtinkhoitao&amp;page=taohieutruong</result>
+		</action>
+                <action name="TaoHieuTruong_Result"
+			class="quanlythongtinkhoitao.TaoHieuTruong_Result">
+			<result name="success">/index.jsp?module=quanlythongtinkhoitao&amp;page=success</result>
+                        <result name="error">/index.jsp?module=quanlythongtinkhoitao&amp;page=error</result>
+                </action>
+
+                <action name="TaoHanhKiem"
+			class="quanlythongtinkhoitao.TaoHanhKiem">
+			<result name="success">/index.jsp?module=quanlythongtinkhoitao&amp;page=taohanhkiem</result>
+		</action>
+                <action name="TaoHanhKiem_Result"
+			class="quanlythongtinkhoitao.TaoHanhKiem_Result">
+			<result name="success">/index.jsp?module=quanlythongtinkhoitao&amp;page=success</result>
+                        <result name="error">/index.jsp?module=quanlythongtinkhoitao&amp;page=error</result>
+                </action>
+
+                <action name="TaoDanToc"
+			class="quanlythongtinkhoitao.TaoDanToc">
+			<result name="success">/index.jsp?module=quanlythongtinkhoitao&amp;page=taodantoc</result>
+		</action>
+                <action name="TaoDanToc_Result"
+			class="quanlythongtinkhoitao.TaoDanToc_Result">
+			<result name="success">/index.jsp?module=quanlythongtinkhoitao&amp;page=success</result>
+                        <result name="error">/index.jsp?module=quanlythongtinkhoitao&amp;page=error</result>
+                </action>
+
+                <action name="TaoCoSo"
+			class="quanlythongtinkhoitao.TaoCoSo">
+			<result name="success">/index.jsp?module=quanlythongtinkhoitao&amp;page=taocoso</result>
+		</action>
+                <action name="TaoCoSo_Result"
+			class="quanlythongtinkhoitao.TaoCoSo_Result">
+			<result name="success">/index.jsp?module=quanlythongtinkhoitao&amp;page=success</result>
+                        <result name="error">/index.jsp?module=quanlythongtinkhoitao&amp;page=error</result>
+                </action>
+
+                <action name="TaoBoMon"
+			class="quanlythongtinkhoitao.TaoBoMon">
+			<result name="success">/index.jsp?module=quanlythongtinkhoitao&amp;page=taobomon</result>
+		</action>
+                <action name="TaoBoMon_Result"
+			class="quanlythongtinkhoitao.TaoBoMon_Result">
+			<result name="success">/index.jsp?module=quanlythongtinkhoitao&amp;page=success</result>
+                        <result name="error">/index.jsp?module=quanlythongtinkhoitao&amp;page=error</result>
+                </action>
 
 	</package>
 
