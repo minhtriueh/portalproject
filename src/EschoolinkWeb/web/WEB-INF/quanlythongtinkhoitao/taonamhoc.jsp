@@ -35,11 +35,11 @@
 
                                                     <div class="fm-req">
                                                       <label>Năm trước</label>
-                                                      <input name="namTruoc" type="text" />
+                                                      <input name="namtruoc" type="text" />
                                                     </div>
                                                     <div class="fm-req">
                                                       <label>Năm sau</label>
-                                                      <input name="namSau" type="text" />
+                                                      <input name="namsau" type="text" />
                                                     </div>
 
                                                     </fieldset>

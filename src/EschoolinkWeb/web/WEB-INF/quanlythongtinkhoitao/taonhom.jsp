@@ -35,11 +35,11 @@
 
                                                     <div class="fm-req">
                                                       <label>Tên nhóm</label>
-                                                      <input name="tenNhom" type="text" />
+                                                      <input name="tennhom" type="text" />
                                                     </div>
                                                     <div class="fm-req">
                                                       <label>Mô tả</label>
-                                                      <textarea name="moTa" cols="8" rows="5"></textarea>
+                                                      <textarea name="mota" cols="8" rows="5"></textarea>
                                                     </div>
 
                                                     </fieldset>
