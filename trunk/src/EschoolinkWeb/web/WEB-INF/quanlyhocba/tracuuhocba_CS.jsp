@@ -60,7 +60,8 @@
                         <fieldset>
                             <legend>Thông Tin Tra Cứu</legend>
                             <div class="fm-opt">
-                                <table>
+                                <table class="myTable">
+                                    <thead>
                                     <tr>
                                         <td>
                                             Niên Khóa
@@ -72,6 +73,8 @@
                                             Lớp Học
                                         </td>
                                     </tr>
+                                    </thead>
+                                    <tbody>
                                     <tr>
                                         <td>
                                             <select id="_namhoc" name="id_namhoc">
@@ -100,12 +103,13 @@
                                             </span>
                                         </td>
                                     </tr>
+                                    </tbody>
                                 </table>
                             </div>
                         </fieldset>
                         <div id="fm-submit" class="fm-req">
                             <input name="submit" value="Liệt Kê" type="button" id="lk" />
-                            <input name="submit" value="Trở Lại" type="submit"/>
+                            <input name="submit" value="Trở Lại" type="button" onclick="Back(1)"/>
                         </div>
                     </form>
                 </div>
