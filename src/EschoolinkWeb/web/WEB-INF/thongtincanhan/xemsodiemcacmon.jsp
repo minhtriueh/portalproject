@@ -19,7 +19,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@page import="com.opensymphony.xwork2.ActionContext"%>
-
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
 
 <div class="art-postcontent">
@@ -30,16 +30,16 @@
             <c:set var="dshb" value="${hocba.hocBaTungHK}"></c:set>
 
             <c:forEach var="item" items="${dshb}">
-                <table border="1">
+                <table border="1" class="myTable">
                     <tr>
-                        <td rowspan="2" align="center">
+                        <td rowspan="2" align="center" style="background-color:aqua;font-weight:bold">
                             HocKy ${item.namHoc.hocKy}
                         </td>
                         <c:forEach var="sodiem" items="${item.diemTBMon}">
                             <td>${sodiem.tenSoDiem}</td>
                         </c:forEach>
                     </tr>
-                    <tr>
+                    <tr style="background-color:infobackground">
 
                         <c:forEach var="sodiem2" items="${item.diemTBMon}">
                             <c:forEach var="chitiet" items="${sodiem2.chiTietSoDiem}">

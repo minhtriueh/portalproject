@@ -32,63 +32,63 @@
                             <legend>Thông Tin Cá Nhân</legend>
                             <div class="fm-opt">
                                 
-                                <table>
+                                <table class="myTable" border="1">
                                     <tr>
-                                        <td>Tên Giáo Viên</td>
-                                        <td>${gv.tenGiaoVien}</td>
+                                        <td class="td1">Tên Giáo Viên</td>
+                                        <td style="background-color:infobackground">${gv.tenGiaoVien}</td>
                                     </tr>
                                      <tr>
-                                        <td>Ngày Sinh</td>
-                                        <td>${gv.ngaySinh}</td>
+                                        <td class="td1">Ngày Sinh</td>
+                                        <td style="background-color:infobackground">${gv.ngaySinh}</td>
                                     </tr>
                                      <tr>
-                                        <td>CMND</td>
-                                        <td>${gv.cmnd}</td>
+                                        <td class="td1">CMND</td>
+                                        <td style="background-color:infobackground">${gv.cmnd}</td>
                                     </tr>
                                      <tr>
-                                        <td>Ngày Cấp</td>
-                                        <td>${gv.ngayCap}</td>
+                                        <td class="td1">Ngày Cấp</td>
+                                        <td style="background-color:infobackground">${gv.ngayCap}</td>
                                     </tr>
                                      <tr>
-                                        <td>Nơi Cấp</td>
-                                        <td>${gv.noiCap}</td>
+                                        <td class="td1">Nơi Cấp</td>
+                                        <td style="background-color:infobackground">${gv.noiCap}</td>
                                     </tr>
                                      <tr>
-                                        <td>Tôn Giáo</td>
-                                        <td>${gv.tonGiao}</td>
+                                        <td class="td1">Tôn Giáo</td>
+                                        <td style="background-color:infobackground">${gv.tonGiao}</td>
                                     </tr>
                                      <tr>
-                                        <td>Quê Quán</td>
-                                        <td>${gv.queQuan}</td>
+                                        <td class="td1">Quê Quán</td>
+                                        <td style="background-color:infobackground">${gv.queQuan}</td>
                                     </tr>
                                      <tr>
-                                        <td>Chỗ ở hiện tại</td>
-                                        <td>${gv.choOHienTai}</td>
+                                        <td class="td1">Chỗ ở hiện tại</td>
+                                        <td style="background-color:infobackground">${gv.choOHienTai}</td>
                                     </tr>
                                      <tr>
-                                        <td>Email</td>
-                                        <td>${gv.email}</td>
+                                        <td class="td1">Email</td>
+                                        <td style="background-color:infobackground">${gv.email}</td>
                                     </tr>
                                      <tr>
-                                        <td>Số Điện Thoại</td>
-                                        <td>${gv.soDienThoai}</td>
+                                        <td class="td1">Số Điện Thoại</td>
+                                        <td style="background-color:infobackground">${gv.soDienThoai}</td>
                                     </tr>
                                      <tr>
-                                        <td>Chức Vụ</td>
-                                        <td>${gv.chucVu}</td>
+                                        <td class="td1">Chức Vụ</td>
+                                        <td style="background-color:infobackground">${gv.chucVu}</td>
                                     </tr>
                                      <tr>
-                                        <td>Trình Độ Văn Hóa</td>
-                                        <td>${gv.trinhDoVanHoa}</td>
+                                        <td class="td1">Trình Độ Văn Hóa</td>
+                                        <td style="background-color:infobackground">${gv.trinhDoVanHoa}</td>
                                     </tr>
                                      
                                      <tr>
-                                        <td>Username</td>
-                                        <td>${gv.nguoiDung.username}</td>
+                                        <td class="td1">Username</td>
+                                        <td style="background-color:infobackground">${gv.nguoiDung.username}</td>
                                     </tr>
                                      <tr>
-                                        <td>Password</td>
-                                        <td>${gv.nguoiDung.password}</td>
+                                        <td class="td1">Password</td>
+                                        <td style="background-color:infobackground">${gv.nguoiDung.password}</td>
                                     </tr>
 
                                 </table>
