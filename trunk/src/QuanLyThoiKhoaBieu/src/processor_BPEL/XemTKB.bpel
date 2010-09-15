@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process
+    name="XemTKB"
+    targetNamespace="http://enterprise.netbeans.org/bpel/QuanLyThoiKhoaBieu/XemTKB"
+    xmlns:tns="http://enterprise.netbeans.org/bpel/QuanLyThoiKhoaBieu/XemTKB"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
+    xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor"
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2" xmlns:ns0="http://j2ee.netbeans.org/xsd/tableSchema" xmlns:ns1="http://xml.netbeans.org/schema/Thoikhoabieu_EschoolinkObject">
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/XemTKB" location="../interface_WSDL/XemTKB.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/select_TKB" location="../DB_WSDL/select/select_TKB.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <partnerLinks>
+        <partnerLink name="PartnerLink2" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/select_TKB" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="PartnerLink1" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/XemTKB" partnerLinkType="tns:XemTKB" myRole="XemTKBPortTypeRole"/>
+    </partnerLinks>
+    <variables>
+        <variable name="Newuntitled_OperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/select_TKB" messageType="tns:outputMsg">
+            <sxed2:editor>
+                <sxed2:predicate path="$Newuntitled_OperationOut.part/ns0:select_TKB_Record[$ForEach1Counter]" source="from"/>
+            </sxed2:editor>
+        </variable>
+        <variable name="Newuntitled_OperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/select_TKB" messageType="tns:inputMsg"/>
+        <variable name="XemTKBOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/XemTKB" messageType="tns:XemTKBOperationRequest"/>
+        <variable name="XemTKBOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/XemTKB" messageType="tns:XemTKBOperationResponse">
+            <sxed2:editor>
+                <sxed2:predicate path="$XemTKBOperationOut.thoikhoabieu/ns1:ChiTietThoiKhoaBieu[$ForEach1Counter]" source="to"/>
+            </sxed2:editor>
+        </variable>
+    </variables>
+    <sequence>
+        <receive name="Receive1" createInstance="yes" partnerLink="PartnerLink1" operation="XemTKBOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/XemTKB" portType="tns:XemTKBPortType" variable="XemTKBOperationIn"/>
+        <assign name="Assign1">
+            <copy>
+                <from variable="XemTKBOperationIn" part="tenlop"/>
+                <to>$Newuntitled_OperationIn.part/ns0:tenlop</to>
+            </copy>
+            <copy>
+                <from variable="XemTKBOperationIn" part="hocky"/>
+                <to>$Newuntitled_OperationIn.part/ns0:hocky</to>
+            </copy>
+        </assign>
+        <invoke name="Invoke1" partnerLink="PartnerLink2" operation="newuntitled_Operation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/select_TKB" portType="tns:jdbcPortType" inputVariable="Newuntitled_OperationIn" outputVariable="Newuntitled_OperationOut"/>
+        <forEach name="ForEach1" parallel="no" counterName="ForEach1Counter">
+            <startCounterValue>1</startCounterValue>
+            <finalCounterValue>count($Newuntitled_OperationOut.part/ns0:select_TKB_Record)</finalCounterValue>
+            <scope name="Scope1">
+                <assign name="Assign2">
+                    <copy>
+                        <from>$Newuntitled_OperationOut.part/ns0:select_TKB_Record[$ForEach1Counter]/ns0:hocky
+                            <sxed2:editor>
+                                <sxed2:predicate path="$Newuntitled_OperationOut.part/ns0:select_TKB_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$XemTKBOperationOut.thoikhoabieu/ns1:hocKy</to>
+                    </copy>
+                    <copy>
+                        <from>$Newuntitled_OperationOut.part/ns0:select_TKB_Record[$ForEach1Counter]/ns0:id_lop
+                            <sxed2:editor>
+                                <sxed2:predicate path="$Newuntitled_OperationOut.part/ns0:select_TKB_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$XemTKBOperationOut.thoikhoabieu/ns1:idLop</to>
+                    </copy>
+                    <copy>
+                        <from>$Newuntitled_OperationOut.part/ns0:select_TKB_Record[$ForEach1Counter]/ns0:id_thoikhoabieu
+                            <sxed2:editor>
+                                <sxed2:predicate path="$Newuntitled_OperationOut.part/ns0:select_TKB_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$XemTKBOperationOut.thoikhoabieu/ns1:idThoiKhoaBieu</to>
+                    </copy>
+                    <copy>
+                        <from>$Newuntitled_OperationOut.part/ns0:select_TKB_Record[$ForEach1Counter]/ns0:tengiaovien
+                            <sxed2:editor>
+                                <sxed2:predicate path="$Newuntitled_OperationOut.part/ns0:select_TKB_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$XemTKBOperationOut.thoikhoabieu/ns1:ChiTietThoiKhoaBieu[$ForEach1Counter]/ns1:giaovien/ns1:tenGiaoVien
+                            <sxed2:editor>
+                                <sxed2:predicate path="$XemTKBOperationOut.thoikhoabieu/ns1:ChiTietThoiKhoaBieu[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$Newuntitled_OperationOut.part/ns0:select_TKB_Record[$ForEach1Counter]/ns0:tenmonhoc
+                            <sxed2:editor>
+                                <sxed2:predicate path="$Newuntitled_OperationOut.part/ns0:select_TKB_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$XemTKBOperationOut.thoikhoabieu/ns1:ChiTietThoiKhoaBieu[$ForEach1Counter]/ns1:monhoc/ns1:tenMonHoc
+                            <sxed2:editor>
+                                <sxed2:predicate path="$XemTKBOperationOut.thoikhoabieu/ns1:ChiTietThoiKhoaBieu[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$Newuntitled_OperationOut.part/ns0:select_TKB_Record[$ForEach1Counter]/ns0:id_monhoc
+                            <sxed2:editor>
+                                <sxed2:predicate path="$Newuntitled_OperationOut.part/ns0:select_TKB_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$XemTKBOperationOut.thoikhoabieu/ns1:ChiTietThoiKhoaBieu[$ForEach1Counter]/ns1:monhoc/ns1:id
+                            <sxed2:editor>
+                                <sxed2:predicate path="$XemTKBOperationOut.thoikhoabieu/ns1:ChiTietThoiKhoaBieu[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$Newuntitled_OperationOut.part/ns0:select_TKB_Record[$ForEach1Counter]/ns0:id_giaovien
+                            <sxed2:editor>
+                                <sxed2:predicate path="$Newuntitled_OperationOut.part/ns0:select_TKB_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$XemTKBOperationOut.thoikhoabieu/ns1:ChiTietThoiKhoaBieu[$ForEach1Counter]/ns1:giaovien/ns1:id
+                            <sxed2:editor>
+                                <sxed2:predicate path="$XemTKBOperationOut.thoikhoabieu/ns1:ChiTietThoiKhoaBieu[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$Newuntitled_OperationOut.part/ns0:select_TKB_Record[$ForEach1Counter]/ns0:thu
+                            <sxed2:editor>
+                                <sxed2:predicate path="$Newuntitled_OperationOut.part/ns0:select_TKB_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$XemTKBOperationOut.thoikhoabieu/ns1:ChiTietThoiKhoaBieu[$ForEach1Counter]/ns1:thu
+                            <sxed2:editor>
+                                <sxed2:predicate path="$XemTKBOperationOut.thoikhoabieu/ns1:ChiTietThoiKhoaBieu[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$Newuntitled_OperationOut.part/ns0:select_TKB_Record[$ForEach1Counter]/ns0:tietthumay
+                            <sxed2:editor>
+                                <sxed2:predicate path="$Newuntitled_OperationOut.part/ns0:select_TKB_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$XemTKBOperationOut.thoikhoabieu/ns1:ChiTietThoiKhoaBieu[$ForEach1Counter]/ns1:tietThuMay
+                            <sxed2:editor>
+                                <sxed2:predicate path="$XemTKBOperationOut.thoikhoabieu/ns1:ChiTietThoiKhoaBieu[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$Newuntitled_OperationOut.part/ns0:select_TKB_Record[$ForEach1Counter]/ns0:id_chitietthoikhoabieu
+                            <sxed2:editor>
+                                <sxed2:predicate path="$Newuntitled_OperationOut.part/ns0:select_TKB_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$XemTKBOperationOut.thoikhoabieu/ns1:ChiTietThoiKhoaBieu[$ForEach1Counter]/ns1:id_chitietthoikhoabieu
+                            <sxed2:editor>
+                                <sxed2:predicate path="$XemTKBOperationOut.thoikhoabieu/ns1:ChiTietThoiKhoaBieu[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$Newuntitled_OperationOut.part/ns0:select_TKB_Record[$ForEach1Counter]/ns0:id_namhoc
+                            <sxed2:editor>
+                                <sxed2:predicate path="$Newuntitled_OperationOut.part/ns0:select_TKB_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$XemTKBOperationOut.thoikhoabieu/ns1:idNamHoc</to>
+                    </copy>
+                </assign>
+            </scope>
+        </forEach>
+        <reply name="Reply1" partnerLink="PartnerLink1" operation="XemTKBOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/XemTKB" portType="tns:XemTKBPortType" variable="XemTKBOperationOut"/>
+    </sequence>
+</process>
+

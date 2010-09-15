@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions name="DB_ThemChiTietthoiKhoaBieu" targetNamespace="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/DB_ThemChiTietthoiKhoaBieu" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:ns="http://j2ee.netbeans.org/xsd/tableSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/DB_ThemChiTietthoiKhoaBieu" xmlns:plink="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/">
+<definitions name="insert_tkb" targetNamespace="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/insert_tkb" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:ns="http://j2ee.netbeans.org/xsd/tableSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/insert_tkb" xmlns:plink="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/">
   <types>
     <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/">
-            <xsd:import namespace="http://j2ee.netbeans.org/xsd/tableSchema" schemaLocation="DB_ThemChiTietthoiKhoaBieu.xsd"/>
+            <xsd:import namespace="http://j2ee.netbeans.org/xsd/tableSchema" schemaLocation="insert_tkb.xsd"/>
 	</xsd:schema>
   </types>
   <message name="inputMsg">
-    <part name="part" element="ns:insert_chitietthoikhoabieu_Request"/>
+    <part name="part" element="ns:insert_thoikhoabieu_Request"/>
   </message>
   <message name="outputMsg">
-    <part name="part" element="ns:insert_chitietthoikhoabieu_Response"/>
+    <part name="part" element="ns:insert_thoikhoabieu_Response"/>
   </message>
   <portType name="jdbcPortType">
     <operation name="execute">
@@ -22,7 +22,7 @@
     <operation name="execute">
     <jdbc:operation xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/"/>
       <input name="inputExecute">
-    <jdbc:spinput xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" ExecutionString="{ ? = call insert_chitietthoikhoabieu(?,?,?,?,?,?) }" ProcedureName="insert_chitietthoikhoabieu" Transaction="NOTransaction"/>
+    <jdbc:spinput xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" ExecutionString="{ ? = call insert_thoikhoabieu(?,?,?) }" ProcedureName="insert_thoikhoabieu" Transaction="NOTransaction"/>
       </input>
       <output name="outputExecute">
     <jdbc:spoutput xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" returnPartName="part"/>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process
+    name="ThemTKB"
+    targetNamespace="http://enterprise.netbeans.org/bpel/QuanLyThoiKhoaBieu/ThemTKB"
+    xmlns:tns="http://enterprise.netbeans.org/bpel/QuanLyThoiKhoaBieu/ThemTKB"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
+    xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor"
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2" xmlns:ns0="http://xml.netbeans.org/schema/EschoolinkObject" xmlns:ns1="http://j2ee.netbeans.org/xsd/tableSchema">
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/ThemTKB" location="../interface_WSDL/ThemTKB.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/insert_tkb" location="../DB_WSDL/insert/insert_tkb.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/insert_chitiettkb" location="../DB_WSDL/insert/insert_chitiettkb.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <partnerLinks>
+        <partnerLink name="PartnerLink2" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/insert_tkb" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="PartnerLink3" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/insert_chitiettkb" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="PartnerLink1" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/ThemTKB" partnerLinkType="tns:ThemTKB" myRole="ThemTKBPortTypeRole"/>
+    </partnerLinks>
+    <variables>
+        <variable name="ExecuteThemTKBOUT" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/insert_tkb" messageType="tns:outputMsg"/>
+        <variable name="ExecuteThemTKBIN" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/insert_tkb" messageType="tns:inputMsg"/>
+        <variable name="ThemTKBOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/ThemTKB" messageType="tns:ThemTKBOperationResponse"/>
+        <variable name="ThemTKBOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/ThemTKB" messageType="tns:ThemTKBOperationRequest">
+            <sxed2:editor>
+                <sxed2:predicate path="$ThemTKBOperationIn.thoikhoabieu/ns0:ChiTietThoiKhoaBieu[$ForEach1Counter]" source="from"/>
+            </sxed2:editor>
+        </variable>
+    </variables>
+    <sequence>
+        <receive name="Receive1" createInstance="yes" partnerLink="PartnerLink1" operation="ThemTKBOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/ThemTKB" portType="tns:ThemTKBPortType" variable="ThemTKBOperationIn"/>
+        <assign name="Assign1">
+            <copy>
+                <from>$ThemTKBOperationIn.thoikhoabieu/ns0:idNamHoc</from>
+                <to>$ExecuteThemTKBIN.part/ns1:id_namhoc</to>
+            </copy>
+            <copy>
+                <from>$ThemTKBOperationIn.thoikhoabieu/ns0:idLop</from>
+                <to>$ExecuteThemTKBIN.part/ns1:id_lop</to>
+            </copy>
+            <copy>
+                <from>$ThemTKBOperationIn.thoikhoabieu/ns0:hocKy</from>
+                <to>$ExecuteThemTKBIN.part/ns1:hocky</to>
+            </copy>
+        </assign>
+        <invoke name="Invoke1" partnerLink="PartnerLink2" operation="execute" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/insert_tkb" portType="tns:jdbcPortType" inputVariable="ExecuteThemTKBIN" outputVariable="ExecuteThemTKBOUT"/>
+        <forEach name="ForEach1" parallel="no" counterName="ForEach1Counter">
+            <startCounterValue>1</startCounterValue>
+            <finalCounterValue>count($ThemTKBOperationIn.thoikhoabieu/ns0:ChiTietThoiKhoaBieu)</finalCounterValue>
+            <scope name="Scope1">
+                <variables>
+                    <variable name="ExecuteThemCTTKBOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/insert_chitiettkb" messageType="tns:outputMsg"/>
+                    <variable name="ExecuteThemCTTKBIN" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/insert_chitiettkb" messageType="tns:inputMsg"/>
+                </variables>
+                <sequence name="Sequence1">
+                    <assign name="Assign2">
+                        <copy>
+                            <from>$ThemTKBOperationIn.thoikhoabieu/ns0:ChiTietThoiKhoaBieu[$ForEach1Counter]/ns0:id_giaovien
+                                <sxed2:editor>
+                                    <sxed2:predicate path="$ThemTKBOperationIn.thoikhoabieu/ns0:ChiTietThoiKhoaBieu[$ForEach1Counter]" source="from"/>
+                                </sxed2:editor>
+                            </from>
+                            <to>$ExecuteThemCTTKBIN.part/ns1:id_giaovien</to>
+                        </copy>
+                        <copy>
+                            <from>$ThemTKBOperationIn.thoikhoabieu/ns0:ChiTietThoiKhoaBieu[$ForEach1Counter]/ns0:id_monhoc
+                                <sxed2:editor>
+                                    <sxed2:predicate path="$ThemTKBOperationIn.thoikhoabieu/ns0:ChiTietThoiKhoaBieu[$ForEach1Counter]" source="from"/>
+                                </sxed2:editor>
+                            </from>
+                            <to>$ExecuteThemCTTKBIN.part/ns1:id_monhoc</to>
+                        </copy>
+                        <copy>
+                            <from>$ThemTKBOperationIn.thoikhoabieu/ns0:ChiTietThoiKhoaBieu[$ForEach1Counter]/ns0:tietThuMay
+                                <sxed2:editor>
+                                    <sxed2:predicate path="$ThemTKBOperationIn.thoikhoabieu/ns0:ChiTietThoiKhoaBieu[$ForEach1Counter]" source="from"/>
+                                </sxed2:editor>
+                            </from>
+                            <to>$ExecuteThemCTTKBIN.part/ns1:tietthumay</to>
+                        </copy>
+                        <copy>
+                            <from>$ThemTKBOperationIn.thoikhoabieu/ns0:ChiTietThoiKhoaBieu[$ForEach1Counter]/ns0:thu
+                                <sxed2:editor>
+                                    <sxed2:predicate path="$ThemTKBOperationIn.thoikhoabieu/ns0:ChiTietThoiKhoaBieu[$ForEach1Counter]" source="from"/>
+                                </sxed2:editor>
+                            </from>
+                            <to>$ExecuteThemCTTKBIN.part/ns1:thu</to>
+                        </copy>
+                        <copy>
+                            <from>$ExecuteThemTKBOUT.part/ns1:returnValue</from>
+                            <to>$ExecuteThemCTTKBIN.part/ns1:id_thoikhoabieu</to>
+                        </copy>
+                    </assign>
+                    <invoke name="Invoke2" partnerLink="PartnerLink3" operation="execute" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/insert_chitiettkb" portType="tns:jdbcPortType" inputVariable="ExecuteThemCTTKBIN" outputVariable="ExecuteThemCTTKBOut"/>
+                </sequence>
+            </scope>
+        </forEach>
+        <assign name="Assign3">
+            <copy>
+                <from>$ExecuteThemTKBOUT.part/ns1:returnValue</from>
+                <to variable="ThemTKBOperationOut" part="id_tkb"/>
+            </copy>
+        </assign>
+        <reply name="Reply1" partnerLink="PartnerLink1" operation="ThemTKBOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/ThemTKB" portType="tns:ThemTKBPortType" variable="ThemTKBOperationOut"/>
+    </sequence>
+</process>
+
+

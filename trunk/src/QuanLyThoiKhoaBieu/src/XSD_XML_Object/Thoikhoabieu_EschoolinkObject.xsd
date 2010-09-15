@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-    targetNamespace="http://xml.netbeans.org/schema/EschoolinkObject"
-    xmlns:tns="http://xml.netbeans.org/schema/EschoolinkObject"
+    targetNamespace="http://xml.netbeans.org/schema/Thoikhoabieu_EschoolinkObject"
+    xmlns:tns="http://xml.netbeans.org/schema/Thoikhoabieu_EschoolinkObject"
     elementFormDefault="qualified">
-    <xsd:element name="Truong" type="tns:Truong" />
+<xsd:element name="Truong" type="tns:Truong" />
     <xsd:element name="CoSo" type="tns:CoSo" />
     <xsd:element name="GiaoVien" type="tns:GiaoVien"/>
     <xsd:element name="HieuTruong" type="tns:HieuTruong"/>
@@ -64,10 +64,10 @@
     <xsd:complexType name="ChiTietThoiKhoaBieu">
         <xsd:sequence>
             <xsd:element name="id_chitietthoikhoabieu" type="xsd:long"></xsd:element>
-            <xsd:element name="id_giaovien" type="xsd:long"></xsd:element>
-            <xsd:element name="id_monhoc" type="xsd:long"></xsd:element>
+            <xsd:element name="giaovien" type="tns:GiaoVien"></xsd:element>
+            <xsd:element name="monhoc" type="tns:MonHoc"></xsd:element>
             <xsd:element name="sotiet" type="xsd:long"></xsd:element>
-            <xsd:element name="thu" type="xsd:long"></xsd:element>            
+            <xsd:element name="thu" type="xsd:long"></xsd:element>
             <xsd:element name="tietThuMay" type="xsd:int"></xsd:element>
         </xsd:sequence>
     </xsd:complexType>
@@ -488,28 +488,3 @@
         </xsd:sequence>
     </xsd:complexType>
 </xsd:schema>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
