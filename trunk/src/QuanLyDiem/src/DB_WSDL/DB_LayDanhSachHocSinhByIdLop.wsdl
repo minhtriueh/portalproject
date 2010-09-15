@@ -24,7 +24,8 @@
       <input name="input">
     <jdbc:input xmlns:jdbc="http://schemas.sun.com/jbi/wsdl-extensions/jdbc/" MarkColumnName="" MarkColumnValue="" MoveRowToTableName="" PKName="" PollMilliSeconds="5000" PollingPostProcessing="MoveRow" TableName="DB_LayDanhSachHocSinhByIdLop" Transaction="NOTransaction" numberOfRecords="" operationType="DB_LayDanhSachHocSinhByIdLop_Operation" paramOrder="id_lop" sql="SELECT
   hocsinh.id_hocsinh,
-  hocsinh.tenhocsinh
+  hocsinh.tenhocsinh,
+  hocsinh.ten
 FROM
   public.danhsachlop,
   public.hocsinh
