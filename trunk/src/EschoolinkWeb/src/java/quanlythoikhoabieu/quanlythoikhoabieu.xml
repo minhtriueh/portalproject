@@ -6,13 +6,13 @@
 	<package name="QLThoiKhoaBieu"
 		extends="struts-default">
 		
-               <!-- <action name="TaoThoiKhoaBieu"
+                <action name="TaoThoiKhoaBieu"
 			class="quanlythoikhoabieu.TaoThoiKhoaBieu">
 			<result name="success">/index.jsp?module=quanlythoikhoabieu&amp;page=taothoikhoabieu</result>
 		</action>
-                <action name="TaoTruong_Result"
-			class="quanlythongtinkhoitao.TaoTruong_Result">
-			<result name="success">/index.jsp?module=quanlythoikhoabieu&amp;page=result</result>
+                <action name="TaoThoiKhoaBieu_Result"
+			class="quanlythoikhoabieu.TaoThoiKhoaBieu_Result">
+			<result name="success">/index.jsp?module=quanlythoikhoabieu&amp;page=success</result>
                         <result name="error">/index.jsp?module=quanlythoikhoabieu&amp;page=error</result>
                 </action>
 
@@ -20,11 +20,11 @@
 			class="quanlythoikhoabieu.XemThoiKhoaBieu">
 			<result name="success">/index.jsp?module=quanlythoikhoabieu&amp;page=xemthoikhoabieu</result>
 		</action>
-                <action name="TaoTruong_Result"
-			class="quanlythongtinkhoitao.TaoTruong_Result">
+                <action name="XemThoiKhoaBieu_Result"
+			class="quanlythoikhoabieu.XemThoiKhoaBieu_Result">
 			<result name="success">/index.jsp?module=quanlythoikhoabieu&amp;page=thoikhoabieu</result>
                         <result name="error">/index.jsp?module=quanlythoikhoabieu&amp;page=error</result>
-                </action>-->
+                </action>
 
 
 	</package>
