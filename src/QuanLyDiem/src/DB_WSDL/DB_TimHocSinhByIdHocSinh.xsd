@@ -1,29 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
   <xsd:schema elementFormDefault="qualified" targetNamespace="http://j2ee.netbeans.org/xsd/tableSchema" xmlns="http://j2ee.netbeans.org/xsd/tableSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <xsd:element name="DB_LayDanhSachHocSinhByIdLop_Request">
-      <xsd:complexType>
-        <xsd:sequence>
-          <xsd:element name="id_lop">
-            <xsd:complexType>
-              <xsd:simpleContent>
-                <xsd:extension base="xsd:long">
-                  <xsd:attribute name="isNull" type="xsd:boolean"></xsd:attribute>
-                  <xsd:attribute name="isDefaultColumn" type="xsd:boolean"></xsd:attribute>
-                </xsd:extension>
-              </xsd:simpleContent>
-            </xsd:complexType>
-          </xsd:element>
-        </xsd:sequence>
-      </xsd:complexType>
-    </xsd:element>
-    <xsd:element name="DB_LayDanhSachHocSinhByIdLop_Response">
-      <xsd:complexType>
-        <xsd:sequence>
-          <xsd:element maxOccurs="unbounded" ref="DB_LayDanhSachHocSinhByIdLop_Record"></xsd:element>
-        </xsd:sequence>
-      </xsd:complexType>
-    </xsd:element>
-    <xsd:element name="DB_LayDanhSachHocSinhByIdLop_Record">
+    <xsd:element name="DB_TimHocSinhByIdHocSinh_Request">
       <xsd:complexType>
         <xsd:sequence>
           <xsd:element name="id_hocsinh">
@@ -36,7 +13,20 @@
               </xsd:simpleContent>
             </xsd:complexType>
           </xsd:element>
-          <xsd:element name="tenhocsinh">
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="DB_TimHocSinhByIdHocSinh_Response">
+      <xsd:complexType>
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" ref="DB_TimHocSinhByIdHocSinh_Record"></xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="DB_TimHocSinhByIdHocSinh_Record">
+      <xsd:complexType>
+        <xsd:sequence>
+          <xsd:element name="ten">
             <xsd:complexType>
               <xsd:simpleContent>
                 <xsd:extension base="xsd:string">
@@ -46,7 +36,7 @@
               </xsd:simpleContent>
             </xsd:complexType>
           </xsd:element>
-          <xsd:element name="ten">
+          <xsd:element name="tenhocsinh">
             <xsd:complexType>
               <xsd:simpleContent>
                 <xsd:extension base="xsd:string">

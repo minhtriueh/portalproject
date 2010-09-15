@@ -9,11 +9,11 @@
     xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
     xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor"
     xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2" xmlns:ns0="http://j2ee.netbeans.org/xsd/tableSchema" xmlns:ns1="http://xml.netbeans.org/schema/LoaiDiem">
-    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachHocSinhByIdLop" location="../interface_WSDL/LayDanhSachHocSinhByIdLop.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachHocSinhByIdLop" location="../DB_WSDL/DB_LayDanhSachHocSinhByIdLop.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachHocSinhByIdLop" location="../interface_WSDL/LayDanhSachHocSinhByIdLop.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
     <partnerLinks>
-        <partnerLink name="PL_DB_LayDanhSachHocSinhByIdLop" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachHocSinhByIdLop" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
         <partnerLink name="PL_LayDanhSachHocSinhByIdLop" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachHocSinhByIdLop" partnerLinkType="tns:LayDanhSachHocSinhByIdLop" myRole="LayDanhSachHocSinhByIdLopPortTypeRole"/>
+        <partnerLink name="PL_DB_LayDanhSachHocSinhByIdLop" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachHocSinhByIdLop" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
     </partnerLinks>
     <variables>
         <variable name="LayDanhSachHocSinhByIdLopOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachHocSinhByIdLop" messageType="tns:LayDanhSachHocSinhByIdLopOperationResponse">
@@ -29,7 +29,7 @@
         <variable name="LayDanhSachHocSinhByIdLopIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayDanhSachHocSinhByIdLop" messageType="tns:inputMsg"/>
         <variable name="LayDanhSachHocSinhByIdLopOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachHocSinhByIdLop" messageType="tns:LayDanhSachHocSinhByIdLopOperationRequest"/>
     </variables>
-    <sequence>
+    <sequence name="Sequence1">
         <receive name="Receive1" createInstance="yes" partnerLink="PL_LayDanhSachHocSinhByIdLop" operation="LayDanhSachHocSinhByIdLopOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachHocSinhByIdLop" portType="tns:LayDanhSachHocSinhByIdLopPortType" variable="LayDanhSachHocSinhByIdLopOperationIn"/>
         <assign name="Assign1">
             <copy>
@@ -67,10 +67,27 @@
                             </sxed2:editor>
                         </to>
                     </copy>
+                    <copy>
+                        <from>$LayDanhSachHocSinhByIdLopOut.part/ns0:DB_LayDanhSachHocSinhByIdLop_Record[$ForEach1Counter]/ns0:ten
+                            <sxed2:editor>
+                                <sxed2:predicate path="$LayDanhSachHocSinhByIdLopOut.part/ns0:DB_LayDanhSachHocSinhByIdLop_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$LayDanhSachHocSinhByIdLopOperationOut.listhocsinh/ns1:HocSinh[$ForEach1Counter]/ns1:ten
+                            <sxed2:editor>
+                                <sxed2:predicate path="$LayDanhSachHocSinhByIdLopOperationOut.listhocsinh/ns1:HocSinh[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
                 </assign>
             </scope>
         </forEach>
         <reply name="Reply1" partnerLink="PL_LayDanhSachHocSinhByIdLop" operation="LayDanhSachHocSinhByIdLopOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachHocSinhByIdLop" portType="tns:LayDanhSachHocSinhByIdLopPortType" variable="LayDanhSachHocSinhByIdLopOperationOut"/>
     </sequence>
 </process>
+
+
+
+
+
 
