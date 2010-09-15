@@ -7,7 +7,10 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
     "http://www.w3.org/TR/html4/loose.dtd">
-
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<c:set value="${sessionScope.userId}" var="idUser"></c:set>
+<c:set value="${sessionScope.nhomQuyen}" var="quyen"></c:set>
+<c:set value="${sessionScope.login}" var="login"></c:set>
 <div class="art-header">
     <div class="art-header-png"></div>
     <div class="art-header-jpeg"></div>
@@ -39,7 +42,7 @@
     <script type="text/javascript">swfobject.switchOffAutoHideShow();swfobject.registerObject("art-flash-object", "9.0.0", "expressInstall.swf");</script>
     <div class="art-logo">
         <h1 id="name-text" class="art-logo-name"><a href="#">ESchoolink</a></h1>
-        <div id="slogan-text" class="art-logo-text">${tentruong} </div>
+        <div id="slogan-text" class="art-logo-text">${tentruong} ${idUser} ${quyen} </div>
     </div>
 </div>
 <div class="art-nav">
@@ -69,40 +72,60 @@
         <li>
             <a href="#" ><span class="l"></span><span class="r"></span><span class="t">Xem thời khóa biểu</span></a>
         </li>
-        <li>
-            <a href="#"><span class="l"></span><span class="r"></span><span class="t">Quản lý</span></a>
-            <ul>
-                <li><a href="#">Học sinh</a>
-                    <ul>
-                        <li><a href="TaoHocSinh">Thêm học sinh</a></li>
-                        <li><a href="#">Tìm kiếm học sinh</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Giáo Viên</a>
-                    <ul>
-                        <li><a href="ThongTinBanDau">Thêm Giáo Viên</a></li>
-                        <li><a href="index.jsp?module=quanlygiaovien&page=searchgiaovien">Tra Cứu Giáo Viên</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Học Bạ</a>
-                    <ul>
-                        <li><a href="index.jsp?module=quanlyhocba&page=tracuuhocba">Đánh Giá Học Lực-Hạnh Kiểm</a></li>
-                        <li><a href="KhoiTaoTrangChinhSuaHocBa">Tra cứu và Chỉnh Sửa</a></li>
-                    </ul>
-                </li>
-
-                <li><a href="#">Khởi tạo năm học mới</a></li>
-                <li><a href="#">Chủ nhiệm</a></li>
-                <li><a href="#">Sổ điểm môn học</a>
-                    <ul>
-                        <li><a href="BatDauNhapDiem">Nhập Điểm</a></li>
-                        <li><a href="TongKetDiem">Tổng Kết Điểm</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
+        <c:if test="${login==true}">
+            <li>
+                <a href="#"><span class="l"></span><span class="r"></span><span class="t">Quản lý</span></a>
+                <ul>
+                    <li><a href="#">Học sinh</a>
+                        <ul>
+                            <c:if test="${quyen=='admin'}">
+                                <li><a href="TaoHocSinh">Thêm học sinh</a></li>
+                            </c:if>
+                            <li><a href="#">Tìm kiếm học sinh</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Giáo Viên</a>
+                        <ul>
+                            <c:if test="${quyen=='admin'}">
+                                <li><a href="ThongTinBanDau">Thêm Giáo Viên</a></li>
+                            </c:if>
+                            <li><a href="index.jsp?module=quanlygiaovien&page=searchgiaovien">Tra Cứu Giáo Viên</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Học Bạ</a>
+                        <ul>
+                            <li><a href="index.jsp?module=quanlyhocba&page=tracuuhocba">Đánh Giá Học Lực-Hạnh Kiểm</a></li>
+                            <li><a href="KhoiTaoTrangChinhSuaHocBa">Tra cứu và Chỉnh Sửa</a></li>
+                        </ul>
+                    </li>
+                    <c:if test="${quyen=='admin'}">
+                         <li><a href="#">Khởi tạo năm học mới</a></li>
+                    </c:if>
+                    
+                    <li><a href="#">Chủ nhiệm</a></li>
+                    <li><a href="#">Sổ điểm môn học</a>
+                        <ul>
+                            <li><a href="BatDauNhapDiem">Nhập Điểm</a></li>
+                            <li><a href="TongKetDiem">Tổng Kết Điểm</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </c:if>
+        
         <li>
             <a href="#"><span class="l"></span><span class="r"></span><span class="t">Liên hệ</span></a>
         </li>
+        <c:if test="${empty login || login==false}">
+            <li>
+            <a href="index.jsp?module=admin&page=login"><span class="l"></span><span class="r"></span><span class="t">Login</span></a>
+            </li>
+        </c:if>
+            <c:if test="${login==true}">
+            <li>
+            <a href="logout"><span class="l"></span><span class="r"></span><span class="t">Logout</span></a>
+            </li>
+        </c:if>
+        
     </ul>
 </div>

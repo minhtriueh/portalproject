@@ -63,8 +63,8 @@ public class TaoGiaoVien implements ServletRequestAware{
 //                today.get(java.util.GregorianCalendar.DAY_OF_MONTH),
 //                0, 0, 0, 0, 0);
                 String localDir=getRequest().getRealPath("")+"\\images\\Upload";
-//                hinhanh = MyImage.saveImage(file, filename, contentType, localDir, 200);
-                hinhanh="...";
+                hinhanh = MyImage.saveImage(file, filename, contentType, localDir, 200);
+//                hinhanh="...";
                 long id = callservice(choohientai, chucvu, cmnd, email, gioitinh, hinhanh, new Boolean(ketnapdang), new Boolean(ketnapdoan), datecap, datesinh, datevaodang, datevaodoan, datevaotruong, noicap, quequan, sodienthoai, tengiaovien, tinhtrangsuckhoe, tongiao, trinhdodaotao, trinhdovanhoa, idDanToc, idToBoMon);
                 System.out.print(id + "GIAOVIEN");
                 if (id != -1) {

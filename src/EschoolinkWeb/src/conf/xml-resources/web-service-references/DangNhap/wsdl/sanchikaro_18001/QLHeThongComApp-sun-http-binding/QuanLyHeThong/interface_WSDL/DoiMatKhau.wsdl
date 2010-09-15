@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="DoiMatKhau" targetNamespace="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DoiMatKhau"
+    xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DoiMatKhau" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype">
+    <types/>
+    <message name="DoiMatKhauOperationRequest">
+        <part name="matKhau" type="xsd:string"/>
+        <part name="id_nguoidung" type="xsd:long"/>
+    </message>
+    <message name="DoiMatKhauOperationResponse">
+        <part name="doimatkhauBoolean" type="xsd:boolean"/>
+    </message>
+    <portType name="DoiMatKhauPortType">
+        <operation name="DoiMatKhauOperation">
+            <input name="input1" message="tns:DoiMatKhauOperationRequest"/>
+            <output name="output1" message="tns:DoiMatKhauOperationResponse"/>
+        </operation>
+    </portType>
+    <plnk:partnerLinkType name="DoiMatKhau">
+        <!-- A partner link type is automatically generated when a new port type is added. Partner link types are used by BPEL processes. 
+In a BPEL process, a partner link represents the interaction between the BPEL process and a partner service. Each partner link is associated with a partner link type.
+A partner link type characterizes the conversational relationship between two services. The partner link type can have one or two roles.-->
+        <plnk:role name="DoiMatKhauPortTypeRole" portType="tns:DoiMatKhauPortType"/>
+    </plnk:partnerLinkType>
+</definitions>
+

@@ -114,6 +114,7 @@
             <xsd:element name="id_chitietsodiem" type="xsd:long"></xsd:element>
             <xsd:element name="sothutu" type="xsd:long"></xsd:element>
             <xsd:element name="hovaten" type="xsd:string"></xsd:element>
+            <xsd:element name="ten" type="xsd:string"></xsd:element>
             <xsd:element name="diemtrungbinh" type="xsd:double"></xsd:element>
             <xsd:element name="diem" type="xsd:double" maxOccurs="unbounded" minOccurs="0"></xsd:element>
             <xsd:element name="id_diem" type="xsd:long" maxOccurs="unbounded" minOccurs="0"></xsd:element>
@@ -154,6 +155,7 @@
         <xsd:sequence>
             <xsd:element name="id_hocsinh" type="xsd:long"></xsd:element>
             <xsd:element name="tenhocsinh" type="xsd:string"></xsd:element>
+            <xsd:element name="ten" type="xsd:string"></xsd:element>
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="ListHocSinh">
