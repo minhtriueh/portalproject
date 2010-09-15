@@ -13,7 +13,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Table 2</title>
+        <title></title>
         <link rel="stylesheet" href="StyleTable.css" type="text/css" media="screen" />
     </head>
     <body>
@@ -39,51 +39,55 @@
 
                         <!-- bat dau thong tin -->
                         <div class="art-postcontent">
+                            <form action="LuuDiemHocBa" method="post">
+                                <div class="art-postcontent">
+                                    <div id="fm-submit" class="fm-req" style="margin-left:60px">
+                                        <input type="submit" value="Lưu Điểm Học Bạ">
+                                        <a href="javascript:history.back(1)"><input type="submit" value="Tiếp Tục"></a>
+                                    </div>
+                                </div>
+                            </form>
+                            <br>
                             <table class="myTable" >
                                 <thead>
                                     <tr>
-                                        <td>STT</td>
-                                        <td width="100">Họ Và Tên</td>
+                                        <td align="center">STT</td>
+                                        <td width="150" align="center">Họ Và Tên</td>
                                         <c:forEach var="monhoc" items="${listmonhocs}">
-                                            <td width="50"><c:out value="${monhoc.tenmonhoc}"></c:out></td>
+                                            <td width="50" align="center"><c:out value="${monhoc.tenmonhoc}"></c:out></td>
                                         </c:forEach>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <c:forEach var="chitietdiem" items="${listchitietdiems}">
                                         <c:if test="${chitietdiem.sothutu%2==1}">
-                                            <c:out value="${chitietdiem.sothutu}"></c:out>
+                                            <tr>
+                                                <td align="center"><c:out value="${chitietdiem.sothutu}"></c:out></td>
+                                                <td align="center">
+                                                    <c:out value="${chitietdiem.hovaten}"></c:out>
+                                                    <c:out value="${chitietdiem.ten}"></c:out>
+                                                </td>
+                                                <c:forEach var="diem" items="${chitietdiem.diem}">
+                                                    <td align="center"><c:out value="${diem}"></c:out></td>
+                                                </c:forEach>
+                                            </tr>
                                         </c:if>
-                                        <tr>
-                                            <td><c:out value="${chitietdiem.sothutu}"></c:out></td>
-                                            <td><c:out value="${chitietdiem.hovaten}"></c:out></td>
-                                            <c:forEach var="diem" items="${chitietdiem.diem}">
-                                                <td><c:out value="${diem}"></c:out></td>
-                                            </c:forEach>
-                                        </tr>
+                                        <c:if test="${chitietdiem.sothutu%2!=1}">
+                                            <tr  class="tr1">
+                                                <td align="center"><c:out value="${chitietdiem.sothutu}"></c:out></td>
+                                                <td align="center">
+                                                    <c:out value="${chitietdiem.hovaten}"></c:out>
+                                                    <c:out value="${chitietdiem.ten}"></c:out>
+                                                </td>
+                                                <c:forEach var="diem" items="${chitietdiem.diem}">
+                                                    <td align="center"><c:out value="${diem}"></c:out></td>
+                                                </c:forEach>
+                                            </tr>
+                                        </c:if>
                                     </c:forEach>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Nguyen duy chinh</td>
-                                        <td align="center">23-09-1988</td>
-                                        <td>Tay Ninh</td>
-                                    </tr>
-                                    <tr class="tr1">
-                                        <td>2</td>
-                                        <td>Nguyen duy chinh</td>
-                                        <td align="center">23-09-1988</td>
-                                        <td>Tay Ninh</td>
-                                    </tr>
-                                    <tr>
-                                        <td >3</td>
-                                        <td class="td1">Nguyen duy chinh</td>
-                                        <td align="center">23-09-1988</td>
-                                        <td>Tay Ninh</td>
-                                    </tr>
                                 </tbody>
                             </table>
                         </div>
-                        <h1>Tổng Kết Điểm Result!</h1>
 
                         <!-- ket thuc thong tin -->
 

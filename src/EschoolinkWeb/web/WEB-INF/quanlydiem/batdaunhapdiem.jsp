@@ -51,7 +51,7 @@
                                 <option value="${tenlop}"><c:out value="${tenlop}"></c:out></option>
                             </c:forEach>
                         </select>
-                        <input type="radio" name="hocky" value="1"> Học Kỳ 1
+                        <input type="radio" name="hocky" value="1" checked> Học Kỳ 1
                         <input type="radio" name="hocky" value="2"> Học Kỳ 2
                         <p>
                         <div id="fm-submit" class="fm-req">

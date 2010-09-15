@@ -46,5 +46,10 @@
             <result name="error">/index.jsp</result>
         </action>
 
+        <action name="LuuDiemHocBa" class="quanlydiem.LuuDiemHocBa">
+            <result name="success">/index.jsp?module=quanlydiem&amp;page=luudiemhocba&amp;r=no&amp;l=no</result>
+            <result name="error">/index.jsp</result>
+        </action>
+
     </package>
 </struts>

@@ -79,18 +79,25 @@ public class NhapDiem {
             for (int i = 0; i < chitietsodiems.getChiTietSoDiem().size(); i++) {
                 long idHocsinh = chitietsodiems.getChiTietSoDiem().get(i).getIdHocsinh();
                 String tenhocsinh = "";
+                String ten = "";
                 double diemtrungbinh = chitietsodiems.getChiTietSoDiem().get(i).getDiemtrungbinh();
                 long idChiTietSoDiem = chitietsodiems.getChiTietSoDiem().get(i).getIdChitietsodiem();
 //call service tim ten hoc sinh by id hoc sinh
                 try { // Call Web Service Operation
-                    qldiemcomapp.QLDiemComAppService40 service = new qldiemcomapp.QLDiemComAppService40();
-                    qldiemcomapp.TimTenHocSinhByIdHocSinhPortType port = service.getTimTenHocSinhByIdHocSinh();
-                    tenhocsinh = port.timTenHocSinhByIdHocSinhOperation(idHocsinh);
+                    qldiemcomapp.QLDiemComAppService62 service = new qldiemcomapp.QLDiemComAppService62();
+                    qldiemcomapp.TimHocSinhByIdHocSinhPortType port = service.getTimHocSinhByIdHocSinh();
+                    org.netbeans.xml.schema.loaidiem.HocSinh hocsinh = port.timHocSinhByIdHocSinhOperation(idHocsinh);
+//                    qldiemcomapp.QLDiemComAppService40 service = new qldiemcomapp.QLDiemComAppService40();
+//                    qldiemcomapp.TimTenHocSinhByIdHocSinhPortType port = service.getTimTenHocSinhByIdHocSinh();
+//                    tenhocsinh = port.timTenHocSinhByIdHocSinhOperation(idHocsinh);
                     chiTietDiem = new ChiTietDiem();
                     chiTietDiem.setSothutu(i + 1);
+                    tenhocsinh = hocsinh.getTenhocsinh();
                     chiTietDiem.setHovaten(tenhocsinh);
                     chiTietDiem.setDiemtrungbinh(diemtrungbinh);
                     chiTietDiem.setIdChitietsodiem(idChiTietSoDiem);
+                    ten = hocsinh.getTen();
+                    chiTietDiem.setTen(ten);
 
 // call service lay danh sach diem cua chitietsodiem
                     try { // Call Web Service Operation
@@ -153,7 +160,6 @@ public class NhapDiem {
     public void setMonhoc(String monhoc) {
         this.monhoc = monhoc;
     }
-
 //    public static void main(String[] s) {
 //        try {
 ////            NhapDiem nd = new NhapDiem();

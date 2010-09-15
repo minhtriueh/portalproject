@@ -52,7 +52,7 @@
                         <c:forEach var="mh" items="${monhocs}">
                             <input type="hidden" name="tenmonhocs" value="${mh.tenmonhoc}">
                         </c:forEach>
-                        <input type="radio" name="hocky" value="1"> Học Kỳ 1
+                            <input type="radio" name="hocky" value="1" checked> Học Kỳ 1
                         <input type="radio" name="hocky" value="2"> Học Kỳ 2
                         <div id="fm-submit" class="fm-req" style="margin-left:60px">
                             <input type="submit" value="Xem Điểm">
