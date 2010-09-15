@@ -9,7 +9,6 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import org.apache.struts2.ServletActionContext;
 import org.netbeans.xml.schema.loaidiem.ChiTietDiem;
-import org.netbeans.xml.schema.loaidiem.DiemTrungBinh;
 import org.netbeans.xml.schema.loaidiem.HocSinh;
 import org.netbeans.xml.schema.loaidiem.MonHoc;
 
@@ -32,7 +31,6 @@ public class TongKetDiemResult {
         long idNamhoc = 0;
         List<HocSinh> listhocsinhs = new ArrayList<HocSinh>();
         List<MonHoc> listmonhocs = new ArrayList<MonHoc>();
-//        List<DiemTrungBinh> listdiemtrungbinhs = new ArrayList<DiemTrungBinh>();
         List<ChiTietDiem> listchitietdiems = new ArrayList<ChiTietDiem>();
         try {
             id_lop = Long.parseLong(lop);
@@ -77,6 +75,7 @@ public class TongKetDiemResult {
             for (int i = 0; i < listhocsinhs.size(); i++) {
                 long idHocsinh = listhocsinhs.get(i).getIdHocsinh();
                 String tenHocSinh = listhocsinhs.get(i).getTenhocsinh();
+                String ten = listhocsinhs.get(i).getTen();
                 ChiTietDiem chiTietDiem = new ChiTietDiem();
                 for (int j = 0; j < listmonhocs.size(); j++) {
                     long idMonhoc = listmonhocs.get(j).getIdMonhoc();
@@ -85,6 +84,7 @@ public class TongKetDiemResult {
                 }
                 chiTietDiem.setSothutu(i + 1);
                 chiTietDiem.setHovaten(tenHocSinh);
+                chiTietDiem.setTen(ten);
                 listchitietdiems.add(chiTietDiem);
             }
             getRequest().setAttribute("listmonhocs", listmonhocs);
@@ -137,6 +137,9 @@ public class TongKetDiemResult {
             qldiemcomapp.LayDanhSachHocSinhByIdLopPortType port = service.getLayDanhSachHocSinhByIdLop();
             org.netbeans.xml.schema.loaidiem.ListHocSinh hocsinhs = port.layDanhSachHocSinhByIdLopOperation(1);
             List<HocSinh> listhocsinhs = hocsinhs.getHocSinh();
+            for(int i=0;i<listhocsinhs.size();i++){
+                System.out.println(listhocsinhs.get(i).getTen());
+            }
             System.out.println("size hoc sinh " + listhocsinhs.size());
         } catch (Exception ex) {
             System.err.println("Tong ket diem result loi3 " + ex.getMessage());
