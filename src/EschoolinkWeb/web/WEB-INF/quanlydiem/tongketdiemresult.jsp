@@ -46,47 +46,54 @@
                                         <a href="javascript:history.back(1)"><input type="submit" value="Tiếp Tục"></a>
                                     </div>
                                 </div>
-                            </form>
-                            <br>
-                            <table class="myTable" >
-                                <thead>
-                                    <tr>
-                                        <td align="center">STT</td>
-                                        <td width="150" align="center">Họ Và Tên</td>
-                                        <c:forEach var="monhoc" items="${listmonhocs}">
-                                            <td width="50" align="center"><c:out value="${monhoc.tenmonhoc}"></c:out></td>
+                                <br>
+                                <table class="myTable" >
+                                    <thead>
+                                        <tr>
+                                            <td align="center">STT</td>
+                                            <td width="150" align="center">Họ Và Tên</td>
+                                            <c:forEach var="monhoc" items="${listmonhocs}">
+                                                <td width="50" align="center"><c:out value="${monhoc.tenmonhoc}"></c:out></td>
+                                            </c:forEach>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <c:forEach var="chitietdiem" items="${listchitietdiems}">
+                                            <c:if test="${chitietdiem.sothutu%2==1}">
+                                                <tr>
+                                                    <td align="center"><c:out value="${chitietdiem.sothutu}"></c:out></td>
+                                                    <td align="center">
+                                                        <c:out value="${chitietdiem.hovaten}"></c:out>
+                                                        <c:out value="${chitietdiem.ten}"></c:out>
+                                                        <input type="hidden" name="idhocsinh" value="${chitietdiem.idhocsinh}">
+                                                        <input type="hidden" name="diemtrungbinh" value="${chitietdiem.diemtrungbinh}">
+                                                    </td>
+                                                    <c:forEach var="diem" items="${chitietdiem.diem}">
+                                                        <td align="center"><c:out value="${diem}"></c:out></td>
+                                                    </c:forEach>
+                                                </tr>
+                                            </c:if>
+                                            <c:if test="${chitietdiem.sothutu%2!=1}">
+                                                <tr  class="tr1">
+                                                    <td align="center"><c:out value="${chitietdiem.sothutu}"></c:out></td>
+                                                    <td align="center">
+                                                        <c:out value="${chitietdiem.hovaten}"></c:out>
+                                                        <c:out value="${chitietdiem.ten}"></c:out>
+                                                        <input type="hidden" name="idhocsinh" value="${chitietdiem.idhocsinh}">
+                                                        <input type="hidden" name="diemtrungbinh" value="${chitietdiem.diemtrungbinh}">
+                                                    </td>
+                                                    <c:forEach var="diem" items="${chitietdiem.diem}">
+                                                        <td align="center"><c:out value="${diem}"></c:out></td>
+                                                    </c:forEach>
+                                                </tr>
+                                            </c:if>
                                         </c:forEach>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <c:forEach var="chitietdiem" items="${listchitietdiems}">
-                                        <c:if test="${chitietdiem.sothutu%2==1}">
-                                            <tr>
-                                                <td align="center"><c:out value="${chitietdiem.sothutu}"></c:out></td>
-                                                <td align="center">
-                                                    <c:out value="${chitietdiem.hovaten}"></c:out>
-                                                    <c:out value="${chitietdiem.ten}"></c:out>
-                                                </td>
-                                                <c:forEach var="diem" items="${chitietdiem.diem}">
-                                                    <td align="center"><c:out value="${diem}"></c:out></td>
-                                                </c:forEach>
-                                            </tr>
-                                        </c:if>
-                                        <c:if test="${chitietdiem.sothutu%2!=1}">
-                                            <tr  class="tr1">
-                                                <td align="center"><c:out value="${chitietdiem.sothutu}"></c:out></td>
-                                                <td align="center">
-                                                    <c:out value="${chitietdiem.hovaten}"></c:out>
-                                                    <c:out value="${chitietdiem.ten}"></c:out>
-                                                </td>
-                                                <c:forEach var="diem" items="${chitietdiem.diem}">
-                                                    <td align="center"><c:out value="${diem}"></c:out></td>
-                                                </c:forEach>
-                                            </tr>
-                                        </c:if>
-                                    </c:forEach>
-                                </tbody>
-                            </table>
+                                    </tbody>
+                                </table>
+                                <input type="hidden" name="lop" value="${lop}">
+                                <input type="hidden" name="hocky" value="${hocky}">
+                                <input type="hidden" name="namhoc" value="${namhoc}">
+                            </form>
                         </div>
 
                         <!-- ket thuc thong tin -->
