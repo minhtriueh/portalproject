@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP-ENV:Body>
+    <m:XemTKBOperationResponse xmlns:m="QLThoiKhoaBieu" xmlns:msgns="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/XemTKB">
+      <thoikhoabieu>
+        <ns1:idThoiKhoaBieu xmlns:ns1="http://xml.netbeans.org/schema/Thoikhoabieu_EschoolinkObject" isNull="false">1</ns1:idThoiKhoaBieu>
+        <ns1:idLop xmlns:ns1="http://xml.netbeans.org/schema/Thoikhoabieu_EschoolinkObject" isNull="false">1</ns1:idLop>
+        <ns1:idNamHoc xmlns:ns1="http://xml.netbeans.org/schema/Thoikhoabieu_EschoolinkObject" isNull="false">1</ns1:idNamHoc>
+        <ns1:hocKy xmlns:ns1="http://xml.netbeans.org/schema/Thoikhoabieu_EschoolinkObject" isNull="false">1</ns1:hocKy>
+        <ns1:ChiTietThoiKhoaBieu xmlns:ns1="http://xml.netbeans.org/schema/Thoikhoabieu_EschoolinkObject">
+          <ns1:id_chitietthoikhoabieu isNull="false">626</ns1:id_chitietthoikhoabieu>
+          <ns1:giaovien>
+            <ns1:id isNull="false">1</ns1:id>
+            <ns1:tenGiaoVien isNull="false">nguyen van sanh</ns1:tenGiaoVien>
+          </ns1:giaovien>
+          <ns1:monhoc>
+            <ns1:id isNull="false">1</ns1:id>
+            <ns1:tenMonHoc isNull="false">Toan</ns1:tenMonHoc>
+          </ns1:monhoc>
+          <ns1:thu isNull="false">2</ns1:thu>
+          <ns1:tietThuMay isNull="false">1</ns1:tietThuMay>
+        </ns1:ChiTietThoiKhoaBieu>
+        <ns1:ChiTietThoiKhoaBieu xmlns:ns1="http://xml.netbeans.org/schema/Thoikhoabieu_EschoolinkObject">
+          <ns1:id_chitietthoikhoabieu isNull="false">1</ns1:id_chitietthoikhoabieu>
+          <ns1:giaovien>
+            <ns1:id isNull="false">1</ns1:id>
+            <ns1:tenGiaoVien isNull="false">nguyen van sanh</ns1:tenGiaoVien>
+          </ns1:giaovien>
+          <ns1:monhoc>
+            <ns1:id isNull="false">1</ns1:id>
+            <ns1:tenMonHoc isNull="false">Toan</ns1:tenMonHoc>
+          </ns1:monhoc>
+          <ns1:thu isNull="false">2</ns1:thu>
+          <ns1:tietThuMay isNull="false">1</ns1:tietThuMay>
+        </ns1:ChiTietThoiKhoaBieu>
+        <ns1:ChiTietThoiKhoaBieu xmlns:ns1="http://xml.netbeans.org/schema/Thoikhoabieu_EschoolinkObject">
+          <ns1:id_chitietthoikhoabieu isNull="false">2</ns1:id_chitietthoikhoabieu>
+          <ns1:giaovien>
+            <ns1:id isNull="false">2</ns1:id>
+            <ns1:tenGiaoVien isNull="false">nguyen van minh</ns1:tenGiaoVien>
+          </ns1:giaovien>
+          <ns1:monhoc>
+            <ns1:id isNull="false">2</ns1:id>
+            <ns1:tenMonHoc isNull="false">Ly</ns1:tenMonHoc>
+          </ns1:monhoc>
+          <ns1:thu isNull="false">2</ns1:thu>
+          <ns1:tietThuMay isNull="false">2</ns1:tietThuMay>
+        </ns1:ChiTietThoiKhoaBieu>
+        <ns1:ChiTietThoiKhoaBieu xmlns:ns1="http://xml.netbeans.org/schema/Thoikhoabieu_EschoolinkObject">
+          <ns1:id_chitietthoikhoabieu isNull="false">3</ns1:id_chitietthoikhoabieu>
+          <ns1:giaovien>
+            <ns1:id isNull="false">3</ns1:id>
+            <ns1:tenGiaoVien isNull="false">nguyen van danh</ns1:tenGiaoVien>
+          </ns1:giaovien>
+          <ns1:monhoc>
+            <ns1:id isNull="false">3</ns1:id>
+            <ns1:tenMonHoc isNull="false">Hoa</ns1:tenMonHoc>
+          </ns1:monhoc>
+          <ns1:thu isNull="false">2</ns1:thu>
+          <ns1:tietThuMay isNull="false">3</ns1:tietThuMay>
+        </ns1:ChiTietThoiKhoaBieu>
+        <ns1:ChiTietThoiKhoaBieu xmlns:ns1="http://xml.netbeans.org/schema/Thoikhoabieu_EschoolinkObject">
+          <ns1:id_chitietthoikhoabieu isNull="false">4</ns1:id_chitietthoikhoabieu>
+          <ns1:giaovien>
+            <ns1:id isNull="false">4</ns1:id>
+            <ns1:tenGiaoVien isNull="false">nguyen thi phuong</ns1:tenGiaoVien>
+          </ns1:giaovien>
+          <ns1:monhoc>
+            <ns1:id isNull="false">4</ns1:id>
+            <ns1:tenMonHoc isNull="false">Van</ns1:tenMonHoc>
+          </ns1:monhoc>
+          <ns1:thu isNull="false">2</ns1:thu>
+          <ns1:tietThuMay isNull="false">4</ns1:tietThuMay>
+        </ns1:ChiTietThoiKhoaBieu>
+        <ns1:ChiTietThoiKhoaBieu xmlns:ns1="http://xml.netbeans.org/schema/Thoikhoabieu_EschoolinkObject">
+          <ns1:id_chitietthoikhoabieu isNull="false">5</ns1:id_chitietthoikhoabieu>
+          <ns1:giaovien>
+            <ns1:id isNull="false">1</ns1:id>
+            <ns1:tenGiaoVien isNull="false">nguyen van sanh</ns1:tenGiaoVien>
+          </ns1:giaovien>
+          <ns1:monhoc>
+            <ns1:id isNull="false">1</ns1:id>
+            <ns1:tenMonHoc isNull="false">Toan</ns1:tenMonHoc>
+          </ns1:monhoc>
+          <ns1:thu isNull="false">3</ns1:thu>
+          <ns1:tietThuMay isNull="false">1</ns1:tietThuMay>
+        </ns1:ChiTietThoiKhoaBieu>
+        <ns1:ChiTietThoiKhoaBieu xmlns:ns1="http://xml.netbeans.org/schema/Thoikhoabieu_EschoolinkObject">
+          <ns1:id_chitietthoikhoabieu isNull="false">6</ns1:id_chitietthoikhoabieu>
+          <ns1:giaovien>
+            <ns1:id isNull="false">2</ns1:id>
+            <ns1:tenGiaoVien isNull="false">nguyen van minh</ns1:tenGiaoVien>
+          </ns1:giaovien>
+          <ns1:monhoc>
+            <ns1:id isNull="false">2</ns1:id>
+            <ns1:tenMonHoc isNull="false">Ly</ns1:tenMonHoc>
+          </ns1:monhoc>
+          <ns1:thu isNull="false">3</ns1:thu>
+          <ns1:tietThuMay isNull="false">2</ns1:tietThuMay>
+        </ns1:ChiTietThoiKhoaBieu>
+        <ns1:ChiTietThoiKhoaBieu xmlns:ns1="http://xml.netbeans.org/schema/Thoikhoabieu_EschoolinkObject">
+          <ns1:id_chitietthoikhoabieu isNull="false">7</ns1:id_chitietthoikhoabieu>
+          <ns1:giaovien>
+            <ns1:id isNull="false">3</ns1:id>
+            <ns1:tenGiaoVien isNull="false">nguyen van danh</ns1:tenGiaoVien>
+          </ns1:giaovien>
+          <ns1:monhoc>
+            <ns1:id isNull="false">3</ns1:id>
+            <ns1:tenMonHoc isNull="false">Hoa</ns1:tenMonHoc>
+          </ns1:monhoc>
+          <ns1:thu isNull="false">3</ns1:thu>
+          <ns1:tietThuMay isNull="false">3</ns1:tietThuMay>
+        </ns1:ChiTietThoiKhoaBieu>
+        <ns1:ChiTietThoiKhoaBieu xmlns:ns1="http://xml.netbeans.org/schema/Thoikhoabieu_EschoolinkObject">
+          <ns1:id_chitietthoikhoabieu isNull="false">8</ns1:id_chitietthoikhoabieu>
+          <ns1:giaovien>
+            <ns1:id isNull="false">4</ns1:id>
+            <ns1:tenGiaoVien isNull="false">nguyen thi phuong</ns1:tenGiaoVien>
+          </ns1:giaovien>
+          <ns1:monhoc>
+            <ns1:id isNull="false">4</ns1:id>
+            <ns1:tenMonHoc isNull="false">Van</ns1:tenMonHoc>
+          </ns1:monhoc>
+          <ns1:thu isNull="false">3</ns1:thu>
+          <ns1:tietThuMay isNull="false">4</ns1:tietThuMay>
+        </ns1:ChiTietThoiKhoaBieu>
+        <ns1:ChiTietThoiKhoaBieu xmlns:ns1="http://xml.netbeans.org/schema/Thoikhoabieu_EschoolinkObject">
+          <ns1:id_chitietthoikhoabieu isNull="false">9</ns1:id_chitietthoikhoabieu>
+          <ns1:giaovien>
+            <ns1:id isNull="false">5</ns1:id>
+            <ns1:tenGiaoVien isNull="false">nguyen van xuan</ns1:tenGiaoVien>
+          </ns1:giaovien>
+          <ns1:monhoc>
+            <ns1:id isNull="false">5</ns1:id>
+            <ns1:tenMonHoc isNull="false">Su</ns1:tenMonHoc>
+          </ns1:monhoc>
+          <ns1:thu isNull="false">3</ns1:thu>
+          <ns1:tietThuMay isNull="false">5</ns1:tietThuMay>
+        </ns1:ChiTietThoiKhoaBieu>
+        <ns1:ChiTietThoiKhoaBieu xmlns:ns1="http://xml.netbeans.org/schema/Thoikhoabieu_EschoolinkObject">
+          <ns1:id_chitietthoikhoabieu isNull="false">10</ns1:id_chitietthoikhoabieu>
+          <ns1:giaovien>
+            <ns1:id isNull="false">6</ns1:id>
+            <ns1:tenGiaoVien isNull="false">nguyen van toan</ns1:tenGiaoVien>
+          </ns1:giaovien>
+          <ns1:monhoc>
+            <ns1:id isNull="false">5</ns1:id>
+            <ns1:tenMonHoc isNull="false">Su</ns1:tenMonHoc>
+          </ns1:monhoc>
+          <ns1:thu isNull="false">4</ns1:thu>
+          <ns1:tietThuMay isNull="false">1</ns1:tietThuMay>
+        </ns1:ChiTietThoiKhoaBieu>
+        <ns1:ChiTietThoiKhoaBieu xmlns:ns1="http://xml.netbeans.org/schema/Thoikhoabieu_EschoolinkObject">
+          <ns1:id_chitietthoikhoabieu isNull="false">11</ns1:id_chitietthoikhoabieu>
+          <ns1:giaovien>
+            <ns1:id isNull="false">7</ns1:id>
+            <ns1:tenGiaoVien isNull="false">nguyen van tuan</ns1:tenGiaoVien>
+          </ns1:giaovien>
+          <ns1:monhoc>
+            <ns1:id isNull="false">7</ns1:id>
+            <ns1:tenMonHoc isNull="false">Sinh</ns1:tenMonHoc>
+          </ns1:monhoc>
+          <ns1:thu isNull="false">4</ns1:thu>
+          <ns1:tietThuMay isNull="false">2</ns1:tietThuMay>
+        </ns1:ChiTietThoiKhoaBieu>
+        <ns1:ChiTietThoiKhoaBieu xmlns:ns1="http://xml.netbeans.org/schema/Thoikhoabieu_EschoolinkObject">
+          <ns1:id_chitietthoikhoabieu isNull="false">12</ns1:id_chitietthoikhoabieu>
+          <ns1:giaovien>
+            <ns1:id isNull="false">8</ns1:id>
+            <ns1:tenGiaoVien isNull="false">nguyen thi giao</ns1:tenGiaoVien>
+          </ns1:giaovien>
+          <ns1:monhoc>
+            <ns1:id isNull="false">8</ns1:id>
+            <ns1:tenMonHoc isNull="false">Anh</ns1:tenMonHoc>
+          </ns1:monhoc>
+          <ns1:thu isNull="false">4</ns1:thu>
+          <ns1:tietThuMay isNull="false">3</ns1:tietThuMay>
+        </ns1:ChiTietThoiKhoaBieu>
+        <ns1:ChiTietThoiKhoaBieu xmlns:ns1="http://xml.netbeans.org/schema/Thoikhoabieu_EschoolinkObject">
+          <ns1:id_chitietthoikhoabieu isNull="false">13</ns1:id_chitietthoikhoabieu>
+          <ns1:giaovien>
+            <ns1:id isNull="false">1</ns1:id>
+            <ns1:tenGiaoVien isNull="false">nguyen van sanh</ns1:tenGiaoVien>
+          </ns1:giaovien>
+          <ns1:monhoc>
+            <ns1:id isNull="false">1</ns1:id>
+            <ns1:tenMonHoc isNull="false">Toan</ns1:tenMonHoc>
+          </ns1:monhoc>
+          <ns1:thu isNull="false">5</ns1:thu>
+          <ns1:tietThuMay isNull="false">1</ns1:tietThuMay>
+        </ns1:ChiTietThoiKhoaBieu>
+        <ns1:ChiTietThoiKhoaBieu xmlns:ns1="http://xml.netbeans.org/schema/Thoikhoabieu_EschoolinkObject">
+          <ns1:id_chitietthoikhoabieu isNull="false">14</ns1:id_chitietthoikhoabieu>
+          <ns1:giaovien>
+            <ns1:id isNull="false">2</ns1:id>
+            <ns1:tenGiaoVien isNull="false">nguyen van minh</ns1:tenGiaoVien>
+          </ns1:giaovien>
+          <ns1:monhoc>
+            <ns1:id isNull="false">2</ns1:id>
+            <ns1:tenMonHoc isNull="false">Ly</ns1:tenMonHoc>
+          </ns1:monhoc>
+          <ns1:thu isNull="false">5</ns1:thu>
+          <ns1:tietThuMay isNull="false">2</ns1:tietThuMay>
+        </ns1:ChiTietThoiKhoaBieu>
+        <ns1:ChiTietThoiKhoaBieu xmlns:ns1="http://xml.netbeans.org/schema/Thoikhoabieu_EschoolinkObject">
+          <ns1:id_chitietthoikhoabieu isNull="false">15</ns1:id_chitietthoikhoabieu>
+          <ns1:giaovien>
+            <ns1:id isNull="false">3</ns1:id>
+            <ns1:tenGiaoVien isNull="false">nguyen van danh</ns1:tenGiaoVien>
+          </ns1:giaovien>
+          <ns1:monhoc>
+            <ns1:id isNull="false">3</ns1:id>
+            <ns1:tenMonHoc isNull="false">Hoa</ns1:tenMonHoc>
+          </ns1:monhoc>
+          <ns1:thu isNull="false">5</ns1:thu>
+          <ns1:tietThuMay isNull="false">3</ns1:tietThuMay>
+        </ns1:ChiTietThoiKhoaBieu>
+        <ns1:ChiTietThoiKhoaBieu xmlns:ns1="http://xml.netbeans.org/schema/Thoikhoabieu_EschoolinkObject">
+          <ns1:id_chitietthoikhoabieu isNull="false">16</ns1:id_chitietthoikhoabieu>
+          <ns1:giaovien>
+            <ns1:id isNull="false">4</ns1:id>
+            <ns1:tenGiaoVien isNull="false">nguyen thi phuong</ns1:tenGiaoVien>
+          </ns1:giaovien>
+          <ns1:monhoc>
+            <ns1:id isNull="false">4</ns1:id>
+            <ns1:tenMonHoc isNull="false">Van</ns1:tenMonHoc>
+          </ns1:monhoc>
+          <ns1:thu isNull="false">5</ns1:thu>
+          <ns1:tietThuMay isNull="false">4</ns1:tietThuMay>
+        </ns1:ChiTietThoiKhoaBieu>
+        <ns1:ChiTietThoiKhoaBieu xmlns:ns1="http://xml.netbeans.org/schema/Thoikhoabieu_EschoolinkObject">
+          <ns1:id_chitietthoikhoabieu isNull="false">17</ns1:id_chitietthoikhoabieu>
+          <ns1:giaovien>
+            <ns1:id isNull="false">5</ns1:id>
+            <ns1:tenGiaoVien isNull="false">nguyen van xuan</ns1:tenGiaoVien>
+          </ns1:giaovien>
+          <ns1:monhoc>
+            <ns1:id isNull="false">5</ns1:id>
+            <ns1:tenMonHoc isNull="false">Su</ns1:tenMonHoc>
+          </ns1:monhoc>
+          <ns1:thu isNull="false">5</ns1:thu>
+          <ns1:tietThuMay isNull="false">5</ns1:tietThuMay>
+        </ns1:ChiTietThoiKhoaBieu>
+        <ns1:ChiTietThoiKhoaBieu xmlns:ns1="http://xml.netbeans.org/schema/Thoikhoabieu_EschoolinkObject">
+          <ns1:id_chitietthoikhoabieu isNull="false">18</ns1:id_chitietthoikhoabieu>
+          <ns1:giaovien>
+            <ns1:id isNull="false">1</ns1:id>
+            <ns1:tenGiaoVien isNull="false">nguyen van sanh</ns1:tenGiaoVien>
+          </ns1:giaovien>
+          <ns1:monhoc>
+            <ns1:id isNull="false">1</ns1:id>
+            <ns1:tenMonHoc isNull="false">Toan</ns1:tenMonHoc>
+          </ns1:monhoc>
+          <ns1:thu isNull="false">6</ns1:thu>
+          <ns1:tietThuMay isNull="false">1</ns1:tietThuMay>
+        </ns1:ChiTietThoiKhoaBieu>
+        <ns1:ChiTietThoiKhoaBieu xmlns:ns1="http://xml.netbeans.org/schema/Thoikhoabieu_EschoolinkObject">
+          <ns1:id_chitietthoikhoabieu isNull="false">19</ns1:id_chitietthoikhoabieu>
+          <ns1:giaovien>
+            <ns1:id isNull="false">2</ns1:id>
+            <ns1:tenGiaoVien isNull="false">nguyen van minh</ns1:tenGiaoVien>
+          </ns1:giaovien>
+          <ns1:monhoc>
+            <ns1:id isNull="false">2</ns1:id>
+            <ns1:tenMonHoc isNull="false">Ly</ns1:tenMonHoc>
+          </ns1:monhoc>
+          <ns1:thu isNull="false">6</ns1:thu>
+          <ns1:tietThuMay isNull="false">2</ns1:tietThuMay>
+        </ns1:ChiTietThoiKhoaBieu>
+        <ns1:ChiTietThoiKhoaBieu xmlns:ns1="http://xml.netbeans.org/schema/Thoikhoabieu_EschoolinkObject">
+          <ns1:id_chitietthoikhoabieu isNull="false">20</ns1:id_chitietthoikhoabieu>
+          <ns1:giaovien>
+            <ns1:id isNull="false">3</ns1:id>
+            <ns1:tenGiaoVien isNull="false">nguyen van danh</ns1:tenGiaoVien>
+          </ns1:giaovien>
+          <ns1:monhoc>
+            <ns1:id isNull="false">3</ns1:id>
+            <ns1:tenMonHoc isNull="false">Hoa</ns1:tenMonHoc>
+          </ns1:monhoc>
+          <ns1:thu isNull="false">6</ns1:thu>
+          <ns1:tietThuMay isNull="false">3</ns1:tietThuMay>
+        </ns1:ChiTietThoiKhoaBieu>
+        <ns1:ChiTietThoiKhoaBieu xmlns:ns1="http://xml.netbeans.org/schema/Thoikhoabieu_EschoolinkObject">
+          <ns1:id_chitietthoikhoabieu isNull="false">21</ns1:id_chitietthoikhoabieu>
+          <ns1:giaovien>
+            <ns1:id isNull="false">4</ns1:id>
+            <ns1:tenGiaoVien isNull="false">nguyen thi phuong</ns1:tenGiaoVien>
+          </ns1:giaovien>
+          <ns1:monhoc>
+            <ns1:id isNull="false">4</ns1:id>
+            <ns1:tenMonHoc isNull="false">Van</ns1:tenMonHoc>
+          </ns1:monhoc>
+          <ns1:thu isNull="false">6</ns1:thu>
+          <ns1:tietThuMay isNull="false">4</ns1:tietThuMay>
+        </ns1:ChiTietThoiKhoaBieu>
+        <ns1:ChiTietThoiKhoaBieu xmlns:ns1="http://xml.netbeans.org/schema/Thoikhoabieu_EschoolinkObject">
+          <ns1:id_chitietthoikhoabieu isNull="false">22</ns1:id_chitietthoikhoabieu>
+          <ns1:giaovien>
+            <ns1:id isNull="false">6</ns1:id>
+            <ns1:tenGiaoVien isNull="false">nguyen van toan</ns1:tenGiaoVien>
+          </ns1:giaovien>
+          <ns1:monhoc>
+            <ns1:id isNull="false">5</ns1:id>
+            <ns1:tenMonHoc isNull="false">Su</ns1:tenMonHoc>
+          </ns1:monhoc>
+          <ns1:thu isNull="false">7</ns1:thu>
+          <ns1:tietThuMay isNull="false">1</ns1:tietThuMay>
+        </ns1:ChiTietThoiKhoaBieu>
+        <ns1:ChiTietThoiKhoaBieu xmlns:ns1="http://xml.netbeans.org/schema/Thoikhoabieu_EschoolinkObject">
+          <ns1:id_chitietthoikhoabieu isNull="false">23</ns1:id_chitietthoikhoabieu>
+          <ns1:giaovien>
+            <ns1:id isNull="false">7</ns1:id>
+            <ns1:tenGiaoVien isNull="false">nguyen van tuan</ns1:tenGiaoVien>
+          </ns1:giaovien>
+          <ns1:monhoc>
+            <ns1:id isNull="false">7</ns1:id>
+            <ns1:tenMonHoc isNull="false">Sinh</ns1:tenMonHoc>
+          </ns1:monhoc>
+          <ns1:thu isNull="false">7</ns1:thu>
+          <ns1:tietThuMay isNull="false">2</ns1:tietThuMay>
+        </ns1:ChiTietThoiKhoaBieu>
+        <ns1:ChiTietThoiKhoaBieu xmlns:ns1="http://xml.netbeans.org/schema/Thoikhoabieu_EschoolinkObject">
+          <ns1:id_chitietthoikhoabieu isNull="false">24</ns1:id_chitietthoikhoabieu>
+          <ns1:giaovien>
+            <ns1:id isNull="false">8</ns1:id>
+            <ns1:tenGiaoVien isNull="false">nguyen thi giao</ns1:tenGiaoVien>
+          </ns1:giaovien>
+          <ns1:monhoc>
+            <ns1:id isNull="false">8</ns1:id>
+            <ns1:tenMonHoc isNull="false">Anh</ns1:tenMonHoc>
+          </ns1:monhoc>
+          <ns1:thu isNull="false">7</ns1:thu>
+          <ns1:tietThuMay isNull="false">3</ns1:tietThuMay>
+        </ns1:ChiTietThoiKhoaBieu>
+      </thoikhoabieu>
+    </m:XemTKBOperationResponse>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

@@ -1,0 +1,21 @@
+<soapenv:Envelope xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:qlt="QLThoiKhoaBieu" xmlns:esc="http://xml.netbeans.org/schema/EschoolinkObject">
+  <soapenv:Body>
+    <qlt:ThemTKBOperation>
+      <thoikhoabieu>
+      
+        <esc:idLop>1</esc:idLop>
+        <esc:idNamHoc>1</esc:idNamHoc>
+        <esc:hocKy>1</esc:hocKy>
+        <!--Zero or more repetitions:-->
+        <esc:ChiTietThoiKhoaBieu>
+        
+          <esc:id_giaovien>1</esc:id_giaovien>
+          <esc:id_monhoc>1</esc:id_monhoc>
+        
+          <esc:thu>2</esc:thu>
+          <esc:tietThuMay>1</esc:tietThuMay>
+        </esc:ChiTietThoiKhoaBieu>
+      </thoikhoabieu>
+    </qlt:ThemTKBOperation>
+  </soapenv:Body>
+</soapenv:Envelope>

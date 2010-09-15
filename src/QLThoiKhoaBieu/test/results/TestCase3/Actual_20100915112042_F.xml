@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP-ENV:Body>
+    <m:ThemTKBOperationResponse xmlns:m="QLThoiKhoaBieu" xmlns:msgns="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/ThemTKB">
+      <id_tkb xmlns:msgns="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/insert_tkb" xmlns:ns0="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/ThemTKB" isNull="false">30</id_tkb>
+    </m:ThemTKBOperationResponse>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
