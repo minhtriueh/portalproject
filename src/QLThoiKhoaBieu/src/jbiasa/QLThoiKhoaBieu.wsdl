@@ -9,13 +9,13 @@
              xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
              targetNamespace="QLThoiKhoaBieu"
-             xmlns:tns="QLThoiKhoaBieu" xmlns:ns="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/ThemThoiKhoaBieu" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/LayThoiKhoaBieuTheoLop">
-    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/ThemThoiKhoaBieu" location="../jbiServiceUnits/QuanLyThoiKhoaBieu/interface_WSDL/ThemThoiKhoaBieu.wsdl"/>
-    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/LayThoiKhoaBieuTheoLop" location="../jbiServiceUnits/QuanLyThoiKhoaBieu/interface_WSDL/LayThoiKhoaBieuTheoLop.wsdl"/>
+             xmlns:tns="QLThoiKhoaBieu" xmlns:ns="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/ThemTKB" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/XemTKB">
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/ThemTKB" location="../jbiServiceUnits/QuanLyThoiKhoaBieu/interface_WSDL/ThemTKB.wsdl"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/XemTKB" location="../jbiServiceUnits/QuanLyThoiKhoaBieu/interface_WSDL/XemTKB.wsdl"/>
     <portType name="dummyCasaPortType"/>
-    <binding name="casaBinding1" type="ns:ThemThoiKhoaBieuPortType">
+    <binding name="casaBinding1" type="ns:ThemTKBPortType">
         <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
-        <operation name="ThemThoiKhoaBieuOperation">
+        <operation name="ThemTKBOperation">
             <soap:operation/>
             <input name="input1">
                 <soap:body use="literal" namespace="QLThoiKhoaBieu"/>
@@ -25,9 +25,10 @@
             </output>
         </operation>
     </binding>
-    <binding name="casaBinding2" type="ns1:LayThoiKhoaBieuTheoLopPortType">
+    <binding name="casaBinding2" type="tns:dummyCasaPortType"/>
+    <binding name="casaBinding3" type="ns1:XemTKBPortType">
         <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
-        <operation name="LayThoiKhoaBieuTheoLopOperation">
+        <operation name="XemTKBOperation">
             <soap:operation/>
             <input name="input1">
                 <soap:body use="literal" namespace="QLThoiKhoaBieu"/>
@@ -38,14 +39,18 @@
         </operation>
     </binding>
     <service name="QLThoiKhoaBieuService1">
-        <port name="TaoThoiKhoaBieu" binding="tns:casaBinding1">
-            <soap:address location="http://localhost:${HttpDefaultPort}/QLThoiKhoaBieuService1/TaoThoiKhoaBieu"/>
+        <port name="themTKB" binding="tns:casaBinding1">
+            <soap:address location="http://localhost:${HttpDefaultPort}/QLThoiKhoaBieuService1/themTKB"/>
         </port>
     </service>
     <service name="QLThoiKhoaBieuService2">
-        <port name="XemThoiKhoaBieu" binding="tns:casaBinding2">
-            <soap:address location="http://localhost:${HttpDefaultPort}/QLThoiKhoaBieuService2/XemThoiKhoaBieu"/>
+        <port name="casaPort2" binding="tns:casaBinding2"/>
+    </service>
+    <service name="QLThoiKhoaBieuService3">
+        <port name="XemTKB" binding="tns:casaBinding3">
+            <soap:address location="http://localhost:${HttpDefaultPort}/QLThoiKhoaBieuService3/XemTKB"/>
         </port>
     </service>
 </definitions>
+
 
