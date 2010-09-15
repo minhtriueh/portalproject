@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jbi xmlns="http://java.sun.com/xml/ns/jbi" xmlns:ns1="http://enterprise.netbeans.org/bpel/QuanLyThoiKhoaBieu/ThemTKB" xmlns:ns2="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/insert_chitiettkb" xmlns:ns3="QLThoiKhoaBieu" xmlns:ns4="http://enterprise.netbeans.org/bpel/QuanLyThoiKhoaBieu/XemTKB" xmlns:ns5="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/insert_tkb" xmlns:ns6="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/select_TKB" xmlns:ns7="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/XemTKB" xmlns:ns8="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/ThemTKB" version="1.0">
+    <services binding-component="true">
+        <consumes endpoint-name="XemTKB" interface-name="ns7:XemTKBPortType" service-name="ns3:QLThoiKhoaBieuService3"/>
+        <consumes endpoint-name="themTKB" interface-name="ns8:ThemTKBPortType" service-name="ns3:QLThoiKhoaBieuService1"/>
+    </services>
+</jbi>
