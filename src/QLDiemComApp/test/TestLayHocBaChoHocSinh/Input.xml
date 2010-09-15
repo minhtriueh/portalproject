@@ -1,0 +1,9 @@
+<soapenv:Envelope xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:qld="QLDiemComApp">
+  <soapenv:Body>
+    <qld:LayHocBaChoHocSinhOperation>
+      <hocky>1</hocky>
+      <id_namhoc>1</id_namhoc>
+      <id_hocsinh>1</id_hocsinh>
+    </qld:LayHocBaChoHocSinhOperation>
+  </soapenv:Body>
+</soapenv:Envelope>
