@@ -5,6 +5,8 @@
 
 package thongtincanhan;
 
+import com.opensymphony.xwork2.ActionContext;
+import java.util.Map;
 import org.netbeans.xml.schema.qlgv_eschoolinkobject.GiaoVien;
 
 /**
@@ -13,9 +15,11 @@ import org.netbeans.xml.schema.qlgv_eschoolinkobject.GiaoVien;
  */
 public class ThongTinGiaoVien {
     private GiaoVien gv;
-    private String idgv="1";
+    
     public String execute()throws Exception{
-       callgetGVService(new Long(idgv));
+       Map session=ActionContext.getContext().getSession();
+         Long  idgv=(Long)session.get("userId");
+        callgetGVService(new Long(idgv));
         return "success";
         
     }
@@ -44,11 +48,5 @@ public class ThongTinGiaoVien {
         this.gv = gv;
     }
 
-    public String getIdgv() {
-        return idgv;
-    }
-
-    public void setIdgv(String idgv) {
-        this.idgv = idgv;
-    }
+   
 }
