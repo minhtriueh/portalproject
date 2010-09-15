@@ -84,7 +84,7 @@
                 </div>
                 <div class="art-postcontent">
                     <!-- article-content -->
-                    <form id="fm-form" method="post" action="TaoGiaoVien" name="iform" >
+                    <form id="fm-form" method="post" action="TaoGiaoVien" name="iform" enctype="multipart/form-data" >
                         <fieldset>
                             <legend>Thông Tin Cá Nhân</legend>
                             <div class="fm-opt">

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions targetNamespace="QLDiemComApp" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:ns29="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachHocSinhByIdLop" xmlns:ns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/ThemDanhSachLoaiDiem" xmlns:ns25="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachDiemCuaHocSinhByMonHoc" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns26="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayIdNamHocMoi" xmlns:ns27="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDiemTrungBinhCuaHocSinh" xmlns:ns28="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayLopChoGiaoVienChuNhiem" xmlns:ns21="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachHeSo" xmlns:ns22="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TimIdLopByMshs" xmlns:ns23="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachMonHocCuaLop" xmlns:ns24="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TimIdHocSinhByMshs" xmlns:ns20="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachHeSoCotDiem" xmlns:ns16="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachCotDiem" xmlns:ns17="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TimTenHocSinhByIdHocSinh" xmlns:ns14="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TimIdMonHocByTenMonHoc" xmlns:ns15="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TimIdLopByTenLop" xmlns:ns18="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachDiemCuaChiTietSoDiem" xmlns:ns19="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LuuDiem" xmlns:ns9="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoNamHocMoi" xmlns:ns5="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TinhDiemTrungBinh" xmlns:ns12="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachLopGiaoVienDay" xmlns:ns6="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TongKetDiem" xmlns:ns13="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LoadSoDiem" xmlns:ns7="http://j2ee.netbeans.org/wsdl/QuanLyDiem/XemDiem" xmlns:ns10="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayIdNamHocMoiNhat" xmlns:ns8="http://j2ee.netbeans.org/wsdl/QuanLyThiDuaLenLop/XetLenLop" xmlns:ns11="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachMonHocCuaGiaoVien" xmlns:ns2="http://j2ee.netbeans.org/wsdl/QuanLyDiem/NhapDiem" xmlns:ns1="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoSoDiem" xmlns:ns4="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoLoaiDiem" xmlns:ns3="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LuuDiemHocBa" xmlns:tns="QLDiemComApp" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+<definitions targetNamespace="QLDiemComApp" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:ns29="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachHocSinhByIdLop" xmlns:ns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/ThemDanhSachLoaiDiem" xmlns:ns25="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachDiemCuaHocSinhByMonHoc" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns26="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayIdNamHocMoi" xmlns:ns27="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDiemTrungBinhCuaHocSinh" xmlns:ns28="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayLopChoGiaoVienChuNhiem" xmlns:ns21="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachHeSo" xmlns:ns22="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TimIdLopByMshs" xmlns:ns23="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachMonHocCuaLop" xmlns:ns24="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TimIdHocSinhByMshs" xmlns:ns20="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachHeSoCotDiem" xmlns:ns16="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachCotDiem" xmlns:ns17="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TimTenHocSinhByIdHocSinh" xmlns:ns14="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TimIdMonHocByTenMonHoc" xmlns:ns15="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TimIdLopByTenLop" xmlns:ns18="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachDiemCuaChiTietSoDiem" xmlns:ns19="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LuuDiem" xmlns:ns9="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoNamHocMoi" xmlns:ns5="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TinhDiemTrungBinh" xmlns:ns30="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TimHocSinhByIdHocSinh" xmlns:ns12="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachLopGiaoVienDay" xmlns:ns6="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TongKetDiem" xmlns:ns13="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LoadSoDiem" xmlns:ns7="http://j2ee.netbeans.org/wsdl/QuanLyDiem/XemDiem" xmlns:ns10="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayIdNamHocMoiNhat" xmlns:ns8="http://j2ee.netbeans.org/wsdl/QuanLyThiDuaLenLop/XetLenLop" xmlns:ns11="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayDanhSachMonHocCuaGiaoVien" xmlns:ns2="http://j2ee.netbeans.org/wsdl/QuanLyDiem/NhapDiem" xmlns:ns1="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoSoDiem" xmlns:ns4="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TaoLoaiDiem" xmlns:ns3="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LuuDiemHocBa" xmlns:tns="QLDiemComApp" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
   <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayLopChoGiaoVienChuNhiem" location="http://sanchikaro:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/LayLopChoGiaoVienChuNhiem.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/TimHocSinhByIdHocSinh" location="http://sanchikaro:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/TimHocSinhByIdHocSinh.wsdl">
     </import>
   <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LuuDiem" location="http://sanchikaro:18001/QLDiemComApp-sun-http-binding/QuanLyDiem/interface_WSDL/LuuDiem.wsdl">
     </import>
@@ -151,6 +153,18 @@
   <binding name="casaBinding61" type="ns29:LayDanhSachHocSinhByIdLopPortType">
     <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
     <operation name="LayDanhSachHocSinhByIdLopOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLDiemComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLDiemComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding62" type="ns30:TimHocSinhByIdHocSinhPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="TimHocSinhByIdHocSinhOperation">
       <soap:operation/>
       <input name="input1">
         <soap:body use="literal" namespace="QLDiemComApp"/>
@@ -634,6 +648,11 @@
   <service name="QLDiemComAppService22">
     <port name="LayDanhSachMonHocCuaGiaoVien" binding="tns:casaBinding22">
       <soap:address location="http://sanchikaro:18001/QLDiemComApp/LayDanhSachMonHocCuaGiaoVien"/>
+    </port>
+  </service>
+  <service name="QLDiemComAppService62">
+    <port name="TimHocSinhByIdHocSinh" binding="tns:casaBinding62">
+      <soap:address location="http://sanchikaro:18001/QLDiemComApp/TimHocSinhByIdHocSinh"/>
     </port>
   </service>
   <service name="QLDiemComAppService28">

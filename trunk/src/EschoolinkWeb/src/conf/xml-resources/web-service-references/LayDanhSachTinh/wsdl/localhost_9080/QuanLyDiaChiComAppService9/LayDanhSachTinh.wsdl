@@ -144,18 +144,6 @@
       </output>
     </operation>
   </binding>
-  <binding name="casaBinding1" type="ns:TaoKhuVucPortType">
-    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
-    <operation name="TaoKhuVucOperation">
-      <soap:operation/>
-      <input name="input1">
-        <soap:body use="literal" namespace="QuanLyDiaChiComApp"/>
-      </input>
-      <output name="output1">
-        <soap:body use="literal" namespace="QuanLyDiaChiComApp"/>
-      </output>
-    </operation>
-  </binding>
   <service name="QuanLyDiaChiComAppService8">
     <port name="UpdateTinh" binding="tns:casaBinding8">
       <soap:address location="http://sanchikaro:9080/QuanLyDiaChiComAppService8/UpdateTinh"/>
@@ -184,11 +172,6 @@
   <service name="QuanLyDiaChiComAppService2">
     <port name="TaoQuanHuyenThanhPho" binding="tns:casaBinding2">
       <soap:address location="http://sanchikaro:9080/QuanLyDiaChiComAppService2/TaoQuanHuyenThanhPho"/>
-    </port>
-  </service>
-  <service name="QuanLyDiaChiComAppService1">
-    <port name="TaoKhuVuc" binding="tns:casaBinding1">
-      <soap:address location="http://sanchikaro:9080/QuanLyDiaChiComAppService1/TaoKhuVuc"/>
     </port>
   </service>
   <service name="QuanLyDiaChiComAppService4">

@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions targetNamespace="QLThongTinKhoiTaoComApp" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:ns="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoTruong" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns16="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/LoadGVCN" xmlns:ns17="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/LoadNamHoc" xmlns:ns14="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/LoadToBoMon" xmlns:ns15="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/LoadCoSo" xmlns:ns18="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/LoadThoiKhoaBieu" xmlns:ns19="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/LoadTruong" xmlns:ns9="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoHanhKiem" xmlns:ns12="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoBoMon" xmlns:ns5="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoLop" xmlns:ns13="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/LoadKhoiLop" xmlns:ns6="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoKhoiLop" xmlns:ns10="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoDanToc" xmlns:ns7="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoHocLuc" xmlns:ns11="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoCoSo" xmlns:ns8="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoHieuTruong" xmlns:ns2="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoNhom" xmlns:ns1="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoQuyen" xmlns:ns4="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoMonHoc" xmlns:ns3="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoNamHoc" xmlns:tns="QLThongTinKhoiTaoComApp" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <import namespace="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoLop" location="http://sanchikaro:9080/QLThongTinKhoiTaoComApp-sun-http-binding/QLThongTinKhoiTao/interface_wsdl/TaoLop.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/LoadCoSo" location="http://sanchikaro:9080/QLThongTinKhoiTaoComApp-sun-http-binding/QLThongTinKhoiTao/interface_wsdl/LoadCoSo.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoMonHoc" location="http://sanchikaro:9080/QLThongTinKhoiTaoComApp-sun-http-binding/QLThongTinKhoiTao/interface_wsdl/TaoMonHoc.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoHocLuc" location="http://sanchikaro:9080/QLThongTinKhoiTaoComApp-sun-http-binding/QLThongTinKhoiTao/interface_wsdl/TaoHocLuc.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoHanhKiem" location="http://sanchikaro:9080/QLThongTinKhoiTaoComApp-sun-http-binding/QLThongTinKhoiTao/interface_wsdl/TaoHanhKiem.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoBoMon" location="http://sanchikaro:9080/QLThongTinKhoiTaoComApp-sun-http-binding/QLThongTinKhoiTao/interface_wsdl/TaoBoMon.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoHieuTruong" location="http://sanchikaro:9080/QLThongTinKhoiTaoComApp-sun-http-binding/QLThongTinKhoiTao/interface_wsdl/TaoHieuTruong.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/LoadGVCN" location="http://sanchikaro:9080/QLThongTinKhoiTaoComApp-sun-http-binding/QLThongTinKhoiTao/interface_wsdl/LoadGVCN.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/LoadKhoiLop" location="http://sanchikaro:9080/QLThongTinKhoiTaoComApp-sun-http-binding/QLThongTinKhoiTao/interface_wsdl/LoadKhoiLop.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/LoadTruong" location="http://sanchikaro:9080/QLThongTinKhoiTaoComApp-sun-http-binding/QLThongTinKhoiTao/interface_wsdl/LoadTruong.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoCoSo" location="http://sanchikaro:9080/QLThongTinKhoiTaoComApp-sun-http-binding/QLThongTinKhoiTao/interface_wsdl/TaoCoSo.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoTruong" location="http://sanchikaro:9080/QLThongTinKhoiTaoComApp-sun-http-binding/QLThongTinKhoiTao/interface_wsdl/TaoTruong.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/LoadNamHoc" location="http://sanchikaro:9080/QLThongTinKhoiTaoComApp-sun-http-binding/QLThongTinKhoiTao/interface_wsdl/LoadNamHoc.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoKhoiLop" location="http://sanchikaro:9080/QLThongTinKhoiTaoComApp-sun-http-binding/QLThongTinKhoiTao/interface_wsdl/TaoKhoiLop.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoDanToc" location="http://sanchikaro:9080/QLThongTinKhoiTaoComApp-sun-http-binding/QLThongTinKhoiTao/interface_wsdl/TaoDanToc.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/LoadThoiKhoaBieu" location="http://sanchikaro:9080/QLThongTinKhoiTaoComApp-sun-http-binding/QLThongTinKhoiTao/interface_wsdl/LoadThoiKhoaBieu.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoNhom" location="http://sanchikaro:9080/QLThongTinKhoiTaoComApp-sun-http-binding/QLThongTinKhoiTao/interface_wsdl/TaoNhom.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoNamHoc" location="http://sanchikaro:9080/QLThongTinKhoiTaoComApp-sun-http-binding/QLThongTinKhoiTao/interface_wsdl/TaoNamHoc.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/LoadToBoMon" location="http://sanchikaro:9080/QLThongTinKhoiTaoComApp-sun-http-binding/QLThongTinKhoiTao/interface_wsdl/LoadToBoMon.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/QLThongTinKhoiTao/TaoQuyen" location="http://sanchikaro:9080/QLThongTinKhoiTaoComApp-sun-http-binding/QLThongTinKhoiTao/interface_wsdl/TaoQuyen.wsdl">
+    </import>
+  <portType name="dummyCasaPortType">
+  </portType>
+  <binding name="casaBinding19" type="ns18:LoadThoiKhoaBieuPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="LoadThoiKhoaBieuOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLThongTinKhoiTaoComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLThongTinKhoiTaoComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding18" type="ns17:LoadNamHocPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="LoadNamHocOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLThongTinKhoiTaoComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLThongTinKhoiTaoComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding9" type="ns8:TaoHieuTruongPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="TaoHieuTruongOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLThongTinKhoiTaoComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLThongTinKhoiTaoComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding7" type="ns6:TaoKhoiLopPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="TaoKhoiLopOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLThongTinKhoiTaoComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLThongTinKhoiTaoComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding12" type="ns11:TaoCoSoPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="TaoCoSoOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLThongTinKhoiTaoComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLThongTinKhoiTaoComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding8" type="ns7:TaoHocLucPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="TaoHocLucOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLThongTinKhoiTaoComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLThongTinKhoiTaoComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding13" type="ns12:TaoBoMonPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="TaoBoMonOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLThongTinKhoiTaoComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLThongTinKhoiTaoComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding5" type="ns4:TaoMonHocPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="TaoMonHocOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLThongTinKhoiTaoComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLThongTinKhoiTaoComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding10" type="ns9:TaoHanhKiemPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="TaoHanhKiemOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLThongTinKhoiTaoComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLThongTinKhoiTaoComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding6" type="ns5:TaoLopPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="TaoLopOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLThongTinKhoiTaoComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLThongTinKhoiTaoComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding11" type="ns10:TaoDanTocPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="TaoDanTocOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLThongTinKhoiTaoComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLThongTinKhoiTaoComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding16" type="ns15:LoadCoSoPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="LoadCoSoOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLThongTinKhoiTaoComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLThongTinKhoiTaoComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding3" type="ns2:TaoNhomPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="TaoNhomOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLThongTinKhoiTaoComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLThongTinKhoiTaoComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding17" type="ns16:LoadGVCNPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="LoadGVCNOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLThongTinKhoiTaoComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLThongTinKhoiTaoComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding4" type="ns3:TaoNamHocPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="TaoNamHocOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLThongTinKhoiTaoComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLThongTinKhoiTaoComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding14" type="ns13:LoadKhoiLopPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="LoadKhoiLopOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLThongTinKhoiTaoComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLThongTinKhoiTaoComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding1" type="ns:TaoTruongPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="TaoTruongOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLThongTinKhoiTaoComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLThongTinKhoiTaoComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding15" type="ns14:LoadToBoMonPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="LoadToBoMonOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLThongTinKhoiTaoComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLThongTinKhoiTaoComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding2" type="ns1:TaoQuyenPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="TaoQuyenOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLThongTinKhoiTaoComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLThongTinKhoiTaoComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="casaBinding20" type="ns19:LoadTruongPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="LoadTruongOperation">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal" namespace="QLThongTinKhoiTaoComApp"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal" namespace="QLThongTinKhoiTaoComApp"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="QLThongTinKhoiTaoComAppService18">
+    <port name="LoadNamHoc" binding="tns:casaBinding18">
+      <soap:address location="http://sanchikaro:9080/QLThongTinKhoiTaoComAppService18/LoadNamHoc"/>
+    </port>
+  </service>
+  <service name="QLThongTinKhoiTaoComAppService17">
+    <port name="LoadGVCN" binding="tns:casaBinding17">
+      <soap:address location="http://sanchikaro:9080/QLThongTinKhoiTaoComAppService17/LoadGVCN"/>
+    </port>
+  </service>
+  <service name="QLThongTinKhoiTaoComAppService19">
+    <port name="LoadThoiKhoaBieu" binding="tns:casaBinding19">
+      <soap:address location="http://sanchikaro:9080/QLThongTinKhoiTaoComAppService19/LoadThoiKhoaBieu"/>
+    </port>
+  </service>
+  <service name="QLThongTinKhoiTaoComAppService1">
+    <port name="TaoTruong" binding="tns:casaBinding1">
+      <soap:address location="http://sanchikaro:9080/QLThongTinKhoiTaoComAppService1/TaoTruong"/>
+    </port>
+  </service>
+  <service name="QLThongTinKhoiTaoComAppService9">
+    <port name="TaoHieuTruong" binding="tns:casaBinding9">
+      <soap:address location="http://sanchikaro:9080/QLThongTinKhoiTaoComAppService9/TaoHieuTruong"/>
+    </port>
+  </service>
+  <service name="QLThongTinKhoiTaoComAppService13">
+    <port name="TaoBoMon" binding="tns:casaBinding13">
+      <soap:address location="http://sanchikaro:9080/QLThongTinKhoiTaoComAppService13/TaoBoMon"/>
+    </port>
+  </service>
+  <service name="QLThongTinKhoiTaoComAppService14">
+    <port name="LoadKhoiLop" binding="tns:casaBinding14">
+      <soap:address location="http://sanchikaro:9080/QLThongTinKhoiTaoComAppService14/LoadKhoiLop"/>
+    </port>
+  </service>
+  <service name="QLThongTinKhoiTaoComAppService8">
+    <port name="TaoHocLuc" binding="tns:casaBinding8">
+      <soap:address location="http://sanchikaro:9080/QLThongTinKhoiTaoComAppService8/TaoHocLuc"/>
+    </port>
+  </service>
+  <service name="QLThongTinKhoiTaoComAppService15">
+    <port name="LoadToBoMon" binding="tns:casaBinding15">
+      <soap:address location="http://sanchikaro:9080/QLThongTinKhoiTaoComAppService15/LoadToBoMon"/>
+    </port>
+  </service>
+  <service name="QLThongTinKhoiTaoComAppService7">
+    <port name="TaoKhoiLop" binding="tns:casaBinding7">
+      <soap:address location="http://sanchikaro:9080/QLThongTinKhoiTaoComAppService7/TaoKhoiLop"/>
+    </port>
+  </service>
+  <service name="QLThongTinKhoiTaoComAppService16">
+    <port name="LoadCoSo" binding="tns:casaBinding16">
+      <soap:address location="http://sanchikaro:9080/QLThongTinKhoiTaoComAppService16/LoadCoSo"/>
+    </port>
+  </service>
+  <service name="QLThongTinKhoiTaoComAppService6">
+    <port name="TaoLop" binding="tns:casaBinding6">
+      <soap:address location="http://sanchikaro:9080/QLThongTinKhoiTaoComAppService6/TaoLop"/>
+    </port>
+  </service>
+  <service name="QLThongTinKhoiTaoComAppService5">
+    <port name="TaoMonHoc" binding="tns:casaBinding5">
+      <soap:address location="http://sanchikaro:9080/QLThongTinKhoiTaoComAppService5/TaoMonHoc"/>
+    </port>
+  </service>
+  <service name="QLThongTinKhoiTaoComAppService4">
+    <port name="TaoNamHoc" binding="tns:casaBinding4">
+      <soap:address location="http://sanchikaro:9080/QLThongTinKhoiTaoComAppService4/TaoNamHoc"/>
+    </port>
+  </service>
+  <service name="QLThongTinKhoiTaoComAppService10">
+    <port name="TaoHanhKiem" binding="tns:casaBinding10">
+      <soap:address location="http://sanchikaro:9080/QLThongTinKhoiTaoComAppService10/TaoHanhKiem"/>
+    </port>
+  </service>
+  <service name="QLThongTinKhoiTaoComAppService20">
+    <port name="LoadTruong" binding="tns:casaBinding20">
+      <soap:address location="http://sanchikaro:9080/QLThongTinKhoiTaoComAppService20/LoadTruong"/>
+    </port>
+  </service>
+  <service name="QLThongTinKhoiTaoComAppService3">
+    <port name="TaoNhom" binding="tns:casaBinding3">
+      <soap:address location="http://sanchikaro:9080/QLThongTinKhoiTaoComAppService3/TaoNhom"/>
+    </port>
+  </service>
+  <service name="QLThongTinKhoiTaoComAppService11">
+    <port name="TaoDanToc" binding="tns:casaBinding11">
+      <soap:address location="http://sanchikaro:9080/QLThongTinKhoiTaoComAppService11/TaoDanToc"/>
+    </port>
+  </service>
+  <service name="QLThongTinKhoiTaoComAppService2">
+    <port name="TaoQuyen" binding="tns:casaBinding2">
+      <soap:address location="http://sanchikaro:9080/QLThongTinKhoiTaoComAppService2/TaoQuyen"/>
+    </port>
+  </service>
+  <service name="QLThongTinKhoiTaoComAppService12">
+    <port name="TaoCoSo" binding="tns:casaBinding12">
+      <soap:address location="http://sanchikaro:9080/QLThongTinKhoiTaoComAppService12/TaoCoSo"/>
+    </port>
+  </service>
+</definitions>
