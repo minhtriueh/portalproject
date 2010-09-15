@@ -76,17 +76,30 @@ public class TongKetDiemResult {
                 long idHocsinh = listhocsinhs.get(i).getIdHocsinh();
                 String tenHocSinh = listhocsinhs.get(i).getTenhocsinh();
                 String ten = listhocsinhs.get(i).getTen();
+                long idhocsinh = listhocsinhs.get(i).getIdHocsinh();
                 ChiTietDiem chiTietDiem = new ChiTietDiem();
                 for (int j = 0; j < listmonhocs.size(); j++) {
                     long idMonhoc = listmonhocs.get(j).getIdMonhoc();
                     double diemtrungbinhmon = port.layDiemTrungBinhCuaHocSinhOperation(idHocsinh, hk, idMonhoc, idNamhoc, id_lop);
                     chiTietDiem.getDiem().add(diemtrungbinhmon);
                 }
+                //tinh diem trung binh cua tat ca cac mon cho mot hoc sinh
+                double diemtrungbinh = 0;
+                double diemtongcong = 0;
+                for (int k = 0; k < chiTietDiem.getDiem().size(); k++) {
+                    diemtongcong += chiTietDiem.getDiem().get(k);
+                }
+                diemtrungbinh = diemtongcong / chiTietDiem.getDiem().size();
                 chiTietDiem.setSothutu(i + 1);
                 chiTietDiem.setHovaten(tenHocSinh);
                 chiTietDiem.setTen(ten);
+                chiTietDiem.setIdhocsinh(idhocsinh);
+                chiTietDiem.setDiemtrungbinh(diemtrungbinh);
                 listchitietdiems.add(chiTietDiem);
             }
+            getRequest().setAttribute("lop", lop);
+            getRequest().setAttribute("hocky", hocky);
+            getRequest().setAttribute("namhoc", idNamhoc);
             getRequest().setAttribute("listmonhocs", listmonhocs);
             getRequest().setAttribute("listchitietdiems", listchitietdiems);
             return "success";
@@ -137,7 +150,7 @@ public class TongKetDiemResult {
             qldiemcomapp.LayDanhSachHocSinhByIdLopPortType port = service.getLayDanhSachHocSinhByIdLop();
             org.netbeans.xml.schema.loaidiem.ListHocSinh hocsinhs = port.layDanhSachHocSinhByIdLopOperation(1);
             List<HocSinh> listhocsinhs = hocsinhs.getHocSinh();
-            for(int i=0;i<listhocsinhs.size();i++){
+            for (int i = 0; i < listhocsinhs.size(); i++) {
                 System.out.println(listhocsinhs.get(i).getTen());
             }
             System.out.println("size hoc sinh " + listhocsinhs.size());

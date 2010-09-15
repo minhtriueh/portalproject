@@ -75,55 +75,28 @@
 
                                         <!-- hien thi danh sach hoc sinh va danh sach diem cua hoc sinh -->
                                         <c:forEach var="chitietdiem" items="${chitietdiems}">
-                                            <c:if test="${chitietdiem.sothutu%2==1}">
-                                                <tr>
-                                                    <td><c:out value="${chitietdiem.sothutu}"></c:out></td>
-                                                    <td>
-                                                        <c:out value="${chitietdiem.hovaten}"></c:out>
-                                                        <c:out value="${chitietdiem.ten}"></c:out>
-                                                    </td>
-                                                    <c:forEach var="chitiet" items="${chitietdiem.diem}">
-                                                        <c:if test="${chitiet!=-1}">
-                                                            <td>
-                                                                <input type="text" name="diemnhap" size="1" value="${chitiet}">
-                                                            </td>
-                                                        </c:if>
-                                                        <c:if test="${chitiet==-1}">
-                                                            <td>
-                                                                <input type="text" name="diemnhap" size="1" value="">
-                                                            </td>
-                                                        </c:if>
-                                                    </c:forEach>
-                                                    <td>
-                                                        <fmt:formatNumber value="${chitietdiem.diemtrungbinh}" maxFractionDigits="2" minFractionDigits="1"></fmt:formatNumber>
-                                                    </td>
-                                                </tr>
-                                            </c:if>
-                                            <c:if test="${chitietdiem.sothutu%2!=1}">
-                                                <tr class="tr1">
-                                                    <td><c:out value="${chitietdiem.sothutu}"></c:out></td>
-                                                    <td>
-                                                        <c:out value="${chitietdiem.hovaten}"></c:out>
-                                                        <c:out value="${chitietdiem.ten}"></c:out>
-                                                    </td>
-                                                    <c:forEach var="chitiet" items="${chitietdiem.diem}">
-                                                        <c:if test="${chitiet!=-1}">
-                                                            <td>
-                                                                <input type="text" name="diemnhap" size="1" value="${chitiet}">
-                                                            </td>
-                                                        </c:if>
-                                                        <c:if test="${chitiet==-1}">
-                                                            <td>
-                                                                <input type="text" name="diemnhap" size="1" value="">
-                                                            </td>
-                                                        </c:if>
-                                                    </c:forEach>
-                                                    <td>
-                                                        <fmt:formatNumber value="${chitietdiem.diemtrungbinh}" maxFractionDigits="2" minFractionDigits="1"></fmt:formatNumber>
-                                                    </td>
-                                                </tr>
-                                            </c:if>
-
+                                            <tr>
+                                                <td><c:out value="${chitietdiem.sothutu}"></c:out></td>
+                                                <td>
+                                                    <c:out value="${chitietdiem.hovaten}"></c:out>
+                                                    <c:out value="${chitietdiem.ten}"></c:out>
+                                                </td>
+                                                <c:forEach var="chitiet" items="${chitietdiem.diem}">
+                                                    <c:if test="${chitiet!=-1}">
+                                                        <td>
+                                                            <input type="text" name="diemnhap" size="1" value="${chitiet}">
+                                                        </td>
+                                                    </c:if>
+                                                    <c:if test="${chitiet==-1}">
+                                                        <td>
+                                                            <input type="text" name="diemnhap" size="1" value="">
+                                                        </td>
+                                                    </c:if>
+                                                </c:forEach>
+                                                <td>
+                                                    <fmt:formatNumber value="${chitietdiem.diemtrungbinh}" maxFractionDigits="2" minFractionDigits="1"></fmt:formatNumber>
+                                                </td>
+                                            </tr>
                                         </c:forEach>
                                     </tbody>
                                     <!-- ket thuc hien thi danh sach hoc sinh va danh sach diem cua hoc sinh -->
