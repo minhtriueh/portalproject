@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process
+    name="LayHocBaChoHocSinh"
+    targetNamespace="http://enterprise.netbeans.org/bpel/QuanLyDiem/LayHocBaChoHocSinh"
+    xmlns:tns="http://enterprise.netbeans.org/bpel/QuanLyDiem/LayHocBaChoHocSinh"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
+    xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor"
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2" xmlns:ns0="http://j2ee.netbeans.org/xsd/tableSchema">
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayHocBaChoHocSinh" location="../interface_WSDL/LayHocBaChoHocSinh.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayHocBaChoHocSinh" location="../DB_WSDL/DB_LayHocBaChoHocSinh.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <partnerLinks>
+        <partnerLink name="PL_DB_LayHocBaChoHocSinh" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayHocBaChoHocSinh" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="PL_LayHocBaChoHocSinh" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayHocBaChoHocSinh" partnerLinkType="tns:LayHocBaChoHocSinh" myRole="LayHocBaChoHocSinhPortTypeRole"/>
+    </partnerLinks>
+    <variables>
+        <variable name="LayHocBaChoHocSinhOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayHocBaChoHocSinh" messageType="tns:outputMsg"/>
+        <variable name="LayHocBaChoHocSinhIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayHocBaChoHocSinh" messageType="tns:inputMsg"/>
+        <variable name="LayHocBaChoHocSinhOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayHocBaChoHocSinh" messageType="tns:LayHocBaChoHocSinhOperationResponse"/>
+        <variable name="LayHocBaChoHocSinhOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayHocBaChoHocSinh" messageType="tns:LayHocBaChoHocSinhOperationRequest"/>
+    </variables>
+    <sequence>
+        <receive name="Receive1" createInstance="yes" partnerLink="PL_LayHocBaChoHocSinh" operation="LayHocBaChoHocSinhOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayHocBaChoHocSinh" portType="tns:LayHocBaChoHocSinhPortType" variable="LayHocBaChoHocSinhOperationIn"/>
+        <assign name="Assign1">
+            <copy>
+                <from variable="LayHocBaChoHocSinhOperationIn" part="hocky"/>
+                <to>$LayHocBaChoHocSinhIn.part/ns0:hocky</to>
+            </copy>
+            <copy>
+                <from variable="LayHocBaChoHocSinhOperationIn" part="id_namhoc"/>
+                <to>$LayHocBaChoHocSinhIn.part/ns0:id_namhoc</to>
+            </copy>
+            <copy>
+                <from variable="LayHocBaChoHocSinhOperationIn" part="id_hocsinh"/>
+                <to>$LayHocBaChoHocSinhIn.part/ns0:id_hocsinh</to>
+            </copy>
+        </assign>
+        <invoke name="Invoke1" partnerLink="PL_DB_LayHocBaChoHocSinh" operation="newuntitled_Operation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/DB_LayHocBaChoHocSinh" portType="tns:jdbcPortType" inputVariable="LayHocBaChoHocSinhIn" outputVariable="LayHocBaChoHocSinhOut"/>
+        <assign name="Assign2">
+            <copy>
+                <from>$LayHocBaChoHocSinhOut.part/ns0:DB_LayHocBaChoHocSinh_Record/ns0:id_hocba</from>
+                <to variable="LayHocBaChoHocSinhOperationOut" part="id_hocba"/>
+            </copy>
+        </assign>
+        <reply name="Reply1" partnerLink="PL_LayHocBaChoHocSinh" operation="LayHocBaChoHocSinhOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyDiem/LayHocBaChoHocSinh" portType="tns:LayHocBaChoHocSinhPortType" variable="LayHocBaChoHocSinhOperationOut"/>
+    </sequence>
+</process>
+
+
