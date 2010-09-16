@@ -4,6 +4,7 @@
  */
 package quanlydiem;
 
+import com.opensymphony.xwork2.ActionContext;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -27,7 +28,9 @@ public class BatDauNhapDiem {
     public String execute() throws Exception {
 
 //call service lay danh sach mon hoc cua giao vien
-        long idGiaovien = 1;
+        Map session = ActionContext.getContext().getSession();
+        Long idgv = (Long) session.get("userId");
+        long idGiaovien = idgv;
         org.netbeans.xml.schema.loaidiem.ListMonHoc monhocs = null;
         try { // Call Web Service Operation
             qldiemcomapp.QLDiemComAppService22 service = new qldiemcomapp.QLDiemComAppService22();
@@ -72,6 +75,7 @@ public class BatDauNhapDiem {
                 }
                 getRequest().setAttribute("tenlops", tenlops);
                 getRequest().setAttribute("setmonhoclop", setmonhoclop);
+                getRequest().setAttribute("idgv", idgv);
                 return "success";
             }
         } catch (Exception ex) {
