@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<casa xmlns="http://java.sun.com/xml/ns/casa" xmlns:ns1="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/insert_chitiettkb" xmlns:ns2="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/insert_tkb" xmlns:ns3="QLThoiKhoaBieu" xmlns:ns4="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/ThemTKB" xmlns:ns5="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/select_TKB" xmlns:ns6="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/XemTKB" xmlns:ns7="http://enterprise.netbeans.org/bpel/QuanLyThoiKhoaBieu/ThemTKB" xmlns:ns8="http://enterprise.netbeans.org/bpel/QuanLyThoiKhoaBieu/XemTKB" xmlns:xlink="http://www.w3.org/2000/xlink">
+<casa xmlns="http://java.sun.com/xml/ns/casa" xmlns:ns1="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/insert_chitiettkb" xmlns:ns2="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/insert_tkb" xmlns:ns3="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/select_TKB" xmlns:ns4="QLThoiKhoaBieu" xmlns:ns5="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/ThemTKB" xmlns:ns6="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/XemTKB" xmlns:ns7="http://enterprise.netbeans.org/bpel/QuanLyThoiKhoaBieu/ThemTKB" xmlns:ns8="http://enterprise.netbeans.org/bpel/QuanLyThoiKhoaBieu/XemTKB" xmlns:xlink="http://www.w3.org/2000/xlink">
     <endpoints>
         <endpoint endpoint-name="port" interface-name="ns1:jdbcPortType" name="endpoint1" service-name="ns1:service"/>
         <endpoint endpoint-name="port" interface-name="ns2:jdbcPortType" name="endpoint2" service-name="ns2:service"/>
-        <endpoint endpoint-name="themTKB" interface-name="ns4:ThemTKBPortType" name="endpoint3" service-name="ns3:QLThoiKhoaBieuService1"/>
-        <endpoint endpoint-name="port" interface-name="ns5:jdbcPortType" name="endpoint4" service-name="ns5:service"/>
-        <endpoint endpoint-name="XemTKB" interface-name="ns6:XemTKBPortType" name="endpoint5" service-name="ns3:QLThoiKhoaBieuService3"/>
-        <endpoint display-name="PartnerLink1" endpoint-name="ThemTKBPortTypeRole_myRole" file-path="processor_BPEL\ThemTKB.bpel" interface-name="ns4:ThemTKBPortType" name="endpoint6" process-name="ThemTKB" service-name="ns7:PartnerLink1"/>
+        <endpoint endpoint-name="port" interface-name="ns3:jdbcPortType" name="endpoint3" service-name="ns3:service"/>
+        <endpoint endpoint-name="ThemTKB" interface-name="ns5:ThemTKBPortType" name="endpoint4" service-name="ns4:QLThoiKhoaBieuService2"/>
+        <endpoint endpoint-name="XemTKB" interface-name="ns6:XemTKBPortType" name="endpoint5" service-name="ns4:QLThoiKhoaBieuService3"/>
+        <endpoint display-name="PartnerLink1" endpoint-name="ThemTKBPortTypeRole_myRole" file-path="processor_BPEL\ThemTKB.bpel" interface-name="ns5:ThemTKBPortType" name="endpoint6" process-name="ThemTKB" service-name="ns7:PartnerLink1"/>
         <endpoint display-name="PartnerLink1" endpoint-name="XemTKBPortTypeRole_myRole" file-path="processor_BPEL\XemTKB.bpel" interface-name="ns6:XemTKBPortType" name="endpoint7" process-name="XemTKB" service-name="ns8:PartnerLink1"/>
         <endpoint display-name="PartnerLink2" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\ThemTKB.bpel" interface-name="ns2:jdbcPortType" name="endpoint8" process-name="ThemTKB" service-name="ns7:PartnerLink2"/>
         <endpoint display-name="PartnerLink3" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\ThemTKB.bpel" interface-name="ns1:jdbcPortType" name="endpoint9" process-name="ThemTKB" service-name="ns7:PartnerLink3"/>
-        <endpoint display-name="PartnerLink2" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\XemTKB.bpel" interface-name="ns5:jdbcPortType" name="endpoint10" process-name="XemTKB" service-name="ns8:PartnerLink2"/>
+        <endpoint display-name="PartnerLink2" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="processor_BPEL\XemTKB.bpel" interface-name="ns3:jdbcPortType" name="endpoint10" process-name="XemTKB" service-name="ns8:PartnerLink2"/>
     </endpoints>
     <service-units>
-        <service-engine-service-unit artifacts-zip="QuanLyThoiKhoaBieu.jar" component-name="sun-bpel-engine" defined="true" description="Represents this Service Unit" internal="true" name="QLThoiKhoaBieu-QuanLyThoiKhoaBieu" unit-name="QuanLyThoiKhoaBieu" unknown="false" x="131" y="99">
+        <service-engine-service-unit artifacts-zip="QuanLyThoiKhoaBieu.jar" component-name="sun-bpel-engine" defined="true" description="Represents this Service Unit" internal="true" name="QLThoiKhoaBieu-QuanLyThoiKhoaBieu" unit-name="QuanLyThoiKhoaBieu" unknown="false" x="120" y="278">
             <provides endpoint="endpoint6"/>
             <provides endpoint="endpoint7"/>
             <consumes endpoint="endpoint8"/>
@@ -32,19 +32,19 @@
                     <consumes endpoint="endpoint2"/>
                     <provides endpoint="endpoint2"/>
                 </port>
-                <port x="67" y="118">
+                <port x="67" y="197">
                     <link xlink:href="../jbiServiceUnits/QuanLyThoiKhoaBieu/DB_WSDL/select/select_TKB.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
-                    <consumes endpoint="endpoint4"/>
-                    <provides endpoint="endpoint4"/>
+                    <consumes endpoint="endpoint3"/>
+                    <provides endpoint="endpoint3"/>
                 </port>
             </ports>
         </binding-component-service-unit>
         <binding-component-service-unit artifacts-zip="sun-http-binding.jar" component-name="sun-http-binding" description="Represents this Service Unit" name="QLThoiKhoaBieu-sun-http-binding" unit-name="sun-http-binding">
             <ports>
-                <port bindingType="soap" x="67" y="224">
-                    <link xlink:href="../jbiasa/QLThoiKhoaBieu.wsdl#xpointer(/definitions/service[@name='QLThoiKhoaBieuService1']/port[@name='themTKB'])" xlink:type="simple"/>
-                    <consumes endpoint="endpoint3"/>
-                    <provides endpoint="endpoint3"/>
+                <port bindingType="soap" x="67" y="118">
+                    <link xlink:href="../jbiasa/QLThoiKhoaBieu.wsdl#xpointer(/definitions/service[@name='QLThoiKhoaBieuService2']/port[@name='ThemTKB'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint4"/>
+                    <provides endpoint="endpoint4"/>
                 </port>
                 <port bindingType="soap" x="67" y="39">
                     <link xlink:href="../jbiasa/QLThoiKhoaBieu.wsdl#xpointer(/definitions/service[@name='QLThoiKhoaBieuService3']/port[@name='XemTKB'])" xlink:type="simple"/>
@@ -58,8 +58,8 @@
         <connection consumer="endpoint9" provider="endpoint1" state="unchanged"/>
         <connection consumer="endpoint5" provider="endpoint7" state="new"/>
         <connection consumer="endpoint8" provider="endpoint2" state="unchanged"/>
-        <connection consumer="endpoint10" provider="endpoint4" state="unchanged"/>
-        <connection consumer="endpoint3" provider="endpoint6" state="new"/>
+        <connection consumer="endpoint10" provider="endpoint3" state="unchanged"/>
+        <connection consumer="endpoint4" provider="endpoint6" state="new"/>
     </connections>
     <porttypes>
         <link xlink:href="../jbiasa/QLThoiKhoaBieu.wsdl#xpointer(/definitions/portType[@name='dummyCasaPortType'])" xlink:type="simple"/>
