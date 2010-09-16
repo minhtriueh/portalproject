@@ -121,7 +121,7 @@ public class TaoThoiKhoaBieu_Result {
         long resultID = -1;
 
         try { // Call Web Service Operation
-            qlthoikhoabieu.QLThoiKhoaBieuService1 service = new qlthoikhoabieu.QLThoiKhoaBieuService1();
+            qlthoikhoabieu.QLThoiKhoaBieuService2 service = new qlthoikhoabieu.QLThoiKhoaBieuService2();
             qlthoikhoabieu.ThemTKBPortType port = service.getThemTKB();
             // TODO initialize WS operation arguments here
             // TODO process result here
