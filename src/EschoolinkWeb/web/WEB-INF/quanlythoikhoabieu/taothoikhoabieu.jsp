@@ -70,28 +70,28 @@
 
                             <label> Thứ 2</label>
                              <input type="hidden" name="thu2" value="2">
-                            <input type="button" id="addbutton2" value="+">
-                            <div id="Addchitiet2" align="center"></div>
+                            <input type="button" id="addbutton2" value="+"><br /><br />
+                            <div id="Addchitiet2" align="center"></div><br />
                             <label> Thứ 3</label>
                             <input type="hidden" name="thu3" value="3">
-                            <input type="button" id="addbutton3" value="+">
-                            <div id="Addchitiet3" align="center"></div>
+                            <input type="button" id="addbutton3" value="+"><br /><br />
+                            <div id="Addchitiet3" align="center"></div><br />
                             <label> Thứ 4</label>
                             <input type="hidden" name="thu4" value="4">
-                            <input type="button" id="addbutton4" value="+">
-                            <div id="Addchitiet4" align="center"></div>
+                            <input type="button" id="addbutton4" value="+"><br /><br />
+                            <div id="Addchitiet4" align="center"></div><br />
                             <label> Thứ 5</label>
                             <input type="hidden" name="thu5" value="5">
-                            <input type="button" id="addbutton5" value="+">
-                            <div id="Addchitiet5" align="center"></div>
+                            <input type="button" id="addbutton5" value="+"><br /><br />
+                            <div id="Addchitiet5" align="center"></div><br />
                             <label> Thứ 6</label>
                             <input type="hidden" name="thu6" value="6">
-                            <input type="button" id="addbutton6" value="+">
-                            <div id="Addchitiet6" align="center"></div>
+                            <input type="button" id="addbutton6" value="+"><br /><br />
+                            <div id="Addchitiet6" align="center"></div><br />
                             <label> Thứ 7</label>
                             <input type="hidden" name="thu7" value="7">
-                            <input type="button" id="addbutton7" value="+">
-                            <div id="Addchitiet7" align="center"></div>
+                            <input type="button" id="addbutton7" value="+"><br /><br />
+                            <div id="Addchitiet7" align="center"></div><br />
                         </fieldset>
 
                         <div id="fm-submit" class="fm-req">
@@ -113,13 +113,15 @@
 
 <div id="copythu2" style="display:none" align="center">
     <span>
-       
+        Chọn môn học :
         <select name="monhoc2">
             <c:forEach var="item" items="${dsmonhoc}">
                 <option value="${item.idMonhoc}">${item.tenmonhoc}</option>
 
             </c:forEach>
         </select>
+
+        Chọn giáo viên :
         <select name="giaovien2">
             <c:forEach var="item" items="${dsgiaovien}">
                 <option value="${item.id}">${item.tenGiaoVien}</option>
@@ -131,12 +133,14 @@
 
 <div id="copythu3" style="display:none" align="center">
      <span>
+         Chọn môn học :
         <select name="monhoc3">
             <c:forEach var="item" items="${dsmonhoc}">
                 <option value="${item.idMonhoc}">${item.tenmonhoc}</option>
 
             </c:forEach>
         </select>
+         Chọn giáo viên :
         <select name="giaovien3">
             <c:forEach var="item" items="${dsgiaovien}">
                 <option value="${item.id}">${item.tenGiaoVien}</option>
@@ -148,13 +152,14 @@
 
 <div id="copythu4" style="display:none" align="center">
     <span>
-
+Chọn môn học :
         <select name="monhoc4">
             <c:forEach var="item" items="${dsmonhoc}">
                 <option value="${item.idMonhoc}">${item.tenmonhoc}</option>
 
             </c:forEach>
         </select>
+Chọn giáo viên :
         <select name="giaovien4">
             <c:forEach var="item" items="${dsgiaovien}">
                 <option value="${item.id}">${item.tenGiaoVien}</option>
@@ -166,12 +171,14 @@
 
 <div id="copythu5" style="display:none" align="center">
     <span>
+        Chọn môn học :
         <select name="monhoc5">
             <c:forEach var="item" items="${dsmonhoc}">
                 <option value="${item.idMonhoc}">${item.tenmonhoc}</option>
 
             </c:forEach>
         </select>
+        Chọn giáo viên :
         <select name="giaovien5">
             <c:forEach var="item" items="${dsgiaovien}">
                 <option value="${item.id}">${item.tenGiaoVien}</option>
@@ -183,12 +190,14 @@
 
 <div id="copythu6" style="display:none" align="center">
     <span>
+        Chọn môn học :
         <select name="monhoc6">
             <c:forEach var="item" items="${dsmonhoc}">
                 <option value="${item.idMonhoc}">${item.tenmonhoc}</option>
 
             </c:forEach>
         </select>
+        Chọn giáo viên :
         <select name="giaovien6">
             <c:forEach var="item" items="${dsgiaovien}">
                 <option value="${item.id}">${item.tenGiaoVien}</option>
@@ -200,12 +209,14 @@
 
 <div id="copythu7" style="display:none" align="center">
     <span>
+        Chọn môn học :
         <select name="monhoc7">
             <c:forEach var="item" items="${dsmonhoc}">
                 <option value="${item.idMonhoc}">${item.tenmonhoc}</option>
 
             </c:forEach>
         </select>
+        Chọn giáo viên : 
         <select name="giaovien7">
             <c:forEach var="item" items="${dsgiaovien}">
                 <option value="${item.id}">${item.tenGiaoVien}</option>

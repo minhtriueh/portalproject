@@ -5,11 +5,14 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+
 <%@taglib prefix="s" uri="/struts-tags" %>
-
-
+<%@page import="org.netbeans.xml.schema.thoikhoabieu_eschoolinkobject.ThoiKhoaBieu" %>
+<%@page import="org.netbeans.xml.schema.thoikhoabieu_eschoolinkobject.ChiTietThoiKhoaBieu" %>
+<%@page import="java.util.List" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
     "http://www.w3.org/TR/html4/loose.dtd">
 
@@ -34,76 +37,58 @@
                 </div>
                 <div class="art-postcontent">
                     <!-- article-content -->
-                    
-                        <fieldset>
-                            <legend>Thông tin thời khóa biểu</legend>
 
-                            Lớp :
-                            Học kỳ :
-                            Năm học :
+                    <fieldset>
+                        <legend>Thông tin thời khóa biểu</legend>
+                        <center>
+                            <font size="2">Lớp <b><font color="red" size="4">${tenlop}</font></b>
+                                - Học kỳ <font color="blue" size="4"><b>${hocky}</b></font></font>
 
+                        <br /><br />
 
-                            <table class="myTable">
-                                <thead>
+                        <table class="myTable" style="width:350px">
+                            <%
+                            ThoiKhoaBieu thoikhoabieu = (ThoiKhoaBieu) request.getAttribute("thoikhoabieu");
+                List<ChiTietThoiKhoaBieu> ct = thoikhoabieu.getChiTietThoiKhoaBieu();
+            int i = 0;
+            for (int j = 2; j < 8; j++) {
 
-                                    <tr>
-                                        
-                                        <td width="100">Thứ 2</td>
-                                        <td width="100">Thứ 3</td>
-                                        <td width="100">Thứ 4</td>
-                                        <td width="100">Thứ 5</td>
-                                        <td width="100">Thứ 6</td>
-                                        <td width="100">Thứ 7</td>
+                            %>
+                            <thead>
 
-                                    </tr>
-                                </thead>
+                                <tr>
+                                    <td colspan="3"> Thứ <%=j%></td>
+                                </tr>
+                               
+                            </thead>
+                                
+                            <tbody>
+                                <tr class="tr1">
+                                    <td style="text-align:center"> Tiết </td>
+                                    <td style="text-align:center"> Môn Học </td>
+                                    <td style="text-align:center"> Giáo Viên</td>
+                                </tr>
+                                <%
 
-                                <tbody>
-                                    <tr>
-                                        <td>Toán</td>
-                                        <td>Toán</td>
-                                        <td>Toán</td>
-                                        <td>Toán</td>
-                                        <td>Toán</td>
-                                        <td>Toán</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Toán</td>
-                                        <td>Toán</td>
-                                        <td>Toán</td>
-                                        <td>Toán</td>
-                                        <td>Toán</td>
-                                        <td>Toán</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Toán</td>
-                                        <td>Toán</td>
-                                        <td>Toán</td>
-                                        <td>Toán</td>
-                                        <td>Toán</td>
-                                        <td>Toán</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Toán</td>
-                                        <td>Toán</td>
-                                        <td>Toán</td>
-                                        <td>Toán</td>
-                                        <td>Toán</td>
-                                        <td>Toán</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Toán</td>
-                                        <td>Toán</td>
-                                        <td>Toán</td>
-                                        <td>Toán</td>
-                                        <td>Toán</td>
-                                        <td>Toán</td>
-                                    </tr>
-                                   
-                                </tbody>
-                            </table>
+                for (; i < ct.size(); i++) {
+                    if (ct.get(i).getThu() == j) {
+                                %>
+                                <tr>
+                                    <td style="text-align:center"><%=ct.get(i).getTietThuMay()%></td>
+                                    <td style="text-align:center"><%=ct.get(i).getMonhoc().getTenMonHoc()%></td>
+                                    <td style="text-align:center"><%=ct.get(i).getGiaovien().getTenGiaoVien()%></td>
+                                </tr>
+                                <%  } else
+                        break;
+                                 }
+                                %>
 
-                        </fieldset>
+                            </tbody>
+
+                            <% }%>
+                        </table>
+                        </center>
+                    </fieldset>
 
 
                     <!-- /article-content -->
