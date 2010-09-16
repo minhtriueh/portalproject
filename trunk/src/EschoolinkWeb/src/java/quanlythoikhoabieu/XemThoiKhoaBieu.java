@@ -10,7 +10,9 @@ package quanlythoikhoabieu;
  * @author GIN
  */
 public class XemThoiKhoaBieu {
+  
     public String execute() throws Exception{
+
         return "success";
     }
 }
