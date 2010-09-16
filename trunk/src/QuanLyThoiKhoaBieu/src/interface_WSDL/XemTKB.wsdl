@@ -11,7 +11,7 @@
     </types>
     <message name="XemTKBOperationRequest">
         <part name="tenlop" type="xsd:string"/>
-        <part name="hocky" type="xsd:integer"/>
+        <part name="hocky" type="xsd:int"/>
     </message>
     <message name="XemTKBOperationResponse">
         <part name="thoikhoabieu" type="ns0:ThoiKhoaBieu"/>
@@ -29,6 +29,7 @@ A partner link type characterizes the conversational relationship between two se
         <plnk:role name="XemTKBPortTypeRole" portType="tns:XemTKBPortType"/>
     </plnk:partnerLinkType>
 </definitions>
+
 
 
 
