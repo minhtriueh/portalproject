@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP-ENV:Body>
+    <m:DangNhapOperationResponse xmlns:m="QLHeThongComApp" xmlns:msgns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DangNhap">
+      <checkDangNhap>false</checkDangNhap>
+      <user>
+        <ns1:id xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">0</ns1:id>
+        <ns1:Nhom xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+          <ns1:tenNhom>null</ns1:tenNhom>
+        </ns1:Nhom>
+      </user>
+    </m:DangNhapOperationResponse>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
