@@ -13,7 +13,8 @@
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/ThemTKB" location="../jbiServiceUnits/QuanLyThoiKhoaBieu/interface_WSDL/ThemTKB.wsdl"/>
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/XemTKB" location="../jbiServiceUnits/QuanLyThoiKhoaBieu/interface_WSDL/XemTKB.wsdl"/>
     <portType name="dummyCasaPortType"/>
-    <binding name="casaBinding1" type="ns:ThemTKBPortType">
+    <binding name="casaBinding1" type="tns:dummyCasaPortType"/>
+    <binding name="casaBinding2" type="ns:ThemTKBPortType">
         <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
         <operation name="ThemTKBOperation">
             <soap:operation/>
@@ -25,7 +26,6 @@
             </output>
         </operation>
     </binding>
-    <binding name="casaBinding2" type="tns:dummyCasaPortType"/>
     <binding name="casaBinding3" type="ns1:XemTKBPortType">
         <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
         <operation name="XemTKBOperation">
@@ -39,12 +39,12 @@
         </operation>
     </binding>
     <service name="QLThoiKhoaBieuService1">
-        <port name="themTKB" binding="tns:casaBinding1">
-            <soap:address location="http://localhost:${HttpDefaultPort}/QLThoiKhoaBieuService1/themTKB"/>
-        </port>
+        <port name="casaPort1" binding="tns:casaBinding1"/>
     </service>
     <service name="QLThoiKhoaBieuService2">
-        <port name="casaPort2" binding="tns:casaBinding2"/>
+        <port name="ThemTKB" binding="tns:casaBinding2">
+            <soap:address location="http://localhost:${HttpDefaultPort}/QLThoiKhoaBieuService2/ThemTKB"/>
+        </port>
     </service>
     <service name="QLThoiKhoaBieuService3">
         <port name="XemTKB" binding="tns:casaBinding3">
