@@ -35,7 +35,14 @@
 
                                                     <div class="fm-req">
                                                       <label>Nhập tên lớp</label>
-                                                      <input name="tenLop" type="text" />
+                                                      <input name="tenlop" type="text" />
+                                                    </div>
+                                                    <div class="fm-req">
+                                                      <label>Chọn học kỳ</label>
+                                                      <select name="hocky">
+                                                          <option value="1">Học kỳ 1</option>
+                                                          <option value="2">Học kỳ 2</option>
+                                                      </select>
                                                     </div>
                                                     
                                                     
