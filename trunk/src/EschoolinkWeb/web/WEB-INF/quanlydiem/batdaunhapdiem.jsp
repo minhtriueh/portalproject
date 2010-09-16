@@ -60,7 +60,7 @@
                     </div>
                 </form>
                 <!-- ket thuc thong tin -->
-                
+
                 <div class="cleared"></div>
             </div>
             <div class="cleared"></div>

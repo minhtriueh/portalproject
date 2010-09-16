@@ -11,6 +11,21 @@
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@taglib prefix="s" uri="/struts-tags" %>
 
+<script type="text/javascript" language="JavaScript">
+
+    function check(form) {
+        var checkGia=/([1-9])/;
+         if(form.diemnhap.value<=0){
+            alert("Điểm Phải Lớn Hơn 0");
+            return false;
+        }
+        else if (!checkGia.test(form.diemnhap.value)|| isNaN(form.diemnhap.value) && form.diemnhap.value!=null){
+            alert("Điểm Phải Là Số");
+            return false;
+        }
+    }
+</script>
+
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -43,7 +58,7 @@
                         <c:set value="${chitietdiems}" var="chitietdiems" scope="session"></c:set>
 
                         <!-- bat dau thong tin -->
-                        <form action="LuuDiem" method="post">
+                        <form action="LuuDiem" method="post" onsubmit="return check(this);">
                             <div class="art-postcontent">
                                 Môn Học:<c:out value="${monhoc}"></c:out>
                                 Lớp:<c:out value="${lop}"></c:out>
@@ -58,17 +73,17 @@
 
                                 <!-- bat dau bang -->
                             <div>
-                                <table class="myTable">
+                                <table class="myTable" style="width:930px">
                                     <thead>
                                         <tr>
-                                            <td>STT</td>
-                                            <td>Ho Ten</td>
+                                            <td width="30" align="center">STT</td>
+                                            <td width="130" align="center">Ho Ten</td>
                                             <c:forEach var="cotdiem" items="${cotdiems}">
-                                                <td>
+                                                <td width="30">
                                                     <c:out value="${cotdiem.kyhieu}-${cotdiem.lan}"></c:out>
                                                 </td>
                                             </c:forEach>
-                                            <td>TBHK</td>
+                                                <td width="40">TBHK</td>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -76,8 +91,8 @@
                                         <!-- hien thi danh sach hoc sinh va danh sach diem cua hoc sinh -->
                                         <c:forEach var="chitietdiem" items="${chitietdiems}">
                                             <tr>
-                                                <td><c:out value="${chitietdiem.sothutu}"></c:out></td>
-                                                <td>
+                                                <td align="center"><c:out value="${chitietdiem.sothutu}"></c:out></td>
+                                                <td width="130">
                                                     <c:out value="${chitietdiem.hovaten}"></c:out>
                                                     <c:out value="${chitietdiem.ten}"></c:out>
                                                 </td>

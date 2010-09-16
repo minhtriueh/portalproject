@@ -4,6 +4,8 @@
  */
 package quanlydiem;
 
+import com.opensymphony.xwork2.ActionContext;
+import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import org.apache.struts2.ServletActionContext;
 
@@ -19,7 +21,9 @@ public class TongKetDiem {
     }
 
     public String execute() throws Exception {
-        long idGiaovienChuNhiem = 1;
+        Map session = ActionContext.getContext().getSession();
+        Long idgv = (Long) session.get("userId");
+        long idGiaovienChuNhiem = idgv;
 //call service lay lop ma giao vien chu nhiem
         try { // Call Web Service Operation
             qldiemcomapp.QLDiemComAppService60 service = new qldiemcomapp.QLDiemComAppService60();
