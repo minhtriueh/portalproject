@@ -8,14 +8,17 @@
     xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
     xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
     xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor"
-    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2" xmlns:ns0="http://j2ee.netbeans.org/xsd/tableSchema">
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2" xmlns:ns0="http://j2ee.netbeans.org/xsd/tableSchema" xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DangNhap" location="../interface_WSDL/DangNhap.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_DangNhap" location="../DB_WSDL/DB_DangNhap.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    
     <partnerLinks>
         <partnerLink name="PL_DB_DangNhap" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_DangNhap" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
         <partnerLink name="PL_DangNhap" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DangNhap" partnerLinkType="tns:DangNhap" myRole="DangNhapPortTypeRole"/>
     </partnerLinks>
     <variables>
+        
+        
         <variable name="DangNhapOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_DangNhap" messageType="tns:outputMsg"/>
         <variable name="DangNhapIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_DangNhap" messageType="tns:inputMsg"/>
         <variable name="DangNhapOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DangNhap" messageType="tns:DangNhapOperationResponse"/>
@@ -43,4 +46,6 @@
         <reply name="Reply1" partnerLink="PL_DangNhap" operation="DangNhapOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DangNhap" portType="tns:DangNhapPortType" variable="DangNhapOperationOut"/>
     </sequence>
 </process>
+
+
 

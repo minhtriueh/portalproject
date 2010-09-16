@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process
+    name="LoadUserId"
+    targetNamespace="http://enterprise.netbeans.org/bpel/QuanLyHeThong/LoadUserId"
+    xmlns:tns="http://enterprise.netbeans.org/bpel/QuanLyHeThong/LoadUserId"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
+    xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor"
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2" xmlns:ns0="http://j2ee.netbeans.org/xsd/tableSchema" xmlns:ns1="http://xml.netbeans.org/schema/EschoolinkObject">
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/LoadUserId" location="../interface_WSDL/LoadUserId.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_loadNguoiDungTuUsername" location="../DB_WSDL/quanlynguoidung/DB_loadNguoiDungTuUsername.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <partnerLinks>
+        <partnerLink name="PartnerLink2" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_loadNguoiDungTuUsername" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="PartnerLink1" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/LoadUserId" partnerLinkType="tns:LoadUserId" myRole="LoadUserIdPortTypeRole"/>
+    </partnerLinks>
+    <variables>
+        <variable name="Newuntitled_OperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_loadNguoiDungTuUsername" messageType="tns:outputMsg">
+            <sxed2:editor>
+                <sxed2:predicate path="$Newuntitled_OperationOut.part/ns0:DB_loadNguoiDungTuUsername_Record[1]" source="from"/>
+            </sxed2:editor>
+        </variable>
+        <variable name="Newuntitled_OperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_loadNguoiDungTuUsername" messageType="tns:inputMsg"/>
+        <variable name="LoadUserIdOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/LoadUserId" messageType="tns:LoadUserIdOperationResponse"/>
+        <variable name="LoadUserIdOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/LoadUserId" messageType="tns:LoadUserIdOperationRequest"/>
+    </variables>
+    <sequence>
+        <receive name="Receive1" createInstance="yes" partnerLink="PartnerLink1" operation="LoadUserIdOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/LoadUserId" portType="tns:LoadUserIdPortType" variable="LoadUserIdOperationIn"/>
+        <assign name="Assign1">
+            <copy>
+                <from variable="LoadUserIdOperationIn" part="username"/>
+                <to>$Newuntitled_OperationIn.part/ns0:username</to>
+            </copy>
+            <copy>
+                <from variable="LoadUserIdOperationIn" part="pass"/>
+                <to>$Newuntitled_OperationIn.part/ns0:password</to>
+            </copy>
+        </assign>
+        <invoke name="Invoke1" partnerLink="PartnerLink2" operation="newuntitled_Operation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/DB_loadNguoiDungTuUsername" portType="tns:jdbcPortType" inputVariable="Newuntitled_OperationIn" outputVariable="Newuntitled_OperationOut"/>
+        <assign name="Assign2">
+            <copy>
+                <from>$Newuntitled_OperationOut.part/ns0:DB_loadNguoiDungTuUsername_Record[1]/ns0:id_nguoidung
+                    <sxed2:editor>
+                        <sxed2:predicate path="$Newuntitled_OperationOut.part/ns0:DB_loadNguoiDungTuUsername_Record[1]" source="from"/>
+                    </sxed2:editor>
+                </from>
+                <to>$LoadUserIdOperationOut.user/ns1:id</to>
+            </copy>
+            <copy>
+                <from>$Newuntitled_OperationOut.part/ns0:DB_loadNguoiDungTuUsername_Record[1]/ns0:tennhom
+                    <sxed2:editor>
+                        <sxed2:predicate path="$Newuntitled_OperationOut.part/ns0:DB_loadNguoiDungTuUsername_Record[1]" source="from"/>
+                    </sxed2:editor>
+                </from>
+                <to>$LoadUserIdOperationOut.user/ns1:Nhom/ns1:tenNhom</to>
+            </copy>
+        </assign>
+        <reply name="Reply1" partnerLink="PartnerLink1" operation="LoadUserIdOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/QuanLyHeThong/LoadUserId" portType="tns:LoadUserIdPortType" variable="LoadUserIdOperationOut"/>
+    </sequence>
+</process>
+
