@@ -70,7 +70,7 @@
             </ul>
         </li>
         <li>
-            <a href="#" ><span class="l"></span><span class="r"></span><span class="t">Xem thời khóa biểu</span></a>
+            <a href="XemThoiKhoaBieu" ><span class="l"></span><span class="r"></span><span class="t">Xem thời khóa biểu</span></a>
         </li>
         <c:if test="${login==true}">
             <li>
@@ -114,6 +114,81 @@
         </c:if>
         
         <li>
+<<<<<<< .mine
+            <a href="#"><span class="l"></span><span class="r"></span><span class="t">Quản lý</span></a>
+            <ul>
+                <li><a href="#">Học sinh</a>
+                    <ul>
+                        <li><a href="TaoHocSinh">Thêm học sinh</a></li>
+                        <li><a href="#">Tìm kiếm học sinh</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Giáo Viên</a>
+                    <ul>
+                        <li><a href="ThongTinBanDau">Thêm Giáo Viên</a></li>
+                        <li><a href="index.jsp?module=quanlygiaovien&page=searchgiaovien">Tra Cứu Giáo Viên</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Học Bạ</a>
+                    <ul>
+                        <li><a href="index.jsp?module=quanlyhocba&page=tracuuhocba">Đánh Giá Học Lực-Hạnh Kiểm</a></li>
+                        <li><a href="KhoiTaoTrangChinhSuaHocBa">Tra cứu và Chỉnh Sửa</a></li>
+                    </ul>
+                </li>
+
+                
+                <li><a href="#">Chủ nhiệm</a></li>
+                <li><a href="#">Sổ điểm môn học</a>
+                    <ul>
+                        <li><a href="BatDauNhapDiem">Nhập Điểm</a></li>
+                        <li><a href="TongKetDiem">Tổng Kết Điểm</a></li>
+                    </ul>
+                </li>
+
+
+                <li>
+                    <a href="#">Thời khóa biểu</a>
+                    <ul>
+                        <li><a href="TaoThoiKhoaBieu">Tạo thời khóa biểu</a></li>
+
+                    </ul>
+                </li>
+
+                <li><a href="#">Thông tin khởi tạo</a>
+            <ul>
+                <li><a href="TaoTruong">Tạo trường</a></li>
+                    <li><a href="TaoQuyen">Tạo quyền</a></li>
+                    <li><a href="TaoNhom">Tạo nhóm</a></li>
+                    <li><a href="TaoNamHoc">Tạo năm học</a></li>
+                    <li><a href="TaoMonHoc">Tạo môn học</a></li>
+
+                    <li><a href="TaoLop">Tạo lớp</a></li>
+                    <li><a href="TaoKhoiLop">Tạo khối lớp</a></li>
+                    <li><a href="TaoHocLuc">Tạo học lực</a></li>
+                   <li> <a href="TaoHieuTruong">Tạo hiệu trưởng</a></li>
+                    <li><a href="TaoHanhKiem">Tạo hạnh kiểm</a></li>
+
+                    <li><a href="TaoDanToc">Tạo dân tộc</a></li>
+                    <li><a href="TaoCoSo">Tạo cơ sở</a></li>
+                   <li> <a href="TaoBoMon">Tạo bộ môn</a></li>
+
+
+
+                </li>
+
+            </ul>
+
+        </li>
+
+
+            </ul>
+        </li>
+
+        
+
+        <li>
+=======
+>>>>>>> .r318
             <a href="#"><span class="l"></span><span class="r"></span><span class="t">Liên hệ</span></a>
         </li>
         <c:if test="${empty login || login==false}">
