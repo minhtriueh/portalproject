@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process
+    name="ManagerSetState"
+    targetNamespace="http://enterprise.netbeans.org/bpel/SendMessToDean/ManagerSetState"
+    xmlns:tns="http://enterprise.netbeans.org/bpel/SendMessToDean/ManagerSetState"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
+    xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor"
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2" xmlns:ns0="http://j2ee.netbeans.org/xsd/tableSchema">
+    <import namespace="http://j2ee.netbeans.org/wsdl/SendMessToDean/ManagerSetState" location="../externalProcess/WSDLInterface/ManagerSetState.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_updateStateMessToManager" location="database/DB_updateStateMessToManager.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <partnerLinks>
+        <partnerLink name="PartnerLink2" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_updateStateMessToManager" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="PartnerLink1" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/ManagerSetState" partnerLinkType="tns:ManagerSetState" myRole="ManagerSetStatePortTypeRole"/>
+    </partnerLinks>
+    <variables>
+        <variable name="ExecuteOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_updateStateMessToManager" messageType="tns:outputMsg"/>
+        <variable name="ExecuteIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_updateStateMessToManager" messageType="tns:inputMsg"/>
+        <variable name="ManagerSetStateOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/ManagerSetState" messageType="tns:ManagerSetStateOperationResponse"/>
+        <variable name="ManagerSetStateOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/ManagerSetState" messageType="tns:ManagerSetStateOperationRequest"/>
+    </variables>
+    <sequence>
+        <receive name="Receive1" createInstance="yes" partnerLink="PartnerLink1" operation="ManagerSetStateOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/ManagerSetState" portType="tns:ManagerSetStatePortType" variable="ManagerSetStateOperationIn"/>
+        <assign name="Assign1">
+            <copy>
+                <from variable="ManagerSetStateOperationIn" part="id_"/>
+                <to>$ExecuteIn.part/ns0:id_</to>
+            </copy>
+            <copy>
+                <from variable="ManagerSetStateOperationIn" part="state_"/>
+                <to>$ExecuteIn.part/ns0:state_</to>
+            </copy>
+            <copy>
+                <from variable="ManagerSetStateOperationIn" part="note_"/>
+                <to>$ExecuteIn.part/ns0:note_</to>
+            </copy>
+        </assign>
+        <invoke name="Invoke1" partnerLink="PartnerLink2" operation="execute" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_updateStateMessToManager" portType="tns:jdbcPortType" inputVariable="ExecuteIn" outputVariable="ExecuteOut"/>
+        <assign name="Assign2">
+            <copy>
+                <from>$ExecuteOut.part/ns0:returnValue</from>
+                <to variable="ManagerSetStateOperationOut" part="result"/>
+            </copy>
+        </assign>
+        <reply name="Reply1" partnerLink="PartnerLink1" operation="ManagerSetStateOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/ManagerSetState" portType="tns:ManagerSetStatePortType" variable="ManagerSetStateOperationOut"/>
+    </sequence>
+</process>
+
+

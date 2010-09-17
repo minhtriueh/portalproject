@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP-ENV:Body>
+    <m:LoadMessageByIdMessageOperationResponse xmlns:m="SendMessToDeanComApp" xmlns:msgns="http://j2ee.netbeans.org/wsdl/SendMessToDean/LoadMessageByIdMessage">
+      <result>
+        <ns1:id xmlns:ns1="http://xml.netbeans.org/schema/myObject" isNull="false">36</ns1:id>
+        <ns1:hoVaTen xmlns:ns1="http://xml.netbeans.org/schema/myObject" isNull="false">kakak                                                                                               </ns1:hoVaTen>
+        <ns1:MSSV xmlns:ns1="http://xml.netbeans.org/schema/myObject" isNull="false">789899              </ns1:MSSV>
+        <ns1:message xmlns:ns1="http://xml.netbeans.org/schema/myObject" isNull="false">Tại vòng bán kết của chương trình 'America's Got Talent', cô bé lên 10 Jackie Evancho hoàn toàn chinh phục khán giả lẫn ban giám khảo khi thể hiện ca khúc nổi tiếng 'Time To Say Goodbye'.</ns1:message>
+        <ns1:feedBack xmlns:ns1="http://xml.netbeans.org/schema/myObject" isNull="true"/>
+        <ns1:time xmlns:ns1="http://xml.netbeans.org/schema/myObject" isNull="false">2010-09-06 22:28:13.813+07</ns1:time>
+        <ns1:state xmlns:ns1="http://xml.netbeans.org/schema/myObject" isNull="false">solved                                                                                              </ns1:state>
+        <ns1:HistoryProcessItem xmlns:ns1="http://xml.netbeans.org/schema/myObject">
+          <ns1:id isNull="false">47</ns1:id>
+          <ns1:place isNull="false">Manager                                                                                             </ns1:place>
+          <ns1:state isNull="false">ok                                                                                                  </ns1:state>
+          <ns1:note isNull="false">pass                                                                                                                                                                                                    </ns1:note>
+          <ns1:timearive isNull="false">2010-09-06 22:28:13.83+07</ns1:timearive>
+          <ns1:timeleave isNull="false">2010-09-06 22:28:43.879+07</ns1:timeleave>
+        </ns1:HistoryProcessItem>
+        <ns1:HistoryProcessItem xmlns:ns1="http://xml.netbeans.org/schema/myObject">
+          <ns1:id isNull="false">48</ns1:id>
+          <ns1:place isNull="false">Secretary                                                                                           </ns1:place>
+          <ns1:state isNull="false">no                                                                                                  </ns1:state>
+          <ns1:note isNull="false">not pass                                                                                                                                                                                                </ns1:note>
+          <ns1:timearive isNull="false">2010-09-06 22:28:43.898+07</ns1:timearive>
+          <ns1:timeleave isNull="false">2010-09-06 22:29:13.953+07</ns1:timeleave>
+        </ns1:HistoryProcessItem>
+      </result>
+    </m:LoadMessageByIdMessageOperationResponse>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

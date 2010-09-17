@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<casa xmlns="http://java.sun.com/xml/ns/casa" xmlns:ns1="SendMessToDeanComApp" xmlns:ns10="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_updateFeedBack" xmlns:ns11="http://j2ee.netbeans.org/wsdl/SendMessToDean/Db_updateStateOfMess" xmlns:ns12="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_insertMessToTeacher" xmlns:ns13="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_loadStateOfMessToTeacher" xmlns:ns14="http://j2ee.netbeans.org/wsdl/SendMessToDean/SendMessTODean2" xmlns:ns15="http://j2ee.netbeans.org/wsdl/SendMessToDean/feedback" xmlns:ns16="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_updateStateMessToSecretary" xmlns:ns17="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_updateStateMessToTeacher" xmlns:ns18="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_updateStateMessToManager" xmlns:ns19="http://j2ee.netbeans.org/wsdl/SendMessToDean/SecretarySetState" xmlns:ns2="http://j2ee.netbeans.org/wsdl/SendMessToDean/SendMessToDean" xmlns:ns20="http://j2ee.netbeans.org/wsdl/SendMessToDean/ManagerSetState" xmlns:ns21="http://j2ee.netbeans.org/wsdl/SendMessToDean/TeacherSetState" xmlns:ns22="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_loadMessageWaitting" xmlns:ns23="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_loadHistoryProcessItem" xmlns:ns24="http://j2ee.netbeans.org/wsdl/SendMessToDean/LoadMessagesWaiting" xmlns:ns25="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_LoadMessageByIdMessage" xmlns:ns26="http://j2ee.netbeans.org/wsdl/SendMessToDean/LoadMessageByIdMessage" xmlns:ns27="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_loadMessagesOfTeacher" xmlns:ns28="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_loadMessagesOfSecretary" xmlns:ns29="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_loadMessagesOfManager" xmlns:ns3="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_insertMess" xmlns:ns30="http://j2ee.netbeans.org/wsdl/SendMessToDean/loadMessageOfStation" xmlns:ns31="http://enterprise.netbeans.org/bpel/SendMessToDean/LoadMessageByIdMessage" xmlns:ns32="http://enterprise.netbeans.org/bpel/SendMessToDean/loadMessageOfStation" xmlns:ns33="http://enterprise.netbeans.org/bpel/SendMessToDean/LoadMessagesWaiting" xmlns:ns34="http://enterprise.netbeans.org/bpel/SendMessToDean/ManagerSetState" xmlns:ns35="http://enterprise.netbeans.org/bpel/SendMessToDean/SecretarySetState" xmlns:ns36="http://enterprise.netbeans.org/bpel/SendMessToDean/TeacherSetState" xmlns:ns37="http://enterprise.netbeans.org/bpel/SendMessToDean/ChangeStateOfHistory" xmlns:ns38="http://j2ee.netbeans.org/wsdl/SendMessToDean/ChangeStateOfHistory" xmlns:ns39="http://enterprise.netbeans.org/bpel/SendMessToDean/ChangeStateOfMess" xmlns:ns4="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_insertMessToManager" xmlns:ns40="http://j2ee.netbeans.org/wsdl/SendMessToDean/ChangeStateOfMess" xmlns:ns41="http://enterprise.netbeans.org/bpel/SendMessToDean/feedback" xmlns:ns42="http://enterprise.netbeans.org/bpel/SendMessToDean/ManagerReview" xmlns:ns43="http://j2ee.netbeans.org/wsdl/SendMessToDean/ManagerReview" xmlns:ns44="http://enterprise.netbeans.org/bpel/SendMessToDean/SecretaryReview" xmlns:ns45="http://j2ee.netbeans.org/wsdl/SendMessToDean/SecretaryReview" xmlns:ns46="http://enterprise.netbeans.org/bpel/SendMessToDean/SendMessToDean" xmlns:ns47="http://enterprise.netbeans.org/bpel/SendMessToDean/SendMessTODean2" xmlns:ns48="http://enterprise.netbeans.org/bpel/SendMessToDean/TeacherReview" xmlns:ns49="http://j2ee.netbeans.org/wsdl/SendMessToDean/TeacherReview" xmlns:ns5="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_loadStateOfMessToManager" xmlns:ns6="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_insertHistory" xmlns:ns7="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_insertMessToSceretary" xmlns:ns8="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_loadStateOfMessToSecretary" xmlns:ns9="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_updateHistory" xmlns:xlink="http://www.w3.org/2000/xlink">
+    <endpoints>
+        <endpoint endpoint-name="sendMessToDean" interface-name="ns2:SendMessToDeanPortType" name="endpoint1" service-name="ns1:SendMessToDeanComAppService1"/>
+        <endpoint endpoint-name="port" interface-name="ns3:jdbcPortType" name="endpoint2" service-name="ns3:service"/>
+        <endpoint endpoint-name="port" interface-name="ns4:jdbcPortType" name="endpoint3" service-name="ns4:service"/>
+        <endpoint endpoint-name="port" interface-name="ns5:jdbcPortType" name="endpoint4" service-name="ns5:service"/>
+        <endpoint endpoint-name="port" interface-name="ns6:jdbcPortType" name="endpoint5" service-name="ns6:service"/>
+        <endpoint endpoint-name="port" interface-name="ns7:jdbcPortType" name="endpoint6" service-name="ns7:service"/>
+        <endpoint endpoint-name="port" interface-name="ns8:jdbcPortType" name="endpoint7" service-name="ns8:service"/>
+        <endpoint endpoint-name="port" interface-name="ns9:jdbcPortType" name="endpoint8" service-name="ns9:service"/>
+        <endpoint endpoint-name="port" interface-name="ns10:jdbcPortType" name="endpoint9" service-name="ns10:service"/>
+        <endpoint endpoint-name="port" interface-name="ns11:jdbcPortType" name="endpoint10" service-name="ns11:service"/>
+        <endpoint endpoint-name="port" interface-name="ns12:jdbcPortType" name="endpoint11" service-name="ns12:service"/>
+        <endpoint endpoint-name="port" interface-name="ns13:jdbcPortType" name="endpoint12" service-name="ns13:service"/>
+        <endpoint endpoint-name="SendMessToDean2" interface-name="ns14:SendMessTODean2PortType" name="endpoint13" service-name="ns1:SendMessToDeanComAppService2"/>
+        <endpoint endpoint-name="feedBack" interface-name="ns15:feedbackPortType" name="endpoint14" service-name="ns1:SendMessToDeanComAppService3"/>
+        <endpoint endpoint-name="port" interface-name="ns16:jdbcPortType" name="endpoint15" service-name="ns16:service"/>
+        <endpoint endpoint-name="port" interface-name="ns17:jdbcPortType" name="endpoint16" service-name="ns17:service"/>
+        <endpoint endpoint-name="port" interface-name="ns18:jdbcPortType" name="endpoint17" service-name="ns18:service"/>
+        <endpoint endpoint-name="SecretarySetStatePort" interface-name="ns19:SecretarySetStatePortType" name="endpoint18" service-name="ns19:SecretarySetStateService"/>
+        <endpoint endpoint-name="SecretarySetState" interface-name="ns19:SecretarySetStatePortType" name="endpoint19" service-name="ns1:SendMessToDeanComAppService4"/>
+        <endpoint endpoint-name="ManagerSetState" interface-name="ns20:ManagerSetStatePortType" name="endpoint20" service-name="ns1:SendMessToDeanComAppService5"/>
+        <endpoint endpoint-name="TeacherSetState" interface-name="ns21:TeacherSetStatePortType" name="endpoint21" service-name="ns1:SendMessToDeanComAppService6"/>
+        <endpoint endpoint-name="port" interface-name="ns22:jdbcPortType" name="endpoint22" service-name="ns22:service"/>
+        <endpoint endpoint-name="port" interface-name="ns23:jdbcPortType" name="endpoint23" service-name="ns23:service"/>
+        <endpoint endpoint-name="LoadMessagesWaiting" interface-name="ns24:LoadMessagesWaitingPortType" name="endpoint24" service-name="ns1:SendMessToDeanComAppService7"/>
+        <endpoint endpoint-name="port" interface-name="ns25:jdbcPortType" name="endpoint25" service-name="ns25:service"/>
+        <endpoint endpoint-name="LoadMessageByIdMessage" interface-name="ns26:LoadMessageByIdMessagePortType" name="endpoint26" service-name="ns1:SendMessToDeanComAppService8"/>
+        <endpoint endpoint-name="port" interface-name="ns27:jdbcPortType" name="endpoint27" service-name="ns27:service"/>
+        <endpoint endpoint-name="port" interface-name="ns28:jdbcPortType" name="endpoint28" service-name="ns28:service"/>
+        <endpoint endpoint-name="port" interface-name="ns29:jdbcPortType" name="endpoint29" service-name="ns29:service"/>
+        <endpoint endpoint-name="loadMessageOfStation" interface-name="ns30:loadMessageOfStationPortType" name="endpoint30" service-name="ns1:SendMessToDeanComAppService9"/>
+        <endpoint display-name="PartnerLink1" endpoint-name="LoadMessageByIdMessagePortTypeRole_myRole" file-path="externalProcess\LoadMessageByIdMessage.bpel" interface-name="ns26:LoadMessageByIdMessagePortType" name="endpoint31" process-name="LoadMessageByIdMessage" service-name="ns31:PartnerLink1"/>
+        <endpoint display-name="PartnerLink1" endpoint-name="loadMessageOfStationPortTypeRole_myRole" file-path="externalProcess\loadMessageOfStation.bpel" interface-name="ns30:loadMessageOfStationPortType" name="endpoint32" process-name="loadMessageOfStation" service-name="ns32:PartnerLink1"/>
+        <endpoint display-name="PartnerLink1" endpoint-name="LoadMessagesWaitingPortTypeRole_myRole" file-path="externalProcess\LoadMessagesWaiting.bpel" interface-name="ns24:LoadMessagesWaitingPortType" name="endpoint33" process-name="LoadMessagesByState" service-name="ns33:PartnerLink1"/>
+        <endpoint display-name="PartnerLink1" endpoint-name="ManagerSetStatePortTypeRole_myRole" file-path="externalProcess\ManagerSetState.bpel" interface-name="ns20:ManagerSetStatePortType" name="endpoint34" process-name="ManagerSetState" service-name="ns34:PartnerLink1"/>
+        <endpoint display-name="PartnerLink1" endpoint-name="SecretarySetStatePortTypeRole_myRole" file-path="externalProcess\SecretarySetState.bpel" interface-name="ns19:SecretarySetStatePortType" name="endpoint35" process-name="SecretarySetState" service-name="ns35:PartnerLink1"/>
+        <endpoint display-name="PartnerLink2" endpoint-name="TeacherSetStatePortTypeRole_myRole" file-path="externalProcess\TeacherSetState.bpel" interface-name="ns21:TeacherSetStatePortType" name="endpoint36" process-name="TeacherSetState" service-name="ns36:PartnerLink2"/>
+        <endpoint display-name="PartnerLink1" endpoint-name="ChangeStateOfHistoryPortTypeRole_myRole" file-path="internalProcess\ChangeStateOfHistory.bpel" interface-name="ns38:ChangeStateOfHistoryPortType" name="endpoint37" process-name="ChangeStateOfHistory" service-name="ns37:PartnerLink1"/>
+        <endpoint display-name="PartnerLink2" endpoint-name="ChangeStateOfMessPortTypeRole_myRole" file-path="internalProcess\ChangeStateOfMess.bpel" interface-name="ns40:ChangeStateOfMessPortType" name="endpoint38" process-name="ChangeStateOfMess" service-name="ns39:PartnerLink2"/>
+        <endpoint display-name="PartnerLink1" endpoint-name="feedbackPortTypeRole_myRole" file-path="internalProcess\feedback.bpel" interface-name="ns15:feedbackPortType" name="endpoint39" process-name="feedback" service-name="ns41:PartnerLink1"/>
+        <endpoint display-name="PartnerLink1" endpoint-name="ManagerReviewPortTypeRole_myRole" file-path="ManagerReview.bpel" interface-name="ns43:ManagerReviewPortType" name="endpoint40" process-name="ManagerReview" service-name="ns42:PartnerLink1"/>
+        <endpoint display-name="PartnerLink1" endpoint-name="SecretaryReviewPortTypeRole_myRole" file-path="SecretaryReview.bpel" interface-name="ns45:SecretaryReviewPortType" name="endpoint41" process-name="SecretaryReview" service-name="ns44:PartnerLink1"/>
+        <endpoint display-name="PartnerLink1" endpoint-name="SendMessToDeanPortTypeRole_myRole" file-path="SendMessToDean.bpel" interface-name="ns2:SendMessToDeanPortType" name="endpoint42" process-name="SendMessToDean" service-name="ns46:PartnerLink1"/>
+        <endpoint display-name="PartnerLink1" endpoint-name="SendMessTODean2PortTypeRole_myRole" file-path="SendMessTODean2.bpel" interface-name="ns14:SendMessTODean2PortType" name="endpoint43" process-name="SendMessTODean2" service-name="ns47:PartnerLink1"/>
+        <endpoint display-name="PartnerLink1" endpoint-name="TeacherReviewPortTypeRole_myRole" file-path="TeacherReview.bpel" interface-name="ns49:TeacherReviewPortType" name="endpoint44" process-name="TeacherReview" service-name="ns48:PartnerLink1"/>
+        <endpoint display-name="loadMess" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="externalProcess\LoadMessageByIdMessage.bpel" interface-name="ns25:jdbcPortType" name="endpoint45" process-name="LoadMessageByIdMessage" service-name="ns31:loadMess"/>
+        <endpoint display-name="loadHis" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="externalProcess\LoadMessageByIdMessage.bpel" interface-name="ns23:jdbcPortType" name="endpoint46" process-name="LoadMessageByIdMessage" service-name="ns31:loadHis"/>
+        <endpoint display-name="messManager" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="externalProcess\loadMessageOfStation.bpel" interface-name="ns29:jdbcPortType" name="endpoint47" process-name="loadMessageOfStation" service-name="ns32:messManager"/>
+        <endpoint display-name="messSecretary" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="externalProcess\loadMessageOfStation.bpel" interface-name="ns28:jdbcPortType" name="endpoint48" process-name="loadMessageOfStation" service-name="ns32:messSecretary"/>
+        <endpoint display-name="meesTeacher" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="externalProcess\loadMessageOfStation.bpel" interface-name="ns27:jdbcPortType" name="endpoint49" process-name="loadMessageOfStation" service-name="ns32:meesTeacher"/>
+        <endpoint display-name="loadMess" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="externalProcess\LoadMessagesWaiting.bpel" interface-name="ns22:jdbcPortType" name="endpoint50" process-name="LoadMessagesByState" service-name="ns33:loadMess"/>
+        <endpoint display-name="loadHistory" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="externalProcess\LoadMessagesWaiting.bpel" interface-name="ns23:jdbcPortType" name="endpoint51" process-name="LoadMessagesByState" service-name="ns33:loadHistory"/>
+        <endpoint display-name="PartnerLink2" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="externalProcess\ManagerSetState.bpel" interface-name="ns18:jdbcPortType" name="endpoint52" process-name="ManagerSetState" service-name="ns34:PartnerLink2"/>
+        <endpoint display-name="PartnerLink2" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="externalProcess\SecretarySetState.bpel" interface-name="ns16:jdbcPortType" name="endpoint53" process-name="SecretarySetState" service-name="ns35:PartnerLink2"/>
+        <endpoint display-name="PartnerLink1" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="externalProcess\TeacherSetState.bpel" interface-name="ns17:jdbcPortType" name="endpoint54" process-name="TeacherSetState" service-name="ns36:PartnerLink1"/>
+        <endpoint display-name="PartnerLink2" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="internalProcess\ChangeStateOfHistory.bpel" interface-name="ns9:jdbcPortType" name="endpoint55" process-name="ChangeStateOfHistory" service-name="ns37:PartnerLink2"/>
+        <endpoint display-name="PartnerLink1" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="internalProcess\ChangeStateOfMess.bpel" interface-name="ns11:jdbcPortType" name="endpoint56" process-name="ChangeStateOfMess" service-name="ns39:PartnerLink1"/>
+        <endpoint display-name="PartnerLink2" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="internalProcess\feedback.bpel" interface-name="ns10:jdbcPortType" name="endpoint57" process-name="feedback" service-name="ns41:PartnerLink2"/>
+        <endpoint display-name="history" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="ManagerReview.bpel" interface-name="ns6:jdbcPortType" name="endpoint58" process-name="ManagerReview" service-name="ns42:history"/>
+        <endpoint display-name="PartnerLink2" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="ManagerReview.bpel" interface-name="ns4:jdbcPortType" name="endpoint59" process-name="ManagerReview" service-name="ns42:PartnerLink2"/>
+        <endpoint display-name="loadState" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="ManagerReview.bpel" interface-name="ns5:jdbcPortType" name="endpoint60" process-name="ManagerReview" service-name="ns42:loadState"/>
+        <endpoint display-name="setStateHistory" endpoint-name="ChangeStateOfHistoryPortTypeRole_partnerRole" file-path="ManagerReview.bpel" interface-name="ns38:ChangeStateOfHistoryPortType" name="endpoint61" process-name="ManagerReview" service-name="ns42:setStateHistory"/>
+        <endpoint display-name="history" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="SecretaryReview.bpel" interface-name="ns6:jdbcPortType" name="endpoint62" process-name="SecretaryReview" service-name="ns44:history"/>
+        <endpoint display-name="secretary" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="SecretaryReview.bpel" interface-name="ns7:jdbcPortType" name="endpoint63" process-name="SecretaryReview" service-name="ns44:secretary"/>
+        <endpoint display-name="StateOfSecre" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="SecretaryReview.bpel" interface-name="ns8:jdbcPortType" name="endpoint64" process-name="SecretaryReview" service-name="ns44:StateOfSecre"/>
+        <endpoint display-name="setStateHistory" endpoint-name="ChangeStateOfHistoryPortTypeRole_partnerRole" file-path="SecretaryReview.bpel" interface-name="ns38:ChangeStateOfHistoryPortType" name="endpoint65" process-name="SecretaryReview" service-name="ns44:setStateHistory"/>
+        <endpoint display-name="insertMess" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="SendMessToDean.bpel" interface-name="ns3:jdbcPortType" name="endpoint66" process-name="SendMessToDean" service-name="ns46:insertMess"/>
+        <endpoint display-name="manager" endpoint-name="ManagerReviewPortTypeRole_partnerRole" file-path="SendMessToDean.bpel" interface-name="ns43:ManagerReviewPortType" name="endpoint67" process-name="SendMessToDean" service-name="ns46:manager"/>
+        <endpoint display-name="Secretary" endpoint-name="SecretaryReviewPortTypeRole_partnerRole" file-path="SendMessToDean.bpel" interface-name="ns45:SecretaryReviewPortType" name="endpoint68" process-name="SendMessToDean" service-name="ns46:Secretary"/>
+        <endpoint display-name="teacher" endpoint-name="TeacherReviewPortTypeRole_partnerRole" file-path="SendMessToDean.bpel" interface-name="ns49:TeacherReviewPortType" name="endpoint69" process-name="SendMessToDean" service-name="ns46:teacher"/>
+        <endpoint display-name="setStateOfMess" endpoint-name="ChangeStateOfMessPortTypeRole_partnerRole" file-path="SendMessToDean.bpel" interface-name="ns40:ChangeStateOfMessPortType" name="endpoint70" process-name="SendMessToDean" service-name="ns46:setStateOfMess"/>
+        <endpoint display-name="TaoMess" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="SendMessTODean2.bpel" interface-name="ns3:jdbcPortType" name="endpoint71" process-name="SendMessTODean2" service-name="ns47:TaoMess"/>
+        <endpoint display-name="teacher" endpoint-name="TeacherReviewPortTypeRole_partnerRole" file-path="SendMessTODean2.bpel" interface-name="ns49:TeacherReviewPortType" name="endpoint72" process-name="SendMessTODean2" service-name="ns47:teacher"/>
+        <endpoint display-name="setStateOfMess" endpoint-name="ChangeStateOfMessPortTypeRole_partnerRole" file-path="SendMessTODean2.bpel" interface-name="ns40:ChangeStateOfMessPortType" name="endpoint73" process-name="SendMessTODean2" service-name="ns47:setStateOfMess"/>
+        <endpoint display-name="insertHis" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="TeacherReview.bpel" interface-name="ns6:jdbcPortType" name="endpoint74" process-name="TeacherReview" service-name="ns48:insertHis"/>
+        <endpoint display-name="insertMessToTeacher" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="TeacherReview.bpel" interface-name="ns12:jdbcPortType" name="endpoint75" process-name="TeacherReview" service-name="ns48:insertMessToTeacher"/>
+        <endpoint display-name="loadState" endpoint-name="jdbcPortTypeRole_partnerRole" file-path="TeacherReview.bpel" interface-name="ns13:jdbcPortType" name="endpoint76" process-name="TeacherReview" service-name="ns48:loadState"/>
+        <endpoint display-name="setStateHis" endpoint-name="ChangeStateOfHistoryPortTypeRole_partnerRole" file-path="TeacherReview.bpel" interface-name="ns38:ChangeStateOfHistoryPortType" name="endpoint77" process-name="TeacherReview" service-name="ns48:setStateHis"/>
+    </endpoints>
+    <service-units>
+        <service-engine-service-unit artifacts-zip="SendMessToDean.jar" component-name="sun-bpel-engine" defined="true" description="Represents this Service Unit" internal="true" name="SendMessToDeanComApp-SendMessToDean" unit-name="SendMessToDean" unknown="false" x="136" y="99">
+            <provides endpoint="endpoint31"/>
+            <provides endpoint="endpoint32"/>
+            <provides endpoint="endpoint33"/>
+            <provides endpoint="endpoint34"/>
+            <provides endpoint="endpoint35"/>
+            <provides endpoint="endpoint36"/>
+            <provides endpoint="endpoint37"/>
+            <provides endpoint="endpoint38"/>
+            <provides endpoint="endpoint39"/>
+            <provides endpoint="endpoint40"/>
+            <provides endpoint="endpoint41"/>
+            <provides endpoint="endpoint42"/>
+            <provides endpoint="endpoint43"/>
+            <provides endpoint="endpoint44"/>
+            <consumes endpoint="endpoint45"/>
+            <consumes endpoint="endpoint46"/>
+            <consumes endpoint="endpoint47"/>
+            <consumes endpoint="endpoint48"/>
+            <consumes endpoint="endpoint49"/>
+            <consumes endpoint="endpoint50"/>
+            <consumes endpoint="endpoint51"/>
+            <consumes endpoint="endpoint52"/>
+            <consumes endpoint="endpoint53"/>
+            <consumes endpoint="endpoint54"/>
+            <consumes endpoint="endpoint55"/>
+            <consumes endpoint="endpoint56"/>
+            <consumes endpoint="endpoint57"/>
+            <consumes endpoint="endpoint58"/>
+            <consumes endpoint="endpoint59"/>
+            <consumes endpoint="endpoint60"/>
+            <consumes endpoint="endpoint61"/>
+            <consumes endpoint="endpoint62"/>
+            <consumes endpoint="endpoint63"/>
+            <consumes endpoint="endpoint64"/>
+            <consumes endpoint="endpoint65"/>
+            <consumes endpoint="endpoint66"/>
+            <consumes endpoint="endpoint67"/>
+            <consumes endpoint="endpoint68"/>
+            <consumes endpoint="endpoint69"/>
+            <consumes endpoint="endpoint70"/>
+            <consumes endpoint="endpoint71"/>
+            <consumes endpoint="endpoint72"/>
+            <consumes endpoint="endpoint73"/>
+            <consumes endpoint="endpoint74"/>
+            <consumes endpoint="endpoint75"/>
+            <consumes endpoint="endpoint76"/>
+            <consumes endpoint="endpoint77"/>
+        </service-engine-service-unit>
+        <binding-component-service-unit artifacts-zip="sun-database-binding.jar" component-name="sun-database-binding" description="Represents this Service Unit" name="SendMessToDeanComApp-sun-database-binding" unit-name="sun-database-binding">
+            <ports>
+                <port x="67" y="2367">
+                    <link xlink:href="../jbiServiceUnits/SendMessToDean/database/DB_insertHistory.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint5"/>
+                    <provides endpoint="endpoint5"/>
+                </port>
+                <port x="67" y="2764">
+                    <link xlink:href="../jbiServiceUnits/SendMessToDean/database/DB_insertMess.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint2"/>
+                    <provides endpoint="endpoint2"/>
+                </port>
+                <port x="67" y="2658">
+                    <link xlink:href="../jbiServiceUnits/SendMessToDean/database/DB_insertMessToManager.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint3"/>
+                    <provides endpoint="endpoint3"/>
+                </port>
+                <port x="67" y="2261">
+                    <link xlink:href="../jbiServiceUnits/SendMessToDean/database/DB_insertMessToSceretary.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint6"/>
+                    <provides endpoint="endpoint6"/>
+                </port>
+                <port x="67" y="1652">
+                    <link xlink:href="../jbiServiceUnits/SendMessToDean/database/DB_insertMessToTeacher.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint11"/>
+                    <provides endpoint="endpoint11"/>
+                </port>
+                <port x="67" y="2552">
+                    <link xlink:href="../jbiServiceUnits/SendMessToDean/database/DB_loadStateOfMessToManager.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint4"/>
+                    <provides endpoint="endpoint4"/>
+                </port>
+                <port x="67" y="2155">
+                    <link xlink:href="../jbiServiceUnits/SendMessToDean/database/DB_loadStateOfMessToSecretary.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint7"/>
+                    <provides endpoint="endpoint7"/>
+                </port>
+                <port x="67" y="1467">
+                    <link xlink:href="../jbiServiceUnits/SendMessToDean/database/DB_loadStateOfMessToTeacher.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint12"/>
+                    <provides endpoint="endpoint12"/>
+                </port>
+                <port x="67" y="727">
+                    <link xlink:href="../jbiServiceUnits/SendMessToDean/externalProcess/database/DB_loadHistoryProcessItem.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint23"/>
+                    <provides endpoint="endpoint23"/>
+                </port>
+                <port x="67" y="436">
+                    <link xlink:href="../jbiServiceUnits/SendMessToDean/externalProcess/database/DB_LoadMessageByIdMessage.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint25"/>
+                    <provides endpoint="endpoint25"/>
+                </port>
+                <port x="67" y="330">
+                    <link xlink:href="../jbiServiceUnits/SendMessToDean/externalProcess/database/DB_loadMessagesOfManager.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint29"/>
+                    <provides endpoint="endpoint29"/>
+                </port>
+                <port x="67" y="224">
+                    <link xlink:href="../jbiServiceUnits/SendMessToDean/externalProcess/database/DB_loadMessagesOfSecretary.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint28"/>
+                    <provides endpoint="endpoint28"/>
+                </port>
+                <port x="67" y="118">
+                    <link xlink:href="../jbiServiceUnits/SendMessToDean/externalProcess/database/DB_loadMessagesOfTeacher.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint27"/>
+                    <provides endpoint="endpoint27"/>
+                </port>
+                <port x="67" y="542">
+                    <link xlink:href="../jbiServiceUnits/SendMessToDean/externalProcess/database/DB_loadMessageWaitting.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint22"/>
+                    <provides endpoint="endpoint22"/>
+                </port>
+                <port x="67" y="1124">
+                    <link xlink:href="../jbiServiceUnits/SendMessToDean/externalProcess/database/DB_updateStateMessToManager.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint17"/>
+                    <provides endpoint="endpoint17"/>
+                </port>
+                <port x="67" y="1018">
+                    <link xlink:href="../jbiServiceUnits/SendMessToDean/externalProcess/database/DB_updateStateMessToSecretary.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint15"/>
+                    <provides endpoint="endpoint15"/>
+                </port>
+                <port x="67" y="912">
+                    <link xlink:href="../jbiServiceUnits/SendMessToDean/externalProcess/database/DB_updateStateMessToTeacher.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint16"/>
+                    <provides endpoint="endpoint16"/>
+                </port>
+                <port x="67" y="2049">
+                    <link xlink:href="../jbiServiceUnits/SendMessToDean/internalProcess/database/DB_updateFeedBack.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint9"/>
+                    <provides endpoint="endpoint9"/>
+                </port>
+                <port x="67" y="1864">
+                    <link xlink:href="../jbiServiceUnits/SendMessToDean/internalProcess/database/DB_updateHistory.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint8"/>
+                    <provides endpoint="endpoint8"/>
+                </port>
+                <port x="67" y="1758">
+                    <link xlink:href="../jbiServiceUnits/SendMessToDean/internalProcess/database/Db_updateStateOfMess.wsdl#xpointer(/definitions/service[@name='service']/port[@name='port'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint10"/>
+                    <provides endpoint="endpoint10"/>
+                </port>
+            </ports>
+        </binding-component-service-unit>
+        <binding-component-service-unit artifacts-zip="sun-http-binding.jar" component-name="sun-http-binding" description="Represents this Service Unit" name="SendMessToDeanComApp-sun-http-binding" unit-name="sun-http-binding">
+            <ports>
+                <port bindingType="soap" x="67" y="2870">
+                    <link xlink:href="../jbiasa/SendMessToDeanComApp.wsdl#xpointer(/definitions/service[@name='SendMessToDeanComAppService1']/port[@name='sendMessToDean'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint1"/>
+                    <provides endpoint="endpoint1"/>
+                </port>
+                <port bindingType="soap" x="67" y="1309">
+                    <link xlink:href="../jbiasa/SendMessToDeanComApp.wsdl#xpointer(/definitions/service[@name='SendMessToDeanComAppService2']/port[@name='SendMessToDean2'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint13"/>
+                    <provides endpoint="endpoint13"/>
+                </port>
+                <port bindingType="soap" x="67" y="2473">
+                    <link xlink:href="../jbiasa/SendMessToDeanComApp.wsdl#xpointer(/definitions/service[@name='SendMessToDeanComAppService3']/port[@name='feedBack'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint14"/>
+                    <provides endpoint="endpoint14"/>
+                </port>
+                <port bindingType="soap" x="67" y="1573">
+                    <link xlink:href="../jbiasa/SendMessToDeanComApp.wsdl#xpointer(/definitions/service[@name='SendMessToDeanComAppService4']/port[@name='SecretarySetState'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint19"/>
+                    <provides endpoint="endpoint19"/>
+                </port>
+                <port bindingType="soap" x="67" y="1230">
+                    <link xlink:href="../jbiasa/SendMessToDeanComApp.wsdl#xpointer(/definitions/service[@name='SendMessToDeanComAppService5']/port[@name='ManagerSetState'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint20"/>
+                    <provides endpoint="endpoint20"/>
+                </port>
+                <port bindingType="soap" x="67" y="1970">
+                    <link xlink:href="../jbiasa/SendMessToDeanComApp.wsdl#xpointer(/definitions/service[@name='SendMessToDeanComAppService6']/port[@name='TeacherSetState'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint21"/>
+                    <provides endpoint="endpoint21"/>
+                </port>
+                <port bindingType="soap" x="67" y="833">
+                    <link xlink:href="../jbiasa/SendMessToDeanComApp.wsdl#xpointer(/definitions/service[@name='SendMessToDeanComAppService7']/port[@name='LoadMessagesWaiting'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint24"/>
+                    <provides endpoint="endpoint24"/>
+                </port>
+                <port bindingType="soap" x="67" y="648">
+                    <link xlink:href="../jbiasa/SendMessToDeanComApp.wsdl#xpointer(/definitions/service[@name='SendMessToDeanComAppService8']/port[@name='LoadMessageByIdMessage'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint26"/>
+                    <provides endpoint="endpoint26"/>
+                </port>
+                <port bindingType="soap" x="67" y="1388">
+                    <link xlink:href="../jbiasa/SendMessToDeanComApp.wsdl#xpointer(/definitions/service[@name='SendMessToDeanComAppService9']/port[@name='loadMessageOfStation'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint30"/>
+                    <provides endpoint="endpoint30"/>
+                </port>
+                <port x="67" y="39">
+                    <link xlink:href="../jbiServiceUnits/SendMessToDean/externalProcess/WSDLInterface/SecretarySetState.wsdl#xpointer(/definitions/service[@name='SecretarySetStateService']/port[@name='SecretarySetStatePort'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint18"/>
+                    <provides endpoint="endpoint18"/>
+                </port>
+            </ports>
+        </binding-component-service-unit>
+    </service-units>
+    <connections>
+        <connection consumer="endpoint20" provider="endpoint34" state="new"/>
+        <connection consumer="endpoint50" provider="endpoint22" state="unchanged"/>
+        <connection consumer="endpoint75" provider="endpoint11" state="unchanged"/>
+        <connection consumer="endpoint53" provider="endpoint15" state="unchanged"/>
+        <connection consumer="endpoint76" provider="endpoint12" state="unchanged"/>
+        <connection consumer="endpoint66" provider="endpoint2" state="unchanged"/>
+        <connection consumer="endpoint71" provider="endpoint2" state="unchanged"/>
+        <connection consumer="endpoint59" provider="endpoint3" state="unchanged"/>
+        <connection consumer="endpoint68" provider="endpoint41" state="unchanged"/>
+        <connection consumer="endpoint64" provider="endpoint7" state="unchanged"/>
+        <connection consumer="endpoint67" provider="endpoint40" state="unchanged"/>
+        <connection consumer="endpoint19" provider="endpoint35" state="new"/>
+        <connection consumer="endpoint18" provider="endpoint35" state="unchanged"/>
+        <connection consumer="endpoint56" provider="endpoint10" state="unchanged"/>
+        <connection consumer="endpoint60" provider="endpoint4" state="unchanged"/>
+        <connection consumer="endpoint45" provider="endpoint25" state="unchanged"/>
+        <connection consumer="endpoint61" provider="endpoint37" state="unchanged"/>
+        <connection consumer="endpoint65" provider="endpoint37" state="unchanged"/>
+        <connection consumer="endpoint77" provider="endpoint37" state="unchanged"/>
+        <connection consumer="endpoint63" provider="endpoint6" state="unchanged"/>
+        <connection consumer="endpoint54" provider="endpoint16" state="unchanged"/>
+        <connection consumer="endpoint26" provider="endpoint31" state="new"/>
+        <connection consumer="endpoint55" provider="endpoint8" state="unchanged"/>
+        <connection consumer="endpoint70" provider="endpoint38" state="unchanged"/>
+        <connection consumer="endpoint73" provider="endpoint38" state="unchanged"/>
+        <connection consumer="endpoint49" provider="endpoint27" state="unchanged"/>
+        <connection consumer="endpoint57" provider="endpoint9" state="unchanged"/>
+        <connection consumer="endpoint24" provider="endpoint33" state="new"/>
+        <connection consumer="endpoint58" provider="endpoint5" state="unchanged"/>
+        <connection consumer="endpoint62" provider="endpoint5" state="unchanged"/>
+        <connection consumer="endpoint74" provider="endpoint5" state="unchanged"/>
+        <connection consumer="endpoint14" provider="endpoint39" state="new"/>
+        <connection consumer="endpoint46" provider="endpoint23" state="unchanged"/>
+        <connection consumer="endpoint51" provider="endpoint23" state="unchanged"/>
+        <connection consumer="endpoint48" provider="endpoint28" state="unchanged"/>
+        <connection consumer="endpoint1" provider="endpoint42" state="new"/>
+        <connection consumer="endpoint47" provider="endpoint29" state="unchanged"/>
+        <connection consumer="endpoint69" provider="endpoint44" state="unchanged"/>
+        <connection consumer="endpoint72" provider="endpoint44" state="unchanged"/>
+        <connection consumer="endpoint13" provider="endpoint43" state="new"/>
+        <connection consumer="endpoint52" provider="endpoint17" state="unchanged"/>
+        <connection consumer="endpoint30" provider="endpoint32" state="new"/>
+        <connection consumer="endpoint21" provider="endpoint36" state="new"/>
+    </connections>
+    <porttypes>
+        <link xlink:href="../jbiasa/SendMessToDeanComApp.wsdl#xpointer(/definitions/portType[@name='dummyCasaPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/database/DB_insertHistory.wsdl#xpointer(/definitions/portType[@name='jdbcPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/database/DB_insertMess.wsdl#xpointer(/definitions/portType[@name='jdbcPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/database/DB_insertMessToManager.wsdl#xpointer(/definitions/portType[@name='jdbcPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/database/DB_insertMessToSceretary.wsdl#xpointer(/definitions/portType[@name='jdbcPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/database/DB_insertMessToTeacher.wsdl#xpointer(/definitions/portType[@name='jdbcPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/database/DB_loadStateOfMessToManager.wsdl#xpointer(/definitions/portType[@name='jdbcPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/database/DB_loadStateOfMessToSecretary.wsdl#xpointer(/definitions/portType[@name='jdbcPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/database/DB_loadStateOfMessToTeacher.wsdl#xpointer(/definitions/portType[@name='jdbcPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/externalProcess/database/DB_loadHistoryProcessItem.wsdl#xpointer(/definitions/portType[@name='jdbcPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/externalProcess/database/DB_LoadMessageByIdMessage.wsdl#xpointer(/definitions/portType[@name='jdbcPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/externalProcess/database/DB_loadMessagesOfManager.wsdl#xpointer(/definitions/portType[@name='jdbcPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/externalProcess/database/DB_loadMessagesOfSecretary.wsdl#xpointer(/definitions/portType[@name='jdbcPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/externalProcess/database/DB_loadMessagesOfTeacher.wsdl#xpointer(/definitions/portType[@name='jdbcPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/externalProcess/database/DB_loadMessageWaitting.wsdl#xpointer(/definitions/portType[@name='jdbcPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/externalProcess/database/DB_updateStateMessToManager.wsdl#xpointer(/definitions/portType[@name='jdbcPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/externalProcess/database/DB_updateStateMessToSecretary.wsdl#xpointer(/definitions/portType[@name='jdbcPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/externalProcess/database/DB_updateStateMessToTeacher.wsdl#xpointer(/definitions/portType[@name='jdbcPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/externalProcess/WSDLInterface/LoadMessageByIdMessage.wsdl#xpointer(/definitions/portType[@name='LoadMessageByIdMessagePortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/externalProcess/WSDLInterface/loadMessageOfStation.wsdl#xpointer(/definitions/portType[@name='loadMessageOfStationPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/externalProcess/WSDLInterface/LoadMessagesWaiting.wsdl#xpointer(/definitions/portType[@name='LoadMessagesWaitingPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/externalProcess/WSDLInterface/ManagerSetState.wsdl#xpointer(/definitions/portType[@name='ManagerSetStatePortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/externalProcess/WSDLInterface/SecretarySetState.wsdl#xpointer(/definitions/portType[@name='SecretarySetStatePortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/externalProcess/WSDLInterface/TeacherSetState.wsdl#xpointer(/definitions/portType[@name='TeacherSetStatePortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/internalProcess/ChangeStateOfHistory.wsdl#xpointer(/definitions/portType[@name='ChangeStateOfHistoryPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/internalProcess/ChangeStateOfMess.wsdl#xpointer(/definitions/portType[@name='ChangeStateOfMessPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/internalProcess/database/DB_updateFeedBack.wsdl#xpointer(/definitions/portType[@name='jdbcPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/internalProcess/database/DB_updateHistory.wsdl#xpointer(/definitions/portType[@name='jdbcPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/internalProcess/database/Db_updateStateOfMess.wsdl#xpointer(/definitions/portType[@name='jdbcPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/internalProcess/feedback.wsdl#xpointer(/definitions/portType[@name='feedbackPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/WSDLInterface/ManagerReview.wsdl#xpointer(/definitions/portType[@name='ManagerReviewPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/WSDLInterface/SecretaryReview.wsdl#xpointer(/definitions/portType[@name='SecretaryReviewPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/WSDLInterface/SendMessToDean.wsdl#xpointer(/definitions/portType[@name='SendMessToDeanPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/WSDLInterface/SendMessTODean2.wsdl#xpointer(/definitions/portType[@name='SendMessTODean2PortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/WSDLInterface/TeacherReview.wsdl#xpointer(/definitions/portType[@name='TeacherReviewPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDeanComApp.wsdl#xpointer(/definitions/portType[@name='dummyCasaPortType'])" xlink:type="simple"/>
+    </porttypes>
+    <bindings>
+        <link xlink:href="../jbiasa/SendMessToDeanComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding1'])" xlink:type="simple"/>
+        <link xlink:href="../jbiasa/SendMessToDeanComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding2'])" xlink:type="simple"/>
+        <link xlink:href="../jbiasa/SendMessToDeanComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding3'])" xlink:type="simple"/>
+        <link xlink:href="../jbiasa/SendMessToDeanComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding4'])" xlink:type="simple"/>
+        <link xlink:href="../jbiasa/SendMessToDeanComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding5'])" xlink:type="simple"/>
+        <link xlink:href="../jbiasa/SendMessToDeanComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding6'])" xlink:type="simple"/>
+        <link xlink:href="../jbiasa/SendMessToDeanComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding7'])" xlink:type="simple"/>
+        <link xlink:href="../jbiasa/SendMessToDeanComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding8'])" xlink:type="simple"/>
+        <link xlink:href="../jbiasa/SendMessToDeanComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding9'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/database/DB_insertHistory.wsdl#xpointer(/definitions/binding[@name='binding'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/database/DB_insertMess.wsdl#xpointer(/definitions/binding[@name='binding'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/database/DB_insertMessToManager.wsdl#xpointer(/definitions/binding[@name='binding'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/database/DB_insertMessToSceretary.wsdl#xpointer(/definitions/binding[@name='binding'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/database/DB_insertMessToTeacher.wsdl#xpointer(/definitions/binding[@name='binding'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/database/DB_loadStateOfMessToManager.wsdl#xpointer(/definitions/binding[@name='binding'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/database/DB_loadStateOfMessToSecretary.wsdl#xpointer(/definitions/binding[@name='binding'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/database/DB_loadStateOfMessToTeacher.wsdl#xpointer(/definitions/binding[@name='binding'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/externalProcess/database/DB_loadHistoryProcessItem.wsdl#xpointer(/definitions/binding[@name='binding'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/externalProcess/database/DB_LoadMessageByIdMessage.wsdl#xpointer(/definitions/binding[@name='binding'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/externalProcess/database/DB_loadMessagesOfManager.wsdl#xpointer(/definitions/binding[@name='binding'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/externalProcess/database/DB_loadMessagesOfSecretary.wsdl#xpointer(/definitions/binding[@name='binding'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/externalProcess/database/DB_loadMessagesOfTeacher.wsdl#xpointer(/definitions/binding[@name='binding'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/externalProcess/database/DB_loadMessageWaitting.wsdl#xpointer(/definitions/binding[@name='binding'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/externalProcess/database/DB_updateStateMessToManager.wsdl#xpointer(/definitions/binding[@name='binding'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/externalProcess/database/DB_updateStateMessToSecretary.wsdl#xpointer(/definitions/binding[@name='binding'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/externalProcess/database/DB_updateStateMessToTeacher.wsdl#xpointer(/definitions/binding[@name='binding'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/externalProcess/WSDLInterface/SecretarySetState.wsdl#xpointer(/definitions/binding[@name='SecretarySetStateBinding'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/internalProcess/database/DB_updateFeedBack.wsdl#xpointer(/definitions/binding[@name='binding'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/internalProcess/database/DB_updateHistory.wsdl#xpointer(/definitions/binding[@name='binding'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/internalProcess/database/Db_updateStateOfMess.wsdl#xpointer(/definitions/binding[@name='binding'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDeanComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding1'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDeanComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding2'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDeanComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding3'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDeanComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding4'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDeanComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding5'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDeanComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding6'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDeanComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding7'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDeanComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding8'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDeanComApp.wsdl#xpointer(/definitions/binding[@name='casaBinding9'])" xlink:type="simple"/>
+    </bindings>
+    <services>
+        <link xlink:href="../jbiasa/SendMessToDeanComApp.wsdl#xpointer(/definitions/service[@name='SendMessToDeanComAppService1'])" xlink:type="simple"/>
+        <link xlink:href="../jbiasa/SendMessToDeanComApp.wsdl#xpointer(/definitions/service[@name='SendMessToDeanComAppService2'])" xlink:type="simple"/>
+        <link xlink:href="../jbiasa/SendMessToDeanComApp.wsdl#xpointer(/definitions/service[@name='SendMessToDeanComAppService3'])" xlink:type="simple"/>
+        <link xlink:href="../jbiasa/SendMessToDeanComApp.wsdl#xpointer(/definitions/service[@name='SendMessToDeanComAppService4'])" xlink:type="simple"/>
+        <link xlink:href="../jbiasa/SendMessToDeanComApp.wsdl#xpointer(/definitions/service[@name='SendMessToDeanComAppService5'])" xlink:type="simple"/>
+        <link xlink:href="../jbiasa/SendMessToDeanComApp.wsdl#xpointer(/definitions/service[@name='SendMessToDeanComAppService6'])" xlink:type="simple"/>
+        <link xlink:href="../jbiasa/SendMessToDeanComApp.wsdl#xpointer(/definitions/service[@name='SendMessToDeanComAppService7'])" xlink:type="simple"/>
+        <link xlink:href="../jbiasa/SendMessToDeanComApp.wsdl#xpointer(/definitions/service[@name='SendMessToDeanComAppService8'])" xlink:type="simple"/>
+        <link xlink:href="../jbiasa/SendMessToDeanComApp.wsdl#xpointer(/definitions/service[@name='SendMessToDeanComAppService9'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/database/DB_insertHistory.wsdl#xpointer(/definitions/service[@name='service'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/database/DB_insertMess.wsdl#xpointer(/definitions/service[@name='service'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/database/DB_insertMessToManager.wsdl#xpointer(/definitions/service[@name='service'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/database/DB_insertMessToSceretary.wsdl#xpointer(/definitions/service[@name='service'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/database/DB_insertMessToTeacher.wsdl#xpointer(/definitions/service[@name='service'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/database/DB_loadStateOfMessToManager.wsdl#xpointer(/definitions/service[@name='service'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/database/DB_loadStateOfMessToSecretary.wsdl#xpointer(/definitions/service[@name='service'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/database/DB_loadStateOfMessToTeacher.wsdl#xpointer(/definitions/service[@name='service'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/externalProcess/database/DB_loadHistoryProcessItem.wsdl#xpointer(/definitions/service[@name='service'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/externalProcess/database/DB_LoadMessageByIdMessage.wsdl#xpointer(/definitions/service[@name='service'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/externalProcess/database/DB_loadMessagesOfManager.wsdl#xpointer(/definitions/service[@name='service'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/externalProcess/database/DB_loadMessagesOfSecretary.wsdl#xpointer(/definitions/service[@name='service'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/externalProcess/database/DB_loadMessagesOfTeacher.wsdl#xpointer(/definitions/service[@name='service'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/externalProcess/database/DB_loadMessageWaitting.wsdl#xpointer(/definitions/service[@name='service'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/externalProcess/database/DB_updateStateMessToManager.wsdl#xpointer(/definitions/service[@name='service'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/externalProcess/database/DB_updateStateMessToSecretary.wsdl#xpointer(/definitions/service[@name='service'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/externalProcess/database/DB_updateStateMessToTeacher.wsdl#xpointer(/definitions/service[@name='service'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/externalProcess/WSDLInterface/SecretarySetState.wsdl#xpointer(/definitions/service[@name='SecretarySetStateService'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/internalProcess/database/DB_updateFeedBack.wsdl#xpointer(/definitions/service[@name='service'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/internalProcess/database/DB_updateHistory.wsdl#xpointer(/definitions/service[@name='service'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDean/internalProcess/database/Db_updateStateOfMess.wsdl#xpointer(/definitions/service[@name='service'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDeanComApp.wsdl#xpointer(/definitions/service[@name='SendMessToDeanComAppService1'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDeanComApp.wsdl#xpointer(/definitions/service[@name='SendMessToDeanComAppService2'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDeanComApp.wsdl#xpointer(/definitions/service[@name='SendMessToDeanComAppService3'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDeanComApp.wsdl#xpointer(/definitions/service[@name='SendMessToDeanComAppService4'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDeanComApp.wsdl#xpointer(/definitions/service[@name='SendMessToDeanComAppService5'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDeanComApp.wsdl#xpointer(/definitions/service[@name='SendMessToDeanComAppService6'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDeanComApp.wsdl#xpointer(/definitions/service[@name='SendMessToDeanComAppService7'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDeanComApp.wsdl#xpointer(/definitions/service[@name='SendMessToDeanComAppService8'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SendMessToDeanComApp.wsdl#xpointer(/definitions/service[@name='SendMessToDeanComAppService9'])" xlink:type="simple"/>
+    </services>
+    <regions>
+        <region name="WSDL Endpoints" width="150"/>
+        <region name="JBI Modules" width="500"/>
+        <region name="External Modules" width="200"/>
+    </regions>
+</casa>

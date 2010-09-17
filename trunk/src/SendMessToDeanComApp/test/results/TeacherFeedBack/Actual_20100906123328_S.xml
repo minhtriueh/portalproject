@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP-ENV:Body>
+    <m:feedbackOperationResponse xmlns:m="SendMessToDeanComApp" xmlns:msgns="http://j2ee.netbeans.org/wsdl/SendMessToDean/feedback">
+      <result xmlns:msgns="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_updateFeedBack" xmlns:ns0="http://j2ee.netbeans.org/wsdl/SendMessToDean/feedback" isNull="false">true</result>
+    </m:feedbackOperationResponse>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

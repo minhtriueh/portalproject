@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process
+    name="TeacherReview"
+    targetNamespace="http://enterprise.netbeans.org/bpel/SendMessToDean/TeacherReview"
+    xmlns:tns="http://enterprise.netbeans.org/bpel/SendMessToDean/TeacherReview"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
+    xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor"
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2" xmlns:ns0="http://j2ee.netbeans.org/xsd/tableSchema">
+    <import namespace="http://j2ee.netbeans.org/wsdl/SendMessToDean/TeacherReview" location="WSDLInterface/TeacherReview.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_insertHistory" location="database/DB_insertHistory.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_insertMessToTeacher" location="database/DB_insertMessToTeacher.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_loadStateOfMessToTeacher" location="database/DB_loadStateOfMessToTeacher.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/SendMessToDean/ChangeStateOfHistory" location="internalProcess/ChangeStateOfHistory.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <partnerLinks>
+        <partnerLink name="insertHis" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_insertHistory" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="insertMessToTeacher" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_insertMessToTeacher" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="loadState" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_loadStateOfMessToTeacher" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="setStateHis" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/ChangeStateOfHistory" partnerLinkType="tns:ChangeStateOfHistory" partnerRole="ChangeStateOfHistoryPortTypeRole"/>
+        <partnerLink name="PartnerLink1" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/TeacherReview" partnerLinkType="tns:TeacherReview" myRole="TeacherReviewPortTypeRole"/>
+    </partnerLinks>
+    <variables>
+        <variable name="ChangeStateOfHistoryOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/ChangeStateOfHistory" messageType="tns:ChangeStateOfHistoryOperationResponse"/>
+        <variable name="ChangeStateOfHistoryOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/ChangeStateOfHistory" messageType="tns:ChangeStateOfHistoryOperationRequest"/>
+        <variable name="loadStateOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_loadStateOfMessToTeacher" messageType="tns:outputMsg">
+            <sxed2:editor>
+                <sxed2:predicate path="$loadStateOut.part/ns0:DB_loadStateOfMessToTeacher_Record[1]" source="from"/>
+            </sxed2:editor>
+        </variable>
+        <variable name="loadStateIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_loadStateOfMessToTeacher" messageType="tns:inputMsg"/>
+        <variable name="note" type="xs:string"/>
+        <variable name="state" type="xs:string"/>
+        <variable name="insertMessToTeacherOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_insertMessToTeacher" messageType="tns:outputMsg"/>
+        <variable name="insertMessToTeacherIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_insertMessToTeacher" messageType="tns:inputMsg"/>
+        <variable name="insertHistoryOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_insertHistory" messageType="tns:outputMsg"/>
+        <variable name="insertHistoryIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_insertHistory" messageType="tns:inputMsg"/>
+        <variable name="TeacherReviewOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/TeacherReview" messageType="tns:TeacherReviewOperationResponse"/>
+        <variable name="TeacherReviewOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/TeacherReview" messageType="tns:TeacherReviewOperationRequest"/>
+    </variables>
+    <sequence>
+        <receive name="Receive1" createInstance="yes" partnerLink="PartnerLink1" operation="TeacherReviewOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/TeacherReview" portType="tns:TeacherReviewPortType" variable="TeacherReviewOperationIn"/>
+        <assign name="Assign1">
+            <copy>
+                <from variable="TeacherReviewOperationIn" part="idMess"/>
+                <to>$insertHistoryIn.part/ns0:idMessage</to>
+            </copy>
+            <copy>
+                <from>'Teacher'</from>
+                <to>$insertHistoryIn.part/ns0:place</to>
+            </copy>
+            <copy>
+                <from>'wait'</from>
+                <to variable="state"/>
+            </copy>
+        </assign>
+        <invoke name="createHis" partnerLink="insertHis" operation="execute" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_insertHistory" portType="tns:jdbcPortType" inputVariable="insertHistoryIn" outputVariable="insertHistoryOut"/>
+        <assign name="Assign2">
+            <copy>
+                <from>$insertHistoryOut.part/ns0:returnValue</from>
+                <to>$insertMessToTeacherIn.part/ns0:id_history</to>
+            </copy>
+            <copy>
+                <from variable="TeacherReviewOperationIn" part="idMess"/>
+                <to>$insertMessToTeacherIn.part/ns0:idMessage</to>
+            </copy>
+        </assign>
+        <invoke name="insertMessforTeacher" partnerLink="insertMessToTeacher" operation="execute" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_insertMessToTeacher" portType="tns:jdbcPortType" inputVariable="insertMessToTeacherIn" outputVariable="insertMessToTeacherOut"/>
+        <while name="While1">
+            <condition>$state = 'wait'</condition>
+            <sequence name="Sequence1">
+                <wait name="Wait1">
+                    <for>'P0Y0M0DT0H0M30.0S'</for>
+                </wait>
+                <assign name="Assign3">
+                    <copy>
+                        <from>$insertMessToTeacherOut.part/ns0:returnValue</from>
+                        <to>$loadStateIn.part/ns0:id</to>
+                    </copy>
+                </assign>
+                <invoke name="checkState" partnerLink="loadState" operation="newuntitled_Operation" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_loadStateOfMessToTeacher" portType="tns:jdbcPortType" inputVariable="loadStateIn" outputVariable="loadStateOut"/>
+                <assign name="Assign4">
+                    <copy>
+                        <from>$loadStateOut.part/ns0:DB_loadStateOfMessToTeacher_Record[1]/ns0:state
+                            <sxed2:editor>
+                                <sxed2:predicate path="$loadStateOut.part/ns0:DB_loadStateOfMessToTeacher_Record[1]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to variable="state"/>
+                    </copy>
+                </assign>
+            </sequence>
+        </while>
+        <assign name="Assign7">
+            <copy>
+                <from>$insertHistoryOut.part/ns0:returnValue</from>
+                <to variable="ChangeStateOfHistoryOperationIn" part="idHistory"/>
+            </copy>
+            <copy>
+                <from>$loadStateOut.part/ns0:DB_loadStateOfMessToTeacher_Record[1]/ns0:state
+                    <sxed2:editor>
+                        <sxed2:predicate path="$loadStateOut.part/ns0:DB_loadStateOfMessToTeacher_Record[1]" source="from"/>
+                    </sxed2:editor>
+                </from>
+                <to variable="ChangeStateOfHistoryOperationIn" part="state"/>
+            </copy>
+            <copy>
+                <from>$loadStateOut.part/ns0:DB_loadStateOfMessToTeacher_Record[1]/ns0:state
+                    <sxed2:editor>
+                        <sxed2:predicate path="$loadStateOut.part/ns0:DB_loadStateOfMessToTeacher_Record[1]" source="from"/>
+                    </sxed2:editor>
+                </from>
+                <to variable="TeacherReviewOperationOut" part="result"/>
+            </copy>
+            <copy>
+                <from>'x'</from>
+                <to variable="ChangeStateOfHistoryOperationIn" part="note"/>
+            </copy>
+        </assign>
+        <invoke name="setHistory" partnerLink="setStateHis" operation="ChangeStateOfHistoryOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/ChangeStateOfHistory" portType="tns:ChangeStateOfHistoryPortType" inputVariable="ChangeStateOfHistoryOperationIn" outputVariable="ChangeStateOfHistoryOperationOut"/>
+        <reply name="Reply1" partnerLink="PartnerLink1" operation="TeacherReviewOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/TeacherReview" portType="tns:TeacherReviewPortType" variable="TeacherReviewOperationOut"/>
+    </sequence>
+</process>
+
+
+
+
+
