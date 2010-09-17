@@ -20,10 +20,12 @@
 
     <!--css table -->
     <link rel="stylesheet" href="StyleTable.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="messageToDean.css" type="text/css" media="screen" />
 
     <!--script thu vien mootools -->
     <script type="text/javascript" src="mootools.js"></script>
     <script type="text/javascript" src="myscript.js"></script>
+    <script type="text/javascript" src="scriptAction.js"></script>
 </head>
 <body>
 <div id="art-page-background-glare">

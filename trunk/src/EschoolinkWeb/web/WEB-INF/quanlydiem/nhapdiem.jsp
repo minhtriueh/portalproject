@@ -11,7 +11,7 @@
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@taglib prefix="s" uri="/struts-tags" %>
 
-<script type="text/javascript" language="JavaScript">
+<%--<script type="text/javascript" language="JavaScript">
 
     function check(form) {
         var checkGia=/([1-9])/;
@@ -24,7 +24,7 @@
             return false;
         }
     }
-</script>
+</script>--%>
 
 <html>
     <head>

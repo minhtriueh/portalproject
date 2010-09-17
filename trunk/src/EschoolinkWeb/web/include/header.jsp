@@ -52,17 +52,25 @@
         <li>
             <a href="index.action" class="active"><span class="l"></span><span class="r"></span><span class="t">Trang chủ</span></a>
         </li>
-        <li>
-            <a href="#"><span class="l"></span><span class="r"></span><span class="t">Thông Tin Cá Nhân</span></a>
-            <ul>
-                <li>
-                    <a href="ThongTinGiaoVien">Thông Tin Giáo Viên</a>
-                </li>
-                <li>
-                    <a href="ThongTinHocSinh">Thông Tin Học Sinh-Học Bạ</a>
-                </li>
-            </ul>
-        </li>
+        <c:if test="${login==true}">
+            <li>
+                <a href="#"><span class="l"></span><span class="r"></span><span class="t">Thông Tin Cá Nhân</span></a>
+                <ul>
+                    <c:if test="${quyen!='hocsinh'}">
+                        <li>
+                        <a href="ThongTinGiaoVien">Thông Tin Giáo Viên</a>
+                        </li>
+                    </c:if>
+                    <c:if test="${quyen=='hocsinh'}">
+                        <li>
+                        <a href="ThongTinHocSinh">Thông Tin Học Sinh-Học Bạ</a>
+                        </li>
+                    </c:if>
+
+                </ul>
+            </li>
+        </c:if>
+        
         <li>
             <a href="#" ><span class="l"></span><span class="r"></span><span class="t">Tra cứu điểm</span></a>
             <ul>
@@ -72,7 +80,7 @@
         <li>
             <a href="XemThoiKhoaBieu" ><span class="l"></span><span class="r"></span><span class="t">Xem thời khóa biểu</span></a>
         </li>
-        <c:if test="${login==true}">
+        <c:if test="${login==true && quyen!='hocsinh'}">
             <li>
                 <a href="#"><span class="l"></span><span class="r"></span><span class="t">Quản lý</span></a>
                 <ul>
@@ -84,76 +92,24 @@
                             <li><a href="#">Tìm kiếm học sinh</a></li>
                         </ul>
                     </li>
+                    <c:if test="${quyen=='admin'}">
                     <li><a href="#">Giáo Viên</a>
-                        <ul>
-                            <c:if test="${quyen=='admin'}">
-                                <li><a href="ThongTinBanDau">Thêm Giáo Viên</a></li>
-                            </c:if>
-                            <li><a href="index.jsp?module=quanlygiaovien&page=searchgiaovien">Tra Cứu Giáo Viên</a></li>
+                        <ul>                            
+                           <li><a href="ThongTinBanDau">Thêm Giáo Viên</a></li>
+                           <li><a href="index.jsp?module=quanlygiaovien&page=searchgiaovien">Tra Cứu Giáo Viên</a></li>
                         </ul>
                     </li>
+                     </c:if>
                     <li><a href="#">Học Bạ</a>
                         <ul>
                             <li><a href="index.jsp?module=quanlyhocba&page=tracuuhocba">Đánh Giá Học Lực-Hạnh Kiểm</a></li>
-                            <li><a href="KhoiTaoTrangChinhSuaHocBa">Tra cứu và Chỉnh Sửa</a></li>
+                            <c:if test="${quyen=='admin'}">
+                                <li><a href="KhoiTaoTrangChinhSuaHocBa">Tra cứu và Chỉnh Sửa</a></li>
+                            </c:if>
                         </ul>
                     </li>
                     <c:if test="${quyen=='admin'}">
-                        <li><a href="#">Khởi tạo năm học mới</a></li>
-                    </c:if>
-
-                    <li><a href="#">Chủ nhiệm</a></li>
-                    <li><a href="#">Sổ điểm môn học</a>
-                        <ul>
-                            <li><a href="BatDauNhapDiem">Nhập Điểm</a></li>
-                            <li><a href="TongKetDiem">Tổng Kết Điểm</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-        </c:if>
-
-        <li>
-            <a href="#"><span class="l"></span><span class="r"></span><span class="t">Quản lý</span></a>
-            <ul>
-                <li><a href="#">Học sinh</a>
-                    <ul>
-                        <li><a href="TaoHocSinh">Thêm học sinh</a></li>
-                        <li><a href="#">Tìm kiếm học sinh</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Giáo Viên</a>
-                    <ul>
-                        <li><a href="ThongTinBanDau">Thêm Giáo Viên</a></li>
-                        <li><a href="index.jsp?module=quanlygiaovien&page=searchgiaovien">Tra Cứu Giáo Viên</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Học Bạ</a>
-                    <ul>
-                        <li><a href="index.jsp?module=quanlyhocba&page=tracuuhocba">Đánh Giá Học Lực-Hạnh Kiểm</a></li>
-                        <li><a href="KhoiTaoTrangChinhSuaHocBa">Tra cứu và Chỉnh Sửa</a></li>
-                    </ul>
-                </li>
-
-
-                <li><a href="#">Chủ nhiệm</a></li>
-                <li><a href="#">Sổ điểm môn học</a>
-                    <ul>
-                        <li><a href="BatDauNhapDiem">Nhập Điểm</a></li>
-                        <li><a href="TongKetDiem">Tổng Kết Điểm</a></li>
-                    </ul>
-                </li>
-
-
-                <li>
-                    <a href="#">Thời khóa biểu</a>
-                    <ul>
-                        <li><a href="TaoThoiKhoaBieu">Tạo thời khóa biểu</a></li>
-
-                    </ul>
-                </li>
-
-                <li><a href="#">Thông tin khởi tạo</a>
+                        <li><a href="#">Thông tin khởi tạo</a>
                     <ul>
                         <li><a href="TaoTruong">Tạo trường</a></li>
                         <li><a href="TaoQuyen">Tạo quyền</a></li>
@@ -170,26 +126,49 @@
                         <li><a href="TaoDanToc">Tạo dân tộc</a></li>
                         <li><a href="TaoCoSo">Tạo cơ sở</a></li>
                         <li> <a href="TaoBoMon">Tạo bộ môn</a></li>
-
-
-
-
-
                     </ul>
 
                 </li>
+                    </c:if>                   
+                    <li><a href="#">Sổ điểm môn học</a>
+                        <ul>
+                            <li><a href="BatDauNhapDiem">Nhập Điểm</a></li>
+                            <li><a href="TongKetDiem">Tổng Kết Điểm</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </c:if>
 
-
+        
+        <li>
+            <a href="#"><span class="l"></span><span class="r"></span><span class="t"> Hỏi / Đáp</span></a>
+            <ul>
+                <c:if test="${quyen=='hocsinh'}">
+                    <li><a href="index.jsp?module=student&page=sendmessage">Đặt câu hỏi</a></li>
+                </c:if>
+                
+                            <li><a href="viewFeedback">Xem trả lời</a></li>
+                            <li><a href="index.jsp?module=student&page=viewhistory">Câu hỏi đang giải quyết</a></li>
             </ul>
         </li>
-
-
-
-        <li>
-
-
-            <a href="#"><span class="l"></span><span class="r"></span><span class="t">Liên hệ</span></a>
-        </li>
+        <c:if test="${quyen=='bithu'}">
+            <li>
+                <a href="index.jsp?module=doanKhoa&page=index"><span class="l"></span><span class="r"></span><span class="t">Câu hỏi</span></a>
+            </li>
+        </c:if>
+        <c:if test="${quyen=='hieutruong'}">
+            <li>
+                <a href="index.jsp?module=truongKhoa&page=index"><span class="l"></span><span class="r"></span><span class="t">Câu hỏi</span></a>
+            </li>
+        </c:if>
+        <c:if test="${quyen=='hieupho'}">
+            <li>
+                <a href="index.jsp?module=phongGiaoVu&page=index"><span class="l"></span><span class="r"></span><span class="t">Câu hỏi</span></a>
+            </li>
+        </c:if>
+        
+        
         <c:if test="${empty login || login==false}">
             <li>
                 <a href="index.jsp?module=admin&page=login"><span class="l"></span><span class="r"></span><span class="t">Login</span></a>

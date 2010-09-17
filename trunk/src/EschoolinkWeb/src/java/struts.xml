@@ -16,6 +16,23 @@
             <result name="success">/index.jsp</result>
             
         </action>
+        <action name="sendmessage" class="student.SendMessage" >
+            <result name="success">/index.jsp?module=student&amp;page=sendmessageResult</result>
+	</action>
+        <action name="viewHistory" class="student.ViewHistoryMessage" >
+            <result name="success">/WEB-INF/ajax/viewhistory.jsp</result>
+	</action>
+        <action name="viewFeedback" class="student.viewMessFeedback" >
+            <result name="success">/index.jsp?module=student&amp;page=viewFeedback</result>
+	</action>
+        <action name="viewMessWaitting" class="manager.ViewMessWaitting" >
+            <result name="manager">/WEB-INF/ajax/indexPhongGiaoVu.jsp</result>
+            <result name="secretary">/WEB-INF/ajax/indexDoanKhoa.jsp</result>
+            <result name="teacher">/WEB-INF/ajax/indexTruongKhoa.jsp</result>
+	</action>
+        <action name="StationUpdateState" class="manager.StationUpdateState" >
+            <result name="success">/index.jsp?module=ajax&amp;page=StationUpdateStateResult</result>
+	</action>
     </package>
        
     <include file="/quanlyhocsinh/quanlyhocsinh.xml"></include>

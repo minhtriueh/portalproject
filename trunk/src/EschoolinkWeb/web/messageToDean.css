@@ -1,0 +1,88 @@
+.myform{
+    width:370px;
+    
+}
+.myform label{
+    width:110px;
+    color:gray;
+    float:left;
+    text-align:left;
+    margin-left:0px;
+}
+
+.myform input{
+    margin-left:5px;
+    width:220px;
+    float:left;
+}
+.myform p{
+    display:inline-table;
+    margin-bottom:0px;
+    width:100%;
+}
+.myform .bt{
+    width:auto;
+    float:right;
+    margin-right:7px;
+}
+.myform textarea{
+    margin-left:10px;
+    float:left;
+}
+/*khung hien thi mesage process*/
+.messageItem{
+    width:400px;
+    min-height:100px;
+    height:auto;
+    border:1px solid gray;
+    margin-bottom:10px;
+    
+}
+.messageItem .line{
+    width:100%;
+    height:auto;
+    padding-top:2px;
+    padding-bottom:2px;
+    padding-left:5px;
+    display:inline-table;
+}
+.messageItem .mess{
+   font-style:italic;
+   color:gray;
+}
+
+/*css hien thi mess trong qua ly mess den cac station*/
+
+.messMain{
+    width:500px;
+    height:auto;
+    border:1px solid gray;
+    padding:5px;
+}
+.messMain .item{
+    width:100%;
+    min-height:200px;
+    border-bottom:1px solid orange;
+    display:inline-block;
+    padding-bottom:5px;
+
+}
+.messMain .item .line{
+    width:100%;
+    min-height:10px;
+    display:inline-block;
+}
+.messMain .item .mess{
+    font-style:italic;
+    color:gray;
+}
+
+.messMain .textarea{
+    width:100%;
+    min-height:200px;
+    border:1px dotted olive;
+
+}
+.messMain .bt{
+    float:right;
+}

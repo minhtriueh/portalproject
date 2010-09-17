@@ -1,4 +1,5 @@
-var rootURL='http://localhost:8080/EschoolinkWeb/';
+var rootURL=location.protocol + '//' + location.host+'/EschoolinkWeb/';
+var refresh=true;
 function ajaxLoading(dom){
 	dom.empty();
 	dom.setStyle('min-height','300px');
@@ -49,6 +50,19 @@ function ajaxRequest(urlIn,log,dataIn){
 		},
 		onSuccess: function(responseTree, responseElements, responseHTML, responseJavaScript){
 			
+		}
+	}).send();
+}
+function ajaxRequestF(urlIn,log,dataIn,successF){
+	new Request.HTML({
+		url: urlIn,
+		method: 'post',
+		data: dataIn,
+		update: log,
+		onStart: function(){
+		},
+		onSuccess: function(responseTree, responseElements, responseHTML, responseJavaScript){
+			successF();
 		}
 	}).send();
 }
