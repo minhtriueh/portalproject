@@ -1,0 +1,9 @@
+<soapenv:Envelope xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sen="SendMessToDeanComApp">
+  <soapenv:Body>
+    <sen:SendMessTODean2Operation>
+      <hoVaTen>Duy chinh</hoVaTen>
+      <mssv>0098767</mssv>
+      <message>Chao moi nguoi</message>
+    </sen:SendMessTODean2Operation>
+  </soapenv:Body>
+</soapenv:Envelope>

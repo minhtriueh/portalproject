@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jbi xmlns="http://java.sun.com/xml/ns/jbi" xmlns:ns0="http://enterprise.netbeans.org/bpel/SendMessToDean/LoadMessageByIdMessage" xmlns:ns1="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_LoadMessageByIdMessage" xmlns:ns10="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_loadMessageWaitting" xmlns:ns11="http://j2ee.netbeans.org/wsdl/SendMessToDean/LoadMessagesWaiting" xmlns:ns12="http://enterprise.netbeans.org/bpel/SendMessToDean/ManagerSetState" xmlns:ns13="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_updateStateMessToManager" xmlns:ns14="http://j2ee.netbeans.org/wsdl/SendMessToDean/ManagerSetState" xmlns:ns15="http://enterprise.netbeans.org/bpel/SendMessToDean/SecretarySetState" xmlns:ns16="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_updateStateMessToSecretary" xmlns:ns17="http://j2ee.netbeans.org/wsdl/SendMessToDean/SecretarySetState" xmlns:ns18="http://enterprise.netbeans.org/bpel/SendMessToDean/TeacherSetState" xmlns:ns19="http://j2ee.netbeans.org/wsdl/SendMessToDean/TeacherSetState" xmlns:ns2="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_loadHistoryProcessItem" xmlns:ns20="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_updateStateMessToTeacher" xmlns:ns21="http://enterprise.netbeans.org/bpel/SendMessToDean/ChangeStateOfHistory" xmlns:ns22="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_updateHistory" xmlns:ns23="http://j2ee.netbeans.org/wsdl/SendMessToDean/ChangeStateOfHistory" xmlns:ns24="http://enterprise.netbeans.org/bpel/SendMessToDean/ChangeStateOfMess" xmlns:ns25="http://j2ee.netbeans.org/wsdl/SendMessToDean/ChangeStateOfMess" xmlns:ns26="http://j2ee.netbeans.org/wsdl/SendMessToDean/Db_updateStateOfMess" xmlns:ns27="http://enterprise.netbeans.org/bpel/SendMessToDean/feedback" xmlns:ns28="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_updateFeedBack" xmlns:ns29="http://j2ee.netbeans.org/wsdl/SendMessToDean/feedback" xmlns:ns3="http://j2ee.netbeans.org/wsdl/SendMessToDean/LoadMessageByIdMessage" xmlns:ns30="http://enterprise.netbeans.org/bpel/SendMessToDean/ManagerReview" xmlns:ns31="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_insertHistory" xmlns:ns32="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_insertMessToManager" xmlns:ns33="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_loadStateOfMessToManager" xmlns:ns34="http://j2ee.netbeans.org/wsdl/SendMessToDean/ManagerReview" xmlns:ns35="http://enterprise.netbeans.org/bpel/SendMessToDean/SecretaryReview" xmlns:ns36="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_insertMessToSceretary" xmlns:ns37="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_loadStateOfMessToSecretary" xmlns:ns38="http://j2ee.netbeans.org/wsdl/SendMessToDean/SecretaryReview" xmlns:ns39="http://enterprise.netbeans.org/bpel/SendMessToDean/SendMessToDean" xmlns:ns4="http://enterprise.netbeans.org/bpel/SendMessToDean/loadMessageOfStation" xmlns:ns40="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_insertMess" xmlns:ns41="http://j2ee.netbeans.org/wsdl/SendMessToDean/TeacherReview" xmlns:ns42="http://j2ee.netbeans.org/wsdl/SendMessToDean/SendMessToDean" xmlns:ns43="http://enterprise.netbeans.org/bpel/SendMessToDean/SendMessTODean2" xmlns:ns44="http://j2ee.netbeans.org/wsdl/SendMessToDean/SendMessTODean2" xmlns:ns45="http://enterprise.netbeans.org/bpel/SendMessToDean/TeacherReview" xmlns:ns46="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_insertMessToTeacher" xmlns:ns47="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_loadStateOfMessToTeacher" xmlns:ns48="http://www.sun.com/jbi/descriptor/service-unit" xmlns:ns5="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_loadMessagesOfManager" xmlns:ns6="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_loadMessagesOfSecretary" xmlns:ns7="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_loadMessagesOfTeacher" xmlns:ns8="http://j2ee.netbeans.org/wsdl/SendMessToDean/loadMessageOfStation" xmlns:ns9="http://enterprise.netbeans.org/bpel/SendMessToDean/LoadMessagesWaiting" version="1.0">
+    <services binding-component="false">
+        <provides endpoint-name="LoadMessageByIdMessagePortTypeRole_myRole" interface-name="ns3:LoadMessageByIdMessagePortType" service-name="ns0:PartnerLink1">
+            <ns48:display-name>PartnerLink1</ns48:display-name>
+            <ns48:process-name>LoadMessageByIdMessage</ns48:process-name>
+            <ns48:file-path>externalProcess\LoadMessageByIdMessage.bpel</ns48:file-path>
+        </provides>
+        <provides endpoint-name="loadMessageOfStationPortTypeRole_myRole" interface-name="ns8:loadMessageOfStationPortType" service-name="ns4:PartnerLink1">
+            <ns48:display-name>PartnerLink1</ns48:display-name>
+            <ns48:process-name>loadMessageOfStation</ns48:process-name>
+            <ns48:file-path>externalProcess\loadMessageOfStation.bpel</ns48:file-path>
+        </provides>
+        <provides endpoint-name="LoadMessagesWaitingPortTypeRole_myRole" interface-name="ns11:LoadMessagesWaitingPortType" service-name="ns9:PartnerLink1">
+            <ns48:display-name>PartnerLink1</ns48:display-name>
+            <ns48:process-name>LoadMessagesByState</ns48:process-name>
+            <ns48:file-path>externalProcess\LoadMessagesWaiting.bpel</ns48:file-path>
+        </provides>
+        <provides endpoint-name="ManagerSetStatePortTypeRole_myRole" interface-name="ns14:ManagerSetStatePortType" service-name="ns12:PartnerLink1">
+            <ns48:display-name>PartnerLink1</ns48:display-name>
+            <ns48:process-name>ManagerSetState</ns48:process-name>
+            <ns48:file-path>externalProcess\ManagerSetState.bpel</ns48:file-path>
+        </provides>
+        <provides endpoint-name="SecretarySetStatePortTypeRole_myRole" interface-name="ns17:SecretarySetStatePortType" service-name="ns15:PartnerLink1">
+            <ns48:display-name>PartnerLink1</ns48:display-name>
+            <ns48:process-name>SecretarySetState</ns48:process-name>
+            <ns48:file-path>externalProcess\SecretarySetState.bpel</ns48:file-path>
+        </provides>
+        <provides endpoint-name="TeacherSetStatePortTypeRole_myRole" interface-name="ns19:TeacherSetStatePortType" service-name="ns18:PartnerLink2">
+            <ns48:display-name>PartnerLink2</ns48:display-name>
+            <ns48:process-name>TeacherSetState</ns48:process-name>
+            <ns48:file-path>externalProcess\TeacherSetState.bpel</ns48:file-path>
+        </provides>
+        <provides endpoint-name="ChangeStateOfHistoryPortTypeRole_myRole" interface-name="ns23:ChangeStateOfHistoryPortType" service-name="ns21:PartnerLink1">
+            <ns48:display-name>PartnerLink1</ns48:display-name>
+            <ns48:process-name>ChangeStateOfHistory</ns48:process-name>
+            <ns48:file-path>internalProcess\ChangeStateOfHistory.bpel</ns48:file-path>
+        </provides>
+        <provides endpoint-name="ChangeStateOfMessPortTypeRole_myRole" interface-name="ns25:ChangeStateOfMessPortType" service-name="ns24:PartnerLink2">
+            <ns48:display-name>PartnerLink2</ns48:display-name>
+            <ns48:process-name>ChangeStateOfMess</ns48:process-name>
+            <ns48:file-path>internalProcess\ChangeStateOfMess.bpel</ns48:file-path>
+        </provides>
+        <provides endpoint-name="feedbackPortTypeRole_myRole" interface-name="ns29:feedbackPortType" service-name="ns27:PartnerLink1">
+            <ns48:display-name>PartnerLink1</ns48:display-name>
+            <ns48:process-name>feedback</ns48:process-name>
+            <ns48:file-path>internalProcess\feedback.bpel</ns48:file-path>
+        </provides>
+        <provides endpoint-name="ManagerReviewPortTypeRole_myRole" interface-name="ns34:ManagerReviewPortType" service-name="ns30:PartnerLink1">
+            <ns48:display-name>PartnerLink1</ns48:display-name>
+            <ns48:process-name>ManagerReview</ns48:process-name>
+            <ns48:file-path>ManagerReview.bpel</ns48:file-path>
+        </provides>
+        <provides endpoint-name="SecretaryReviewPortTypeRole_myRole" interface-name="ns38:SecretaryReviewPortType" service-name="ns35:PartnerLink1">
+            <ns48:display-name>PartnerLink1</ns48:display-name>
+            <ns48:process-name>SecretaryReview</ns48:process-name>
+            <ns48:file-path>SecretaryReview.bpel</ns48:file-path>
+        </provides>
+        <provides endpoint-name="SendMessToDeanPortTypeRole_myRole" interface-name="ns42:SendMessToDeanPortType" service-name="ns39:PartnerLink1">
+            <ns48:display-name>PartnerLink1</ns48:display-name>
+            <ns48:process-name>SendMessToDean</ns48:process-name>
+            <ns48:file-path>SendMessToDean.bpel</ns48:file-path>
+        </provides>
+        <provides endpoint-name="SendMessTODean2PortTypeRole_myRole" interface-name="ns44:SendMessTODean2PortType" service-name="ns43:PartnerLink1">
+            <ns48:display-name>PartnerLink1</ns48:display-name>
+            <ns48:process-name>SendMessTODean2</ns48:process-name>
+            <ns48:file-path>SendMessTODean2.bpel</ns48:file-path>
+        </provides>
+        <provides endpoint-name="TeacherReviewPortTypeRole_myRole" interface-name="ns41:TeacherReviewPortType" service-name="ns45:PartnerLink1">
+            <ns48:display-name>PartnerLink1</ns48:display-name>
+            <ns48:process-name>TeacherReview</ns48:process-name>
+            <ns48:file-path>TeacherReview.bpel</ns48:file-path>
+        </provides>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns1:jdbcPortType" service-name="ns0:loadMess">
+            <ns48:display-name>loadMess</ns48:display-name>
+            <ns48:process-name>LoadMessageByIdMessage</ns48:process-name>
+            <ns48:file-path>externalProcess\LoadMessageByIdMessage.bpel</ns48:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns2:jdbcPortType" service-name="ns0:loadHis">
+            <ns48:display-name>loadHis</ns48:display-name>
+            <ns48:process-name>LoadMessageByIdMessage</ns48:process-name>
+            <ns48:file-path>externalProcess\LoadMessageByIdMessage.bpel</ns48:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns5:jdbcPortType" service-name="ns4:messManager">
+            <ns48:display-name>messManager</ns48:display-name>
+            <ns48:process-name>loadMessageOfStation</ns48:process-name>
+            <ns48:file-path>externalProcess\loadMessageOfStation.bpel</ns48:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns6:jdbcPortType" service-name="ns4:messSecretary">
+            <ns48:display-name>messSecretary</ns48:display-name>
+            <ns48:process-name>loadMessageOfStation</ns48:process-name>
+            <ns48:file-path>externalProcess\loadMessageOfStation.bpel</ns48:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns7:jdbcPortType" service-name="ns4:meesTeacher">
+            <ns48:display-name>meesTeacher</ns48:display-name>
+            <ns48:process-name>loadMessageOfStation</ns48:process-name>
+            <ns48:file-path>externalProcess\loadMessageOfStation.bpel</ns48:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns10:jdbcPortType" service-name="ns9:loadMess">
+            <ns48:display-name>loadMess</ns48:display-name>
+            <ns48:process-name>LoadMessagesByState</ns48:process-name>
+            <ns48:file-path>externalProcess\LoadMessagesWaiting.bpel</ns48:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns2:jdbcPortType" service-name="ns9:loadHistory">
+            <ns48:display-name>loadHistory</ns48:display-name>
+            <ns48:process-name>LoadMessagesByState</ns48:process-name>
+            <ns48:file-path>externalProcess\LoadMessagesWaiting.bpel</ns48:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns13:jdbcPortType" service-name="ns12:PartnerLink2">
+            <ns48:display-name>PartnerLink2</ns48:display-name>
+            <ns48:process-name>ManagerSetState</ns48:process-name>
+            <ns48:file-path>externalProcess\ManagerSetState.bpel</ns48:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns16:jdbcPortType" service-name="ns15:PartnerLink2">
+            <ns48:display-name>PartnerLink2</ns48:display-name>
+            <ns48:process-name>SecretarySetState</ns48:process-name>
+            <ns48:file-path>externalProcess\SecretarySetState.bpel</ns48:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns20:jdbcPortType" service-name="ns18:PartnerLink1">
+            <ns48:display-name>PartnerLink1</ns48:display-name>
+            <ns48:process-name>TeacherSetState</ns48:process-name>
+            <ns48:file-path>externalProcess\TeacherSetState.bpel</ns48:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns22:jdbcPortType" service-name="ns21:PartnerLink2">
+            <ns48:display-name>PartnerLink2</ns48:display-name>
+            <ns48:process-name>ChangeStateOfHistory</ns48:process-name>
+            <ns48:file-path>internalProcess\ChangeStateOfHistory.bpel</ns48:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns26:jdbcPortType" service-name="ns24:PartnerLink1">
+            <ns48:display-name>PartnerLink1</ns48:display-name>
+            <ns48:process-name>ChangeStateOfMess</ns48:process-name>
+            <ns48:file-path>internalProcess\ChangeStateOfMess.bpel</ns48:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns28:jdbcPortType" service-name="ns27:PartnerLink2">
+            <ns48:display-name>PartnerLink2</ns48:display-name>
+            <ns48:process-name>feedback</ns48:process-name>
+            <ns48:file-path>internalProcess\feedback.bpel</ns48:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns31:jdbcPortType" service-name="ns30:history">
+            <ns48:display-name>history</ns48:display-name>
+            <ns48:process-name>ManagerReview</ns48:process-name>
+            <ns48:file-path>ManagerReview.bpel</ns48:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns32:jdbcPortType" service-name="ns30:PartnerLink2">
+            <ns48:display-name>PartnerLink2</ns48:display-name>
+            <ns48:process-name>ManagerReview</ns48:process-name>
+            <ns48:file-path>ManagerReview.bpel</ns48:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns33:jdbcPortType" service-name="ns30:loadState">
+            <ns48:display-name>loadState</ns48:display-name>
+            <ns48:process-name>ManagerReview</ns48:process-name>
+            <ns48:file-path>ManagerReview.bpel</ns48:file-path>
+        </consumes>
+        <consumes endpoint-name="ChangeStateOfHistoryPortTypeRole_partnerRole" interface-name="ns23:ChangeStateOfHistoryPortType" service-name="ns30:setStateHistory">
+            <ns48:display-name>setStateHistory</ns48:display-name>
+            <ns48:process-name>ManagerReview</ns48:process-name>
+            <ns48:file-path>ManagerReview.bpel</ns48:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns31:jdbcPortType" service-name="ns35:history">
+            <ns48:display-name>history</ns48:display-name>
+            <ns48:process-name>SecretaryReview</ns48:process-name>
+            <ns48:file-path>SecretaryReview.bpel</ns48:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns36:jdbcPortType" service-name="ns35:secretary">
+            <ns48:display-name>secretary</ns48:display-name>
+            <ns48:process-name>SecretaryReview</ns48:process-name>
+            <ns48:file-path>SecretaryReview.bpel</ns48:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns37:jdbcPortType" service-name="ns35:StateOfSecre">
+            <ns48:display-name>StateOfSecre</ns48:display-name>
+            <ns48:process-name>SecretaryReview</ns48:process-name>
+            <ns48:file-path>SecretaryReview.bpel</ns48:file-path>
+        </consumes>
+        <consumes endpoint-name="ChangeStateOfHistoryPortTypeRole_partnerRole" interface-name="ns23:ChangeStateOfHistoryPortType" service-name="ns35:setStateHistory">
+            <ns48:display-name>setStateHistory</ns48:display-name>
+            <ns48:process-name>SecretaryReview</ns48:process-name>
+            <ns48:file-path>SecretaryReview.bpel</ns48:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns40:jdbcPortType" service-name="ns39:insertMess">
+            <ns48:display-name>insertMess</ns48:display-name>
+            <ns48:process-name>SendMessToDean</ns48:process-name>
+            <ns48:file-path>SendMessToDean.bpel</ns48:file-path>
+        </consumes>
+        <consumes endpoint-name="ManagerReviewPortTypeRole_partnerRole" interface-name="ns34:ManagerReviewPortType" service-name="ns39:manager">
+            <ns48:display-name>manager</ns48:display-name>
+            <ns48:process-name>SendMessToDean</ns48:process-name>
+            <ns48:file-path>SendMessToDean.bpel</ns48:file-path>
+        </consumes>
+        <consumes endpoint-name="SecretaryReviewPortTypeRole_partnerRole" interface-name="ns38:SecretaryReviewPortType" service-name="ns39:Secretary">
+            <ns48:display-name>Secretary</ns48:display-name>
+            <ns48:process-name>SendMessToDean</ns48:process-name>
+            <ns48:file-path>SendMessToDean.bpel</ns48:file-path>
+        </consumes>
+        <consumes endpoint-name="TeacherReviewPortTypeRole_partnerRole" interface-name="ns41:TeacherReviewPortType" service-name="ns39:teacher">
+            <ns48:display-name>teacher</ns48:display-name>
+            <ns48:process-name>SendMessToDean</ns48:process-name>
+            <ns48:file-path>SendMessToDean.bpel</ns48:file-path>
+        </consumes>
+        <consumes endpoint-name="ChangeStateOfMessPortTypeRole_partnerRole" interface-name="ns25:ChangeStateOfMessPortType" service-name="ns39:setStateOfMess">
+            <ns48:display-name>setStateOfMess</ns48:display-name>
+            <ns48:process-name>SendMessToDean</ns48:process-name>
+            <ns48:file-path>SendMessToDean.bpel</ns48:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns40:jdbcPortType" service-name="ns43:TaoMess">
+            <ns48:display-name>TaoMess</ns48:display-name>
+            <ns48:process-name>SendMessTODean2</ns48:process-name>
+            <ns48:file-path>SendMessTODean2.bpel</ns48:file-path>
+        </consumes>
+        <consumes endpoint-name="TeacherReviewPortTypeRole_partnerRole" interface-name="ns41:TeacherReviewPortType" service-name="ns43:teacher">
+            <ns48:display-name>teacher</ns48:display-name>
+            <ns48:process-name>SendMessTODean2</ns48:process-name>
+            <ns48:file-path>SendMessTODean2.bpel</ns48:file-path>
+        </consumes>
+        <consumes endpoint-name="ChangeStateOfMessPortTypeRole_partnerRole" interface-name="ns25:ChangeStateOfMessPortType" service-name="ns43:setStateOfMess">
+            <ns48:display-name>setStateOfMess</ns48:display-name>
+            <ns48:process-name>SendMessTODean2</ns48:process-name>
+            <ns48:file-path>SendMessTODean2.bpel</ns48:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns31:jdbcPortType" service-name="ns45:insertHis">
+            <ns48:display-name>insertHis</ns48:display-name>
+            <ns48:process-name>TeacherReview</ns48:process-name>
+            <ns48:file-path>TeacherReview.bpel</ns48:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns46:jdbcPortType" service-name="ns45:insertMessToTeacher">
+            <ns48:display-name>insertMessToTeacher</ns48:display-name>
+            <ns48:process-name>TeacherReview</ns48:process-name>
+            <ns48:file-path>TeacherReview.bpel</ns48:file-path>
+        </consumes>
+        <consumes endpoint-name="jdbcPortTypeRole_partnerRole" interface-name="ns47:jdbcPortType" service-name="ns45:loadState">
+            <ns48:display-name>loadState</ns48:display-name>
+            <ns48:process-name>TeacherReview</ns48:process-name>
+            <ns48:file-path>TeacherReview.bpel</ns48:file-path>
+        </consumes>
+        <consumes endpoint-name="ChangeStateOfHistoryPortTypeRole_partnerRole" interface-name="ns23:ChangeStateOfHistoryPortType" service-name="ns45:setStateHis">
+            <ns48:display-name>setStateHis</ns48:display-name>
+            <ns48:process-name>TeacherReview</ns48:process-name>
+            <ns48:file-path>TeacherReview.bpel</ns48:file-path>
+        </consumes>
+    </services>
+</jbi>

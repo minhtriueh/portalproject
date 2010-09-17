@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP-ENV:Body>
+    <m:loadMessageOfStationOperationResponse xmlns:m="SendMessToDeanComApp" xmlns:msgns="http://j2ee.netbeans.org/wsdl/SendMessToDean/loadMessageOfStation">
+      <result>
+        <ns1:MessageOfStation xmlns:ns1="http://xml.netbeans.org/schema/myObject">
+          <ns1:id isNull="false">13</ns1:id>
+          <ns1:Message>
+            <ns1:id isNull="false">31</ns1:id>
+            <ns1:hoVaTen isNull="false">Dang                                                                                                </ns1:hoVaTen>
+            <ns1:MSSV isNull="false">09988               </ns1:MSSV>
+            <ns1:message isNull="false">Một tờ báo chính thống của Trung Quốc hôm nay bình luận rằng nước này cần có tên lửa chống tàu sân bay để cân bằng lực lượng với uy thế về hải quân của Mỹ tại Thái Bình Dương.</ns1:message>
+            <ns1:time isNull="false">2010-09-06 16:19:01.143+07</ns1:time>
+          </ns1:Message>
+          <ns1:note isNull="false">duyet                                                                                                                                                                                                   </ns1:note>
+          <ns1:HistoryProcessItem>
+            <ns1:id isNull="false">38</ns1:id>
+            <ns1:timearive isNull="false">2010-09-06 16:19:31.479+07</ns1:timearive>
+          </ns1:HistoryProcessItem>
+        </ns1:MessageOfStation>
+        <ns1:MessageOfStation xmlns:ns1="http://xml.netbeans.org/schema/myObject">
+          <ns1:id isNull="false">14</ns1:id>
+          <ns1:Message>
+            <ns1:id isNull="false">33</ns1:id>
+            <ns1:hoVaTen isNull="false">chinh                                                                                               </ns1:hoVaTen>
+            <ns1:MSSV isNull="false">sasdada909          </ns1:MSSV>
+            <ns1:message isNull="false">asdasdcxc avc zcfzchgzfcxzc</ns1:message>
+            <ns1:time isNull="false">2010-09-06 21:31:18.415+07</ns1:time>
+          </ns1:Message>
+          <ns1:note isNull="false">duyet                                                                                                                                                                                                   </ns1:note>
+          <ns1:HistoryProcessItem>
+            <ns1:id isNull="false">42</ns1:id>
+            <ns1:timearive isNull="false">2010-09-06 21:32:19.378+07</ns1:timearive>
+          </ns1:HistoryProcessItem>
+        </ns1:MessageOfStation>
+        <ns1:MessageOfStation xmlns:ns1="http://xml.netbeans.org/schema/myObject">
+          <ns1:id isNull="false">17</ns1:id>
+          <ns1:Message>
+            <ns1:id isNull="false">37</ns1:id>
+            <ns1:hoVaTen isNull="false">mamama                                                                                              </ns1:hoVaTen>
+            <ns1:MSSV isNull="false">079870987           </ns1:MSSV>
+            <ns1:message isNull="false">Tại vòng bán kết của chương trình 'America's Got Talent', cô bé lên 10 Jackie Evancho hoàn toàn chinh phục khán giả lẫn ban giám khảo khi thể hiện ca khúc nổi tiếng 'Time To Say Goodbye'.</ns1:message>
+            <ns1:time isNull="false">2010-09-06 22:59:03.154+07</ns1:time>
+          </ns1:Message>
+          <ns1:note isNull="false">chuyen                                                                                                                                                                                                  </ns1:note>
+          <ns1:HistoryProcessItem>
+            <ns1:id isNull="false">50</ns1:id>
+            <ns1:timearive isNull="false">2010-09-06 22:59:33.492+07</ns1:timearive>
+          </ns1:HistoryProcessItem>
+        </ns1:MessageOfStation>
+      </result>
+    </m:loadMessageOfStationOperationResponse>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

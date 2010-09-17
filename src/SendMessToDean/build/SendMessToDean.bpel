@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process
+    name="SendMessToDean"
+    targetNamespace="http://enterprise.netbeans.org/bpel/SendMessToDean/SendMessToDean"
+    xmlns:tns="http://enterprise.netbeans.org/bpel/SendMessToDean/SendMessToDean"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
+    xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor"
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2" xmlns:ns0="http://j2ee.netbeans.org/xsd/tableSchema">
+    <import namespace="http://j2ee.netbeans.org/wsdl/SendMessToDean/SendMessToDean" location="WSDLInterface/SendMessToDean.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_insertMess" location="database/DB_insertMess.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/SendMessToDean/ManagerReview" location="WSDLInterface/ManagerReview.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/SendMessToDean/SecretaryReview" location="WSDLInterface/SecretaryReview.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/SendMessToDean/ChangeStateOfMess" location="internalProcess/ChangeStateOfMess.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/SendMessToDean/TeacherReview" location="WSDLInterface/TeacherReview.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <partnerLinks>
+        <partnerLink name="insertMess" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_insertMess" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="manager" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/ManagerReview" partnerLinkType="tns:ManagerReview" partnerRole="ManagerReviewPortTypeRole"/>
+        <partnerLink name="Secretary" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/SecretaryReview" partnerLinkType="tns:SecretaryReview" partnerRole="SecretaryReviewPortTypeRole"/>
+        <partnerLink name="teacher" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/TeacherReview" partnerLinkType="tns:TeacherReview" partnerRole="TeacherReviewPortTypeRole"/>
+        <partnerLink name="setStateOfMess" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/ChangeStateOfMess" partnerLinkType="tns:ChangeStateOfMess" partnerRole="ChangeStateOfMessPortTypeRole"/>
+        <partnerLink name="PartnerLink1" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/SendMessToDean" partnerLinkType="tns:SendMessToDean" myRole="SendMessToDeanPortTypeRole"/>
+    </partnerLinks>
+    <variables>
+        <variable name="stateOfMess" type="xs:string"/>
+        <variable name="TeacherReviewOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/TeacherReview" messageType="tns:TeacherReviewOperationResponse"/>
+        <variable name="TeacherReviewOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/TeacherReview" messageType="tns:TeacherReviewOperationRequest"/>
+        <variable name="ChangeStateOfMessOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/ChangeStateOfMess" messageType="tns:ChangeStateOfMessOperationResponse"/>
+        <variable name="ChangeStateOfMessOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/ChangeStateOfMess" messageType="tns:ChangeStateOfMessOperationRequest"/>
+        <variable name="SendMessToDeanOperationOutAsSecretary" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/SendMessToDean" messageType="tns:SendMessToDeanOperationResponse"/>
+        <variable name="SecretaryReviewOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/SecretaryReview" messageType="tns:SecretaryReviewOperationResponse"/>
+        <variable name="SecretaryReviewOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/SecretaryReview" messageType="tns:SecretaryReviewOperationRequest"/>
+        <variable name="SendMessToDeanOperationOutAsManager" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/SendMessToDean" messageType="tns:SendMessToDeanOperationResponse"/>
+        <variable name="ManagerReviewOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/ManagerReview" messageType="tns:ManagerReviewOperationResponse"/>
+        <variable name="ManagerReviewOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/ManagerReview" messageType="tns:ManagerReviewOperationRequest"/>
+        <variable name="create_mess_Out" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_insertMess" messageType="tns:outputMsg"/>
+        <variable name="create_mess_In" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_insertMess" messageType="tns:inputMsg"/>
+        <variable name="SendMessToDeanOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/SendMessToDean" messageType="tns:SendMessToDeanOperationResponse"/>
+        <variable name="SendMessToDeanOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/SendMessToDean" messageType="tns:SendMessToDeanOperationRequest"/>
+    </variables>
+    <sequence>
+        <receive name="Receive1" createInstance="yes" partnerLink="PartnerLink1" operation="SendMessToDeanOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/SendMessToDean" portType="tns:SendMessToDeanPortType" variable="SendMessToDeanOperationIn"/>
+        <assign name="Assign1">
+            <copy>
+                <from variable="SendMessToDeanOperationIn" part="mess"/>
+                <to>$create_mess_In.part/ns0:messagein</to>
+            </copy>
+            <copy>
+                <from variable="SendMessToDeanOperationIn" part="hoVaTen"/>
+                <to>$create_mess_In.part/ns0:namein</to>
+            </copy>
+            <copy>
+                <from variable="SendMessToDeanOperationIn" part="mssv"/>
+                <to>$create_mess_In.part/ns0:mssvin</to>
+            </copy>
+            <copy>
+                <from>'wait'</from>
+                <to variable="stateOfMess"/>
+            </copy>
+        </assign>
+        <invoke name="TaoMess" partnerLink="insertMess" operation="execute" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_insertMess" portType="tns:jdbcPortType" inputVariable="create_mess_In" outputVariable="create_mess_Out"/>
+        <while name="While1">
+            <documentation>Trong khi trang thai cua mess gui di van con rong tinh trang wait thi se lap lai quy trinh</documentation>
+            <condition>'wait' = $stateOfMess</condition>
+            <sequence name="Sequence6">
+                <sequence name="Secretary" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/SecretaryReview">
+                    <assign name="Assign6">
+                            <copy>
+                                    <from>$create_mess_Out.part/ns0:returnValue</from>
+                                        <to variable="SecretaryReviewOperationIn" part="idMess"/>
+                                </copy>
+                        </assign>
+                        <invoke name="secretaryCheck" partnerLink="Secretary" operation="SecretaryReviewOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/SecretaryReview" portType="tns:SecretaryReviewPortType" inputVariable="SecretaryReviewOperationIn" outputVariable="SecretaryReviewOperationOut"/>
+                </sequence>
+                <if name="If1" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/TeacherReview">
+                    <documentation>neu la chuyen tiep forward</documentation>
+                    <condition>'forward' = $SecretaryReviewOperationOut.result</condition>
+                    <sequence name="Sequence3" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/TeacherReview">
+                            <sequence name="Manager" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/ManagerReview">
+                                <assign name="Assign2">
+                                        <copy>
+                                                <from>$create_mess_Out.part/ns0:returnValue</from>
+                                                    <to variable="ManagerReviewOperationIn" part="idMess"/>
+                                            </copy>
+                                    </assign>
+                                    <invoke name="managerCheck" partnerLink="manager" operation="ManagerReviewOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/ManagerReview" portType="tns:ManagerReviewPortType" inputVariable="ManagerReviewOperationIn" outputVariable="ManagerReviewOperationOut"/>
+                            </sequence>
+                                <if name="If2">
+                                    <condition>'forward' = $ManagerReviewOperationOut.result</condition>
+                                    <sequence name="Sequence5">
+                                            <sequence name="Teacher">
+                                                <assign name="Assign10">
+                                                    <copy>
+                                                            <from>$create_mess_Out.part/ns0:returnValue</from>
+                                                                <to variable="TeacherReviewOperationIn" part="idMess"/>
+                                                        </copy>
+                                                </assign>
+                                                <invoke name="TeacherView" partnerLink="teacher" operation="TeacherReviewOperation" portType="tns:TeacherReviewPortType" inputVariable="TeacherReviewOperationIn" outputVariable="TeacherReviewOperationOut"/>
+                                            </sequence>
+                                            <if name="If3">
+                                                <condition>$TeacherReviewOperationOut.result = 'feedback'</condition>
+                                                <assign name="Assign13">
+                                                    <copy>
+                                                        <from>'feedback'</from>
+                                                        <to variable="stateOfMess"/>
+                                                    </copy>
+                                                </assign>
+                                            </if>
+                                        </sequence>
+                                    <else>
+                                        <assign name="Assign12">
+                                            <copy>
+                                                <from>'feedback'</from>
+                                                <to variable="stateOfMess"/>
+                                            </copy>
+                                        </assign>
+                                    </else>
+                                </if>
+                        </sequence>
+                    <else>
+                        <assign name="Assign11">
+                            <copy>
+                                <from>'feedback'</from>
+                                <to variable="stateOfMess"/>
+                            </copy>
+                        </assign>
+                    </else>
+                </if>
+            </sequence>
+        </while>
+        <assign name="Assign9">
+            <copy>
+                <from>$create_mess_Out.part/ns0:returnValue</from>
+                <to variable="ChangeStateOfMessOperationIn" part="idMess"/>
+            </copy>
+            <copy>
+                <from>'solved'</from>
+                <to variable="ChangeStateOfMessOperationIn" part="state"/>
+            </copy>
+            <copy>
+                <from>$create_mess_Out.part/ns0:returnValue</from>
+                <to variable="SendMessToDeanOperationOut" part="result"/>
+            </copy>
+        </assign>
+        <invoke name="setStateForMess" partnerLink="setStateOfMess" operation="ChangeStateOfMessOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/ChangeStateOfMess" portType="tns:ChangeStateOfMessPortType" inputVariable="ChangeStateOfMessOperationIn" outputVariable="ChangeStateOfMessOperationOut"/>
+        <reply name="Reply1" partnerLink="PartnerLink1" operation="SendMessToDeanOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/SendMessToDean" portType="tns:SendMessToDeanPortType" variable="SendMessToDeanOperationOut"/>
+    </sequence>
+</process>
+
+
+
+
+
+
+
+
+
+
+
