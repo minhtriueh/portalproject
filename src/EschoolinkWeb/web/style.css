@@ -1801,11 +1801,11 @@ blockquote,
 .art-postcontent blockquote
 {
   border: solid 1px #9DC4D7;
-  margin: 10px 10px 10px 50px;
+  margin: 10px 10px 10px 20px;
   padding: 5px 5px 5px 41px;
   background-color: #CCE0EA;
-  background-image: url('images/postquote.png');
-  background-position: left top;
+  background-image: url('images/1284739801_email.png');
+  background-position: 10px 10px;
   background-repeat: no-repeat;
 }
 

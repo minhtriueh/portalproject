@@ -31,27 +31,32 @@
                                                 <!-- article-content -->
                                                 <c:forEach items="${list}" var="item">
                                                  <div class="messageItem">
-                                                    <div class="line">Tên sinh viên : ${item.hoVaTen}</div>
-                                                    <div class="line">Mã số : ${item.MSSV}</div>
-                                                    <div class="line">Ngày gửi : ${item.time}</div>
-                                                    <div class="line">Nội dung câu hỏi :</div>
+                                                     <div class="line">Học sinh :<span class="both">${item.hoVaTen} - ${item.MSSV}</span> </div>
+                                                    
                                                     <div class="line">
-                                                        <span class="mess">
-                                                            ${item.message}
-                                                        </span>
+                                                        <blockquote>
+                                                            <p>
+                                                                ${item.message}
+                                                            </p>
+
+                                                        </blockquote>
                                                     </div>
                                                     <div class="line">
                                                         Trả lời:
                                                     </div>
                                                     <div class="line">
-                                                        <span class="mess">${item.feedBack}</span>
+                                                        <blockquote>
+                                                            <p>
+                                                               ${item.feedBack}
+                                                            </p>
+                                                        </blockquote>
                                                     </div>
-                                                    <div class="line">Process:</div>
+                                                    <div class="line">Quy trình xử lý:</div>
                                                     <div class="line">
                                                         <table class="myTable">
                                                             <thead>
                                                             <tr>
-                                                                <td>Nơi xử lý</td>
+                                                                <td width="150">Nơi xử lý</td>
                                                                 <td width="100" >Trạng thái</td>
                                                                 <td>Ghi chú</td>
 
@@ -63,18 +68,18 @@
                                                                     <tr>
                                                                     <td>
                                                                         <c:if test="${hisItem.place == 'Secretary'}">
-                                                                            Văn phòng đoàn
+                                                                            Bí thư trường
                                                                         </c:if>
                                                                         <c:if test="${hisItem.place == 'Manager'}">
-                                                                            Phòng giáo vụ
+                                                                            Hiệu phó
                                                                         </c:if>
                                                                         <c:if test="${hisItem.place == 'Teacher'}">
-                                                                            Trưởng khoa
+                                                                            Hiệu trưởng
                                                                         </c:if>
                                                                     </td>
                                                                     <td align="center">
                                                                         <c:if test="${hisItem.state == 'wait'}">
-                                                                            <img width="20" src="images/loading4.gif" />
+                                                                            <img class="waitImg" border="0" src="images/loading4.gif" title="Đang chờ"/>
                                                                         </c:if>
                                                                         <c:if test="${hisItem.state == 'forward'}">
                                                                             Chuyển

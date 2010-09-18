@@ -12,19 +12,14 @@
 <c:forEach items="${list}" var="item">
                 <div class="item">
                 <div class="line">
-                    Tên sinh viên: ${item.message.hoVaTen}
-                </div>
+                    Tên sinh viên: ${item.message.hoVaTen} - ${item.message.MSSV}
+                </div> 
                 <div class="line">
-                    Mã số sv: ${item.message.MSSV}
-                </div>
-                <div class="line">
-                    Ngày gửi: ${item.message.time.day}
-                </div>
-                <div class="line">
-                    Nội dung câu hỏi:
-                </div>
-                <div class="line">
-                    <span class="mess">${item.message.message}</span>
+                    <blockquote>
+                        <p>
+                            ${item.message.message}
+                        </p>
+                    </blockquote>                    
                 </div>
                 <div class="line"> </div>
                 <div class="line">

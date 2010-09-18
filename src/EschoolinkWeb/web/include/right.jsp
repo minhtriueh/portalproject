@@ -9,7 +9,7 @@
    "http://www.w3.org/TR/html4/loose.dtd">
 
 <div class="art-layout-cell art-sidebar2">
-                            <div class="art-block">
+                            <di<%--v class="art-block">
                                 <div class="art-block-tl"></div>
                                 <div class="art-block-tr"></div>
                                 <div class="art-block-bl"></div>
@@ -53,7 +53,7 @@
                                             </div>
                             		<div class="cleared"></div>
                                 </div>
-                            </div>
+                            </div>--%>
                             <div class="art-block">
                                 <div class="art-block-tl"></div>
                                 <div class="art-block-tr"></div>

@@ -8,6 +8,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
     "http://www.w3.org/TR/html4/loose.dtd">
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@taglib prefix="s" uri="/struts-tags" %>
 
 <html>
@@ -69,7 +70,8 @@
                                                         <input type="hidden" name="diemtrungbinh" value="${chitietdiem.diemtrungbinh}">
                                                     </td>
                                                     <c:forEach var="diem" items="${chitietdiem.diem}">
-                                                        <td align="center"><c:out value="${diem}"></c:out></td>
+                                                         <td><fmt:formatNumber value="${diem}" maxFractionDigits="2" minFractionDigits="1"></fmt:formatNumber></td>
+                                                        <%--<td align="center"><c:out value="${diem}"></c:out></td>--%>
                                                     </c:forEach>
                                                 </tr>
                                             </c:if>
@@ -83,7 +85,8 @@
                                                         <input type="hidden" name="diemtrungbinh" value="${chitietdiem.diemtrungbinh}">
                                                     </td>
                                                     <c:forEach var="diem" items="${chitietdiem.diem}">
-                                                        <td align="center"><c:out value="${diem}"></c:out></td>
+                                                          <td><fmt:formatNumber value="${diem}" maxFractionDigits="2" minFractionDigits="1"></fmt:formatNumber></td>
+                                                        <%--<td align="center"><c:out value="${diem}"></c:out></td>--%>
                                                     </c:forEach>
                                                 </tr>
                                             </c:if>
