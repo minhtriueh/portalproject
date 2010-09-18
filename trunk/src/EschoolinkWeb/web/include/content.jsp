@@ -40,38 +40,91 @@
                                                 	</span>
                                                 </p>
                                                 <div class="cleared"></div>
-                                                <div class="art-content-layout overview-table">
-                                                	<div class="art-content-layout-row">
-                                                		<div class="art-layout-cell">
-                                                      <div class="overview-table-inner">
-                                                	      <h4>Hổ trợ</h4>
-                                                						  <img src="images/01.png" width="55px" height="55px" alt="an image" class="image" />
-                                                						  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                                                						  Quisque sed felis. Aliquam sit amet felis. Mauris semper,
-                                                						  velit semper laoreet dictum, quam diam dictum urna. </p>
-                                                       </div>
-                                                		</div><!-- end cell -->
-                                                		<div class="art-layout-cell">
-                                                    <div class="overview-table-inner">
-                                                		  <h4>Phát triển</h4>
-                                                						  <img src="images/02.png" width="55px" height="55px" alt="an image" class="image" />
-                                                						  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                                                						  Quisque sed felis. Aliquam sit amet felis. Mauris semper,
-                                                						  velit semper laoreet dictum, quam diam dictum urna. </p>
-                                                				</div>
-                                                		</div><!-- end cell -->
-                                                		<div class="art-layout-cell">
-                                                    <div class="overview-table-inner">
-                                                		  <h4>Chiến lược</h4>
+                                                <div class="cleared" style="margin-bottom:30px"></div>
+                                                <div class="art-postmetadataheader">
+                                                <h2 class="art-postheader">
+                                                    <img src="images/postheadericon.png" width="26" height="26" alt="postheadericon" />
+                                                    Chuyện về Hai Bà Trưng
+                                                </h2>
+                                                </div>
+                                                 <p>
+                                                    Hai Bà Trưng là tên gọi tắt, suy tôn hai nữ anh hùng đầu tiên của dân tộc Việt Nam. Đó là hai chị em Trưng Trắc, Trưng Nhị, thủ lĩnh của cuộc khởi nghĩa lớn vào loại sớm nhất trong lịch sử dân tộc Việt Nam cũng như trong lịch sử nhân loại chống xâm lược, nô dịch. Họ trở thành những nữ hoàng đầu tiên, cai quản quốc gia, dân tộc sau khi đất nước được giải phóng, hồi đầu thế kỷ thứ nhất sau công nguyên.
+                                                </p>
+                                                <p>
+                                                	<span class="art-button-wrapper">
+                                                		<span class="l"> </span>
+                                                		<span class="r"> </span>
+                                                		<a class="art-button" href="index.jsp?module=tintuc&page=gioithieutruong">Xem ...</a>
+                                                	</span>
+                                                </p>
+                                                <!-- /article-content -->
+                                            </div>
+                                            <div class="cleared"></div>
+                            </div>
 
-                                                						  <img src="images/03.png" width="55px" height="55px" alt="an image" class="image" />
-                                                						  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                                                						  Quisque sed felis. Aliquam sit amet felis. Mauris semper,
-                                                						  velit semper laoreet dictum, quam diam dictum urna. </p>
-                                                              </div>
-                                                		</div><!-- end cell -->
-                                                	</div><!-- end row -->
-                                                </div><!-- end table -->
+                            		<div class="cleared"></div>
+                                </div>
+                            </div>
+
+    <div class="art-post">
+                                <div class="art-post-tl"></div>
+                                <div class="art-post-tr"></div>
+                                <div class="art-post-bl"></div>
+                                <div class="art-post-br"></div>
+                                <div class="art-post-tc"></div>
+                                <div class="art-post-bc"></div>
+                                <div class="art-post-cl"></div>
+                                <div class="art-post-cr"></div>
+                                <div class="art-post-cc"></div>
+                                <div class="art-post-body">
+                            <div class="art-post-inner art-article">
+                                            
+                                            <div class="art-postcontent">
+                                                <!-- article-content -->
+
+                                                
+                                               
+                                                
+                                                <div class="cleared"></div>
+                                                <div class="art-postmetadataheader">
+                                                <h2 class="art-postheader">
+                                                    <img src="images/postheadericon.png" width="26" height="26" alt="postheadericon" />
+                                                    Thông báo - Bản tin
+                                                </h2>
+                                                </div>
+                                                <div class="cleared"></div>
+                                                <p>
+                                                <h4>Thông báo</h4>
+                                                <ul>
+                                                    <li>
+                                                        	Nhận giấy báo trúng tuyển ĐH-CĐ
+                                                    </li>
+                                                    <li>
+                                                        	Kế hoạch học Quốc phòng đầu năm 2010-2011
+                                                    </li>
+                                                    <li>
+                                                        	Thông báo tập trung học sinh toàn trường
+                                                    </li>
+                                                </ul>
+                                                <h4>Bản tin</h4>
+                                                <img src="images/tintuc/hbt copy.jpg" width="150" alt="an image" class="myimage" />
+                                                <p>Sau thành công của Đại Hội Cha Mẹ Học Sinh (CMHS) các lớp tổ chức sáng ngày 05-9-2010, Ban Thường Trực (BTT) Hội Cha Mẹ Học Sinh trường Trung Học Phổ Thông (THPT) Hai Bà Trưng tổ chức Đại Hội Đại Biểu Cha Mẹ Học Sinh(CMHS) năm học 2010-2011.</p>
+                                                <div class="cleared"></div>
+                                                <ul>
+                                                    <li>Tuyển sinh ĐH, CĐ năm 2011-2012 có gì thay đổi không?</li>
+                                                    <li>Phần trao thưởng và phát học bổng trong lễ Khai giảng năm học 2010-2011</li>
+                                                    <li>Lễ Khai giảng năm học mới 2010-2011</li>
+                                                </ul>
+                                                <h4>Thể dục - Thể thao</h4>
+                                                <p>Chung kết khối 10 và 11</p>
+                                                <ul>
+                                                    <li>Tin giải bóng đá cúp "Kinh đô" lần thứ nhất năm 2009</li>
+                                                    <li>Bóng đá cúp Kinh Đô</li>
+                                                    <li>Tin giải bóng đá cán bộ-giáo viên tranh cúp Kinh Đô năm 2009</li>
+                                                </ul>
+                                                
+
+
 
                                                 <!-- /article-content -->
                                             </div>
@@ -81,5 +134,37 @@
                             		<div class="cleared"></div>
                                 </div>
                             </div>
-                            
+<div class="art-post">
+                                <div class="art-post-tl"></div>
+                                <div class="art-post-tr"></div>
+                                <div class="art-post-bl"></div>
+                                <div class="art-post-br"></div>
+                                <div class="art-post-tc"></div>
+                                <div class="art-post-bc"></div>
+                                <div class="art-post-cl"></div>
+                                <div class="art-post-cr"></div>
+                                <div class="art-post-cc"></div>
+                                <div class="art-post-body">
+                            <div class="art-post-inner art-article">
+
+                                            <div class="art-postcontent">
+                                                <!-- article-content -->                                                
+                                                <div class="art-postmetadataheader">
+                                                <h2 class="art-postheader">
+                                                    <img src="images/postheadericon.png" width="26" height="26" alt="postheadericon" />
+                                                     Đoàn thanh niên
+                                                </h2>
+                                                </div>
+
+
+
+                                                <!-- /article-content -->
+                                            </div>
+                                            <div class="cleared"></div>
+                            </div>
+
+                            		<div class="cleared"></div>
+                                </div>
+                            </div>
+   
                         </div>

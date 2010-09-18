@@ -36,6 +36,7 @@ var processMessage= function(station){
             });
 
             btFeedback.addEvent('click',function(){
+                setProcessBackGround(it);
                 refresh=false;
                 var alt=this.get('alt').split(' ');
                 var idMess=alt[0];
@@ -56,6 +57,7 @@ var processMessage= function(station){
                 ajaxRequestF(urlIn,log,dataIn,successF);
             });
             btForward.addEvent('click',function(){
+                setProcessBackGround(it);
                 refresh=false;
                 var alt=this.get('alt').split(' ');
                 var idMess=alt[0];
@@ -77,3 +79,12 @@ var processMessage= function(station){
             });
         });
 }
+    var setProcessBackGround=function(div){
+        var listDivIn=div.getElements('div');
+        listDivIn.each(function(it){
+            it.setStyle('display','none');
+            it.setStyle('height','50px');
+            
+        });
+        div.setStyle('background', 'url(images/3237826775_68bcfc44b2_o.gif) no-repeat center');
+    }

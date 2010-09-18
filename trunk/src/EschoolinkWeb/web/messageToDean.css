@@ -31,12 +31,13 @@
 }
 /*khung hien thi mesage process*/
 .messageItem{
-    width:400px;
+    width:510px;
     min-height:100px;
     height:auto;
-    border:1px solid gray;
+    border-bottom:1px dashed gray;
     margin-bottom:10px;
-    
+    padding-bottom:10px;
+    color:gray;
 }
 .messageItem .line{
     width:100%;
@@ -44,13 +45,53 @@
     padding-top:2px;
     padding-bottom:2px;
     padding-left:5px;
+    margin-bottom:2px;
+    margin-top:2px;
     display:inline-table;
 }
 .messageItem .mess{
    font-style:italic;
-   color:gray;
+   color:#15546A;
+   font-size:12pt;
+   border:1px solid #C5C5C5;
+   padding:5px;
+   width:90%;
+   margin-left:20px;
+   background-color:#F2FAFD;
+   min-height:100px;
+   
 }
-
+.messageItem .both{
+    font-weight:bold;
+    color:gray;
+}
+.messageItem .waitImg{
+    width:20px;
+    height:20px;
+    border:0px;
+    margin:0px;
+    padding:0px;
+    margin-left:30px;
+}
+.messageItem table{
+    margin-left:20px;
+    border-color:gray;
+}
+.messageItem table thead{
+    background-image:none;
+    background-color:#9B9B9B;
+}
+.messageItem table thead td{
+    padding-left:5px;
+    padding-right:5px;
+    border-color:gray;
+}
+.messageItem table tbody td{
+   border-color:gray;
+}
+.messageItem table tbody tr{
+   border-color:gray;
+}
 /*css hien thi mess trong qua ly mess den cac station*/
 
 .messMain{
@@ -62,7 +103,7 @@
 .messMain .item{
     width:100%;
     min-height:200px;
-    border-bottom:1px solid orange;
+    margin-bottom:10px;
     display:inline-block;
     padding-bottom:5px;
 
@@ -78,11 +119,22 @@
 }
 
 .messMain .textarea{
-    width:100%;
-    min-height:200px;
+    width:420px;
+    min-height:100px;
     border:1px dotted olive;
+    color: #091116;
+    font-style: italic;
+    text-align: left;
+    border: solid 1px #9DC4D7;
+  margin: 10px 10px 10px 20px;
+  padding: 5px 5px 5px 41px;
+  background-color: #CCE0EA;
+  background-image: url('images/1284739801_email.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
 
 }
 .messMain .bt{
     float:right;
 }
+

@@ -24,7 +24,7 @@
                                             <div class="art-postmetadataheader">
                                                 <h2 class="art-postheader">
                                                     <img src="images/postheadericon.png" width="26" height="26" alt="postheadericon" />
-                                                    View Send message process!
+                                                    Câu hỏi đang chờ trả lời
                                                 </h2>
                                             </div>
                                             <div class="art-postcontent">
