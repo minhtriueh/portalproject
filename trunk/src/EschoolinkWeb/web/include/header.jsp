@@ -136,7 +136,12 @@
                             <li><a href="TongKetDiem">Tổng Kết Điểm</a></li>
                         </ul>
                     </li>
-                </ul>
+                    <c:if test="${quyen=='admin'}">
+                        <li><a href="#">Thời Khóa Biểu</a>
+                        <ul><li><a href="TaoThoiKhoaBieu">Xấp Thời Khóa Biểu</a></li></ul>
+                    </li>
+                    </c:if>
+                                    </ul>
             </li>
         </c:if>
 
