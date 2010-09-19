@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process
+    name="LoadMessSending"
+    targetNamespace="http://enterprise.netbeans.org/bpel/SendMessToDean/LoadMessSending"
+    xmlns:tns="http://enterprise.netbeans.org/bpel/SendMessToDean/LoadMessSending"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
+    xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor"
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2" xmlns:ns0="http://j2ee.netbeans.org/xsd/tableSchema" xmlns:ns1="http://xml.netbeans.org/schema/myObject">
+    <import namespace="http://j2ee.netbeans.org/wsdl/SendMessToDean/LoadMessSending" location="WSDLInterface/LoadMessSending.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_loadHistoryProcessItem" location="database/DB_loadHistoryProcessItem.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_loadMessSending" location="database/DB_loadMessSending.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <partnerLinks>
+        <partnerLink name="loadMess" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_loadMessSending" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="loadHis" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_loadHistoryProcessItem" partnerLinkType="tns:jdbcpartner" partnerRole="jdbcPortTypeRole"/>
+        <partnerLink name="PartnerLink1" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/LoadMessSending" partnerLinkType="tns:LoadMessSending" myRole="LoadMessSendingPortTypeRole"/>
+    </partnerLinks>
+    <variables>
+        <variable name="loadHis_Out" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_loadHistoryProcessItem" messageType="tns:outputMsg">
+            <sxed2:editor>
+                <sxed2:predicate path="$loadHis_Out.part/ns0:DB_loadHistoryProcessItem_Record[$ForEach1Counter]" source="from"/>
+            </sxed2:editor>
+        </variable>
+        <variable name="loadHis_In" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_loadHistoryProcessItem" messageType="tns:inputMsg"/>
+        <variable name="loadMess_Out" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_loadMessSending" messageType="tns:outputMsg">
+            <sxed2:editor>
+                <sxed2:predicate path="$loadMess_Out.part/ns0:DB_loadMessSending_Record[1]" source="from"/>
+            </sxed2:editor>
+        </variable>
+        <variable name="loadMess_In" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_loadMessSending" messageType="tns:inputMsg"/>
+        <variable name="LoadMessSendingOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/LoadMessSending" messageType="tns:LoadMessSendingOperationResponse">
+            <sxed2:editor>
+                <sxed2:predicate path="$LoadMessSendingOperationOut.mess/ns1:HistoryProcessItem[$ForEach1Counter]" source="to"/>
+            </sxed2:editor>
+        </variable>
+        <variable name="LoadMessSendingOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/LoadMessSending" messageType="tns:LoadMessSendingOperationRequest"/>
+    </variables>
+    <sequence>
+        <receive name="Receive1" createInstance="yes" partnerLink="PartnerLink1" operation="LoadMessSendingOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/LoadMessSending" portType="tns:LoadMessSendingPortType" variable="LoadMessSendingOperationIn"/>
+        <assign name="Assign1">
+            <copy>
+                <from variable="LoadMessSendingOperationIn" part="name"/>
+                <to>$loadMess_In.part/ns0:name</to>
+            </copy>
+            <copy>
+                <from variable="LoadMessSendingOperationIn" part="code"/>
+                <to>$loadMess_In.part/ns0:mssv</to>
+            </copy>
+            <copy>
+                <from variable="LoadMessSendingOperationIn" part="mess"/>
+                <to>$loadMess_In.part/ns0:message</to>
+            </copy>
+        </assign>
+        <invoke name="Invoke1" partnerLink="loadMess" operation="newuntitled_Operation" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_loadMessSending" portType="tns:jdbcPortType" inputVariable="loadMess_In" outputVariable="loadMess_Out"/>
+        <assign name="Assign2">
+            <copy>
+                <from>$loadMess_Out.part/ns0:DB_loadMessSending_Record[1]/ns0:id
+                    <sxed2:editor>
+                        <sxed2:predicate path="$loadMess_Out.part/ns0:DB_loadMessSending_Record[1]" source="from"/>
+                    </sxed2:editor>
+                </from>
+                <to>$LoadMessSendingOperationOut.mess/ns1:id</to>
+            </copy>
+            <copy>
+                <from>$loadMess_Out.part/ns0:DB_loadMessSending_Record[1]/ns0:message
+                    <sxed2:editor>
+                        <sxed2:predicate path="$loadMess_Out.part/ns0:DB_loadMessSending_Record[1]" source="from"/>
+                    </sxed2:editor>
+                </from>
+                <to>$LoadMessSendingOperationOut.mess/ns1:message</to>
+            </copy>
+            <copy>
+                <from>$loadMess_Out.part/ns0:DB_loadMessSending_Record[1]/ns0:name
+                    <sxed2:editor>
+                        <sxed2:predicate path="$loadMess_Out.part/ns0:DB_loadMessSending_Record[1]" source="from"/>
+                    </sxed2:editor>
+                </from>
+                <to>$LoadMessSendingOperationOut.mess/ns1:hoVaTen</to>
+            </copy>
+            <copy>
+                <from>$loadMess_Out.part/ns0:DB_loadMessSending_Record[1]/ns0:mssv
+                    <sxed2:editor>
+                        <sxed2:predicate path="$loadMess_Out.part/ns0:DB_loadMessSending_Record[1]" source="from"/>
+                    </sxed2:editor>
+                </from>
+                <to>$LoadMessSendingOperationOut.mess/ns1:MSSV</to>
+            </copy>
+            <copy>
+                <from>$loadMess_Out.part/ns0:DB_loadMessSending_Record[1]/ns0:time
+                    <sxed2:editor>
+                        <sxed2:predicate path="$loadMess_Out.part/ns0:DB_loadMessSending_Record[1]" source="from"/>
+                    </sxed2:editor>
+                </from>
+                <to>$LoadMessSendingOperationOut.mess/ns1:time</to>
+            </copy>
+            <copy>
+                <from>$loadMess_Out.part/ns0:DB_loadMessSending_Record[1]/ns0:id
+                    <sxed2:editor>
+                        <sxed2:predicate path="$loadMess_Out.part/ns0:DB_loadMessSending_Record[1]" source="from"/>
+                    </sxed2:editor>
+                </from>
+                <to>$loadHis_In.part/ns0:idOfMess</to>
+            </copy>
+        </assign>
+        <invoke name="Invoke2" partnerLink="loadHis" operation="newuntitled_Operation" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/DB_loadHistoryProcessItem" portType="tns:jdbcPortType" inputVariable="loadHis_In" outputVariable="loadHis_Out"/>
+        <forEach name="ForEach1" parallel="no" counterName="ForEach1Counter">
+            <startCounterValue>1</startCounterValue>
+            <finalCounterValue>count($loadHis_Out.part/ns0:DB_loadHistoryProcessItem_Record)</finalCounterValue>
+            <scope name="Scope1">
+                <assign name="Assign3">
+                    <copy>
+                        <from>$loadHis_Out.part/ns0:DB_loadHistoryProcessItem_Record[$ForEach1Counter]/ns0:idHistory
+                            <sxed2:editor>
+                                <sxed2:predicate path="$loadHis_Out.part/ns0:DB_loadHistoryProcessItem_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$LoadMessSendingOperationOut.mess/ns1:HistoryProcessItem[$ForEach1Counter]/ns1:id
+                            <sxed2:editor>
+                                <sxed2:predicate path="$LoadMessSendingOperationOut.mess/ns1:HistoryProcessItem[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$loadHis_Out.part/ns0:DB_loadHistoryProcessItem_Record[$ForEach1Counter]/ns0:place
+                            <sxed2:editor>
+                                <sxed2:predicate path="$loadHis_Out.part/ns0:DB_loadHistoryProcessItem_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$LoadMessSendingOperationOut.mess/ns1:HistoryProcessItem[$ForEach1Counter]/ns1:place
+                            <sxed2:editor>
+                                <sxed2:predicate path="$LoadMessSendingOperationOut.mess/ns1:HistoryProcessItem[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$loadHis_Out.part/ns0:DB_loadHistoryProcessItem_Record[$ForEach1Counter]/ns0:state
+                            <sxed2:editor>
+                                <sxed2:predicate path="$loadHis_Out.part/ns0:DB_loadHistoryProcessItem_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$LoadMessSendingOperationOut.mess/ns1:HistoryProcessItem[$ForEach1Counter]/ns1:state
+                            <sxed2:editor>
+                                <sxed2:predicate path="$LoadMessSendingOperationOut.mess/ns1:HistoryProcessItem[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$loadHis_Out.part/ns0:DB_loadHistoryProcessItem_Record[$ForEach1Counter]/ns0:note
+                            <sxed2:editor>
+                                <sxed2:predicate path="$loadHis_Out.part/ns0:DB_loadHistoryProcessItem_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$LoadMessSendingOperationOut.mess/ns1:HistoryProcessItem[$ForEach1Counter]/ns1:note
+                            <sxed2:editor>
+                                <sxed2:predicate path="$LoadMessSendingOperationOut.mess/ns1:HistoryProcessItem[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$loadHis_Out.part/ns0:DB_loadHistoryProcessItem_Record[$ForEach1Counter]/ns0:timearrive
+                            <sxed2:editor>
+                                <sxed2:predicate path="$loadHis_Out.part/ns0:DB_loadHistoryProcessItem_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$LoadMessSendingOperationOut.mess/ns1:HistoryProcessItem[$ForEach1Counter]/ns1:timearive
+                            <sxed2:editor>
+                                <sxed2:predicate path="$LoadMessSendingOperationOut.mess/ns1:HistoryProcessItem[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                    <copy>
+                        <from>$loadHis_Out.part/ns0:DB_loadHistoryProcessItem_Record[$ForEach1Counter]/ns0:timeleave
+                            <sxed2:editor>
+                                <sxed2:predicate path="$loadHis_Out.part/ns0:DB_loadHistoryProcessItem_Record[$ForEach1Counter]" source="from"/>
+                            </sxed2:editor>
+                        </from>
+                        <to>$LoadMessSendingOperationOut.mess/ns1:HistoryProcessItem[$ForEach1Counter]/ns1:timeleave
+                            <sxed2:editor>
+                                <sxed2:predicate path="$LoadMessSendingOperationOut.mess/ns1:HistoryProcessItem[$ForEach1Counter]" source="to"/>
+                            </sxed2:editor>
+                        </to>
+                    </copy>
+                </assign>
+            </scope>
+        </forEach>
+        <reply name="Reply1" partnerLink="PartnerLink1" operation="LoadMessSendingOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/SendMessToDean/LoadMessSending" portType="tns:LoadMessSendingPortType" variable="LoadMessSendingOperationOut"/>
+    </sequence>
+</process>
+
+

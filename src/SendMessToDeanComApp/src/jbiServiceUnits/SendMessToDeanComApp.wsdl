@@ -9,7 +9,7 @@
              xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
              targetNamespace="SendMessToDeanComApp"
-             xmlns:tns="SendMessToDeanComApp" xmlns:ns="http://j2ee.netbeans.org/wsdl/SendMessToDean/SendMessToDean" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://j2ee.netbeans.org/wsdl/SendMessToDean/ManagerReview" xmlns:ns2="http://j2ee.netbeans.org/wsdl/SendMessToDean/SendMessTODean2" xmlns:ns3="http://j2ee.netbeans.org/wsdl/SendMessToDean/feedback" xmlns:ns4="http://j2ee.netbeans.org/wsdl/SendMessToDean/SecretarySetState" xmlns:ns5="http://j2ee.netbeans.org/wsdl/SendMessToDean/ManagerSetState" xmlns:ns6="http://j2ee.netbeans.org/wsdl/SendMessToDean/TeacherSetState" xmlns:ns7="http://j2ee.netbeans.org/wsdl/SendMessToDean/LoadMessagesWaiting" xmlns:ns8="http://j2ee.netbeans.org/wsdl/SendMessToDean/LoadMessageByIdMessage" xmlns:ns9="http://j2ee.netbeans.org/wsdl/SendMessToDean/loadMessageOfStation">
+             xmlns:tns="SendMessToDeanComApp" xmlns:ns="http://j2ee.netbeans.org/wsdl/SendMessToDean/SendMessToDean" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://j2ee.netbeans.org/wsdl/SendMessToDean/ManagerReview" xmlns:ns2="http://j2ee.netbeans.org/wsdl/SendMessToDean/SendMessTODean2" xmlns:ns3="http://j2ee.netbeans.org/wsdl/SendMessToDean/feedback" xmlns:ns4="http://j2ee.netbeans.org/wsdl/SendMessToDean/SecretarySetState" xmlns:ns5="http://j2ee.netbeans.org/wsdl/SendMessToDean/ManagerSetState" xmlns:ns6="http://j2ee.netbeans.org/wsdl/SendMessToDean/TeacherSetState" xmlns:ns7="http://j2ee.netbeans.org/wsdl/SendMessToDean/LoadMessagesWaiting" xmlns:ns8="http://j2ee.netbeans.org/wsdl/SendMessToDean/LoadMessageByIdMessage" xmlns:ns9="http://j2ee.netbeans.org/wsdl/SendMessToDean/loadMessageOfStation" xmlns:ns10="http://j2ee.netbeans.org/wsdl/SendMessToDean/LoadMessSending">
     <import namespace="http://j2ee.netbeans.org/wsdl/SendMessToDean/SendMessToDean" location="../jbiServiceUnits/SendMessToDean/WSDLInterface/SendMessToDean.wsdl"/>
     <import namespace="http://j2ee.netbeans.org/wsdl/SendMessToDean/ManagerReview" location="../jbiServiceUnits/SendMessToDean/WSDLInterface/ManagerReview.wsdl"/>
     <import namespace="http://j2ee.netbeans.org/wsdl/SendMessToDean/SendMessTODean2" location="../jbiServiceUnits/SendMessToDean/WSDLInterface/SendMessTODean2.wsdl"/>
@@ -20,6 +20,7 @@
     <import namespace="http://j2ee.netbeans.org/wsdl/SendMessToDean/LoadMessagesWaiting" location="../jbiServiceUnits/SendMessToDean/externalProcess/WSDLInterface/LoadMessagesWaiting.wsdl"/>
     <import namespace="http://j2ee.netbeans.org/wsdl/SendMessToDean/LoadMessageByIdMessage" location="../jbiServiceUnits/SendMessToDean/externalProcess/WSDLInterface/LoadMessageByIdMessage.wsdl"/>
     <import namespace="http://j2ee.netbeans.org/wsdl/SendMessToDean/loadMessageOfStation" location="../jbiServiceUnits/SendMessToDean/externalProcess/WSDLInterface/loadMessageOfStation.wsdl"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/SendMessToDean/LoadMessSending" location="../jbiServiceUnits/SendMessToDean/externalProcess/WSDLInterface/LoadMessSending.wsdl"/>
     <portType name="dummyCasaPortType"/>
     <binding name="casaBinding1" type="ns:SendMessToDeanPortType">
         <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
@@ -129,6 +130,18 @@
             </output>
         </operation>
     </binding>
+    <binding name="casaBinding10" type="ns10:LoadMessSendingPortType">
+        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="LoadMessSendingOperation">
+            <soap:operation/>
+            <input name="input1">
+                <soap:body use="literal" namespace="SendMessToDeanComApp"/>
+            </input>
+            <output name="output1">
+                <soap:body use="literal" namespace="SendMessToDeanComApp"/>
+            </output>
+        </operation>
+    </binding>
     <service name="SendMessToDeanComAppService1">
         <port name="sendMessToDean" binding="tns:casaBinding1">
             <soap:address location="http://localhost:${HttpDefaultPort}/SendMessToDeanComAppService1/casaPort1"/>
@@ -174,7 +187,13 @@
             <soap:address location="http://localhost:${HttpDefaultPort}/SendMessToDeanComAppService9/loadMessageOfStation"/>
         </port>
     </service>
+    <service name="SendMessToDeanComAppService10">
+        <port name="LoadMessSending" binding="tns:casaBinding10">
+            <soap:address location="http://localhost:${HttpDefaultPort}/SendMessToDeanComAppService10/LoadMessSending"/>
+        </port>
+    </service>
 </definitions>
+
 
 
 
