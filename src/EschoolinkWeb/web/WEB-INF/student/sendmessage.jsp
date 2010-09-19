@@ -28,27 +28,29 @@
                                             </div>
                                             <div class="art-postcontent">
                                                 <!-- article-content -->
-                                                <form class="myform" method="post" action="sendmessage">
+                                                <form id="sendForm" class="myform" method="post" action="sendmessage" >
                                                 <p>
                                                 <label>Tên sinh viên: </label>
-                                                <input type="text" name="name" />
+                                                <input id="name" type="text" name="name" />
                                                 </p>
 
                                                 <p>
                                                 <label>Mã số sv: </label>
-                                                <input type="text" name="code" />
+                                                <input id="code" type="text" name="code" />
                                                 </p>
 
                                                 <p>
                                                 <label>Nội dung câu hỏi: </label>
-                                                <textarea name="mess" cols="41" rows="3"></textarea>
+                                                <textarea id="mess" name="mess" cols="41" rows="3"></textarea>
                                                 </p>
                                                 <p>
-                                                    <input type="submit" value="Send" class="bt"/>
+                                                    <input type="button" value="Send" class="bt" onclick="sendMessageForm($('sendForm'))"/>
                                                 </p>
 
                                             </form>
+                                                <div id="logMessSending">
 
+                                                </div>
                                                 <!-- /article-content -->
                                             </div>
                                             <div class="cleared"></div>

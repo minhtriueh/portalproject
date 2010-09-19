@@ -11,7 +11,7 @@
 
 <c:forEach items="${list}" var="item">
              <div class="messageItem">
-                                                     <div class="line">Học sinh :<span class="both">${item.hoVaTen} - ${item.MSSV}</span> </div>
+                                                     <div class="line"><span class="both">${item.hoVaTen} - ${item.MSSV}</span> </div>
                                                     <div class="line">Câu hỏi :</div>
                                                     <div class="line">
                                                         <blockquote>

@@ -88,3 +88,40 @@ var processMessage= function(station){
         });
         div.setStyle('background', 'url(images/3237826775_68bcfc44b2_o.gif) no-repeat center');
     }
+
+    var sendMessageForm=function(form){
+        var name=form.getElement('#name').get('value');
+        var code=form.getElement('#code').get('value');
+        var mess=form.getElement('#mess').get('value');
+        if(name==''){
+            alert('Tên không được để trống');
+            return;
+        }else if(code==''){
+            alert('Mã số học sinh không được để trống');
+            return;
+        }else if(mess==''){
+            alert('Làm ơn điền câu hỏi vào!');
+            return;
+        }
+
+        //su ly do hoa
+        var listDom=form.getElements('p');
+        listDom.each(function(dom){
+            dom.setStyle('display','none');
+        });
+        form.setStyle('height','40px');
+        form.setStyle('background', 'url(images/3237826775_68bcfc44b2_o.gif) no-repeat center');
+        form.submit();
+
+        //ajax request to view message status
+        var url=rootURL+'messageSendingStatus';
+        var log=$('logMessSending');
+        var data={'name': name,'code': code,'mess': mess};
+        var callAjax=function(){
+            ajaxRequest(url, log, data);
+        }
+       
+        callAjax.periodical(5000);
+        
+        
+    }
