@@ -8,7 +8,7 @@
     xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
     xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
     xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor"
-    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2" xmlns:ns0="http://xml.netbeans.org/schema/EschoolinkObject" xmlns:ns1="http://j2ee.netbeans.org/xsd/tableSchema">
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2" xmlns:ns0="http://xml.netbeans.org/schema/tkb_EschoolinkObject" xmlns:ns1="http://j2ee.netbeans.org/xsd/tableSchema">
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/ThemTKB" location="../interface_WSDL/ThemTKB.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/insert_tkb" location="../DB_WSDL/insert/insert_tkb.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
     <import namespace="http://j2ee.netbeans.org/wsdl/QuanLyThoiKhoaBieu/insert_chitiettkb" location="../DB_WSDL/insert/insert_chitiettkb.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
