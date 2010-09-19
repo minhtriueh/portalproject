@@ -6,7 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
-<%@page import="org.netbeans.xml.schema.eschoolinkobject.*" %>
+<%@page import="org.netbeans.xml.schema.tkb_eschoolinkobject.*" %>
 <%@page import="org.netbeans.xml.schema.qlgv_eschoolinkobject.*" %>
 <%@page import="org.netbeans.xml.schema.loaidiem.*" %>
 
