@@ -6,8 +6,8 @@ package quanlythoikhoabieu;
 
 import java.util.LinkedList;
 import java.util.List;
-import org.netbeans.xml.schema.eschoolinkobject.ChiTietThoiKhoaBieu;
-import org.netbeans.xml.schema.eschoolinkobject.ThoiKhoaBieu;
+import org.netbeans.xml.schema.tkb_eschoolinkobject.ChiTietThoiKhoaBieu;
+import org.netbeans.xml.schema.tkb_eschoolinkobject.ThoiKhoaBieu;
 
 /**
  *
