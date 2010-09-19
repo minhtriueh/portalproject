@@ -31,13 +31,15 @@
 }
 /*khung hien thi mesage process*/
 .messageItem{
-    width:510px;
+    width:500px;
     min-height:100px;
     height:auto;
-    border-bottom:1px dashed gray;
+    border:1px dashed gray;
+    padding:5px;
     margin-bottom:10px;
     padding-bottom:10px;
-    color:gray;
+    color:#575950;
+    background-color:#D0DFD7;
 }
 .messageItem .line{
     width:100%;
@@ -63,7 +65,7 @@
 }
 .messageItem .both{
     font-weight:bold;
-    color:gray;
+    color:#1A2732;
 }
 .messageItem .waitImg{
     width:20px;
@@ -88,6 +90,7 @@
 }
 .messageItem table tbody td{
    border-color:gray;
+   background-color:white;
 }
 .messageItem table tbody tr{
    border-color:gray;

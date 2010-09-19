@@ -1,6 +1,6 @@
 <%-- 
-    Document   : viewFeedback
-    Created on : 06-09-2010, 22:03:41
+    Document   : messageSendingStatus
+    Created on : 19-09-2010, 08:19:28
     Author     : sanchikaro
 --%>
 
@@ -8,31 +8,10 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
    "http://www.w3.org/TR/html4/loose.dtd">
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<div class="art-layout-cell art-content">
-                            <div class="art-post">
-                                <div class="art-post-tl"></div>
-                                <div class="art-post-tr"></div>
-                                <div class="art-post-bl"></div>
-                                <div class="art-post-br"></div>
-                                <div class="art-post-tc"></div>
-                                <div class="art-post-bc"></div>
-                                <div class="art-post-cl"></div>
-                                <div class="art-post-cr"></div>
-                                <div class="art-post-cc"></div>
-                                <div class="art-post-body">
-                            <div class="art-post-inner art-article">
-                                            <div class="art-postmetadataheader">
-                                                <h2 class="art-postheader">
-                                                    <img src="images/postheadericon.png" width="26" height="26" alt="postheadericon" />
-                                                    Xem trả lời!
-                                                </h2>
-                                            </div>
-                                            <div class="art-postcontent">
-                                                <!-- article-content -->
-                                                <c:forEach items="${list}" var="item">
-                                                 <div class="messageItem">
+<c:set var="item" value="${message}"></c:set>
+<div class="messageItem">
                                                      <div class="line"><span class="both">${item.hoVaTen} - ${item.MSSV}</span> </div>
-                                                    
+
                                                     <div class="line">
                                                         <blockquote>
                                                             <p>
@@ -41,16 +20,7 @@
 
                                                         </blockquote>
                                                     </div>
-                                                    <div class="line">
-                                                        Trả lời:
-                                                    </div>
-                                                    <div class="line">
-                                                        <blockquote>
-                                                            <p>
-                                                               ${item.feedBack}
-                                                            </p>
-                                                        </blockquote>
-                                                    </div>
+                                                    
                                                     <div class="line">Quy trình xử lý:</div>
                                                     <div class="line">
                                                         <table class="myTable">
@@ -98,27 +68,4 @@
                                                         </table>
                                                     </div>
                                                 </div>
-                                            </c:forEach>
 
-                                                <!-- /article-content -->
-                                            </div>
-                                            <div class="cleared"></div>
-                            </div>
-
-                            		<div class="cleared"></div>
-                                </div>
-                            </div>
-
-                        </div>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Xem trả lời</title>
-    </head>
-    <body>
-        <h1></h1>
-
-    
-
-    </body>
-</html>

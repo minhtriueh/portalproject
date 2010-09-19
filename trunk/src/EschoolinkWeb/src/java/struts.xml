@@ -33,6 +33,10 @@
         <action name="StationUpdateState" class="manager.StationUpdateState" >
             <result name="success">/index.jsp?module=ajax&amp;page=StationUpdateStateResult</result>
 	</action>
+        <action name="messageSendingStatus" class="manager.MessageSendingStatus" >
+            <result name="success">/WEB-INF/ajax/messageSendingStatus.jsp</result>
+            <result name="error">/WEB-INF/ajax/error.jsp</result>
+	</action>
     </package>
        
     <include file="/quanlyhocsinh/quanlyhocsinh.xml"></include>
