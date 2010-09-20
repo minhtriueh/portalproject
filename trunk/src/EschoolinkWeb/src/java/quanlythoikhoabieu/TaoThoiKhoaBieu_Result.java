@@ -84,7 +84,7 @@ public class TaoThoiKhoaBieu_Result {
             chitietTKB6.setThu(Long.parseLong(thu6));
             chitietTKB6.setTietThuMay(i6);
             listChiTietTKB.add(chitietTKB6);
-           
+
              thoikhoabieu.getChiTietThoiKhoaBieu().add(chitietTKB6);
         }
   if(giaovien7!=null)
