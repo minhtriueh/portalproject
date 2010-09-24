@@ -1,0 +1,35 @@
+<soapenv:Envelope xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd1="XSD_CommApp" xmlns:user="http://xml.netbeans.org/schema/User" xmlns:cham="http://xml.netbeans.org/schema/ChaMe">
+  <soapenv:Body>
+    <xsd1:user>
+      <!--1 or more repetitions:-->
+      <user:User>
+        <user:id>1</user:id>
+        <user:name>sdfsf</user:name>
+        <user:age>12</user:age>
+        <user:phone>asdad</user:phone>
+        <cham:Cha>
+          <cham:ten>sdfsdf</cham:ten>
+          <cham:age>12</cham:age>
+        </cham:Cha>
+        <cham:Me>
+          <cham:ten>fdsf</cham:ten>
+          <cham:age>12</cham:age>
+        </cham:Me>
+      </user:User>       
+      <user:User>
+        <user:id>2</user:id>
+        <user:name>sdfsf</user:name>
+        <user:age>23</user:age>
+        <user:phone>sdfsfs</user:phone>
+        <cham:Cha>
+          <cham:ten>sdfsf</cham:ten>
+          <cham:age>12</cham:age>
+        </cham:Cha>
+        <cham:Me>
+          <cham:ten>sdfs</cham:ten>
+          <cham:age>12</cham:age>
+        </cham:Me>
+      </user:User>
+     </xsd1:user>
+  </soapenv:Body>
+</soapenv:Envelope>

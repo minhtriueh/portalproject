@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<casa xmlns="http://java.sun.com/xml/ns/casa" xmlns:ns1="XSD_CommApp" xmlns:ns2="http://j2ee.netbeans.org/wsdl/demoXSD_Object/insertUser" xmlns:ns3="http://j2ee.netbeans.org/wsdl/demoXSD_Object/insertUser1" xmlns:ns4="http://enterprise.netbeans.org/bpel/demoXSD_Object/demoXSD_Object" xmlns:ns5="http://enterprise.netbeans.org/bpel/demoXSD_Object/insertUser1" xmlns:xlink="http://www.w3.org/2000/xlink">
+    <endpoints>
+        <endpoint endpoint-name="InsertUser" interface-name="ns2:insertUserPortType" name="endpoint1" service-name="ns1:XSD_CommAppService1"/>
+        <endpoint endpoint-name="insertUser1" interface-name="ns3:insertUser1PortType" name="endpoint2" service-name="ns1:XSD_CommAppService2"/>
+        <endpoint display-name="PartnerLink1" endpoint-name="insertUserPortTypeRole_myRole" file-path="demoXSD_Object.bpel" interface-name="ns2:insertUserPortType" name="endpoint3" process-name="demoXSD_Object" service-name="ns4:PartnerLink1"/>
+        <endpoint display-name="PartnerLink1" endpoint-name="insertUser1PortTypeRole_myRole" file-path="insertUser1.bpel" interface-name="ns3:insertUser1PortType" name="endpoint4" process-name="insertUser1" service-name="ns5:PartnerLink1"/>
+    </endpoints>
+    <service-units>
+        <service-engine-service-unit artifacts-zip="demoXSD_Object.jar" component-name="sun-bpel-engine" defined="true" description="Represents this Service Unit" internal="true" name="XSD_CommApp-demoXSD_Object" unit-name="demoXSD_Object" unknown="false" x="196" y="165">
+            <provides endpoint="endpoint3"/>
+            <provides endpoint="endpoint4"/>
+        </service-engine-service-unit>
+        <binding-component-service-unit artifacts-zip="sun-http-binding.jar" component-name="sun-http-binding" description="Represents this Service Unit" name="XSD_CommApp-sun-http-binding" unit-name="sun-http-binding">
+            <ports>
+                <port bindingType="soap" x="67" y="186">
+                    <link xlink:href="../jbiasa/XSD_CommApp.wsdl#xpointer(/definitions/service[@name='XSD_CommAppService1']/port[@name='InsertUser'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint1"/>
+                    <provides endpoint="endpoint1"/>
+                </port>
+                <port bindingType="soap" x="67" y="278">
+                    <link xlink:href="../jbiasa/XSD_CommApp.wsdl#xpointer(/definitions/service[@name='XSD_CommAppService2']/port[@name='insertUser1'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint2"/>
+                    <provides endpoint="endpoint2"/>
+                </port>
+            </ports>
+        </binding-component-service-unit>
+    </service-units>
+    <connections>
+        <connection consumer="endpoint1" provider="endpoint3" state="new"/>
+        <connection consumer="endpoint2" provider="endpoint4" state="new"/>
+    </connections>
+    <porttypes>
+        <link xlink:href="../jbiasa/XSD_CommApp.wsdl#xpointer(/definitions/portType[@name='dummyCasaPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/demoXSD_Object/insertUser.wsdl#xpointer(/definitions/portType[@name='insertUserPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/demoXSD_Object/insertUser1.wsdl#xpointer(/definitions/portType[@name='insertUser1PortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/XSD_CommApp.wsdl#xpointer(/definitions/portType[@name='dummyCasaPortType'])" xlink:type="simple"/>
+    </porttypes>
+    <bindings>
+        <link xlink:href="../jbiasa/XSD_CommApp.wsdl#xpointer(/definitions/binding[@name='casaBinding1'])" xlink:type="simple"/>
+        <link xlink:href="../jbiasa/XSD_CommApp.wsdl#xpointer(/definitions/binding[@name='casaBinding2'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/XSD_CommApp.wsdl#xpointer(/definitions/binding[@name='casaBinding1'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/XSD_CommApp.wsdl#xpointer(/definitions/binding[@name='casaBinding2'])" xlink:type="simple"/>
+    </bindings>
+    <services>
+        <link xlink:href="../jbiasa/XSD_CommApp.wsdl#xpointer(/definitions/service[@name='XSD_CommAppService1'])" xlink:type="simple"/>
+        <link xlink:href="../jbiasa/XSD_CommApp.wsdl#xpointer(/definitions/service[@name='XSD_CommAppService2'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/XSD_CommApp.wsdl#xpointer(/definitions/service[@name='XSD_CommAppService1'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/XSD_CommApp.wsdl#xpointer(/definitions/service[@name='XSD_CommAppService2'])" xlink:type="simple"/>
+    </services>
+    <regions>
+        <region name="WSDL Endpoints" width="150"/>
+        <region name="JBI Modules" width="500"/>
+        <region name="External Modules" width="200"/>
+    </regions>
+</casa>

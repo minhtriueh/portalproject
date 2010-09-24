@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <nextCatalog catalog="nbproject/private/cache/retriever/catalog.xml"/>
+    <system systemId="ejbLoanProcessor/contract/loanProcessor.wsdl" uri="nb-uri:ejbLoanProcessor#src/java/contract/loanProcessor.wsdl"/>
+</catalog>
+
+
+

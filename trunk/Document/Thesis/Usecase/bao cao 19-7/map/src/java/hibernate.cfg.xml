@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!--
+        <property name="connection.useUnicode">true</property>
+        <property name="connection.characterEncoding">UTF-8</property>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/map</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">root</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>            
+        <property name="current_session_context_class">thread</property>
+        <property name="show_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">create</property>
+        -->
+
+        <property name="connection.useUnicode">true</property>
+        <property name="connection.characterEncoding">UTF-8</property>
+        <property name="hibernate.connection.driver_class">org.hsqldb.jdbcDriver</property>
+        <property name="hibernate.connection.url">jdbc:hsqldb:hsql://localhost/examples</property>
+        <property name="hibernate.connection.username">sa</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.HSQLDialect</property>
+        <property name="current_session_context_class">thread</property>
+        <property name="show_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">create</property>
+
+        
+        <mapping class="model.Truong" />
+        <mapping class="model.CoSo" />
+        <mapping class="model.ToBoMon" />
+        <mapping class="model.KhoiLop" />
+        <mapping class="model.Lop" />
+        <mapping class="model.MonHoc" />
+        <mapping class="model.HieuTruong" />
+        <mapping class="model.GiaoVienChuNhiem" />
+        <mapping class="model.SoDiemChuNhiem" />
+        <mapping class="model.SoDiem" />
+        <mapping class="model.ChiTietSoDiem" />
+        <mapping class="model.LoaiDiem" />
+        <mapping class="model.Diem" />
+        <mapping class="model.ChiTietHocBa" />
+        <mapping class="model.HocBa" />
+        <mapping class="model.HanhKiem" />
+        <mapping class="model.HocLuc" />
+        <mapping class="model.NamHoc" />
+        <mapping class="model.GiaoVien" />
+        <mapping class="model.DanToc" />
+        <mapping class="model.HocSinh" />
+        <mapping class="model.ThonXom" />
+        <mapping class="model.XaPhuongThiTran" />
+        <mapping class="model.QuanHuyenThanhPho" />
+        <mapping class="model.KhuVuc" />
+        <mapping class="model.QueQuan" />
+        <mapping class="model.LoaiHocSinh" />
+        <mapping class="model.CheDoUuTien" />
+        <mapping class="model.ThanhPhanGiaDinh" />
+        <mapping class="model.ChiTietThanhPhanGiaDinh" />
+        <mapping class="model.HocSinhBoHoc" />
+        <mapping class="model.ChiTietHocSinhBoHoc" />
+        <mapping class="model.HoSoChuyenLop" />
+        <mapping class="model.ChiTietHoSoChuyenLop" />
+        <mapping class="model.HoSoChuyenTruong" />
+        <mapping class="model.ChiTietHoSoChuyenTruong" />
+        <mapping class="model.SoDiemDanh" />
+        <mapping class="model.ChiTietSoDiemDanh" />
+        <mapping class="model.HocPhi" />
+        <mapping class="model.ChiTietHocPhi" />
+        <mapping class="model.NguoiDung" />
+        <mapping class="model.Quyen" />
+        <mapping class="model.Nhom" />
+        <mapping class="model.DanhSachQuyen" />
+
+    </session-factory>
+</hibernate-configuration>
+
+

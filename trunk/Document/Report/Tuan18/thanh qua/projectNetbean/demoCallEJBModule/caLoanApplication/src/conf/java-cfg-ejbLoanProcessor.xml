@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<javaee-project xmlns="http://java.sun.com/xml/ns/jbi/javaee/config/1/" xmlns:ns0="http://j2ee.netbeans.org/wsdl/ejbLoanProcessor/loanProcessor" name="ejbLoanProcessor">
+    <services>
+        <provides enable-for-javaee-http="true" endpoint-name="javaee_loanProcessorPort" interface-name="ns0:loanProcessorPortType" service-name="ns0:loanProcessorService"/>
+    </services>
+</javaee-project>

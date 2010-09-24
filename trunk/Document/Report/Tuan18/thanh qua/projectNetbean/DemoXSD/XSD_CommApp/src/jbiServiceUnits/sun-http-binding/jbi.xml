@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jbi xmlns="http://java.sun.com/xml/ns/jbi" xmlns:ns1="XSD_CommApp" xmlns:ns2="http://enterprise.netbeans.org/bpel/demoXSD_Object/demoXSD_Object" xmlns:ns3="http://enterprise.netbeans.org/bpel/demoXSD_Object/insertUser1" xmlns:ns4="http://j2ee.netbeans.org/wsdl/demoXSD_Object/insertUser" xmlns:ns5="http://j2ee.netbeans.org/wsdl/demoXSD_Object/insertUser1" version="1.0">
+    <services binding-component="true">
+        <consumes endpoint-name="InsertUser" interface-name="ns4:insertUserPortType" service-name="ns1:XSD_CommAppService1"/>
+        <consumes endpoint-name="insertUser1" interface-name="ns5:insertUser1PortType" service-name="ns1:XSD_CommAppService2"/>
+    </services>
+</jbi>

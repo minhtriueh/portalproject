@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<casa xmlns="http://java.sun.com/xml/ns/casa" xmlns:ns1="caLoanApplication" xmlns:ns2="http://j2ee.netbeans.org/wsdl/bpLoanApplication/loanApplication" xmlns:ns3="http://j2ee.netbeans.org/wsdl/ejbLoanProcessor/loanProcessor" xmlns:ns4="http://enterprise.netbeans.org/bpel/bpLoanApplication/loanApplication" xmlns:xlink="http://www.w3.org/2000/xlink">
+    <endpoints>
+        <endpoint endpoint-name="loanApplication" interface-name="ns2:loanApplicationPortType" name="endpoint1" service-name="ns1:caLoanApplicationService1"/>
+        <endpoint endpoint-name="javaee_loanProcessorPort" interface-name="ns3:loanProcessorPortType" name="endpoint2" service-name="ns3:loanProcessorService"/>
+        <endpoint display-name="plApplicant" endpoint-name="loanApplicationPortTypeRole_myRole" file-path="loanApplication.bpel" interface-name="ns2:loanApplicationPortType" name="endpoint3" process-name="loanApplication" service-name="ns4:plApplicant"/>
+        <endpoint display-name="PartnerLink1" endpoint-name="loanProcessorPortTypeRole_partnerRole" file-path="loanApplication.bpel" interface-name="ns3:loanProcessorPortType" name="endpoint4" process-name="loanApplication" service-name="ns4:PartnerLink1"/>
+    </endpoints>
+    <service-units>
+        <service-engine-service-unit artifacts-zip="ejbLoanProcessor.jar" component-name="sun-javaee-engine" defined="true" description="Represents this Service Unit" internal="true" name="caLoanApplication-ejbLoanProcessor" unit-name="ejbLoanProcessor" unknown="false" x="239" y="372">
+            <provides endpoint="endpoint2"/>
+        </service-engine-service-unit>
+        <service-engine-service-unit artifacts-zip="bpLoanApplication.jar" component-name="sun-bpel-engine" defined="true" description="Represents this Service Unit" internal="true" name="caLoanApplication-bpLoanApplication" unit-name="bpLoanApplication" unknown="false" x="171" y="206">
+            <provides endpoint="endpoint3"/>
+            <consumes endpoint="endpoint4"/>
+        </service-engine-service-unit>
+        <binding-component-service-unit artifacts-zip="sun-http-binding.jar" component-name="sun-http-binding" description="Represents this Service Unit" name="caLoanApplication-sun-http-binding" unit-name="sun-http-binding">
+            <ports>
+                <port bindingType="soap" x="67" y="262">
+                    <link xlink:href="../jbiasa/caLoanApplication.wsdl#xpointer(/definitions/service[@name='caLoanApplicationService1']/port[@name='loanApplication'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint1"/>
+                    <provides endpoint="endpoint1"/>
+                </port>
+            </ports>
+        </binding-component-service-unit>
+    </service-units>
+    <connections>
+        <connection consumer="endpoint1" provider="endpoint3" state="new"/>
+        <connection consumer="endpoint4" provider="endpoint2" state="unchanged"/>
+    </connections>
+    <porttypes>
+        <link xlink:href="../jbiasa/caLoanApplication.wsdl#xpointer(/definitions/portType[@name='dummyCasaPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/bpLoanApplication/demo.wsdl#xpointer(/definitions/portType[@name='demoPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/bpLoanApplication/loanApplication.wsdl#xpointer(/definitions/portType[@name='loanApplicationPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/caLoanApplication.wsdl#xpointer(/definitions/portType[@name='dummyCasaPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/ejbLoanProcessor/contract/loanProcessor.wsdl#xpointer(/definitions/portType[@name='loanProcessorPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/ejbLoanProcessor/META-INF/wsdl/LoanProcessor/loanProcessor.wsdl#xpointer(/definitions/portType[@name='loanProcessorPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/META-INF/bpLoanApplication/src/_references/_projects/ejbLoanProcessor/src/java/contract/loanProcessor.wsdl#xpointer(/definitions/portType[@name='loanProcessorPortType'])" xlink:type="simple"/>
+    </porttypes>
+    <bindings>
+        <link xlink:href="../jbiasa/caLoanApplication.wsdl#xpointer(/definitions/binding[@name='casaBinding1'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/caLoanApplication.wsdl#xpointer(/definitions/binding[@name='casaBinding1'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/ejbLoanProcessor/META-INF/wsdl/LoanProcessor/loanProcessorWrapper.wsdl#xpointer(/definitions/binding[@name='loanProcessorBinding'])" xlink:type="simple"/>
+    </bindings>
+    <services>
+        <link xlink:href="../jbiasa/caLoanApplication.wsdl#xpointer(/definitions/service[@name='caLoanApplicationService1'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/caLoanApplication.wsdl#xpointer(/definitions/service[@name='caLoanApplicationService1'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/ejbLoanProcessor/META-INF/wsdl/LoanProcessor/loanProcessorWrapper.wsdl#xpointer(/definitions/service[@name='loanProcessorService'])" xlink:type="simple"/>
+    </services>
+    <regions>
+        <region name="WSDL Endpoints" width="150"/>
+        <region name="JBI Modules" width="500"/>
+        <region name="External Modules" width="200"/>
+    </regions>
+</casa>

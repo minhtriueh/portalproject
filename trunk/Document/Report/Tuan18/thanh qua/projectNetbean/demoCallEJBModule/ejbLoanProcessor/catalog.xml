@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="file:/C:/temp/contract/loanProcessor.wsdl" uri="src/conf/xml-resources/web-services/LoanProcessor/wsdl/loanProcessor.wsdl"/>
+    <system systemId="file:/C:/temp/contract/LoanResponseMsg.xsd" uri="src/conf/xml-resources/web-services/LoanProcessor/wsdl/LoanResponseMsg.xsd"/>
+    <system systemId="file:/C:/temp/contract/LoanRequestMsg.xsd" uri="src/conf/xml-resources/web-services/LoanProcessor/wsdl/LoanRequestMsg.xsd"/>
+</catalog>
