@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:18001/loanApplication/applyForLoan?WSDL" uri="wsdl/localhost_18001/loanApplication/applyForLoan.wsdl"/>
+    <system systemId="http://sanchikaro:18001/caLoanApplication-sun-http-binding/bpLoanApplication/demo.wsdl" uri="wsdl/sanchikaro_18001/caLoanApplication-sun-http-binding/bpLoanApplication/demo.wsdl"/>
+    <system systemId="http://sanchikaro:18001/caLoanApplication-sun-http-binding/bpLoanApplication/loanApplication.wsdl" uri="wsdl/sanchikaro_18001/caLoanApplication-sun-http-binding/bpLoanApplication/loanApplication.wsdl"/>
+    <system systemId="http://sanchikaro:18001/caLoanApplication-sun-http-binding/bpLoanApplication/LoanResponseMsg.xsd" uri="wsdl/sanchikaro_18001/caLoanApplication-sun-http-binding/bpLoanApplication/LoanResponseMsg.xsd"/>
+    <system systemId="http://sanchikaro:18001/caLoanApplication-sun-http-binding/bpLoanApplication/LoanRequestMsg.xsd" uri="wsdl/sanchikaro_18001/caLoanApplication-sun-http-binding/bpLoanApplication/LoanRequestMsg.xsd"/>
+</catalog>
+

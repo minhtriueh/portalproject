@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://demo.sun.com/openesb/types/LoanRequestMsg"
+            xmlns:tns="http://demo.sun.com/openesb/types/LoanRequestMsg"
+            elementFormDefault="qualified">
+    
+  <xsd:element name="loanRequestMsg" 
+               type="tns:LoanRequestMsg"/>
+
+  <xsd:complexType name="LoanRequestMsg">
+    <xsd:sequence>
+      <xsd:element name="socialSecurityNumber" type="xsd:string" nillable="true"/>
+      <xsd:element name="applicantName" type="xsd:string" nillable="true"/>
+      <xsd:element name="applicantAddress" type="xsd:string" nillable="true"/>
+      <xsd:element name="applicantEmailAddress" type="xsd:string" nillable="true"/>
+
+      <xsd:element name="applicantAge" type="xsd:int"/>
+      <xsd:element name="applicantGender" type="xsd:string" nillable="true"/>
+      <xsd:element name="annualSalary" type="xsd:float"/>
+      <xsd:element name="amountRequested" type="xsd:float"/>
+    </xsd:sequence>
+  </xsd:complexType>   
+
+</xsd:schema>

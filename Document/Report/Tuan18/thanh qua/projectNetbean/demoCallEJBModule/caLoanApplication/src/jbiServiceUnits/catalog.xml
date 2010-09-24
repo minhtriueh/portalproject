@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="ejbLoanProcessor/contract/loanProcessor.wsdl" uri="bpLoanApplication/src/_references/_projects/ejbLoanProcessor/src/java/contract/loanProcessor.wsdl"/>
+    <system systemId="LoanResponseMsg.xsd" uri="bpLoanApplication/src/_references/_projects/ejbLoanProcessor/src/java/contract/LoanResponseMsg.xsd"/>
+    <system systemId="LoanRequestMsg.xsd" uri="bpLoanApplication/src/_references/_projects/ejbLoanProcessor/src/java/contract/LoanRequestMsg.xsd"/>
+</catalog>

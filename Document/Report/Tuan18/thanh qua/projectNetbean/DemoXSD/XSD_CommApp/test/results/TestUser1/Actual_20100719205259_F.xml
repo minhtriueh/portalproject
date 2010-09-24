@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP-ENV:Body>
+    <User xmlns="http://xml.netbeans.org/schema/User1" xmlns:msgns="http://j2ee.netbeans.org/wsdl/demoXSD_Object/insertUser1" xmlns:user="http://xml.netbeans.org/schema/User1">
+      <user:id>1</user:id>
+      <user:name>adasd</user:name>
+      <user:age>12</user:age>
+      <user:phone>sadasdad</user:phone>
+      <user:TaiKhoan>
+        <user:id>1</user:id>
+        <user:UserName>sdfsfs</user:UserName>
+        <user:Passwd>sdfsdfsdfsf</user:Passwd>
+      </user:TaiKhoan>
+    </User>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

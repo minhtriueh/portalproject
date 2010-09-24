@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions targetNamespace="caLoanApplication" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://j2ee.netbeans.org/wsdl/bpLoanApplication/demo" xmlns:ns="http://j2ee.netbeans.org/wsdl/bpLoanApplication/loanApplication" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="caLoanApplication" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <import namespace="http://j2ee.netbeans.org/wsdl/bpLoanApplication/demo" location="http://sanchikaro:18001/caLoanApplication-sun-http-binding/bpLoanApplication/demo.wsdl">
+    </import>
+  <import namespace="http://j2ee.netbeans.org/wsdl/bpLoanApplication/loanApplication" location="http://sanchikaro:18001/caLoanApplication-sun-http-binding/bpLoanApplication/loanApplication.wsdl">
+    </import>
+  <portType name="dummyCasaPortType">
+  </portType>
+  <binding name="casaBinding1" type="ns:loanApplicationPortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="applyForLoan">
+      <soap:operation/>
+      <input name="input1">
+        <soap:body use="literal"/>
+      </input>
+      <output name="output1">
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="caLoanApplicationService1">
+    <port name="loanApplication" binding="tns:casaBinding1">
+      <soap:address location="http://sanchikaro:18001/loanApplication/applyForLoan"/>
+    </port>
+  </service>
+</definitions>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://xml.netbeans.org/schema/ChaMe"
+    xmlns:tns="http://xml.netbeans.org/schema/ChaMe"
+    elementFormDefault="qualified">
+    <xsd:element name="Cha" type="tns:Cha"></xsd:element>
+    <xsd:complexType name="Cha">
+        <xsd:sequence>
+            <xsd:element name="ten" type="xsd:string"></xsd:element>
+            <xsd:element name="age" type="xsd:int"></xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:element name="Me" type="tns:Me"></xsd:element>
+    <xsd:complexType name="Me">
+        <xsd:sequence>
+            <xsd:element name="ten" type="xsd:string"></xsd:element>
+            <xsd:element name="age" type="xsd:int"></xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>
